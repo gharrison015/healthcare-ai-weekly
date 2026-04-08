@@ -7,145 +7,135 @@
 <style>
   @font-face { font-family: 'Aptos'; src: local('Aptos'), local('Aptos Display'), local('Calibri'); }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; background: #ffffff; color: #1e293b; line-height: 1.7; }
+  body { font-family: Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; color: #111827; min-height: 100vh; }
+  html { background: #f0f2f5; }
+
+  /* Ambient mesh gradient */
+  .ambient-bg {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+    background: linear-gradient(135deg, #e8edf5 0%, #dfe6f0 30%, #eae4f0 60%, #e0eaf5 100%);
+  }
+  .ambient-bg::before, .ambient-bg::after {
+    content: ""; position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.4;
+    animation: ambient-drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::before { width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 70%); top: -10%; right: -5%; }
+  .ambient-bg::after { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%); bottom: -10%; left: -5%; animation-delay: -10s; }
+  @keyframes ambient-drift { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -20px) scale(1.1); } }
+
+  /* Glass surfaces */
+  .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
+
+  /* Layout */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 640px) { .container { padding: 0 16px; } }
 
   /* Header */
-  .header { padding: 40px 40px 32px; }
-  .header h1 { font-size: 38px; font-weight: 800; color: #1e293b; margin-bottom: 4px; }
-  .header .subtitle { font-size: 16px; color: #1e293b; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
-  .header .summary { font-size: 20px; line-height: 1.6; color: #1e293b; }
+  .header { padding: 48px 0 32px; }
+  .header h1 { font-size: 38px; font-weight: 800; color: #0F1D35; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .header .subtitle { font-size: 16px; color: #6b7280; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .header .summary { font-size: 20px; line-height: 1.6; color: #374151; }
+  .back-link { display: inline-block; font-size: 14px; color: #0284C7; text-decoration: none; font-weight: 600; margin-bottom: 16px; }
+  .back-link:hover { text-decoration: underline; }
 
   /* TOC */
-  .toc { padding: 0 40px 24px; }
-  .toc-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; }
+  .toc { border-radius: 16px; padding: 20px 24px; margin-bottom: 24px; }
   .toc-title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 10px; }
-  .toc-box a { display: inline-block; font-size: 16px; color: #2563eb; text-decoration: none; padding: 4px 16px 4px 0; font-weight: 600; }
-  .toc-box a:hover { text-decoration: underline; }
+  .toc a { display: inline-block; font-size: 16px; color: #0284C7; text-decoration: none; padding: 4px 16px 4px 0; font-weight: 600; }
+  .toc a:hover { text-decoration: underline; }
 
-  /* Section containers */
-  .section { padding: 0 40px; }
-  .section-box {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 28px 32px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  }
-  .section-header {
-    font-size: 24px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #1e293b;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #2563eb;
-  }
+  /* Section boxes */
+  .section-box { border-radius: 20px; padding: 32px; margin-bottom: 20px; }
+  .section-header { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0F1D35; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #0284C7; }
 
   /* Story cards */
-  .story-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 24px 28px;
-    margin-bottom: 12px;
-  }
+  .story-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
   .story-card:last-child { margin-bottom: 0; }
 
-  .badge { display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; }
-  .badge-impact { background: #dc2626; color: #fff; }
-  .badge-emerging { background: #2563eb; color: #fff; }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; }
+  .badge-impact { background: rgba(220, 38, 38, 0.1); color: #dc2626; border: 1px solid rgba(220, 38, 38, 0.2); }
+  .badge-emerging { background: rgba(2, 132, 199, 0.1); color: #0284C7; border: 1px solid rgba(2, 132, 199, 0.2); }
 
-  .story-headline { font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px; line-height: 1.3; }
-  .story-headline a { color: #1e293b; text-decoration: none; }
-  .story-headline a:hover { color: #2563eb; }
-  .so-what { font-size: 18px; font-weight: 600; color: #475569; margin-bottom: 12px; font-style: italic; }
-  .deep-dive { font-size: 18px; line-height: 1.7; color: #475569; }
+  .story-headline { font-size: 24px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; line-height: 1.3; }
+  .story-headline a { color: #0F1D35; text-decoration: none; }
+  .story-headline a:hover { color: #0284C7; }
+  .so-what { font-size: 18px; font-weight: 600; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .deep-dive-text { font-size: 18px; line-height: 1.7; color: #374151; }
   .risk-angle {
-    background: #fef3c7;
-    border: 1px solid #f59e0b;
-    padding: 14px 18px;
-    border-radius: 8px;
-    font-size: 17px;
-    margin-top: 14px;
-    color: #92400e;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 14px 18px; border-radius: 10px;
+    font-size: 17px; margin-top: 14px; color: #92400e;
   }
   .risk-angle strong { color: #78350f; }
-  .source-link { font-size: 14px; color: #94a3b8; margin-top: 12px; }
-  .source-link a { color: #2563eb; text-decoration: none; font-weight: 600; }
+  .source-link { font-size: 14px; color: #94a3b8; margin-top: 14px; }
+  .source-link a { color: #0284C7; text-decoration: none; font-weight: 600; }
   .source-link a:hover { text-decoration: underline; }
 
   /* DYK */
-  .dyk-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 24px 28px;
-    margin-bottom: 12px;
-  }
+  .dyk-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
   .dyk-card:last-child { margin-bottom: 0; }
-  .dyk-card h3 { font-size: 22px; font-weight: 700; color: #1e293b; margin-bottom: 10px; }
-  .dyk-card .explainer { font-size: 18px; line-height: 1.7; color: #475569; }
+  .dyk-card h3 { font-size: 22px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; }
+  .dyk-card .explainer { font-size: 18px; line-height: 1.7; color: #374151; }
 
   /* Trend */
-  .trend-section { max-width: 100%; margin-top: 16px; }
-  .trend-box {
-    padding: 28px 40px;
-    border-top: 2px solid #2563eb;
-    border-bottom: 2px solid #2563eb;
-  }
-  .trend-box .trend-label { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #2563eb; margin-bottom: 8px; }
-  .trend-box p { font-size: 18px; line-height: 1.6; color: #1e293b; }
+  .trend-box { border-radius: 20px; padding: 28px 32px; margin-bottom: 20px; border: 2px solid rgba(2, 132, 199, 0.2); }
+  .trend-label { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0284C7; margin-bottom: 8px; }
+  .trend-text { font-size: 18px; line-height: 1.6; color: #374151; }
 
   /* Sources */
-  .sources-section { padding: 24px 40px 0; }
-  .sources-box {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 24px 28px;
-  }
+  .sources-box { border-radius: 16px; padding: 24px 28px; margin-bottom: 20px; }
   .sources-box h2 { font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px; color: #94a3b8; margin-bottom: 14px; font-weight: 800; }
   .sources-box ul { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
-  .sources-box li { font-size: 14px; color: #475569; padding: 3px 0; break-inside: avoid; }
-  .sources-box li a { color: #2563eb; text-decoration: none; }
+  .sources-box li { font-size: 14px; color: #6b7280; padding: 4px 0; break-inside: avoid; }
+  .sources-box li a { color: #0284C7; text-decoration: none; }
   .sources-box li a:hover { text-decoration: underline; }
   .sources-box li .src-name { color: #94a3b8; font-size: 12px; }
 
   /* Footer */
-  .footer-area { padding: 24px 40px 48px; text-align: center; }
-  .footer-area .byline { font-size: 15px; color: #94a3b8; }
+  .footer { text-align: center; padding: 24px 0 48px; font-size: 15px; color: #94a3b8; }
 
   /* Responsive */
-  @media only screen and (max-width: 640px) {
-    .header { padding: 24px 16px 20px; }
+  @media (max-width: 640px) {
     .header h1 { font-size: 30px; }
-    .toc { padding: 0 16px 20px; }
-    .section { padding: 0 8px; }
-    .section-box { padding: 20px 16px; }
-    .section-header { font-size: 20px; }
+    .section-box { padding: 20px 16px; border-radius: 14px; }
     .story-card { padding: 18px 16px; }
     .story-headline { font-size: 20px; }
-    .deep-dive { font-size: 16px; }
-    .trend-box { padding: 20px 16px; }
+    .deep-dive-text { font-size: 16px; }
     .sources-box ul { columns: 1; }
-    .footer-area { padding: 20px 16px 32px; }
   }
 </style>
 </head>
 <body>
+<div class="ambient-bg"></div>
 
-<!-- Header -->
-<div class="header">
-  <h1>Healthcare AI Weekly</h1>
-  <div class="subtitle">Deep Dive — March 28 - April 04, 2026</div>
-  <div class="summary">Prior authorization reform is falling flat at just 11% reduction despite industry pledges, while AI integration accelerates at the point of care with Ambience launching nursing copilots and Anthropic dropping $400M on biotech. Health systems are caught between underwhelming payer reforms and the pressure to deploy autonomous AI to survive margin pressures.</div>
-</div>
+<div class="container">
+  <div class="header">
+    <a href="/" class="back-link">&larr; All Issues</a>
+    <h1>Healthcare AI Weekly</h1>
+    <div class="subtitle">Deep Dive — March 28 - April 04, 2026</div>
+    <div class="summary">Prior authorization reform is falling flat at just 11% reduction despite industry pledges, while AI integration accelerates at the point of care with Ambience launching nursing copilots and Anthropic dropping $400M on biotech. Health systems are caught between underwhelming payer reforms and the pressure to deploy autonomous AI to survive margin pressures.</div>
+  </div>
 
-<!-- TOC -->
-<div class="toc">
-  <div class="toc-box">
+  <!-- TOC -->
+  <div class="toc glass">
     <div class="toc-title">In This Issue</div>
     <a href="#top-stories">What Matters This Week</a>
     <a href="#vbc-watch">Value-Based Care Watch</a>
@@ -154,50 +144,48 @@
     <a href="#trend-watch">Trend Watch</a>
     <a href="#all-sources">All Sources</a>
   </div>
-</div>
 
-<!-- What Matters This Week -->
-
-<div class="section">
-  <div class="section-box" id="top-stories">
+  <!-- What Matters This Week -->
+  
+  <div class="section-box glass" id="top-stories">
     <div class="section-header">What Matters This Week</div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <span class="badge badge-impact">This Week's Impact</span>
       <div class="story-headline"><a href="https://www.fiercehealthcare.com/payers/insurers-have-eliminated-11-prior-authorizations-under-reform-pledge">Prior Auth Reform Falls Flat at 11%</a></div>
       <div class="so-what">Last summer's industry-wide commitment to prior auth reform has produced minimal results, with insurers eliminating only 11% of requirements. Health systems betting on administrative relief need backup plans.</div>
-      <div class="deep-dive">The numbers are damning. After months of industry fanfare about voluntary prior authorization reform, major payers have managed to eliminate just 11% of requirements according to AHIP and Blue Cross Blue Shield Association updates. This isn't just disappointing, it's strategically revealing about where payers draw the line on revenue protection versus provider relations. The 11% likely represents low-hanging fruit: routine procedures and medications where the administrative cost exceeded denial savings. The real battleground remains high-cost imaging, specialty drugs, and complex procedures where prior auth generates meaningful denial rates. For health systems, this data point fundamentally changes the ROI calculation on prior auth technology investments. Manual processes will continue grinding through 89% of the volume, making AI-powered automation not just attractive but necessary for survival. The consulting opportunity here is massive: helping health systems pivot from hoping for payer cooperation to building internal capabilities that can handle the administrative burden at scale.</div>
+      <div class="deep-dive-text">The numbers are damning. After months of industry fanfare about voluntary prior authorization reform, major payers have managed to eliminate just 11% of requirements according to AHIP and Blue Cross Blue Shield Association updates. This isn't just disappointing, it's strategically revealing about where payers draw the line on revenue protection versus provider relations. The 11% likely represents low-hanging fruit: routine procedures and medications where the administrative cost exceeded denial savings. The real battleground remains high-cost imaging, specialty drugs, and complex procedures where prior auth generates meaningful denial rates. For health systems, this data point fundamentally changes the ROI calculation on prior auth technology investments. Manual processes will continue grinding through 89% of the volume, making AI-powered automation not just attractive but necessary for survival. The consulting opportunity here is massive: helping health systems pivot from hoping for payer cooperation to building internal capabilities that can handle the administrative burden at scale.</div>
       
       <div class="risk-angle"><strong>Risk angle:</strong> The glacial pace suggests payers are cherry-picking easy eliminations while protecting revenue-generating denials on expensive procedures.</div>
       
       <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/payers/insurers-have-eliminated-11-prior-authorizations-under-reform-pledge">Fierce Healthcare</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <span class="badge badge-impact">This Week's Impact</span>
       <div class="story-headline"><a href="https://www.fiercehealthcare.com/providers/ambience-healthcare-launches-chart-chat-first-ehr-integrated-ai-copilot-nurses">Ambience Cracks Nursing AI</a></div>
       <div class="so-what">Ambience's Chart Chat represents the first EHR-integrated AI copilot specifically designed for nurses, piloted at Cleveland Clinic. This could be the breakthrough nursing leaders have been waiting for to address workflow inefficiencies.</div>
-      <div class="deep-dive">Ambience Healthcare just solved a problem that's been frustrating health system leaders for years: how to give nurses the same AI assistance that physicians are getting. Chart Chat is the first EHR-integrated AI copilot built specifically for nursing workflows, and it's already showing results in Cleveland Clinic's pilot. The key differentiator isn't just the nursing focus, it's the EHR integration. Too many AI tools require context switching that actually increases cognitive load. By embedding directly into existing workflows, Ambience eliminates the adoption friction that kills most healthcare AI initiatives. The Cleveland Clinic validation is crucial. Nurses using the tool report building 'richer, more confident understanding' of patients, which translates to better care coordination and fewer errors. For health systems drowning in nursing turnover and burnout, this represents a tangible intervention that could improve retention while enhancing patient outcomes. The consulting angle is immediate: CNOs need implementation roadmaps, ROI projections, and change management strategies for nursing AI adoption. This isn't experimental anymore.</div>
+      <div class="deep-dive-text">Ambience Healthcare just solved a problem that's been frustrating health system leaders for years: how to give nurses the same AI assistance that physicians are getting. Chart Chat is the first EHR-integrated AI copilot built specifically for nursing workflows, and it's already showing results in Cleveland Clinic's pilot. The key differentiator isn't just the nursing focus, it's the EHR integration. Too many AI tools require context switching that actually increases cognitive load. By embedding directly into existing workflows, Ambience eliminates the adoption friction that kills most healthcare AI initiatives. The Cleveland Clinic validation is crucial. Nurses using the tool report building 'richer, more confident understanding' of patients, which translates to better care coordination and fewer errors. For health systems drowning in nursing turnover and burnout, this represents a tangible intervention that could improve retention while enhancing patient outcomes. The consulting angle is immediate: CNOs need implementation roadmaps, ROI projections, and change management strategies for nursing AI adoption. This isn't experimental anymore.</div>
       
       <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/providers/ambience-healthcare-launches-chart-chat-first-ehr-integrated-ai-copilot-nurses">Fierce Healthcare</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <span class="badge badge-emerging">Emerging</span>
       <div class="story-headline"><a href="https://www.fiercehealthcare.com/biotech/anthropic-acquires-stealth-ai-startup-coefficient-bio-400m-deal">Anthropic Drops $400M on Biotech</a></div>
       <div class="so-what">Anthropic's $400M acquisition of stealth biotech startup Coefficient Bio signals major AI companies are moving beyond general healthcare applications into specialized life sciences, potentially reshaping drug discovery and development.</div>
-      <div class="deep-dive">Anthropic just made its biggest healthcare bet with the $400 million acquisition of Coefficient Bio, a previously stealth AI startup. This isn't just an acquisition, it's a signal that the AI wars are expanding into specialized healthcare verticals. The timing is telling: as general-purpose AI models commoditize, the real value lies in domain-specific applications where training data and specialized expertise create defensible moats. Coefficient Bio's stealth status makes this particularly intriguing. Either they've developed breakthrough drug discovery capabilities that justify the massive valuation, or Anthropic is paying a premium to avoid being left behind as competitors like Google make healthcare AI plays. The $400M price tag puts this in the same league as major pharma acquisitions, suggesting Anthropic sees life sciences as a core revenue driver, not just an application area. For biotech companies, this raises existential questions about building internal AI capabilities versus partnering with AI giants who now have specialized teams and massive compute resources dedicated to life sciences problems. The consulting opportunity spans strategic positioning, build-versus-buy decisions, and competitive intelligence as the AI-biotech convergence accelerates.</div>
+      <div class="deep-dive-text">Anthropic just made its biggest healthcare bet with the $400 million acquisition of Coefficient Bio, a previously stealth AI startup. This isn't just an acquisition, it's a signal that the AI wars are expanding into specialized healthcare verticals. The timing is telling: as general-purpose AI models commoditize, the real value lies in domain-specific applications where training data and specialized expertise create defensible moats. Coefficient Bio's stealth status makes this particularly intriguing. Either they've developed breakthrough drug discovery capabilities that justify the massive valuation, or Anthropic is paying a premium to avoid being left behind as competitors like Google make healthcare AI plays. The $400M price tag puts this in the same league as major pharma acquisitions, suggesting Anthropic sees life sciences as a core revenue driver, not just an application area. For biotech companies, this raises existential questions about building internal AI capabilities versus partnering with AI giants who now have specialized teams and massive compute resources dedicated to life sciences problems. The consulting opportunity spans strategic positioning, build-versus-buy decisions, and competitive intelligence as the AI-biotech convergence accelerates.</div>
       
       <div class="risk-angle"><strong>Risk angle:</strong> The stealth nature of Coefficient Bio makes this a massive bet on unproven technology, suggesting either breakthrough capabilities or Anthropic's desperation to compete with Google's healthcare AI advances.</div>
       
       <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/biotech/anthropic-acquires-stealth-ai-startup-coefficient-bio-400m-deal">Fierce Healthcare</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <span class="badge badge-emerging">Emerging</span>
       <div class="story-headline"><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/industry-voices-hospitals-are-fueling-ai-innovation-should-they-own-piece">Hospitals Should Own AI Innovation Upside</a></div>
       <div class="so-what">As hospital data and workflows increasingly fuel vendor AI development, health systems face a strategic question about capturing value from their contributions while managing new liability risks.</div>
-      <div class="deep-dive">This opinion piece raises a question that's about to become urgent for every health system: should hospitals own equity in the AI tools they're helping to develop? The argument is compelling. Health systems provide the clinical data, workflow expertise, and real-world testing environments that make healthcare AI valuable. Yet they typically pay licensing fees to access tools built on their own contributions. The intellectual property dynamics are complex but the economic argument is straightforward. As AI vendors capture billions in market value from healthcare applications, hospitals struggle with razor-thin margins despite being the source of training data and validation. Some forward-thinking systems are already negotiating revenue sharing agreements or equity stakes in AI partnerships. But the legal and ethical complexities are significant. Revenue sharing could create conflicts of interest in clinical decision-making. Equity stakes might influence vendor selection processes. Product liability questions multiply when hospitals become financial stakeholders in AI tools. The consulting opportunity spans legal strategy, partnership structuring, and valuation frameworks. Health systems need sophisticated approaches to capturing AI innovation value while preserving clinical objectivity and managing new forms of risk.</div>
+      <div class="deep-dive-text">This opinion piece raises a question that's about to become urgent for every health system: should hospitals own equity in the AI tools they're helping to develop? The argument is compelling. Health systems provide the clinical data, workflow expertise, and real-world testing environments that make healthcare AI valuable. Yet they typically pay licensing fees to access tools built on their own contributions. The intellectual property dynamics are complex but the economic argument is straightforward. As AI vendors capture billions in market value from healthcare applications, hospitals struggle with razor-thin margins despite being the source of training data and validation. Some forward-thinking systems are already negotiating revenue sharing agreements or equity stakes in AI partnerships. But the legal and ethical complexities are significant. Revenue sharing could create conflicts of interest in clinical decision-making. Equity stakes might influence vendor selection processes. Product liability questions multiply when hospitals become financial stakeholders in AI tools. The consulting opportunity spans legal strategy, partnership structuring, and valuation frameworks. Health systems need sophisticated approaches to capturing AI innovation value while preserving clinical objectivity and managing new forms of risk.</div>
       
       <div class="risk-angle"><strong>Risk angle:</strong> Revenue sharing agreements could expose hospitals to product liability issues and create conflicts of interest in vendor selection and clinical decision-making.</div>
       
@@ -205,128 +193,118 @@
     </div>
     
   </div>
-</div>
+  
 
-
-<!-- Value-Based Care Watch -->
-
-<div class="section">
-  <div class="section-box" id="vbc-watch">
+  <!-- Value-Based Care Watch -->
+  
+  <div class="section-box glass" id="vbc-watch">
     <div class="section-header">Value-Based Care Watch</div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://www.fiercehealthcare.com/health-tech/waystar-builds-out-ai-solution-uncover-lost-revenue-payer-takebacks">Waystar AI Hunts Revenue Takebacks</a></div>
       <div class="so-what">Waystar's AI solution targets payer 'take-backs' where insurers claw back previously approved payments, a growing revenue leakage problem that many health systems aren't systematically tracking.</div>
-      <div class="deep-dive">Waystar is tackling one of healthcare's most frustrating revenue cycle problems: payer take-backs. These are situations where insurers initially approve and pay claims, then later demand refunds through post-payment reviews. It's a growing problem that many health systems handle reactively, if at all. The AI angle is crucial because take-back patterns are often subtle and distributed across thousands of claims. Manual detection misses the vast majority of recoverable revenue. Waystar's solution can identify patterns across payer behaviors, procedure codes, and timing that human reviewers simply can't process at scale. For health systems operating on thin margins, this represents found money. Take-back losses often run into millions annually for large systems, but the complexity of fighting individual cases means most go unchallenged. AI changes the economics by automating both detection and documentation for appeals. The value-based care connection is direct: as health systems take on more financial risk through ACO contracts and capitation arrangements, revenue leakage from take-backs becomes a significant threat to shared savings calculations. Systems need tools that can protect their revenue base while they transition to value-based models.</div>
+      <div class="deep-dive-text">Waystar is tackling one of healthcare's most frustrating revenue cycle problems: payer take-backs. These are situations where insurers initially approve and pay claims, then later demand refunds through post-payment reviews. It's a growing problem that many health systems handle reactively, if at all. The AI angle is crucial because take-back patterns are often subtle and distributed across thousands of claims. Manual detection misses the vast majority of recoverable revenue. Waystar's solution can identify patterns across payer behaviors, procedure codes, and timing that human reviewers simply can't process at scale. For health systems operating on thin margins, this represents found money. Take-back losses often run into millions annually for large systems, but the complexity of fighting individual cases means most go unchallenged. AI changes the economics by automating both detection and documentation for appeals. The value-based care connection is direct: as health systems take on more financial risk through ACO contracts and capitation arrangements, revenue leakage from take-backs becomes a significant threat to shared savings calculations. Systems need tools that can protect their revenue base while they transition to value-based models.</div>
       
       <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/health-tech/waystar-builds-out-ai-solution-uncover-lost-revenue-payer-takebacks">Fierce Healthcare</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://www.fiercehealthcare.com/telehealth/counsel-health-expands-primary-ai-care-model-include-lifestyle-chronic-conditions">Counsel Health Expands AI Primary Care</a></div>
       <div class="so-what">Counsel Health's expansion into chronic disease management represents AI-first primary care moving beyond episodic encounters toward continuous population health management.</div>
-      <div class="deep-dive">Counsel Health is making a strategic bet that AI can handle not just acute primary care encounters but ongoing chronic disease management. This expansion from lifestyle conditions into chronic diseases like diabetes and hypertension represents a significant leap in AI capability and ambition. The business model implications are huge. Episodic care doesn't scale profitably, but continuous chronic disease management does, especially under value-based contracts where preventing complications generates shared savings. If AI can provide effective ongoing monitoring, medication management, and lifestyle coaching, it solves the economics of primary care while improving outcomes. The clinical risk is real though. Chronic disease management requires nuanced clinical judgment about medication adjustments, specialist referrals, and care escalation that current AI systems handle inconsistently. The expansion suggests Counsel Health has developed more sophisticated clinical decision-making capabilities, but the proof will be in real-world outcomes data. For health systems and payers, this model offers a potential solution to primary care capacity constraints while reducing chronic disease costs. MA plans and ACOs dealing with population health management at scale will watch this closely.</div>
+      <div class="deep-dive-text">Counsel Health is making a strategic bet that AI can handle not just acute primary care encounters but ongoing chronic disease management. This expansion from lifestyle conditions into chronic diseases like diabetes and hypertension represents a significant leap in AI capability and ambition. The business model implications are huge. Episodic care doesn't scale profitably, but continuous chronic disease management does, especially under value-based contracts where preventing complications generates shared savings. If AI can provide effective ongoing monitoring, medication management, and lifestyle coaching, it solves the economics of primary care while improving outcomes. The clinical risk is real though. Chronic disease management requires nuanced clinical judgment about medication adjustments, specialist referrals, and care escalation that current AI systems handle inconsistently. The expansion suggests Counsel Health has developed more sophisticated clinical decision-making capabilities, but the proof will be in real-world outcomes data. For health systems and payers, this model offers a potential solution to primary care capacity constraints while reducing chronic disease costs. MA plans and ACOs dealing with population health management at scale will watch this closely.</div>
       
       <div class="risk-angle"><strong>Risk angle:</strong> AI-driven chronic care management without sufficient human oversight could miss clinical nuances that lead to adverse outcomes and liability exposure.</div>
       
       <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/telehealth/counsel-health-expands-primary-ai-care-model-include-lifestyle-chronic-conditions">Fierce Healthcare</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPMG1WNC1IN0kwaVJ6aXhJTnBBQ1ZNNmNSbzc5Wnd1TS04bkdIcll4MzlfelpwLWJ4ejY4TXdEN2dZU0hGdUpRZS1mVnZGbVlUbHk4TjVIUHNlTUNFaWxiRExyeUZhNVJ5Q2VkX203MnhrOUFSb2ExX3VQck9VZDdXNHgwaDE0SXJKdmlLcl9wSDJkUHF2Y09yczZVSHpIMUJnV3NjTnFRRi1Td0w3UlVwVktJUEZTMTNRQ3gzTk54RlpueExO0gHKAUFVX3lxTE5Ec3hKeS1HN2dCSl9fR3JiNXNobHdheGFnMWpXaGdqNzhEeUtYTEVJVmZkZzdScUxYSHY3WURIbE96eEVraTMtVkx2cnFhZVFsTXZTRzN4M2dLY2Jhay16QVBrZzZoOFpOWVMyd0ZvNFZmQmdjMHJhekp4YUlCR1I3VnA2SENSRFZZS0tzSUMwZTlXUjFzcjNlSmZySVJybDh4Zks2TlJFYU81Yzg3TEZJeGNUMTYtVmZwRlFZbFZiSkdJaS1mRXdqS1E?oc=5">McKesson's VBC Momentum Builds Case</a></div>
       <div class="so-what">McKesson's value-based care momentum is strengthening its investment thesis as the pharmaceutical distribution giant positions itself as a critical infrastructure player in VBC models.</div>
-      <div class="deep-dive">McKesson's value-based care positioning is becoming a significant factor in its investment attractiveness, according to market analysts tracking earnings revisions and strategic momentum. This isn't just about pharmaceutical distribution anymore; it's about becoming critical infrastructure for health systems operating under VBC contracts. The bull case centers on McKesson's unique position bridging traditional fee-for-service pharmaceutical economics with value-based payment models. As health systems take on more financial risk through ACO contracts and capitation arrangements, they need supply chain partners who can support cost management and outcomes tracking. McKesson's data analytics capabilities, combined with its distribution scale, create opportunities for shared savings arrangements and risk-based pharmaceutical contracts. The company's recent investments in technology platforms and data analytics suggest they're building capabilities beyond traditional distribution. This includes medication adherence programs, population health analytics, and cost management tools that become more valuable as VBC adoption accelerates. For health systems, the strategic question is whether to partner with distributors like McKesson for VBC support or build internal capabilities. The consulting opportunity involves helping systems evaluate supply chain partnerships that align with value-based contract structures and shared savings calculations.</div>
+      <div class="deep-dive-text">McKesson's value-based care positioning is becoming a significant factor in its investment attractiveness, according to market analysts tracking earnings revisions and strategic momentum. This isn't just about pharmaceutical distribution anymore; it's about becoming critical infrastructure for health systems operating under VBC contracts. The bull case centers on McKesson's unique position bridging traditional fee-for-service pharmaceutical economics with value-based payment models. As health systems take on more financial risk through ACO contracts and capitation arrangements, they need supply chain partners who can support cost management and outcomes tracking. McKesson's data analytics capabilities, combined with its distribution scale, create opportunities for shared savings arrangements and risk-based pharmaceutical contracts. The company's recent investments in technology platforms and data analytics suggest they're building capabilities beyond traditional distribution. This includes medication adherence programs, population health analytics, and cost management tools that become more valuable as VBC adoption accelerates. For health systems, the strategic question is whether to partner with distributors like McKesson for VBC support or build internal capabilities. The consulting opportunity involves helping systems evaluate supply chain partnerships that align with value-based contract structures and shared savings calculations.</div>
       
       <div class="risk-angle"><strong>Risk angle:</strong> Heavy VBC investments could pressure near-term margins if health systems are slow to adopt new payment models or if regulatory changes disrupt the transition.</div>
       
       <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPMG1WNC1IN0kwaVJ6aXhJTnBBQ1ZNNmNSbzc5Wnd1TS04bkdIcll4MzlfelpwLWJ4ejY4TXdEN2dZU0hGdUpRZS1mVnZGbVlUbHk4TjVIUHNlTUNFaWxiRExyeUZhNVJ5Q2VkX203MnhrOUFSb2ExX3VQck9VZDdXNHgwaDE0SXJKdmlLcl9wSDJkUHF2Y09yczZVSHpIMUJnV3NjTnFRRi1Td0w3UlVwVktJUEZTMTNRQ3gzTk54RlpueExO0gHKAUFVX3lxTE5Ec3hKeS1HN2dCSl9fR3JiNXNobHdheGFnMWpXaGdqNzhEeUtYTEVJVmZkZzdScUxYSHY3WURIbE96eEVraTMtVkx2cnFhZVFsTXZTRzN4M2dLY2Jhay16QVBrZzZoOFpOWVMyd0ZvNFZmQmdjMHJhekp4YUlCR1I3VnA2SENSRFZZS0tzSUMwZTlXUjFzcjNlSmZySVJybDh4Zks2TlJFYU81Yzg3TEZJeGNUMTYtVmZwRlFZbFZiSkdJaS1mRXdqS1E?oc=5">Google News</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQQ3paay0zbVkwNm5FM2V4ZUp2N0dTaVVkclUtcmVoR2t0NGRMZVBNRXlWVFNONHdUU29hYmNKT0VnOFFhRnNhNk1WRXkxckg5WTY4MFZNM2laSjIxcUxCRjAyT3VxWDZBU2drdHdXNjJDc0FEWXI2ZTdFbnNyQktNME9uczJTc3hQNnNXUlJ3YmtqdGJ2blY3ZjBKQm1PMlp3WjdsdEhULWQ2QWpmel8wbEMzNERYb0dhZjFQaXN1SQ?oc=5">Persivia Targets VBC Growth at NAACOS</a></div>
       <div class="so-what">Persivia's AI-focused panel at NAACOS 2026 signals the company is positioning itself for growth as ACOs look for technology solutions to improve shared savings performance.</div>
-      <div class="deep-dive">Persivia's participation in NAACOS 2026 with an AI-focused panel represents strategic positioning in the ACO market at a critical inflection point. The National Association of Accountable Care Organizations annual conference is where ACO leaders evaluate technology investments for the coming year, and Persivia is making a direct play for that decision-making process. The timing is significant because 2026 is a pivotal year for Medicare Shared Savings Program participants. Many ACOs are struggling with quality scores and cost management, creating demand for AI solutions that can identify high-risk patients, optimize care pathways, and automate quality reporting. Persivia's platform focuses on population health analytics and care management, which directly addresses ACO performance metrics. The AI angle is crucial because manual population health management doesn't scale to the thousands of attributed patients most ACOs manage. AI can identify patterns in utilization, predict adverse outcomes, and recommend interventions that human care managers would miss. For consulting practices, this represents a growing market opportunity as ACOs seek external support for technology selection, implementation planning, and performance optimization. The success of AI-powered population health platforms will largely determine which ACOs generate meaningful shared savings versus those that struggle with program requirements.</div>
+      <div class="deep-dive-text">Persivia's participation in NAACOS 2026 with an AI-focused panel represents strategic positioning in the ACO market at a critical inflection point. The National Association of Accountable Care Organizations annual conference is where ACO leaders evaluate technology investments for the coming year, and Persivia is making a direct play for that decision-making process. The timing is significant because 2026 is a pivotal year for Medicare Shared Savings Program participants. Many ACOs are struggling with quality scores and cost management, creating demand for AI solutions that can identify high-risk patients, optimize care pathways, and automate quality reporting. Persivia's platform focuses on population health analytics and care management, which directly addresses ACO performance metrics. The AI angle is crucial because manual population health management doesn't scale to the thousands of attributed patients most ACOs manage. AI can identify patterns in utilization, predict adverse outcomes, and recommend interventions that human care managers would miss. For consulting practices, this represents a growing market opportunity as ACOs seek external support for technology selection, implementation planning, and performance optimization. The success of AI-powered population health platforms will largely determine which ACOs generate meaningful shared savings versus those that struggle with program requirements.</div>
       
       <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQQ3paay0zbVkwNm5FM2V4ZUp2N0dTaVVkclUtcmVoR2t0NGRMZVBNRXlWVFNONHdUU29hYmNKT0VnOFFhRnNhNk1WRXkxckg5WTY4MFZNM2laSjIxcUxCRjAyT3VxWDZBU2drdHdXNjJDc0FEWXI2ZTdFbnNyQktNME9uczJTc3hQNnNXUlJ3YmtqdGJ2blY3ZjBKQm1PMlp3WjdsdEhULWQ2QWpmel8wbEMzNERYb0dhZjFQaXN1SQ?oc=5">Google News</a></div>
     </div>
     
   </div>
-</div>
+  
 
-
-<!-- Acquisitions & Partnerships -->
-
-<div class="section">
-  <div class="section-box" id="deal-flow">
+  <!-- Acquisitions & Partnerships -->
+  
+  <div class="section-box glass" id="deal-flow">
     <div class="section-header">Acquisitions & Partnerships</div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE9hX3BhY0NQUi02ZndzTmZmTHE1bWk5LXZoLWJPdG0yNEgtS1hKcjNoZXJOSGpLOTdnTUZkSTQ0Wk9HRWdvczNB?oc=5">OpenAI Commits $1B Annually to Healthcare</a></div>
       <div class="so-what">OpenAI's $1B annual commitment to healthcare AI and safety programs represents the largest dedicated healthcare AI investment from a major AI company, potentially reshaping competitive dynamics and research funding.</div>
-      <div class="deep-dive">OpenAI's $1 billion annual commitment to healthcare AI and safety programs is a game-changing move that dwarfs most healthcare AI investments from tech giants. This isn't venture funding or pilot programs; it's a sustained, enterprise-scale commitment that signals OpenAI views healthcare as a primary revenue driver for advanced AI models. The safety component is particularly strategic. As AI regulation tightens, especially in healthcare, OpenAI is positioning itself as the responsible AI leader through massive safety investments. This could create competitive advantages in regulatory approval processes and government contract competitions. The funding structure suggests OpenAI is building long-term healthcare infrastructure rather than making tactical investments. $1B annually can fund major academic partnerships, clinical trials, and regulatory compliance programs that smaller competitors can't match. For health systems, this creates both opportunities and dependencies. OpenAI's healthcare initiatives will likely offer compelling capabilities, but they'll also create vendor concentration risk as the company becomes increasingly central to healthcare AI infrastructure. The consulting implications are massive: helping health systems evaluate OpenAI partnerships, prepare for competitive dynamics as other AI giants respond, and develop strategic responses to AI market consolidation.</div>
+      <div class="deep-dive-text">OpenAI's $1 billion annual commitment to healthcare AI and safety programs is a game-changing move that dwarfs most healthcare AI investments from tech giants. This isn't venture funding or pilot programs; it's a sustained, enterprise-scale commitment that signals OpenAI views healthcare as a primary revenue driver for advanced AI models. The safety component is particularly strategic. As AI regulation tightens, especially in healthcare, OpenAI is positioning itself as the responsible AI leader through massive safety investments. This could create competitive advantages in regulatory approval processes and government contract competitions. The funding structure suggests OpenAI is building long-term healthcare infrastructure rather than making tactical investments. $1B annually can fund major academic partnerships, clinical trials, and regulatory compliance programs that smaller competitors can't match. For health systems, this creates both opportunities and dependencies. OpenAI's healthcare initiatives will likely offer compelling capabilities, but they'll also create vendor concentration risk as the company becomes increasingly central to healthcare AI infrastructure. The consulting implications are massive: helping health systems evaluate OpenAI partnerships, prepare for competitive dynamics as other AI giants respond, and develop strategic responses to AI market consolidation.</div>
       <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE9hX3BhY0NQUi02ZndzTmZmTHE1bWk5LXZoLWJPdG0yNEgtS1hKcjNoZXJOSGpLOTdnTUZkSTQ0Wk9HRWdvczNB?oc=5">Google News</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://openai.com/index/openai-acquires-tbpn">OpenAI Acquires Media Company TBPN</a></div>
       <div class="so-what">OpenAI's acquisition of media company TBPN signals the AI giant is building content capabilities to support global conversations around AI development and policy, particularly relevant for healthcare AI communication.</div>
-      <div class="deep-dive">OpenAI's acquisition of TBPN, described as supporting 'independent media' and 'global conversations around AI,' is a strategic move that extends beyond traditional tech company communications. By acquiring media infrastructure, OpenAI is building capabilities to shape public discourse around AI development, regulation, and adoption. This has particular relevance for healthcare AI, where public trust and regulatory acceptance are critical success factors. The healthcare industry relies heavily on clinical evidence, peer-reviewed research, and professional education for new technology adoption. Having media capabilities allows OpenAI to directly engage healthcare audiences, publish research findings, and influence policy discussions around AI safety and efficacy in clinical settings. The 'independent media' positioning is crucial because healthcare professionals are skeptical of vendor-controlled content. If TBPN can maintain editorial independence while providing OpenAI insights into healthcare communication strategies, it becomes a powerful tool for market education and adoption. For consulting practices, this signals that AI companies are investing heavily in market education and narrative control. Health systems will need support navigating AI vendor communications, distinguishing between marketing content and genuine research, and developing internal capabilities to evaluate AI company claims independently.</div>
+      <div class="deep-dive-text">OpenAI's acquisition of TBPN, described as supporting 'independent media' and 'global conversations around AI,' is a strategic move that extends beyond traditional tech company communications. By acquiring media infrastructure, OpenAI is building capabilities to shape public discourse around AI development, regulation, and adoption. This has particular relevance for healthcare AI, where public trust and regulatory acceptance are critical success factors. The healthcare industry relies heavily on clinical evidence, peer-reviewed research, and professional education for new technology adoption. Having media capabilities allows OpenAI to directly engage healthcare audiences, publish research findings, and influence policy discussions around AI safety and efficacy in clinical settings. The 'independent media' positioning is crucial because healthcare professionals are skeptical of vendor-controlled content. If TBPN can maintain editorial independence while providing OpenAI insights into healthcare communication strategies, it becomes a powerful tool for market education and adoption. For consulting practices, this signals that AI companies are investing heavily in market education and narrative control. Health systems will need support navigating AI vendor communications, distinguishing between marketing content and genuine research, and developing internal capabilities to evaluate AI company claims independently.</div>
       <div class="source-link">Source: <a href="https://openai.com/index/openai-acquires-tbpn">OpenAI Blog</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity">Anthropic Launches Project Glasswing Security</a></div>
       <div class="so-what">Anthropic's Project Glasswing represents AI-powered cybersecurity capabilities that could revolutionize healthcare security assessments, particularly relevant as health systems face increasing cyber threats.</div>
-      <div class="deep-dive">Anthropic's Project Glasswing, which found security vulnerabilities 'in every major operating system and web browser,' represents a breakthrough in AI-powered cybersecurity that has immediate implications for healthcare organizations. The partnership with Nvidia, Google, Amazon Web Services, Apple, and Microsoft suggests this isn't experimental technology but enterprise-ready capabilities being deployed at scale. For healthcare, this is particularly significant because health systems are prime cyber attack targets with notoriously complex IT environments spanning legacy clinical systems, modern cloud infrastructure, and medical devices. Traditional penetration testing and vulnerability assessments are time-intensive and often miss subtle security gaps that AI can identify through pattern recognition and automated analysis. The autonomous aspect is crucial. Glasswing reportedly requires 'virtually no human intervention' to flag vulnerabilities, which could revolutionize how health systems approach security assessments. Instead of annual penetration tests, organizations could run continuous AI-powered security scans that identify emerging threats in real-time. However, the same capabilities that make this valuable for defense create new attack vectors. If bad actors access similar AI tools, they could automate vulnerability discovery and exploitation at unprecedented scale. Health systems need to prepare for both the opportunities and threats from AI-powered cybersecurity tools.</div>
+      <div class="deep-dive-text">Anthropic's Project Glasswing, which found security vulnerabilities 'in every major operating system and web browser,' represents a breakthrough in AI-powered cybersecurity that has immediate implications for healthcare organizations. The partnership with Nvidia, Google, Amazon Web Services, Apple, and Microsoft suggests this isn't experimental technology but enterprise-ready capabilities being deployed at scale. For healthcare, this is particularly significant because health systems are prime cyber attack targets with notoriously complex IT environments spanning legacy clinical systems, modern cloud infrastructure, and medical devices. Traditional penetration testing and vulnerability assessments are time-intensive and often miss subtle security gaps that AI can identify through pattern recognition and automated analysis. The autonomous aspect is crucial. Glasswing reportedly requires 'virtually no human intervention' to flag vulnerabilities, which could revolutionize how health systems approach security assessments. Instead of annual penetration tests, organizations could run continuous AI-powered security scans that identify emerging threats in real-time. However, the same capabilities that make this valuable for defense create new attack vectors. If bad actors access similar AI tools, they could automate vulnerability discovery and exploitation at unprecedented scale. Health systems need to prepare for both the opportunities and threats from AI-powered cybersecurity tools.</div>
       <div class="source-link">Source: <a href="https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity">The Verge AI</a></div>
     </div>
     
-    <div class="story-card">
+    <div class="story-card glass-card">
       <div class="story-headline"><a href="https://www.statnews.com/2026/04/07/health-care-jobs-autonomous-ai-replacement/?utm_campaign=rss">Former Geisinger CEO Pushes AI Job Replacement</a></div>
       <div class="so-what">Former Geisinger CEO Glenn Steele argues health systems must replace 'huge numbers of people with AI' for survival, representing the most direct articulation yet of AI's workforce displacement potential in healthcare.</div>
-      <div class="deep-dive">Glenn Steele's opinion piece represents the most direct argument yet from a major health system leader that AI-driven job replacement is inevitable and necessary for healthcare survival. As former CEO of Geisinger, one of the most innovative health systems in value-based care, Steele's perspective carries significant weight with industry leaders facing similar margin pressures. The 'autonomous healthcare' argument is compelling from a financial perspective. Labor costs represent 50-60% of most health system expenses, and AI can automate many administrative, clinical support, and even direct care functions more efficiently than human workers. The COVID pandemic demonstrated that healthcare delivery can adapt rapidly when survival is at stake. But the workforce implications are staggering. Healthcare employs over 22 million Americans, and significant AI displacement could create economic and political upheaval. The practical challenges are immense: union negotiations, regulatory approval for AI clinical decisions, patient acceptance of autonomous care, and liability frameworks for AI errors. Steele's argument suggests this isn't a gradual transition but a survival imperative that will force rapid transformation. For consulting practices, this represents massive opportunities in workforce planning, change management, AI implementation, and labor relations. Health systems will need external support navigating one of the largest workforce transformations in American history.</div>
+      <div class="deep-dive-text">Glenn Steele's opinion piece represents the most direct argument yet from a major health system leader that AI-driven job replacement is inevitable and necessary for healthcare survival. As former CEO of Geisinger, one of the most innovative health systems in value-based care, Steele's perspective carries significant weight with industry leaders facing similar margin pressures. The 'autonomous healthcare' argument is compelling from a financial perspective. Labor costs represent 50-60% of most health system expenses, and AI can automate many administrative, clinical support, and even direct care functions more efficiently than human workers. The COVID pandemic demonstrated that healthcare delivery can adapt rapidly when survival is at stake. But the workforce implications are staggering. Healthcare employs over 22 million Americans, and significant AI displacement could create economic and political upheaval. The practical challenges are immense: union negotiations, regulatory approval for AI clinical decisions, patient acceptance of autonomous care, and liability frameworks for AI errors. Steele's argument suggests this isn't a gradual transition but a survival imperative that will force rapid transformation. For consulting practices, this represents massive opportunities in workforce planning, change management, AI implementation, and labor relations. Health systems will need external support navigating one of the largest workforce transformations in American history.</div>
       <div class="source-link">Source: <a href="https://www.statnews.com/2026/04/07/health-care-jobs-autonomous-ai-replacement/?utm_campaign=rss">STAT News</a></div>
     </div>
     
   </div>
-</div>
+  
 
-
-<!-- Did You Know? -->
-
-<div class="section">
-  <div class="section-box" id="did-you-know">
+  <!-- Did You Know? -->
+  
+  <div class="section-box glass" id="did-you-know">
     <div class="section-header">Did You Know?</div>
     
-    <div class="dyk-card">
+    <div class="dyk-card glass-card">
       <h3>Google Gemini Gets Mental Health Guardrails</h3>
       <div class="explainer">Google's Gemini updates represent the tech giant's response to mounting legal pressure around AI chatbot safety, particularly following wrongful death lawsuits alleging their chatbot 'coached' users toward suicide. The changes prioritize faster access to mental health resources when users express distress, moving beyond standard disclaimer text toward proactive intervention. This development signals how AI companies are grappling with unintended consequences of conversational AI in sensitive contexts. For healthcare applications, it demonstrates the critical importance of safety guardrails and crisis intervention protocols. The legal liability implications extend beyond Google: any health system deploying conversational AI for patient interaction needs similar safeguards. The updates also highlight a broader challenge in healthcare AI: balancing helpful, empathetic responses with appropriate boundaries and escalation procedures. As AI chatbots become more sophisticated and human-like, users may develop emotional attachments or seek advice beyond the system's intended scope. Healthcare organizations need clear protocols for when AI interactions should transition to human providers.</div>
       <div class="source-link">Source: <a href="https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update">The Verge AI</a></div>
     </div>
     
-    <div class="dyk-card">
+    <div class="dyk-card glass-card">
       <h3>Elon Musk's Terafab Gets Intel Partnership</h3>
       <div class="explainer">Elon Musk's Terafab project represents a strategic move toward vertical integration in AI chip manufacturing, with Intel as a key partner for the Austin, Texas facility. The facility will supply AI chips to Musk's companies: SpaceX (now merged with xAI) and Tesla, both of which have massive AI compute requirements for autonomous systems development. This partnership reflects broader trends in AI infrastructure: major AI consumers are building their own chip capabilities rather than relying entirely on Nvidia's dominant position. For healthcare applications, this development matters because it could eventually increase AI chip supply and reduce costs for healthcare AI implementations. The Tesla connection is particularly relevant for healthcare: autonomous vehicle technology shares many technical challenges with healthcare AI, including real-time decision-making, safety-critical applications, and complex sensor fusion. Technologies developed for autonomous driving often find applications in medical imaging, robotic surgery, and clinical decision support systems. The Intel partnership also signals American efforts to reduce dependence on foreign chip manufacturing for critical AI infrastructure, which has implications for healthcare AI supply chain security.</div>
       <div class="source-link">Source: <a href="https://www.theverge.com/transportation/907976/elon-musk-terafab-intel-ai-chip-spacex-tesla">The Verge AI</a></div>
     </div>
     
   </div>
-</div>
+  
 
-
-<!-- Trend Watch -->
-
-<div class="trend-section" id="trend-watch">
-  <div class="trend-box">
+  <!-- Trend Watch -->
+  
+  <div class="trend-box glass" id="trend-watch">
     <div class="trend-label">Trend Watch</div>
-    <p>Big AI companies are making massive healthcare commitments (OpenAI's $1B annually, Anthropic's $400M acquisition) while health system leaders openly discuss AI job replacement as survival strategy.</p>
+    <div class="trend-text">Big AI companies are making massive healthcare commitments (OpenAI's $1B annually, Anthropic's $400M acquisition) while health system leaders openly discuss AI job replacement as survival strategy.</div>
   </div>
-</div>
+  
 
-
-<!-- All Sources -->
-<div class="sources-section">
-  <div class="sources-box" id="all-sources">
+  <!-- All Sources -->
+  <div class="sources-box glass" id="all-sources">
     <h2>All Sources Considered This Week</h2>
     <ul>
     
@@ -398,12 +376,8 @@
     
     </ul>
   </div>
-</div>
 
-<!-- Footer -->
-<div class="footer-area">
-  <div class="byline">Healthcare AI Weekly by Greg Harrison, Guidehouse</div>
+  <div class="footer">Healthcare AI Weekly by Greg Harrison, Guidehouse</div>
 </div>
-
 </body>
 </html>

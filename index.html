@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare AI Weekly</title>
+<style>
+  @font-face { font-family: 'Aptos'; src: local('Aptos'), local('Aptos Display'), local('Calibri'); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; color: #111827; min-height: 100vh; }
+  html { background: #f0f2f5; }
+
+  /* Ambient mesh gradient background */
+  .ambient-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(135deg, #e8edf5 0%, #dfe6f0 30%, #eae4f0 60%, #e0eaf5 100%);
+  }
+  .ambient-bg::before,
+  .ambient-bg::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    animation: ambient-drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 70%);
+    top: -10%;
+    right: -5%;
+  }
+  .ambient-bg::after {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%);
+    bottom: -10%;
+    left: -5%;
+    animation-delay: -10s;
+  }
+  @keyframes ambient-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.1); }
+  }
+
+  /* Glass surfaces */
+  .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(1.6);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+  }
+
+  /* Layout */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 640px) { .container { padding: 0 16px; } }
+
+  /* Header */
+  .hero { padding: 80px 0 48px; text-align: center; }
+  .hero h1 { font-size: 48px; font-weight: 800; color: #0F1D35; letter-spacing: -1px; margin-bottom: 8px; }
+  .hero .tagline { font-size: 20px; color: #6b7280; font-weight: 400; line-height: 1.5; max-width: 600px; margin: 0 auto 12px; }
+  .hero .byline { font-size: 14px; color: #94a3b8; }
+
+  /* Issue grid */
+  .issues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding-bottom: 80px; }
+
+  .issue-card {
+    border-radius: 16px;
+    padding: 28px 24px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .issue-card .date { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0284C7; margin-bottom: 12px; }
+  .issue-card .summary { font-size: 15px; line-height: 1.55; color: #475569; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .issue-card .story-count { font-size: 13px; color: #94a3b8; }
+  .issue-card .read-link { font-size: 14px; font-weight: 600; color: #0284C7; margin-top: 12px; }
+  .issue-card:hover .read-link { text-decoration: underline; }
+
+  /* Section label */
+  .section-label { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 16px; padding-top: 24px; }
+
+  /* Empty state */
+  .empty { text-align: center; padding: 60px 0; color: #94a3b8; font-size: 16px; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 32px 0 48px; font-size: 14px; color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="ambient-bg"></div>
+
+<div class="container">
+  <div class="hero">
+    <h1>Healthcare AI Weekly</h1>
+    <div class="tagline">Weekly intelligence on AI in healthcare. Curated for consultants, strategists, and health system leaders who need to know what matters and why.</div>
+    <div class="byline">By Greg Harrison, Guidehouse</div>
+  </div>
+
+  <div class="section-label">All Issues</div>
+
+  <div class="issues-grid" id="issues-grid">
+    <!-- Populated by JavaScript -->
+  </div>
+
+  <div class="empty" id="empty-state" style="display:none;">No issues published yet. Check back Friday.</div>
+
+  <div class="footer">Healthcare AI Weekly by Greg Harrison, Guidehouse</div>
+</div>
+
+<script>
+  // Auto-discover issues from the issues/ directory
+  // Since GitHub Pages / Vercel can't list directories, we maintain a manifest
+  // This script reads issues.json which the pipeline updates on each publish
+  async function loadIssues() {
+    try {
+      const resp = await fetch('/issues.json');
+      if (!resp.ok) throw new Error('No manifest');
+      const issues = await resp.json();
+
+      const grid = document.getElementById('issues-grid');
+      const empty = document.getElementById('empty-state');
+
+      if (!issues.length) {
+        empty.style.display = 'block';
+        return;
+      }
+
+      // Sort newest first
+      issues.sort((a, b) => b.date.localeCompare(a.date));
+
+      issues.forEach(issue => {
+        const card = document.createElement('a');
+        card.href = `/issues/${issue.date}/`;
+        card.className = 'glass-card issue-card';
+
+        const storyCount = (issue.top_stories || 0) + (issue.vbc_watch || 0) + (issue.deal_flow || 0) + (issue.did_you_know || 0);
+
+        card.innerHTML = `
+          <div class="date">Week of ${issue.week_range || issue.date}</div>
+          <div class="summary">${issue.editorial_summary || ''}</div>
+          <div class="story-count">${storyCount} stories curated</div>
+          <div class="read-link">Read deep dive &rarr;</div>
+        `;
+        grid.appendChild(card);
+      });
+    } catch (e) {
+      // Fallback: try to show any known issues
+      const grid = document.getElementById('issues-grid');
+      const empty = document.getElementById('empty-state');
+      empty.style.display = 'block';
+    }
+  }
+  loadIssues();
+</script>
+</body>
+</html>
