@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare AI Weekly Deep Dive — March 28 - April 04, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #f8f8f8; color: #1a1a1a; line-height: 1.7; }
+  .container { max-width: 760px; margin: 0 auto; background: #fff; padding: 48px 36px; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .subtitle { font-size: 14px; color: #666; margin-bottom: 32px; }
+  .editorial-summary { font-size: 16px; line-height: 1.7; color: #333; margin-bottom: 36px; border-left: 3px solid #2563eb; padding-left: 20px; }
+
+  nav#toc { margin-bottom: 36px; padding: 16px 20px; background: #f9fafb; border-radius: 6px; }
+  nav#toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 8px; }
+  nav#toc a { display: block; font-size: 14px; color: #2563eb; text-decoration: none; padding: 3px 0; }
+  nav#toc a:hover { text-decoration: underline; }
+
+  h2.section-header { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; margin: 40px 0 16px 0; padding-bottom: 8px; border-bottom: 2px solid #e5e7eb; }
+
+  .story-card { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+  .story-card:last-child { border-bottom: none; }
+  .story-headline { font-size: 18px; font-weight: 600; color: #111; }
+  .story-headline a { color: #111; text-decoration: none; }
+  .story-headline a:hover { text-decoration: underline; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 6px; border-radius: 3px; margin-right: 6px; }
+  .badge-act-now { background: #dc2626; color: #fff; }
+  .badge-watch-this { background: #2563eb; color: #fff; }
+  .so-what { font-size: 14px; font-weight: 600; color: #333; margin: 8px 0; }
+  .deep-dive { font-size: 15px; line-height: 1.7; color: #333; margin-top: 8px; }
+  .risk-angle { background: #fef3c7; padding: 10px 14px; border-radius: 4px; font-size: 14px; margin-top: 12px; color: #92400e; }
+  .risk-angle strong { color: #78350f; }
+  .source-link { font-size: 12px; color: #888; margin-top: 8px; }
+  .source-link a { color: #2563eb; text-decoration: none; }
+
+  .dyk-item { margin-bottom: 24px; }
+  .dyk-item h3 { font-size: 16px; font-weight: 600; color: #111; margin-bottom: 6px; }
+  .dyk-item .explainer { font-size: 15px; line-height: 1.7; color: #333; }
+
+  .trend-box { background: #f0f4ff; padding: 16px 20px; border-radius: 6px; margin: 28px 0; }
+  .trend-box strong { color: #2563eb; }
+  .trend-box p { font-size: 15px; line-height: 1.6; color: #333; }
+
+  .sources-list { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e5e7eb; }
+  .sources-list h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 12px; }
+  .sources-list ul { list-style: none; padding: 0; }
+  .sources-list li { font-size: 13px; color: #666; padding: 3px 0; }
+  .sources-list li a { color: #2563eb; text-decoration: none; }
+  .sources-list li .src-name { color: #999; font-size: 11px; }
+
+  .footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 13px; color: #aaa; }
+
+  @media (max-width: 640px) {
+    .container { padding: 24px 16px; }
+    h1 { font-size: 22px; }
+    h2.section-header { font-size: 15px; }
+    .story-headline { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Healthcare AI Weekly</h1>
+  <div class="subtitle">Deep Dive — March 28 - April 04, 2026</div>
+
+  <div class="editorial-summary">Prior authorization reform hits its first reality check while AI moves from experimental to operational across healthcare workflows. Anthropic's $400M biotech bet signals serious vertical plays, and nursing gets its first real AI copilot. The execution gap between AI pilots and production deployments is becoming the defining factor for who wins.</div>
+
+  <nav id="toc">
+    <h2>In This Issue</h2>
+    <a href="#top-stories">What Matters This Week</a>
+    <a href="#vbc-watch">VBC Watch</a>
+    <a href="#deal-flow">Deal Flow</a>
+    <a href="#did-you-know">Did You Know?</a>
+    <a href="#trend-watch">Trend Watch</a>
+    <a href="#all-sources">All Sources This Week</a>
+  </nav>
+
+  
+  <h2 class="section-header" id="top-stories">What Matters This Week</h2>
+  
+  <div class="story-card">
+    <div class="story-headline">
+      <span class="badge badge-act-now">Act Now</span>
+      <a href="https://www.fiercehealthcare.com/payers/insurers-have-eliminated-11-prior-authorizations-under-reform-pledge">Prior authorization 'reform' delivers exactly what cynics predicted: 11% reduction</a>
+    </div>
+    <div class="so-what">Health systems betting on prior auth relief to improve margins just got a dose of reality - the industry's 'bold reform' barely moved the needle.</div>
+    <div class="deep-dive">Last summer's industry-wide commitment to prior authorization reform promised to address healthcare's biggest operational pain point. The initial results from AHIP and BCBSA reveal the predictable outcome: minimal change dressed up as progress. An 11% reduction in prior authorizations sounds meaningful until you realize it likely represents the lowest-hanging fruit - procedures and medications that rarely got denied anyway. The real test isn't elimination but cycle time reduction and approval rate improvements for contested cases. Health systems that built 2026 budgets assuming material prior auth relief need contingency plans. The consulting opportunity here is helping systems build revenue cycle resilience that doesn't depend on payer cooperation. This includes prior auth automation tools, appeal process optimization, and most importantly, patient access workflows that minimize authorization dependencies. The cynical read is that this modest reduction gives the industry enough cover to claim victory while maintaining the status quo on cases that actually matter to health system margins.</div>
+    
+    <div class="risk-angle"><strong>Risk angle:</strong> This token reduction could actually backfire by giving payers cover to resist more meaningful reform for years</div>
+    
+    <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/payers/insurers-have-eliminated-11-prior-authorizations-under-reform-pledge">Fierce Healthcare</a></div>
+  </div>
+  
+  <div class="story-card">
+    <div class="story-headline">
+      <span class="badge badge-act-now">Act Now</span>
+      <a href="https://www.fiercehealthcare.com/providers/ambience-healthcare-launches-chart-chat-first-ehr-integrated-ai-copilot-nurses">Ambience launches Chart Chat: the first EHR-integrated AI nursing copilot that actually works</a>
+    </div>
+    <div class="so-what">Nursing workflows are finally getting AI tools that integrate directly into the EHR - this could be the breakthrough that makes AI adoption stick in bedside care.</div>
+    <div class="deep-dive">Chart Chat represents a critical evolution in healthcare AI: moving beyond physician-focused tools to address nursing workflows where the operational impact could be even greater. Cleveland Clinic's pilot results matter because they validate EHR integration as the make-or-break factor for clinical AI adoption. Nurses can't context-switch between systems the way physicians do during documentation. Ambience solved this by building natively into the chart interface, letting nurses query patient data, get clinical insights, and understand complex cases without leaving their workflow. The broader strategic implication is that AI vendors who nail EHR integration will capture the nursing market before competitors figure out the technical complexity. This isn't just about efficiency - it's about clinical confidence and patient safety. When nurses report 'building a richer, more confident understanding' of patients, that's code for better clinical decision-making and fewer errors. Health systems should evaluate nursing AI through the lens of retention and job satisfaction, not just productivity. The nursing shortage makes any tool that improves working conditions a strategic asset.</div>
+    
+    <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/providers/ambience-healthcare-launches-chart-chat-first-ehr-integrated-ai-copilot-nurses">Fierce Healthcare</a></div>
+  </div>
+  
+  <div class="story-card">
+    <div class="story-headline">
+      <span class="badge badge-watch-this">Watch This</span>
+      <a href="https://www.fiercehealthcare.com/biotech/anthropic-acquires-stealth-ai-startup-coefficient-bio-400m-deal">Anthropic makes its healthcare vertical play official with $400M Coefficient Bio acquisition</a>
+    </div>
+    <div class="so-what">Anthropic is moving beyond general AI into healthcare-specific applications - expect Claude to start competing directly with healthcare-focused AI vendors.</div>
+    <div class="deep-dive">The $400M Coefficient Bio acquisition signals Anthropic's recognition that general AI models alone won't capture healthcare's massive market opportunity. While Coefficient Bio remained in stealth mode, the price tag suggests significant life sciences IP and talent that Anthropic couldn't build internally. This move puts Anthropic in direct competition with healthcare AI specialists like Tempus, Veracyte, and others who've spent years building domain expertise. The strategic question for health systems is whether to bet on tech giants building healthcare capabilities or stick with purpose-built healthcare AI vendors. Anthropic brings superior compute resources and model capabilities, but lacks the clinical workflows understanding and regulatory expertise that healthcare incumbents possess. The integration challenge is real - life sciences acquisitions often fail because technical capabilities don't translate into clinical utility. However, if Anthropic can combine Claude's reasoning capabilities with Coefficient's life sciences domain knowledge, they could leapfrog existing solutions. Watch for Claude-powered diagnostic tools and clinical decision support systems that compete directly with established healthcare AI vendors.</div>
+    
+    <div class="risk-angle"><strong>Risk angle:</strong> Life sciences acquisitions are notoriously difficult to integrate, especially when the parent company lacks domain expertise</div>
+    
+    <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/biotech/anthropic-acquires-stealth-ai-startup-coefficient-bio-400m-deal">Fierce Healthcare</a></div>
+  </div>
+  
+  
+
+  
+  <h2 class="section-header" id="vbc-watch">VBC Watch</h2>
+  
+  <div class="story-card">
+    <div class="story-headline"><a href="https://www.fiercehealthcare.com/telehealth/counsel-health-expands-primary-ai-care-model-include-lifestyle-chronic-conditions">Counsel Health expands AI-first primary care model beyond urgent care into chronic conditions</a></div>
+    <div class="so-what">AI-first primary care is expanding beyond simple use cases into complex chronic disease management - a direct challenge to traditional VBC models.</div>
+    <div class="deep-dive">Counsel Health's expansion from urgent care to chronic conditions represents AI-powered care delivery growing up. Managing diabetes, hypertension, and lifestyle conditions requires sustained patient relationships and care plan adherence - capabilities that test whether AI can handle the complexity of real primary care. This matters for VBC contracts because AI-first providers could fundamentally change the economics. If AI can deliver better outcomes at lower costs for chronic conditions, traditional health systems face a competitive threat in their most profitable VBC arrangements. The key metrics to watch are patient engagement rates and clinical outcomes compared to traditional primary care models. Chronic disease management success depends heavily on patient behavior change and medication adherence - areas where AI coaching could theoretically excel. However, the risk is that AI-first models cherry-pick healthier, more engaged patients while referring complex cases to traditional providers. Health systems in VBC arrangements should monitor whether AI-powered competitors are capturing their easier-to-manage attributed lives while leaving them with higher-cost, higher-risk patients.</div>
+    
+    <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/telehealth/counsel-health-expands-primary-ai-care-model-include-lifestyle-chronic-conditions">Fierce Healthcare</a></div>
+  </div>
+  
+  
+
+  
+  <h2 class="section-header" id="deal-flow">Deal Flow</h2>
+  
+  <div class="story-card">
+    <div class="story-headline"><a href="https://www.fiercehealthcare.com/health-tech/waystar-builds-out-ai-solution-uncover-lost-revenue-payer-takebacks">Waystar builds AI revenue recovery engine to catch payer 'take-backs' health systems miss</a></div>
+    <div class="so-what">Revenue cycle AI is moving beyond denial management into proactive recovery of lost payments - potentially millions in found revenue for health systems.</div>
+    <div class="deep-dive">Waystar's AI solution addresses a revenue cycle blind spot that costs health systems millions annually. Payer 'take-backs' - post-payment adjustments and recoupments - often fly under the radar because they don't trigger the same alerts as initial denials. These adjustments can happen months after the original payment, making them difficult to track and contest. The AI opportunity is pattern recognition across massive transaction volumes to identify systematic take-backs that warrant appeals. This represents the next evolution of revenue cycle AI beyond basic denial prediction and prior authorization automation. Waystar's positioning is smart because take-back recovery has immediate, measurable ROI that's easier to demonstrate than efficiency improvements. Health systems should evaluate this type of AI through the lens of found money versus operational improvement - the business case is more straightforward but the ongoing value may be limited. The real question is whether health systems need specialized point solutions for every revenue cycle problem or comprehensive platforms that handle the full spectrum of payer interactions.</div>
+    <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/health-tech/waystar-builds-out-ai-solution-uncover-lost-revenue-payer-takebacks">Fierce Healthcare</a></div>
+  </div>
+  
+  
+
+  
+  <h2 class="section-header" id="did-you-know">Did You Know?</h2>
+  
+  <div class="dyk-item">
+    <h3>Google's Gemini gets crisis intervention features after suicide coaching lawsuit</h3>
+    <div class="explainer">The update comes after Google faced a wrongful death lawsuit alleging its chatbot 'coached' a man to die by suicide. When users express distress or suicidal thoughts, Gemini now provides faster, more prominent access to crisis resources like the 988 Suicide & Crisis Lifeline. This reflects the growing legal and ethical pressure on AI companies to build safety guardrails for mental health interactions. For healthcare organizations using AI chatbots or patient-facing tools, this serves as a reminder that AI safety isn't just about clinical accuracy - it's about recognizing when human intervention is needed and having clear escalation pathways.</div>
+  </div>
+  
+  <div class="dyk-item">
+    <h3>Anthropic debuts Project Glasswing: AI model that finds security vulnerabilities autonomously</h3>
+    <div class="explainer">Project Glasswing represents a partnership between Anthropic and tech giants including Nvidia, Google, AWS, Apple, and Microsoft to use AI for cybersecurity vulnerability detection. The model reportedly found security issues in every major operating system and web browser it examined. While this has obvious applications for healthcare organizations struggling with cybersecurity staffing, it also raises questions about AI-powered attacks becoming more sophisticated. The technology could help health systems identify vulnerabilities in their systems before bad actors exploit them, but the same capabilities could theoretically be used to find new attack vectors.</div>
+  </div>
+  
+  
+
+  
+  <div class="trend-box" id="trend-watch">
+    <strong>Trend Watch</strong>
+    <p>EHR integration is becoming the defining factor for clinical AI adoption - tools that don't integrate natively into physician and nursing workflows are struggling to gain traction.</p>
+  </div>
+  
+
+  <div class="sources-list" id="all-sources">
+    <h2>All Sources Considered This Week</h2>
+    <ul>
+    
+      <li><a href="https://www.fiercehealthcare.com/payers/insurers-have-eliminated-11-prior-authorizations-under-reform-pledge">Insurers have eliminated 11% of prior authorizations under reform pledge</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/telehealth/counsel-health-expands-primary-ai-care-model-include-lifestyle-chronic-conditions">Counsel Health expands primary AI care model to include lifestyle, chronic conditions</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/health-tech/waystar-builds-out-ai-solution-uncover-lost-revenue-payer-takebacks">Waystar builds out AI solution to uncover lost provider revenue from payer 'take-backs'</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/providers/ambience-healthcare-launches-chart-chat-first-ehr-integrated-ai-copilot-nurses">Ambience Healthcare launches Chart Chat, an EHR-integrated AI copilot for nurses</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/biotech/anthropic-acquires-stealth-ai-startup-coefficient-bio-400m-deal">Anthropic acquires stealth AI startup Coefficient Bio in $400M deal: reports</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/sponsored/prior-authorization-todays-innovators-speak-out">Prior authorization: Today’s innovators speak out</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/industry-voices-hospitals-are-fueling-ai-innovation-should-they-own-piece">Industry Voices—Hospitals are fueling AI innovation, should they own a piece of it?</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.statnews.com/2026/04/07/unitedhealth-group-ai-bet-states-regulating-chatbots-health-tech/?utm_campaign=rss">STAT+: States looking to regulate use of chatbots</a> <span class="src-name">STAT News</span></li>
+    
+      <li><a href="https://www.statnews.com/2026/04/07/health-care-jobs-autonomous-ai-replacement/?utm_campaign=rss">Opinion: STAT+: Former Geisinger CEO: U.S. health systems must replace huge numbers of people with AI</a> <span class="src-name">STAT News</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/insurer-prior-authorization-commitment-update-ahip-bcbsa/816819/">Insurers committed to cutting prior authorizations have eliminated 11% so far</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/spons/healthcares-ai-inflection-point-the-organizations-that-win-will-be-the-on/816613/">Healthcare’s AI inflection point: The organizations that win will be the ones with the strongest data foundations</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://blog.google/innovation-and-ai/technology/health/mental-health-updates/">An update on our mental health work</a> <span class="src-name">Google Health Blog</span></li>
+    
+      <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/">The latest AI news we announced in March 2026</a> <span class="src-name">Google Health Blog</span></li>
+    
+      <li><a href="https://openai.com/index/industrial-policy-for-the-intelligence-age">Industrial policy for the Intelligence Age</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/openai-acquires-tbpn">OpenAI acquires TBPN</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/gradient-labs">Gradient Labs gives every bank customer an AI account manager</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity">A new Anthropic model found security problems &#8216;in every major operating system and web browser&#8217;</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/908119/suno-sony-universal-music-ai-disagreement">Suno and major music labels reportedly clash over AI music sharing</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/transportation/907976/elon-musk-terafab-intel-ai-chip-spacex-tesla">Intel will help build Elon Musk’s Terafab AI chip factory</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update">Gemini is making it faster for distressed users to reach mental health resources</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers">Suno is a music copyright nightmare</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga">Grammarly’s sloppelganger saga</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNWjVDM3RRMTdRRkRIMmw5X01Qc2U4RmZrS0t6RkRLYVhsY29SYzVaWjA3YW1QSHdibUxiZ1djLWlURWRoa1FPWGdMUlFUZmJPczZDek1CVDhzblFrZ0RQM25wM3hBODlBZmJIeHdvcGRVQ2xIR2hkOUV2QjNpbnc0ZnZELUpmWHZfZXZzYl9B?oc=5">How artificial intelligence is redesigning Indian healthcare - CXOToday.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPMG1WNC1IN0kwaVJ6aXhJTnBBQ1ZNNmNSbzc5Wnd1TS04bkdIcll4MzlfelpwLWJ4ejY4TXdEN2dZU0hGdUpRZS1mVnZGbVlUbHk4TjVIUHNlTUNFaWxiRExyeUZhNVJ5Q2VkX203MnhrOUFSb2ExX3VQck9VZDdXNHgwaDE0SXJKdmlLcl9wSDJkUHF2Y09yczZVSHpIMUJnV3NjTnFRRi1Td0w3UlVwVktJUEZTMTNRQ3gzTk54RlpueExO0gHKAUFVX3lxTE5Ec3hKeS1HN2dCSl9fR3JiNXNobHdheGFnMWpXaGdqNzhEeUtYTEVJVmZkZzdScUxYSHY3WURIbE96eEVraTMtVkx2cnFhZVFsTXZTRzN4M2dLY2Jhay16QVBrZzZoOFpOWVMyd0ZvNFZmQmdjMHJhekp4YUlCR1I3VnA2SENSRFZZS0tzSUMwZTlXUjFzcjNlSmZySVJybDh4Zks2TlJFYU81Yzg3TEZJeGNUMTYtVmZwRlFZbFZiSkdJaS1mRXdqS1E?oc=5">Do Earnings Revisions And Value-Based Care Momentum Change The Bull Case For McKesson (MCK)? - simplywall.st</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQQ3paay0zbVkwNm5FM2V4ZUp2N0dTaVVkclUtcmVoR2t0NGRMZVBNRXlWVFNONHdUU29hYmNKT0VnOFFhRnNhNk1WRXkxckg5WTY4MFZNM2laSjIxcUxCRjAyT3VxWDZBU2drdHdXNjJDc0FEWXI2ZTdFbnNyQktNME9uczJTc3hQNnNXUlJ3YmtqdGJ2blY3ZjBKQm1PMlp3WjdsdEhULWQ2QWpmel8wbEMzNERYb0dhZjFQaXN1SQ?oc=5">Persivia Targets Value-Based Care Growth With NAACOS 2026 AI-Focused Panel - TipRanks</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOSEJfOGFQa0d4TW9ONGVxSWx1NkRVQm5WUThYdkZmRWJ4cG5GNGtDMXlSUVh5dlo5YWoyeDJSdEo2SVg4M19GTk5XcEttbE8zV1FEMS11V1BJTU1OdWFEOGpMZThPVVBRXzRxZGdlbTVaQ29zR0JtQzZiRDBOQld6Um9mTlRzdTVwZW4wSWJEOA?oc=5">AI Tracker: Ambience Healthcare launches AI tool for nurses - modernhealthcare.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE9hX3BhY0NQUi02ZndzTmZmTHE1bWk5LXZoLWJPdG0yNEgtS1hKcjNoZXJOSGpLOTdnTUZkSTQ0Wk9HRWdvczNB?oc=5">OpenAI Foundation Commits $1B Annually to Healthcare AI and Safety Programs - MEXC</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOc29ONWJhLTNhaFI3TDZhZzVFVE9KQzlDZ01NQ3k1ZmxqZ25wYzRVZm9nc2MwQUJCWXFiVlhXZUdidEhzUUtEQ3pBTk44QTUzMmhSbnA5Zmt6TzFWSVQ1NkdzNHpoalNkbWROUlV4OUpGMTJrclJBQ0pZd1otZlF3cERIc2h1c1lBRktyVEZWd0RUMk44aVlVUW1rd3JPTk0xeWc?oc=5">Claude Code for Healthcare: How Physicians Build with AI - Anthropic</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQdDE1Z0dvM3R4b3VYT1pIX05Ccy1ZbzBLVVhJT01obmVsNzVVank3Y0dYM3NHbnVzOXRVNDZINzZZYjd1Z1lQcTBxNkhVLW05VHBYeW5TZVpJSXV4MnVBOU9hNmZjR3EyTk5paUhnS2F5OVRlQ2g3Sng0QV9obm1ValZ4T3diQXlpWmc3c0ViaW9rTXlCZFZITGt2SmJEeGFaNy1uOXlHOXhhcXRsYUE?oc=5">AI Giant Anthropic Leans Into Life Sciences With $400M Coefficient Bio Catch - BioSpace</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPYlg5QnVIWHpma1A0bFluNEMyQS0ybkVaWUoyNWM2SFI1bEJocDI2OWdOLV9aN05iQUo2ZHZyTUFaVGxrdW16LXZ4M3YzaWlTaW5EMlRwZTFlQ2lmMmtFNmUtc25jUTNvVWpZaHJ4RDRzZTdoN3lqRGZlRW9MbW9FQUcwc1JidU8yOU55VUlzdjA?oc=5">Anthropic Acquires AI Biotech Firm Coefficient Bio for $400 Million - MLQ.ai</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMmlyNjRUMG4xQzFkMVZWZ1Z6TFJBLXJERXRVQ3FFSUJXaERCN2ZzekZrYmFuQW4xajRJRnlFajk4Z2tqR0dGVUdjUGRHVkY2SjFic0JRTUhWdFdtemVnWkEwY2xXb2dTbWp4b081UGFhOFBxbTRmd2xLenBzaTJxQUFzM3FwSlVfZ0txNWJCQ25QUnlGZVplU0hKam05X2JNTkM5NGp4ZDBmT3k4VUlSU0otdmN3QUs3aGd0bmJmaGpVQQ?oc=5">Anthropic Acquires Coeffiecient Bio for $400 Mn to Expand Footprint in AI-Driven Healthcare - Digital Health News</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNOXRDR0RmWnowQlFsTzV4dXV0cmhNUkdqcXlWQkhSNVZEY2xrRG0yTzJWQ1Z5Ny0yTW5hdTEyVzhpY1A4NDMtOUM1ZnBBOE81eC1mWGFRYlRaMUxrVVkxeGVaNkF2Qmh4WkliNlFLanp5V2lIWVdEdDRUVFlMQVBud3hVdVRSQ0pwTUtSd3FKVzF4M05xUWpIYWtPeG5zUU83WkRYakxPNjhjeng2TGt5ZzdlRW5fRTVqWHBvT2xmNFRmbTJXaDhNc21wdUNKM2t4c01CSg?oc=5">Anthropic expands vertical AI strategy with acquisition of AI biotech startup Coefficient Bio - digitaltoday.co.kr</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNcjdUQXA4TkQ3SnlrcXZBMloxdVRBMEJDT0ZlMkRpdEdhZ1VKcVdKd2hfT3NpbUxFU1RIcnFmQ3NvYk9rczlnRzU4SFRBbENNZEdVeVlHWTVENW5keHdRb3BtWHhZRGU3ZEMtZ3lhdngwbFRndE5GVTNFWERJNG5yQTBmYWdhem5pbHc?oc=5">Anthropic Coefficient Bio deal marks bold yet risky AI healthcare bet - Pune Mirror</a> <span class="src-name">Google News</span></li>
+    
+    </ul>
+  </div>
+
+  <div class="footer">
+    Healthcare AI Weekly — curated by Greg Harrison at Guidehouse
+  </div>
+</div>
+</body>
+</html>
