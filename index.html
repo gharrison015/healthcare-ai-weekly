@@ -96,6 +96,23 @@
   .issue-card .read-link { font-size: 14px; font-weight: 600; color: #0284C7; margin-top: 12px; }
   .issue-card:hover .read-link { text-decoration: underline; }
 
+  /* Highlighted issue from email click */
+  .issue-card.highlighted {
+    box-shadow: 0 0 0 3px #0284C7, 0 0 24px rgba(2, 132, 199, 0.25), 0 0 48px rgba(2, 132, 199, 0.1), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    animation: highlight-pulse 2s ease-in-out 3;
+  }
+  @keyframes highlight-pulse {
+    0%, 100% { box-shadow: 0 0 0 3px #0284C7, 0 0 24px rgba(2, 132, 199, 0.25), 0 0 48px rgba(2, 132, 199, 0.1), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6); }
+    50% { box-shadow: 0 0 0 5px #0284C7, 0 0 36px rgba(2, 132, 199, 0.35), 0 0 60px rgba(2, 132, 199, 0.15), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6); }
+  }
+  .highlight-caption {
+    text-align: center; font-size: 15px; font-weight: 600; color: #0284C7;
+    padding: 12px 20px; margin: -8px 0 16px;
+    background: rgba(2, 132, 199, 0.06); border-radius: 10px;
+    animation: caption-fade 0.5s ease-out;
+  }
+  @keyframes caption-fade { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
   .empty { text-align: center; padding: 60px 0; color: #94a3b8; font-size: 16px; }
   .footer { text-align: center; padding: 32px 0 48px; font-size: 14px; color: #94a3b8; }
 
@@ -292,10 +309,14 @@
       issues.sort((a, b) => b.date.localeCompare(a.date));
       count.textContent = `${issues.length} issue${issues.length !== 1 ? 's' : ''} published`;
 
+      const params = new URLSearchParams(window.location.search);
+      const highlightIssue = params.get('issue');
+
       issues.forEach(issue => {
         const card = document.createElement('a');
         card.href = `/issues/${issue.date}/`;
         card.className = 'glass-card issue-card';
+        card.dataset.issue = issue.date;
         const storyCount = (issue.top_stories || 0) + (issue.vbc_watch || 0) + (issue.deal_flow || 0) + (issue.did_you_know || 0);
         card.innerHTML = `
           <div class="date">Week of ${issue.week_range || issue.date}</div>
@@ -305,6 +326,25 @@
         `;
         grid.appendChild(card);
       });
+
+      // Highlight the issue from email click
+      if (highlightIssue) {
+        const target = document.querySelector(`[data-issue="${highlightIssue}"]`);
+        if (target) {
+          target.classList.add('highlighted');
+
+          // Insert caption above the grid
+          const caption = document.createElement('div');
+          caption.className = 'highlight-caption';
+          caption.textContent = 'The article you clicked on has more detail in the highlighted issue below. Click to read the full analysis.';
+          grid.parentNode.insertBefore(caption, grid);
+
+          // Scroll to it
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300);
+        }
+      }
     } catch (e) {
       document.getElementById('empty-state').style.display = 'block';
     }
