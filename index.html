@@ -99,52 +99,51 @@
   .empty { text-align: center; padding: 60px 0; color: #94a3b8; font-size: 16px; }
   .footer { text-align: center; padding: 32px 0 48px; font-size: 14px; color: #94a3b8; }
 
-  /* Floating CTA */
-  .fab-container { position: fixed; bottom: 32px; right: 32px; z-index: 100; display: flex; align-items: center; gap: 0; }
-  .fab-label {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    padding: 10px 20px;
-    border-radius: 24px 0 0 24px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #0F1D35;
-    white-space: nowrap;
+  /* Pulse Beam CTA */
+  .cta-section { position: relative; padding: 20px 0 40px; display: flex; justify-content: center; overflow: hidden; }
+  .cta-beams {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .cta-beams svg { width: 100%; height: 100%; }
+  .beam-path { stroke: rgba(15, 29, 53, 0.08); stroke-width: 1; fill: none; }
+  .beam-glow { stroke-width: 2; fill: none; stroke-linecap: round; }
+  .beam-dot { fill: rgba(15, 29, 53, 0.15); }
+
+  .cta-button {
+    position: relative; z-index: 2;
+    display: inline-block; text-decoration: none; cursor: pointer;
+    padding: 20px 48px;
+    border-radius: 60px;
+    background: #0a1628;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.15), 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .cta-button:hover {
+    box-shadow: 0 0 60px rgba(56, 189, 248, 0.3), 0 8px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: scale(1.03);
+  }
+  .cta-button::before {
+    content: '';
+    position: absolute; inset: 0; border-radius: 60px;
+    background: radial-gradient(75% 100% at 50% 0%, rgba(56, 189, 248, 0.4) 0%, transparent 75%);
     opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
+    transition: opacity 0.4s;
   }
-  .fab-container:hover .fab-label { opacity: 1; transform: translateX(0); pointer-events: auto; }
-  .fab-button {
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0284C7, #0F1D35);
-    border: none;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 0 rgba(2, 132, 199, 0.2);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: fab-pulse 3s ease-in-out infinite;
-    position: relative;
-    z-index: 2;
+  .cta-button:hover::before { opacity: 1; }
+  .cta-text {
+    font-size: 28px; font-weight: 800; letter-spacing: -0.3px;
+    background: linear-gradient(to right, #cbd5e1, #64748b, #cbd5e1);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  .fab-button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 32px rgba(2, 132, 199, 0.4), 0 0 0 8px rgba(2, 132, 199, 0.08);
-    animation: none;
-  }
-  .fab-button svg { width: 24px; height: 24px; fill: none; stroke: #ffffff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  @keyframes fab-pulse {
-    0%, 100% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 0 rgba(2, 132, 199, 0.15); }
-    50% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 12px rgba(2, 132, 199, 0); }
+  .cta-button:hover .cta-text {
+    background: linear-gradient(to right, #e2e8f0, #94a3b8, #e2e8f0);
+    -webkit-background-clip: text; background-clip: text;
   }
   @media (max-width: 640px) {
-    .fab-container { bottom: 20px; right: 20px; }
-    .fab-button { width: 48px; height: 48px; }
-    .fab-label { display: none; }
+    .cta-button { padding: 16px 36px; }
+    .cta-text { font-size: 22px; }
   }
 </style>
 </head>
@@ -156,6 +155,70 @@
     <h1>Healthcare AI Weekly</h1>
     <div class="tagline">Weekly intelligence on AI in healthcare. Curated for consultants, strategists, and health system leaders who need to know what matters and why.</div>
     <div class="byline">By Greg Harrison, Guidehouse</div>
+  </div>
+
+  <!-- Pulse Beam CTA -->
+  <div class="cta-section">
+    <div class="cta-beams">
+      <svg viewBox="0 0 800 120" preserveAspectRatio="none">
+        <!-- Beam lines radiating to/from center -->
+        <path class="beam-path" d="M0 60 H340" />
+        <path class="beam-path" d="M460 60 H800" />
+        <path class="beam-path" d="M200 0 C200 40 340 60 340 60" />
+        <path class="beam-path" d="M600 0 C600 40 460 60 460 60" />
+        <path class="beam-path" d="M100 120 C100 80 340 60 340 60" />
+        <path class="beam-path" d="M700 120 C700 80 460 60 460 60" />
+        <!-- Animated glow beams -->
+        <path class="beam-glow" d="M0 60 H340" stroke="url(#beam-grad-1)" />
+        <path class="beam-glow" d="M460 60 H800" stroke="url(#beam-grad-2)" />
+        <path class="beam-glow" d="M200 0 C200 40 340 60 340 60" stroke="url(#beam-grad-3)" />
+        <path class="beam-glow" d="M600 0 C600 40 460 60 460 60" stroke="url(#beam-grad-4)" />
+        <path class="beam-glow" d="M100 120 C100 80 340 60 340 60" stroke="url(#beam-grad-5)" />
+        <path class="beam-glow" d="M700 120 C700 80 460 60 460 60" stroke="url(#beam-grad-6)" />
+        <!-- Connection dots -->
+        <circle class="beam-dot" cx="0" cy="60" r="3" />
+        <circle class="beam-dot" cx="800" cy="60" r="3" />
+        <circle class="beam-dot" cx="200" cy="0" r="3" />
+        <circle class="beam-dot" cx="600" cy="0" r="3" />
+        <circle class="beam-dot" cx="100" cy="120" r="3" />
+        <circle class="beam-dot" cx="700" cy="120" r="3" />
+        <defs>
+          <linearGradient id="beam-grad-1" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#18CCFC" stop-opacity="0"><animate attributeName="offset" values="-1;1" dur="3s" repeatCount="indefinite" /></stop>
+            <stop offset="30%" stop-color="#6344F5" stop-opacity="0.8"><animate attributeName="offset" values="-0.7;1.3" dur="3s" repeatCount="indefinite" /></stop>
+            <stop offset="60%" stop-color="#AE48FF" stop-opacity="0"><animate attributeName="offset" values="-0.4;1.6" dur="3s" repeatCount="indefinite" /></stop>
+          </linearGradient>
+          <linearGradient id="beam-grad-2" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#18CCFC" stop-opacity="0"><animate attributeName="offset" values="-1;1" dur="3.5s" begin="0.5s" repeatCount="indefinite" /></stop>
+            <stop offset="30%" stop-color="#6344F5" stop-opacity="0.8"><animate attributeName="offset" values="-0.7;1.3" dur="3.5s" begin="0.5s" repeatCount="indefinite" /></stop>
+            <stop offset="60%" stop-color="#AE48FF" stop-opacity="0"><animate attributeName="offset" values="-0.4;1.6" dur="3.5s" begin="0.5s" repeatCount="indefinite" /></stop>
+          </linearGradient>
+          <linearGradient id="beam-grad-3" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#18CCFC" stop-opacity="0"><animate attributeName="offset" values="-1;1" dur="2.5s" begin="1s" repeatCount="indefinite" /></stop>
+            <stop offset="30%" stop-color="#6344F5" stop-opacity="0.8"><animate attributeName="offset" values="-0.7;1.3" dur="2.5s" begin="1s" repeatCount="indefinite" /></stop>
+            <stop offset="60%" stop-color="#AE48FF" stop-opacity="0"><animate attributeName="offset" values="-0.4;1.6" dur="2.5s" begin="1s" repeatCount="indefinite" /></stop>
+          </linearGradient>
+          <linearGradient id="beam-grad-4" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#18CCFC" stop-opacity="0"><animate attributeName="offset" values="-1;1" dur="2.8s" begin="1.5s" repeatCount="indefinite" /></stop>
+            <stop offset="30%" stop-color="#6344F5" stop-opacity="0.8"><animate attributeName="offset" values="-0.7;1.3" dur="2.8s" begin="1.5s" repeatCount="indefinite" /></stop>
+            <stop offset="60%" stop-color="#AE48FF" stop-opacity="0"><animate attributeName="offset" values="-0.4;1.6" dur="2.8s" begin="1.5s" repeatCount="indefinite" /></stop>
+          </linearGradient>
+          <linearGradient id="beam-grad-5" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#18CCFC" stop-opacity="0"><animate attributeName="offset" values="-1;1" dur="3.2s" begin="0.8s" repeatCount="indefinite" /></stop>
+            <stop offset="30%" stop-color="#6344F5" stop-opacity="0.8"><animate attributeName="offset" values="-0.7;1.3" dur="3.2s" begin="0.8s" repeatCount="indefinite" /></stop>
+            <stop offset="60%" stop-color="#AE48FF" stop-opacity="0"><animate attributeName="offset" values="-0.4;1.6" dur="3.2s" begin="0.8s" repeatCount="indefinite" /></stop>
+          </linearGradient>
+          <linearGradient id="beam-grad-6" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#18CCFC" stop-opacity="0"><animate attributeName="offset" values="-1;1" dur="2.6s" begin="1.2s" repeatCount="indefinite" /></stop>
+            <stop offset="30%" stop-color="#6344F5" stop-opacity="0.8"><animate attributeName="offset" values="-0.7;1.3" dur="2.6s" begin="1.2s" repeatCount="indefinite" /></stop>
+            <stop offset="60%" stop-color="#AE48FF" stop-opacity="0"><animate attributeName="offset" values="-0.4;1.6" dur="2.6s" begin="1.2s" repeatCount="indefinite" /></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <a href="mailto:gharrison@guidehouse.com?subject=Healthcare%20AI%20Weekly%20-%20Let's%20Talk%20AI&body=Hi%20Greg%2C%0A%0AI%20came%20across%20Healthcare%20AI%20Weekly%20and%20I'd%20love%20to%20connect%20on%20AI%20in%20healthcare.%0A%0ASpecifically%2C%20I'm%20interested%20in%3A%0A-%20%0A%0ABest%2C%0A" class="cta-button">
+      <span class="cta-text">Let's Talk AI</span>
+    </a>
   </div>
 
   <!-- Scrolling Source Ticker -->
@@ -252,30 +315,5 @@
   loadIssues();
 </script>
 
-<!-- Floating "Let's Talk AI" Button -->
-<div class="fab-container" id="fab">
-  <div class="fab-label">Let's Talk AI</div>
-  <button class="fab-button" id="fab-btn" aria-label="Let's Talk AI">
-    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-  </button>
-</div>
-
-<script>
-  document.getElementById('fab-btn').addEventListener('click', function() {
-    const subject = encodeURIComponent('Healthcare AI Weekly - Let\'s Talk AI');
-    const body = encodeURIComponent(
-      'Hi Greg,\n\n' +
-      'I came across Healthcare AI Weekly and I\'d love to connect on AI in healthcare.\n\n' +
-      'Specifically, I\'m interested in:\n' +
-      '- \n\n' +
-      'Best,\n'
-    );
-    window.location.href = 'mailto:gharrison@guidehouse.com?subject=' + subject + '&body=' + body;
-  });
-  // Also make the label clickable
-  document.querySelector('.fab-label').addEventListener('click', function() {
-    document.getElementById('fab-btn').click();
-  });
-</script>
 </body>
 </html>
