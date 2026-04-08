@@ -112,15 +112,15 @@
   .cta-button {
     position: relative; z-index: 2;
     display: inline-block; text-decoration: none; cursor: pointer;
-    padding: 20px 48px;
-    border-radius: 60px;
+    padding: 10px 28px;
+    border-radius: 40px;
     background: #0a1628;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(56, 189, 248, 0.15), 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .cta-button:hover {
-    box-shadow: 0 0 60px rgba(56, 189, 248, 0.3), 0 8px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 32px rgba(56, 189, 248, 0.2), 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transform: scale(1.03);
   }
   .cta-button::before {
@@ -132,7 +132,7 @@
   }
   .cta-button:hover::before { opacity: 1; }
   .cta-text {
-    font-size: 28px; font-weight: 800; letter-spacing: -0.3px;
+    font-size: 15px; font-weight: 700; letter-spacing: 0.3px;
     background: linear-gradient(to right, #cbd5e1, #64748b, #cbd5e1);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -141,10 +141,7 @@
     background: linear-gradient(to right, #e2e8f0, #94a3b8, #e2e8f0);
     -webkit-background-clip: text; background-clip: text;
   }
-  @media (max-width: 640px) {
-    .cta-button { padding: 16px 36px; }
-    .cta-text { font-size: 22px; }
-  }
+  .cta-section { position: relative; padding: 12px 0 32px; display: flex; justify-content: center; overflow: hidden; }
 </style>
 </head>
 <body>
