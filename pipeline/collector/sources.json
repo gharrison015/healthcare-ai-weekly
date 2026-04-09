@@ -16,7 +16,14 @@
     {"name": "Anthropic Blog", "url": "https://www.anthropic.com/blog/rss.xml", "tier": "general_ai", "category": "general_ai"},
     {"name": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "tier": "general_ai", "category": "general_ai"},
     {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "tier": "general_ai", "category": "general_ai"},
-    {"name": "AMA News", "url": "https://www.ama-assn.org/rss.xml", "tier": "policy", "category": "policy"}
+    {"name": "AMA News", "url": "https://www.ama-assn.org/rss.xml", "tier": "policy", "category": "policy"},
+    {"name": "Healthcare IT News", "url": "https://www.healthcareitnews.com/rss", "tier": "core", "category": "core"},
+    {"name": "MobiHealthNews", "url": "https://www.mobihealthnews.com/feed", "tier": "core", "category": "core"},
+    {"name": "HIT Consultant", "url": "https://hitconsultant.net/feed/", "tier": "core", "category": "core"},
+    {"name": "Modern Healthcare", "url": "https://www.modernhealthcare.com/rss", "tier": "core", "category": "core"},
+    {"name": "Becker's Hospital Review", "url": "https://www.beckershospitalreview.com/feed/", "tier": "core", "category": "core"},
+    {"name": "McKinsey Healthcare", "url": "https://www.mckinsey.com/industries/healthcare/our-insights/rss", "tier": "consulting", "category": "consulting"},
+    {"name": "Deloitte Health Insights", "url": "https://www.deloitte.com/us/en/insights/industry/health-care/rss.xml", "tier": "consulting", "category": "consulting"}
   ],
   "google_news_queries": [
     "\"artificial intelligence\" AND \"healthcare\"",
@@ -35,7 +42,7 @@
     "\"Accenture\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
     "\"Chartis\" AND \"healthcare\" AND (\"AI\" OR \"partnership\")",
     "\"Optum\" AND \"AI\" AND (\"partnership\" OR \"acquisition\" OR \"launch\")",
-    "\"EY\" OR \"Ernst Young\" AND \"healthcare\" AND \"AI\"",
+    "(\"EY\" OR \"EY-Parthenon\" OR \"Ernst Young\") AND \"healthcare\" AND \"AI\"",
 
     "\"Epic\" AND (\"partnership\" OR \"acquisition\" OR \"integration\" OR \"AI\")",
     "\"Oracle Health\" OR \"Cerner\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
@@ -47,6 +54,9 @@
 
     "healthcare AI merger OR acquisition 2026",
     "healthcare consulting AI partnership 2026",
+    "\"Hippocratic AI\" AND (\"partnership\" OR \"collaboration\" OR \"healthcare\")",
+    "\"consulting\" AND \"healthcare\" AND (\"AI practice\" OR \"AI studio\" OR \"AI capability\")",
+    "site:theconsultingreport.com healthcare AI",
 
     "\"BRG\" OR \"Berkeley Research Group\" AND (\"healthcare\" OR \"AI\" OR \"consulting\")",
     "site:consulting.us healthcare AI",
@@ -64,6 +74,8 @@
     "risk adjustment", "quality measures", "population health", "care management",
     "prior authorization", "revenue cycle", "EHR", "Epic", "Cerner", "Oracle Health",
     "partnership", "acquisition", "merger", "consulting", "Guidehouse", "Deloitte",
-    "McKinsey", "BCG", "Accenture", "Chartis", "Optum"
+    "McKinsey", "BCG", "Accenture", "Chartis", "Optum", "EY", "EY-Parthenon",
+    "Huron", "BRG", "Berkeley Research Group", "Bain", "Oliver Wyman", "KPMG", "PwC",
+    "Hippocratic AI", "agentic AI", "AI marketplace", "AI practice", "neurosymbolic"
   ]
 }
