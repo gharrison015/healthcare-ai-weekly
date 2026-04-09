@@ -127,25 +127,6 @@
         "connections": [],
         "deep_dive_notes": "Counsel Health's expansion into lifestyle and chronic condition management represents a significant evolution of AI-first primary care beyond simple acute episode handling. The company is betting that AI can manage ongoing conditions like diabetes, hypertension, and lifestyle interventions with minimal human provider involvement. For value-based care organizations, this model presents both opportunity and threat. On one hand, AI-driven chronic care management could dramatically reduce per-patient costs while improving adherence and outcomes through continuous monitoring and intervention. On the other hand, AI-native competitors could capture the easiest-to-manage patient populations, leaving traditional providers with higher-acuity, higher-cost patients. The model also challenges traditional primary care economics. If AI can handle routine chronic disease management, medication adjustments, and lifestyle coaching, what's the role of human primary care physicians? Health systems need to think carefully about how to compete with or partner with AI-native care delivery models. The regulatory landscape remains unclear - AI-driven care decisions for chronic conditions raise questions about liability, oversight, and quality measurement. However, for health systems managing large populations under value-based contracts, the potential cost savings and scalability of AI-driven chronic care management are too significant to ignore.",
         "email_summary": "Counsel Health is expanding its AI-first primary care model beyond acute episodes into chronic disease and lifestyle management. The move could reshape care delivery economics and poses competitive challenges for traditional primary care providers in value-based contracts."
-      },
-      {
-        "headline": "GRAIL Integrates Cancer Screening Into Epic",
-        "source_article": {
-          "id": "1a0ff626-431f-4790-9c86-cdf48f162b16",
-          "title": "GRAIL Announces Integration of the Galleri\u00ae Test into Epic Electronic Health Record Platform to Expand Access Nationwide",
-          "source": "PR Newswire",
-          "url": "https://www.prnewswire.com/news-releases/grail-announces-integration-of-the-galleri-test-into-epic-electronic-health-record-platform-to-expand-access-nationwide-302736109.html"
-        },
-        "priority": "act_now",
-        "so_what": "GRAIL's multi-cancer blood test is now integrated into Epic, reaching 450+ health systems. This could transform cancer screening in value-based care by catching cancers earlier and cheaper.",
-        "risk_angle": "False positives from multi-cancer screening could drive unnecessary downstream testing and anxiety, inflating costs despite good intentions.",
-        "consulting_signal": "Health systems need policies for implementing population-level cancer screening programs and managing the operational complexity of positive results.",
-        "connections": [
-          "1dcbb1e1-fe9b-4a85-8fd0-9def77b28687",
-          "b182c6b2-1d26-434b-8202-1245a73be3f0"
-        ],
-        "deep_dive_notes": "GRAIL's integration of the Galleri multi-cancer early detection test into Epic's EHR platform is a watershed moment for population health screening. With Epic powering 450+ health systems, this integration could rapidly scale early cancer detection across the US healthcare system. The Galleri test can detect over 50 cancer types from a simple blood draw, often before symptoms appear. For value-based care organizations, this represents a compelling opportunity: catch cancers earlier when they're cheaper and easier to treat, potentially saving millions in downstream costs. The Epic integration is crucial because it embeds cancer screening into routine clinical workflows rather than requiring separate programs or referrals. Physicians can order the test directly through familiar EHR interfaces, and results flow back into the patient record automatically. However, the operational implications are massive. Health systems need protocols for managing positive results, patient counseling for uncertain findings, and downstream diagnostic workflows. The test has a false positive rate that could trigger expensive imaging and procedures. Additionally, the cost-effectiveness at scale remains unproven - while early detection sounds beneficial, the full economic impact of population-wide screening isn't clear. Health systems implementing this will need careful change management, physician education, and robust tracking of outcomes and costs. This could be transformational for cancer care, but execution will determine whether it improves or inflates healthcare costs.",
-        "email_summary": "GRAIL integrated its Galleri multi-cancer blood test into Epic's EHR platform, potentially reaching 450+ health systems nationwide. The integration embeds early cancer screening into routine workflows but requires careful management of false positives and operational complexity."
       }
     ],
     "did_you_know": [
