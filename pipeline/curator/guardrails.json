@@ -1,29 +1,29 @@
 {
   "sections": {
     "top_stories": {
-      "description": "Major stories with strategic analysis, split into act_now and watch_this. Always produce exactly 4.",
-      "min_count": 4,
-      "max_count": 4,
+      "description": "Major AI healthcare stories with strategic analysis, split into act_now and watch_this. MUST have a clear AI or technology angle. Produce 3-5 items.",
+      "min_count": 3,
+      "max_count": 5,
       "required_fields": ["headline", "priority", "so_what", "email_summary", "deep_dive_notes"],
       "priority_values": ["act_now", "watch_this"]
     },
     "vbc_watch": {
-      "description": "Stories touching value-based care, payment models, risk adjustment, quality measures. Always produce exactly 4.",
-      "min_count": 4,
+      "description": "Stories where AI intersects with value-based care, payment models, risk adjustment, quality measures. MUST have an AI or technology component. If no AI-related VBC stories this week, produce fewer items. Do NOT pad with non-AI healthcare news.",
+      "min_count": 1,
       "max_count": 4,
       "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"]
     },
     "ma_partnerships": {
       "label": "M&A & Partnerships",
-      "description": "Acquisitions, funding rounds, major partnerships, big tech healthcare plays. Always produce exactly 4.",
-      "min_count": 4,
+      "description": "Acquisitions, funding rounds, and partnerships that involve AI, health tech, or digital health. MUST have an AI or technology angle. A hospital buying another hospital is NOT relevant. A company acquiring an AI startup IS relevant. If no AI-related deals this week, produce fewer items or skip the section.",
+      "min_count": 0,
       "max_count": 4,
       "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"]
     },
     "consulting_intelligence": {
       "label": "Consulting Intelligence",
-      "description": "Consulting firm activity in healthcare AI: practice launches, AI investments, strategic hires, partnerships, acquisitions by consulting firms. Always produce 1-3 items.",
-      "min_count": 1,
+      "description": "Consulting firm activity in healthcare AI: practice launches, AI investments, strategic hires, AI-related partnerships, acquisitions of AI companies by consulting firms. MUST involve AI or technology. If no consulting AI news this week, skip this section entirely.",
+      "min_count": 0,
       "max_count": 3,
       "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"],
       "tracked_firms": [
@@ -33,17 +33,19 @@
       ]
     },
     "did_you_know": {
-      "description": "General AI capability and release news, not healthcare-specific. Educational tone. Always exactly 2.",
+      "description": "General AI capability and release news. Educational tone. These are the ONLY items that don't need a healthcare angle, but they MUST be about AI. Always exactly 2.",
       "min_count": 2,
       "max_count": 2,
       "required_fields": ["headline", "one_liner", "explainer"]
     }
   },
   "global_rules": [
+    "EVERY STORY IN EVERY SECTION MUST HAVE AN AI OR TECHNOLOGY ANGLE. This is an AI newsletter. No exceptions. If a story doesn't involve AI, machine learning, automation, digital health, or health tech, it does not belong here regardless of how big the news is.",
     "At least one story must include a risk_angle or contrarian take",
     "At least one top_story must have priority act_now",
-    "Every story needs a so_what that answers: why should a health system exec care?",
+    "Every story needs a so_what that answers: why should a health system exec care about this AI development?",
     "Connect related stories via the connections field when applicable",
-    "Include a linkedin_seed with the single most compelling story for a LinkedIn post"
+    "Include a linkedin_seed with the single most compelling story for a LinkedIn post",
+    "Sections with min_count 0 should be omitted entirely if no qualifying stories exist. Do NOT pad sections with irrelevant content to meet a count."
   ]
 }
