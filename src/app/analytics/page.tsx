@@ -227,7 +227,7 @@ export default async function AnalyticsPage({ searchParams }: PageProps) {
           className="text-center"
           style={{ fontSize: 14, color: "#94a3b8", padding: "32px 0 48px" }}
         >
-          Healthcare AI Weekly by Greg Harrison, Guidehouse
+          Healthcare AI Weekly by Greg Harrison
         </div>
       </div>
     </>

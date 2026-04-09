@@ -46,7 +46,7 @@ export default function HomePage() {
             and why.
           </div>
           <div style={{ color: "#94a3b8", fontSize: "14px" }}>
-            By Greg Harrison, Guidehouse
+            By Greg Harrison
           </div>
         </div>
 
@@ -162,7 +162,7 @@ export default function HomePage() {
           className="text-center"
           style={{ fontSize: "14px", color: "#94a3b8", padding: "32px 0 48px" }}
         >
-          Healthcare AI Weekly by Greg Harrison, Guidehouse
+          Healthcare AI Weekly by Greg Harrison
         </div>
       </div>
     </>

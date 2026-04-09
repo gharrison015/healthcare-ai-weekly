@@ -39,7 +39,7 @@ export default function BulletinsPage() {
           className="text-center"
           style={{ fontSize: "14px", color: "#94a3b8", padding: "32px 0 48px" }}
         >
-          Healthcare AI Weekly by Greg Harrison, Guidehouse
+          Healthcare AI Weekly by Greg Harrison
         </div>
       </div>
     </>
