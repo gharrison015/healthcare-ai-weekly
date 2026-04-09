@@ -104,84 +104,75 @@ The remote trigger runs in Anthropic's cloud. Key differences from local:
 
 The trigger prompt is embedded in the trigger config. To update it, use `RemoteTrigger` tool with `action: "update"`.
 
-## Current Status (as of 2026-04-08, end of session 2)
+## Current Status (as of 2026-04-09, end of session 3)
 
-### Newsletter Pipeline (unchanged)
-- Pipeline fully built and tested (34+ unit tests)
-- Email template v30, card-based 2x2 grids, forward-safe
-- Email CTA button resized (was too big: 18px/14px-40px -> 14px/10px-28px)
-- 3 issues published (Mar 21, Mar 28, Apr 4)
-- Remote trigger set to Wednesday 5 AM for testing (needs validation, then switch to Friday)
+### Consolidated Repo
+Everything now lives in ONE repo: `/Users/greg/Claude/healthcare-ai-weekly`
+- `pipeline/` — Python pipeline (collector, curator, generator, bulletin, learning)
+- `src/` — Next.js app
+- `content/` — Issue data, bulletins, learning content for Vercel
+- `supabase/` — Schema SQL
 
-### Bulletin System (BUILT)
-Full spec: `docs/superpowers/specs/2026-04-08-bulletin-system-design.md`
+Old `healthcare-ai-newsletter` repo still exists but is no longer used.
 
-5-stage pipeline: X Monitor -> Velocity Detection -> Credibility Check -> Bulletin Generator -> Publish
+### Newsletter Pipeline
+- 5 sections: What Matters, VBC Watch, M&A & Partnerships, Consulting Intelligence, Did You Know
+- Every story MUST have an AI/technology angle (enforced in guardrails)
+- Spongy inline-block email layout (side by side desktop, stacks on mobile/forward)
+- 4 issues published (Mar 21, Mar 28, Apr 4, Apr 9)
+- Remote trigger: Fridays 9am ET (`trig_01JqnHVGb3gfV1judxMohq12`, cron `0 13 * * 5`)
 
-```
-bulletin/
-├── __init__.py
-├── x_monitor.py           # X API v2 via tweepy, Bearer Token auth
-├── velocity_detector.py   # Entity extraction, clustering, velocity/acceleration math
-├── credibility_checker.py # Google News RSS, 4-tier source classification, decision matrix
-├── bulletin_generator.py  # Anthropic SDK, Nate B Jones voice, em dash stripping
-├── bulletin_config.json   # All thresholds tunable (25k impressions, 10 accounts, 5k/hr velocity)
-└── bulletin_pipeline.py   # Orchestrator: --dry-run, --stage [monitor|velocity|credibility|generate|publish]
-```
+### Sources (25+ feeds + Google News + APIs)
+**Core RSS:** Fierce Healthcare, STAT News, Healthcare IT News, Healthcare Dive, Modern Healthcare, MobiHealthNews, HIT Consultant, Becker's Hospital Review, Health Affairs, AMA
+**Policy:** CMS Newsroom, HHS.gov
+**Tech:** Google Health, Microsoft Health, NVIDIA Healthcare, AWS Health
+**AI:** OpenAI, Anthropic, Google AI, The Verge AI
+**Consulting:** McKinsey Healthcare, Deloitte Health Insights
+**APIs:** Newsdata.io (free, 2k articles/day), Hacker News, Reddit, Substack RSS
+**Google News queries:** 25+ queries covering all 14 consulting firms, healthcare AI keywords, Hippocratic AI
 
-75 tests passing. Run: `python -m bulletin.bulletin_pipeline --dry-run`
+### Consulting Intelligence
+Tracks 14 firms: Guidehouse, Deloitte, McKinsey, BCG, Accenture, Chartis, Optum Advisory, EY Parthenon, Huron, BRG, Bain, Oliver Wyman, KPMG, PwC
 
-### AI Learning Pipeline (BUILT)
-Content sourced from NotebookLM "AI Learning" notebook (85d35a81-b05e-4a2d-921e-d11a0f6f6ca9, 26 sources).
+Current stories: Chartis/Leap AI, BRG AI practice launch, Huron/Hippocratic AI, Accenture/Faculty acquisition
 
-```
-learning/
-├── __init__.py
-├── content_extractor.py    # NotebookLM CLI subprocess, source guides, caching
-├── topic_clusterer.py      # Keyword scoring, 5 topic clusters
-├── quiz_generator.py       # NotebookLM quiz primary, Anthropic SDK fallback
-├── learning_config.json    # Notebook ID, topic definitions, quiz settings
-└── learning_pipeline.py    # Orchestrator: --skip-extract, --skip-quiz, --stage, --config
-```
+### Bulletin System (Free Multi-Source)
+Monitors Newsdata, Hacker News, Reddit, Substack for breaking healthcare AI news.
+Two-source verification: story must appear on 2+ platforms with 3+ unique authors.
+X/Twitter and Bluesky disabled (Cloudflare blocked).
+Remote trigger: every 4 hours weekdays (`trig_01Jr3zP4zvYRnvKo2MmHAeto`, cron `0 10,14,18,22 * * 1-5`)
+Weekly cycle: bulletins accumulate Mon-Fri, archive on Sunday, fresh start Monday.
 
-5 topics: AI Agents 101, AI Safety & Governance, AI in the Workplace, Healthcare AI, AI Strategy for Leaders
-44 tests passing. Run: `python -m learning.learning_pipeline`
-
-### Vercel Site — Next.js Conversion (BUILT)
-Converted from static HTML to Next.js 14+ (App Router, TypeScript, Tailwind, shadcn/ui).
-Repo: `/Users/greg/Claude/healthcare-ai-weekly`
+### Vercel Site
+Live: https://healthcare-ai-weekly.vercel.app
 
 **Pages:**
-- `/` — Landing: hero, ticker, horizontal issues carousel, bulletins section (red), learning section (green), CTA
-- `/issues/[date]` — Deep-dive (SSG, 3 issues)
-- `/bulletins` — Archive (2 sample bulletins)
-- `/bulletins/[slug]` — Individual bulletin (SSG)
-- `/learn` — Topic archive (2 sample topics)
-- `/learn/[slug]` — Topic + interactive quiz (SSG)
-- `/analytics` — Password-protected quiz analytics dashboard
+- `/` — Landing: breaking news ticker, hero, source ticker, Weekly AI Healthcare News carousel, AI Learning (by level), Consulting Intelligence, Bulletins, CTA
+- `/news/[date]` — Deep-dive (SSG, 4 issues)
+- `/bulletins` — Archive
+- `/bulletins/[slug]` — Individual bulletin
+- `/learn` — Topics organized by level (Fundamentals/Applied/Strategic)
+- `/learn/[slug]` — Topic + interactive quiz (submits to Supabase)
+- `/analytics?key=hcai2026analytics` — Quiz analytics dashboard
 
-**Key components:** `glass-card`, `ambient-background`, `source-ticker`, `pulse-beam-cta`, `horizontal-scroller`, `quiz`, `nav`
+**Design:** Spotlight glow cards (mouse-tracking on desktop, disabled on mobile), ambient gradient background, glass morphism, uniform blue `#0284C7` palette, Aptos font.
 
-Original static files backed up as `_old_index.html`, `_old_issues/`, `_old_issues.json`.
-
-### Supabase Analytics (BUILT)
-Separate Supabase project (NOT FieldShield). Schema at `supabase/setup.sql`.
-
+### Supabase Analytics
+Project: `healthcare-ai-weekly-analytics` (wjwubjahhbhhsctnpfcb) — NOT FieldShield
 - `quiz_attempts` table with RLS (anon: INSERT only, service_role: SELECT)
-- No PII — random UUID session IDs
-- Analytics views: `quiz_analytics`, `question_difficulty`
-- Dashboard at `/analytics?key=<password>`
+- Quiz submissions wired via `QuizWrapper` client component
+- Dashboard at `/analytics?key=hcai2026analytics`
 
-**Setup required:** Create Supabase project, run `setup.sql`, add env vars to `.env.local` and Vercel.
+### Env Files
+- `pipeline/.env` — ANTHROPIC_API_KEY, X credentials, NEWSDATA_API_KEY, Reddit credentials
+- `.env.local` — Supabase URL, anon key, service role key, analytics password
+- Both gitignored. Vercel env vars set separately.
 
 ## Next Steps
 
-1. **Validate the Wednesday 5 AM remote trigger** — check if email arrives with fresh content
-2. **Switch trigger to Friday** once validated: update cron to `0 9 * * 5`
-3. **Create Supabase project** — run setup.sql, configure env vars, restrict CORS to Vercel domain
-4. **Set up X API credentials** — get Bearer Token, add to env as `X_BEARER_TOKEN`
-5. **Run learning pipeline** — extract from NotebookLM, generate first batch of quizzes
-6. **Set up bulletin remote trigger** — every 4 hours, runs bulletin pipeline
-7. **Deploy Next.js site to Vercel** — push to GitHub, Vercel auto-detects Next.js
-8. **Microsoft Form for subscriptions** — create Form, link from Vercel, Power Automate distribution
-9. **Custom domain** — optionally replace `healthcare-ai-weekly.vercel.app`
+1. **Fix remote trigger paths** — Friday trigger failed because cloud agent couldn't navigate consolidated repo structure. Needs path debugging.
+2. **Microsoft Form for subscriptions** — create Form, link from Vercel, Power Automate distribution
+3. **Custom domain** — optionally replace `healthcare-ai-weekly.vercel.app`
+4. **Reddit API auth** — register app at reddit.com/prefs/apps for higher rate limits (works without auth at lower limits)
+5. **Re-enable X/Bluesky** — monitor for Cloudflare blocks lifting, switch back on when possible
+6. **Add more consulting firm blogs as RSS** — McKinsey, BCG, Bain, Oliver Wyman, PwC, KPMG, Accenture, Huron blogs need RSS discovery

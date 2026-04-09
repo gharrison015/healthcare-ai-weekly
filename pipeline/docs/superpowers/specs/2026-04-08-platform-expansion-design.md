@@ -1,6 +1,8 @@
 # Healthcare AI Weekly — Platform Expansion Design Spec
 
-## Overview
+> **Status (2026-04-09):** All items below are BUILT and DEPLOYED. Repos consolidated into one (`healthcare-ai-weekly`). Additional features added post-spec: Consulting Intelligence section (14 firms tracked), free multi-source bulletin system (Newsdata, HN, Reddit, Substack — X/Bluesky blocked), spotlight glow cards, spongy email layout, 25+ RSS sources, quiz Supabase wiring. See `pipeline/HANDOFF.md` for current state.
+
+## Overview (Original Spec)
 
 Three interconnected changes to the Healthcare AI Weekly platform:
 
