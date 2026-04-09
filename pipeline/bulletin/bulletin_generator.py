@@ -23,13 +23,17 @@ def slugify(text):
     return text[:60].strip("-")
 
 
-def strip_em_dashes(text):
-    """Remove all em dash variants from text. No em dashes ever."""
+def strip_formatting(text):
+    """Remove all em dashes, markdown bold, and citation brackets. Clean output only."""
+    import re
     text = text.replace("\u2014", ",")
     text = text.replace("\u2013", ",")
     text = text.replace(" -- ", ", ")
     text = text.replace("--", ",")
-    return text
+    text = text.replace("**", "")
+    text = re.sub(r'\s*\[\d+(?:\s*,\s*\d+)*\]', '', text)
+    text = re.sub(r'  +', ' ', text)
+    return text.strip()
 
 
 def generate_bulletin(topic, credibility_result, persona_path="curator/persona.md"):
@@ -131,8 +135,8 @@ Return ONLY a JSON object (no markdown fencing) with this exact structure:
     generated = json.loads(response_text)
 
     # Strip em dashes from all generated content
-    headline = strip_em_dashes(generated.get("headline", ""))
-    body = strip_em_dashes(generated.get("body", ""))
+    headline = strip_formatting(generated.get("headline", ""))
+    body = strip_formatting(generated.get("body", ""))
     tags = generated.get("tags", [])
 
     now = datetime.now(timezone.utc)
