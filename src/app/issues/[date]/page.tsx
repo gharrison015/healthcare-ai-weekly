@@ -109,7 +109,7 @@ export default async function IssuePage({ params }: PageProps) {
             className="no-underline hover:underline"
             style={{ color: "#0284C7", fontWeight: 600 }}
           >
-            {story.source_article.source} &mdash; {story.source_article.title}
+            {story.source_article.source} &middot; {story.source_article.title}
           </a>
         ) : (
           story.source_article?.source || "Unknown"
@@ -129,7 +129,7 @@ export default async function IssuePage({ params }: PageProps) {
       <AmbientBackground />
       <GlassCardStyles />
 
-      <div className="px-10 max-sm:px-4">
+      <div className="px-10 max-sm:px-4 max-w-4xl mx-auto">
         {/* Header */}
         <div style={{ padding: "48px 0 32px" }}>
           <a
@@ -214,7 +214,7 @@ export default async function IssuePage({ params }: PageProps) {
               <div
                 key={s.key}
                 id={s.key}
-                className="rounded-[20px] mb-5"
+                className="rounded-2xl mb-5"
                 style={{
                   padding: "32px",
                   background: "rgba(255, 255, 255, 0.45)",
@@ -246,7 +246,7 @@ export default async function IssuePage({ params }: PageProps) {
         {data.sections.did_you_know?.length > 0 && (
           <div
             id="did_you_know"
-            className="rounded-[20px] mb-5"
+            className="rounded-2xl mb-5"
             style={{
               padding: "32px",
               background: "rgba(255, 255, 255, 0.45)",
@@ -297,7 +297,7 @@ export default async function IssuePage({ params }: PageProps) {
         {/* Trend to Watch */}
         {data.trend_to_watch && (
           <div
-            className="rounded-[20px] mb-5"
+            className="rounded-2xl mb-5"
             style={{
               padding: "28px 32px",
               border: "2px solid rgba(2, 132, 199, 0.2)",

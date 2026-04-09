@@ -1,6 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/bulletins", label: "Bulletins" },
+  { href: "/learn", label: "Learn" },
+];
 
 export function Nav() {
+  const pathname = usePathname();
+
   return (
     <nav
       className="sticky top-0 z-50"
@@ -20,27 +31,26 @@ export function Nav() {
           Healthcare AI Weekly
         </Link>
         <div className="flex items-center gap-6">
-          <Link
-            href="/"
-            className="no-underline font-semibold transition-colors duration-200"
-            style={{ fontSize: "14px", color: "#6b7280" }}
-          >
-            Home
-          </Link>
-          <Link
-            href="/bulletins"
-            className="no-underline font-semibold transition-colors duration-200"
-            style={{ fontSize: "14px", color: "#6b7280" }}
-          >
-            Bulletins
-          </Link>
-          <Link
-            href="/learn"
-            className="no-underline font-semibold transition-colors duration-200"
-            style={{ fontSize: "14px", color: "#6b7280" }}
-          >
-            Learn
-          </Link>
+          {links.map(({ href, label }) => {
+            const isActive =
+              href === "/"
+                ? pathname === "/"
+                : pathname === href || pathname.startsWith(href + "/");
+            return (
+              <Link
+                key={href}
+                href={href}
+                className="no-underline transition-colors duration-200"
+                style={{
+                  fontSize: "14px",
+                  color: isActive ? "#0F1D35" : "#6b7280",
+                  fontWeight: isActive ? 700 : 600,
+                }}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

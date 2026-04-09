@@ -32,7 +32,6 @@ export function Quiz({ questions, title, accentColor = "#059669", onComplete }: 
     }));
     const score = results.filter((r) => r.correct).length;
     setCompleted(true);
-    console.log("Quiz complete:", { score, total: questions.length });
     onComplete?.(score, questions.length, results);
   }
 
