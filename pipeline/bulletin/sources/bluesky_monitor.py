@@ -1,4 +1,4 @@
-"""Bluesky monitor using the public AT Protocol API. No auth required."""
+"""Bluesky monitor using the AT Protocol API. Falls back gracefully if search is unavailable."""
 
 import logging
 from datetime import datetime, timezone, timedelta

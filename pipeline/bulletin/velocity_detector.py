@@ -118,6 +118,8 @@ def compute_velocity(cluster_items):
         if ts:
             try:
                 dt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
             except ValueError:
                 dt = now
             if dt < earliest:

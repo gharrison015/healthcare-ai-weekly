@@ -35,12 +35,12 @@ class XScraper(BaseMonitor):
             return self._pool
 
         try:
-            from twscrape import AccountPool, API
+            from twscrape import AccountsPool, API
         except ImportError:
             logger.warning("twscrape not installed. Run: pip install twscrape")
             return None
 
-        pool = AccountPool()
+        pool = AccountsPool()
         await pool.add_account(self.username, self.password, "", "")
         await pool.login_all()
         self._pool = API(pool)

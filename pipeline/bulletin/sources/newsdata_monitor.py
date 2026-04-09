@@ -44,8 +44,7 @@ class NewsdataMonitor(BaseMonitor):
                         "apikey": self.api_key,
                         "q": keyword,
                         "language": "en",
-                        "category": "health,technology",
-                        "size": 25,
+                        "size": 10,
                     },
                     timeout=15,
                 )

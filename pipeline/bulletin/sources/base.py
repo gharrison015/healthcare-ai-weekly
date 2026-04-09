@@ -34,6 +34,8 @@ class BaseMonitor(ABC):
         """Check if a timestamp string is within the recency window."""
         try:
             dt = datetime.fromisoformat(timestamp_str.replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
         except (ValueError, AttributeError):
             return False
         cutoff = datetime.now(timezone.utc) - timedelta(hours=hours_back)

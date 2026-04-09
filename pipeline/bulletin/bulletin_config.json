@@ -1,13 +1,13 @@
 {
   "sources": {
     "x": {
-      "enabled": true,
+      "enabled": false,
       "accounts": ["EricTopol", "JohnHalamka", "AnthropicAI", "OpenAI", "GoogleHealth", "Microsoft", "EpicSystems"],
       "keywords": ["healthcare AI", "clinical AI", "health system AI"],
       "hashtags": ["healthcareAI", "clinicalAI", "healthtech"]
     },
     "bluesky": {
-      "enabled": true,
+      "enabled": false,
       "keywords": ["healthcare AI", "clinical AI", "medical AI"]
     },
     "reddit": {
