@@ -32,6 +32,7 @@ from bulletin.sources import (
     NewsdataMonitor,
     RedditMonitor,
 )
+from bulletin.sources.substack_monitor import SubstackMonitor
 from bulletin.velocity_detector import detect_spikes
 from bulletin.credibility_checker import check_credibility
 from bulletin.bulletin_generator import generate_bulletin, save_bulletin
@@ -108,6 +109,17 @@ def collect_all_sources(config_path="bulletin/bulletin_config.json"):
             all_results.extend(results)
         except Exception as e:
             logger.warning("Reddit monitor failed: %s", e)
+
+    # Substack RSS (free, no auth, no limits)
+    if sources_config.get("substack", {}).get("enabled", True):
+        keywords = sources_config.get("substack", {}).get("keywords", ["healthcare AI", "clinical AI", "medical AI"])
+        try:
+            monitor = SubstackMonitor()
+            results = monitor.search(keywords, hours_back)
+            print(f"  Substack: {len(results)} results")
+            all_results.extend(results)
+        except Exception as e:
+            logger.warning("Substack monitor failed: %s", e)
 
     return all_results
 
