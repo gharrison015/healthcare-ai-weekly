@@ -48,7 +48,11 @@ const GlowCard: React.FC<GlowCardProps> = ({
         cardRef.current.style.setProperty('--yp', (y / window.innerHeight).toFixed(2));
       }
     };
-    document.addEventListener('pointermove', syncPointer);
+    // Only track pointer on devices with fine pointer (mouse) — skip touch devices
+    const hasPointer = window.matchMedia('(pointer: fine)').matches;
+    if (hasPointer) {
+      document.addEventListener('pointermove', syncPointer);
+    }
     return () => document.removeEventListener('pointermove', syncPointer);
   }, []);
 
@@ -79,7 +83,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       backgroundAttachment: 'fixed',
       border: 'var(--border-size) solid var(--backup-border)',
       position: 'relative',
-      touchAction: 'none',
+      touchAction: 'auto',
     };
     if (width !== undefined) baseStyles.width = typeof width === 'number' ? `${width}px` : width;
     if (height !== undefined) baseStyles.height = typeof height === 'number' ? `${height}px` : height;
