@@ -1,0 +1,140 @@
+{
+  "slug": "ai-in-the-workplace",
+  "title": "AI in the Workplace",
+  "description": "How AI is changing jobs, skills, and productivity",
+  "accent_color": "#7c3aed",
+  "sources": [
+    "9e4e9aac-ab49-4817-bdb9-a21ee6ba51a4",
+    "0e9a0a00-f36f-45ba-9578-15c6419fbb27",
+    "fd007e88-6c80-4bd5-ab9f-d2e3de92dbf2"
+  ],
+  "source_count": 3,
+  "summary": "AI is heavily used in the workplace for roles like computer programming, customer service, and data entry, but it is not yet causing widespread job losses. A recent study tracking actual AI usage found that while artificial intelligence could theoretically perform 94 percent of tasks in computer and math jobs, current AI models only cover about 33 percent of those tasks in the real world [1, 2]. Data shows no broad increase in unemployment for workers in the most exposed jobs [3, 4]. These highly exposed workers actually tend to earn 47 percent more and are significantly more educated than unexposed workers [5]. However, there is a clear warning sign for new graduates. Hiring for young workers aged 22 to 25 into heavily AI exposed roles has dropped by 14 percent since the release of ChatGPT [6].\n\nBecause AI capabilities upgrade roughly every three months, traditional static training is becoming obsolete. Employees must develop a new skill called frontier operations, which involves constantly learning exactly what AI can do autonomously and where human judgment is still required [7-9]. For example, a model might score 93 percent on retrieving information from a massive 256,000 token document today, even if it failed at the exact same task just three months ago [9]. Workers must know how to design specific workflows where agents do the heavy lifting while humans verify the outputs. By mastering this process, a single employee managing multiple AI agents can produce the same output as a five to ten person team from just a few years ago [10]. \n\nFinally, businesses are creating strict boundaries between how AI is used at home versus in the office. While personal AI tools are designed to be friendly and engaging, enterprise AI systems will be highly regulated environments built around security [11]. Corporate AI tools will require complex identity checks, permission layers, and detailed audit logs to ensure automated agents follow company rules [11]. Employees will face a mental shift when they walk into work. Workers who simply treat AI as a casual chat buddy will fall behind, while those who learn to rigorously delegate, audit, and verify AI agent work will become the most valuable people in the global workforce [11].",
+  "quiz": {
+    "title": "Quick Check: AI in the Workplace",
+    "questions": [
+      {
+        "id": "ai-in-the-workplace-q1",
+        "question": "According to recent research on AI workplace exposure, which professions are currently identified as being at highest risk for AI disruption?",
+        "options": [
+          "Teachers and healthcare workers",
+          "Computer programmers and financial analysts",
+          "Retail workers and cashiers",
+          "Construction workers and electricians"
+        ],
+        "correct": 1,
+        "explanation": "The research specifically identifies computer programmers and financial analysts as high-risk professions based on their observed exposure metric that tracks real-world AI integration into job tasks."
+      },
+      {
+        "id": "ai-in-the-workplace-q2",
+        "question": "What surprising finding did researchers discover about unemployment rates in AI-exposed professions?",
+        "options": [
+          "Unemployment increased dramatically for older workers",
+          "Unemployment rates doubled across all age groups",
+          "No significant increase in unemployment was observed",
+          "Part-time work became the dominant employment type"
+        ],
+        "correct": 2,
+        "explanation": "Despite identifying high-risk professions, the study currently finds no significant increase in unemployment for workers in AI-exposed roles compared to those in unexposed positions."
+      },
+      {
+        "id": "ai-in-the-workplace-q3",
+        "question": "Instead of mass layoffs, what concerning trend is emerging for workers in AI-exposed fields?",
+        "options": [
+          "Salary cuts for experienced professionals",
+          "Mandatory retraining programs for all employees",
+          "A slowdown in hiring for younger workers",
+          "Increased overtime requirements"
+        ],
+        "correct": 2,
+        "explanation": "The research highlights a concerning slowdown in hiring for younger workers within highly exposed fields, suggesting AI's impact is more about shifting entry-level opportunities than displacing existing workers."
+      },
+      {
+        "id": "ai-in-the-workplace-q4",
+        "question": "What term describes the dynamic capability needed to manage the evolving boundary between human judgment and AI?",
+        "options": [
+          "Digital fluency",
+          "Frontier operations",
+          "Algorithmic thinking",
+          "Tech leadership"
+        ],
+        "correct": 1,
+        "explanation": "Frontier operations is defined as the dynamic capability required to manage the ever-expanding boundary between human judgment and artificial intelligence in the workplace."
+      },
+      {
+        "id": "ai-in-the-workplace-q5",
+        "question": "How frequently do AI capabilities evolve according to workplace AI experts?",
+        "options": [
+          "Annually",
+          "Every six months",
+          "Quarterly",
+          "Monthly"
+        ],
+        "correct": 2,
+        "explanation": "The source emphasizes that AI capabilities evolve on a quarterly basis, making the most valuable workers those who can forecast upcoming shifts and adapt continuously."
+      },
+      {
+        "id": "ai-in-the-workplace-q6",
+        "question": "What skill involves tracking what AI can do in real-time as capabilities change?",
+        "options": [
+          "Seam design",
+          "Failure model maintenance",
+          "Boundary sensing",
+          "System integration"
+        ],
+        "correct": 2,
+        "explanation": "Boundary sensing is specifically described as the ability to track what AI can do in real-time as part of mastering frontier operations."
+      },
+      {
+        "id": "ai-in-the-workplace-q7",
+        "question": "According to predictions about workplace AI, how will professional AI systems differ from personal AI tools?",
+        "options": [
+          "They will be more user-friendly and intuitive",
+          "They will be faster and more powerful",
+          "They will be rigid and highly regulated",
+          "They will be completely automated"
+        ],
+        "correct": 2,
+        "explanation": "Future corporate AI is predicted to be defined by strict governance and oversight, becoming rigid and highly regulated instruments rather than comfortable personal tools."
+      },
+      {
+        "id": "ai-in-the-workplace-q8",
+        "question": "What major skill gap is predicted to emerge as workplace AI evolves?",
+        "options": [
+          "Learning to code AI systems from scratch",
+          "Shifting from treating AI as a 'buddy' to managing it professionally",
+          "Understanding AI hardware and infrastructure",
+          "Developing AI algorithms independently"
+        ],
+        "correct": 1,
+        "explanation": "The predicted skill gap involves employees needing to shift from treating AI as a comfortable 'buddy' to managing it as a sophisticated, accountable digital workforce."
+      },
+      {
+        "id": "ai-in-the-workplace-q9",
+        "question": "What approach do experts recommend for organizations to handle rapidly evolving AI skills?",
+        "options": [
+          "Annual training workshops",
+          "One-time certification programs",
+          "Continuous practice environments",
+          "University partnership programs"
+        ],
+        "correct": 2,
+        "explanation": "Experts suggest moving away from fixed curricula toward continuous practice environments that treat AI collaboration as an evolving discipline rather than a one-time destination."
+      },
+      {
+        "id": "ai-in-the-workplace-q10",
+        "question": "What two key abilities will make employees elite contributors in the AI-integrated workplace?",
+        "options": [
+          "Programming and data analysis",
+          "Delegating to and auditing AI systems",
+          "Training and supervising other humans",
+          "Creating and maintaining databases"
+        ],
+        "correct": 1,
+        "explanation": "The ability to delegate to and audit AI systems is specifically identified as what will make individuals elite contributors in the future AI-integrated workplace."
+      }
+    ]
+  },
+  "created_at": "2026-04-08",
+  "updated_at": "2026-04-08"
+}
