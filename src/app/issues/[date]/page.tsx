@@ -129,7 +129,7 @@ export default async function IssuePage({ params }: PageProps) {
       <AmbientBackground />
       <GlassCardStyles />
 
-      <div className="px-10 max-sm:px-4 max-w-4xl mx-auto">
+      <div className="px-6 max-sm:px-4 max-w-4xl mx-auto">
         {/* Header */}
         <div style={{ padding: "48px 0 32px" }}>
           <a
@@ -216,7 +216,7 @@ export default async function IssuePage({ params }: PageProps) {
                 id={s.key}
                 className="rounded-2xl mb-5"
                 style={{
-                  padding: "32px",
+                  padding: "28px 24px",
                   background: "rgba(255, 255, 255, 0.45)",
                   backdropFilter: "blur(20px) saturate(1.8)",
                   border: "1px solid rgba(255, 255, 255, 0.5)",
@@ -248,7 +248,7 @@ export default async function IssuePage({ params }: PageProps) {
             id="did_you_know"
             className="rounded-2xl mb-5"
             style={{
-              padding: "32px",
+              padding: "28px 24px",
               background: "rgba(255, 255, 255, 0.45)",
               backdropFilter: "blur(20px) saturate(1.8)",
               border: "1px solid rgba(255, 255, 255, 0.5)",
@@ -299,7 +299,7 @@ export default async function IssuePage({ params }: PageProps) {
           <div
             className="rounded-2xl mb-5"
             style={{
-              padding: "28px 32px",
+              padding: "28px 24px",
               border: "2px solid rgba(2, 132, 199, 0.2)",
               background: "rgba(255, 255, 255, 0.45)",
               backdropFilter: "blur(20px) saturate(1.8)",
