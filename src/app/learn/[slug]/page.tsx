@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AmbientBackground } from "@/components/ui/ambient-background";
 import { GlassCardStyles } from "@/components/ui/glass-card";
 import { getLearningTopic, getLearnSlugs } from "@/lib/data";
+import { getTopicLevel, getLevelLabel } from "@/lib/types";
 import { Quiz } from "@/components/quiz";
 
 export async function generateStaticParams() {
@@ -23,6 +24,9 @@ export default async function LearnTopicPage({ params }: PageProps) {
   }
 
   const paragraphs = topic.summary.split("\n\n").filter(Boolean);
+  const level = getTopicLevel(topic.slug);
+  const levelLabel = getLevelLabel(level);
+  const accent = "#0284C7";
 
   return (
     <>
@@ -36,11 +40,11 @@ export default async function LearnTopicPage({ params }: PageProps) {
             className="inline-block no-underline hover:underline rounded-lg mb-5"
             style={{
               fontSize: "16px",
-              color: topic.accent_color,
+              color: accent,
               fontWeight: 700,
               padding: "8px 16px",
-              background: `${topic.accent_color}0a`,
-              border: `1px solid ${topic.accent_color}20`,
+              background: "rgba(2, 132, 199, 0.06)",
+              border: "1px solid rgba(2, 132, 199, 0.15)",
             }}
           >
             &larr; All Topics
@@ -50,20 +54,30 @@ export default async function LearnTopicPage({ params }: PageProps) {
             <span
               className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md"
               style={{
-                background: `${topic.accent_color}12`,
-                color: topic.accent_color,
-                border: `1px solid ${topic.accent_color}25`,
+                background: "rgba(2, 132, 199, 0.1)",
+                color: accent,
+                border: "1px solid rgba(2, 132, 199, 0.2)",
                 letterSpacing: "0.8px",
               }}
             >
               Learning
             </span>
             <span
+              className="text-xs font-bold px-2 py-0.5 rounded-full"
+              style={{
+                background: "rgba(2, 132, 199, 0.12)",
+                color: accent,
+                border: "1px solid rgba(2, 132, 199, 0.25)",
+              }}
+            >
+              {level}-level &middot; {levelLabel}
+            </span>
+            <span
               className="text-xs font-semibold px-2 py-0.5 rounded-full"
               style={{
-                background: `${topic.accent_color}12`,
-                color: topic.accent_color,
-                border: `1px solid ${topic.accent_color}25`,
+                background: "rgba(2, 132, 199, 0.08)",
+                color: accent,
+                border: "1px solid rgba(2, 132, 199, 0.2)",
               }}
             >
               {topic.quiz.questions.length} questions
@@ -100,12 +114,12 @@ export default async function LearnTopicPage({ params }: PageProps) {
             border: "1px solid rgba(255, 255, 255, 0.55)",
             boxShadow:
               "0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-            borderLeft: `4px solid ${topic.accent_color}`,
+            borderLeft: `4px solid ${accent}`,
           }}
         >
           <div
             className="font-extrabold uppercase tracking-wider mb-4"
-            style={{ fontSize: "13px", color: topic.accent_color, letterSpacing: "1.5px" }}
+            style={{ fontSize: "13px", color: accent, letterSpacing: "1.5px" }}
           >
             Overview
           </div>
@@ -141,7 +155,7 @@ export default async function LearnTopicPage({ params }: PageProps) {
           <Quiz
             questions={topic.quiz.questions}
             title={topic.quiz.title}
-            accentColor={topic.accent_color}
+            accentColor={accent}
           />
         </div>
 

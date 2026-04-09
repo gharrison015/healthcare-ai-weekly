@@ -35,21 +35,21 @@ export function BulletinArchiveCards({ bulletins }: { bulletins: Bulletin[] }) {
           className="block no-underline"
           style={{ color: "inherit" }}
         >
-          <GlowCard glowColor="red" customSize={true} className="w-full p-7">
+          <GlowCard glowColor="blue" customSize={true} className="w-full p-7">
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <div
                   className="text-xs font-bold uppercase tracking-wider"
-                  style={{ color: "#dc2626" }}
+                  style={{ color: "#0284C7" }}
                 >
                   {timeAgo(b.timestamp)}
                 </div>
                 <div
                   className="text-xs font-semibold px-2 py-0.5 rounded-full"
                   style={{
-                    background: "rgba(220, 38, 38, 0.08)",
-                    color: "#dc2626",
-                    border: "1px solid rgba(220, 38, 38, 0.2)",
+                    background: "rgba(2, 132, 199, 0.08)",
+                    color: "#0284C7",
+                    border: "1px solid rgba(2, 132, 199, 0.2)",
                   }}
                 >
                   Velocity: {b.velocity_score}
@@ -70,9 +70,9 @@ export function BulletinArchiveCards({ bulletins }: { bulletins: Bulletin[] }) {
                     key={tag}
                     className="text-xs font-medium px-2 py-0.5 rounded-full"
                     style={{
-                      background: "rgba(220, 38, 38, 0.06)",
-                      color: "#b91c1c",
-                      border: "1px solid rgba(220, 38, 38, 0.12)",
+                      background: "rgba(2, 132, 199, 0.06)",
+                      color: "#0369a1",
+                      border: "1px solid rgba(2, 132, 199, 0.12)",
                     }}
                   >
                     {tag}
@@ -81,7 +81,7 @@ export function BulletinArchiveCards({ bulletins }: { bulletins: Bulletin[] }) {
               </div>
               <div
                 className="mt-3"
-                style={{ fontSize: "14px", fontWeight: 600, color: "#dc2626" }}
+                style={{ fontSize: "14px", fontWeight: 600, color: "#0284C7" }}
               >
                 Read bulletin &rarr;
               </div>

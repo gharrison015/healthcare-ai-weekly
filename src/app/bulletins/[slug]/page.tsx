@@ -45,11 +45,11 @@ export default async function BulletinPage({ params }: PageProps) {
             className="inline-block no-underline hover:underline rounded-lg mb-5"
             style={{
               fontSize: "16px",
-              color: "#dc2626",
+              color: "#0284C7",
               fontWeight: 700,
               padding: "8px 16px",
-              background: "rgba(220, 38, 38, 0.06)",
-              border: "1px solid rgba(220, 38, 38, 0.15)",
+              background: "rgba(2, 132, 199, 0.06)",
+              border: "1px solid rgba(2, 132, 199, 0.15)",
             }}
           >
             &larr; All Bulletins
@@ -59,9 +59,9 @@ export default async function BulletinPage({ params }: PageProps) {
             <span
               className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md"
               style={{
-                background: "rgba(220, 38, 38, 0.1)",
-                color: "#dc2626",
-                border: "1px solid rgba(220, 38, 38, 0.2)",
+                background: "rgba(2, 132, 199, 0.1)",
+                color: "#0284C7",
+                border: "1px solid rgba(2, 132, 199, 0.2)",
                 letterSpacing: "0.8px",
               }}
             >
@@ -88,9 +88,9 @@ export default async function BulletinPage({ params }: PageProps) {
             <span
               className="text-xs font-semibold px-2 py-0.5 rounded-full"
               style={{
-                background: "rgba(220, 38, 38, 0.08)",
-                color: "#dc2626",
-                border: "1px solid rgba(220, 38, 38, 0.2)",
+                background: "rgba(2, 132, 199, 0.08)",
+                color: "#0284C7",
+                border: "1px solid rgba(2, 132, 199, 0.2)",
               }}
             >
               Velocity: {bulletin.velocity_score}
@@ -117,7 +117,7 @@ export default async function BulletinPage({ params }: PageProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="no-underline hover:underline font-semibold"
-              style={{ color: "#dc2626" }}
+              style={{ color: "#0284C7" }}
             >
               {bulletin.source_name}
             </a>
@@ -133,7 +133,7 @@ export default async function BulletinPage({ params }: PageProps) {
             border: "1px solid rgba(255, 255, 255, 0.55)",
             boxShadow:
               "0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-            borderLeft: "4px solid #dc2626",
+            borderLeft: "4px solid #0284C7",
           }}
         >
           <div
@@ -153,9 +153,9 @@ export default async function BulletinPage({ params }: PageProps) {
               key={tag}
               className="text-xs font-medium px-2.5 py-1 rounded-full"
               style={{
-                background: "rgba(220, 38, 38, 0.06)",
-                color: "#b91c1c",
-                border: "1px solid rgba(220, 38, 38, 0.12)",
+                background: "rgba(2, 132, 199, 0.06)",
+                color: "#0369a1",
+                border: "1px solid rgba(2, 132, 199, 0.12)",
               }}
             >
               {tag}
@@ -171,10 +171,10 @@ export default async function BulletinPage({ params }: PageProps) {
             className="inline-block no-underline hover:underline rounded-lg font-bold"
             style={{
               fontSize: "16px",
-              color: "#dc2626",
+              color: "#0284C7",
               padding: "10px 20px",
-              background: "rgba(220, 38, 38, 0.06)",
-              border: "1px solid rgba(220, 38, 38, 0.15)",
+              background: "rgba(2, 132, 199, 0.06)",
+              border: "1px solid rgba(2, 132, 199, 0.15)",
             }}
           >
             Read original source &rarr;

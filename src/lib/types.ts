@@ -24,6 +24,21 @@ export interface LearnManifestEntry {
   accent_color: string;
   question_count: number;
   created_at: string;
+  level?: 100 | 200 | 300;
+}
+
+export function getTopicLevel(slug: string): 100 | 200 | 300 {
+  if (slug.includes('101') || slug.includes('fundamentals')) return 100;
+  if (slug.includes('strategy') || slug.includes('leaders')) return 300;
+  return 200;
+}
+
+export function getLevelLabel(level: 100 | 200 | 300): string {
+  switch (level) {
+    case 100: return 'Fundamentals';
+    case 200: return 'Applied';
+    case 300: return 'Strategic';
+  }
 }
 
 export interface Bulletin {

@@ -10,7 +10,7 @@ interface QuizProps {
   onComplete?: (score: number, total: number, answers: { questionId: string; selected: number; correct: boolean }[]) => void;
 }
 
-export function Quiz({ questions, title, accentColor = "#059669", onComplete }: QuizProps) {
+export function Quiz({ questions, title, accentColor = "#0284C7", onComplete }: QuizProps) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
   const [completed, setCompleted] = useState(false);

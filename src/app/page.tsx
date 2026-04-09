@@ -3,6 +3,7 @@ import { AmbientBackground } from "@/components/ui/ambient-background";
 import { GlassCardStyles } from "@/components/ui/glass-card";
 import { SourceTicker } from "@/components/ui/source-ticker";
 import { PulseBeamCTA } from "@/components/ui/pulse-beam-cta";
+import { BreakingNewsTicker } from "@/components/ui/breaking-news-ticker";
 import { getIssuesManifest, getBulletins, getLearningTopics } from "@/lib/data";
 import { IssuesCarousel } from "./issues-carousel";
 import { BulletinCards } from "./bulletin-cards";
@@ -17,6 +18,9 @@ export default function HomePage() {
     <>
       <AmbientBackground />
       <GlassCardStyles />
+
+      {/* Breaking News Ticker */}
+      <BreakingNewsTicker bulletins={bulletins} />
 
       <div className="px-10 max-sm:px-4">
         {/* Hero */}
@@ -52,7 +56,7 @@ export default function HomePage() {
             className="font-extrabold"
             style={{ fontSize: "28px", color: "#0F1D35", letterSpacing: "-0.3px" }}
           >
-            All Issues
+            Weekly AI Healthcare News
           </div>
           <div
             className="font-semibold"
@@ -75,47 +79,47 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Bulletins Section - hidden when empty */}
-        {bulletins.length > 0 && (
-          <div className="mt-12">
-            <div className="flex items-baseline justify-between pt-8 mb-5">
-              <div
-                className="font-extrabold uppercase tracking-wider"
-                style={{ fontSize: "28px", color: "#dc2626", letterSpacing: "-0.3px" }}
-              >
-                Bulletins
-              </div>
-              <Link
-                href="/bulletins"
-                className="no-underline hover:underline font-semibold"
-                style={{ fontSize: "14px", color: "#dc2626" }}
-              >
-                View all bulletins &rarr;
-              </Link>
-            </div>
-            <BulletinCards bulletins={bulletins} />
-          </div>
-        )}
-
-        {/* AI Learning Section - hidden when empty */}
+        {/* AI Learning Section - ABOVE Bulletins */}
         {learn.length > 0 && (
           <div className="mt-12">
             <div className="flex items-baseline justify-between pt-8 mb-5">
               <div
                 className="font-extrabold uppercase tracking-wider"
-                style={{ fontSize: "28px", color: "#059669", letterSpacing: "-0.3px" }}
+                style={{ fontSize: "28px", color: "#0284C7", letterSpacing: "-0.3px" }}
               >
                 AI Learning
               </div>
               <Link
                 href="/learn"
                 className="no-underline hover:underline font-semibold"
-                style={{ fontSize: "14px", color: "#059669" }}
+                style={{ fontSize: "14px", color: "#0284C7" }}
               >
                 View all topics &rarr;
               </Link>
             </div>
             <LearnCards topics={learn} />
+          </div>
+        )}
+
+        {/* Bulletins Section - BELOW Learning */}
+        {bulletins.length > 0 && (
+          <div className="mt-12">
+            <div className="flex items-baseline justify-between pt-8 mb-5">
+              <div
+                className="font-extrabold uppercase tracking-wider"
+                style={{ fontSize: "28px", color: "#0284C7", letterSpacing: "-0.3px" }}
+              >
+                Bulletins
+              </div>
+              <Link
+                href="/bulletins"
+                className="no-underline hover:underline font-semibold"
+                style={{ fontSize: "14px", color: "#0284C7" }}
+              >
+                View all bulletins &rarr;
+              </Link>
+            </div>
+            <BulletinCards bulletins={bulletins} />
           </div>
         )}
 

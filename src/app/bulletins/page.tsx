@@ -15,7 +15,7 @@ export default function BulletinsPage() {
         <div style={{ padding: "48px 0 32px" }}>
           <h1
             className="font-extrabold mb-2"
-            style={{ fontSize: "38px", color: "#dc2626", letterSpacing: "-0.5px" }}
+            style={{ fontSize: "38px", color: "#0284C7", letterSpacing: "-0.5px" }}
           >
             Bulletins
           </h1>

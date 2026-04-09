@@ -39,9 +39,9 @@ export default async function IssuePage({ params }: PageProps) {
         <span
           className="inline-block text-xs font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md mb-2.5"
           style={{
-            background: "rgba(220, 38, 38, 0.1)",
-            color: "#dc2626",
-            border: "1px solid rgba(220, 38, 38, 0.2)",
+            background: "rgba(2, 132, 199, 0.1)",
+            color: "#0284C7",
+            border: "1px solid rgba(2, 132, 199, 0.2)",
             letterSpacing: "0.8px",
           }}
         >
