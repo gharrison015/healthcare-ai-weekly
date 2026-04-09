@@ -4,15 +4,21 @@ import { GlassCardStyles } from "@/components/ui/glass-card";
 import { SourceTicker } from "@/components/ui/source-ticker";
 import { PulseBeamCTA } from "@/components/ui/pulse-beam-cta";
 import { BreakingNewsTicker } from "@/components/ui/breaking-news-ticker";
-import { getIssuesManifest, getBulletins, getLearningTopics } from "@/lib/data";
+import { getIssuesManifest, getBulletins, getLearningTopics, getIssueData } from "@/lib/data";
 import { IssuesCarousel } from "./issues-carousel";
 import { BulletinCards } from "./bulletin-cards";
 import { LearnCards } from "./learn-cards";
+import { ConsultingCards } from "./consulting-cards";
 
 export default function HomePage() {
   const issues = getIssuesManifest();
   const bulletins = getBulletins();
   const learn = getLearningTopics();
+
+  // Load consulting intelligence from the latest issue
+  const latestIssueDate = issues.length > 0 ? issues[0].date : null;
+  const latestIssueData = latestIssueDate ? getIssueData(latestIssueDate) : null;
+  const consultingStories = latestIssueData?.sections?.consulting_intelligence ?? [];
 
   return (
     <>
@@ -98,6 +104,34 @@ export default function HomePage() {
               </Link>
             </div>
             <LearnCards topics={learn} />
+          </div>
+        )}
+
+        {/* Consulting Intelligence Section */}
+        {consultingStories.length > 0 && latestIssueDate && (
+          <div className="mt-12">
+            <div className="flex items-baseline justify-between pt-8 mb-1">
+              <div
+                className="font-extrabold uppercase tracking-wider"
+                style={{ fontSize: "28px", color: "#0284C7", letterSpacing: "-0.3px" }}
+              >
+                Consulting Intelligence
+              </div>
+              <Link
+                href={`/news/${latestIssueDate}`}
+                className="no-underline hover:underline font-semibold"
+                style={{ fontSize: "14px", color: "#0284C7" }}
+              >
+                View full issue &rarr;
+              </Link>
+            </div>
+            <div
+              className="mb-5"
+              style={{ fontSize: "15px", color: "#6b7280" }}
+            >
+              How consulting firms are moving in healthcare AI
+            </div>
+            <ConsultingCards stories={consultingStories} issueDate={latestIssueDate} />
           </div>
         )}
 

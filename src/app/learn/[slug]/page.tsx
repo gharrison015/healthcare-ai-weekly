@@ -4,7 +4,7 @@ import { AmbientBackground } from "@/components/ui/ambient-background";
 import { GlassCardStyles } from "@/components/ui/glass-card";
 import { getLearningTopic, getLearnSlugs } from "@/lib/data";
 import { getTopicLevel, getLevelLabel } from "@/lib/types";
-import { Quiz } from "@/components/quiz";
+import { QuizWrapper } from "./quiz-wrapper";
 
 export async function generateStaticParams() {
   const slugs = getLearnSlugs();
@@ -147,9 +147,10 @@ export default async function LearnTopicPage({ params }: PageProps) {
           >
             Quick Check
           </div>
-          <Quiz
+          <QuizWrapper
             questions={topic.quiz.questions}
             title={topic.quiz.title}
+            slug={slug}
             accentColor={accent}
           />
         </div>
