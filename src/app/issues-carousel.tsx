@@ -100,7 +100,7 @@ export function IssuesCarousel({ issues }: IssuesCarouselProps) {
           return (
             <a
               key={issue.date}
-              href={`/issues/${issue.date}`}
+              href={`/news/${issue.date}`}
               className="block flex-shrink-0 no-underline"
               ref={(el) => {
                 if (el) cardRefs.current.set(issue.date, el);

@@ -22,7 +22,7 @@ def render_email(curated, landing_url=None, deep_dive_url=None):
     if not landing_url and issue_date:
         landing_url = f"{LANDING_PAGE_URL}?issue={issue_date}"
     if not deep_dive_url and issue_date:
-        deep_dive_url = f"{LANDING_PAGE_URL}/issues/{issue_date}"
+        deep_dive_url = f"{LANDING_PAGE_URL}/news/{issue_date}"
 
     html = template.render(
         week_range=curated.get("week_range", ""),

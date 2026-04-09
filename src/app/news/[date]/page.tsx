@@ -82,7 +82,7 @@ export default async function IssuePage({ params }: PageProps) {
       >
         {story.so_what}
       </div>
-      <div style={{ fontSize: "18px", lineHeight: "1.7", color: "#374151" }}>
+      <div className="max-w-prose" style={{ fontSize: "18px", lineHeight: "1.7", color: "#374151" }}>
         {story.deep_dive_notes}
       </div>
       {story.risk_angle && (
@@ -129,7 +129,7 @@ export default async function IssuePage({ params }: PageProps) {
       <AmbientBackground />
       <GlassCardStyles />
 
-      <div className="px-6 max-sm:px-4 max-w-4xl mx-auto">
+      <div className="px-10 max-sm:px-4">
         {/* Header */}
         <div style={{ padding: "48px 0 32px" }}>
           <a
@@ -158,7 +158,7 @@ export default async function IssuePage({ params }: PageProps) {
           >
             {issueInfo?.week_range || date}
           </div>
-          <div style={{ fontSize: "20px", lineHeight: "1.6", color: "#374151" }}>
+          <div className="max-w-prose" style={{ fontSize: "20px", lineHeight: "1.6", color: "#374151" }}>
             {data.editorial_summary}
           </div>
         </div>

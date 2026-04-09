@@ -116,7 +116,7 @@ def run_generator(date_str, paths):
     os.makedirs(os.path.dirname(paths["email_html"]), exist_ok=True)
 
     landing_url = f"{LANDING_PAGE_URL}?issue={date_str}"
-    deep_dive_url = f"{LANDING_PAGE_URL}/issues/{date_str}"
+    deep_dive_url = f"{LANDING_PAGE_URL}/news/{date_str}"
     email_html = render_email(curated, landing_url=landing_url, deep_dive_url=deep_dive_url)
     with open(paths["email_html"], "w") as f:
         f.write(email_html)
