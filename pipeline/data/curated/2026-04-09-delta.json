@@ -1,59 +1,85 @@
 {
-  "weeks_analyzed": 3,
+  "weeks_analyzed": 4,
   "recurring_companies": [
     {
       "name": "Talkspace",
-      "weeks_appeared": 5
-    },
-    {
-      "name": "Anthropic",
-      "weeks_appeared": 4
+      "weeks_appeared": 8
     },
     {
       "name": "Healthcare Dealmakers",
-      "weeks_appeared": 4
+      "weeks_appeared": 6
     },
     {
       "name": "Sutter Health",
-      "weeks_appeared": 4
+      "weeks_appeared": 6
     },
     {
       "name": "Allina Health",
-      "weeks_appeared": 4
+      "weeks_appeared": 6
     },
     {
       "name": "UHS",
-      "weeks_appeared": 4
+      "weeks_appeared": 6
+    },
+    {
+      "name": "Anthropic",
+      "weeks_appeared": 5
     },
     {
       "name": "STAT",
-      "weeks_appeared": 3
+      "weeks_appeared": 4
     },
     {
       "name": "Prior Auth Reform Falls Flat",
-      "weeks_appeared": 3
+      "weeks_appeared": 4
     },
     {
       "name": "Insurers",
-      "weeks_appeared": 3
+      "weeks_appeared": 4
     },
     {
       "name": "Ambience Healthcare",
-      "weeks_appeared": 3
+      "weeks_appeared": 4
     }
   ],
   "recurring_themes": [],
   "new_entrants": [
-    "ANSR Launches Healthcare GCC Accelerator Powered",
-    "Study",
-    "Public Safety",
-    "With",
-    "Meta",
-    "Indian",
-    "Epic Systems",
-    "UNC",
-    "How AI Is Reshaping Group Health Insurance",
-    "Healthcare Consulting"
+    "Health Systems",
+    "Assessing Huron Consulting Group",
+    "National Today",
+    "Muse Spark",
+    "Trustees",
+    "Healthcare Consulting",
+    "Coefficient Bio Catch",
+    "Anthropic Coefficient Bio",
+    "Enabled Solutions",
+    "Accenture"
   ],
-  "dropped_threads": []
+  "dropped_threads": [
+    {
+      "story": "GRAIL Announces Integration",
+      "last_seen": "2026-03-28",
+      "weeks_silent": 2
+    },
+    {
+      "story": "Merger",
+      "last_seen": "2026-03-28",
+      "weeks_silent": 2
+    },
+    {
+      "story": "Expand Access Nationwide",
+      "last_seen": "2026-03-28",
+      "weeks_silent": 2
+    },
+    {
+      "story": "Epic Electronic Health Record Platform",
+      "last_seen": "2026-03-28",
+      "weeks_silent": 2
+    },
+    {
+      "story": "Test",
+      "last_seen": "2026-03-28",
+      "weeks_silent": 2
+    }
+  ]
 }

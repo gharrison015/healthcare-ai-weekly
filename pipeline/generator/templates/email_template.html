@@ -19,10 +19,9 @@
   @media only screen and (max-width: 600px) {
     .header-inner { padding: 24px 16px 20px !important; }
     .header-inner h1 { font-size: 30px !important; }
-    .section-box { margin: 12px 0 0 !important; padding: 12px 4px !important; border-radius: 0 !important; border-left: none !important; border-right: none !important; }
-    .section-box table { border-spacing: 0 8px !important; }
-    .section-box tr { display: block !important; }
-    .section-box td { display: block !important; width: 100% !important; padding: 0 !important; }
+    .content-area { padding: 0 12px !important; }
+    .section-box { margin: 12px 0 0 !important; padding: 12px 8px !important; border-radius: 8px !important; }
+    .section-box div[style*="inline-block"] { max-width: 100% !important; min-width: 100% !important; margin: 0 0 8px 0 !important; }
     .trend-inner { padding: 18px 16px !important; }
     .footer-inner { padding: 20px 16px 28px !important; }
   }
@@ -61,7 +60,7 @@
 </div>
 
 <!-- Content area -->
-<div style="padding:0 32px;">
+<div class="content-area" style="padding:0 32px;">
 
   <!-- What Matters This Week -->
   {% if top_stories %}
@@ -71,7 +70,7 @@
     <div style="font-size:0;">
     {% for story in top_stories %}
     <!--[if mso]><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td width="48%" valign="top"><![endif]-->
-    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "top-stories", true) }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:240px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "top-stories", true) }}</div>
     <!--[if mso]></td></tr></table><![endif]-->
     {% endfor %}
     </div>
@@ -85,7 +84,7 @@
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
     <div style="font-size:0;">
     {% for story in vbc_watch %}
-    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "vbc-watch") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:240px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "vbc-watch") }}</div>
     {% endfor %}
     </div>
   </div>
@@ -98,7 +97,7 @@
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
     <div style="font-size:0;">
     {% for story in ma_partnerships %}
-    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "ma-partnerships") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:240px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "ma-partnerships") }}</div>
     {% endfor %}
     </div>
   </div>
@@ -111,7 +110,7 @@
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
     <div style="font-size:0;">
     {% for story in consulting_intelligence %}
-    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "consulting-intelligence") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:240px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "consulting-intelligence") }}</div>
     {% endfor %}
     </div>
   </div>
@@ -124,7 +123,7 @@
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click to learn more in the deep dive</div>
     <div style="font-size:0;">
     {% for item in did_you_know %}
-    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ dyk_card(item, "did-you-know") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:240px;margin:0 1% 8px;font-size:16px;">{{ dyk_card(item, "did-you-know") }}</div>
     {% endfor %}
     </div>
   </div>
