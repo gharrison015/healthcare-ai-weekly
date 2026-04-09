@@ -118,7 +118,12 @@ Old `healthcare-ai-newsletter` repo still exists but is no longer used.
 ### Newsletter Pipeline
 - 5 sections: What Matters, VBC Watch, M&A & Partnerships, Consulting Intelligence, Did You Know
 - Every story MUST have an AI/technology angle (enforced in guardrails)
+- Cross-issue dedup: curator reads last 4 weeks of headlines and won't repeat stories
 - Spongy inline-block email layout (side by side desktop, stacks on mobile/forward)
+- Google News redirect URLs auto-resolved to direct publisher links during collection
+- All generated content stripped of `**` markdown and `[1,2]` citation brackets via `strip_formatting()`
+- No Guidehouse branding anywhere — site is independent ("by Greg Harrison" only)
+- "Let's Talk AI" CTA still emails gharrison@guidehouse.com (intentional for now)
 - 4 issues published (Mar 21, Mar 28, Apr 4, Apr 9)
 - Remote trigger: Fridays 9am ET (`trig_01JqnHVGb3gfV1judxMohq12`, cron `0 13 * * 5`)
 
