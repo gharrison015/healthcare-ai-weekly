@@ -15,7 +15,8 @@
     {"name": "OpenAI Blog", "url": "https://openai.com/blog/rss.xml", "tier": "general_ai", "category": "general_ai"},
     {"name": "Anthropic Blog", "url": "https://www.anthropic.com/blog/rss.xml", "tier": "general_ai", "category": "general_ai"},
     {"name": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "tier": "general_ai", "category": "general_ai"},
-    {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "tier": "general_ai", "category": "general_ai"}
+    {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "tier": "general_ai", "category": "general_ai"},
+    {"name": "AMA News", "url": "https://www.ama-assn.org/rss.xml", "tier": "policy", "category": "policy"}
   ],
   "google_news_queries": [
     "\"artificial intelligence\" AND \"healthcare\"",

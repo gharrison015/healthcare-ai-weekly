@@ -68,31 +68,39 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">What Matters This Week</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
+    <div style="font-size:0;">
     {% for story in top_stories %}
-    <div style="margin-bottom:8px;">{{ story_card(story, "top-stories", true) }}</div>
+    <!--[if mso]><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td width="48%" valign="top"><![endif]-->
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "top-stories", true) }}</div>
+    <!--[if mso]></td></tr></table><![endif]-->
     {% endfor %}
+    </div>
   </div>
   {% endif %}
 
-  <!-- Value-Based Care Watch - 2x2 -->
+  <!-- Value-Based Care Watch -->
   {% if vbc_watch %}
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Value-Based Care Watch</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
+    <div style="font-size:0;">
     {% for story in vbc_watch %}
-    <div style="margin-bottom:8px;">{{ story_card(story, "vbc-watch") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "vbc-watch") }}</div>
     {% endfor %}
+    </div>
   </div>
   {% endif %}
 
   <!-- M&A & Partnerships -->
   {% if ma_partnerships %}
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
-    <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">M&A & Partnerships</div>
+    <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">M&amp;A &amp; Partnerships</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
+    <div style="font-size:0;">
     {% for story in ma_partnerships %}
-    <div style="margin-bottom:8px;">{{ story_card(story, "ma-partnerships") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "ma-partnerships") }}</div>
     {% endfor %}
+    </div>
   </div>
   {% endif %}
 
@@ -101,9 +109,11 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Consulting Intelligence</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
+    <div style="font-size:0;">
     {% for story in consulting_intelligence %}
-    <div style="margin-bottom:8px;">{{ story_card(story, "consulting-intelligence") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ story_card(story, "consulting-intelligence") }}</div>
     {% endfor %}
+    </div>
   </div>
   {% endif %}
 
@@ -112,9 +122,11 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Did You Know?</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click to learn more in the deep dive</div>
+    <div style="font-size:0;">
     {% for item in did_you_know %}
-    <div style="margin-bottom:8px;">{{ dyk_card(item, "did-you-know") }}</div>
+    <div style="display:inline-block;vertical-align:top;width:100%;max-width:48%;min-width:280px;margin:0 1% 8px;font-size:16px;">{{ dyk_card(item, "did-you-know") }}</div>
     {% endfor %}
+    </div>
   </div>
   {% endif %}
 
