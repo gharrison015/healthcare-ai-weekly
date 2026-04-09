@@ -144,7 +144,7 @@ export default async function IssuePage({ params }: PageProps) {
               border: "1px solid rgba(2, 132, 199, 0.15)",
             }}
           >
-            &larr; All Issues
+            &larr; Weekly AI Healthcare News
           </a>
           <h1
             className="font-extrabold mb-1"
@@ -211,19 +211,7 @@ export default async function IssuePage({ params }: PageProps) {
         {sections.map(
           (s) =>
             data.sections[s.key]?.length > 0 && (
-              <div
-                key={s.key}
-                id={s.key}
-                className="rounded-2xl mb-5"
-                style={{
-                  padding: "28px 24px",
-                  background: "rgba(255, 255, 255, 0.45)",
-                  backdropFilter: "blur(20px) saturate(1.8)",
-                  border: "1px solid rgba(255, 255, 255, 0.5)",
-                  boxShadow:
-                    "0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-                }}
-              >
+              <div key={s.key} id={s.key} className="mb-8">
                 <div
                   className="font-extrabold uppercase tracking-wider pb-3 mb-5"
                   style={{
@@ -244,18 +232,7 @@ export default async function IssuePage({ params }: PageProps) {
 
         {/* Did You Know */}
         {data.sections.did_you_know?.length > 0 && (
-          <div
-            id="did_you_know"
-            className="rounded-2xl mb-5"
-            style={{
-              padding: "28px 24px",
-              background: "rgba(255, 255, 255, 0.45)",
-              backdropFilter: "blur(20px) saturate(1.8)",
-              border: "1px solid rgba(255, 255, 255, 0.5)",
-              boxShadow:
-                "0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-            }}
-          >
+          <div id="did_you_know" className="mb-8">
             <div
               className="font-extrabold uppercase tracking-wider pb-3 mb-5"
               style={{
