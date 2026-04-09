@@ -34,7 +34,7 @@
 {% macro story_card(story, section_anchor, has_badge=false) %}
 <div style="background:#f8fafc;border-radius:10px;padding:18px 20px;border:1px solid #e2e8f0;min-height:220px;">
   {% if has_badge %}
-  {% if story.priority == "act_now" %}<div style="display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;padding:3px 8px;border-radius:4px;margin-bottom:8px;background:#dc2626;color:#ffffff;">This Week's Impact</div>{% else %}<div style="display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;padding:3px 8px;border-radius:4px;margin-bottom:8px;background:#2563eb;color:#ffffff;">Emerging</div>{% endif %}
+  {% if story.priority == "act_now" %}<div style="display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;padding:3px 8px;border-radius:4px;margin-bottom:8px;background:#0284C7;color:#ffffff;">This Week's Impact</div>{% else %}<div style="display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;padding:3px 8px;border-radius:4px;margin-bottom:8px;background:#0284C7;color:#ffffff;">Emerging</div>{% endif %}
   {% endif %}
   <div style="font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px;"><a href="{{ landing_url }}" style="color:#2563eb;text-decoration:underline;">{{ story.headline }}</a></div>
   <div style="font-size:18px;line-height:1.5;color:#475569;margin-bottom:10px;">{{ story.email_summary }}</div>
@@ -68,16 +68,9 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">What Matters This Week</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if top_stories[0] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(top_stories[0], "top-stories", true) }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if top_stories[1] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(top_stories[1], "top-stories", true) }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-      <tr>
-        {% if top_stories[2] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(top_stories[2], "top-stories", true) }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if top_stories[3] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(top_stories[3], "top-stories", true) }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {% for story in top_stories %}
+    <div style="margin-bottom:8px;">{{ story_card(story, "top-stories", true) }}</div>
+    {% endfor %}
   </div>
   {% endif %}
 
@@ -86,16 +79,9 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Value-Based Care Watch</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if vbc_watch[0] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(vbc_watch[0], "vbc-watch") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if vbc_watch[1] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(vbc_watch[1], "vbc-watch") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-      <tr>
-        {% if vbc_watch[2] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(vbc_watch[2], "vbc-watch") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if vbc_watch[3] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(vbc_watch[3], "vbc-watch") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {% for story in vbc_watch %}
+    <div style="margin-bottom:8px;">{{ story_card(story, "vbc-watch") }}</div>
+    {% endfor %}
   </div>
   {% endif %}
 
@@ -104,16 +90,9 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Acquisitions & Partnerships</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if deal_flow[0] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(deal_flow[0], "deal-flow") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if deal_flow[1] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(deal_flow[1], "deal-flow") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-      <tr>
-        {% if deal_flow[2] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(deal_flow[2], "deal-flow") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if deal_flow[3] is defined %}<td style="width:50%;vertical-align:top;">{{ story_card(deal_flow[3], "deal-flow") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {% for story in deal_flow %}
+    <div style="margin-bottom:8px;">{{ story_card(story, "deal-flow") }}</div>
+    {% endfor %}
   </div>
   {% endif %}
 
@@ -122,12 +101,9 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Did You Know?</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click to learn more in the deep dive</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if did_you_know[0] is defined %}<td style="width:50%;vertical-align:top;">{{ dyk_card(did_you_know[0], "did-you-know") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-        {% if did_you_know[1] is defined %}<td style="width:50%;vertical-align:top;">{{ dyk_card(did_you_know[1], "did-you-know") }}</td>{% else %}<td style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {% for item in did_you_know %}
+    <div style="margin-bottom:8px;">{{ dyk_card(item, "did-you-know") }}</div>
+    {% endfor %}
   </div>
   {% endif %}
 
