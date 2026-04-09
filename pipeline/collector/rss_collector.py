@@ -2,9 +2,37 @@ import feedparser
 import json
 import re
 import uuid
+import requests
 from datetime import datetime, timedelta
 from time import mktime
 from urllib.parse import quote
+
+def resolve_google_news_url(url, timeout=10):
+    """Resolve a Google News redirect URL to the actual article URL.
+
+    Google News RSS feeds return redirect URLs (news.google.com/rss/articles/...)
+    that need to be followed to get the real article URL.
+
+    Returns the resolved URL, or the original URL if resolution fails.
+    """
+    if "news.google.com" not in url:
+        return url
+    try:
+        response = requests.head(url, allow_redirects=True, timeout=timeout)
+        resolved = response.url
+        # Only use resolved URL if it's no longer a Google News URL
+        if "news.google.com" not in resolved:
+            return resolved
+        # If HEAD didn't resolve, try GET (some servers don't support HEAD redirects)
+        response = requests.get(url, allow_redirects=True, timeout=timeout, stream=True)
+        resolved = response.url
+        response.close()
+        if "news.google.com" not in resolved:
+            return resolved
+        return url
+    except Exception:
+        return url
+
 
 def build_google_news_url(query):
     encoded = quote(query)
@@ -15,7 +43,8 @@ def strip_html(text):
 
 def parse_feed_entry(entry, source, keywords, max_age_days=7):
     title = strip_html(entry.title) if hasattr(entry, "title") else ""
-    link = entry.link if hasattr(entry, "link") else ""
+    raw_link = entry.link if hasattr(entry, "link") else ""
+    link = resolve_google_news_url(raw_link)
     summary = strip_html(entry.get("summary", "")) if hasattr(entry, "get") else ""
 
     published_parsed = getattr(entry, "published_parsed", None)
