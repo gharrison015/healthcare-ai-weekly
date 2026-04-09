@@ -155,7 +155,7 @@ Live: https://healthcare-ai-weekly.vercel.app
 - `/learn/[slug]` — Topic + interactive quiz (submits to Supabase)
 - `/analytics?key=hcai2026analytics` — Quiz analytics dashboard
 
-**Design:** Spotlight glow cards (mouse-tracking on desktop, disabled on mobile), ambient gradient background, glass morphism, uniform blue `#0284C7` palette, Aptos font.
+**Design:** Spotlight glow cards (mouse-tracking on desktop, disabled on mobile), ambient gradient background, glass morphism, uniform blue `#0284C7` palette, Aptos font. No Guidehouse branding — site is independent ("by Greg Harrison" only). Consulting Intelligence cards link directly to source articles (open in new tab).
 
 ### Supabase Analytics
 Project: `healthcare-ai-weekly-analytics` (wjwubjahhbhhsctnpfcb) — NOT FieldShield
