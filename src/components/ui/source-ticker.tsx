@@ -1,0 +1,84 @@
+"use client";
+
+const SOURCES = [
+  "Fierce Healthcare",
+  "Becker's Hospital Review",
+  "STAT News",
+  "Healthcare Dive",
+  "Health Affairs",
+  "CMS Newsroom",
+  "HHS.gov",
+  "Rock Health",
+  "Google Health",
+  "Microsoft Health",
+  "NVIDIA Healthcare",
+  "AWS Health",
+  "OpenAI",
+  "Anthropic",
+  "Google AI",
+  "The Verge",
+  "Google News",
+];
+
+export function SourceTicker() {
+  // Duplicate for seamless loop
+  const allItems = [...SOURCES, ...SOURCES];
+
+  return (
+    <div className="py-8 text-center">
+      <div
+        className="text-xs font-extrabold uppercase tracking-widest mb-4"
+        style={{ color: "#94a3b8", letterSpacing: "2px", fontSize: "13px" }}
+      >
+        Curated from Credible Sources
+      </div>
+      <div className="relative overflow-hidden py-4">
+        {/* Left fade */}
+        <div
+          className="absolute top-0 bottom-0 left-0 w-[120px] z-[2] pointer-events-none"
+          style={{
+            background: "linear-gradient(to right, #f0f2f5, transparent)",
+          }}
+        />
+        {/* Track */}
+        <div
+          className="flex items-center gap-12"
+          style={{
+            width: "max-content",
+            animation: "ticker-scroll 40s linear infinite",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.animationPlayState =
+              "paused";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.animationPlayState =
+              "running";
+          }}
+        >
+          {allItems.map((source, i) => (
+            <span
+              key={`${source}-${i}`}
+              className="whitespace-nowrap transition-opacity duration-200 hover:opacity-100"
+              style={{
+                fontSize: "15px",
+                fontWeight: 600,
+                color: "#6b7280",
+                opacity: 0.7,
+              }}
+            >
+              {source}
+            </span>
+          ))}
+        </div>
+        {/* Right fade */}
+        <div
+          className="absolute top-0 bottom-0 right-0 w-[120px] z-[2] pointer-events-none"
+          style={{
+            background: "linear-gradient(to left, #f0f2f5, transparent)",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
