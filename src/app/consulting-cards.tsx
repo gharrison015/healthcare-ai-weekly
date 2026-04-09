@@ -9,6 +9,7 @@ interface ConsultingStory {
   email_summary: string;
   source_article: {
     source: string;
+    url?: string;
   };
 }
 
@@ -21,9 +22,11 @@ export function ConsultingCards({ stories, issueDate }: ConsultingCardsProps) {
   return (
     <HorizontalScroller className="pb-10">
       {stories.map((story, idx) => (
-        <Link
+        <a
           key={idx}
-          href={`/news/${issueDate}`}
+          href={story.source_article.url || `/news/${issueDate}`}
+          target={story.source_article.url ? "_blank" : undefined}
+          rel={story.source_article.url ? "noopener noreferrer" : undefined}
           className="block flex-shrink-0 no-underline"
           style={{
             width: "340px",
@@ -65,11 +68,11 @@ export function ConsultingCards({ stories, issueDate }: ConsultingCardsProps) {
               <div
                 style={{ fontSize: "14px", fontWeight: 600, color: "#0284C7" }}
               >
-                Read deep dive &rarr;
+                Read source &rarr;
               </div>
             </div>
           </GlowCard>
-        </Link>
+        </a>
       ))}
     </HorizontalScroller>
   );
