@@ -148,7 +148,31 @@
         "email_summary": "GRAIL integrated its Galleri multi-cancer blood test into Epic's EHR platform, potentially reaching 450+ health systems nationwide. The integration embeds early cancer screening into routine workflows but requires careful management of false positives and operational complexity."
       }
     ],
-    "deal_flow": [
+    "did_you_know": [
+      {
+        "headline": "OpenAI Acquires Tech Media Startup TBPN",
+        "source_article": {
+          "id": "a808028f-f294-414d-a5c4-ea782719bab7",
+          "title": "OpenAI acquires TBPN",
+          "source": "OpenAI Blog",
+          "url": "https://openai.com/index/openai-acquires-tbpn"
+        },
+        "one_liner": "OpenAI bought tech media startup TBPN to 'accelerate global conversations around AI' - their first media acquisition signals content strategy shift.",
+        "explainer": "OpenAI's acquisition of TBPN, a tech media startup, marks the company's first move into content and media ownership. TBPN produces technology-focused content and community events, giving OpenAI direct channels to shape AI narratives and engage with developer and business communities. The acquisition reflects OpenAI's evolution from pure technology company to platform with broader ecosystem ambitions. Rather than relying on third-party media coverage, OpenAI now owns content creation and distribution capabilities. This move comes as AI companies face increasing scrutiny over safety, regulation, and societal impact. Owning media assets provides more control over public discourse and technical education around AI capabilities and limitations. The deal also suggests OpenAI recognizes the importance of developer and enterprise community building for long-term platform adoption. TBPN's existing audience and content creation expertise could accelerate OpenAI's efforts to educate potential customers and partners about AI applications across industries, including healthcare."
+      },
+      {
+        "headline": "Meta Launches Muse Spark AI Model",
+        "source_article": {
+          "id": "4a75d581-cd55-42a9-ade0-8dcb11929469",
+          "title": "Meta is reentering the AI race with a new model called Muse Spark",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/tech/908769/meta-muse-spark-ai-model-launch-rollout"
+        },
+        "one_liner": "Meta's new Muse Spark AI model powers Meta AI across WhatsApp, Instagram, Facebook, and Messenger - their biggest AI push since the ChatGPT boom.",
+        "explainer": "Meta Superintelligence Labs launched Muse Spark, their most ambitious AI model since the generative AI boom began. The model now powers Meta AI across all major Meta platforms - WhatsApp, Instagram, Facebook, and Messenger - potentially reaching billions of users. This represents Meta's most serious attempt to compete directly with OpenAI's ChatGPT and Google's Gemini in the consumer AI market. Unlike previous Meta AI efforts that felt experimental, Muse Spark is designed for production-scale deployment across Meta's entire ecosystem. The integration strategy is particularly significant - rather than launching a separate AI app, Meta is embedding AI capabilities directly into existing social platforms where users already spend time. For healthcare, this could accelerate consumer familiarity with AI interactions and normalize AI-powered health information seeking. However, it also raises concerns about health misinformation and unqualified medical advice delivery at massive scale. Meta's approach of integrating AI into social platforms rather than standalone applications could influence how other tech giants deploy AI capabilities."
+      }
+    ],
+    "ma_partnerships": [
       {
         "headline": "Orlando Health Adds Alabama Hospitals",
         "source_article": {
@@ -214,30 +238,7 @@
         "email_summary": "Sutter Health and Allina Health announced a proposed $26 billion merger that would create a mega-system spanning California to Minnesota. The cross-country combination represents a new consolidation model focused on national scale rather than regional market dominance."
       }
     ],
-    "did_you_know": [
-      {
-        "headline": "OpenAI Acquires Tech Media Startup TBPN",
-        "source_article": {
-          "id": "a808028f-f294-414d-a5c4-ea782719bab7",
-          "title": "OpenAI acquires TBPN",
-          "source": "OpenAI Blog",
-          "url": "https://openai.com/index/openai-acquires-tbpn"
-        },
-        "one_liner": "OpenAI bought tech media startup TBPN to 'accelerate global conversations around AI' - their first media acquisition signals content strategy shift.",
-        "explainer": "OpenAI's acquisition of TBPN, a tech media startup, marks the company's first move into content and media ownership. TBPN produces technology-focused content and community events, giving OpenAI direct channels to shape AI narratives and engage with developer and business communities. The acquisition reflects OpenAI's evolution from pure technology company to platform with broader ecosystem ambitions. Rather than relying on third-party media coverage, OpenAI now owns content creation and distribution capabilities. This move comes as AI companies face increasing scrutiny over safety, regulation, and societal impact. Owning media assets provides more control over public discourse and technical education around AI capabilities and limitations. The deal also suggests OpenAI recognizes the importance of developer and enterprise community building for long-term platform adoption. TBPN's existing audience and content creation expertise could accelerate OpenAI's efforts to educate potential customers and partners about AI applications across industries, including healthcare."
-      },
-      {
-        "headline": "Meta Launches Muse Spark AI Model",
-        "source_article": {
-          "id": "4a75d581-cd55-42a9-ade0-8dcb11929469",
-          "title": "Meta is reentering the AI race with a new model called Muse Spark",
-          "source": "The Verge AI",
-          "url": "https://www.theverge.com/tech/908769/meta-muse-spark-ai-model-launch-rollout"
-        },
-        "one_liner": "Meta's new Muse Spark AI model powers Meta AI across WhatsApp, Instagram, Facebook, and Messenger - their biggest AI push since the ChatGPT boom.",
-        "explainer": "Meta Superintelligence Labs launched Muse Spark, their most ambitious AI model since the generative AI boom began. The model now powers Meta AI across all major Meta platforms - WhatsApp, Instagram, Facebook, and Messenger - potentially reaching billions of users. This represents Meta's most serious attempt to compete directly with OpenAI's ChatGPT and Google's Gemini in the consumer AI market. Unlike previous Meta AI efforts that felt experimental, Muse Spark is designed for production-scale deployment across Meta's entire ecosystem. The integration strategy is particularly significant - rather than launching a separate AI app, Meta is embedding AI capabilities directly into existing social platforms where users already spend time. For healthcare, this could accelerate consumer familiarity with AI interactions and normalize AI-powered health information seeking. However, it also raises concerns about health misinformation and unqualified medical advice delivery at massive scale. Meta's approach of integrating AI into social platforms rather than standalone applications could influence how other tech giants deploy AI capabilities."
-      }
-    ]
+    "consulting_intelligence": []
   },
   "linkedin_seed": {
     "top_story": "AI Scribes Officially Driving Up Costs",

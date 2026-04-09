@@ -90,7 +90,7 @@ def run_curator(date_str, paths):
 
     story_count = sum(
         len(curated.get("sections", {}).get(s, []))
-        for s in ["top_stories", "vbc_watch", "deal_flow", "did_you_know"]
+        for s in ["top_stories", "vbc_watch", "ma_partnerships", "consulting_intelligence", "did_you_know"]
     )
     print(f"Curated {story_count} stories across all sections")
     print(f"Saved to {paths['curated']}")

@@ -137,7 +137,31 @@
         "email_summary": "GRAIL's Galleri multi-cancer blood test is now integrated directly into Epic's EHR platform, giving 450+ health systems seamless ordering capability. The integration eliminates workflow barriers that typically slow new test adoption and could significantly impact population health screening programs."
       }
     ],
-    "deal_flow": [
+    "did_you_know": [
+      {
+        "headline": "Anthropic Launches Cybersecurity AI Partnership",
+        "source_article": {
+          "id": "08b37a70-41c3-41ce-852f-880711d45028",
+          "title": "A new Anthropic model found security problems 'in every major operating system and web browser'",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity"
+        },
+        "one_liner": "Anthropic's Project Glasswing found security vulnerabilities in every major OS and browser, partnering with Nvidia, Google, and Microsoft for enterprise cybersecurity",
+        "explainer": "Project Glasswing represents Anthropic's entry into enterprise cybersecurity, using AI to automatically identify software vulnerabilities with minimal human intervention. The partnership includes major tech companies like Nvidia, Google, Amazon Web Services, Apple, and Microsoft, suggesting broad industry support for AI-driven security solutions. The model reportedly found security problems in every major operating system and web browser, demonstrating the potential scale of AI-powered vulnerability detection. This development is significant for healthcare organizations because cybersecurity is a critical concern for health systems managing sensitive patient data. Traditional vulnerability assessment requires significant human expertise and time, while AI-powered solutions could provide continuous, automated security monitoring. The partnership structure also indicates how AI cybersecurity solutions might be delivered to enterprise customers, potentially through existing technology vendor relationships rather than direct AI company sales. For health systems already struggling with cybersecurity staffing and expertise, AI-powered vulnerability detection could provide capabilities that would otherwise require expensive security consulting or additional staff."
+      },
+      {
+        "headline": "OpenAI Outlines Enterprise AI Strategy",
+        "source_article": {
+          "id": "0de52083-2c0e-44ac-b03f-aadec53ff61a",
+          "title": "The next phase of enterprise AI",
+          "source": "OpenAI Blog",
+          "url": "https://openai.com/index/next-phase-of-enterprise-ai"
+        },
+        "one_liner": "OpenAI detailed enterprise AI adoption acceleration with Frontier, ChatGPT Enterprise, Codex, and company-wide AI agents for business transformation",
+        "explainer": "OpenAI's enterprise strategy update highlights how businesses are moving beyond experimental AI use toward systematic deployment across entire organizations. The focus on company-wide AI agents suggests a shift from individual productivity tools toward AI systems that can handle complex business processes autonomously. For healthcare organizations, this evolution is particularly relevant as it suggests AI will soon be capable of managing entire workflows rather than just assisting with specific tasks. The enterprise focus also indicates that OpenAI sees business customers as more valuable than individual consumers, which could influence how AI capabilities are developed and priced. Healthcare systems evaluating AI strategies should consider whether to adopt general enterprise AI tools or invest in healthcare-specific AI solutions. The company-wide agent concept could be transformative for health systems if AI can effectively manage administrative processes, care coordination, and operational workflows. However, healthcare-specific requirements around compliance, clinical decision-making, and patient safety may limit the applicability of general enterprise AI tools compared to purpose-built healthcare AI solutions."
+      }
+    ],
+    "ma_partnerships": [
       {
         "headline": "Anthropic Snags Coefficient Bio For $400M",
         "source_article": {
@@ -203,30 +227,7 @@
         "email_summary": "Orlando Health acquired RMC Health System, expanding their Alabama presence after purchasing five Tenet hospitals in 2024. The geographic diversification strategy demonstrates how successful health systems use multi-state expansion to reduce market risk and create growth opportunities."
       }
     ],
-    "did_you_know": [
-      {
-        "headline": "Anthropic Launches Cybersecurity AI Partnership",
-        "source_article": {
-          "id": "08b37a70-41c3-41ce-852f-880711d45028",
-          "title": "A new Anthropic model found security problems 'in every major operating system and web browser'",
-          "source": "The Verge AI",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity"
-        },
-        "one_liner": "Anthropic's Project Glasswing found security vulnerabilities in every major OS and browser, partnering with Nvidia, Google, and Microsoft for enterprise cybersecurity",
-        "explainer": "Project Glasswing represents Anthropic's entry into enterprise cybersecurity, using AI to automatically identify software vulnerabilities with minimal human intervention. The partnership includes major tech companies like Nvidia, Google, Amazon Web Services, Apple, and Microsoft, suggesting broad industry support for AI-driven security solutions. The model reportedly found security problems in every major operating system and web browser, demonstrating the potential scale of AI-powered vulnerability detection. This development is significant for healthcare organizations because cybersecurity is a critical concern for health systems managing sensitive patient data. Traditional vulnerability assessment requires significant human expertise and time, while AI-powered solutions could provide continuous, automated security monitoring. The partnership structure also indicates how AI cybersecurity solutions might be delivered to enterprise customers, potentially through existing technology vendor relationships rather than direct AI company sales. For health systems already struggling with cybersecurity staffing and expertise, AI-powered vulnerability detection could provide capabilities that would otherwise require expensive security consulting or additional staff."
-      },
-      {
-        "headline": "OpenAI Outlines Enterprise AI Strategy",
-        "source_article": {
-          "id": "0de52083-2c0e-44ac-b03f-aadec53ff61a",
-          "title": "The next phase of enterprise AI",
-          "source": "OpenAI Blog",
-          "url": "https://openai.com/index/next-phase-of-enterprise-ai"
-        },
-        "one_liner": "OpenAI detailed enterprise AI adoption acceleration with Frontier, ChatGPT Enterprise, Codex, and company-wide AI agents for business transformation",
-        "explainer": "OpenAI's enterprise strategy update highlights how businesses are moving beyond experimental AI use toward systematic deployment across entire organizations. The focus on company-wide AI agents suggests a shift from individual productivity tools toward AI systems that can handle complex business processes autonomously. For healthcare organizations, this evolution is particularly relevant as it suggests AI will soon be capable of managing entire workflows rather than just assisting with specific tasks. The enterprise focus also indicates that OpenAI sees business customers as more valuable than individual consumers, which could influence how AI capabilities are developed and priced. Healthcare systems evaluating AI strategies should consider whether to adopt general enterprise AI tools or invest in healthcare-specific AI solutions. The company-wide agent concept could be transformative for health systems if AI can effectively manage administrative processes, care coordination, and operational workflows. However, healthcare-specific requirements around compliance, clinical decision-making, and patient safety may limit the applicability of general enterprise AI tools compared to purpose-built healthcare AI solutions."
-      }
-    ]
+    "consulting_intelligence": []
   },
   "linkedin_seed": {
     "top_story": "Shadow AI Spreads Inside Health Systems",

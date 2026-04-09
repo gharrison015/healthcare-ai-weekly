@@ -317,7 +317,7 @@
         card.href = `/issues/${issue.date}/`;
         card.className = 'glass-card issue-card';
         card.dataset.issue = issue.date;
-        const storyCount = (issue.top_stories || 0) + (issue.vbc_watch || 0) + (issue.deal_flow || 0) + (issue.did_you_know || 0);
+        const storyCount = (issue.top_stories || 0) + (issue.vbc_watch || 0) + (issue.ma_partnerships || 0) + (issue.did_you_know || 0);
         card.innerHTML = `
           <div class="date">Week of ${issue.week_range || issue.date}</div>
           <div class="summary">${issue.editorial_summary || ''}</div>

@@ -21,7 +21,7 @@ def test_render_deep_dive_contains_all_sections():
                 "deep_dive_notes": "Deep analysis of CMS changes.",
                 "source_article": {"url": "#", "source": "CMS", "title": "CMS Update"},
             }],
-            "deal_flow": [{
+            "ma_partnerships": [{
                 "headline": "Abridge Acquired",
                 "so_what": "Consolidation.",
                 "deep_dive_notes": "What the Abridge deal means.",
@@ -52,7 +52,7 @@ def test_render_deep_dive_has_toc():
         "editorial_summary": "Test.",
         "sections": {
             "top_stories": [{"headline": "Test Story", "priority": "act_now", "deep_dive_notes": "Notes.", "source_article": {"url": "#", "source": "T", "title": "T"}}],
-            "vbc_watch": [], "deal_flow": [], "did_you_know": [],
+            "vbc_watch": [], "ma_partnerships": [], "did_you_know": [],
         },
         "trend_watch": {"emerging_signal": None},
     }

@@ -9,7 +9,7 @@ def make_curated(date, companies, themes):
         "sections": {
             "top_stories": stories,
             "vbc_watch": [],
-            "deal_flow": [],
+            "ma_partnerships": [],
             "did_you_know": [],
         }
     }

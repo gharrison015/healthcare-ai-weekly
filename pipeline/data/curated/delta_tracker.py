@@ -5,7 +5,7 @@ from collections import Counter
 
 def extract_companies_from_curated(curated):
     companies = []
-    for section_name in ["top_stories", "vbc_watch", "deal_flow"]:
+    for section_name in ["top_stories", "vbc_watch", "ma_partnerships", "consulting_intelligence"]:
         for story in curated.get("sections", {}).get(section_name, []):
             headline = story.get("headline", "")
             source_title = story.get("source_article", {}).get("title", "")

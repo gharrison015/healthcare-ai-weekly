@@ -83,7 +83,8 @@ Return a single JSON object with this exact structure. No markdown fencing, just
       }}
     ],
     "vbc_watch": [same structure as top_stories],
-    "deal_flow": [same structure as top_stories],
+    "ma_partnerships": [same structure as top_stories],
+    "consulting_intelligence": [same structure as top_stories, 1-3 items about consulting firm moves],
     "did_you_know": [
       {{
         "headline": "What happened in general AI",

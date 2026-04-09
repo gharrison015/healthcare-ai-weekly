@@ -140,7 +140,31 @@
         "email_summary": "UNC Health partnered with UNC-Chapel Hill to launch an AI development platform that enables internal creation of healthcare AI applications rather than relying solely on commercial vendors. The platform leverages the academic medical center's datasets, clinical expertise, and research infrastructure for rapid AI prototyping and testing."
       }
     ],
-    "deal_flow": [
+    "did_you_know": [
+      {
+        "headline": "Meta Launches Muse Spark AI Model",
+        "source_article": {
+          "id": "34915772-e20b-4c0f-9245-c0f8ffbeab04",
+          "title": "Meta is reentering the AI race with a new model called Muse Spark",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/tech/908769/meta-muse-spark-ai-model-launch-rollout"
+        },
+        "one_liner": "Meta's first model since Zuckerberg's billion-dollar AI overhaul now powers Meta AI across all platforms",
+        "explainer": "Meta Superintelligence Labs launched Muse Spark, their first AI model since Mark Zuckerberg spent billions restructuring the company's AI efforts. The model now powers Meta AI across WhatsApp, Instagram, Facebook, and Messenger, with broader rollout planned for coming weeks. This represents Meta's attempt to regain competitive position against OpenAI and Google in the consumer AI space. The launch follows massive infrastructure investments and talent acquisition that repositioned Meta from a social media company to an AI-first organization. For healthcare, Meta's AI capabilities could eventually influence patient engagement through social platforms and messaging apps, though no healthcare-specific applications have been announced yet."
+      },
+      {
+        "headline": "OpenAI Unveils Enterprise AI Strategy",
+        "source_article": {
+          "id": "681f8744-cc3f-4c5c-8a13-6c56bbb7c2ce",
+          "title": "The next phase of enterprise AI",
+          "source": "OpenAI Blog",
+          "url": "https://openai.com/index/next-phase-of-enterprise-ai"
+        },
+        "one_liner": "OpenAI outlines enterprise AI roadmap featuring Frontier, ChatGPT Enterprise, and company-wide AI agents",
+        "explainer": "OpenAI detailed their enterprise AI strategy as adoption accelerates across industries, highlighting three key components: Frontier for advanced capabilities, ChatGPT Enterprise for organizational deployment, and company-wide AI agents for automated workflows. The announcement emphasizes OpenAI's shift from consumer-focused applications to enterprise solutions that can transform organizational operations. For healthcare, this enterprise focus suggests more sophisticated AI agents could soon handle complex administrative workflows, clinical documentation, and patient communication tasks. The timing coincides with growing enterprise demand for AI solutions that go beyond simple chatbot interactions to provide genuine operational transformation."
+      }
+    ],
+    "ma_partnerships": [
       {
         "headline": "Sutter-Allina $26B Merger Reshapes Markets",
         "source_article": {
@@ -206,30 +230,7 @@
         "email_summary": "Healthcare consulting firm Chartis acquired AI company Leap AI, signaling how consulting firms are building internal AI capabilities rather than partnering with technology vendors. The move allows Chartis to offer end-to-end AI solutions integrated with traditional consulting services."
       }
     ],
-    "did_you_know": [
-      {
-        "headline": "Meta Launches Muse Spark AI Model",
-        "source_article": {
-          "id": "34915772-e20b-4c0f-9245-c0f8ffbeab04",
-          "title": "Meta is reentering the AI race with a new model called Muse Spark",
-          "source": "The Verge AI",
-          "url": "https://www.theverge.com/tech/908769/meta-muse-spark-ai-model-launch-rollout"
-        },
-        "one_liner": "Meta's first model since Zuckerberg's billion-dollar AI overhaul now powers Meta AI across all platforms",
-        "explainer": "Meta Superintelligence Labs launched Muse Spark, their first AI model since Mark Zuckerberg spent billions restructuring the company's AI efforts. The model now powers Meta AI across WhatsApp, Instagram, Facebook, and Messenger, with broader rollout planned for coming weeks. This represents Meta's attempt to regain competitive position against OpenAI and Google in the consumer AI space. The launch follows massive infrastructure investments and talent acquisition that repositioned Meta from a social media company to an AI-first organization. For healthcare, Meta's AI capabilities could eventually influence patient engagement through social platforms and messaging apps, though no healthcare-specific applications have been announced yet."
-      },
-      {
-        "headline": "OpenAI Unveils Enterprise AI Strategy",
-        "source_article": {
-          "id": "681f8744-cc3f-4c5c-8a13-6c56bbb7c2ce",
-          "title": "The next phase of enterprise AI",
-          "source": "OpenAI Blog",
-          "url": "https://openai.com/index/next-phase-of-enterprise-ai"
-        },
-        "one_liner": "OpenAI outlines enterprise AI roadmap featuring Frontier, ChatGPT Enterprise, and company-wide AI agents",
-        "explainer": "OpenAI detailed their enterprise AI strategy as adoption accelerates across industries, highlighting three key components: Frontier for advanced capabilities, ChatGPT Enterprise for organizational deployment, and company-wide AI agents for automated workflows. The announcement emphasizes OpenAI's shift from consumer-focused applications to enterprise solutions that can transform organizational operations. For healthcare, this enterprise focus suggests more sophisticated AI agents could soon handle complex administrative workflows, clinical documentation, and patient communication tasks. The timing coincides with growing enterprise demand for AI solutions that go beyond simple chatbot interactions to provide genuine operational transformation."
-      }
-    ]
+    "consulting_intelligence": []
   },
   "linkedin_seed": {
     "top_story": "Prior Auth Reform Falls Flat at 11%",

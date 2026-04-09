@@ -165,7 +165,8 @@
     <div class="toc-title">In This Issue</div>
     {% if top_stories %}<a href="#top-stories">What Matters This Week</a>{% endif %}
     {% if vbc_watch %}<a href="#vbc-watch">Value-Based Care Watch</a>{% endif %}
-    {% if deal_flow %}<a href="#deal-flow">Acquisitions & Partnerships</a>{% endif %}
+    {% if ma_partnerships %}<a href="#ma-partnerships">M&A & Partnerships</a>{% endif %}
+    {% if consulting_intelligence %}<a href="#consulting-intelligence">Consulting Intelligence</a>{% endif %}
     {% if did_you_know %}<a href="#did-you-know">Did You Know?</a>{% endif %}
     {% if trend_signal %}<a href="#trend-watch">Trend Watch</a>{% endif %}
     <a href="#all-sources">All Sources</a>
@@ -208,11 +209,26 @@
   </div>
   {% endif %}
 
-  <!-- Acquisitions & Partnerships -->
-  {% if deal_flow %}
-  <div class="section-box glass" id="deal-flow">
-    <div class="section-header">Acquisitions & Partnerships</div>
-    {% for story in deal_flow %}
+  <!-- M&A & Partnerships -->
+  {% if ma_partnerships %}
+  <div class="section-box glass" id="ma-partnerships">
+    <div class="section-header">M&A & Partnerships</div>
+    {% for story in ma_partnerships %}
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="{{ story.source_article.url }}">{{ story.headline }}</a></div>
+      {% if story.so_what %}<div class="so-what">{{ story.so_what }}</div>{% endif %}
+      <div class="deep-dive-text">{{ story.deep_dive_notes }}</div>
+      <div class="source-link">Source: <a href="{{ story.source_article.url }}">{{ story.source_article.source }}</a></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Consulting Intelligence -->
+  {% if consulting_intelligence %}
+  <div class="section-box glass" id="consulting-intelligence">
+    <div class="section-header">Consulting Intelligence</div>
+    {% for story in consulting_intelligence %}
     <div class="story-card glass-card">
       <div class="story-headline"><a href="{{ story.source_article.url }}">{{ story.headline }}</a></div>
       {% if story.so_what %}<div class="so-what">{{ story.so_what }}</div>{% endif %}

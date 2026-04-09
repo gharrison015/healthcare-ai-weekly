@@ -13,11 +13,24 @@
       "max_count": 4,
       "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"]
     },
-    "deal_flow": {
-      "description": "Acquisitions, funding rounds, major partnerships, consulting firm moves, big tech healthcare plays. Always produce exactly 4.",
+    "ma_partnerships": {
+      "label": "M&A & Partnerships",
+      "description": "Acquisitions, funding rounds, major partnerships, big tech healthcare plays. Always produce exactly 4.",
       "min_count": 4,
       "max_count": 4,
       "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"]
+    },
+    "consulting_intelligence": {
+      "label": "Consulting Intelligence",
+      "description": "Consulting firm activity in healthcare AI: practice launches, AI investments, strategic hires, partnerships, acquisitions by consulting firms. Always produce 1-3 items.",
+      "min_count": 1,
+      "max_count": 3,
+      "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"],
+      "tracked_firms": [
+        "Guidehouse", "Deloitte", "McKinsey", "BCG", "Accenture", "Chartis",
+        "Optum Advisory", "EY Parthenon", "Huron", "BRG (Berkeley Research Group)",
+        "Bain", "Oliver Wyman", "KPMG", "PwC"
+      ]
     },
     "did_you_know": {
       "description": "General AI capability and release news, not healthcare-specific. Educational tone. Always exactly 2.",

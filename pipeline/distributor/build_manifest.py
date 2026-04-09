@@ -15,7 +15,8 @@ def build_manifest(repo_dir="/Users/greg/Claude/healthcare-ai-weekly"):
             "editorial_summary": data.get("editorial_summary", ""),
             "top_stories": len(data.get("sections", {}).get("top_stories", [])),
             "vbc_watch": len(data.get("sections", {}).get("vbc_watch", [])),
-            "deal_flow": len(data.get("sections", {}).get("deal_flow", [])),
+            "ma_partnerships": len(data.get("sections", {}).get("ma_partnerships", [])),
+            "consulting_intelligence": len(data.get("sections", {}).get("consulting_intelligence", [])),
             "did_you_know": len(data.get("sections", {}).get("did_you_know", [])),
         })
 

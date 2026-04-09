@@ -121,7 +121,8 @@ export default async function IssuePage({ params }: PageProps) {
   const sections = [
     { key: "top_stories", label: "Top Stories" },
     { key: "vbc_watch", label: "VBC Watch" },
-    { key: "deal_flow", label: "Deal Flow" },
+    { key: "ma_partnerships", label: "M&A & Partnerships" },
+    { key: "consulting_intelligence", label: "Consulting Intelligence" },
   ] as const;
 
   return (

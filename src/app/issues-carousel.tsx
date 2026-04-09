@@ -94,7 +94,8 @@ export function IssuesCarousel({ issues }: IssuesCarouselProps) {
           const storyCount =
             (issue.top_stories || 0) +
             (issue.vbc_watch || 0) +
-            (issue.deal_flow || 0) +
+            (issue.ma_partnerships || 0) +
+            (issue.consulting_intelligence || 0) +
             (issue.did_you_know || 0);
 
           return (

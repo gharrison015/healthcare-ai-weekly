@@ -45,7 +45,14 @@
     "\"Amazon\" OR \"AWS\" AND \"healthcare\" AND (\"acquisition\" OR \"partnership\")",
 
     "healthcare AI merger OR acquisition 2026",
-    "healthcare consulting AI partnership 2026"
+    "healthcare consulting AI partnership 2026",
+
+    "\"BRG\" OR \"Berkeley Research Group\" AND \"healthcare\"",
+    "\"Huron Consulting\" AND \"healthcare\" AND \"AI\"",
+    "\"Bain\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+    "\"Oliver Wyman\" AND \"healthcare\" AND (\"AI\" OR \"partnership\")",
+    "\"KPMG\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+    "\"PwC\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")"
   ],
   "keywords": [
     "AI", "artificial intelligence", "machine learning", "LLM", "large language model",

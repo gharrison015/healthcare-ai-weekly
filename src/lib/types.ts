@@ -4,7 +4,8 @@ export interface IssueManifestEntry {
   editorial_summary: string;
   top_stories: number;
   vbc_watch: number;
-  deal_flow: number;
+  ma_partnerships: number;
+  consulting_intelligence: number;
   did_you_know: number;
 }
 
@@ -103,7 +104,8 @@ export interface IssueData {
   sections: {
     top_stories: Story[];
     vbc_watch: Story[];
-    deal_flow: Story[];
+    ma_partnerships: Story[];
+    consulting_intelligence: Story[];
     did_you_know: Array<{
       headline: string;
       explainer: string;

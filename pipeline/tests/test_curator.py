@@ -30,7 +30,7 @@ def test_validate_curated_output_catches_missing_sections():
         "sections": {
             "top_stories": {"min_count": 3, "required_fields": ["headline"]},
             "vbc_watch": {"min_count": 1, "required_fields": ["headline"]},
-            "deal_flow": {"min_count": 1, "required_fields": ["headline"]},
+            "ma_partnerships": {"min_count": 1, "required_fields": ["headline"]},
             "did_you_know": {"min_count": 2, "required_fields": ["headline"]}
         },
         "global_rules": []
@@ -39,7 +39,7 @@ def test_validate_curated_output_catches_missing_sections():
         "sections": {
             "top_stories": [{"headline": "A"}, {"headline": "B"}, {"headline": "C"}],
             "vbc_watch": [],
-            "deal_flow": [{"headline": "D"}],
+            "ma_partnerships": [{"headline": "D"}],
             "did_you_know": [{"headline": "E"}, {"headline": "F"}]
         }
     }

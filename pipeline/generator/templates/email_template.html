@@ -85,13 +85,24 @@
   </div>
   {% endif %}
 
-  <!-- Acquisitions & Partnerships - 2x2 -->
-  {% if deal_flow %}
+  <!-- M&A & Partnerships -->
+  {% if ma_partnerships %}
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
-    <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Acquisitions & Partnerships</div>
+    <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">M&A & Partnerships</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    {% for story in deal_flow %}
-    <div style="margin-bottom:8px;">{{ story_card(story, "deal-flow") }}</div>
+    {% for story in ma_partnerships %}
+    <div style="margin-bottom:8px;">{{ story_card(story, "ma-partnerships") }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Consulting Intelligence -->
+  {% if consulting_intelligence %}
+  <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+    <div style="font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;">Consulting Intelligence</div>
+    <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
+    {% for story in consulting_intelligence %}
+    <div style="margin-bottom:8px;">{{ story_card(story, "consulting-intelligence") }}</div>
     {% endfor %}
   </div>
   {% endif %}

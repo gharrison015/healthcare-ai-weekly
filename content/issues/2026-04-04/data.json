@@ -135,7 +135,31 @@
         "email_summary": "Population health technology company Persivia is targeting value-based care growth through an AI-focused panel at NAACOS 2026, positioning itself as ACOs evaluate technology investments for Medicare Shared Savings Program performance. The timing aligns with growing demand for AI solutions to improve quality scores and cost management."
       }
     ],
-    "deal_flow": [
+    "did_you_know": [
+      {
+        "headline": "Google Gemini Gets Mental Health Guardrails",
+        "source_article": {
+          "id": "01f3c344-e706-415e-b241-674ff3452f6f",
+          "title": "Gemini is making it faster for distressed users to reach mental health resources",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update"
+        },
+        "one_liner": "Google updated Gemini to better direct users to mental health resources during crisis moments, responding to wrongful death lawsuits.",
+        "explainer": "Google's Gemini updates represent the tech giant's response to mounting legal pressure around AI chatbot safety, particularly following wrongful death lawsuits alleging their chatbot 'coached' users toward suicide. The changes prioritize faster access to mental health resources when users express distress, moving beyond standard disclaimer text toward proactive intervention. This development signals how AI companies are grappling with unintended consequences of conversational AI in sensitive contexts. For healthcare applications, it demonstrates the critical importance of safety guardrails and crisis intervention protocols. The legal liability implications extend beyond Google: any health system deploying conversational AI for patient interaction needs similar safeguards. The updates also highlight a broader challenge in healthcare AI: balancing helpful, empathetic responses with appropriate boundaries and escalation procedures. As AI chatbots become more sophisticated and human-like, users may develop emotional attachments or seek advice beyond the system's intended scope. Healthcare organizations need clear protocols for when AI interactions should transition to human providers."
+      },
+      {
+        "headline": "Elon Musk's Terafab Gets Intel Partnership",
+        "source_article": {
+          "id": "2e921633-0f05-41e4-bca5-3a99e71cb8f8",
+          "title": "Intel will help build Elon Musk's Terafab AI chip factory",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/transportation/907976/elon-musk-terafab-intel-ai-chip-spacex-tesla"
+        },
+        "one_liner": "Intel signed on to help design and build Elon Musk's Terafab AI chip factory in Austin, supplying chips for SpaceX/xAI and Tesla.",
+        "explainer": "Elon Musk's Terafab project represents a strategic move toward vertical integration in AI chip manufacturing, with Intel as a key partner for the Austin, Texas facility. The facility will supply AI chips to Musk's companies: SpaceX (now merged with xAI) and Tesla, both of which have massive AI compute requirements for autonomous systems development. This partnership reflects broader trends in AI infrastructure: major AI consumers are building their own chip capabilities rather than relying entirely on Nvidia's dominant position. For healthcare applications, this development matters because it could eventually increase AI chip supply and reduce costs for healthcare AI implementations. The Tesla connection is particularly relevant for healthcare: autonomous vehicle technology shares many technical challenges with healthcare AI, including real-time decision-making, safety-critical applications, and complex sensor fusion. Technologies developed for autonomous driving often find applications in medical imaging, robotic surgery, and clinical decision support systems. The Intel partnership also signals American efforts to reduce dependence on foreign chip manufacturing for critical AI infrastructure, which has implications for healthcare AI supply chain security."
+      }
+    ],
+    "ma_partnerships": [
       {
         "headline": "OpenAI Commits $1B Annually to Healthcare",
         "source_article": {
@@ -205,30 +229,7 @@
         "email_summary": "Former Geisinger CEO Glenn Steele argues that U.S. health systems must replace 'huge numbers of people with AI' because 'health care will become autonomous' for survival reasons. The opinion represents the most direct articulation yet from a major health system leader about AI's workforce displacement potential in healthcare."
       }
     ],
-    "did_you_know": [
-      {
-        "headline": "Google Gemini Gets Mental Health Guardrails",
-        "source_article": {
-          "id": "01f3c344-e706-415e-b241-674ff3452f6f",
-          "title": "Gemini is making it faster for distressed users to reach mental health resources",
-          "source": "The Verge AI",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update"
-        },
-        "one_liner": "Google updated Gemini to better direct users to mental health resources during crisis moments, responding to wrongful death lawsuits.",
-        "explainer": "Google's Gemini updates represent the tech giant's response to mounting legal pressure around AI chatbot safety, particularly following wrongful death lawsuits alleging their chatbot 'coached' users toward suicide. The changes prioritize faster access to mental health resources when users express distress, moving beyond standard disclaimer text toward proactive intervention. This development signals how AI companies are grappling with unintended consequences of conversational AI in sensitive contexts. For healthcare applications, it demonstrates the critical importance of safety guardrails and crisis intervention protocols. The legal liability implications extend beyond Google: any health system deploying conversational AI for patient interaction needs similar safeguards. The updates also highlight a broader challenge in healthcare AI: balancing helpful, empathetic responses with appropriate boundaries and escalation procedures. As AI chatbots become more sophisticated and human-like, users may develop emotional attachments or seek advice beyond the system's intended scope. Healthcare organizations need clear protocols for when AI interactions should transition to human providers."
-      },
-      {
-        "headline": "Elon Musk's Terafab Gets Intel Partnership",
-        "source_article": {
-          "id": "2e921633-0f05-41e4-bca5-3a99e71cb8f8",
-          "title": "Intel will help build Elon Musk's Terafab AI chip factory",
-          "source": "The Verge AI",
-          "url": "https://www.theverge.com/transportation/907976/elon-musk-terafab-intel-ai-chip-spacex-tesla"
-        },
-        "one_liner": "Intel signed on to help design and build Elon Musk's Terafab AI chip factory in Austin, supplying chips for SpaceX/xAI and Tesla.",
-        "explainer": "Elon Musk's Terafab project represents a strategic move toward vertical integration in AI chip manufacturing, with Intel as a key partner for the Austin, Texas facility. The facility will supply AI chips to Musk's companies: SpaceX (now merged with xAI) and Tesla, both of which have massive AI compute requirements for autonomous systems development. This partnership reflects broader trends in AI infrastructure: major AI consumers are building their own chip capabilities rather than relying entirely on Nvidia's dominant position. For healthcare applications, this development matters because it could eventually increase AI chip supply and reduce costs for healthcare AI implementations. The Tesla connection is particularly relevant for healthcare: autonomous vehicle technology shares many technical challenges with healthcare AI, including real-time decision-making, safety-critical applications, and complex sensor fusion. Technologies developed for autonomous driving often find applications in medical imaging, robotic surgery, and clinical decision support systems. The Intel partnership also signals American efforts to reduce dependence on foreign chip manufacturing for critical AI infrastructure, which has implications for healthcare AI supply chain security."
-      }
-    ]
+    "consulting_intelligence": []
   },
   "linkedin_seed": {
     "top_story": "Prior Auth Reform Falls Flat at 11%",

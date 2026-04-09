@@ -21,7 +21,7 @@ def test_render_email_contains_all_sections():
                 "email_summary": "New quality measures incoming.",
                 "source_article": {"url": "https://example.com/vbc", "source": "CMS"},
             }],
-            "deal_flow": [{
+            "ma_partnerships": [{
                 "headline": "Abridge Acquired for $3B",
                 "email_summary": "Ambient AI consolidation continues.",
                 "source_article": {"url": "https://example.com/deal", "source": "Rock Health"},
@@ -49,7 +49,7 @@ def test_render_email_is_valid_html():
         "sections": {
             "top_stories": [{"headline": "Test", "priority": "watch_this", "email_summary": "Test.", "source_article": {"url": "#", "source": "Test"}}],
             "vbc_watch": [],
-            "deal_flow": [],
+            "ma_partnerships": [],
             "did_you_know": [],
         },
         "trend_watch": {"emerging_signal": None},
