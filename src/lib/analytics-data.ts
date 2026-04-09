@@ -37,6 +37,7 @@ export interface AttemptsByDayRow {
 
 export async function getQuizAnalytics(): Promise<QuizAnalyticsRow[]> {
   const client = createServiceClient();
+  if (!client) return [];
   const { data, error } = await client
     .from('quiz_analytics')
     .select('*')
@@ -53,6 +54,7 @@ export async function getQuestionDifficulty(
   quizSlug?: string
 ): Promise<QuestionDifficultyRow[]> {
   const client = createServiceClient();
+  if (!client) return [];
   let query = client
     .from('question_difficulty')
     .select('*')
@@ -75,6 +77,7 @@ export async function getRecentAttempts(
   limit: number = 20
 ): Promise<RecentAttemptRow[]> {
   const client = createServiceClient();
+  if (!client) return [];
   const { data, error } = await client
     .from('quiz_attempts')
     .select('id, quiz_slug, score, total_questions, session_id, created_at')
@@ -92,6 +95,7 @@ export async function getAttemptsByDay(
   days: number = 30
 ): Promise<AttemptsByDayRow[]> {
   const client = createServiceClient();
+  if (!client) return [];
   const since = new Date();
   since.setDate(since.getDate() - days);
 
@@ -122,6 +126,7 @@ export async function getAttemptsByDay(
 
 export async function getDashboardSummary() {
   const client = createServiceClient();
+  if (!client) return { totalAttempts: 0, uniqueSessions: 0, avgScorePct: 0, topicsCovered: 0 };
 
   const { count: totalAttempts } = await client
     .from('quiz_attempts')

@@ -1,0 +1,51 @@
+{
+  "slug": "ai-safety-governance",
+  "title": "AI Safety and Governance in Healthcare",
+  "description": "Understanding the emerging frameworks, regulations, and best practices for deploying AI responsibly in clinical settings.",
+  "accent_color": "#7c3aed",
+  "sources": ["who-ai-governance-2026", "aha-ai-safety-framework", "cms-ai-guidance"],
+  "source_count": 3,
+  "summary": "Healthcare AI governance is no longer a theoretical exercise. With over 900 FDA-cleared AI/ML medical devices on the market and CMS actively developing reimbursement pathways for AI-assisted care, organizations need concrete governance structures today. The challenge is balancing innovation speed with patient safety, regulatory compliance, and organizational risk management.\n\nThe World Health Organization released updated guidance in early 2026 calling for mandatory bias audits, continuous performance monitoring, and transparent reporting of AI system limitations. In the U.S., the ONC's Health IT Certification Program now includes specific AI transparency requirements, and several states have introduced legislation requiring disclosure when AI influences clinical decisions. These aren't future concerns; they're current compliance obligations.\n\nEffective AI governance requires a cross-functional approach. Clinical informaticists evaluate model performance, legal teams assess liability exposure, compliance officers map regulatory requirements, and IT security teams monitor for data integrity issues. Leading organizations are creating dedicated AI governance committees that report directly to the board, treating AI risk with the same rigor as financial and clinical risk. The organizations that treat governance as an enabler rather than a barrier will move fastest.",
+  "quiz": {
+    "title": "Quick Check: AI Safety and Governance",
+    "questions": [
+      {
+        "id": "ai-safety-gov-q1",
+        "question": "Approximately how many FDA-cleared AI/ML medical devices are currently on the market?",
+        "options": ["About 200", "About 500", "Over 900", "Over 2,000"],
+        "correct": 2,
+        "explanation": "There are over 900 FDA-cleared AI/ML medical devices currently on the market, spanning radiology, cardiology, pathology, and other specialties."
+      },
+      {
+        "id": "ai-safety-gov-q2",
+        "question": "What did the WHO's 2026 guidance call for regarding healthcare AI?",
+        "options": ["A complete moratorium on clinical AI", "Mandatory bias audits and continuous monitoring", "Voluntary self-regulation by vendors", "AI use only in research settings"],
+        "correct": 1,
+        "explanation": "The WHO called for mandatory bias audits, continuous performance monitoring, and transparent reporting of AI system limitations in their updated 2026 guidance."
+      },
+      {
+        "id": "ai-safety-gov-q3",
+        "question": "Which federal program now includes specific AI transparency requirements?",
+        "options": ["Medicare Advantage Star Ratings", "ONC Health IT Certification Program", "FDA 510(k) Clearance", "CMS Quality Payment Program"],
+        "correct": 1,
+        "explanation": "The ONC's Health IT Certification Program now includes specific AI transparency requirements as part of its updated standards."
+      },
+      {
+        "id": "ai-safety-gov-q4",
+        "question": "Where should an AI governance committee report in leading organizations?",
+        "options": ["To the CIO", "To the CMO", "Directly to the board", "To the compliance department"],
+        "correct": 2,
+        "explanation": "Leading organizations are creating dedicated AI governance committees that report directly to the board, treating AI risk with the same rigor as financial and clinical risk."
+      },
+      {
+        "id": "ai-safety-gov-q5",
+        "question": "Which of these roles is NOT typically part of a cross-functional AI governance team?",
+        "options": ["Clinical informaticists", "Marketing directors", "Legal teams", "IT security teams"],
+        "correct": 1,
+        "explanation": "The cross-functional approach includes clinical informaticists, legal teams, compliance officers, and IT security teams. Marketing directors were not listed as a core governance function."
+      }
+    ]
+  },
+  "created_at": "2026-04-08",
+  "updated_at": "2026-04-08"
+}

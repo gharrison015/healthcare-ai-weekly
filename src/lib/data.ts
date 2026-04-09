@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import type { IssueManifestEntry, BulletinManifestEntry, LearnManifestEntry, IssueData } from "./types";
+import type { IssueManifestEntry, BulletinManifestEntry, LearnManifestEntry, IssueData, Bulletin, LearningTopic } from "./types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
@@ -62,4 +62,46 @@ export function getIssueDates(): string[] {
   } catch {
     return [];
   }
+}
+
+export function getBulletins(): BulletinManifestEntry[] {
+  return getBulletinsManifest();
+}
+
+export function getBulletin(slug: string): Bulletin | null {
+  try {
+    const raw = fs.readFileSync(
+      path.join(CONTENT_DIR, "bulletins", `${slug}.json`),
+      "utf-8"
+    );
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+export function getBulletinSlugs(): string[] {
+  const manifest = getBulletinsManifest();
+  return manifest.map((b) => b.slug);
+}
+
+export function getLearningTopics(): LearnManifestEntry[] {
+  return getLearnManifest();
+}
+
+export function getLearningTopic(slug: string): LearningTopic | null {
+  try {
+    const raw = fs.readFileSync(
+      path.join(CONTENT_DIR, "learn", `${slug}.json`),
+      "utf-8"
+    );
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+export function getLearnSlugs(): string[] {
+  const manifest = getLearnManifest();
+  return manifest.map((t) => t.slug);
 }

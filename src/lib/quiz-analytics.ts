@@ -24,6 +24,10 @@ export async function submitQuizResult(
     }
   }
 
+  if (!supabase) {
+    console.warn('Supabase not configured, skipping quiz submission');
+    return;
+  }
   const { error } = await supabase.from('quiz_attempts').insert({
     quiz_slug: quizSlug,
     score,

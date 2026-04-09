@@ -9,15 +9,59 @@ export interface IssueManifestEntry {
 }
 
 export interface BulletinManifestEntry {
-  date: string;
-  title: string;
-  summary: string;
+  slug: string;
+  headline: string;
+  timestamp: string;
+  source_name: string;
+  velocity_score: number;
+  tags: string[];
 }
 
 export interface LearnManifestEntry {
-  date: string;
+  slug: string;
   title: string;
+  description: string;
+  accent_color: string;
+  question_count: number;
+  created_at: string;
+}
+
+export interface Bulletin {
+  timestamp: string;
+  slug: string;
+  headline: string;
+  body: string;
+  source_url: string;
+  source_name: string;
+  velocity_score: number;
+  verification: string;
+  tags: string[];
+}
+
+export interface QuizQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correct: number;
+  explanation: string;
+}
+
+export interface Quiz {
+  title: string;
+  questions: QuizQuestion[];
+}
+
+export interface LearningTopic {
+  slug: string;
+  title: string;
+  description: string;
+  accent_color: string;
+  sources: string[];
+  source_count: number;
   summary: string;
+  quiz: Quiz;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface SourceArticle {

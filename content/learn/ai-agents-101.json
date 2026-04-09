@@ -1,0 +1,51 @@
+{
+  "slug": "ai-agents-101",
+  "title": "AI Agents: What Healthcare Leaders Need to Know",
+  "description": "How autonomous AI systems are moving from pilot programs to production in health systems, and what that means for operations, staffing, and strategy.",
+  "accent_color": "#059669",
+  "sources": ["mckinsey-ai-agents-2026", "hbr-autonomous-systems"],
+  "source_count": 2,
+  "summary": "AI agents represent a fundamental shift from tools that assist humans to systems that act independently. Unlike traditional AI that answers questions or generates text, agents can execute multi-step workflows: scheduling patient appointments, processing prior authorizations, coordinating care transitions, and even managing supply chain orders without human intervention.\n\nThe healthcare implications are massive. McKinsey projects that AI agents will handle over $1 trillion in annual transactions by 2028, with healthcare representing the fastest-growing vertical. Early adopters like Cleveland Clinic and Kaiser Permanente are already deploying agents for revenue cycle management, clinical documentation, and population health outreach. The key differentiator is that agents don't just recommend actions; they take them.\n\nFor health system leaders, the strategic question isn't whether to adopt AI agents but how to govern them. Organizations need clear frameworks for agent authority levels, escalation protocols, audit trails, and liability allocation. The systems that build this governance infrastructure now will have a significant advantage as agent capabilities accelerate through 2026 and beyond.",
+  "quiz": {
+    "title": "Quick Check: AI Agents in Healthcare",
+    "questions": [
+      {
+        "id": "ai-agents-101-q1",
+        "question": "What did McKinsey estimate AI agents will handle in annual transactions by 2028?",
+        "options": ["$100 billion", "$500 billion", "$1 trillion", "$5 trillion"],
+        "correct": 2,
+        "explanation": "McKinsey projected that AI agents will handle over $1 trillion in annual transactions by 2028, with healthcare as the fastest-growing vertical."
+      },
+      {
+        "id": "ai-agents-101-q2",
+        "question": "What is the key difference between AI agents and traditional AI tools?",
+        "options": ["Agents are faster at processing", "Agents can execute actions independently", "Agents use larger language models", "Agents cost less to operate"],
+        "correct": 1,
+        "explanation": "The key differentiator is that agents don't just recommend actions; they take them. They execute multi-step workflows independently rather than simply providing suggestions."
+      },
+      {
+        "id": "ai-agents-101-q3",
+        "question": "Which health system was cited as an early adopter of AI agents for clinical documentation?",
+        "options": ["Mayo Clinic", "Cleveland Clinic", "Johns Hopkins", "Mount Sinai"],
+        "correct": 1,
+        "explanation": "Cleveland Clinic was cited as an early adopter deploying AI agents for revenue cycle management, clinical documentation, and population health outreach."
+      },
+      {
+        "id": "ai-agents-101-q4",
+        "question": "What is the most critical strategic question for health system leaders regarding AI agents?",
+        "options": ["Which vendor to choose", "How to govern them", "When to start pilots", "How to fund them"],
+        "correct": 1,
+        "explanation": "The strategic question isn't whether to adopt AI agents but how to govern them, including frameworks for authority levels, escalation protocols, audit trails, and liability allocation."
+      },
+      {
+        "id": "ai-agents-101-q5",
+        "question": "Which of these is NOT a healthcare use case mentioned for AI agents?",
+        "options": ["Processing prior authorizations", "Coordinating care transitions", "Performing robotic surgery", "Managing supply chain orders"],
+        "correct": 2,
+        "explanation": "The use cases mentioned include scheduling, prior auth processing, care transitions, and supply chain management. Performing robotic surgery was not listed as a current AI agent application."
+      }
+    ]
+  },
+  "created_at": "2026-04-08",
+  "updated_at": "2026-04-08"
+}
