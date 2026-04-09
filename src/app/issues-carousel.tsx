@@ -1,6 +1,7 @@
 "use client";
 
 import { HorizontalScroller } from "@/components/ui/horizontal-scroller";
+import { GlowCard } from "@/components/ui/spotlight-card";
 import type { IssueManifestEntry } from "@/lib/types";
 
 interface IssuesCarouselProps {
@@ -21,51 +22,46 @@ export function IssuesCarousel({ issues }: IssuesCarouselProps) {
           <a
             key={issue.date}
             href={`/issues/${issue.date}`}
-            className="glass-card-hover block flex-shrink-0 no-underline"
+            className="block flex-shrink-0 no-underline"
             style={{
               width: "340px",
               scrollSnapAlign: "start",
-              borderRadius: "16px",
-              padding: "28px 24px",
-              background: "rgba(255, 255, 255, 0.5)",
-              backdropFilter: "blur(16px) saturate(1.6)",
-              WebkitBackdropFilter: "blur(16px) saturate(1.6)",
-              border: "1px solid rgba(255, 255, 255, 0.55)",
-              boxShadow:
-                "0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-              transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
               color: "inherit",
             }}
           >
-            <div
-              className="font-bold uppercase tracking-wider mb-3"
-              style={{
-                fontSize: "13px",
-                letterSpacing: "1.5px",
-                color: "#0284C7",
-              }}
-            >
-              Week of {issue.week_range || issue.date}
-            </div>
-            <div
-              className="mb-4"
-              style={{
-                fontSize: "15px",
-                lineHeight: "1.55",
-                color: "#475569",
-              }}
-            >
-              {issue.editorial_summary || ""}
-            </div>
-            <div style={{ fontSize: "13px", color: "#94a3b8" }}>
-              {storyCount} stories curated
-            </div>
-            <div
-              className="mt-3"
-              style={{ fontSize: "14px", fontWeight: 600, color: "#0284C7" }}
-            >
-              Read deep dive &rarr;
-            </div>
+            <GlowCard glowColor="blue" customSize={true} className="w-full p-7">
+              <div>
+                <div
+                  className="font-bold uppercase tracking-wider mb-3"
+                  style={{
+                    fontSize: "13px",
+                    letterSpacing: "1.5px",
+                    color: "#0284C7",
+                  }}
+                >
+                  Week of {issue.week_range || issue.date}
+                </div>
+                <div
+                  className="mb-4"
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.55",
+                    color: "#475569",
+                  }}
+                >
+                  {issue.editorial_summary || ""}
+                </div>
+                <div style={{ fontSize: "13px", color: "#94a3b8" }}>
+                  {storyCount} stories curated
+                </div>
+                <div
+                  className="mt-3"
+                  style={{ fontSize: "14px", fontWeight: 600, color: "#0284C7" }}
+                >
+                  Read deep dive &rarr;
+                </div>
+              </div>
+            </GlowCard>
           </a>
         );
       })}
