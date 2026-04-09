@@ -5,3 +5,11 @@ out
 *.tsbuildinfo
 .env.local
 .env*.local
+
+# Pipeline
+pipeline/.env
+pipeline/venv/
+pipeline/data/learn/.sources_cache.json
+pipeline/__pycache__/
+pipeline/**/__pycache__/
+*.pyc

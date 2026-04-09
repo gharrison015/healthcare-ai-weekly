@@ -1,0 +1,43 @@
+{
+  "sources": {
+    "x": {
+      "enabled": true,
+      "accounts": ["EricTopol", "JohnHalamka", "AnthropicAI", "OpenAI", "GoogleHealth", "Microsoft", "EpicSystems"],
+      "keywords": ["healthcare AI", "clinical AI", "health system AI"],
+      "hashtags": ["healthcareAI", "clinicalAI", "healthtech"]
+    },
+    "bluesky": {
+      "enabled": true,
+      "keywords": ["healthcare AI", "clinical AI", "medical AI"]
+    },
+    "reddit": {
+      "enabled": true,
+      "subreddits": ["MachineLearning", "healthcare", "artificial", "HealthIT"],
+      "keywords": ["healthcare AI", "clinical AI", "medical AI"]
+    },
+    "hackernews": {
+      "enabled": true,
+      "keywords": ["healthcare AI", "clinical AI", "medical AI", "FDA AI"]
+    },
+    "newsdata": {
+      "enabled": true,
+      "keywords": ["healthcare artificial intelligence", "clinical AI", "medical AI"],
+      "categories": ["health", "technology"]
+    }
+  },
+  "verification": {
+    "min_independent_sources": 2,
+    "min_unique_authors": 3,
+    "min_platforms": 2,
+    "hours_back": 24,
+    "big_ticket_keywords": [
+      "acquisition", "merger", "billion", "million", "FDA", "clearance",
+      "approval", "partnership", "launch", "release", "breach",
+      "vulnerability", "leak"
+    ]
+  },
+  "limits": {
+    "max_bulletins_per_day": 3,
+    "cooldown_hours": 6
+  }
+}

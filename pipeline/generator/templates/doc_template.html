@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare AI Weekly Deep Dive — {{ week_range }}</title>
+<style>
+  @font-face { font-family: 'Aptos'; src: local('Aptos'), local('Aptos Display'), local('Calibri'); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; color: #111827; min-height: 100vh; }
+  html { background: #f0f2f5; }
+
+  /* Ambient mesh gradient */
+  .ambient-bg {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+    background: linear-gradient(135deg, #e8edf5 0%, #dfe6f0 30%, #eae4f0 60%, #e0eaf5 100%);
+  }
+  .ambient-bg::before, .ambient-bg::after {
+    content: ""; position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.4;
+    animation: ambient-drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::before { width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 70%); top: -10%; right: -5%; }
+  .ambient-bg::after { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%); bottom: -10%; left: -5%; animation-delay: -10s; }
+  @keyframes ambient-drift { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -20px) scale(1.1); } }
+
+  /* Glass surfaces */
+  .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
+
+  /* Layout */
+  .container { padding: 0 40px; }
+  @media (max-width: 640px) { .container { padding: 0 16px; } }
+
+  /* Header */
+  .header { padding: 48px 0 32px; }
+  .header h1 { font-size: 38px; font-weight: 800; color: #0F1D35; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .header .subtitle { font-size: 16px; color: #6b7280; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .header .summary { font-size: 20px; line-height: 1.6; color: #374151; }
+  .back-link { display: inline-block; font-size: 20px; color: #0284C7; text-decoration: none; font-weight: 700; margin-bottom: 20px; padding: 8px 16px; border-radius: 8px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.15); }
+  .back-link:hover { text-decoration: underline; }
+
+  /* TOC */
+  .toc { border-radius: 16px; padding: 20px 24px; margin-bottom: 24px; }
+  .toc-title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 10px; }
+  .toc a { display: inline-block; font-size: 16px; color: #0284C7; text-decoration: none; padding: 4px 16px 4px 0; font-weight: 600; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* Section boxes */
+  .section-box { border-radius: 20px; padding: 32px; margin-bottom: 20px; }
+  .section-header { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0F1D35; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #0284C7; }
+
+  /* Story cards */
+  .story-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
+  .story-card:last-child { margin-bottom: 0; }
+
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; }
+  .badge-impact { background: rgba(220, 38, 38, 0.1); color: #dc2626; border: 1px solid rgba(220, 38, 38, 0.2); }
+  .badge-emerging { background: rgba(2, 132, 199, 0.1); color: #0284C7; border: 1px solid rgba(2, 132, 199, 0.2); }
+
+  .story-headline { font-size: 24px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; line-height: 1.3; }
+  .story-headline a { color: #0F1D35; text-decoration: none; }
+  .story-headline a:hover { color: #0284C7; }
+  .so-what { font-size: 18px; font-weight: 600; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .deep-dive-text { font-size: 18px; line-height: 1.7; color: #374151; }
+  .risk-angle {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 14px 18px; border-radius: 10px;
+    font-size: 17px; margin-top: 14px; color: #92400e;
+  }
+  .risk-angle strong { color: #78350f; }
+  .source-link { font-size: 14px; color: #94a3b8; margin-top: 14px; }
+  .source-link a { color: #0284C7; text-decoration: none; font-weight: 600; }
+  .source-link a:hover { text-decoration: underline; }
+
+  /* DYK */
+  .dyk-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
+  .dyk-card:last-child { margin-bottom: 0; }
+  .dyk-card h3 { font-size: 22px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; }
+  .dyk-card .explainer { font-size: 18px; line-height: 1.7; color: #374151; }
+
+  /* Trend */
+  .trend-box { border-radius: 20px; padding: 28px 32px; margin-bottom: 20px; border: 2px solid rgba(2, 132, 199, 0.2); }
+  .trend-label { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0284C7; margin-bottom: 8px; }
+  .trend-text { font-size: 18px; line-height: 1.6; color: #374151; }
+
+  /* Sources */
+  .sources-box { border-radius: 16px; padding: 24px 28px; margin-bottom: 20px; }
+  .sources-box h2 { font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px; color: #94a3b8; margin-bottom: 14px; font-weight: 800; }
+  .sources-box ul { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
+  .sources-box li { font-size: 14px; color: #6b7280; padding: 4px 0; break-inside: avoid; }
+  .sources-box li a { color: #0284C7; text-decoration: none; }
+  .sources-box li a:hover { text-decoration: underline; }
+  .sources-box li .src-name { color: #94a3b8; font-size: 12px; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 24px 0 48px; font-size: 15px; color: #94a3b8; }
+
+  /* Floating CTA */
+  .fab-container { position: fixed; bottom: 32px; right: 32px; z-index: 100; display: flex; align-items: center; gap: 0; }
+  .fab-label {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    padding: 10px 20px; border-radius: 24px 0 0 24px;
+    font-size: 15px; font-weight: 700; color: #0F1D35; white-space: nowrap;
+    opacity: 0; transform: translateX(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); pointer-events: none;
+  }
+  .fab-container:hover .fab-label { opacity: 1; transform: translateX(0); pointer-events: auto; }
+  .fab-button {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, #0284C7, #0F1D35);
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fab-pulse 3s ease-in-out infinite; position: relative; z-index: 2;
+  }
+  .fab-button:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(2, 132, 199, 0.4), 0 0 0 8px rgba(2, 132, 199, 0.08); animation: none; }
+  .fab-button svg { width: 24px; height: 24px; fill: none; stroke: #ffffff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  @keyframes fab-pulse { 0%, 100% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 0 rgba(2, 132, 199, 0.15); } 50% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 12px rgba(2, 132, 199, 0); } }
+  @media (max-width: 640px) { .fab-container { bottom: 20px; right: 20px; } .fab-button { width: 48px; height: 48px; } .fab-label { display: none; } }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 30px; }
+    .section-box { padding: 20px 16px; border-radius: 14px; }
+    .story-card { padding: 18px 16px; }
+    .story-headline { font-size: 20px; }
+    .deep-dive-text { font-size: 16px; }
+    .sources-box ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="ambient-bg"></div>
+
+<div class="container">
+  <div class="header">
+    <a href="/" class="back-link">&larr; All Issues</a>
+    <h1>Healthcare AI Weekly</h1>
+    <div class="subtitle">Deep Dive — {{ week_range }}</div>
+    <div class="summary">{{ editorial_summary }}</div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc glass">
+    <div class="toc-title">In This Issue</div>
+    {% if top_stories %}<a href="#top-stories">What Matters This Week</a>{% endif %}
+    {% if vbc_watch %}<a href="#vbc-watch">Value-Based Care Watch</a>{% endif %}
+    {% if deal_flow %}<a href="#deal-flow">Acquisitions & Partnerships</a>{% endif %}
+    {% if did_you_know %}<a href="#did-you-know">Did You Know?</a>{% endif %}
+    {% if trend_signal %}<a href="#trend-watch">Trend Watch</a>{% endif %}
+    <a href="#all-sources">All Sources</a>
+  </div>
+
+  <!-- What Matters This Week -->
+  {% if top_stories %}
+  <div class="section-box glass" id="top-stories">
+    <div class="section-header">What Matters This Week</div>
+    {% for story in top_stories %}
+    <div class="story-card glass-card">
+      {% if story.priority == "act_now" %}<span class="badge badge-impact">This Week's Impact</span>{% elif story.priority == "watch_this" %}<span class="badge badge-emerging">Emerging</span>{% endif %}
+      <div class="story-headline"><a href="{{ story.source_article.url }}">{{ story.headline }}</a></div>
+      {% if story.so_what %}<div class="so-what">{{ story.so_what }}</div>{% endif %}
+      <div class="deep-dive-text">{{ story.deep_dive_notes }}</div>
+      {% if story.risk_angle %}
+      <div class="risk-angle"><strong>Risk angle:</strong> {{ story.risk_angle }}</div>
+      {% endif %}
+      <div class="source-link">Source: <a href="{{ story.source_article.url }}">{{ story.source_article.source }}</a></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Value-Based Care Watch -->
+  {% if vbc_watch %}
+  <div class="section-box glass" id="vbc-watch">
+    <div class="section-header">Value-Based Care Watch</div>
+    {% for story in vbc_watch %}
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="{{ story.source_article.url }}">{{ story.headline }}</a></div>
+      {% if story.so_what %}<div class="so-what">{{ story.so_what }}</div>{% endif %}
+      <div class="deep-dive-text">{{ story.deep_dive_notes }}</div>
+      {% if story.risk_angle %}
+      <div class="risk-angle"><strong>Risk angle:</strong> {{ story.risk_angle }}</div>
+      {% endif %}
+      <div class="source-link">Source: <a href="{{ story.source_article.url }}">{{ story.source_article.source }}</a></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Acquisitions & Partnerships -->
+  {% if deal_flow %}
+  <div class="section-box glass" id="deal-flow">
+    <div class="section-header">Acquisitions & Partnerships</div>
+    {% for story in deal_flow %}
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="{{ story.source_article.url }}">{{ story.headline }}</a></div>
+      {% if story.so_what %}<div class="so-what">{{ story.so_what }}</div>{% endif %}
+      <div class="deep-dive-text">{{ story.deep_dive_notes }}</div>
+      <div class="source-link">Source: <a href="{{ story.source_article.url }}">{{ story.source_article.source }}</a></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Did You Know? -->
+  {% if did_you_know %}
+  <div class="section-box glass" id="did-you-know">
+    <div class="section-header">Did You Know?</div>
+    {% for item in did_you_know %}
+    <div class="dyk-card glass-card">
+      <h3>{{ item.headline }}</h3>
+      <div class="explainer">{{ item.explainer }}</div>
+      {% if item.source_article is defined %}<div class="source-link">Source: <a href="{{ item.source_article.url }}">{{ item.source_article.source }}</a></div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Trend Watch -->
+  {% if trend_signal %}
+  <div class="trend-box glass" id="trend-watch">
+    <div class="trend-label">Trend Watch</div>
+    <div class="trend-text">{{ trend_signal }}</div>
+  </div>
+  {% endif %}
+
+  <!-- All Sources -->
+  <div class="sources-box glass" id="all-sources">
+    <h2>All Sources Considered This Week</h2>
+    <ul>
+    {% for article in all_articles %}
+      <li><a href="{{ article.url }}">{{ article.title }}</a> <span class="src-name">{{ article.source }}</span></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="footer">Healthcare AI Weekly by Greg Harrison, Guidehouse</div>
+</div>
+
+<!-- Floating "Let's Talk AI" Button -->
+<div class="fab-container">
+  <div class="fab-label" onclick="document.getElementById('fab-btn').click()">Let's Talk AI</div>
+  <button class="fab-button" id="fab-btn" aria-label="Let's Talk AI" onclick="window.location.href='mailto:gharrison@guidehouse.com?subject='+encodeURIComponent('Healthcare AI Weekly - Let\'s Talk AI')+'&body='+encodeURIComponent('Hi Greg,\n\nI came across Healthcare AI Weekly and I\'d love to connect on AI in healthcare.\n\nSpecifically, I\'m interested in:\n- \n\nBest,\n')">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </button>
+</div>
+</body>
+</html>

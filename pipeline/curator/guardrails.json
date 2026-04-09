@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "top_stories": {
+      "description": "Major stories with strategic analysis, split into act_now and watch_this. Always produce exactly 4.",
+      "min_count": 4,
+      "max_count": 4,
+      "required_fields": ["headline", "priority", "so_what", "email_summary", "deep_dive_notes"],
+      "priority_values": ["act_now", "watch_this"]
+    },
+    "vbc_watch": {
+      "description": "Stories touching value-based care, payment models, risk adjustment, quality measures. Always produce exactly 4.",
+      "min_count": 4,
+      "max_count": 4,
+      "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"]
+    },
+    "deal_flow": {
+      "description": "Acquisitions, funding rounds, major partnerships, consulting firm moves, big tech healthcare plays. Always produce exactly 4.",
+      "min_count": 4,
+      "max_count": 4,
+      "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"]
+    },
+    "did_you_know": {
+      "description": "General AI capability and release news, not healthcare-specific. Educational tone. Always exactly 2.",
+      "min_count": 2,
+      "max_count": 2,
+      "required_fields": ["headline", "one_liner", "explainer"]
+    }
+  },
+  "global_rules": [
+    "At least one story must include a risk_angle or contrarian take",
+    "At least one top_story must have priority act_now",
+    "Every story needs a so_what that answers: why should a health system exec care?",
+    "Connect related stories via the connections field when applicable",
+    "Include a linkedin_seed with the single most compelling story for a LinkedIn post"
+  ]
+}

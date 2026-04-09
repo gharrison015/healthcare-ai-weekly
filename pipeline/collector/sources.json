@@ -1,0 +1,59 @@
+{
+  "feeds": [
+    {"name": "Fierce Healthcare", "url": "https://www.fiercehealthcare.com/rss/xml", "tier": "core", "category": "core"},
+    {"name": "STAT News", "url": "https://www.statnews.com/feed/", "tier": "core", "category": "core"},
+    {"name": "Healthcare Dive", "url": "https://www.healthcaredive.com/feeds/news/", "tier": "core", "category": "core"},
+    {"name": "Health Affairs Blog", "url": "https://www.healthaffairs.org/do/10.1377/feeds/blog/main/feed/", "tier": "core", "category": "core"},
+    {"name": "CMS Newsroom", "url": "https://www.cms.gov/newsroom/rss", "tier": "policy", "category": "policy"},
+    {"name": "HHS.gov", "url": "https://www.hhs.gov/rss/index.html", "tier": "policy", "category": "policy"},
+    {"name": "Rock Health", "url": "https://rockhealth.com/feed/", "tier": "funding", "category": "funding"},
+    {"name": "Google Health Blog", "url": "https://blog.google/technology/health/rss/", "tier": "tech", "category": "tech"},
+    {"name": "Google Cloud Health Blog", "url": "https://cloud.google.com/blog/topics/healthcare-life-sciences/rss", "tier": "tech", "category": "tech"},
+    {"name": "Microsoft Health Blog", "url": "https://blogs.microsoft.com/blog/tag/healthcare/feed/", "tier": "tech", "category": "tech"},
+    {"name": "NVIDIA Healthcare Blog", "url": "https://blogs.nvidia.com/blog/category/healthcare/feed/", "tier": "tech", "category": "tech"},
+    {"name": "AWS Health Blog", "url": "https://aws.amazon.com/blogs/healthcare/feed/", "tier": "tech", "category": "tech"},
+    {"name": "OpenAI Blog", "url": "https://openai.com/blog/rss.xml", "tier": "general_ai", "category": "general_ai"},
+    {"name": "Anthropic Blog", "url": "https://www.anthropic.com/blog/rss.xml", "tier": "general_ai", "category": "general_ai"},
+    {"name": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "tier": "general_ai", "category": "general_ai"},
+    {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "tier": "general_ai", "category": "general_ai"}
+  ],
+  "google_news_queries": [
+    "\"artificial intelligence\" AND \"healthcare\"",
+    "\"AI\" AND \"value based care\"",
+    "\"OpenAI\" AND \"healthcare\"",
+    "\"Anthropic\" AND \"healthcare\"",
+    "\"Google\" AND \"health AI\"",
+    "\"Epic\" AND \"artificial intelligence\"",
+    "site:beckershospitalreview.com AI OR \"artificial intelligence\" OR \"value based care\"",
+    "site:beckershospitalreview.com \"health system\" OR \"hospital\" OR \"agentic\"",
+
+    "\"Guidehouse\" AND (\"healthcare\" OR \"AI\" OR \"partnership\")",
+    "\"Deloitte\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+    "\"McKinsey\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+    "\"BCG\" AND \"healthcare\" AND (\"AI\" OR \"partnership\")",
+    "\"Accenture\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+    "\"Chartis\" AND \"healthcare\" AND (\"AI\" OR \"partnership\")",
+    "\"Optum\" AND \"AI\" AND (\"partnership\" OR \"acquisition\" OR \"launch\")",
+    "\"EY\" OR \"Ernst Young\" AND \"healthcare\" AND \"AI\"",
+
+    "\"Epic\" AND (\"partnership\" OR \"acquisition\" OR \"integration\" OR \"AI\")",
+    "\"Oracle Health\" OR \"Cerner\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+    "\"Anthropic\" AND (\"acquisition\" OR \"partnership\" OR \"healthcare\")",
+    "\"OpenAI\" AND (\"acquisition\" OR \"partnership\" OR \"healthcare\")",
+    "\"Google\" AND \"healthcare\" AND (\"acquisition\" OR \"partnership\")",
+    "\"Microsoft\" AND \"healthcare\" AND (\"acquisition\" OR \"partnership\" OR \"Nuance\")",
+    "\"Amazon\" OR \"AWS\" AND \"healthcare\" AND (\"acquisition\" OR \"partnership\")",
+
+    "healthcare AI merger OR acquisition 2026",
+    "healthcare consulting AI partnership 2026"
+  ],
+  "keywords": [
+    "AI", "artificial intelligence", "machine learning", "LLM", "large language model",
+    "deep learning", "value-based care", "VBC", "clinical AI", "health AI",
+    "generative AI", "ambient AI", "AI agent", "copilot", "clinical decision support",
+    "risk adjustment", "quality measures", "population health", "care management",
+    "prior authorization", "revenue cycle", "EHR", "Epic", "Cerner", "Oracle Health",
+    "partnership", "acquisition", "merger", "consulting", "Guidehouse", "Deloitte",
+    "McKinsey", "BCG", "Accenture", "Chartis", "Optum"
+  ]
+}
