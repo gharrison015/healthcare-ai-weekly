@@ -38,7 +38,7 @@ export default async function BulletinPage({ params }: PageProps) {
       <AmbientBackground />
       <GlassCardStyles />
 
-      <div className="px-10 max-sm:px-4 max-w-3xl mx-auto w-full">
+      <div className="px-10 max-sm:px-4">
         <div style={{ padding: "48px 0 32px" }}>
           <Link
             href="/bulletins"
