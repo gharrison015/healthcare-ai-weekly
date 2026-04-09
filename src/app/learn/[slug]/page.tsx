@@ -104,22 +104,16 @@ export default async function LearnTopicPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Summary */}
-        <div
-          className="rounded-2xl mb-8"
-          style={{
-            padding: "28px 32px",
-            background: "rgba(255, 255, 255, 0.5)",
-            backdropFilter: "blur(16px) saturate(1.6)",
-            border: "1px solid rgba(255, 255, 255, 0.55)",
-            boxShadow:
-              "0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-            borderLeft: `4px solid ${accent}`,
-          }}
-        >
+        {/* Overview */}
+        <div className="mb-8">
           <div
-            className="font-extrabold uppercase tracking-wider mb-4"
-            style={{ fontSize: "13px", color: accent, letterSpacing: "1.5px" }}
+            className="font-extrabold uppercase tracking-wider pb-3 mb-5"
+            style={{
+              fontSize: "24px",
+              color: "#0F1D35",
+              letterSpacing: "1.5px",
+              borderBottom: "2px solid #0284C7",
+            }}
           >
             Overview
           </div>
@@ -128,8 +122,8 @@ export default async function LearnTopicPage({ params }: PageProps) {
               <p
                 key={idx}
                 style={{
-                  fontSize: "17px",
-                  lineHeight: "1.75",
+                  fontSize: "18px",
+                  lineHeight: "1.7",
                   color: "#374151",
                   margin: 0,
                 }}
@@ -141,17 +135,18 @@ export default async function LearnTopicPage({ params }: PageProps) {
         </div>
 
         {/* Quiz */}
-        <div
-          className="rounded-2xl mb-8"
-          style={{
-            padding: "28px 32px",
-            background: "rgba(255, 255, 255, 0.45)",
-            backdropFilter: "blur(20px) saturate(1.8)",
-            border: "1px solid rgba(255, 255, 255, 0.5)",
-            boxShadow:
-              "0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-          }}
-        >
+        <div className="mb-8">
+          <div
+            className="font-extrabold uppercase tracking-wider pb-3 mb-5"
+            style={{
+              fontSize: "24px",
+              color: "#0F1D35",
+              letterSpacing: "1.5px",
+              borderBottom: "2px solid #0284C7",
+            }}
+          >
+            Quick Check
+          </div>
           <Quiz
             questions={topic.quiz.questions}
             title={topic.quiz.title}

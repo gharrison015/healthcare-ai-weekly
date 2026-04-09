@@ -124,22 +124,11 @@ export default async function BulletinPage({ params }: PageProps) {
           </div>
         </div>
 
-        <div
-          className="rounded-2xl mb-6"
-          style={{
-            padding: "28px 32px",
-            background: "rgba(255, 255, 255, 0.5)",
-            backdropFilter: "blur(16px) saturate(1.6)",
-            border: "1px solid rgba(255, 255, 255, 0.55)",
-            boxShadow:
-              "0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-            borderLeft: "4px solid #0284C7",
-          }}
-        >
+        <div className="mb-6">
           <div
             style={{
               fontSize: "18px",
-              lineHeight: "1.75",
+              lineHeight: "1.7",
               color: "#374151",
             }}
           >
