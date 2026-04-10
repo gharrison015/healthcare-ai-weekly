@@ -23,7 +23,8 @@
     {"name": "Modern Healthcare", "url": "https://www.modernhealthcare.com/rss", "tier": "core", "category": "core"},
     {"name": "Becker's Hospital Review", "url": "https://www.beckershospitalreview.com/feed/", "tier": "core", "category": "core"},
     {"name": "McKinsey Healthcare", "url": "https://www.mckinsey.com/industries/healthcare/our-insights/rss", "tier": "consulting", "category": "consulting"},
-    {"name": "Deloitte Health Insights", "url": "https://www.deloitte.com/us/en/insights/industry/health-care/rss.xml", "tier": "consulting", "category": "consulting"}
+    {"name": "Deloitte Health Insights", "url": "https://www.deloitte.com/us/en/insights/industry/health-care/rss.xml", "tier": "consulting", "category": "consulting"},
+    {"name": "Forbes Healthcare", "url": "https://www.forbes.com/healthcare/feed/", "tier": "core", "category": "core"}
   ],
   "google_news_queries": [
     "\"artificial intelligence\" AND \"healthcare\"",
@@ -33,7 +34,9 @@
     "\"Google\" AND \"health AI\"",
     "\"Epic\" AND \"artificial intelligence\"",
     "site:beckershospitalreview.com AI OR \"artificial intelligence\" OR \"value based care\"",
-    "site:beckershospitalreview.com \"health system\" OR \"hospital\" OR \"agentic\"",
+    "site:beckershospitalreview.com \"artificial intelligence\" OR \"AI\" OR \"agentic\"",
+    "site:forbes.com \"AI\" AND (\"healthcare\" OR \"hospital\" OR \"health system\" OR \"clinic\")",
+    "site:forbes.com \"Cleveland Clinic\" OR \"Mayo Clinic\" OR \"Kaiser\" AND \"AI\"",
 
     "\"Guidehouse\" AND (\"healthcare\" OR \"AI\" OR \"partnership\")",
     "\"Deloitte\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
