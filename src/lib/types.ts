@@ -42,6 +42,14 @@ export function getLevelLabel(level: 100 | 200 | 300): string {
   }
 }
 
+export function getLevelColor(level: 100 | 200 | 300): { bg: string; border: string; text: string } {
+  switch (level) {
+    case 100: return { bg: 'rgba(22, 163, 74, 0.10)', border: 'rgba(22, 163, 74, 0.30)', text: '#16a34a' };
+    case 200: return { bg: 'rgba(2, 132, 199, 0.10)', border: 'rgba(2, 132, 199, 0.30)', text: '#0284C7' };
+    case 300: return { bg: 'rgba(124, 58, 237, 0.10)', border: 'rgba(124, 58, 237, 0.30)', text: '#7c3aed' };
+  }
+}
+
 export interface Bulletin {
   timestamp: string;
   slug: string;
