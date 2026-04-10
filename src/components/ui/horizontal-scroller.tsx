@@ -73,7 +73,7 @@ export function HorizontalScroller({ children, className }: HorizontalScrollerPr
       {/* Scroll container */}
       <div
         ref={scrollRef}
-        className="horizontal-scroller flex gap-4 overflow-x-auto pt-2 pb-6"
+        className="horizontal-scroller flex gap-4 overflow-x-auto pt-2 pb-6 px-2"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
