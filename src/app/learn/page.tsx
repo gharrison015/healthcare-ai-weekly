@@ -34,6 +34,17 @@ export default function LearnPage() {
             Educational resources on AI in healthcare. Guides, explainers, and
             quizzes for leaders who want to stay sharp.
           </div>
+          <div
+            className="mt-3 inline-block font-semibold px-3 py-1.5 rounded-full"
+            style={{
+              fontSize: "14px",
+              color: "#0284C7",
+              background: "rgba(2, 132, 199, 0.08)",
+              border: "1px solid rgba(2, 132, 199, 0.2)",
+            }}
+          >
+            New quizzes twice a week &middot; Fresh questions every time
+          </div>
         </div>
 
         {topics.length > 0 ? (

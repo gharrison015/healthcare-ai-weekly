@@ -99,7 +99,7 @@ export default async function HomePage({
         {/* AI Learning Section */}
         {learn.length > 0 && (
           <div className="mt-12">
-            <div className="flex items-baseline justify-between pt-8 mb-5">
+            <div className="flex items-baseline justify-between pt-8 mb-1">
               <div
                 className="font-extrabold uppercase tracking-wider"
                 style={{ fontSize: "28px", color: "#0284C7", letterSpacing: "-0.3px" }}
@@ -113,6 +113,12 @@ export default async function HomePage({
               >
                 View all topics &rarr;
               </Link>
+            </div>
+            <div
+              className="mb-5"
+              style={{ fontSize: "15px", color: "#6b7280" }}
+            >
+              New quizzes twice a week. Fresh questions every time, no repeats.
             </div>
             <LearnCards topics={learn} />
           </div>
