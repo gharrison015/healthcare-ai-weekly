@@ -59,7 +59,7 @@ The product exists to solve one problem: **the signal-to-noise ratio in healthca
 **Design System:**
 - Liquid glass aesthetic (ambient gradient background, glass cards, backdrop blur)
 - Color-coded level badges: 100 = Fundamentals (green), 200 = Applied (blue), 300 = Strategic (purple)
-- Cards use GlowCard component with cursor-following radial highlight
+- Cards use GlowCard component with cursor-following radial color spotlight and a glossy white overlay highlight on hover (no pseudo-element border mask, to avoid rectangular hard-line artifacts)
 - Horizontal scrollers for Issues, Bulletins, Consulting Intelligence, and Learning sections
 - Mobile responsive
 
@@ -220,7 +220,7 @@ The product exists to solve one problem: **the signal-to-noise ratio in healthca
 - [x] AI-only curation filter across all sections
 - [x] Consulting Intelligence as a standalone aggregated data source (22 backfilled stories)
 - [x] Email deep-link integration (`?issue=` param, inline caption on desktop, mobile redirect)
-- [x] Glow card cursor highlight (pseudo-element hard-line artifact fixed)
+- [x] Glow card cursor highlight with cursor-following color spotlight + glossy white outer highlight (pseudo-element hard-line artifact fixed)
 - [x] Level-coded learning badges (100 green / 200 blue / 300 purple)
 - [x] Question history tracker to prevent quiz repetition
 - [x] Single-topic refresh (`--only-topic` flag) for twice-weekly learning rotation
