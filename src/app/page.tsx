@@ -4,7 +4,7 @@ import { GlassCardStyles } from "@/components/ui/glass-card";
 import { SourceTicker } from "@/components/ui/source-ticker";
 import { PulseBeamCTA } from "@/components/ui/pulse-beam-cta";
 import { BreakingNewsTicker } from "@/components/ui/breaking-news-ticker";
-import { getIssuesManifest, getBulletins, getLearningTopics, getIssueData } from "@/lib/data";
+import { getIssuesManifest, getBulletins, getLearningTopics, getConsultingIntelligence } from "@/lib/data";
 import { IssuesCarousel } from "./issues-carousel";
 import { BulletinCards } from "./bulletin-cards";
 import { LearnCards } from "./learn-cards";
@@ -22,11 +22,8 @@ export default async function HomePage({
   const issues = getIssuesManifest();
   const bulletins = getBulletins();
   const learn = getLearningTopics();
-
-  // Load consulting intelligence from the latest issue
+  const consultingStories = getConsultingIntelligence();
   const latestIssueDate = issues.length > 0 ? issues[0].date : null;
-  const latestIssueData = latestIssueDate ? getIssueData(latestIssueDate) : null;
-  const consultingStories = latestIssueData?.sections?.consulting_intelligence ?? [];
 
   return (
     <>
@@ -125,7 +122,7 @@ export default async function HomePage({
         )}
 
         {/* Consulting Intelligence Section */}
-        {consultingStories.length > 0 && latestIssueDate && (
+        {consultingStories.length > 0 && (
           <div className="mt-12">
             <div className="flex items-baseline justify-between pt-8 mb-1">
               <div
@@ -134,21 +131,20 @@ export default async function HomePage({
               >
                 Consulting Intelligence
               </div>
-              <Link
-                href={`/news/${latestIssueDate}`}
-                className="no-underline hover:underline font-semibold"
-                style={{ fontSize: "14px", color: "#0284C7" }}
+              <div
+                className="font-semibold"
+                style={{ fontSize: "14px", color: "#94a3b8" }}
               >
-                View full issue &rarr;
-              </Link>
+                {consultingStories.length} tracked moves
+              </div>
             </div>
             <div
               className="mb-5"
               style={{ fontSize: "15px", color: "#6b7280" }}
             >
-              How consulting firms are moving in healthcare AI
+              How consulting firms are moving in healthcare AI. Tracking Guidehouse, Deloitte, McKinsey, BCG, Accenture, Chartis, Optum, EY, Huron, BRG, Bain, Oliver Wyman, KPMG, and PwC.
             </div>
-            <ConsultingCards stories={consultingStories} issueDate={latestIssueDate} />
+            <ConsultingCards entries={consultingStories} />
           </div>
         )}
 

@@ -105,3 +105,34 @@ export function getLearnSlugs(): string[] {
   const manifest = getLearnManifest();
   return manifest.map((t) => t.slug);
 }
+
+export interface ConsultingIntelEntry {
+  slug: string;
+  firm: string;
+  headline: string;
+  summary: string;
+  so_what: string;
+  relevance: "healthcare_direct" | "healthcare_adjacent" | "ai_strategy";
+  source_url: string;
+  published_date: string;
+  original_title?: string;
+}
+
+export function getConsultingIntelligence(): ConsultingIntelEntry[] {
+  try {
+    const dir = path.join(CONTENT_DIR, "consulting-intelligence");
+    if (!fs.existsSync(dir)) return [];
+    const files = fs
+      .readdirSync(dir)
+      .filter((f) => f.endsWith(".json") && f !== "manifest.json");
+    const entries: ConsultingIntelEntry[] = files.map((f) => {
+      const raw = fs.readFileSync(path.join(dir, f), "utf-8");
+      return JSON.parse(raw);
+    });
+    return entries.sort((a, b) =>
+      (b.published_date || "").localeCompare(a.published_date || "")
+    );
+  } catch {
+    return [];
+  }
+}
