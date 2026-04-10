@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import { getTopicLevel, getLevelLabel } from "@/lib/types";
+import { getTopicLevel, getLevelLabel, getLevelColor } from "@/lib/types";
 
 interface LearningTopic {
   slug: string;
@@ -18,6 +18,7 @@ export function LearnArchiveCards({ topics }: { topics: LearningTopic[] }) {
       {topics.map((topic) => {
         const level = getTopicLevel(topic.slug);
         const levelLabel = getLevelLabel(level);
+        const levelColor = getLevelColor(level);
 
         return (
           <Link
@@ -28,7 +29,23 @@ export function LearnArchiveCards({ topics }: { topics: LearningTopic[] }) {
           >
             <GlowCard glowColor="blue" customSize={true} className="w-full h-full p-7">
               <div className="flex flex-col h-full">
-                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                {/* Level badge - own row, always first */}
+                <div className="mb-2">
+                  <span
+                    className="font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full"
+                    style={{
+                      fontSize: "11px",
+                      background: levelColor.bg,
+                      color: levelColor.text,
+                      border: `1px solid ${levelColor.border}`,
+                    }}
+                  >
+                    {level}-level &middot; {levelLabel}
+                  </span>
+                </div>
+
+                {/* Metadata row */}
+                <div className="flex items-center gap-2 mb-3">
                   <span
                     className="text-xs font-bold uppercase tracking-wider"
                     style={{ color: "#0284C7" }}
@@ -45,29 +62,25 @@ export function LearnArchiveCards({ topics }: { topics: LearningTopic[] }) {
                   >
                     {topic.question_count} questions
                   </span>
-                  <span
-                    className="text-xs font-bold px-2 py-0.5 rounded-full"
-                    style={{
-                      background: "rgba(2, 132, 199, 0.12)",
-                      color: "#0284C7",
-                      border: "1px solid rgba(2, 132, 199, 0.25)",
-                    }}
-                  >
-                    {level}-level &middot; {levelLabel}
-                  </span>
                 </div>
+
+                {/* Title */}
                 <div
                   className="font-bold mb-2"
                   style={{ color: "#0F1D35", fontSize: "20px", lineHeight: "1.3" }}
                 >
                   {topic.title}
                 </div>
+
+                {/* Description */}
                 <div
                   className="mb-4 flex-1"
                   style={{ color: "#475569", fontSize: "15px", lineHeight: "1.55" }}
                 >
                   {topic.description}
                 </div>
+
+                {/* CTA */}
                 <div>
                   <div
                     className="inline-block font-bold rounded-lg"
