@@ -29,10 +29,21 @@ from learning.content_extractor import run_notebooklm
 
 
 def strip_em_dashes(text):
-    """Replace em dashes and en dashes with ' - '."""
+    """Clean quiz text: strip em/en dashes, NotebookLM citation markers, and markdown bold.
+
+    Named strip_em_dashes for historical callers, but does comprehensive cleanup.
+    """
     if not text:
         return text
-    return text.replace("\u2014", " - ").replace("\u2013", " - ")
+    # Em/en dashes
+    text = text.replace("\u2014", " - ").replace("\u2013", " - ")
+    # NotebookLM citation markers: [1], [2, 3], [4-6], etc.
+    text = re.sub(r"\s*\[[\d\s,\-]+\]", "", text)
+    # Markdown bold
+    text = text.replace("**", "")
+    # Collapse double spaces left behind
+    text = re.sub(r"  +", " ", text).strip()
+    return text
 
 
 def validate_question(q):
