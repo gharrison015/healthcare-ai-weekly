@@ -33,11 +33,6 @@ export default async function HomePage({
       <AmbientBackground />
       <GlassCardStyles />
 
-      {/* Deep-link banner from email */}
-      {highlightIssue && (
-        <IssueBanner highlightIssue={highlightIssue} issues={issues} />
-      )}
-
       {/* Breaking News Ticker */}
       <BreakingNewsTicker bulletins={bulletins} />
 
@@ -70,7 +65,7 @@ export default async function HomePage({
         <SourceTicker />
 
         {/* Issues Section - Horizontal Carousel */}
-        <div className="flex items-baseline justify-between pt-8 mb-5">
+        <div className="flex items-baseline justify-between pt-8 mb-2">
           <div
             className="font-extrabold"
             style={{ fontSize: "28px", color: "#0F1D35", letterSpacing: "-0.3px" }}
@@ -86,6 +81,9 @@ export default async function HomePage({
               : ""}
           </div>
         </div>
+        {highlightIssue && (
+          <IssueBanner highlightIssue={highlightIssue} issues={issues} />
+        )}
 
         {issues.length > 0 ? (
           <IssuesCarousel issues={issues} highlightIssue={highlightIssue || undefined} />
