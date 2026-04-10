@@ -43,6 +43,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
     const setGlowVisible = (visible: boolean) => {
       card.style.setProperty('--bg-spot-opacity', visible ? '0.35' : '0');
+      card.style.setProperty('--gloss-opacity', visible ? '0.7' : '0');
     };
 
     const syncPointer = (e: PointerEvent) => {
@@ -117,8 +118,27 @@ const GlowCard: React.FC<GlowCardProps> = ({
     return baseStyles;
   };
 
+  const glossStyles = `
+    [data-glow]::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      pointer-events: none;
+      background-image: radial-gradient(
+        180px 180px at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+        rgba(255, 255, 255, var(--gloss-opacity, 0)),
+        transparent 60%
+      );
+      background-attachment: fixed;
+      mix-blend-mode: overlay;
+      transition: background-image 0.2s;
+    }
+  `;
+
   return (
     <>
+      <style dangerouslySetInnerHTML={{ __html: glossStyles }} />
       <div
         ref={cardRef}
         data-glow
