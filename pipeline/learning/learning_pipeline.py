@@ -124,8 +124,8 @@ def run_summaries(config, clusters):
     return clusters
 
 
-def run_quizzes(config, clusters):
-    """Stage 4: Generate quiz questions for each topic."""
+def run_quizzes(config, clusters, only_topic=None):
+    """Stage 4: Generate quiz questions for each topic (or just one)."""
     print(f"\n{'='*60}")
     print("STAGE 4: GENERATE QUIZZES")
     print(f"{'='*60}")
@@ -134,14 +134,21 @@ def run_quizzes(config, clusters):
     quiz_settings = get_quiz_settings(config)
 
     for slug, cluster in clusters.items():
+        if only_topic and slug != only_topic:
+            print(f"  Skipping '{slug}' (only refreshing '{only_topic}')")
+            continue
         quiz = generate_quiz_for_cluster(cluster, notebook_id, quiz_settings)
         cluster["quiz"] = quiz
 
     return clusters
 
 
-def run_write_output(config, clusters):
-    """Stage 5: Write topic JSON files and manifest."""
+def run_write_output(config, clusters, merge_with_existing=False):
+    """Stage 5: Write topic JSON files and manifest.
+
+    When merge_with_existing=True, keeps untouched topics from the prior manifest
+    (used with --only-topic so one refresh doesn't wipe out the other topics).
+    """
     print(f"\n{'='*60}")
     print("STAGE 5: WRITE OUTPUT")
     print(f"{'='*60}")
@@ -161,6 +168,25 @@ def run_write_output(config, clusters):
 
     manifest_topics = []
 
+    # If merging, preload existing manifest topics for ones we're NOT refreshing
+    existing_topics = {}
+    if merge_with_existing and os.path.exists(manifest_path):
+        try:
+            with open(manifest_path) as f:
+                old_manifest = json.load(f)
+            for t in old_manifest.get("topics", []):
+                existing_topics[t["slug"]] = t
+        except Exception:
+            pass
+
+    refreshed_slugs = set(clusters.keys())
+
+    # Keep existing topics that aren't being refreshed
+    for slug, t in existing_topics.items():
+        if slug not in refreshed_slugs:
+            manifest_topics.append(t)
+
+    # Write the refreshed topics
     for slug, cluster in clusters.items():
         topic_data = {
             "slug": slug,
@@ -227,6 +253,10 @@ def main():
         default="all",
         help="Run a specific stage or all stages"
     )
+    parser.add_argument(
+        "--only-topic",
+        help="Only refresh the quiz for this topic slug (leaves other topics untouched)"
+    )
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -255,10 +285,12 @@ def main():
 
     # Stage 4: Quizzes
     if not args.skip_quiz and args.stage != "cluster":
-        clusters = run_quizzes(config, clusters)
+        clusters = run_quizzes(config, clusters, only_topic=args.only_topic)
 
-    # Stage 5: Write output
-    manifest = run_write_output(config, clusters)
+    # Stage 5: Write output (only write topics we actually refreshed)
+    if args.only_topic:
+        clusters = {k: v for k, v in clusters.items() if k == args.only_topic}
+    manifest = run_write_output(config, clusters, merge_with_existing=bool(args.only_topic))
 
     print(f"\nDone. Generated {manifest['topic_count']} topics.")
     for t in manifest["topics"]:

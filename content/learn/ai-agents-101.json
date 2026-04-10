@@ -22,131 +22,132 @@
     "890444b2-ce0c-4df5-a2f9-cd58b25c06da"
   ],
   "source_count": 16,
-  "summary": "AI agents are evolving from basic conversational chatbots into digital workers that can operate autonomously for hours or days. For example, a coding agent named Cursor ran continuously for four days to solve an unpublished research math problem without any human intervention [1]. Other systems, such as Perplexity Computer, coordinate 19 different AI models to complete complex workflows like deep web research and data visualization [2, 3]. This level of autonomy represents a massive economic shift. McKinsey projects that AI agents could drive up to $1 trillion in retail revenue by 2030 [4]. To capture this value, businesses must fundamentally restructure their digital architecture to be \"agent readable\" so these systems can independently discover, evaluate, and purchase products without a human ever seeing the screen [4, 5].\n\nDespite their impressive capabilities, autonomous agents face a severe memory wall and lack basic organizational common sense. Because they do not feel social anxiety or hesitate, agents will confidently execute destructive commands at lightning speed [6, 7]. In one incident, an AI coding agent permanently deleted 1.9 million rows of live student data in seconds because it could not distinguish between a temporary duplicate file and a live production database [8, 9]. Agents also struggle significantly with sustained jobs. A benchmark study of 240 real Upwork freelance projects showed that the best AI agents successfully completed only 2.5 percent of the tasks to a client's satisfaction [10, 11]. Similarly, another study revealed that 75 percent of frontier models broke previously working software features when asked to maintain a codebase over several months [12].\n\nTo safely deploy agents, companies must shift human employees from executing tasks to providing expert oversight. Workers must become \"contextual stewards\" who hold the deep institutional knowledge that agents lack [13]. For instance, a human manager must know when an agent is blindly building flawless technical infrastructure with flawed business logic. In a recent test, an AI agent successfully processed 99.1 percent of a company's files but mistakenly imported \"Mickey Mouse\" as a legitimate customer because it lacked the judgment to filter dirty data [14]. Organizations must encode their business knowledge into strict guardrails, such as creating rules files under 200 lines that act as a permanent employee handbook for the AI [15-17]. By automating lower value tasks, companies can elevate their staff into dynamic sense makers who use critical thinking to guide AI systems safely [18].",
+  "summary": "AI agents are evolving from basic conversational chatbots into digital workers that can operate autonomously for hours or days [1, 2]. For example, a coding system named Cursor ran continuously for four days to solve an unpublished research math problem without any human intervention [3]. Other systems, such as Perplexity Computer, coordinate 19 different AI models to complete complex workflows like deep web research and data visualization [4-6]. This level of autonomy represents a massive economic shift. McKinsey projects that AI agents could drive up to $1 trillion in retail revenue by 2030 [7]. To capture this value, businesses must fundamentally restructure their digital architecture to be agent readable so these systems can independently discover, evaluate, and purchase products without a human ever seeing the screen [8-10].\n\nDespite their impressive capabilities, autonomous agents face a severe memory wall and lack basic organizational common sense [11]. Because they do not feel social anxiety or hesitate, agents will confidently execute destructive commands at lightning speed [12, 13]. In one incident, an AI coding agent permanently deleted 1.9 million rows of live student data in seconds because it could not distinguish between a temporary duplicate file and a live production database [12, 14]. Agents also struggle significantly with sustained jobs. A benchmark study of 240 real Upwork freelance projects showed that the best AI agents successfully completed only 2.5 percent of the tasks to a client's satisfaction [15, 16]. Similarly, another study revealed that 75 percent of frontier models broke previously working software features when asked to maintain a codebase over several months [17].\n\nTo safely deploy agents, companies must shift human employees from executing tasks to providing expert oversight [18, 19]. Workers must become contextual stewards who hold the deep institutional knowledge that agents lack [18]. For instance, a human manager must know when an agent is blindly building flawless technical infrastructure with flawed business logic [20]. In a recent test, an AI agent successfully processed 99.1 percent of a company's files but mistakenly imported \"Mickey Mouse\" as a legitimate customer because it lacked the judgment to filter dirty data [21]. Organizations must encode their business knowledge into strict guardrails, such as creating rules files under 200 lines that act as a permanent employee handbook for the AI [22-24]. By automating lower value tasks, companies can elevate their staff into dynamic sense makers who use critical thinking to guide AI systems safely [19].",
   "quiz": {
     "title": "Quick Check: AI Agents: What You Need to Know",
     "questions": [
       {
         "id": "ai-agents-101-q1",
-        "question": "What dollar amount did McKinsey predict will flow through AI agents in sales?",
+        "question": "What colorful term describes the problem facing AI companies like Perplexity that build products on top of rival models?",
         "options": [
-          "$500 billion",
-          "$690 billion",
-          "$1 trillion",
-          "$2.5 trillion"
+          "The middleware trap",
+          "The commodity squeeze",
+          "The hyperscaler pinch",
+          "The integration gap"
         ],
-        "correct": 2,
-        "explanation": "McKinsey projected that $1 trillion in sales will go through AI agents, representing a massive shift in how commerce will be conducted in the digital economy."
+        "correct": 0,
+        "explanation": "The 'middleware trap' specifically refers to the fragile structural position of companies that build on top of rival models while hyperscalers vertically integrate to own models, context layers, and customer relationships."
       },
       {
         "id": "ai-agents-101-q2",
-        "question": "According to one source, an AI agent accidentally wiped how many rows of data while following instructions perfectly?",
+        "question": "What concept describes AI being brilliant at some tasks but inexplicably failing at others?",
+        "options": [
+          "The capability cliff",
+          "The jagged frontier",
+          "The performance valley",
+          "The intelligence gap"
+        ],
+        "correct": 1,
+        "explanation": "The 'jagged frontier' refers to AI's uneven performance across different tasks, which the source argues is temporary and can be smoothed out through proper organizational structure."
+      },
+      {
+        "id": "ai-agents-101-q3",
+        "question": "How many database rows did an AI agent accidentally wipe while following instructions perfectly?",
         "options": [
           "500,000 rows",
           "1.2 million rows",
           "1.9 million rows",
-          "3.1 million rows"
+          "2.5 million rows"
         ],
         "correct": 2,
-        "explanation": "The AI agent wiped 1.9 million rows because it lacked the contextual understanding to distinguish between temporary and live systems, despite executing its instructions flawlessly."
-      },
-      {
-        "id": "ai-agents-101-q3",
-        "question": "What is the term used to describe the inconsistent performance where AI excels at some tasks but fails unexpectedly at others?",
-        "options": [
-          "The middleware trap",
-          "The jagged frontier",
-          "Constitutional AI",
-          "Agentic infrastructure"
-        ],
-        "correct": 1,
-        "explanation": "The jagged frontier describes how AI can be brilliant at complex tasks but inexplicably fail at simpler ones, though this limitation may be temporary with better organizational structure."
+        "explanation": "The source specifically mentions that an AI agent wiped 1.9 million rows while following instructions perfectly, highlighting the lack of institutional context in AI systems."
       },
       {
         "id": "ai-agents-101-q4",
-        "question": "What cartoon character inspired Jeffrey Huntley's Claude Code plugin design?",
+        "question": "What four-part architecture have top AI labs independently adopted through convergent evolution?",
         "options": [
-          "Bart Simpson",
-          "SpongeBob SquarePants",
-          "Ralph Wiggum",
-          "Mickey Mouse"
+          "Planning, executing, monitoring, reporting",
+          "Decomposing, parallelizing, verifying, iterating",
+          "Analyzing, processing, checking, completing",
+          "Learning, adapting, testing, improving"
         ],
-        "correct": 2,
-        "explanation": "Jeffrey Huntley created a Claude Code plugin inspired by Ralph Wiggum that uses aggressive evaluation to force AI models to actually complete tasks rather than prematurely claiming they're finished."
+        "correct": 1,
+        "explanation": "The source identifies that AI labs have converged on decomposing complex problems, parallelizing execution, verifying outputs, and iterating until completion as their core architecture."
       },
       {
         "id": "ai-agents-101-q5",
-        "question": "According to the sources, what are the three essential 'Lego bricks' needed to create autonomous AI agents?",
+        "question": "According to McKinsey, how much in sales will go through AI agents?",
         "options": [
-          "Speed, accuracy, and safety",
-          "Memory, proactivity, and tools",
-          "Data, models, and interfaces",
-          "Planning, execution, and verification"
+          "$500 billion",
+          "$750 billion",
+          "$1 trillion",
+          "$1.5 trillion"
         ],
-        "correct": 1,
-        "explanation": "The three essential components for autonomous AI agents are memory (to retain information), proactivity (to act independently), and tools (to perform actual functions)."
+        "correct": 2,
+        "explanation": "The source specifically states that McKinsey predicts $1 trillion in sales will go through AI agents, emphasizing the massive scale of this transformation."
       },
       {
         "id": "ai-agents-101-q6",
-        "question": "What database system did one developer use to create their 'OpenBrain' personal AI ecosystem?",
+        "question": "What training methodology does Claude use that differs from ChatGPT's human feedback approach?",
         "options": [
-          "MongoDB",
-          "PostgreSQL",
-          "SQL database",
-          "Firebase"
-        ],
-        "correct": 2,
-        "explanation": "The developer used a SQL database as the foundation for OpenBrain, which serves as a single source of truth that provides AI agents with permanent memory across sessions."
-      },
-      {
-        "id": "ai-agents-101-q7",
-        "question": "What AI training methodology does Claude use that differs from ChatGPT's approach?",
-        "options": [
-          "Reinforcement learning",
+          "Reinforcement Learning",
           "Constitutional AI",
-          "Transformer architecture",
-          "Neural network training"
+          "Supervised Fine-tuning",
+          "Adversarial Training"
         ],
         "correct": 1,
         "explanation": "Claude uses Constitutional AI to prioritize honesty and adherence to explicit principles, while ChatGPT uses human feedback to be more agreeable and expansive."
       },
       {
-        "id": "ai-agents-101-q8",
-        "question": "What new command feature did Anthropic introduce to make Claude more proactive?",
+        "id": "ai-agents-101-q7",
+        "question": "What cartoon character inspired Jeffrey Huntley's Claude Code plugin for forcing AI to finish tasks?",
         "options": [
-          "/auto command",
-          "/schedule command",
-          "/loop command",
-          "/agent command"
+          "Homer Simpson",
+          "Ralph Wiggum",
+          "Bart Simpson",
+          "Ned Flanders"
         ],
-        "correct": 2,
-        "explanation": "Anthropic's /loop command acts as a 'heartbeat' that allows Claude to operate independently on a schedule without requiring constant human prompting."
+        "correct": 1,
+        "explanation": "The plugin was specifically inspired by Ralph Wiggum and uses aggressive evaluation to force AI models to iterate until they truly complete their assigned tasks."
+      },
+      {
+        "id": "ai-agents-101-q8",
+        "question": "What three essential 'Lego bricks' are needed to create autonomous AI agents?",
+        "options": [
+          "Speed, accuracy, reliability",
+          "Memory, proactivity, tools",
+          "Data, processing, output",
+          "Input, analysis, execution"
+        ],
+        "correct": 1,
+        "explanation": "The source identifies memory, proactivity, and tools as the three essential components that combine to create truly autonomous AI agents."
       },
       {
         "id": "ai-agents-101-q9",
-        "question": "In the four-part AI architecture that labs have independently adopted, what are the key components?",
+        "question": "What informal safety system in traditional business is absent in AI agents?",
         "options": [
-          "Planning, coding, testing, deploying",
-          "Decomposing, parallelizing, verifying, iterating",
-          "Learning, processing, outputting, storing",
-          "Analyzing, synthesizing, executing, reporting"
+          "Manual approval processes",
+          "Human hesitation and social anxiety",
+          "Multiple verification steps",
+          "Bureaucratic red tape"
         ],
         "correct": 1,
-        "explanation": "The convergent evolution among AI labs produced a four-part architecture: decomposing complex problems, parallelizing execution, verifying outputs, and iterating until completion."
+        "explanation": "The source explains that human hesitation and social anxiety traditionally served as an informal safety system that prevented errors, but AI agents operate without this natural friction."
       },
       {
         "id": "ai-agents-101-q10",
-        "question": "According to the sources, what shift in professional skills is required as AI agents become more prevalent?",
+        "question": "What amount of money is mentioned as 'squeezing AI companies from both sides'?",
         "options": [
-          "From creative work to analytical work",
-          "From manual execution to meta-skills and outcome definition",
-          "From technical skills to communication skills",
-          "From individual work to team collaboration"
+          "$500 billion",
+          "$690 billion",
+          "$750 billion",
+          "$1 trillion"
         ],
         "correct": 1,
-        "explanation": "As AI handles more execution tasks, human value shifts toward meta-skills like defining clear outcomes, structuring workflows, and providing the contextual judgment that AI agents lack."
+        "explanation": "The title specifically mentions '$690 Billion Is Squeezing AI Companies From Both Sides' as the central thesis about financial pressures in the AI industry."
       }
-    ]
+    ],
+    "level": 100
   },
   "created_at": "2026-04-10",
   "updated_at": "2026-04-10"

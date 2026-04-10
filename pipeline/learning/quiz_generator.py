@@ -213,10 +213,45 @@ def normalize_quiz_questions(raw_quiz, topic_slug, max_questions=10):
     return questions
 
 
-def generate_quiz_via_anthropic(cluster, max_questions=10):
+QUESTION_HISTORY_PATH = "data/learn/question-history.json"
+
+
+def load_question_history():
+    """Load the question history file. Returns dict keyed by topic slug."""
+    if not os.path.exists(QUESTION_HISTORY_PATH):
+        return {}
+    try:
+        with open(QUESTION_HISTORY_PATH) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def save_question_history(history):
+    """Save question history to disk."""
+    os.makedirs(os.path.dirname(QUESTION_HISTORY_PATH), exist_ok=True)
+    with open(QUESTION_HISTORY_PATH, "w") as f:
+        json.dump(history, f, indent=2)
+
+
+def append_to_history(slug, new_questions, history=None):
+    """Append new question texts to the history file for a given topic."""
+    if history is None:
+        history = load_question_history()
+    if slug not in history:
+        history[slug] = []
+    for q in new_questions:
+        text = q.get("question", "").strip()
+        if text and text not in history[slug]:
+            history[slug].append(text)
+    save_question_history(history)
+    return history
+
+
+def generate_quiz_via_anthropic(cluster, max_questions=10, level=None):
     """
     Fallback: use the Anthropic SDK to generate quiz questions from
-    extracted source content.
+    extracted source content. Reads question history to avoid repeats.
     """
     try:
         from anthropic import Anthropic
@@ -242,6 +277,25 @@ def generate_quiz_via_anthropic(cluster, max_questions=10):
     topic_title = cluster.get("title", "AI")
     slug = cluster.get("slug", "topic")
 
+    # Load history of previously-asked questions for this topic
+    history = load_question_history()
+    prior_questions = history.get(slug, [])
+    history_block = ""
+    if prior_questions:
+        # Include up to the last 100 previously-asked questions to stay within context
+        recent = prior_questions[-100:]
+        history_block = "\n\nPREVIOUSLY ASKED QUESTIONS (DO NOT REPEAT OR REPHRASE THESE):\n" + "\n".join(
+            f"- {q}" for q in recent
+        )
+
+    level_hint = ""
+    if level == 100:
+        level_hint = "\n- Target difficulty: FUNDAMENTALS (100-level). Accessible to someone new to AI. Focus on core concepts, basic vocabulary, surprising facts."
+    elif level == 200:
+        level_hint = "\n- Target difficulty: APPLIED (200-level). For professionals using AI at work. Focus on practical applications, trade-offs, real examples."
+    elif level == 300:
+        level_hint = "\n- Target difficulty: STRATEGIC (300-level). For executives making AI decisions. Focus on business implications, ROI, risk management, market dynamics."
+
     prompt = f"""Generate {max_questions} trivia-style multiple choice questions about "{topic_title}" based on the content below.
 
 RULES:
@@ -251,9 +305,10 @@ RULES:
 - Include a brief explanation for each correct answer
 - Do NOT use em dashes anywhere
 - Use plain, direct language appropriate for business professionals
+- Every question must be NEW. Do not repeat, rephrase, or substantially overlap with previously asked questions.{level_hint}
 
 CONTENT:
-{context}
+{context}{history_block}
 
 Return ONLY a JSON array (no markdown fencing) where each element has:
 - "question": the question text
@@ -281,16 +336,27 @@ Return ONLY a JSON array (no markdown fencing) where each element has:
         return []
 
 
+def get_level_for_slug(slug):
+    """Mirror the frontend getTopicLevel() logic so prompts can target difficulty."""
+    if "101" in slug or "fundamentals" in slug:
+        return 100
+    if "strategy" in slug or "leaders" in slug:
+        return 300
+    return 200
+
+
 def generate_quiz_for_cluster(cluster, notebook_id, quiz_settings):
     """
     Generate quiz questions for a topic cluster.
     Tries NotebookLM first, falls back to Anthropic SDK.
+    Tracks question history to avoid repeats across runs.
     """
     slug = cluster["slug"]
     source_ids = cluster.get("source_ids", [])
     max_q = quiz_settings.get("questions_per_topic", 10)
     difficulty = quiz_settings.get("difficulty", "medium")
     quantity = quiz_settings.get("quantity", "more")
+    level = get_level_for_slug(slug)
 
     questions = []
 
@@ -309,20 +375,30 @@ def generate_quiz_for_cluster(cluster, notebook_id, quiz_settings):
             if downloaded:
                 questions = normalize_quiz_questions(downloaded, slug, max_q)
 
-    # Fallback: Anthropic SDK
+    # Fallback: Anthropic SDK (uses history + level targeting)
     if not questions:
-        print(f"    NotebookLM quiz unavailable for '{slug}', using Anthropic fallback...")
-        questions = generate_quiz_via_anthropic(cluster, max_q)
+        print(f"    NotebookLM quiz unavailable for '{slug}', using Anthropic fallback (level {level})...")
+        questions = generate_quiz_via_anthropic(cluster, max_q, level=level)
 
     # Validate all questions
     questions = [q for q in questions if validate_question(q)]
 
-    if questions:
-        print(f"    Generated {len(questions)} questions for '{slug}'")
+    # Deduplicate against history and append new ones
+    history = load_question_history()
+    prior = set(q.strip() for q in history.get(slug, []))
+    fresh_questions = [q for q in questions if q.get("question", "").strip() not in prior]
+
+    if len(fresh_questions) < len(questions):
+        print(f"    Filtered {len(questions) - len(fresh_questions)} duplicate questions from history")
+
+    if fresh_questions:
+        append_to_history(slug, fresh_questions, history)
+        print(f"    Generated {len(fresh_questions)} new questions for '{slug}' (level {level})")
     else:
-        print(f"    Warning: no questions generated for '{slug}'")
+        print(f"    Warning: no fresh questions generated for '{slug}'")
 
     return {
         "title": f"Quick Check: {cluster['title']}",
-        "questions": questions,
+        "questions": fresh_questions,
+        "level": level,
     }
