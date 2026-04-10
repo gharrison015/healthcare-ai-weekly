@@ -36,50 +36,53 @@ const GlowCard: React.FC<GlowCardProps> = ({
   customSize = false
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return;
 
-    const setOpacity = (opacity: string) => {
-      card.style.setProperty('--bg-spot-opacity', opacity === '1' ? '0.1' : '0');
-      card.style.setProperty('--border-spot-opacity', opacity);
-      card.style.setProperty('--border-light-opacity', opacity);
+    const setGlowVisible = (visible: boolean) => {
+      const val = visible ? '1' : '0';
+      const bgVal = visible ? '0.1' : '0';
+      card.style.setProperty('--bg-spot-opacity', bgVal);
+      card.style.setProperty('--border-spot-opacity', val);
+      card.style.setProperty('--border-light-opacity', val);
     };
 
     const syncPointer = (e: PointerEvent) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const { clientX: x, clientY: y } = e;
       card.style.setProperty('--x', x.toFixed(2));
-      card.style.setProperty('--xp', (x / rect.width).toFixed(2));
+      card.style.setProperty('--xp', (x / window.innerWidth).toFixed(2));
       card.style.setProperty('--y', y.toFixed(2));
-      card.style.setProperty('--yp', (y / rect.height).toFixed(2));
+      card.style.setProperty('--yp', (y / window.innerHeight).toFixed(2));
     };
 
     const handleEnter = (e: PointerEvent) => {
-      setOpacity('1');
+      setGlowVisible(true);
       syncPointer(e);
     };
 
     const handleLeave = () => {
-      setOpacity('0');
+      setGlowVisible(false);
     };
 
     // Only track pointer on devices with fine pointer (mouse) — skip touch devices
     const hasPointer = window.matchMedia('(pointer: fine)').matches;
     if (!hasPointer) return;
 
-    // Start invisible - only show glow when pointer is over this card
-    setOpacity('0');
+    // Start with glow invisible; only activate on hover
+    setGlowVisible(false);
 
+    // Listen for pointer movement at document level so gradient tracks smoothly
+    // while cursor is over the card, but only enable the effect on enter/leave
     card.addEventListener('pointerenter', handleEnter);
-    card.addEventListener('pointermove', syncPointer);
+    document.addEventListener('pointermove', syncPointer);
     card.addEventListener('pointerleave', handleLeave);
 
     return () => {
       card.removeEventListener('pointerenter', handleEnter);
-      card.removeEventListener('pointermove', syncPointer);
+      document.removeEventListener('pointermove', syncPointer);
       card.removeEventListener('pointerleave', handleLeave);
     };
   }, []);
@@ -106,6 +109,9 @@ const GlowCard: React.FC<GlowCardProps> = ({
       '--hue': 'calc(var(--base) + (var(--xp, 0) * var(--spread, 0)))',
       backgroundImage: `radial-gradient(var(--spotlight-size) var(--spotlight-size) at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px), hsl(var(--hue, 210) calc(var(--saturation, 100) * 1%) calc(var(--lightness, 70) * 1%) / var(--bg-spot-opacity, 0)), transparent)`,
       backgroundColor: 'var(--backdrop, transparent)',
+      backgroundSize: 'calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)))',
+      backgroundPosition: '50% 50%',
+      backgroundAttachment: 'fixed',
       border: 'var(--border-size) solid var(--backup-border)',
       borderRadius: 'calc(var(--radius) * 1px)',
       position: 'relative',
@@ -122,7 +128,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
       inset: calc(var(--border-size) * -1);
       border: var(--border-size) solid transparent;
       border-radius: calc(var(--radius) * 1px);
-      background-size: 100% 100%;
+      background-attachment: fixed;
+      background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
       background-repeat: no-repeat; background-position: 50% 50%;
       mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
       mask-clip: padding-box, border-box; mask-composite: intersect;
@@ -134,6 +141,14 @@ const GlowCard: React.FC<GlowCardProps> = ({
     [data-glow]::after {
       background-image: radial-gradient(calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px), hsl(0 100% 100% / var(--border-light-opacity, 0)), transparent 100%);
     }
+    [data-glow] [data-glow] {
+      position: absolute; inset: 0; will-change: filter;
+      opacity: var(--outer, 1); border-radius: calc(var(--radius) * 1px);
+      border-width: calc(var(--border-size) * 20);
+      filter: blur(calc(var(--border-size) * 10));
+      background: none; pointer-events: none; border: none;
+    }
+    [data-glow] > [data-glow]::before { inset: -10px; border-width: 10px; }
   `;
 
   return (
@@ -145,6 +160,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         style={getInlineStyles() as React.CSSProperties}
         className={`${getSizeClasses()} ${!customSize ? 'aspect-[3/4]' : ''} rounded-[14px] relative grid grid-rows-[1fr_auto] shadow-[0_4px_16px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.6)] p-4 gap-4 backdrop-blur-[5px] ${className}`}
       >
+        <div ref={innerRef} data-glow></div>
         {children}
       </div>
     </>
