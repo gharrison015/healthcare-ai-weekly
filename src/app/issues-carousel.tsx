@@ -7,6 +7,7 @@ import type { IssueManifestEntry } from "@/lib/types";
 
 interface IssuesCarouselProps {
   issues: IssueManifestEntry[];
+  highlightIssue?: string;
 }
 
 function getMonthLabel(dateStr: string): string {
@@ -14,11 +15,25 @@ function getMonthLabel(dateStr: string): string {
   return d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
 }
 
-export function IssuesCarousel({ issues }: IssuesCarouselProps) {
+export function IssuesCarousel({ issues, highlightIssue }: IssuesCarouselProps) {
   const [visibleMonth, setVisibleMonth] = useState<string | null>(null);
+  const [highlightedDate, setHighlightedDate] = useState<string | null>(highlightIssue || null);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<Map<string, HTMLElement>>(new Map());
+
+  // Auto-scroll to highlighted issue on mount
+  useEffect(() => {
+    if (!highlightIssue) return;
+    const card = cardRefs.current.get(highlightIssue);
+    if (card) {
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }, 300);
+    }
+    const timer = setTimeout(() => setHighlightedDate(null), 4000);
+    return () => clearTimeout(timer);
+  }, [highlightIssue]);
 
   const handleScroll = useCallback(() => {
     if (hideTimer.current) clearTimeout(hideTimer.current);
@@ -55,7 +70,6 @@ export function IssuesCarousel({ issues }: IssuesCarouselProps) {
     const wrapper = wrapperRef.current;
     if (!wrapper) return;
 
-    // Listen for scroll events on the inner scroller
     const scrollContainer = wrapper.querySelector("[data-scroll-container]")?.parentElement || wrapper;
     scrollContainer.addEventListener("scroll", handleScroll, { passive: true, capture: true });
 
@@ -98,6 +112,8 @@ export function IssuesCarousel({ issues }: IssuesCarouselProps) {
             (issue.consulting_intelligence || 0) +
             (issue.did_you_know || 0);
 
+          const isHighlighted = highlightedDate === issue.date;
+
           return (
             <a
               key={issue.date}
@@ -111,6 +127,8 @@ export function IssuesCarousel({ issues }: IssuesCarouselProps) {
                 minHeight: "220px",
                 scrollSnapAlign: "start",
                 color: "inherit",
+                borderRadius: "16px",
+                animation: isHighlighted ? "highlight-pulse 1.5s ease-in-out infinite" : undefined,
               }}
             >
               <GlowCard glowColor="blue" customSize={true} className="w-full h-full p-7">
