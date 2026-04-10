@@ -82,6 +82,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       backgroundPosition: '50% 50%',
       backgroundAttachment: 'fixed',
       border: 'var(--border-size) solid var(--backup-border)',
+      borderRadius: 'calc(var(--radius) * 1px)',
       position: 'relative',
       touchAction: 'auto',
     };
