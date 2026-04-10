@@ -84,7 +84,7 @@ Return a single JSON object with this exact structure. No markdown fencing, just
     ],
     "vbc_watch": [same structure as top_stories],
     "ma_partnerships": [same structure as top_stories],
-    "consulting_intelligence": [same structure as top_stories, 1-3 items about consulting firm moves],
+    "consulting_intelligence": [same structure as top_stories],
     "did_you_know": [
       {{
         "headline": "What happened in general AI",
@@ -124,28 +124,6 @@ def validate_curated_output(output, guardrails):
 
     return errors
 
-def get_prior_headlines(curated_dir="data/curated", lookback=4):
-    """Get headlines from prior issues to prevent cross-issue duplication."""
-    import glob
-    prior_headlines = []
-    files = sorted(glob.glob(os.path.join(curated_dir, "*.json")), reverse=True)
-    for f in files[:lookback]:
-        if "-delta" in f:
-            continue
-        try:
-            with open(f) as fh:
-                data = json.load(fh)
-            for section in data.get("sections", {}).values():
-                if isinstance(section, list):
-                    for story in section:
-                        h = story.get("headline", "")
-                        if h:
-                            prior_headlines.append(h)
-        except (json.JSONDecodeError, KeyError):
-            continue
-    return prior_headlines
-
-
 def run_curator(raw_data_path, output_path, persona_path="curator/persona.md",
                 guardrails_path="curator/guardrails.json", feedback_path="curator/feedback.md",
                 delta_path=None):
@@ -168,17 +146,8 @@ def run_curator(raw_data_path, output_path, persona_path="curator/persona.md",
         with open(delta_path) as f:
             delta = json.load(f)
 
-    # Get prior headlines to prevent repeats
-    prior_headlines = get_prior_headlines()
-
     articles = raw_data.get("articles", [])
     prompt = build_curator_prompt(articles, persona, guardrails, feedback, delta)
-
-    if prior_headlines:
-        prompt += "\n\n# DEDUPLICATION: DO NOT REPEAT THESE STORIES\n\n"
-        prompt += "The following headlines were published in recent issues. Do NOT cover the same story again, even if it appears in this week's articles. Find NEW stories only.\n\n"
-        for h in prior_headlines:
-            prompt += f"- {h}\n"
 
     client = Anthropic()
     response = client.messages.create(
