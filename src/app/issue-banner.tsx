@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { IssueManifestEntry } from "@/lib/types";
 
 interface IssueBannerProps {
@@ -12,6 +12,14 @@ export function IssueBanner({ highlightIssue, issues }: IssueBannerProps) {
   const [dismissed, setDismissed] = useState(false);
 
   const matchedIssue = issues.find((i) => i.date === highlightIssue);
+
+  // Mobile: redirect straight to the deep-dive page
+  useEffect(() => {
+    if (matchedIssue && window.innerWidth < 768) {
+      window.location.replace(`/news/${matchedIssue.date}`);
+    }
+  }, [matchedIssue]);
+
   if (!matchedIssue || dismissed) return null;
 
   const weekLabel = matchedIssue.week_range || matchedIssue.date;
