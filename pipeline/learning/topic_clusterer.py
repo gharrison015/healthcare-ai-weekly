@@ -157,6 +157,13 @@ def generate_topic_summaries(clusters, notebook_id):
         if summary:
             # Clean em dashes just in case
             summary = summary.replace("\u2014", " - ").replace("\u2013", " - ")
+            # Strip NotebookLM citation markers like [1], [2, 3], [4-6]
+            import re
+            summary = re.sub(r"\s*\[[\d\s,\-]+\]", "", summary)
+            # Strip markdown bold markers
+            summary = summary.replace("**", "")
+            # Collapse any double spaces created by stripping
+            summary = re.sub(r"  +", " ", summary).strip()
             cluster["summary"] = summary
         else:
             cluster["summary"] = cluster["description"]
