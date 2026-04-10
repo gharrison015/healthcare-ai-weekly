@@ -9,8 +9,16 @@ import { IssuesCarousel } from "./issues-carousel";
 import { BulletinCards } from "./bulletin-cards";
 import { LearnCards } from "./learn-cards";
 import { ConsultingCards } from "./consulting-cards";
+import { IssueBanner } from "./issue-banner";
 
-export default function HomePage() {
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ issue?: string }>;
+}) {
+  const params = await searchParams;
+  const highlightIssue = params.issue || null;
+
   const issues = getIssuesManifest();
   const bulletins = getBulletins();
   const learn = getLearningTopics();
@@ -24,6 +32,11 @@ export default function HomePage() {
     <>
       <AmbientBackground />
       <GlassCardStyles />
+
+      {/* Deep-link banner from email */}
+      {highlightIssue && (
+        <IssueBanner highlightIssue={highlightIssue} issues={issues} />
+      )}
 
       {/* Breaking News Ticker */}
       <BreakingNewsTicker bulletins={bulletins} />
@@ -75,7 +88,7 @@ export default function HomePage() {
         </div>
 
         {issues.length > 0 ? (
-          <IssuesCarousel issues={issues} />
+          <IssuesCarousel issues={issues} highlightIssue={highlightIssue || undefined} />
         ) : (
           <div
             className="text-center py-16"
@@ -85,7 +98,7 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* AI Learning Section - ABOVE Bulletins */}
+        {/* AI Learning Section */}
         {learn.length > 0 && (
           <div className="mt-12">
             <div className="flex items-baseline justify-between pt-8 mb-5">
@@ -135,7 +148,7 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Bulletins Section - BELOW Learning */}
+        {/* Bulletins Section */}
         {bulletins.length > 0 && (
           <div className="mt-12">
             <div className="flex items-baseline justify-between pt-8 mb-5">
