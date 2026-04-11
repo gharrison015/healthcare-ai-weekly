@@ -33,14 +33,14 @@ export function SourceTicker() {
   const allItems = [...SOURCES, ...SOURCES];
 
   return (
-    <div className="py-8 text-center">
+    <div className="pt-0 pb-1 text-center">
       <div
-        className="text-xs font-extrabold uppercase tracking-widest mb-4"
-        style={{ color: "#94a3b8", letterSpacing: "2px", fontSize: "13px" }}
+        className="text-xs font-extrabold uppercase tracking-widest"
+        style={{ color: "#94a3b8", letterSpacing: "2px", fontSize: "12px", marginBottom: "1px" }}
       >
         Curated from Credible Sources
       </div>
-      <div className="relative overflow-hidden py-4">
+      <div className="relative overflow-hidden py-1">
         {/* Left fade */}
         <div
           className="absolute top-0 bottom-0 left-0 w-[120px] z-[2] pointer-events-none"

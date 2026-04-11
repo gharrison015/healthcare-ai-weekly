@@ -129,38 +129,50 @@ The product exists to solve one problem: **the signal-to-noise ratio in healthca
 
 ## 4. Technical Architecture
 
-### 4.1 Repositories
+### 4.1 Repository
 
-**`healthcare-ai-newsletter`** (Python pipeline)
-- URL: https://github.com/gharrison015/healthcare-ai-newsletter
-- Local: `/Users/greg/Claude/healthcare-ai-newsletter`
-- Purpose: Content generation pipeline (collect, curate, generate, distribute)
-- Language: Python 3
-- Key modules: `collector/`, `curator/`, `generator/`, `distributor/`, `bulletin/`, `learning/`
+**One consolidated repo.** See [`../PROJECT_MAP.md`](../PROJECT_MAP.md) for the canonical architecture reference.
 
-**`healthcare-ai-weekly`** (Next.js site + archive)
-- URL: https://github.com/gharrison015/healthcare-ai-weekly
+**`healthcare-ai-weekly`** (everything)
+- URL: https://github.com/gharrison015/healthcare-ai-weekly (public)
 - Local: `/Users/greg/Claude/healthcare-ai-weekly`
-- Purpose: Public Vercel site + content archive + pipeline copy for remote runs
-- Stack: Next.js 16, React 19, TypeScript, Tailwind v4, shadcn/ui
-- Hosts: All published content under `content/`, pipeline code duplicated under `pipeline/` for remote agent runs
+- Contains:
+  - `pipeline/` — Python pipeline (collector, curator, generator, distributor, bulletin, learning)
+  - `src/` — Next.js 16 site (React 19, TypeScript, Tailwind v4, shadcn/ui)
+  - `content/` — Published content (issues, bulletins, consulting intelligence, learn, manifests)
+  - `scripts/` — Build-time helpers (search index generator)
+  - `public/` — Static assets (including built search index)
+  - `supabase/` — Quiz analytics schema
+  - `docs/` — PRD, specs, plans, trigger prompts
+
+The old `gharrison015/healthcare-ai-newsletter` repo was consolidated into this one and archived on 2026-04-10. Do not revive it.
 
 ### 4.2 Data Flow
 
 ```
-┌─────────────────────────────┐            ┌──────────────────────────────┐
-│ healthcare-ai-newsletter    │  copy HTML │ healthcare-ai-weekly         │
-│ (pipeline repo)             │ ─────────> │ (archive + Vercel)           │
-│                             │  git push  │                              │
-│ collector/ → curator/ →     │            │ content/issues/<date>/       │
-│ generator/ → distributor/   │            │ content/bulletins/           │
-│                             │            │ content/learn/               │
-│ bulletin/ pipeline          │            │ content/consulting-intel/    │
-│ learning/ pipeline          │            │ content/manifests/           │
-│ consulting intel collector  │            │                              │
-└─────────────────────────────┘            │ src/app/ (Next.js pages)     │
-  Runs locally or via remote                └──────────────────────────────┘
-  trigger (Anthropic cloud)                   Auto-deploys on push via Vercel
+┌─────────────────────────────────────────────────────────────┐
+│ healthcare-ai-weekly (single repo)                          │
+│                                                             │
+│ Python pipeline (pipeline/)                                 │
+│   collector → curator → generator → distributor             │
+│   bulletin/ (multi-source monitor with --cloud-mode)        │
+│   learning/ (quiz generator)                                │
+│                                                             │
+│ Writes → content/issues/, bulletins/, learn/, manifests/    │
+│                                                             │
+│ Next.js site (src/) reads content/ at build time            │
+└─────────────────────────────────────────────────────────────┘
+                         │
+                         │ git push main
+                         ▼
+          ┌──────────────────────────────┐
+          │ Vercel auto-deploys          │
+          │ healthcare-ai-weekly.vercel  │
+          └──────────────────────────────┘
+
+Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
+  • Friday newsletter (trig_01JqnHVGb3gfV1judxMohq12)
+  • Every-4-hour bulletin monitor (trig_01Jr3zP4zvYRnvKo2MmHAeto)
 ```
 
 ### 4.3 Remote Trigger

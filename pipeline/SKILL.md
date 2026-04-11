@@ -13,7 +13,7 @@ Runs the Healthcare AI Weekly newsletter pipeline:
 ## How to Run
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-newsletter
+cd /Users/greg/Claude/healthcare-ai-weekly/pipeline
 source venv/bin/activate
 python pipeline.py
 ```

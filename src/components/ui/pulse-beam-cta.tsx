@@ -2,7 +2,7 @@ export function PulseBeamCTA() {
   return (
     <div
       className="relative flex justify-center overflow-hidden"
-      style={{ padding: "12px 0 32px" }}
+      style={{ padding: "4px 0 2px" }}
     >
       {/* Beam SVG background */}
       <div className="absolute inset-0 pointer-events-none">
