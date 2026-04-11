@@ -158,24 +158,36 @@ def compute_velocity(cluster_items):
 # ---------- Dedup against published bulletins ----------
 
 def get_published_slugs(bulletins_dir="data/bulletins"):
-    """Load slugs/timestamps of previously published bulletins for dedup."""
+    """Load slugs/timestamps of previously published bulletins for dedup.
+
+    Skips runtime state files (names starting with underscore like
+    ``_candidates.json`` and ``_last_run.json``) so that cloud-mode
+    heartbeat artifacts do not get treated as published bulletins.
+    """
     published = []
     if not os.path.exists(bulletins_dir):
         return published
     for filename in os.listdir(bulletins_dir):
-        if filename.endswith(".json"):
-            filepath = os.path.join(bulletins_dir, filename)
-            try:
-                with open(filepath) as f:
-                    bulletin = json.load(f)
-                published.append({
-                    "slug": bulletin.get("slug", ""),
-                    "tags": bulletin.get("tags", []),
-                    "timestamp": bulletin.get("timestamp", ""),
-                    "headline": bulletin.get("headline", ""),
-                })
-            except (json.JSONDecodeError, IOError):
-                continue
+        if not filename.endswith(".json"):
+            continue
+        if filename.startswith("_"):
+            # Runtime artifact (_candidates.json, _last_run.json, etc.)
+            continue
+        filepath = os.path.join(bulletins_dir, filename)
+        try:
+            with open(filepath) as f:
+                bulletin = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            continue
+        if not isinstance(bulletin, dict):
+            # Defensive: skip anything that isn't a bulletin object
+            continue
+        published.append({
+            "slug": bulletin.get("slug", ""),
+            "tags": bulletin.get("tags", []),
+            "timestamp": bulletin.get("timestamp", ""),
+            "headline": bulletin.get("headline", ""),
+        })
     return published
 
 
