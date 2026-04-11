@@ -5,9 +5,18 @@ import { SearchDropdown } from "@/components/search/search-dropdown";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://healthcareaibrief.com"),
   title: "Healthcare AI Weekly",
   description:
     "Weekly intelligence on AI in healthcare. Curated for consultants, strategists, and health system leaders who need to know what matters and why.",
+  openGraph: {
+    title: "Healthcare AI Weekly",
+    description:
+      "Weekly intelligence on AI in healthcare. Curated for consultants, strategists, and health system leaders.",
+    url: "https://healthcareaibrief.com",
+    siteName: "Healthcare AI Weekly",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

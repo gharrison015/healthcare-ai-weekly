@@ -31,6 +31,9 @@
 
 Nothing runs "locally for production." Every scheduled job runs in Anthropic's cloud. Your Mac can be off and the newsletter still ships.
 
+**Primary URL:** https://healthcareaibrief.com
+**Legacy URL:** https://healthcare-ai-weekly.vercel.app (308-redirects to primary; never retire it — past email `?issue=YYYY-MM-DD` deep links depend on it)
+
 ---
 
 ## The repos
@@ -110,7 +113,7 @@ Both triggers run in Anthropic's cloud. They clone `healthcare-ai-weekly` fresh 
 
 | Service | Purpose | URL / ID |
 |---|---|---|
-| **Vercel** | Hosts the Next.js site, auto-deploys on `git push main` | https://healthcare-ai-weekly.vercel.app |
+| **Vercel** | Hosts the Next.js site, auto-deploys on `git push main` | **Primary:** https://healthcareaibrief.com<br>**Legacy (308 redirect):** https://healthcare-ai-weekly.vercel.app |
 | **Supabase** | Quiz analytics (submissions + dashboard) | Project `wjwubjahhbhhsctnpfcb` (NOT FieldShield) |
 | **Gmail (via `gws` CLI locally, MCP connector in cloud)** | Send the weekly newsletter | Sends to `gharrison@guidehouse.com` |
 | **Analytics dashboard** | Password-gated quiz stats | `/analytics?key=hcai2026analytics` |

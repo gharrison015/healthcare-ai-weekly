@@ -45,9 +45,10 @@ The product exists to solve one problem: **the signal-to-noise ratio in healthca
 
 **Filtering Rule:** EVERY story in EVERY section MUST have an AI, machine learning, or technology angle. No exceptions. Pure health system M&A without AI = rejected.
 
-### 3.2 Vercel Web Archive
+### 3.2 Web Archive
 
-**URL:** https://healthcare-ai-weekly.vercel.app
+**Primary URL:** https://healthcareaibrief.com
+**Legacy URL:** https://healthcare-ai-weekly.vercel.app (308-redirects to primary; kept alive so existing bookmarks and past email `?issue=YYYY-MM-DD` deep links continue to work)
 
 **Pages:**
 - **Landing page** (`/`) - Hero, source ticker, Weekly News carousel, AI Learning section, Consulting Intelligence section, Bulletins section
@@ -249,7 +250,7 @@ Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
 
 ### Not Started
 
-- [ ] Custom domain (currently `healthcare-ai-weekly.vercel.app`)
+- [x] ~~Custom domain~~ — **done 2026-04-10**: `healthcareaibrief.com` purchased, Vercel points here as primary, `.vercel.app` kept alive as 308 redirect
 - [ ] Microsoft Form for public subscription intake
 - [ ] Power Automate distribution flow for subscribers
 - [ ] X API credentials for bulletin pipeline

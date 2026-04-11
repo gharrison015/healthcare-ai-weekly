@@ -6,7 +6,7 @@ TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "templates")
 def format_subject_line(week_display):
     return f"Healthcare AI Weekly \u2014 Week of {week_display}"
 
-LANDING_PAGE_URL = "https://healthcare-ai-weekly.vercel.app"
+LANDING_PAGE_URL = "https://healthcareaibrief.com"
 
 def render_email(curated, deep_dive_url=None):
     env = Environment(loader=FileSystemLoader(TEMPLATE_DIR), autoescape=False)

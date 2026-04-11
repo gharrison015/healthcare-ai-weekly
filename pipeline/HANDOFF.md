@@ -17,7 +17,8 @@ Plus a multi-source bulletin monitor that surfaces breaking news between weekly 
 
 - **Repo:** [`gharrison015/healthcare-ai-weekly`](https://github.com/gharrison015/healthcare-ai-weekly) (public)
 - **Local:** `/Users/greg/Claude/healthcare-ai-weekly`
-- **Vercel site:** https://healthcare-ai-weekly.vercel.app
+- **Primary site:** https://healthcareaibrief.com
+- **Legacy URL:** https://healthcare-ai-weekly.vercel.app (still active, 308-redirects to primary)
 - **Friday newsletter trigger:** `trig_01JqnHVGb3gfV1judxMohq12` — https://claude.ai/code/scheduled/trig_01JqnHVGb3gfV1judxMohq12
 - **Bulletin monitor trigger:** `trig_01Jr3zP4zvYRnvKo2MmHAeto` — https://claude.ai/code/scheduled/trig_01Jr3zP4zvYRnvKo2MmHAeto
 
@@ -210,12 +211,9 @@ To update a trigger prompt, open its URL on claude.ai and edit the instructions 
 
 ## Open items
 
-1. **Verify the new bulletin trigger prompt lands.** Greg needs to paste the new `--cloud-mode` prompt into `trig_01Jr3zP4zvYRnvKo2MmHAeto`. After it runs, `content/bulletins/_last_run.json` should update every 4 hours on weekdays.
-2. **Friday newsletter trigger path audit.** The Friday trigger has its own prompt on claude.ai; verify it references the consolidated-repo paths (not the old `healthcare-ai-newsletter` paths).
-3. **Archive the old `gharrison015/healthcare-ai-newsletter` repo** on GitHub after confirming nothing still references it.
-4. **Delete `/Users/greg/Claude/healthcare-ai-newsletter` local folder** after final confirmation.
-5. **Outlook Classic email rewrite.** Current template breaks in Word-rendered Outlook Classic. Fix pending.
-6. **Microsoft Form for subscriptions.** Create Form, link from Vercel, Power Automate distribution.
-7. **Custom domain.** Optionally replace `healthcare-ai-weekly.vercel.app`.
-8. **Reddit API auth.** Register app for higher rate limits.
-9. **Re-enable X/Bluesky** when Cloudflare blocks lift.
+1. **Friday newsletter trigger path audit.** The Friday trigger has its own prompt on claude.ai; verify it references the consolidated-repo paths AND uses `https://healthcareaibrief.com` for email links (not the old `.vercel.app` subdomain).
+2. **Delete `/Users/greg/Claude/healthcare-ai-newsletter` local folder** after one full weekly cycle confirms nothing regressed.
+3. **Outlook Classic email rewrite.** Current template breaks in Word-rendered Outlook Classic. Fix pending colleague's screenshots.
+4. **Microsoft Form for subscriptions.** Create Form, link from site, Power Automate distribution.
+5. **Reddit API auth.** Register app for higher rate limits.
+6. **Re-enable X/Bluesky** when Cloudflare blocks lift.
