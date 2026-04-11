@@ -10,6 +10,11 @@ out
 pipeline/.env
 pipeline/venv/
 pipeline/data/learn/.sources_cache.json
+pipeline/data/bulletins/_candidates.json
+pipeline/data/bulletins/_last_run.json
 pipeline/__pycache__/
 pipeline/**/__pycache__/
 *.pyc
+
+# Search index (generated at build time via scripts/build-search-index.ts)
+public/search-index.json

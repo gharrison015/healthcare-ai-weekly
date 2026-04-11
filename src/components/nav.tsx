@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SearchButton } from "./search/search-button";
 
 const links = [
   { href: "/", label: "Home" },
@@ -28,9 +29,10 @@ export function Nav() {
           className="font-extrabold no-underline"
           style={{ fontSize: "16px", color: "#0F1D35", letterSpacing: "-0.3px" }}
         >
-          Healthcare AI Weekly
+          <span className="max-sm:hidden">Healthcare AI Weekly</span>
+          <span className="sm:hidden">HAI Weekly</span>
         </Link>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 max-sm:gap-3">
           {links.map(({ href, label }) => {
             const isActive =
               href === "/"
@@ -51,6 +53,7 @@ export function Nav() {
               </Link>
             );
           })}
+          <SearchButton />
         </div>
       </div>
     </nav>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
+import { SearchProvider } from "@/components/search/search-provider";
+import { SearchDropdown } from "@/components/search/search-dropdown";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,8 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col" style={{ fontFamily: "Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" }}>
-        <Nav />
-        {children}
+        <SearchProvider>
+          <Nav />
+          {children}
+          <SearchDropdown />
+        </SearchProvider>
       </body>
     </html>
   );

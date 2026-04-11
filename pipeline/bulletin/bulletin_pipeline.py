@@ -2,16 +2,28 @@
 Healthcare AI Weekly — Multi-Source Bulletin Pipeline Orchestrator
 
 Runs the full bulletin detection and publishing pipeline:
-  1. Multi-Source Monitor: poll Bluesky, HN, X, Newsdata, Reddit
+  1. Multi-Source Monitor: poll Bluesky, HN, X, Newsdata, Reddit, Substack
   2. Velocity Detection: cluster by topic, enforce two-source verification
   3. Credibility Check: verify against credible news sources
-  4. Bulletin Generator: Claude writes the take
+  4. Bulletin Generator: Claude writes the take   (LOCAL/API-key mode only)
   5. Publish: save to data/bulletins/
 
 Usage:
-    python -m bulletin.bulletin_pipeline                # Full run
-    python -m bulletin.bulletin_pipeline --dry-run      # Test without publishing
+    python -m bulletin.bulletin_pipeline                 # Full run (local, needs API key)
+    python -m bulletin.bulletin_pipeline --dry-run       # Test without publishing
     python -m bulletin.bulletin_pipeline --stage monitor # Run single stage
+    python -m bulletin.bulletin_pipeline --cloud-mode    # Run 1-3, write candidates + heartbeat
+                                                         #   (for remote trigger; agent writes bulletins)
+
+CLOUD MODE:
+  The --cloud-mode flag stops the pipeline after stage 3 (credibility check)
+  and writes two files:
+    - data/bulletins/_candidates.json  (verified topics ready for writing)
+    - data/bulletins/_last_run.json    (heartbeat, ALWAYS written)
+  The cloud agent then reads _candidates.json, writes bulletin bodies itself,
+  and commits everything (including _last_run.json) back to the repo. This
+  gives us a git-visible heartbeat for every run, even when zero bulletins
+  are produced.
 """
 
 import argparse
@@ -122,6 +134,130 @@ def collect_all_sources(config_path="bulletin/bulletin_config.json"):
             logger.warning("Substack monitor failed: %s", e)
 
     return all_results
+
+
+def _write_heartbeat(bulletins_dir, source_counts, candidate_count, disposition, extra=None):
+    """Write _last_run.json heartbeat file.
+
+    Called at the end of every cloud-mode run, regardless of outcome, so that
+    the cloud agent can commit it and we get a git-visible record of every
+    trigger firing. This is what lets us answer "did the trigger run?" from
+    `git log` without ever needing to open claude.ai.
+    """
+    os.makedirs(bulletins_dir, exist_ok=True)
+    heartbeat = {
+        "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        "source_counts": source_counts,
+        "total_collected": sum(source_counts.values()),
+        "candidate_count": candidate_count,
+        "disposition": disposition,  # "no_results" | "no_spikes" | "no_credible" | "candidates_ready" | "error"
+    }
+    if extra:
+        heartbeat.update(extra)
+    path = os.path.join(bulletins_dir, "_last_run.json")
+    with open(path, "w") as f:
+        json.dump(heartbeat, f, indent=2)
+    print(f"\n[heartbeat] Wrote {path}")
+    return path
+
+
+def _count_by_platform(results):
+    counts = {}
+    for r in results:
+        p = r.get("source_platform", "unknown")
+        counts[p] = counts.get(p, 0) + 1
+    return counts
+
+
+def run_cloud_mode(config_path="bulletin/bulletin_config.json",
+                   bulletins_dir="data/bulletins"):
+    """Run stages 1-3 and write _candidates.json + _last_run.json.
+
+    This mode is designed for the remote cloud trigger which does NOT have
+    an Anthropic API key (the agent IS Claude and will write bulletins
+    itself). We run collection, velocity detection, and credibility checking
+    using the proper Python modules, then hand off a clean list of verified
+    candidates via JSON.
+
+    Always writes a heartbeat file, even on zero-candidate runs.
+    """
+    print(f"\n{'='*60}")
+    print(f"BULLETIN PIPELINE [CLOUD MODE] — "
+          f"{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
+    print(f"{'='*60}")
+
+    os.makedirs(bulletins_dir, exist_ok=True)
+    candidates_path = os.path.join(bulletins_dir, "_candidates.json")
+
+    # Stage 1: Multi-Source Monitor
+    print(f"\n--- Stage 1: Multi-Source Monitor ---")
+    try:
+        all_results = collect_all_sources(config_path)
+    except Exception as e:
+        logger.exception("Collection failed")
+        _write_heartbeat(bulletins_dir, {}, 0, "error", {"error": str(e)})
+        # Wipe stale candidates so agent doesn't re-process old data
+        with open(candidates_path, "w") as f:
+            json.dump([], f)
+        return []
+
+    source_counts = _count_by_platform(all_results)
+
+    if not all_results:
+        print("No results from any source.")
+        _write_heartbeat(bulletins_dir, source_counts, 0, "no_results")
+        with open(candidates_path, "w") as f:
+            json.dump([], f)
+        return []
+
+    print(f"\n  Total: {len(all_results)} results from all sources")
+
+    # Stage 2: Velocity Detection
+    print(f"\n--- Stage 2: Velocity Detection ---")
+    spikes = detect_spikes(all_results, config_path, bulletins_dir)
+
+    if not spikes:
+        print("No velocity spikes detected (two-source verification).")
+        _write_heartbeat(bulletins_dir, source_counts, 0, "no_spikes")
+        with open(candidates_path, "w") as f:
+            json.dump([], f)
+        return []
+
+    # Stage 3: Credibility Check
+    print(f"\n--- Stage 3: Credibility Check ---")
+    verified = []
+    for spike in spikes:
+        result = check_credibility(spike, config_path)
+        spike["credibility"] = result
+        if result["decision"] == "auto_publish":
+            verified.append(spike)
+        else:
+            print(f"  skipped {spike.get('topic_key', '?')}: {result.get('reason', '')}")
+
+    if not verified:
+        print("No topics passed credibility check.")
+        _write_heartbeat(bulletins_dir, source_counts, 0, "no_credible")
+        with open(candidates_path, "w") as f:
+            json.dump([], f)
+        return []
+
+    # Write candidates for the cloud agent to process
+    with open(candidates_path, "w") as f:
+        json.dump(verified, f, indent=2, default=str)
+
+    _write_heartbeat(
+        bulletins_dir,
+        source_counts,
+        len(verified),
+        "candidates_ready",
+        {"candidate_topics": [c.get("topic_key", "?") for c in verified]},
+    )
+
+    print(f"\n{'='*60}")
+    print(f"CLOUD MODE COMPLETE — {len(verified)} candidate(s) ready for agent")
+    print(f"Wrote: {candidates_path}")
+    print(f"{'='*60}")
+    return verified
 
 
 def run_pipeline(dry_run=False, stage="all", config_path="bulletin/bulletin_config.json",
@@ -262,17 +398,37 @@ def main():
         help="Run a specific stage or all stages",
     )
     parser.add_argument(
+        "--cloud-mode",
+        action="store_true",
+        help=(
+            "Run stages 1-3 and write _candidates.json + _last_run.json. "
+            "Used by the remote cloud trigger (no API key; agent writes bulletins)."
+        ),
+    )
+    parser.add_argument(
         "--config",
         default="bulletin/bulletin_config.json",
         help="Path to bulletin config JSON",
     )
+    parser.add_argument(
+        "--bulletins-dir",
+        default="data/bulletins",
+        help="Directory where candidates/heartbeat are written",
+    )
     args = parser.parse_args()
 
-    run_pipeline(
-        dry_run=args.dry_run,
-        stage=args.stage,
-        config_path=args.config,
-    )
+    if args.cloud_mode:
+        run_cloud_mode(
+            config_path=args.config,
+            bulletins_dir=args.bulletins_dir,
+        )
+    else:
+        run_pipeline(
+            dry_run=args.dry_run,
+            stage=args.stage,
+            config_path=args.config,
+            bulletins_dir=args.bulletins_dir,
+        )
 
 
 if __name__ == "__main__":

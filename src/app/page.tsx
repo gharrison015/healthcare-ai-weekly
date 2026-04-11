@@ -4,6 +4,7 @@ import { GlassCardStyles } from "@/components/ui/glass-card";
 import { SourceTicker } from "@/components/ui/source-ticker";
 import { PulseBeamCTA } from "@/components/ui/pulse-beam-cta";
 import { BreakingNewsTicker } from "@/components/ui/breaking-news-ticker";
+import { InlineHeroSearch } from "@/components/search/inline-hero-search";
 import { getIssuesManifest, getBulletins, getLearningTopics, getConsultingIntelligence } from "@/lib/data";
 import { IssuesCarousel } from "./issues-carousel";
 import { BulletinCards } from "./bulletin-cards";
@@ -35,7 +36,7 @@ export default async function HomePage({
 
       <div className="px-10 max-sm:px-4">
         {/* Hero */}
-        <div className="pt-20 pb-8 text-center">
+        <div className="pt-4 pb-2 text-center">
           <h1
             className="font-extrabold mb-2"
             style={{ color: "#0F1D35", letterSpacing: "-1px", fontSize: "48px" }}
@@ -61,8 +62,11 @@ export default async function HomePage({
         {/* Source Ticker */}
         <SourceTicker />
 
+        {/* Inline Hero Search - sits above the weekly news */}
+        <InlineHeroSearch />
+
         {/* Issues Section - Horizontal Carousel */}
-        <div className="flex items-baseline justify-between pt-8 mb-2">
+        <div className="flex items-baseline justify-between pt-3 mb-2">
           <div
             className="font-extrabold"
             style={{ fontSize: "28px", color: "#0F1D35", letterSpacing: "-0.3px" }}

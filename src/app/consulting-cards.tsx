@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { HorizontalScroller } from "@/components/ui/horizontal-scroller";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import type { ConsultingIntelEntry } from "@/lib/data";
@@ -44,13 +45,37 @@ function formatDate(dateStr: string): string {
 }
 
 export function ConsultingCards({ entries }: ConsultingCardsProps) {
+  const [highlightedId, setHighlightedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    function handleHash() {
+      const hash = window.location.hash.replace("#", "");
+      if (hash.startsWith("consulting-")) {
+        const slug = hash.replace("consulting-", "");
+        setHighlightedId(slug);
+        const el = document.getElementById(`consulting-${slug}`);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        // Clear highlight after 2 seconds
+        const t = setTimeout(() => setHighlightedId(null), 2000);
+        return () => clearTimeout(t);
+      }
+    }
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
   return (
     <HorizontalScroller className="pb-10">
       {entries.map((entry) => {
         const rel = relevanceLabel(entry.relevance);
+        const isHighlighted = highlightedId === entry.slug;
         return (
           <a
             key={entry.slug}
+            id={`consulting-${entry.slug}`}
             href={entry.source_url}
             target="_blank"
             rel="noopener noreferrer"
@@ -60,6 +85,10 @@ export function ConsultingCards({ entries }: ConsultingCardsProps) {
               minHeight: "220px",
               scrollSnapAlign: "start",
               color: "inherit",
+              outline: isHighlighted ? "3px solid #0284C7" : "none",
+              outlineOffset: isHighlighted ? "4px" : "0",
+              borderRadius: "18px",
+              transition: "outline 300ms ease",
             }}
           >
             <GlowCard glowColor="blue" customSize={true} className="w-full h-full p-7">

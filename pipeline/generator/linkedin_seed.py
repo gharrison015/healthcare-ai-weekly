@@ -8,7 +8,7 @@ def generate_seed(curated):
         "top_story": linkedin.get("top_story"),
         "hook": linkedin.get("hook"),
         "angle": linkedin.get("angle"),
-        "source": "healthcare-ai-newsletter",
+        "source": "healthcare-ai-weekly",
     }
 
 def save_seed(seed, output_dir="data/linkedin-seed"):
