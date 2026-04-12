@@ -12,21 +12,21 @@
     },
     "reddit": {
       "enabled": true,
-      "subreddits": ["MachineLearning", "healthcare", "artificial", "HealthIT"],
-      "keywords": ["healthcare AI", "clinical AI", "medical AI"]
+      "subreddits": ["MachineLearning", "healthcare", "artificial", "HealthIT", "LocalLLaMA", "OpenAI", "ClaudeAI", "singularity"],
+      "keywords": ["healthcare AI", "clinical AI", "medical AI", "Anthropic", "OpenAI", "Claude", "GPT", "Gemini", "Nvidia", "foundation model", "AI agent", "AI safety", "LLM", "AI regulation"]
     },
     "hackernews": {
       "enabled": true,
-      "keywords": ["healthcare AI", "clinical AI", "medical AI", "FDA AI"]
+      "keywords": ["healthcare AI", "clinical AI", "medical AI", "FDA AI", "Anthropic", "OpenAI", "Claude", "GPT", "Gemini", "Google DeepMind", "Nvidia", "Meta AI", "Apple Intelligence", "AI model", "LLM", "foundation model", "AI agent", "AI safety", "AI regulation", "open source AI"]
     },
     "newsdata": {
       "enabled": true,
-      "keywords": ["healthcare artificial intelligence", "clinical AI", "medical AI"],
+      "keywords": ["healthcare artificial intelligence", "clinical AI", "medical AI", "Anthropic", "OpenAI", "Google Gemini", "Nvidia AI", "Claude AI", "GPT", "AI regulation", "foundation model"],
       "categories": ["health", "technology"]
     },
     "substack": {
       "enabled": true,
-      "keywords": ["healthcare AI", "clinical AI", "medical AI", "health system", "FDA", "EHR"]
+      "keywords": ["healthcare AI", "clinical AI", "medical AI", "health system", "FDA", "EHR", "Anthropic", "OpenAI", "Claude", "GPT", "Gemini", "Nvidia", "AI agent", "AI safety", "LLM", "foundation model", "AI regulation"]
     }
   },
   "verification": {
@@ -37,7 +37,9 @@
     "big_ticket_keywords": [
       "acquisition", "merger", "billion", "million", "FDA", "clearance",
       "approval", "partnership", "launch", "release", "breach",
-      "vulnerability", "leak"
+      "vulnerability", "leak", "GPT-5", "GPT-6", "Claude 4", "Claude 5",
+      "Gemini 3", "open source", "executive order", "AI safety",
+      "benchmark", "inference", "reasoning model"
     ]
   },
   "limits": {
