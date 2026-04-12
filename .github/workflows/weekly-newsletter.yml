@@ -1,0 +1,106 @@
+name: Weekly Newsletter
+
+on:
+  schedule:
+    # Fridays 7:00 AM ET during EDT (11:00 UTC).
+    # During EST (Nov-Mar) this fires at 6am ET. Accept the shift.
+    - cron: '0 11 * * 5'
+  workflow_dispatch:
+    inputs:
+      date_override:
+        description: 'Issue date (YYYY-MM-DD). Blank = today (UTC).'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Generate only. Skip email send and git push.'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-newsletter
+  cancel-in-progress: false
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Compute issue date
+        id: date
+        run: |
+          if [ -n "${{ github.event.inputs.date_override }}" ]; then
+            DATE="${{ github.event.inputs.date_override }}"
+          else
+            DATE="$(date -u '+%Y-%m-%d')"
+          fi
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "Issue date: $DATE"
+
+      - name: Run collector
+        working-directory: pipeline
+        run: python pipeline.py --date ${{ steps.date.outputs.date }} --stage collector
+
+      - name: Run curator
+        working-directory: pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python pipeline.py --date ${{ steps.date.outputs.date }} --stage curator
+
+      - name: Run generator
+        working-directory: pipeline
+        run: python pipeline.py --date ${{ steps.date.outputs.date }} --stage generator
+
+      - name: Publish to content/
+        run: python .github/scripts/publish_issue.py ${{ steps.date.outputs.date }}
+
+      - name: Send newsletter
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: python .github/scripts/send_newsletter.py ${{ steps.date.outputs.date }}
+
+      - name: Commit and push
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.email "gh-actions@healthcareaibrief.com"
+          git config user.name  "Healthcare AI Weekly Bot"
+          git add content/
+          if git diff --cached --quiet; then
+            echo "No content changes to commit."
+            exit 0
+          fi
+          git commit -m "newsletter: ${{ steps.date.outputs.date }}"
+          git push
+
+      - name: Upload run artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-${{ steps.date.outputs.date }}
+          path: |
+            pipeline/data/issues/${{ steps.date.outputs.date }}/email.html
+            pipeline/data/issues/${{ steps.date.outputs.date }}/index.html
+            pipeline/data/curated/${{ steps.date.outputs.date }}.json
+          retention-days: 14
+          if-no-files-found: warn
