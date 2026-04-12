@@ -164,32 +164,48 @@ git add content/ && git commit -m "Add issue YYYY-MM-DD" && git push
 - **Liquid glass design** on the Vercel site (ambient gradient, backdrop-filter blur, glass cards).
 - **No Guidehouse branding anywhere in the byline/footer.** The "Let's Talk AI" CTA still routes to `gharrison@guidehouse.com` intentionally.
 - **FieldShield infrastructure is NEVER used** for this project.
-- **`gws` CLI** for email sending locally; **Gmail MCP** for the remote trigger.
+- **`gws` CLI** for email sending locally; **Gmail SMTP** for GitHub Actions.
 
-## Remote trigger notes
+## Automation notes
 
-Both cloud triggers run in Anthropic's workspace. Key characteristics:
+### Friday newsletter (GitHub Actions)
 
-- The cloud agent IS Claude (no Anthropic API key; it reasons directly)
-- Cloud clones the repo fresh on each run
-- Cloud commits results back to the repo (including the bulletin heartbeat)
-- The Friday newsletter trigger uses Gmail MCP for sending email
-- The bulletin trigger uses `python -m bulletin.bulletin_pipeline --cloud-mode` for the rigorous parts, then writes bulletins itself from `_candidates.json`
+- **Workflow:** `.github/workflows/weekly-newsletter.yml`
+- **Schedule:** Fridays 5am ET (`0 9 * * 5` UTC)
+- **How it works:** GitHub runner checks out repo, installs Python deps, runs collector → curator → generator, publishes to `content/`, sends email via SMTP, commits and pushes. Vercel auto-deploys.
+- **Scripts:** `.github/scripts/publish_issue.py` and `.github/scripts/send_newsletter.py`
+- **Secrets:** `ANTHROPIC_API_KEY`, `SMTP_USER`, `SMTP_PASSWORD` in GitHub repo secrets (never in code)
+- **Manual fire:** Actions tab → Weekly Newsletter → Run workflow (supports `dry_run` and `date_override`)
+- **Logs:** Full step-by-step logs visible in the Actions tab for every run
+- **Old Anthropic Friday trigger (`trig_01JqnHVGb3gfV1judxMohq12`):** Disabled 2026-04-12. Do not re-enable.
 
-To update a trigger prompt, open its URL on claude.ai and edit the instructions panel directly. Trigger prompts are not stored in this repo.
+### Bulletin monitor (Anthropic cloud trigger)
 
-## Current status (as of 2026-04-10)
+- **Trigger ID:** `trig_01Jr3zP4zvYRnvKo2MmHAeto`
+- Still runs in Anthropic's cloud. The cloud agent IS Claude (no API key needed). Clones repo fresh, runs `--cloud-mode`, writes bulletins, commits and pushes.
+- To update the trigger prompt, open its URL on claude.ai and edit the instructions panel.
+
+### AI Learning (manual, Greg's laptop)
+
+- Requires `notebooklm` CLI + local Chrome. Cannot be automated in CI yet.
+- Run: `cd pipeline && source venv/bin/activate && python -m learning.learning_pipeline`
+- Copy output to `content/learn/`, commit, push. Vercel auto-deploys.
+
+## Current status (as of 2026-04-12)
 
 ### Newsletter pipeline
 - 5 sections: What Matters, VBC Watch, M&A & Partnerships, Consulting Intelligence, Did You Know
 - Every story MUST have an AI/technology angle (enforced in guardrails)
 - Cross-issue dedup: curator reads last 4 weeks of headlines and won't repeat
-- 4 issues published (Mar 21, Mar 28, Apr 4, Apr 9)
+- 4 issues published (Mar 21, Mar 28, Apr 4, Apr 10)
+- **Fully automated via GitHub Actions** — end-to-end tested 2026-04-12 with laptop closed
+- RSS collector parallelized (10 threads, 3s timeout) for CI reliability
 
 ### Bulletin monitor
 - Sources: Newsdata, Hacker News, Reddit, Substack (X and Bluesky disabled — Cloudflare blocked)
+- Keywords widened 2026-04-12 to cover broad AI news: Anthropic, OpenAI, Gemini, Nvidia, foundation models, AI safety, AI regulation
 - Two-source verification: min 2 platforms, 3 unique authors, 24-hour window
-- Cloud mode with heartbeat landed 2026-04-10 (this session) — every 4-hour run now commits `_last_run.json` to git regardless of output
+- Cloud mode with heartbeat — every 4-hour run commits `_last_run.json` to git regardless of output
 - Weekly cycle: bulletins accumulate Mon-Fri, archive on Sunday, fresh start Monday
 
 ### Vercel site
@@ -211,9 +227,10 @@ To update a trigger prompt, open its URL on claude.ai and edit the instructions 
 
 ## Open items
 
-1. **Friday newsletter trigger path audit.** The Friday trigger has its own prompt on claude.ai; verify it references the consolidated-repo paths AND uses `https://healthcareaibrief.com` for email links (not the old `.vercel.app` subdomain).
-2. **Delete `/Users/greg/Claude/healthcare-ai-newsletter` local folder** after one full weekly cycle confirms nothing regressed.
+1. ~~**Friday newsletter trigger path audit.**~~ Resolved: migrated to GitHub Actions 2026-04-12. Old Anthropic trigger disabled.
+2. **Delete `/Users/greg/Claude/healthcare-ai-newsletter` local folder** — safe to delete now. Old repo is stale.
 3. **Outlook Classic email rewrite.** Current template breaks in Word-rendered Outlook Classic. Fix pending colleague's screenshots.
 4. **Microsoft Form for subscriptions.** Create Form, link from site, Power Automate distribution.
-5. **Reddit API auth.** Register app for higher rate limits.
+5. **Reddit API auth.** Register app for higher rate limits (Reddit rate-limits unauthenticated requests, especially on r/singularity).
 6. **Re-enable X/Bluesky** when Cloudflare blocks lift.
+7. **Automate AI Learning quizzes** — deferred. Anthropic API fallback for summaries + quizzes is built but Greg prefers manual NotebookLM workflow for now. See memory note `project_learning_automation.md` for full resume checklist.

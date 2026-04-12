@@ -168,32 +168,35 @@ The old `gharrison015/healthcare-ai-newsletter` repo was consolidated into this 
                          ▼
           ┌──────────────────────────────┐
           │ Vercel auto-deploys          │
-          │ healthcare-ai-weekly.vercel  │
+          │ healthcareaibrief.com        │
           └──────────────────────────────┘
 
-Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
-  • Friday newsletter (trig_01JqnHVGb3gfV1judxMohq12)
-  • Every-4-hour bulletin monitor (trig_01Jr3zP4zvYRnvKo2MmHAeto)
+Automation:
+  • Friday newsletter: GitHub Actions (.github/workflows/weekly-newsletter.yml)
+  • Bulletin monitor: Anthropic cloud trigger (trig_01Jr3zP4zvYRnvKo2MmHAeto)
+  • AI Learning: Manual push from Greg's laptop
 ```
 
-### 4.3 Remote Trigger
+### 4.3 Newsletter Automation (GitHub Actions)
 
-**Trigger ID:** `trig_01JqnHVGb3gfV1judxMohq12`
-**Schedule:** Fridays at 7 AM ET (`0 11 * * 5` UTC)
-**Environment:** Anthropic cloud, clones both repos fresh each run
-**Model:** Claude Sonnet 4.6
-**Email:** Gmail MCP connector
-**Curation:** Remote agent IS the curator (reads persona.md, guardrails.json, feedback.md, then curates from raw articles — no API key needed)
+**Workflow:** `.github/workflows/weekly-newsletter.yml`
+**Schedule:** Fridays at 5 AM ET (`0 9 * * 5` UTC)
+**Environment:** GitHub Actions runner (ubuntu-latest), Python 3.13
+**Email:** Gmail SMTP via App Password (`.github/scripts/send_newsletter.py`)
+**Curation:** Anthropic API via `pipeline/curator/curator_agent.py`
+**Publishing:** `.github/scripts/publish_issue.py` copies to `content/`, commits, pushes. Vercel auto-deploys.
+**Secrets:** `ANTHROPIC_API_KEY`, `SMTP_USER`, `SMTP_PASSWORD` (stored in GitHub repo secrets, never in code)
+**Manual trigger:** Also supports `workflow_dispatch` with optional `date_override` and `dry_run` inputs.
 
 ### 4.4 Key Infrastructure
 
 | Service | Purpose | Status |
 |---|---|---|
-| Vercel | Web hosting | Live |
-| GitHub | Repos + CI | Live |
-| Anthropic Remote Trigger | Scheduled weekly runs | Live |
-| Gmail MCP | Email sending | Live |
-| NotebookLM CLI | Learning content source | Live |
+| Vercel | Web hosting (`healthcareaibrief.com`) | Live |
+| GitHub Actions | Friday newsletter automation | Live |
+| Anthropic Cloud Trigger | Bulletin monitor (every 4 hrs weekdays) | Live |
+| Gmail SMTP | Newsletter email delivery | Live |
+| NotebookLM CLI | Learning content source (manual) | Live |
 | Supabase | Quiz analytics | Not yet deployed |
 | X API | Bulletin velocity detection | Not yet configured |
 
@@ -221,7 +224,7 @@ Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
 
 **Code:**
 - FieldShield infrastructure is NEVER used for this project (Greg's separate business)
-- Gmail MCP for remote trigger email, `gws` CLI for local sending
+- Gmail SMTP for GitHub Actions email, `gws` CLI for local test sends
 - No mocking in integration tests — hit real APIs/feeds
 
 ## 6. Current Status (as of 2026-04-10)
@@ -242,15 +245,21 @@ Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
 
 ### In Progress
 
-- [ ] Validate Friday 7 AM ET remote trigger end-to-end (initial test runs silently failed; manual runs successful)
-- [ ] Set up twice-weekly learning pipeline remote trigger with topic rotation
-- [ ] Activate bulletin pipeline remote trigger (every 4 hours)
-- [ ] Debug Gmail MCP behavior in cloud environment
 - [ ] Create Supabase project and deploy quiz analytics
+
+### Recently Completed (2026-04-12)
+
+- [x] Migrated Friday newsletter from Anthropic cloud triggers to **GitHub Actions** (Fridays 5 AM ET, fully autonomous)
+- [x] End-to-end tested: collect → curate → generate → email → publish → Vercel deploy (laptop closed)
+- [x] Parallelized RSS collector (20 min → 37 sec) for CI reliability
+- [x] Widened bulletin monitor keywords for broad AI industry news (Anthropic, OpenAI, Gemini, Nvidia, etc.)
+- [x] Disabled old Anthropic Friday newsletter trigger + cleaned up 3 test triggers
+- [x] Custom domain `healthcareaibrief.com` live, `.vercel.app` kept as 308 redirect
+- [x] Bulletin monitor Anthropic trigger active (every 4 hrs weekdays)
 
 ### Not Started
 
-- [x] ~~Custom domain~~ — **done 2026-04-10**: `healthcareaibrief.com` purchased, Vercel points here as primary, `.vercel.app` kept alive as 308 redirect
+- [ ] Automate AI Learning quiz pipeline (deferred — NotebookLM CLI requires local Chrome; Anthropic fallback ready but Greg prefers manual for now)
 - [ ] Microsoft Form for public subscription intake
 - [ ] Power Automate distribution flow for subscribers
 - [ ] X API credentials for bulletin pipeline
@@ -264,7 +273,7 @@ Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
 - Consulting Intelligence section populated with at least 2 stories per week
 
 **Distribution:**
-- Email delivered on schedule (Fridays 7 AM ET)
+- Email delivered on schedule (Fridays 5 AM ET via GitHub Actions)
 - Vercel deploy succeeds on push
 - No Gmail clipping (stay under 102KB, unique subjects)
 
@@ -283,7 +292,7 @@ Cloud triggers (Anthropic workspace, run on schedule, commit back to repo):
 
 ## 9. Open Questions
 
-- When to switch from manual/test sends to the public launch? (Gating on remote trigger reliability + subscription system.)
+- When to switch from manual/test sends to the public launch? (Gating on subscription system — automation is now reliable via GitHub Actions.)
 - Does the Consulting Intelligence section need its own archive page at `/consulting-intelligence`, or is the landing page section sufficient?
 - How should we handle non-AI consulting moves that are strategically relevant but don't fit the AI-only filter? (Currently classified as `ai_strategy` relevance and included.)
 - Should the newsletter ever include a dedicated "Consulting Intelligence" section in the email body, or keep it web-only?

@@ -82,19 +82,21 @@ Nothing runs "locally for production." Every scheduled job runs in Anthropic's c
 
 ---
 
-## Cloud triggers (the only things that run on a schedule)
+## Scheduled automation
 
-Both triggers run in Anthropic's cloud. They clone `healthcare-ai-weekly` fresh each run, execute their prompt, commit output back to the repo, and exit. Your Mac is not involved.
+Your Mac is not involved. Everything runs in the cloud.
 
-### 1. Friday newsletter
+### 1. Friday newsletter (GitHub Actions)
 
-- **Trigger ID:** `trig_01JqnHVGb3gfV1judxMohq12`
-- **URL:** https://claude.ai/code/scheduled/trig_01JqnHVGb3gfV1judxMohq12
-- **Schedule:** Fridays 9am ET (`cron: 0 13 * * 5` UTC)
-- **What it does:** Runs the full collector → curator → generator → distributor pipeline, writes the week's issue to `content/issues/<date>/`, sends the HTML email via Gmail MCP, commits to main.
-- **Health:** flagged in HANDOFF as needing path debugging after consolidation; verify it ran successfully by checking for a new `content/issues/<this-Friday>/` directory.
+- **Workflow:** `.github/workflows/weekly-newsletter.yml`
+- **Schedule:** Fridays 5am ET (`cron: 0 9 * * 5` UTC)
+- **What it does:** Runs collector (RSS) → curator (Anthropic API) → generator (Jinja2 templates) → sends email via Gmail SMTP → publishes to `content/issues/<date>/` → commits and pushes → Vercel auto-deploys.
+- **Scripts:** `.github/scripts/publish_issue.py` (copies to content/, updates manifest), `.github/scripts/send_newsletter.py` (SMTP sender)
+- **Secrets:** `ANTHROPIC_API_KEY`, `SMTP_USER`, `SMTP_PASSWORD` in GitHub repo secrets (Settings → Secrets → Actions)
+- **Manual trigger:** Actions tab → Weekly Newsletter → Run workflow (supports `dry_run` and `date_override`)
+- **Health check:** Actions tab shows every run with full logs. Green = success. Also check for a new `content/issues/<this-Friday>/` directory on main.
 
-### 2. Bulletin monitor
+### 2. Bulletin monitor (Anthropic cloud trigger)
 
 - **Trigger ID:** `trig_01Jr3zP4zvYRnvKo2MmHAeto`
 - **URL:** https://claude.ai/code/scheduled/trig_01Jr3zP4zvYRnvKo2MmHAeto
@@ -107,6 +109,12 @@ Both triggers run in Anthropic's cloud. They clone `healthcare-ai-weekly` fresh 
   5. `git add content/ && git commit && git push`
 - **Health check:** `git log content/bulletins/_last_run.json` — you'll see a commit for every run, every 4 hours. If no commit in >6 hours during a weekday, the trigger failed.
 
+### 3. AI Learning (manual)
+
+- **Runs on:** Greg's laptop only (requires `notebooklm` CLI + local Chrome)
+- **Command:** `cd pipeline && source venv/bin/activate && python -m learning.learning_pipeline`
+- **Publish:** Copy `pipeline/data/learn/*.json` to `content/learn/`, commit and push. Vercel auto-deploys.
+
 ---
 
 ## Other services
@@ -115,7 +123,7 @@ Both triggers run in Anthropic's cloud. They clone `healthcare-ai-weekly` fresh 
 |---|---|---|
 | **Vercel** | Hosts the Next.js site, auto-deploys on `git push main` | **Primary:** https://healthcareaibrief.com<br>**Legacy (308 redirect):** https://healthcare-ai-weekly.vercel.app |
 | **Supabase** | Quiz analytics (submissions + dashboard) | Project `wjwubjahhbhhsctnpfcb` (NOT FieldShield) |
-| **Gmail (via `gws` CLI locally, MCP connector in cloud)** | Send the weekly newsletter | Sends to `gharrison@guidehouse.com` |
+| **Gmail (SMTP in GitHub Actions, `gws` CLI locally)** | Send the weekly newsletter | Sends to `gharrison@guidehouse.com` |
 | **Analytics dashboard** | Password-gated quiz stats | `/analytics?key=hcai2026analytics` |
 
 ---
@@ -124,8 +132,10 @@ Both triggers run in Anthropic's cloud. They clone `healthcare-ai-weekly` fresh 
 
 | Secret | Lives in | Used by |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | `pipeline/.env` (local only) | Local curator + bulletin generator runs |
-| `NEWSDATA_API_KEY` | `pipeline/.env` (local) AND inline in cloud trigger prompts | Collector + bulletin monitor |
+| `ANTHROPIC_API_KEY` | `pipeline/.env` (local) AND GitHub repo secrets | Curator (local + GitHub Actions) |
+| `SMTP_USER` | GitHub repo secrets only | Gmail SMTP sender in GitHub Actions |
+| `SMTP_PASSWORD` | GitHub repo secrets only | Gmail App Password for SMTP |
+| `NEWSDATA_API_KEY` | `pipeline/.env` (local) AND inline in cloud trigger prompts | Bulletin monitor |
 | `REDDIT_*` | `pipeline/.env` (local only) | Reddit monitor (optional, higher rate limits) |
 | `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` | `.env.local` AND Vercel env vars | Next.js site (quiz analytics) |
 | `ANALYTICS_PASSWORD` (`hcai2026analytics`) | URL query param | `/analytics` dashboard gate |
@@ -143,14 +153,15 @@ Operational recipes live in `pipeline/HANDOFF.md`. This doc is the map; HANDOFF 
 - **Run the pipeline locally:** see HANDOFF § "How to Run Locally"
 - **Send a test email:** see HANDOFF § "How to Send a Test Email"
 - **Check if the bulletin trigger ran:** `git log -- content/bulletins/_last_run.json` (committed every 4 hours regardless of output)
-- **Update a cloud trigger prompt:** open the trigger URL on claude.ai and edit the instructions panel — the trigger lives in Anthropic's cloud, not this repo
+- **Update the newsletter workflow:** edit `.github/workflows/weekly-newsletter.yml`, commit and push
+- **Update the bulletin trigger prompt:** open the trigger URL on claude.ai and edit the instructions panel
 - **Debug why something isn't on the Vercel site:** check that the underlying JSON exists in `content/`, the manifest is updated, `next build` succeeded in Vercel dashboard
 
 ---
 
 ## Anti-goals (things this project deliberately does NOT do)
 
-- ❌ **No local cron.** Scheduled work runs in cloud triggers. Your Mac may be off.
+- ❌ **No local cron.** Newsletter runs on GitHub Actions, bulletins on Anthropic cloud trigger. Your Mac may be off.
 - ❌ **No second pipeline codebase.** The old `healthcare-ai-newsletter` folder/repo is dead. Don't edit it.
 - ❌ **No Guidehouse branding.** Site is independent ("by Greg Harrison"). The email CTA still routes to his Guidehouse inbox intentionally.
 - ❌ **No em dashes anywhere** in generated content. Enforced by curator prompt + post-processing strip.
