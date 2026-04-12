@@ -103,8 +103,7 @@ def collect_rss(sources_path, max_age_days=7):
             "url": build_google_news_url(query),
         })
 
-    # Fetch all feeds in parallel (10 threads — I/O bound, not CPU)
-    with ThreadPoolExecutor(max_workers=10) as pool:
+    with ThreadPoolExecutor(max_workers=min(10, len(feeds))) as pool:
         futures = {
             pool.submit(_fetch_feed, source, config["keywords"], max_age_days): source
             for source in feeds

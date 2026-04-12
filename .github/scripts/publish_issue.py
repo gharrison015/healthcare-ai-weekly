@@ -26,7 +26,7 @@ CONTENT_DIR = REPO_ROOT / "content"
 
 
 def count_stories(sections: dict, key: str) -> int:
-    return len(sections.get(key, []) or [])
+    return len(sections.get(key) or [])
 
 
 def compute_week_range(date_str: str) -> str:
