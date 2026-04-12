@@ -5,6 +5,8 @@ on:
     # Fridays 7:00 AM ET during EDT (11:00 UTC).
     # During EST (Nov-Mar) this fires at 6am ET. Accept the shift.
     - cron: '0 11 * * 5'
+    # ONE-TIME TEST: Saturday 4/12 at 1:45 PM ET (17:45 UTC). Remove after test.
+    - cron: '45 17 12 4 *'
   workflow_dispatch:
     inputs:
       date_override:
