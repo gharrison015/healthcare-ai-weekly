@@ -3,11 +3,12 @@ import json
 import re
 import uuid
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from time import mktime
 from urllib.parse import quote
 
-def resolve_google_news_url(url, timeout=10):
+def resolve_google_news_url(url, timeout=3):
     """Resolve a Google News redirect URL to the actual article URL.
 
     Google News RSS feeds return redirect URLs (news.google.com/rss/articles/...)
@@ -20,10 +21,8 @@ def resolve_google_news_url(url, timeout=10):
     try:
         response = requests.head(url, allow_redirects=True, timeout=timeout)
         resolved = response.url
-        # Only use resolved URL if it's no longer a Google News URL
         if "news.google.com" not in resolved:
             return resolved
-        # If HEAD didn't resolve, try GET (some servers don't support HEAD redirects)
         response = requests.get(url, allow_redirects=True, timeout=timeout, stream=True)
         resolved = response.url
         response.close()
@@ -73,6 +72,20 @@ def parse_feed_entry(entry, source, keywords, max_age_days=7):
         "keywords_matched": matched,
     }
 
+def _fetch_feed(source, keywords, max_age_days):
+    """Fetch and parse a single RSS feed. Thread-safe."""
+    results = []
+    try:
+        feed = feedparser.parse(source["url"])
+        for entry in feed.entries:
+            article = parse_feed_entry(entry, source, keywords, max_age_days)
+            if article:
+                results.append(article)
+    except Exception as e:
+        print(f"Warning: Failed to parse {source['name']}: {e}")
+    return results
+
+
 def collect_rss(sources_path, max_age_days=7):
     with open(sources_path) as f:
         config = json.load(f)
@@ -80,28 +93,26 @@ def collect_rss(sources_path, max_age_days=7):
     articles = []
     seen_urls = set()
 
-    for source in config["feeds"]:
-        try:
-            feed = feedparser.parse(source["url"])
-            for entry in feed.entries:
-                article = parse_feed_entry(entry, source, config["keywords"], max_age_days)
-                if article and article["url"] not in seen_urls:
-                    seen_urls.add(article["url"])
-                    articles.append(article)
-        except Exception as e:
-            print(f"Warning: Failed to parse {source['name']}: {e}")
-
+    # Build the full list of feeds to fetch (RSS + Google News queries)
+    feeds = list(config["feeds"])
     for query in config.get("google_news_queries", []):
-        url = build_google_news_url(query)
-        gn_source = {"name": "Google News", "tier": "catch_all", "category": "core"}
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries:
-                article = parse_feed_entry(entry, gn_source, config["keywords"], max_age_days)
-                if article and article["url"] not in seen_urls:
+        feeds.append({
+            "name": "Google News",
+            "tier": "catch_all",
+            "category": "core",
+            "url": build_google_news_url(query),
+        })
+
+    # Fetch all feeds in parallel (10 threads — I/O bound, not CPU)
+    with ThreadPoolExecutor(max_workers=10) as pool:
+        futures = {
+            pool.submit(_fetch_feed, source, config["keywords"], max_age_days): source
+            for source in feeds
+        }
+        for future in as_completed(futures):
+            for article in future.result():
+                if article["url"] not in seen_urls:
                     seen_urls.add(article["url"])
                     articles.append(article)
-        except Exception as e:
-            print(f"Warning: Failed Google News query '{query}': {e}")
 
     return articles
