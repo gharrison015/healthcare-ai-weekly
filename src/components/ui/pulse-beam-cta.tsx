@@ -1,4 +1,38 @@
+'use client';
+
+import { useState } from 'react';
+
 export function PulseBeamCTA() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+
+  async function handleSubscribe(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email.trim()) return;
+
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus('success');
+        setMessage(data.message === 'Already subscribed' ? 'You\'re already subscribed!' : 'You\'re in! See you Friday.');
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage(data.error || 'Something went wrong');
+      }
+    } catch {
+      setStatus('error');
+      setMessage('Network error. Try again.');
+    }
+  }
+
   return (
     <div
       className="relative flex justify-center overflow-hidden"
@@ -11,7 +45,6 @@ export function PulseBeamCTA() {
           preserveAspectRatio="none"
           className="w-full h-full"
         >
-          {/* Beam path lines */}
           <path d="M0 60 H340" stroke="rgba(15, 29, 53, 0.08)" strokeWidth="1" fill="none" />
           <path d="M460 60 H800" stroke="rgba(15, 29, 53, 0.08)" strokeWidth="1" fill="none" />
           <path d="M200 0 C200 40 340 60 340 60" stroke="rgba(15, 29, 53, 0.08)" strokeWidth="1" fill="none" />
@@ -19,7 +52,6 @@ export function PulseBeamCTA() {
           <path d="M100 120 C100 80 340 60 340 60" stroke="rgba(15, 29, 53, 0.08)" strokeWidth="1" fill="none" />
           <path d="M700 120 C700 80 460 60 460 60" stroke="rgba(15, 29, 53, 0.08)" strokeWidth="1" fill="none" />
 
-          {/* Animated glow beams */}
           <path d="M0 60 H340" stroke="url(#beam-grad-1)" strokeWidth="2" fill="none" strokeLinecap="round" />
           <path d="M460 60 H800" stroke="url(#beam-grad-2)" strokeWidth="2" fill="none" strokeLinecap="round" />
           <path d="M200 0 C200 40 340 60 340 60" stroke="url(#beam-grad-3)" strokeWidth="2" fill="none" strokeLinecap="round" />
@@ -27,7 +59,6 @@ export function PulseBeamCTA() {
           <path d="M100 120 C100 80 340 60 340 60" stroke="url(#beam-grad-5)" strokeWidth="2" fill="none" strokeLinecap="round" />
           <path d="M700 120 C700 80 460 60 460 60" stroke="url(#beam-grad-6)" strokeWidth="2" fill="none" strokeLinecap="round" />
 
-          {/* Connection dots */}
           <circle cx="0" cy="60" r="3" fill="rgba(15, 29, 53, 0.15)" />
           <circle cx="800" cy="60" r="3" fill="rgba(15, 29, 53, 0.15)" />
           <circle cx="200" cy="0" r="3" fill="rgba(15, 29, 53, 0.15)" />
@@ -64,36 +95,88 @@ export function PulseBeamCTA() {
         </svg>
       </div>
 
-      {/* CTA Button */}
-      <a
-        href="mailto:gharrison@guidehouse.com?subject=Healthcare%20AI%20Weekly%20-%20Let's%20Talk%20AI&body=Hi%20Greg%2C%0A%0AI%20came%20across%20Healthcare%20AI%20Weekly%20and%20I'd%20love%20to%20connect%20on%20AI%20in%20healthcare.%0A%0ASpecifically%2C%20I'm%20interested%20in%3A%0A-%20%0A%0ABest%2C%0A"
-        className="cta-button relative z-[2] inline-block no-underline cursor-pointer"
-        style={{
-          padding: "10px 28px",
-          borderRadius: "40px",
-          background: "#0a1628",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          boxShadow:
-            "0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-          transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
-      >
-        <span
-          style={{
-            fontSize: "15px",
-            fontWeight: 700,
-            letterSpacing: "0.3px",
-            background: "linear-gradient(to right, #cbd5e1, #64748b, #cbd5e1)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          Let&apos;s Talk AI
-        </span>
-      </a>
+      {/* Subscribe form */}
+      <div className="relative z-[2]">
+        {status === 'success' ? (
+          <div
+            style={{
+              padding: "10px 28px",
+              borderRadius: "40px",
+              background: "#0a1628",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow: "0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15)",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "14px",
+                fontWeight: 700,
+                background: "linear-gradient(to right, #34d399, #10b981)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              {message}
+            </span>
+          </div>
+        ) : (
+          <form onSubmit={handleSubscribe} className="flex items-center gap-2">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
+              placeholder="your@email.com"
+              required
+              style={{
+                padding: "9px 16px",
+                borderRadius: "40px",
+                background: "rgba(10, 22, 40, 0.6)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                color: "#e2e8f0",
+                fontSize: "14px",
+                width: "220px",
+                outline: "none",
+                fontFamily: "inherit",
+              }}
+            />
+            <button
+              type="submit"
+              disabled={status === 'loading'}
+              className="cta-button"
+              style={{
+                padding: "10px 24px",
+                borderRadius: "40px",
+                background: "#0a1628",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                cursor: status === 'loading' ? 'wait' : 'pointer',
+                transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  letterSpacing: "0.3px",
+                  background: "linear-gradient(to right, #cbd5e1, #64748b, #cbd5e1)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+              </span>
+            </button>
+          </form>
+        )}
+        {status === 'error' && (
+          <div style={{ textAlign: 'center', marginTop: 6, fontSize: 13, color: '#f87171' }}>
+            {message}
+          </div>
+        )}
+      </div>
 
-      {/* Hover styles */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
