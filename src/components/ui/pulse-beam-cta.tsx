@@ -3,7 +3,6 @@
 import { useState } from 'react';
 
 export function PulseBeamCTA() {
-  const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -22,7 +21,7 @@ export function PulseBeamCTA() {
       const data = await res.json();
       if (res.ok) {
         setStatus('success');
-        setMessage(data.message === 'Already subscribed' ? 'You\'re already subscribed!' : 'You\'re in! See you Friday.');
+        setMessage(data.message === 'Already subscribed' ? 'You\'re already on the list.' : 'You\'re in. See you Friday.');
         setEmail('');
       } else {
         setStatus('error');
@@ -96,7 +95,7 @@ export function PulseBeamCTA() {
         </svg>
       </div>
 
-      {/* CTA / Subscribe */}
+      {/* Subscribe */}
       <div className="relative z-[2]">
         {status === 'success' ? (
           <div
@@ -121,20 +120,20 @@ export function PulseBeamCTA() {
               {message}
             </span>
           </div>
-        ) : showForm ? (
-          <form onSubmit={handleSubscribe} className="flex items-center gap-2">
+        ) : (
+          <form onSubmit={handleSubscribe} className="flex items-center gap-0">
             <input
               type="email"
               value={email}
               onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
-              placeholder="your@email.com"
+              placeholder="Enter your email"
               required
-              autoFocus
               style={{
-                padding: "9px 16px",
-                borderRadius: "40px",
+                padding: "10px 16px",
+                borderRadius: "40px 0 0 40px",
                 background: "rgba(10, 22, 40, 0.6)",
                 border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderRight: "none",
                 color: "#e2e8f0",
                 fontSize: "14px",
                 width: "220px",
@@ -145,12 +144,13 @@ export function PulseBeamCTA() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="cta-button"
+              className="cta-button relative"
               style={{
                 padding: "10px 24px",
-                borderRadius: "40px",
+                borderRadius: "0 40px 40px 0",
                 background: "#0a1628",
                 border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderLeft: "none",
                 boxShadow: "0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
                 cursor: status === 'loading' ? 'wait' : 'pointer',
                 transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -167,38 +167,10 @@ export function PulseBeamCTA() {
                   backgroundClip: "text",
                 }}
               >
-                {status === 'loading' ? 'Subscribing...' : 'Go'}
+                {status === 'loading' ? '...' : 'Subscribe'}
               </span>
             </button>
           </form>
-        ) : (
-          <button
-            onClick={() => setShowForm(true)}
-            className="cta-button relative cursor-pointer"
-            style={{
-              padding: "10px 28px",
-              borderRadius: "40px",
-              background: "#0a1628",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              boxShadow:
-                "0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-              transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-            }}
-          >
-            <span
-              style={{
-                fontSize: "15px",
-                fontWeight: 700,
-                letterSpacing: "0.3px",
-                background: "linear-gradient(to right, #cbd5e1, #64748b, #cbd5e1)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Subscribe
-            </span>
-          </button>
         )}
         {status === 'error' && (
           <div style={{ textAlign: 'center', marginTop: 6, fontSize: 13, color: '#f87171' }}>
@@ -214,14 +186,6 @@ export function PulseBeamCTA() {
               box-shadow: 0 0 32px rgba(56, 189, 248, 0.2), 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
               transform: scale(1.03);
             }
-            .cta-button::before {
-              content: '';
-              position: absolute; inset: 0; border-radius: 60px;
-              background: radial-gradient(75% 100% at 50% 0%, rgba(56, 189, 248, 0.4) 0%, transparent 75%);
-              opacity: 0;
-              transition: opacity 0.4s;
-            }
-            .cta-button:hover::before { opacity: 1; }
             .cta-button:hover span {
               background: linear-gradient(to right, #e2e8f0, #94a3b8, #e2e8f0) !important;
               -webkit-background-clip: text !important;
