@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 export function PulseBeamCTA() {
+  const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -95,7 +96,7 @@ export function PulseBeamCTA() {
         </svg>
       </div>
 
-      {/* Subscribe form */}
+      {/* CTA / Subscribe */}
       <div className="relative z-[2]">
         {status === 'success' ? (
           <div
@@ -120,7 +121,7 @@ export function PulseBeamCTA() {
               {message}
             </span>
           </div>
-        ) : (
+        ) : showForm ? (
           <form onSubmit={handleSubscribe} className="flex items-center gap-2">
             <input
               type="email"
@@ -128,6 +129,7 @@ export function PulseBeamCTA() {
               onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
               placeholder="your@email.com"
               required
+              autoFocus
               style={{
                 padding: "9px 16px",
                 borderRadius: "40px",
@@ -165,10 +167,38 @@ export function PulseBeamCTA() {
                   backgroundClip: "text",
                 }}
               >
-                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                {status === 'loading' ? 'Subscribing...' : 'Go'}
               </span>
             </button>
           </form>
+        ) : (
+          <button
+            onClick={() => setShowForm(true)}
+            className="cta-button relative cursor-pointer"
+            style={{
+              padding: "10px 28px",
+              borderRadius: "40px",
+              background: "#0a1628",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow:
+                "0 0 20px rgba(56, 189, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+              transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "15px",
+                fontWeight: 700,
+                letterSpacing: "0.3px",
+                background: "linear-gradient(to right, #cbd5e1, #64748b, #cbd5e1)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Subscribe
+            </span>
+          </button>
         )}
         {status === 'error' && (
           <div style={{ textAlign: 'center', marginTop: 6, fontSize: 13, color: '#f87171' }}>
