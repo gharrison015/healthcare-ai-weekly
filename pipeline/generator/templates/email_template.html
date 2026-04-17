@@ -63,6 +63,43 @@
 <div style="font-size:14px;color:#94a3b8;">{{ item.source_article.source if item.source_article is defined else '' }} &bull; <a href="{{ deep_dive_url }}#{{ section_anchor }}" style="color:#2563eb;font-size:13px;font-weight:700;text-decoration:underline;">Learn more</a></div>
 {% endmacro %}
 
+{# Render stories in a responsive 2-column grid. A solo card in a row
+   spans both columns (colspan=2, width:100%) so the section never shows
+   dead half-width space when the curator only produced 1 story. #}
+{% macro story_grid(stories, anchor, has_badge=false) %}
+{% if stories %}
+<table style="width:100%;border-collapse:separate;border-spacing:8px;">
+  {% for i in range(0, stories|length, 2) %}
+  <tr>
+    {% if i + 1 < stories|length %}
+    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i], anchor, has_badge) }}</td>
+    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i+1], anchor, has_badge) }}</td>
+    {% else %}
+    <td colspan="2" class="story-cell" style="width:100%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i], anchor, has_badge) }}</td>
+    {% endif %}
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+{% endmacro %}
+
+{% macro dyk_grid(items, anchor) %}
+{% if items %}
+<table style="width:100%;border-collapse:separate;border-spacing:8px;">
+  {% for i in range(0, items|length, 2) %}
+  <tr>
+    {% if i + 1 < items|length %}
+    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i], anchor) }}</td>
+    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i+1], anchor) }}</td>
+    {% else %}
+    <td colspan="2" class="story-cell" style="width:100%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i], anchor) }}</td>
+    {% endif %}
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+{% endmacro %}
+
 <!-- Header -->
 <div style="padding:0;">
   <div class="header-inner" style="padding:36px 32px 28px;">
@@ -95,72 +132,34 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;white-space:nowrap;">What Matters This Week</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if top_stories[0] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(top_stories[0], "top-stories", true) }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if top_stories[1] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(top_stories[1], "top-stories", true) }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-      <tr>
-        {% if top_stories[2] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(top_stories[2], "top-stories", true) }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if top_stories[3] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(top_stories[3], "top-stories", true) }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {{ story_grid(top_stories, "top-stories", true) }}
   </div>
   {% endif %}
 
-  <!-- Value-Based Care Watch - 2x2 -->
+  <!-- Value-Based Care Watch -->
   {% if vbc_watch %}
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;white-space:nowrap;">Value-Based Care Watch</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if vbc_watch[0] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(vbc_watch[0], "vbc-watch") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if vbc_watch[1] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(vbc_watch[1], "vbc-watch") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-      <tr>
-        {% if vbc_watch[2] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(vbc_watch[2], "vbc-watch") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if vbc_watch[3] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(vbc_watch[3], "vbc-watch") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {{ story_grid(vbc_watch, "vbc-watch") }}
   </div>
   {% endif %}
 
-  <!-- Acquisitions & Partnerships - 2x2 -->
+  <!-- Acquisitions & Partnerships -->
   {% if ma_partnerships %}
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;white-space:nowrap;">Acquisitions & Partnerships</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click any headline for the full analysis</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if ma_partnerships[0] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(ma_partnerships[0], "ma-partnerships") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if ma_partnerships[1] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(ma_partnerships[1], "ma-partnerships") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-      <tr>
-        {% if ma_partnerships[2] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(ma_partnerships[2], "ma-partnerships") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if ma_partnerships[3] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(ma_partnerships[3], "ma-partnerships") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {{ story_grid(ma_partnerships, "ma-partnerships") }}
   </div>
   {% endif %}
 
-  <!-- Consulting Intelligence - up to 3 cards -->
+  <!-- Consulting Intelligence -->
   {% if consulting_intelligence %}
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;white-space:nowrap;">Consulting Intelligence</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">How consulting firms are moving in healthcare AI</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if consulting_intelligence[0] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(consulting_intelligence[0], "consulting-intelligence") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if consulting_intelligence[1] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(consulting_intelligence[1], "consulting-intelligence") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-      {% if consulting_intelligence[2] is defined %}
-      <tr>
-        <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(consulting_intelligence[2], "consulting-intelligence") }}</td>
-        <td width="50%" style="width:50%;"></td>
-      </tr>
-      {% endif %}
-    </table>
+    {{ story_grid(consulting_intelligence, "consulting-intelligence") }}
   </div>
   {% endif %}
 
@@ -169,12 +168,7 @@
   <div class="section-box" style="margin:16px 0 0;border:1px solid #e2e8f0;border-radius:14px;padding:16px 12px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
     <div style="font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1e293b;margin-bottom:4px;padding-bottom:10px;border-bottom:2px solid #2563eb;white-space:nowrap;">Did You Know?</div>
     <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Click to learn more in the deep dive</div>
-    <table style="width:100%;border-collapse:separate;border-spacing:8px;">
-      <tr>
-        {% if did_you_know[0] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(did_you_know[0], "did-you-know") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-        {% if did_you_know[1] is defined %}<td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(did_you_know[1], "did-you-know") }}</td>{% else %}<td width="50%" style="width:50%;"></td>{% endif %}
-      </tr>
-    </table>
+    {{ dyk_grid(did_you_know, "did-you-know") }}
   </div>
   {% endif %}
 
