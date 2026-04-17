@@ -80,7 +80,10 @@ def main() -> int:
     deep = f"{LANDING_PAGE_URL}/news/{date_str}"
     html = render_email(curated, landing_url=landing, deep_dive_url=deep)
 
-    subject = f"[TEST] {format_subject_line(week_range)}"
+    # Include a UTC timestamp so Outlook/Gmail do not thread consecutive
+    # tests into the same conversation — every test run shows as a new email.
+    stamp = datetime.now().strftime("%H:%M")
+    subject = f"[TEST {stamp}Z] {format_subject_line(week_range)}"
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = f"{FROM_DISPLAY_NAME} <{user}>"
