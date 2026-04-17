@@ -1,19 +1,12 @@
 {
   "bulletins": [
     {
-      "slug": "anthropic-mythos-glasswing-cybersecurity",
-      "headline": "Anthropic Launches Claude Mythos for Zero-Day Detection, Partners with CrowdStrike and Palo Alto",
-      "timestamp": "2026-04-08T18:00:00Z",
-      "source_name": "Ars Technica",
+      "slug": "anthropic-claude-opus-4-7-release",
+      "headline": "Anthropic Ships Claude Opus 4.7 with Sharper Reasoning and 3x Vision Resolution",
+      "timestamp": "2026-04-16T14:23:50Z",
+      "source_name": "Anthropic",
       "verification": "confirmed",
-      "tags": [
-        "anthropic",
-        "cybersecurity",
-        "model-release",
-        "healthcare-it",
-        "crowdstrike",
-        "palo-alto"
-      ]
+      "tags": ["anthropic", "claude", "model-release", "vision", "clinical-ai", "ambient-scribing"]
     }
   ]
 }

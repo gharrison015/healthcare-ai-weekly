@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-16T14:23:50Z",
+  "slug": "anthropic-claude-opus-4-7-release",
+  "headline": "Anthropic Ships Claude Opus 4.7 with Sharper Reasoning and 3x Vision Resolution",
+  "body": "Anthropic released Claude Opus 4.7, positioning it as its most capable model for long-running agentic work with more rigorous self-verification, tighter instruction following, and roughly three times the image resolution its predecessor could process. Launch traffic hit 155 stories across Hacker News, Reddit, and Newsdata within 24 hours, with 153 unique authors covering the release. For healthcare, the vision jump matters most: radiology triage, pathology slide review, and document-heavy prior-authorization workflows all live or die on how much detail the model can resolve in a single pass. The stronger instruction-following and self-check behaviors also raise the floor for ambient clinical scribing and care-coordination agents, where one hallucinated medication or missed allergy erases the time-saving case. Expect EHR vendors and AI scribing platforms to begin quietly swapping in Opus 4.7 over the next two quarters.",
+  "source_url": "https://www.anthropic.com/news/claude-opus-4-7",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": ["hackernews", "reddit", "newsdata"],
+  "tags": ["anthropic", "claude", "model-release", "vision", "clinical-ai", "ambient-scribing"]
+}

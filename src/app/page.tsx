@@ -36,15 +36,15 @@ export default async function HomePage({
 
       <div className="px-10 max-sm:px-4">
         {/* Hero */}
-        <div className="pt-4 pb-2 text-center">
+        <div className="pt-10 pb-4 max-sm:pt-12 max-sm:pb-6 text-center">
           <h1
-            className="font-extrabold mb-2"
+            className="font-extrabold mb-4 max-sm:text-[38px] max-sm:leading-[1.1]"
             style={{ color: "#0F1D35", letterSpacing: "-1px", fontSize: "48px" }}
           >
             Healthcare AI Weekly
           </h1>
           <div
-            className="font-normal leading-relaxed max-w-[700px] mx-auto mb-3"
+            className="font-normal leading-relaxed max-w-[700px] mx-auto mb-5"
             style={{ color: "#6b7280", fontSize: "20px", lineHeight: "1.5" }}
           >
             Weekly intelligence on AI in healthcare. Curated for consultants,
@@ -57,13 +57,19 @@ export default async function HomePage({
         </div>
 
         {/* Pulse Beam CTA */}
-        <PulseBeamCTA />
+        <div className="mt-2 mb-8 max-sm:mb-10">
+          <PulseBeamCTA />
+        </div>
 
         {/* Source Ticker */}
-        <SourceTicker />
+        <div className="mb-6 max-sm:mb-8">
+          <SourceTicker />
+        </div>
 
         {/* Inline Hero Search - sits above the weekly news */}
-        <InlineHeroSearch />
+        <div className="mb-4">
+          <InlineHeroSearch />
+        </div>
 
         {/* Issues Section - Horizontal Carousel */}
         <div className="flex items-baseline justify-between pt-3 mb-2">
