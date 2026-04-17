@@ -1,0 +1,34 @@
+name: Resend Issue
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Issue date to re-render and resend to all active subscribers (YYYY-MM-DD)'
+        required: true
+        default: '2026-04-17'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  resend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install deps
+        run: pip install jinja2
+      - name: Render and send to all active subscribers
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: python .github/scripts/resend_issue.py "${{ github.event.inputs.date }}"
