@@ -23,6 +23,7 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PIPELINE_DIR = REPO_ROOT / "pipeline"
@@ -47,6 +48,56 @@ def slugify(text: str, max_len: int = 70) -> str:
     return s[:max_len].rstrip("-")
 
 
+# Map common publisher hostnames to display names. Fall back to title-cased
+# domain (e.g. bloomberg.com → "Bloomberg") if not in the table.
+_KNOWN_PUBLISHERS = {
+    "anthropic.com": "Anthropic",
+    "www.anthropic.com": "Anthropic",
+    "openai.com": "OpenAI",
+    "cnbc.com": "CNBC",
+    "www.cnbc.com": "CNBC",
+    "theverge.com": "The Verge",
+    "www.theverge.com": "The Verge",
+    "reuters.com": "Reuters",
+    "www.reuters.com": "Reuters",
+    "bloomberg.com": "Bloomberg",
+    "www.bloomberg.com": "Bloomberg",
+    "nytimes.com": "The New York Times",
+    "www.nytimes.com": "The New York Times",
+    "wsj.com": "Wall Street Journal",
+    "www.wsj.com": "Wall Street Journal",
+    "ft.com": "Financial Times",
+    "www.ft.com": "Financial Times",
+    "news.ycombinator.com": "Hacker News",
+    "statnews.com": "STAT News",
+    "www.statnews.com": "STAT News",
+    "fiercehealthcare.com": "Fierce Healthcare",
+    "www.fiercehealthcare.com": "Fierce Healthcare",
+    "beckershospitalreview.com": "Becker's Hospital Review",
+    "www.beckershospitalreview.com": "Becker's Hospital Review",
+    "healthcareitnews.com": "Healthcare IT News",
+    "www.healthcareitnews.com": "Healthcare IT News",
+    "arstechnica.com": "Ars Technica",
+    "www.arstechnica.com": "Ars Technica",
+    "techcrunch.com": "TechCrunch",
+    "www.techcrunch.com": "TechCrunch",
+    "theregister.com": "The Register",
+    "www.theregister.com": "The Register",
+}
+
+
+def _source_name_from_url(url: str) -> str | None:
+    host = urlparse(url).netloc.lower()
+    if not host:
+        return None
+    if host in _KNOWN_PUBLISHERS:
+        return _KNOWN_PUBLISHERS[host]
+    # Fallback: strip www. and use the publisher subdomain name, title-cased.
+    host = host.removeprefix("www.")
+    primary = host.split(".")[0] if "." in host else host
+    return primary.replace("-", " ").title() if primary else None
+
+
 def pick_lead_url(candidate: dict) -> tuple[str, str, str] | None:
     """Return (url, source_name, title) for the best representative item.
 
@@ -63,19 +114,8 @@ def pick_lead_url(candidate: dict) -> tuple[str, str, str] | None:
             continue
         if any(d in target for d in LOW_SIGNAL_DOMAINS):
             continue
-        source = item.get("source_platform", "unknown")
         title = item.get("title", "")
-        # Map source_platform to a readable source name
-        if "anthropic.com" in target:
-            source = "Anthropic"
-        elif "openai.com" in target:
-            source = "OpenAI"
-        elif "cnbc.com" in target:
-            source = "CNBC"
-        elif "theverge.com" in target:
-            source = "The Verge"
-        elif "news.ycombinator.com" in target:
-            source = "Hacker News"
+        source = _source_name_from_url(target) or item.get("source_platform", "unknown").title()
         return target, source, title
     return None
 
