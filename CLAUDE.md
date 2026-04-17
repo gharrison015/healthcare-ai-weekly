@@ -29,3 +29,17 @@ Automated weekly newsletter pipeline that curates AI-in-healthcare news and deli
 ## Integration
 
 Newsletter research seeds LinkedIn content via `linkedin_seed.py` in the pipeline.
+
+## Test Email Policy
+
+**Any test/preview email send MUST go to one of these two addresses only:**
+
+- `gharrison@guidehouse.com` (Greg's work)
+- `gharrison015@gmail.com` (Greg's personal)
+
+Never test-send to any other address — even if it appears in the `subscribers`
+table, even if the user asks verbally. Real subscribers (e.g. `mrunbeck@...`)
+should never see a [TEST] email. The allowlist is enforced by
+`.github/scripts/send_test_email.py`; if you add a new test path, replicate
+the same allowlist check. The live Friday workflow (`weekly-newsletter.yml`)
+is unaffected — it continues to email all active subscribers from Supabase.

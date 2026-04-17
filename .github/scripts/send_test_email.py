@@ -31,6 +31,13 @@ SMTP_PORT = 465
 DEFAULT_RECIPIENT = "gharrison@guidehouse.com"
 FROM_DISPLAY_NAME = "Healthcare AI Weekly (Test)"
 
+# Hard-coded test allowlist. See CLAUDE.md "Test Email Policy".
+# Never test-send to real subscribers — use only Greg's own addresses.
+ALLOWED_TEST_RECIPIENTS = {
+    "gharrison@guidehouse.com",
+    "gharrison015@gmail.com",
+}
+
 
 def compute_week_range(date_str):
     end = datetime.strptime(date_str, "%Y-%m-%d")
@@ -43,7 +50,16 @@ def main() -> int:
         print("usage: send_test_email.py YYYY-MM-DD [recipient]", file=sys.stderr)
         return 2
     date_str = sys.argv[1]
-    recipient = sys.argv[2] if len(sys.argv) >= 3 else DEFAULT_RECIPIENT
+    recipient = (sys.argv[2] if len(sys.argv) >= 3 else DEFAULT_RECIPIENT).strip().lower()
+
+    if recipient not in ALLOWED_TEST_RECIPIENTS:
+        allowed = ", ".join(sorted(ALLOWED_TEST_RECIPIENTS))
+        print(
+            f"error: recipient {recipient!r} not allowed. "
+            f"Test sends must go to one of: {allowed}. See CLAUDE.md.",
+            file=sys.stderr,
+        )
+        return 2
 
     user = os.environ.get("SMTP_USER")
     password = os.environ.get("SMTP_PASSWORD")
