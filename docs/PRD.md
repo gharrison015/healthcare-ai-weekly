@@ -136,7 +136,7 @@ The product exists to solve one problem: **the signal-to-noise ratio in healthca
 
 **`healthcare-ai-weekly`** (everything)
 - URL: https://github.com/gharrison015/healthcare-ai-weekly (public)
-- Local: `/Users/greg/Claude/healthcare-ai-weekly`
+- Local: `/Users/greg/Claude/personal/content/healthcare-ai-weekly`
 - Contains:
   - `pipeline/` — Python pipeline (collector, curator, generator, distributor, bulletin, learning)
   - `src/` — Next.js 16 site (React 19, TypeScript, Tailwind v4, shadcn/ui)

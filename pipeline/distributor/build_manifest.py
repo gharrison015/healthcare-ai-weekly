@@ -2,7 +2,7 @@ import json
 import os
 import glob
 
-def build_manifest(repo_dir="/Users/greg/Claude/healthcare-ai-weekly"):
+def build_manifest(repo_dir="/Users/greg/Claude/personal/content/healthcare-ai-weekly"):
     issues = []
     pattern = os.path.join(repo_dir, "issues", "*", "data.json")
     for data_file in sorted(glob.glob(pattern)):

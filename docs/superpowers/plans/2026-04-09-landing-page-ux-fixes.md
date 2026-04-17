@@ -62,7 +62,7 @@ className="horizontal-scroller flex gap-4 overflow-x-auto pt-2 pb-6"
 - [ ] **Step 3: Verify build**
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly && npm run build
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly && npm run build
 ```
 
 Expected: Build succeeds with no errors.
@@ -942,7 +942,7 @@ git commit -m "feat: wire up issue deep-links with sticky banner and carousel hi
 - [ ] **Step 1: Full build**
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly && npm run build
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly && npm run build
 ```
 
 Expected: Build succeeds, all static pages generated.

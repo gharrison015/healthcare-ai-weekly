@@ -7,7 +7,7 @@ def build_issue_path(date_str):
     return f"issues/{date_str}"
 
 def publish_to_repo(html_content, curated_data, date_str,
-                    repo_dir="/Users/greg/Claude/healthcare-ai-weekly",
+                    repo_dir="/Users/greg/Claude/personal/content/healthcare-ai-weekly",
                     local_backup_dir="data/issues"):
     issue_path = build_issue_path(date_str)
 

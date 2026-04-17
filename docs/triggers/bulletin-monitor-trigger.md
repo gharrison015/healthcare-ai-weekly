@@ -84,7 +84,7 @@ After pasting and the next scheduled run, check:
 
 1. **Git log has a new commit:**
    ```bash
-   cd /Users/greg/Claude/healthcare-ai-weekly
+   cd /Users/greg/Claude/personal/content/healthcare-ai-weekly
    git pull
    git log -- content/bulletins/_last_run.json
    ```

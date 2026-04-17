@@ -16,7 +16,7 @@ Plus a multi-source bulletin monitor that surfaces breaking news between weekly 
 **Everything lives in one repo.** There is no second pipeline folder.
 
 - **Repo:** [`gharrison015/healthcare-ai-weekly`](https://github.com/gharrison015/healthcare-ai-weekly) (public)
-- **Local:** `/Users/greg/Claude/healthcare-ai-weekly`
+- **Local:** `/Users/greg/Claude/personal/content/healthcare-ai-weekly`
 - **Primary site:** https://healthcareaibrief.com
 - **Legacy URL:** https://healthcare-ai-weekly.vercel.app (still active, 308-redirects to primary)
 - **Friday newsletter trigger:** `trig_01JqnHVGb3gfV1judxMohq12` — https://claude.ai/code/scheduled/trig_01JqnHVGb3gfV1judxMohq12
@@ -27,7 +27,7 @@ Plus a multi-source bulletin monitor that surfaces breaking news between weekly 
 ## How to run the pipeline locally
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly/pipeline
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly/pipeline
 source venv/bin/activate
 
 # Full weekly newsletter pipeline
@@ -45,7 +45,7 @@ python pipeline.py --date 2026-04-11 --skip-send
 ## How to run the bulletin pipeline locally
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly/pipeline
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly/pipeline
 source venv/bin/activate
 
 # Local full run (needs ANTHROPIC_API_KEY in .env)
@@ -66,7 +66,7 @@ After a `--cloud-mode` run, check the output:
 ## How to send a test email
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly/pipeline
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly/pipeline
 source venv/bin/activate
 
 # Regenerate the email HTML for a specific date
@@ -84,7 +84,7 @@ send_email('gharrison@guidehouse.com', 'Healthcare AI Weekly — Week of ... [TE
 For manual one-off sends of an already-generated issue, you can also do it from the repo root:
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly
 python3 -c "
 import sys; sys.path.insert(0, 'pipeline')
 from distributor.send_email import send_email
@@ -100,7 +100,7 @@ All content lives in `content/` at the repo root. When you push to `main`, Verce
 
 ```bash
 # After generating an issue with the pipeline:
-cd /Users/greg/Claude/healthcare-ai-weekly
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly
 
 # Confirm content/ has the new files (usually pipeline writes them directly)
 ls content/issues/YYYY-MM-DD/

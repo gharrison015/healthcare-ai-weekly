@@ -10,7 +10,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ /Users/greg/Claude/healthcare-ai-weekly    (ONE repo, ONE   │
+│ /Users/greg/Claude/personal/content/healthcare-ai-weekly    (ONE repo, ONE   │
 │ github.com/gharrison015/healthcare-ai-weekly  working dir)  │
 │                                                             │
 │  pipeline/    ← Python: collect, curate, generate, bulletin │
@@ -44,7 +44,7 @@ Nothing runs "locally for production." Every scheduled job runs in Anthropic's c
 | [`gharrison015/healthcare-ai-newsletter`](https://github.com/gharrison015/healthcare-ai-newsletter) (private) | Legacy X-only bulletin pipeline from before consolidation. | ❌ **Stale. Do not edit.** Left alive as historical reference; should eventually be archived. |
 
 **Local folders:**
-- `/Users/greg/Claude/healthcare-ai-weekly` — work here
+- `/Users/greg/Claude/personal/content/healthcare-ai-weekly` — work here
 - `/Users/greg/Claude/healthcare-ai-newsletter` — leave alone, will be deleted during cleanup
 
 ---

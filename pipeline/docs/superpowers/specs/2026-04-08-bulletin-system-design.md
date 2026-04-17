@@ -153,7 +153,7 @@ Add a "Breaking" section above "All Issues":
 ```
 
 ```
-/Users/greg/Claude/healthcare-ai-weekly/
+/Users/greg/Claude/personal/content/healthcare-ai-weekly/
 ├── bulletins/
 │   ├── YYYY-MM-DD-slug/
 │   │   └── index.html        # Individual bulletin page

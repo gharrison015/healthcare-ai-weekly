@@ -167,7 +167,7 @@ Effort to build: ~30-45 minutes once we decide to pivot.
 ## How to run the pipeline locally RIGHT NOW (works, verified today)
 
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly/pipeline
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly/pipeline
 source venv/bin/activate
 
 # Option 1: Full real pipeline (collect + curate + generate + send)

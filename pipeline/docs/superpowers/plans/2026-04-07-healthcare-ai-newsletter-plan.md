@@ -1894,7 +1894,7 @@ def save_seed(seed, output_dir="data/linkedin-seed"):
         json.dump(seed, f, indent=2)
     return path
 
-def copy_to_linkedin_agent(seed, agent_dir="/Users/greg/Claude/linkedin-agent"):
+def copy_to_linkedin_agent(seed, agent_dir="/Users/greg/Claude/personal/content/linkedin-agent"):
     inbox = os.path.join(agent_dir, "newsletter-seeds")
     os.makedirs(inbox, exist_ok=True)
     date = seed.get("issue_date", "unknown")
@@ -2030,7 +2030,7 @@ def build_issue_path(date_str):
     return f"issues/{date_str}"
 
 def publish_to_repo(html_content, curated_data, date_str,
-                    repo_dir="/Users/greg/Claude/healthcare-ai-weekly",
+                    repo_dir="/Users/greg/Claude/personal/content/healthcare-ai-weekly",
                     local_backup_dir="data/issues"):
     issue_path = build_issue_path(date_str)
 
@@ -2498,7 +2498,7 @@ After review, append feedback to `curator/feedback.md`:
 Run:
 ```bash
 gh repo create healthcare-ai-weekly --private --description "Healthcare AI Weekly newsletter archive"
-gh repo clone healthcare-ai-weekly /Users/greg/Claude/healthcare-ai-weekly
+gh repo clone healthcare-ai-weekly /Users/greg/Claude/personal/content/healthcare-ai-weekly
 ```
 Expected: Private repo created and cloned
 
@@ -2506,7 +2506,7 @@ Expected: Private repo created and cloned
 
 Run:
 ```bash
-cd /Users/greg/Claude/healthcare-ai-weekly
+cd /Users/greg/Claude/personal/content/healthcare-ai-weekly
 mkdir -p issues
 echo "# Healthcare AI Weekly Archive\n\nWeekly deep-dive issues on AI in healthcare." > README.md
 git add README.md

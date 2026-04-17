@@ -19,7 +19,7 @@ def save_seed(seed, output_dir="data/linkedin-seed"):
         json.dump(seed, f, indent=2)
     return path
 
-def copy_to_linkedin_agent(seed, agent_dir="/Users/greg/Claude/linkedin-agent"):
+def copy_to_linkedin_agent(seed, agent_dir="/Users/greg/Claude/personal/content/linkedin-agent"):
     inbox = os.path.join(agent_dir, "newsletter-seeds")
     os.makedirs(inbox, exist_ok=True)
     date = seed.get("issue_date", "unknown")

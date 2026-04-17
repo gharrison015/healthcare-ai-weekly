@@ -139,7 +139,7 @@ Claude API-powered editorial agent with persona, guardrails, feedback loop, and 
 
 ### LinkedIn Seed (`linkedin_seed.py`)
 - Exports top story with hook and angle
-- Saves to `data/linkedin-seed/` and copies to `/Users/greg/Claude/linkedin-agent/newsletter-seeds/`
+- Saves to `data/linkedin-seed/` and copies to `/Users/greg/Claude/personal/content/linkedin-agent/newsletter-seeds/`
 
 ## Stage 4: Distributor
 
