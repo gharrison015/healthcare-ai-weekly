@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-17T14:48:40Z",
+  "slug": "claude-qwen3-6-35b-a3b-on-my-laptop-drew-me-a-better-pelican-than-clau",
+  "headline": "Open source models challenge Claude's dominance in specialized tasks",
+  "body": "Qwen3.6-35B-A3B, an open source model running locally, is outperforming Claude Opus 4.7 on specific use cases like image generation, signaling a shift in the broader AI capability landscape. For healthcare AI vendors and consulting teams, this matters because it reinforces that no single foundation model owns all problem domains. Clinical workflows often require specialized performance in document analysis, coding, or data extraction where smaller, fine-tuned models may deliver better results than large generalist systems. This trend pushes healthcare organizations to evaluate multiple models for different tasks rather than defaulting to the largest commercial option, directly impacting procurement strategies and EHR integration decisions. The leaked system prompt and emerging best practices across the ecosystem suggest the competitive pressure is driving transparency and documentation improvements.",
+  "source_url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/",
+  "source_name": "Simonwillison",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
