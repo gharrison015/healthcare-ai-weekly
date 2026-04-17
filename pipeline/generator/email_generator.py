@@ -26,6 +26,23 @@ def _with_utm(url, campaign="weekly", content=None):
     return urlunparse(parsed._replace(query=urlencode(params)))
 
 
+def _build_tldr(curated):
+    """Three scannable bullets from curated top picks across sections.
+
+    Mixes top_stories + vbc_watch + ma_partnerships so scrollers see breadth,
+    not just the lead section. Falls back to whatever is available.
+    """
+    sections = curated.get("sections") or {}
+    candidates = []
+    for key in ("top_stories", "vbc_watch", "ma_partnerships", "consulting_intelligence"):
+        for story in (sections.get(key) or []):
+            headline = (story.get("headline") or "").strip()
+            if headline:
+                candidates.append({"headline": headline, "section": key})
+                break
+    return candidates[:3]
+
+
 def _build_preheader(curated):
     """First ~120 chars of editorial summary — drives open rate via inbox preview."""
     summary = (curated.get("editorial_summary") or "").strip()
@@ -73,6 +90,7 @@ def render_email(curated, deep_dive_url=None, landing_url=None):
         week_range=curated.get("week_range", ""),
         editorial_summary=curated.get("editorial_summary", ""),
         preheader=_build_preheader(curated),
+        tldr=_build_tldr(curated),
         top_stories=sections.get("top_stories", []),
         vbc_watch=sections.get("vbc_watch", []),
         ma_partnerships=ma_partnerships,

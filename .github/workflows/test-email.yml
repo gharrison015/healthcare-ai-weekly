@@ -1,0 +1,36 @@
+name: Test Email
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Issue date to re-render (YYYY-MM-DD). Must exist in content/issues/.'
+        required: true
+        default: '2026-04-17'
+      recipient:
+        description: 'Recipient email (default: gharrison@guidehouse.com)'
+        required: false
+        default: 'gharrison@guidehouse.com'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  test-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install minimal deps
+        run: pip install jinja2
+      - name: Render and send
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: python .github/scripts/send_test_email.py "${{ github.event.inputs.date }}" "${{ github.event.inputs.recipient }}"
