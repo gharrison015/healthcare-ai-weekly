@@ -1,12 +1,29 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-white-house-to-give-us-agencies-anthropic-mythos-access-bloo",
+      "headline": "White House secures Anthropic Mythos access for federal agencies",
+      "timestamp": "2026-04-17T13:24:40Z",
+      "source_name": "hackernews",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "anthropic-claude-opus-4-7-release",
       "headline": "Anthropic Ships Claude Opus 4.7 with Sharper Reasoning and 3x Vision Resolution",
       "timestamp": "2026-04-16T14:23:50Z",
       "source_name": "Anthropic",
       "verification": "confirmed",
-      "tags": ["anthropic", "claude", "model-release", "vision", "clinical-ai", "ambient-scribing"]
+      "tags": [
+        "anthropic",
+        "claude",
+        "model-release",
+        "vision",
+        "clinical-ai",
+        "ambient-scribing"
+      ]
     }
   ]
 }
