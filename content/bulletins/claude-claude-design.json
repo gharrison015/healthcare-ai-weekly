@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-17T18:44:11Z",
+  "slug": "claude-claude-design",
+  "headline": "Anthropic releases Claude Design with capability upgrades and cost implications",
+  "body": "Anthropic launched Claude Design alongside performance improvements to Claude Opus 4.7, with session costs increasing 20-30% versus prior versions. The updates demonstrate expanded model capabilities including code generation and complex task execution. For healthcare AI deployments, the cost structure shift requires re-evaluation of per-interaction economics in clinical decision support systems and EHR integration projects. Organizations evaluating Claude for clinical workflows should model these pricing changes into total cost of ownership calculations, particularly for high-volume diagnostic or documentation assistance use cases where session frequency directly impacts budget impact.",
+  "source_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
