@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-20T11:12:50Z",
+  "slug": "claude-claude-token-counter-now-with-model-comparisons",
+  "headline": "Claude Token Counter adds model comparison feature amid vendor security scrutiny",
+  "body": "Anthropic released an updated Claude Token Counter with model comparison capabilities, while simultaneously facing multiple security disclosures and account suspension incidents. For healthcare AI implementations, token counting accuracy directly impacts cost modeling and EHR integration planning, making transparent pricing visibility critical for value-based care economics. The concurrent security vulnerabilities and access restrictions highlight why healthcare organizations must evaluate vendor stability and security practices before committing to LLM dependencies in clinical workflows. These developments underscore the operational risk of relying on third-party AI platforms for patient-facing or sensitive healthcare applications.",
+  "source_url": "https://simonwillison.net/2026/Apr/20/claude-token-counts/",
+  "source_name": "Simonwillison",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
