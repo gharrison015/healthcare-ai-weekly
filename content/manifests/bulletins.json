@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-nsa-is-using-anthropic-s-mythos-despite-blacklist",
+      "headline": "NSA adopts Anthropic's Mythos model despite regulatory blacklist",
+      "timestamp": "2026-04-20T15:10:48Z",
+      "source_name": "Axios",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "gpt-chatgpt-and-codex-down",
+      "headline": "ChatGPT outages disrupt healthcare AI workflows during critical deployment phase",
+      "timestamp": "2026-04-20T15:10:46Z",
+      "source_name": "Status",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "anthropic-uber-s-anthropic-ai-push-hits-a-wall",
       "headline": "Uber's Anthropic integration stalls amid security and compliance concerns",
       "timestamp": "2026-04-20T11:12:53Z",

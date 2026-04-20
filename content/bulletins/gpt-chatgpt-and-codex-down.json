@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-20T15:10:46Z",
+  "slug": "gpt-chatgpt-and-codex-down",
+  "headline": "ChatGPT outages disrupt healthcare AI workflows during critical deployment phase",
+  "body": "OpenAI's ChatGPT and Codex experienced significant downtime this week, affecting healthcare organizations relying on these models for clinical documentation, coding assistance, and EHR integration. The outage coincides with rapid model evolution in the GPT family, including multimodal capabilities that healthcare systems are actively piloting for radiology and pathology workflows. For healthcare AI consulting practices, this underscores the operational risk of depending on single-vendor LLM infrastructure without robust fallback protocols. Healthcare organizations using ChatGPT for documentation automation, clinical decision support, or code generation need explicit SLA guarantees and hybrid model strategies to ensure continuity during vendor disruptions.",
+  "source_url": "https://status.openai.com/history",
+  "source_name": "Status",
+  "velocity_score": 77,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

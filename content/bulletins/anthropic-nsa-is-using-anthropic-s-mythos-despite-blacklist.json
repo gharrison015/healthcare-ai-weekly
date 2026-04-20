@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-20T15:10:48Z",
+  "slug": "anthropic-nsa-is-using-anthropic-s-mythos-despite-blacklist",
+  "headline": "NSA adopts Anthropic's Mythos model despite regulatory blacklist",
+  "body": "The NSA is deploying Anthropic's Mythos model for internal operations despite the model appearing on an official blacklist, according to reporting from Axios. This signals a widening gap between regulatory restrictions and actual government adoption of large language models. For healthcare AI, this development underscores the fragmented regulatory landscape affecting LLM deployment in sensitive sectors like healthcare systems handling classified patient data or government-contracted facilities. The tension between blacklists and actual use raises critical questions about validation standards, compliance frameworks, and vendor trustworthiness that healthcare organizations must evaluate when selecting AI partners for clinical workflows and EHR integration.",
+  "source_url": "https://www.axios.com/2026/04/19/nsa-anthropic-mythos-pentagon",
+  "source_name": "Axios",
+  "velocity_score": 75,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
