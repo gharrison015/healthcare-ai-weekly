@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-21T15:05:11Z",
+  "slug": "ey-even-uncensored-models-can-t-say-what-they-want",
+  "headline": "Uncensored AI models face inherent constraints despite freedom claims",
+  "body": "Researchers demonstrated that even models marketed as uncensored operate under fundamental technical limitations that prevent them from generating certain outputs. This finding challenges the narrative that model safety is purely a matter of training choices rather than architectural constraints. For healthcare AI deployments, this matters because it reframes how to evaluate safety claims from vendors and whether uncensored models pose genuine clinical risks or represent overblown marketing. Healthcare organizations can use this insight to focus procurement decisions on verifiable safeguards rather than trusting vendor claims about freedom versus safety tradeoffs. The implication for value-based care systems is clearer: prioritize models with documented architectural safety features over those selling unrestricted capability as a feature.",
+  "source_url": "https://morgin.ai/articles/even-uncensored-models-cant-say-what-they-want.html",
+  "source_name": "Morgin",
+  "velocity_score": 75,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
