@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-04-21T10:59:20Z",
+  "slug": "anthropic-anthropic-and-amazon-expand-collaboration-for-up-to-5-gigawa",
+  "headline": "Anthropic secures up to $50B Amazon investment and massive compute expansion",
+  "body": "Anthropic and Amazon announced a major strategic expansion including up to $50 billion in Amazon investment and access to up to 5 gigawatts of new compute capacity. This represents one of the largest AI infrastructure commitments to date and signals Amazon's confidence in Anthropic's Claude models as a foundational technology. For healthcare AI specifically, this compute scale matters because clinical LLM applications require substantial inference capacity to handle real-time EHR integrations, diagnostic support, and documentation at enterprise scale. Healthcare systems evaluating Anthropic-backed solutions now have visibility into sustained compute availability, reducing concerns about vendor stability that have plagued previous AI vendor relationships. This deal also potentially shifts the vendor landscape by tightening Amazon-Anthropic alignment, affecting how healthcare organizations approach cloud infrastructure decisions for AI workloads.",
+  "source_url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata",
+    "substack"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

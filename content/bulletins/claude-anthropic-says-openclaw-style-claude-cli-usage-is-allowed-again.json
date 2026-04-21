@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-21T10:59:22Z",
+  "slug": "claude-anthropic-says-openclaw-style-claude-cli-usage-is-allowed-again",
+  "headline": "Anthropic reverses course, permits OpenClaw-style Claude CLI usage",
+  "body": "Anthropic has clarified its policy to allow OpenClaw-style Claude command-line interface usage, reversing prior restrictions on programmatic access patterns. This policy shift matters for healthcare AI because it expands the feasible deployment options for Claude integration into clinical workflows and EHR systems where CLI-based automation offers operational efficiency. Healthcare organizations evaluating Claude for structured data processing, clinical note analysis, or real-time decision support now have broader architectural flexibility. The reversal also signals Anthropic's willingness to adapt usage policies based on developer feedback, a consideration for healthcare AI consulting engagements assessing long-term vendor stability and API availability.",
+  "source_url": "https://docs.openclaw.ai/providers/anthropic",
+  "source_name": "Docs",
+  "velocity_score": 95,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
