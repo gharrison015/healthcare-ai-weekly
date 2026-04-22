@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-22T18:59:47Z",
+  "slug": "anthropic-mozilla-used-anthropic-s-mythos-to-find-and-fix-271-bugs-in",
+  "headline": "Anthropic's Mythos finds 271 Firefox bugs, but security questions emerge",
+  "body": "Mozilla deployed Anthropic's Mythos model to identify and fix 271 bugs in Firefox, demonstrating AI's capability in automated code auditing at scale. However, concurrent reports of unauthorized access to Mythos and Anthropic's unannounced organizational bans create material risk concerns for healthcare systems considering similar AI-assisted code review workflows. For healthcare organizations evaluating Anthropic's models for EHR integration, clinical decision support, or infrastructure security, this episode underscores the need for explicit access controls, audit trails, and vendor accountability around model usage. The incident signals that powerful AI tools require governance frameworks before deployment in regulated environments where patient data and system integrity are non-negotiable.",
+  "source_url": "https://www.wired.com/story/mozilla-used-anthropics-mythos-to-find-271-bugs-in-firefox/",
+  "source_name": "Wired",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
