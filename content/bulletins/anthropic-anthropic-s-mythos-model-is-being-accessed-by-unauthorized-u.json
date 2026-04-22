@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-22T15:05:08Z",
+  "slug": "anthropic-anthropic-s-mythos-model-is-being-accessed-by-unauthorized-u",
+  "headline": "Anthropic's Mythos model faces unauthorized access breach amid security investigations",
+  "body": "Anthropic is investigating unauthorized access to its Mythos AI model following reports that the system has been accessed by users outside approved channels. The incident raises immediate concerns for healthcare organizations evaluating large language models for clinical applications, where model integrity and access controls directly impact patient safety and regulatory compliance. Healthcare AI implementations depend on verifiable audit trails and controlled deployments, making unauthorized access a critical vendor risk factor. Organizations currently piloting or considering Anthropic models for clinical documentation, coding, or decision support need to escalate vendor security assessments and clarify access governance protocols before production deployment.",
+  "source_url": "https://www.bloomberg.com/news/articles/2026-04-21/anthropic-s-mythos-model-is-being-accessed-by-unauthorized-users",
+  "source_name": "Bloomberg",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
