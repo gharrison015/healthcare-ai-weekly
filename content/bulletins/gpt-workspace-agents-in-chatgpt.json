@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-22T22:39:24Z",
+  "slug": "gpt-workspace-agents-in-chatgpt",
+  "headline": "OpenAI releases workspace agents for ChatGPT as security concerns mount",
+  "body": "OpenAI introduced Workspace Agents in ChatGPT, expanding the model's capability to operate within enterprise environments. However, the release coincides with mounting security vulnerabilities including alleged GPT-assisted harmful guidance, backdoored LLM proxies compromising development infrastructure, and unresolved questions about model security when deployed to government agencies. For healthcare organizations considering ChatGPT integration into clinical workflows and EHR systems, this creates immediate vendor risk assessment priorities around data governance, prompt injection vulnerabilities, and third-party supply chain exposure. Healthcare AI consultants should pressure OpenAI on security audits and isolated deployment architectures before recommending workspace agent adoption in regulated environments.",
+  "source_url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
+  "source_name": "OpenAI",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
