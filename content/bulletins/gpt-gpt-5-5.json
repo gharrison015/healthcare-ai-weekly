@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-04-23T22:35:08Z",
+  "slug": "gpt-gpt-5-5",
+  "headline": "OpenAI releases GPT-5.5 amid clinical AI capability comparisons",
+  "body": "OpenAI has introduced GPT-5.5, generating significant developer attention across multiple platforms with 13 unique sources covering the release. The model launch coincides with direct comparisons between GPT-5.5 and specialized medical AI systems on clinical case evaluations, raising questions about general-purpose LLM performance against purpose-built healthcare tools. For healthcare AI implementations, this development signals the ongoing tension between adopting general models versus specialized alternatives for clinical workflows. Healthcare organizations and vendors must evaluate whether GPT-5.5's capabilities justify integration into EHR systems or clinical decision support, particularly given that specialized medical AI continues to offer domain-specific advantages. The release underscores the need for rigorous clinical validation before deploying any new model generation into patient-facing applications.",
+  "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+  "source_name": "OpenAI",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata",
+    "substack"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
