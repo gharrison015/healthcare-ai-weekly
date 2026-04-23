@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-unveils-chips-for-ai-training-and-inference-in-latest-sh",
+      "headline": "Google launches new AI chips to challenge Nvidia's healthcare AI dominance",
+      "timestamp": "2026-04-23T11:01:08Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-is-not-making-your-product-better",
+      "headline": "Claude Code adoption faces skepticism while Anthropic tightens identity verification",
+      "timestamp": "2026-04-23T11:01:05Z",
+      "source_name": "Ethanding",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-workspace-agents-in-chatgpt",
       "headline": "OpenAI releases workspace agents for ChatGPT as security concerns mount",
       "timestamp": "2026-04-22T22:39:24Z",
