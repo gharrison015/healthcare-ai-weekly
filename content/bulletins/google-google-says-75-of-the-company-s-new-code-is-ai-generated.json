@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-23T18:56:11Z",
+  "slug": "google-google-says-75-of-the-company-s-new-code-is-ai-generated",
+  "headline": "Google reports 75% of new code is AI-generated internally",
+  "body": "Google disclosed that three-quarters of its newly written code now originates from AI systems, marking a significant shift in software development practices at scale. This acceleration reflects broader industry momentum toward AI-assisted coding and autonomous agent platforms. For healthcare AI specifically, this trend raises critical questions about code quality validation, security auditing, and compliance documentation in clinical-grade applications where AI-generated code could impact patient safety. Healthcare organizations evaluating AI coding tools must now demand rigorous testing protocols and audit trails that exceed standard software practices. Vendors and consulting firms will need expertise in vetting AI-generated code for HIPAA compliance, FDA classification standards, and EHR integration requirements before deployment in healthcare workflows.",
+  "source_url": "https://www.businessinsider.com/google-ai-generated-code-75-gemini-agents-software-2026-4",
+  "source_name": "Businessinsider",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}

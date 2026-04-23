@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-says-75-of-the-company-s-new-code-is-ai-generated",
+      "headline": "Google reports 75% of new code is AI-generated internally",
+      "timestamp": "2026-04-23T18:56:11Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-an-update-on-recent-claude-code-quality-reports",
+      "headline": "Anthropic addresses Claude Code quality issues as identity verification rolls out",
+      "timestamp": "2026-04-23T18:56:08Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-a-boy-that-cried-mythos-verification-is-collapsing-trust-in",
       "headline": "Anthropic faces trust collapse over Mythos model verification failures",
       "timestamp": "2026-04-23T15:30:52Z",
