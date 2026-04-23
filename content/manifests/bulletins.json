@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-a-boy-that-cried-mythos-verification-is-collapsing-trust-in",
+      "headline": "Anthropic faces trust collapse over Mythos model verification failures",
+      "timestamp": "2026-04-23T15:30:52Z",
+      "source_name": "Flyingpenguin",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-openai-s-response-to-the-axios-developer-tool-compromise",
+      "headline": "OpenAI addresses developer tool breach while rolling out enterprise security features",
+      "timestamp": "2026-04-23T15:30:49Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-unveils-chips-for-ai-training-and-inference-in-latest-sh",
       "headline": "Google launches new AI chips to challenge Nvidia's healthcare AI dominance",
       "timestamp": "2026-04-23T11:01:08Z",
@@ -258,21 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "anthropic-claude-opus-4-7-release",
-      "headline": "Anthropic Ships Claude Opus 4.7 with Sharper Reasoning and 3x Vision Resolution",
-      "timestamp": "2026-04-16T14:23:50Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic",
-        "claude",
-        "model-release",
-        "vision",
-        "clinical-ai",
-        "ambient-scribing"
       ]
     }
   ]
