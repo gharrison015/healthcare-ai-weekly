@@ -5,150 +5,205 @@
   "accent_color": "#059669",
   "sources": [
     "81636a61-ba76-4961-a4a3-94acb0a3a1dc",
-    "11a9eee2-2758-4812-90b8-39a2acb495f6",
     "b52a2f6f-7653-4fb8-87db-4aebac8b4bbc",
     "242e0795-fd17-4560-aa23-433c5ced11aa",
-    "a98877ba-3073-4148-8306-c927496d001e",
     "f39b77b9-fd26-4c78-8408-49e49cf5d729",
-    "04a3c426-28a3-45ef-a46a-51d3cefc969e",
-    "eff63370-5ba1-4d23-bec2-aff5a38d3345",
-    "7b7c29ee-cacf-4112-86fd-6b3c8b20b5ce",
-    "4723cbec-6ef0-4583-a950-a589a1abadc3",
     "874a2c0c-2173-42c1-8bb3-279bf1c9ebdf",
-    "7715db96-357e-4948-9787-3724f9b0a746",
     "5ecec23b-f8c0-4561-ad6b-47c3f7cc3cb3",
+    "e555056a-5d21-4e75-b946-77bb5d7ce6f8",
     "2bc25999-14ef-4d3b-87dc-4f918aaa55fb",
-    "af4bb37d-bc62-4b1e-81c0-4388a0bf9d08",
-    "890444b2-ce0c-4df5-a2f9-cd58b25c06da"
+    "2d53f684-7079-4c67-9192-272c8db8ff33",
+    "dd4d6b82-9145-46da-a828-1b764e84af2f",
+    "416dfd76-eed8-4ec1-a3bc-e41f49274ed0"
   ],
-  "source_count": 16,
-  "summary": "AI agents are evolving from basic conversational chatbots into digital workers that can operate autonomously for hours or days,. For example, systems like Perplexity Computer can coordinate 19 different AI models to complete complex workflows like deep web research and data visualization,. This level of autonomy represents a massive economic shift. McKinsey projects that AI agents could drive up to $1 trillion in retail revenue by 2030. To capture this value, businesses must fundamentally restructure their digital architecture to be agent readable,. If product details or shipping rules are unclear, an AI system will independently skip the product without a human ever seeing the option.\n\nDespite their impressive capabilities, autonomous agents face a severe memory wall and lack basic organizational common sense,. Because they do not hesitate, agents will confidently execute destructive commands at lightning speed. In one incident, an AI coding agent permanently deleted 1.9 million rows of live student data in seconds because it could not distinguish between an old test file and a live production database,. Agents also struggle significantly with sustained jobs. A benchmark study of 240 real Upwork freelance projects showed that the best AI agents successfully completed only 2.5 percent of the tasks to a client's satisfaction,. Similarly, another study revealed that 75 percent of frontier models broke previously working software features when asked to maintain a codebase over several months.\n\nTo safely deploy agents, companies must shift human employees from executing tasks to providing expert oversight,. Workers must become contextual stewards who hold the deep institutional knowledge that agents lack. Organizations must encode their business knowledge into strict guardrails, such as creating text rules files under 200 lines that act as a permanent employee handbook for the AI,. Employees must also be trained to perform quick sniff checks to verify if an agent's output is actually correct and safe,. By automating lower value tasks, companies can elevate their staff into dynamic sense makers who use critical thinking to guide AI systems effectively.",
+  "source_count": 11,
+  "summary": "AI agents have evolved from basic chatbots into autonomous digital workers capable of completing complex, multi-step tasks. For example, Perplexity Computer is a system that orchestrates 19 different AI models to independently handle deep web research, data visualization, and software coding. The demand for this technology is overwhelming. The open source agent framework OpenClaw became the fastest growing repository in GitHub history, quickly reaching hundreds of thousands of stars. This shift represents a massive economic opportunity. McKinsey projects that AI agents could drive up to $1 trillion in retail revenue by 2030. To capture this value, businesses must restructure their systems to be agent readable so AI can independently discover, evaluate, and transact without human intervention.\n\nDespite these impressive capabilities, autonomous agents face a severe memory wall and lack basic organizational common sense. Because they do not feel social anxiety or worry about reputational risk, agents will execute destructive commands at lightning speed. In one incident, an AI coding agent permanently deleted 1.9 million rows of live student data in seconds because it could not distinguish between a temporary duplicate file and a live production database. Agents also struggle significantly with sustained jobs. A benchmark study of 240 real Upwork freelance projects showed that the best AI agents successfully completed only 2.5 percent of the tasks to a client's satisfaction. Similarly, another study revealed that 75 percent of frontier models broke previously working software features when asked to maintain a codebase over several months.\n\nTo safely deploy agents, companies must shift human employees from executing routine tasks to providing expert oversight. Workers must become contextual stewards who hold the deep institutional knowledge that agents lack. For instance, an agent reviewing contracts might not know that a specific vendor has an informal payment agreement, which only a human executive would remember. Organizations must also ensure their underlying data is perfectly clean and structured before giving an agent access. By mapping out exact business workflows and defining strict evaluation criteria, companies can build the necessary guardrails to turn unpredictable AI agents into highly productive digital workers.",
   "quiz": {
     "title": "Quick Check: AI Agents: What You Need to Know",
     "questions": [
       {
         "id": "ai-agents-101-q1",
-        "question": "What colorful term describes the phenomenon where AI excels at some tasks but inexplicably fails at others?",
+        "question": "How many experiments did Karpathy's AI agent run overnight while he was sleeping?",
         "options": [
-          "The capability cliff",
-          "The jagged frontier",
-          "The performance gap",
-          "The intelligence valley"
+          "300 experiments",
+          "500 experiments",
+          "700 experiments",
+          "900 experiments"
         ],
-        "correct": 1,
-        "explanation": "The 'jagged frontier' describes how AI can be brilliant at complex tasks while failing at seemingly simple ones, though this is considered a temporary limitation rather than permanent."
+        "correct": 2,
+        "explanation": "Karpathy's agent ran 700 experiments while he slept, demonstrating how AI agents can work continuously without human supervision to accelerate research and development."
       },
       {
         "id": "ai-agents-101-q2",
-        "question": "According to McKinsey's projections, how much money in sales will flow through AI agents?",
+        "question": "According to Wall Street investments, how much money has been bet on AI agents recently?",
         "options": [
-          "$500 billion",
-          "$750 billion",
-          "$1 trillion",
-          "$1.5 trillion"
+          "$150 billion",
+          "$285 billion",
+          "$400 billion",
+          "$500 billion"
         ],
-        "correct": 2,
-        "explanation": "McKinsey forecasts that $1 trillion in sales will go through AI agents, representing a massive shift in how commerce will be conducted."
+        "correct": 1,
+        "explanation": "Wall Street has bet $285 billion on AI agents, showing massive financial confidence in this technology despite many agents still having performance issues."
       },
       {
         "id": "ai-agents-101-q3",
-        "question": "What cartoon character inspired a Claude plugin designed to force AI to actually complete tasks?",
+        "question": "What total dollar amount is creating pressure on AI companies from both sides of the market?",
         "options": [
-          "Bart Simpson",
-          "Ralph Wiggum",
-          "SpongeBob SquarePants",
-          "Scooby Doo"
+          "$450 billion",
+          "$560 billion",
+          "$690 billion",
+          "$750 billion"
         ],
-        "correct": 1,
-        "explanation": "Developer Jeffrey Huntley created a Claude plugin inspired by Ralph Wiggum that uses aggressive evaluation to prevent AI from prematurely claiming task completion."
+        "correct": 2,
+        "explanation": "$690 billion represents the market forces squeezing AI companies as hyperscalers integrate vertically while competition intensifies from below."
       },
       {
         "id": "ai-agents-101-q4",
-        "question": "What does Anthropic's new '/loop' command provide that allows Claude to work autonomously?",
+        "question": "What key behavioral difference separates AI agents from humans when making decisions?",
         "options": [
-          "Better memory storage",
-          "Enhanced security features",
-          "A scheduled heartbeat for proactivity",
-          "Faster processing speed"
+          "AI agents think faster",
+          "AI agents don't hesitate",
+          "AI agents use more data",
+          "AI agents are more creative"
         ],
-        "correct": 2,
-        "explanation": "The '/loop' command acts as a 'heartbeat' that allows Claude to operate proactively on a schedule without constant human prompting, enabling true autonomous operation."
+        "correct": 1,
+        "explanation": "Unlike humans who naturally hesitate and second-guess decisions, AI agents execute instructions immediately without doubt or delay, which can be both powerful and dangerous."
       },
       {
         "id": "ai-agents-101-q5",
-        "question": "What training methodology does Claude use that differs from ChatGPT's human feedback approach?",
+        "question": "What is the productivity multiplier that agents can achieve compared to human output?",
         "options": [
-          "Reinforcement Learning",
-          "Constitutional AI",
-          "Supervised Fine-tuning",
-          "Adversarial Training"
+          "10x productivity",
+          "50x productivity",
+          "100x productivity",
+          "200x productivity"
         ],
-        "correct": 1,
-        "explanation": "Claude uses Constitutional AI to prioritize honesty and adherence to explicit principles, while ChatGPT uses human feedback to be more agreeable and expansive."
+        "correct": 2,
+        "explanation": "AI agents can produce work at 100x human speed, but this creates a bottleneck since organizations can only review and approve work at 3x normal speed."
       },
       {
         "id": "ai-agents-101-q6",
-        "question": "How many rows of data did an AI agent accidentally wipe while perfectly following instructions?",
+        "question": "What technical capability makes Perplexity's 'Computer' agent notable in the AI industry?",
         "options": [
-          "500,000 rows",
-          "1.2 million rows",
-          "1.9 million rows",
-          "2.5 million rows"
+          "Single model processing",
+          "Multimodel orchestration",
+          "Data compression",
+          "Voice recognition"
         ],
-        "correct": 2,
-        "explanation": "An AI agent wiped 1.9 million rows by following instructions perfectly but lacking the contextual understanding to distinguish between temporary and live systems."
+        "correct": 1,
+        "explanation": "Perplexity's Computer agent demonstrates multimodel orchestration, meaning it can coordinate multiple AI models together to complete complex tasks."
       },
       {
         "id": "ai-agents-101-q7",
-        "question": "What are the three essential 'Lego bricks' needed to create autonomous AI agents?",
+        "question": "What do companies in the middleware trap need to develop to survive the commodity squeeze?",
         "options": [
-          "Speed, accuracy, and creativity",
-          "Memory, proactivity, and tools",
-          "Logic, reasoning, and execution",
-          "Planning, monitoring, and reporting"
+          "Faster processors",
+          "Durable infrastructure",
+          "Cheaper pricing",
+          "Better marketing"
         ],
         "correct": 1,
-        "explanation": "The three essential components for autonomous AI agents are memory (to retain information), proactivity (to act independently), and tools (to execute tasks)."
+        "explanation": "To escape the middleware trap, companies must pivot from simple wrappers to providing durable infrastructure, deep workflow integration, or specialized services that big tech cannot easily replicate."
       },
       {
         "id": "ai-agents-101-q8",
-        "question": "What is the 'middleware trap' that companies like Perplexity face in the AI industry?",
+        "question": "What are the large AI companies like OpenAI, Anthropic, and Google commonly called?",
         "options": [
-          "High development costs",
-          "Being squeezed by hyperscalers who own models and customers",
-          "Lack of technical talent",
-          "Regulatory compliance issues"
+          "Hyperscalers",
+          "Megacorps",
+          "Platform giants",
+          "Model makers"
         ],
-        "correct": 1,
-        "explanation": "The middleware trap occurs when companies building on top of rival models get squeezed as hyperscalers like OpenAI and Google vertically integrate to control models, context layers, and customer relationships."
+        "correct": 0,
+        "explanation": "These major AI companies are called hyperscalers because they operate at massive scale and are vertically integrating to control models, context layers, and customer relationships."
       },
       {
         "id": "ai-agents-101-q9",
-        "question": "What personal AI system uses a private database to give agents permanent memory?",
+        "question": "According to McKinsey's research, what will happen to businesses that don't adapt to AI agents?",
         "options": [
-          "OpenClaw",
-          "OpenBrain",
-          "AgentMemory",
-          "PersonalAI"
+          "They will grow slowly",
+          "They will become invisible",
+          "They will merge with competitors",
+          "They will focus on niche markets"
         ],
         "correct": 1,
-        "explanation": "OpenBrain is a system that uses a private database and MCP server to provide AI agents with permanent memory, solving the problem of chatbots forgetting user data between sessions."
+        "explanation": "McKinsey suggests that businesses failing to integrate AI agents into their sales processes will become invisible as $1 trillion in sales moves through AI-powered channels."
       },
       {
         "id": "ai-agents-101-q10",
-        "question": "What role shift is happening for humans as AI agents become more capable at execution?",
+        "question": "What strategic approach must AI companies find to survive increasing competition?",
         "options": [
-          "From managers to individual contributors",
-          "From strategists to operators",
-          "From executors to general contractors and contextual stewards",
-          "From specialists to generalists"
+          "Lower prices",
+          "Defensible niches",
+          "Faster development",
+          "Better partnerships"
         ],
-        "correct": 2,
-        "explanation": "As AI handles more execution tasks, humans are shifting to roles as general contractors who supervise AI workers and contextual stewards who provide institutional knowledge and oversight."
+        "correct": 1,
+        "explanation": "AI companies must find defensible niches that provide unique value that cannot be easily replicated by larger competitors who control the underlying models."
+      },
+      {
+        "id": "ai-agents-101-q11",
+        "question": "What happens when AI agents work continuously compared to human work schedules?",
+        "options": [
+          "They need more supervision",
+          "They work while humans rest",
+          "They consume more energy",
+          "They make more mistakes"
+        ],
+        "correct": 1,
+        "explanation": "AI agents can operate 24/7 without breaks, allowing them to work while humans rest, which dramatically increases overall productivity and research capabilities."
+      },
+      {
+        "id": "ai-agents-101-q12",
+        "question": "What major issue affects even the best-performing AI agents according to Wall Street analysis?",
+        "options": [
+          "They cost too much",
+          "They barely work properly",
+          "They lack creativity",
+          "They need constant updates"
+        ],
+        "correct": 1,
+        "explanation": "Despite massive investments, even the best AI agents still barely work properly, highlighting the gap between financial expectations and current technical capabilities."
+      },
+      {
+        "id": "ai-agents-101-q13",
+        "question": "What organizational challenge emerges when AI agents become highly productive?",
+        "options": [
+          "Training becomes harder",
+          "Review processes become bottlenecks",
+          "Costs increase dramatically",
+          "Security risks multiply"
+        ],
+        "correct": 1,
+        "explanation": "When agents produce work at 100x speed but organizations can only review at 3x speed, the review and approval process becomes a major bottleneck limiting overall efficiency gains."
+      },
+      {
+        "id": "ai-agents-101-q14",
+        "question": "What is the primary strategic goal for model providers in the current AI market?",
+        "options": [
+          "Reduce development costs",
+          "Capture every token of value",
+          "Expand internationally",
+          "Improve model accuracy"
+        ],
+        "correct": 1,
+        "explanation": "Model providers are incentivized to capture every available token of value by vertically integrating and controlling multiple layers of the AI stack, from models to customer relationships."
+      },
+      {
+        "id": "ai-agents-101-q15",
+        "question": "What fundamental shift is occurring in how people position AI agents in the market?",
+        "options": [
+          "Most people pick the wrong positioning",
+          "Everyone agrees on agent capabilities",
+          "Positioning is becoming standardized",
+          "Market positioning is irrelevant"
+        ],
+        "correct": 0,
+        "explanation": "According to industry mapping, most people incorrectly position where AI agents actually sit in the technology landscape, leading to strategic misunderstandings about their role and capabilities."
       }
     ],
     "level": 100
   },
-  "created_at": "2026-04-12",
-  "updated_at": "2026-04-12"
+  "created_at": "2026-04-24",
+  "updated_at": "2026-04-24"
 }

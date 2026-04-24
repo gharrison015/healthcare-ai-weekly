@@ -4,10 +4,12 @@
     {"slug": "ai-agents-101", "title": "AI Agents: What You Need to Know", "description": "How autonomous AI systems are reshaping work", "accent_color": "#059669", "keywords": ["agent", "agentic", "autonomous", "workflow", "tool use", "multi-agent"]},
     {"slug": "ai-safety-governance", "title": "AI Safety and Governance", "description": "What can go wrong and how to manage risk", "accent_color": "#dc2626", "keywords": ["safety", "risk", "governance", "guardrail", "alignment", "blackmail", "regulation"]},
     {"slug": "ai-in-the-workplace", "title": "AI in the Workplace", "description": "How AI is changing jobs, skills, and productivity", "accent_color": "#7c3aed", "keywords": ["productivity", "workplace", "hiring", "job", "skill", "career", "obsolescence"]},
-    {"slug": "ai-strategy-for-leaders", "title": "AI Strategy for Leaders", "description": "Making smart AI decisions at the executive level", "accent_color": "#d97706", "keywords": ["strategy", "leader", "executive", "vendor", "build", "buy", "ROI", "adoption"]}
+    {"slug": "ai-strategy-for-leaders", "title": "AI Strategy for Leaders", "description": "Making smart AI decisions at the executive level", "accent_color": "#d97706", "keywords": ["strategy", "leader", "executive", "vendor", "build", "buy", "ROI", "adoption"]},
+    {"slug": "ai-for-developers", "title": "AI for Developers", "description": "How AI is reshaping software engineering and coding productivity", "accent_color": "#0ea5e9", "keywords": ["codex", "codebase", "developer", "engineer", "refactor", "claude code", "opus", "orchestration", "cursor", "github"]},
+    {"slug": "ai-industry-moves", "title": "AI Industry Moves", "description": "Tracking model wars, big releases, and the major-player dynamics", "accent_color": "#ec4899", "keywords": ["openai", "anthropic", "nvidia", "gpt", "hyperscaler", "microsoft", "valuation", "launch", "leak", "labs"]}
   ],
   "quiz": {
-    "questions_per_topic": 10,
+    "questions_per_topic": 15,
     "difficulty": "medium",
     "style": "trivia"
   }

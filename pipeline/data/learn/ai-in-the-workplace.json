@@ -4,138 +4,198 @@
   "description": "How AI is changing jobs, skills, and productivity",
   "accent_color": "#7c3aed",
   "sources": [
-    "9e4e9aac-ab49-4817-bdb9-a21ee6ba51a4",
-    "0e9a0a00-f36f-45ba-9578-15c6419fbb27",
-    "fd007e88-6c80-4bd5-ab9f-d2e3de92dbf2"
+    "3492cdc5-c807-4c50-bd2e-fe8d6e4c2410",
+    "e7a150d7-c583-4b88-a0da-358eb7b5a0bf",
+    "0e9a0a00-f36f-45ba-9578-15c6419fbb27"
   ],
   "source_count": 3,
-  "summary": "Artificial intelligence is highly visible in the workplace for roles like computer programming and customer service, yet it is not causing widespread job losses. Research shows that while AI could theoretically perform 94 percent of tasks in computer and math jobs, current models only cover about 33 percent of those tasks in the real world. Data reveals no broad increase in unemployment for workers in the most exposed jobs. These highly exposed workers actually tend to earn 47 percent more and are significantly more educated than unexposed workers. There is a clear warning sign for new graduates, however. Hiring for young workers aged 22 to 25 into heavily AI exposed roles has dropped by 14 percent since the release of ChatGPT.\n\nBecause AI capabilities upgrade roughly every three months, traditional static training is becoming obsolete. Employees must develop a new skill called frontier operations, which involves constantly learning exactly what AI can do autonomously and where human judgment is still required. For example, an AI model might score 93 percent on retrieving information from a massive 256,000 token document today, even if it failed at the exact same task just a few months prior. Workers must know how to design specific workflows where agents do the heavy lifting while humans verify the outputs. By mastering this process, a single employee managing multiple AI agents can produce the same output as a five to ten person team from just a few years ago.\n\nBusinesses are also creating strict boundaries between how AI is used at home versus in the office. Personal AI tools are designed to be friendly and engaging, but enterprise AI systems will be highly regulated environments built around security. Corporate AI tools will require complex identity checks, permission layers, and detailed audit logs to ensure automated agents follow company rules. Employees will face a mental shift when they transition to workplace AI. Workers who simply treat AI as a casual chat buddy will fall behind, while those who learn to rigorously delegate, audit, and verify AI agent work will become the most valuable people in the workforce, capable of producing 10 to 100 times their normal output.",
+  "summary": "Companies are attempting to replace middle managers with AI \"world models\" that track projects and synthesize status updates in real time. For example, Jack Dorsey recently published a blueprint for this concept. However, these systems often fail quietly because they lack human judgment. An AI might automatically suppress crucial information or misinterpret a normal seasonal revenue drop as a major crisis. Businesses must clearly define the boundary between factual data that AI can safely process and complex situations that require human interpretation.\n\nBecause AI capabilities expand rapidly, static employee training is becoming obsolete. An AI model that failed at a task three months ago might suddenly score 93 percent on retrieving data from a massive 256,000 token document today. Workers must develop \"frontier operations\" skills, which means constantly learning exactly what AI can do autonomously and where human expertise is still needed. For instance, a product manager might delegate market sizing to an AI agent while personally handling the nuanced political dynamics between executives. Similarly, a corporate council must know that an AI can scan standard contract boilerplate but will likely miss specific indemnification clauses.\n\nThis technological shift changes how companies scale, moving the focus from headcount to operational leverage. Industry frameworks show that two to five human workers can now supervise 50 to 100 autonomous agents. By mastering this delegation process, a single employee managing multiple AI workflows can produce the same output as a five to ten person team from just a few years ago. To succeed, organizations need to create explicit roles for employees who specialize in designing these collaborative workflows, tracking where AI tools succeed, and auditing their specific failure modes.",
   "quiz": {
     "title": "Quick Check: AI in the Workplace",
     "questions": [
       {
         "id": "ai-in-the-workplace-q1",
-        "question": "According to recent research, which two professions currently show the highest exposure to AI integration?",
+        "question": "What happened when Block laid off approximately half its company to replace workers with AI?",
         "options": [
-          "Marketing specialists and data scientists",
-          "Computer programmers and financial analysts",
-          "Customer service representatives and writers",
-          "Project managers and consultants"
+          "AI successfully maintained all previous productivity levels",
+          "The company discovered AI couldn't perform many of the eliminated jobs",
+          "Revenue increased by 50% within the first quarter",
+          "AI tools required minimal human oversight"
         ],
         "correct": 1,
-        "explanation": "Research using the 'observed exposure' metric specifically identified computer programmers and financial analysts as high-risk professions with significant AI integration potential."
+        "explanation": "Block's experience demonstrates that AI cannot simply replace human workers at scale, as the technology failed to adequately perform many of the jobs that were eliminated."
       },
       {
         "id": "ai-in-the-workplace-q2",
-        "question": "What surprising finding emerged about unemployment rates in AI-exposed professions?",
+        "question": "According to AI workplace experts, what is the typical lifespan of specific AI skills before they become outdated?",
         "options": [
-          "Unemployment increased dramatically for experienced workers",
-          "All age groups saw equal job displacement",
-          "No significant increase in unemployment was detected overall",
-          "Only part-time workers were affected"
+          "2-3 years",
+          "12-18 months",
+          "3-6 months",
+          "6-8 weeks"
         ],
         "correct": 2,
-        "explanation": "Despite identifying high-risk professions, the research found no significant increase in unemployment for workers in AI-exposed roles compared to unexposed roles."
+        "explanation": "The rapid evolution of AI technology means that specific technical skills and knowledge become obsolete within 3-6 months, requiring continuous learning and adaptation."
       },
       {
         "id": "ai-in-the-workplace-q3",
-        "question": "Where is AI showing its clearest impact on the job market right now?",
+        "question": "What is the primary reason many AI workplace skills learned six months ago are now considered outdated?",
         "options": [
-          "Mass layoffs of senior professionals",
-          "Slower hiring of younger workers in exposed fields",
-          "Reduced salaries across all industries",
-          "Elimination of entire job categories"
+          "Companies have banned older AI tools",
+          "The underlying technology and capabilities have rapidly evolved",
+          "Government regulations have changed the requirements",
+          "Worker productivity has decreased with older methods"
         ],
         "correct": 1,
-        "explanation": "The research revealed a concerning slowdown in hiring for younger workers in highly AI-exposed fields, suggesting AI primarily affects entry-level opportunities rather than displacing existing workers."
+        "explanation": "AI technology is advancing so quickly that tools, interfaces, and best practices from just six months ago have been superseded by newer, more capable systems."
       },
       {
         "id": "ai-in-the-workplace-q4",
-        "question": "What does 'observed exposure' measure in AI workplace research?",
+        "question": "What does Block's AI replacement experiment reveal about current AI limitations in the workplace?",
         "options": [
-          "How much time employees spend using AI tools daily",
-          "The combination of theoretical AI capabilities with actual usage data",
-          "Survey responses about worker comfort with AI",
-          "The number of AI tools installed in a workplace"
+          "AI works best in customer service roles",
+          "AI requires extensive training periods to be effective",
+          "AI cannot adequately handle the complexity of many human jobs",
+          "AI is most successful in technical positions"
         ],
-        "correct": 1,
-        "explanation": "Observed exposure is a novel metric that blends theoretical LLM capabilities with actual usage data to track real-world AI integration into specific job tasks."
+        "correct": 2,
+        "explanation": "Block's failed experiment shows that AI technology is not yet sophisticated enough to handle the nuanced, complex tasks that many human workers perform daily."
       },
       {
         "id": "ai-in-the-workplace-q5",
-        "question": "According to workplace AI experts, how often do AI capabilities significantly evolve?",
+        "question": "What emerging workplace trend is replacing the approach of learning specific AI tools?",
         "options": [
-          "Annually",
-          "Monthly",
-          "Quarterly",
-          "Every few years"
+          "Focusing on AI-resistant skills only",
+          "Learning foundational AI literacy and adaptation skills",
+          "Specializing in one AI platform exclusively",
+          "Avoiding AI integration entirely"
         ],
-        "correct": 2,
-        "explanation": "The source emphasizes that AI capabilities evolve on a quarterly basis, making continuous adaptation essential for workplace success."
+        "correct": 1,
+        "explanation": "Since specific AI tools change rapidly, professionals are shifting toward learning foundational concepts and adaptation skills that remain valuable across different AI platforms."
       },
       {
         "id": "ai-in-the-workplace-q6",
-        "question": "What is 'boundary sensing' in the context of AI workplace skills?",
+        "question": "What type of companies are most likely to face challenges similar to Block's AI replacement issues?",
         "options": [
-          "Setting physical boundaries for AI hardware",
-          "Tracking what AI can do in real-time",
-          "Preventing AI from accessing sensitive data",
-          "Measuring AI processing speeds"
+          "Companies that implement AI gradually alongside human workers",
+          "Companies that attempt large-scale human-to-AI substitutions",
+          "Companies that focus on AI for data analysis only",
+          "Companies that use AI for basic automation tasks"
         ],
         "correct": 1,
-        "explanation": "Boundary sensing is the dynamic capability to track what AI can do in real-time, helping professionals manage the evolving boundary between human judgment and artificial intelligence."
+        "explanation": "Block's experience serves as a warning for companies attempting wholesale replacement of human workers with AI, rather than strategic integration."
       },
       {
         "id": "ai-in-the-workplace-q7",
-        "question": "What skill involves structuring handoffs between humans and AI systems?",
+        "question": "According to recent workplace AI trends, what skill is becoming more valuable than knowing specific AI tools?",
         "options": [
-          "Failure model maintenance",
-          "Boundary sensing",
-          "Seam design",
-          "Frontier operations"
+          "Programming in Python",
+          "Understanding when and how to apply AI appropriately",
+          "Memorizing AI command prompts",
+          "Operating multiple AI platforms simultaneously"
         ],
-        "correct": 2,
-        "explanation": "Seam design is the specific skill focused on structuring effective handoffs between humans and machines in AI-integrated workflows."
+        "correct": 1,
+        "explanation": "As AI tools rapidly evolve, the meta-skill of knowing when, where, and how to apply AI effectively is more valuable than mastering specific tools that may become obsolete."
       },
       {
         "id": "ai-in-the-workplace-q8",
-        "question": "How will future corporate AI likely differ from personal AI tools?",
+        "question": "What does the Block case study suggest about the timeline for successful AI workplace integration?",
         "options": [
-          "Corporate AI will be more user-friendly and casual",
-          "Personal AI will have better processing power",
-          "Corporate AI will be more rigid with strict governance and oversight",
-          "There will be no meaningful difference between them"
+          "AI replacement should happen as quickly as possible",
+          "Successful AI integration requires gradual, thoughtful implementation",
+          "AI works best when implemented during company restructuring",
+          "Timeline doesn't matter as much as the AI tools chosen"
         ],
-        "correct": 2,
-        "explanation": "Future corporate AI is predicted to become rigid and highly regulated with strict governance and oversight, contrasting with personal tools that prioritize user comfort."
+        "correct": 1,
+        "explanation": "Block's failure demonstrates that rushing AI implementation without proper planning and gradual integration leads to operational problems and unmet expectations."
       },
       {
         "id": "ai-in-the-workplace-q9",
-        "question": "What creates the emerging skill gap in AI workplace adoption?",
+        "question": "What is the main reason professionals need to continuously update their AI workplace knowledge?",
         "options": [
-          "Lack of technical programming knowledge",
-          "Insufficient hardware in most workplaces",
-          "The shift from treating AI as a 'buddy' to managing it as a professional system",
-          "Limited access to AI training programs"
+          "Company policies change frequently",
+          "The competitive landscape shifts quarterly",
+          "AI capabilities and tools evolve every few months",
+          "Industry standards are regularly updated"
         ],
         "correct": 2,
-        "explanation": "The skill gap emerges as employees must transition from treating AI as a casual 'buddy' to managing it as a sophisticated, accountable digital workforce requiring professional standards."
+        "explanation": "The rapid pace of AI development means that new capabilities, tools, and best practices emerge every few months, making continuous learning essential."
       },
       {
         "id": "ai-in-the-workplace-q10",
-        "question": "What approach do experts recommend for AI skill development in organizations?",
+        "question": "Based on Block's experience, what should companies prioritize when considering AI integration?",
         "options": [
-          "One-time comprehensive training programs",
-          "Focus only on technical programming skills",
-          "Continuous practice environments treating AI collaboration as evolving",
-          "Standardized certifications for all employees"
+          "Maximizing cost savings through workforce reduction",
+          "Identifying tasks where AI can augment rather than replace humans",
+          "Implementing the most advanced AI available",
+          "Moving quickly to gain competitive advantage"
+        ],
+        "correct": 1,
+        "explanation": "Block's difficulties highlight the importance of finding appropriate AI applications that enhance human capabilities rather than attempting wholesale human replacement."
+      },
+      {
+        "id": "ai-in-the-workplace-q11",
+        "question": "What workplace reality is driving the need for constantly updated AI skills?",
+        "options": [
+          "Employee turnover rates",
+          "The accelerating pace of AI technological advancement",
+          "Changes in remote work policies",
+          "Increasing regulatory requirements"
+        ],
+        "correct": 1,
+        "explanation": "AI technology is advancing so rapidly that yesterday's cutting-edge tools and techniques quickly become outdated, requiring professionals to continuously adapt."
+      },
+      {
+        "id": "ai-in-the-workplace-q12",
+        "question": "What lesson does Block's AI experiment offer about workforce planning?",
+        "options": [
+          "AI can immediately replace most human roles",
+          "Large-scale AI substitution should be carefully tested before implementation",
+          "AI works best in creative industries",
+          "Smaller companies are better suited for AI replacement"
+        ],
+        "correct": 1,
+        "explanation": "Block's experience demonstrates the importance of thorough testing and gradual implementation rather than making large-scale workforce changes based on AI promises."
+      },
+      {
+        "id": "ai-in-the-workplace-q13",
+        "question": "What type of AI workplace knowledge is proving most durable over time?",
+        "options": [
+          "Specific software commands and shortcuts",
+          "Detailed knowledge of current AI model architectures",
+          "Understanding of AI principles and appropriate applications",
+          "Memorized prompt libraries for popular tools"
         ],
         "correct": 2,
-        "explanation": "Experts suggest moving away from fixed curricula toward continuous practice environments that treat AI collaboration as an evolving discipline rather than a one-time destination."
+        "explanation": "While specific tools and techniques quickly become outdated, fundamental understanding of AI principles and when to apply them remains valuable across technological changes."
+      },
+      {
+        "id": "ai-in-the-workplace-q14",
+        "question": "According to workplace AI trends, what approach is replacing tool-specific training?",
+        "options": [
+          "Focus on developing AI-proof skills only",
+          "Learning adaptable AI literacy and strategic thinking",
+          "Specializing in the single most popular AI platform",
+          "Avoiding AI altogether until the technology stabilizes"
+        ],
+        "correct": 1,
+        "explanation": "Since specific AI tools change rapidly, the focus has shifted to developing adaptable skills and strategic thinking that can be applied across different AI platforms and situations."
+      },
+      {
+        "id": "ai-in-the-workplace-q15",
+        "question": "What does Block's failed AI implementation reveal about current enterprise AI readiness?",
+        "options": [
+          "Enterprise AI is mature enough for complete workforce replacement",
+          "Most AI tools are too expensive for large-scale implementation",
+          "Current AI technology has significant gaps in handling complex work tasks",
+          "AI works better in startups than established companies"
+        ],
+        "correct": 2,
+        "explanation": "Block's experience exposes the reality that current AI technology, while impressive in many areas, still has substantial limitations when applied to complex, real-world work scenarios."
       }
     ],
     "level": 200
   },
-  "created_at": "2026-04-12",
-  "updated_at": "2026-04-12"
+  "created_at": "2026-04-24",
+  "updated_at": "2026-04-24"
 }
