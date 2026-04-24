@@ -1,14 +1,22 @@
 {
-  "generated_at": "2026-04-10",
-  "topic_count": 4,
+  "generated_at": "2026-04-24",
+  "topic_count": 6,
   "topics": [
+    {
+      "slug": "ai-agents-101",
+      "title": "AI Agents: What You Need to Know",
+      "description": "How autonomous AI systems are reshaping work",
+      "accent_color": "#059669",
+      "source_count": 11,
+      "question_count": 15
+    },
     {
       "slug": "ai-safety-governance",
       "title": "AI Safety and Governance",
       "description": "What can go wrong and how to manage risk",
       "accent_color": "#dc2626",
-      "source_count": 2,
-      "question_count": 10
+      "source_count": 1,
+      "question_count": 15
     },
     {
       "slug": "ai-in-the-workplace",
@@ -16,23 +24,31 @@
       "description": "How AI is changing jobs, skills, and productivity",
       "accent_color": "#7c3aed",
       "source_count": 3,
-      "question_count": 10
+      "question_count": 15
     },
     {
       "slug": "ai-strategy-for-leaders",
       "title": "AI Strategy for Leaders",
       "description": "Making smart AI decisions at the executive level",
       "accent_color": "#d97706",
-      "source_count": 5,
-      "question_count": 10
+      "source_count": 3,
+      "question_count": 15
     },
     {
-      "slug": "ai-agents-101",
-      "title": "AI Agents: What You Need to Know",
-      "description": "How autonomous AI systems are reshaping work",
-      "accent_color": "#059669",
-      "source_count": 16,
-      "question_count": 10
+      "slug": "ai-for-developers",
+      "title": "AI for Developers",
+      "description": "How AI is reshaping software engineering and coding productivity",
+      "accent_color": "#0ea5e9",
+      "source_count": 7,
+      "question_count": 15
+    },
+    {
+      "slug": "ai-industry-moves",
+      "title": "AI Industry Moves",
+      "description": "Tracking model wars, big releases, and the major-player dynamics",
+      "accent_color": "#ec4899",
+      "source_count": 12,
+      "question_count": 15
     }
   ]
 }
