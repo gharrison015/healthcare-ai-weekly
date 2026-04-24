@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-24T15:01:37Z",
+  "slug": "google-google-stitch-s-design-md-format-is-now-open-source",
+  "headline": "Google open-sources Stitch design format for AI documentation",
+  "body": "Google Labs released DESIGN.md as an open-source format for documenting AI system design decisions and trade-offs. This standardization tool directly addresses healthcare AI's documentation gaps, where clinical validation, regulatory compliance, and EHR integration require transparent design rationale. Healthcare organizations and vendors can now adopt a consistent framework to document AI model behavior, enabling better cross-institutional collaboration and faster FDA submissions. For healthcare AI consultants, this reduces friction in model governance conversations and strengthens the audit trail requirements that payers increasingly demand for value-based AI implementations.",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-design-md/",
+  "source_name": "Blog",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}
