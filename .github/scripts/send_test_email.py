@@ -9,27 +9,25 @@ template changes since the original send), and emails it to the single
 test recipient. Never touches Supabase. Never commits anything.
 """
 
+import json
 import os
-import smtplib
 import sys
+import urllib.request
+import urllib.error
 from datetime import datetime, timedelta
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PIPELINE_DIR = REPO_ROOT / "pipeline"
 CONTENT_DIR = REPO_ROOT / "content"
 
-# Make pipeline imports work
 sys.path.insert(0, str(PIPELINE_DIR))
-import json
 from generator.email_generator import render_email, LANDING_PAGE_URL, format_subject_line
 
-SMTP_HOST = "smtp.gmail.com"
-SMTP_PORT = 465
-DEFAULT_RECIPIENT = "gharrison@guidehouse.com"
+FROM_ADDRESS = "newsletter@healthcareaibrief.com"
 FROM_DISPLAY_NAME = "Healthcare AI Weekly (Test)"
+DEFAULT_RECIPIENT = "gharrison@guidehouse.com"
+RESEND_URL = "https://api.resend.com/emails"
 
 # Hard-coded test allowlist. See CLAUDE.md "Test Email Policy".
 # Never test-send to real subscribers — use only Greg's own addresses.
@@ -61,10 +59,9 @@ def main() -> int:
         )
         return 2
 
-    user = os.environ.get("SMTP_USER")
-    password = os.environ.get("SMTP_PASSWORD")
-    if not user or not password:
-        print("error: SMTP_USER and SMTP_PASSWORD must be set", file=sys.stderr)
+    api_key = os.environ.get("RESEND_API_KEY")
+    if not api_key:
+        print("error: RESEND_API_KEY must be set", file=sys.stderr)
         return 1
 
     data_path = CONTENT_DIR / "issues" / date_str / "data.json"
@@ -80,20 +77,33 @@ def main() -> int:
     deep = f"{LANDING_PAGE_URL}/news/{date_str}"
     html = render_email(curated, landing_url=landing, deep_dive_url=deep)
 
-    # Include a UTC timestamp so Outlook/Gmail do not thread consecutive
-    # tests into the same conversation — every test run shows as a new email.
+    # Timestamp in subject so Outlook/Gmail don't thread consecutive tests.
     stamp = datetime.now().strftime("%H:%M")
     subject = f"[TEST {stamp}Z] {format_subject_line(week_range)}"
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = f"{FROM_DISPLAY_NAME} <{user}>"
-    msg["To"] = recipient
-    msg.attach(MIMEText("Test email — best viewed in HTML.", "plain"))
-    msg.attach(MIMEText(html, "html"))
 
-    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30) as server:
-        server.login(user, password)
-        server.sendmail(user, [recipient], msg.as_string())
+    body = {
+        "from": f"{FROM_DISPLAY_NAME} <{FROM_ADDRESS}>",
+        "to": [recipient],
+        "subject": subject,
+        "html": html,
+    }
+    req = urllib.request.Request(
+        RESEND_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": "healthcare-ai-weekly/1.0",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            resp.read()
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")
+        print(f"error: Resend returned {e.code}: {detail}", file=sys.stderr)
+        return 1
 
     print(f"sent test email for {date_str} -> {recipient} ({len(html)} bytes)")
     return 0

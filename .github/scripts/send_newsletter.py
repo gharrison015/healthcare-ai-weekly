@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Send the weekly newsletter to all active subscribers via Gmail SMTP.
+"""Send the weekly newsletter to all active subscribers via Resend.
 
 Usage: send_newsletter.py YYYY-MM-DD
 
 Env vars (required):
-  SMTP_USER          Sending Gmail address
-  SMTP_PASSWORD      Gmail App Password (16 chars, no spaces)
+  RESEND_API_KEY     Resend API key (account with healthcareaibrief.com verified)
   SUPABASE_URL       Supabase project URL
   SUPABASE_KEY       Supabase service role key (reads subscribers table)
 
@@ -18,23 +17,22 @@ from Supabase, and sends a personalized email (with unsubscribe link) to each.
 
 import json
 import os
-import smtplib
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PIPELINE_DIR = REPO_ROOT / "pipeline"
 
-SMTP_HOST = "smtp.gmail.com"
-SMTP_PORT = 465
-DEFAULT_TO = "gharrison@guidehouse.com"
+FROM_ADDRESS = "newsletter@healthcareaibrief.com"
 FROM_DISPLAY_NAME = "Healthcare AI Weekly"
+DEFAULT_TO = "gharrison@guidehouse.com"
 SITE_URL = "https://healthcareaibrief.com"
+RESEND_URL = "https://api.resend.com/emails"
+SEND_DELAY_SECONDS = 0.6  # stay under Resend free-tier 2 req/s
 
 
 def format_subject(date_str: str) -> str:
@@ -59,28 +57,45 @@ def fetch_subscribers(supabase_url: str, supabase_key: str) -> list[dict]:
         return []
 
 
-def build_email(subject: str, from_addr: str, to_addr: str, html_body: str, unsub_token: str | None = None) -> MIMEMultipart:
-    """Build a personalized email with optional unsubscribe link."""
-    body = html_body
-    if unsub_token:
-        unsub_url = f"{SITE_URL}/api/unsubscribe?token={unsub_token}"
-        body = html_body.replace("</body>", "")  # let the template handle it via Jinja
-        # If the template already has the unsubscribe placeholder, it's handled.
-        # Otherwise, inject before closing body tag as fallback.
-        if unsub_url not in body and "Unsubscribe" not in body:
-            body += f'<div style="text-align:center;padding:12px;font-size:12px;color:#94a3b8;"><a href="{unsub_url}" style="color:#94a3b8;text-decoration:underline;">Unsubscribe</a></div>'
-            body += "</body>"
-        elif "</body>" not in body:
-            body += "</body>"
+def inject_unsubscribe(html_body: str, unsub_token: str | None) -> str:
+    if not unsub_token:
+        return html_body
+    unsub_url = f"{SITE_URL}/api/unsubscribe?token={unsub_token}"
+    if unsub_url in html_body or "Unsubscribe" in html_body:
+        return html_body
+    footer = (
+        f'<div style="text-align:center;padding:12px;font-size:12px;color:#94a3b8;">'
+        f'<a href="{unsub_url}" style="color:#94a3b8;text-decoration:underline;">Unsubscribe</a></div>'
+    )
+    if "</body>" in html_body:
+        return html_body.replace("</body>", footer + "</body>")
+    return html_body + footer
 
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = f"{FROM_DISPLAY_NAME} <{from_addr}>"
-    msg["To"] = to_addr
-    msg["List-Unsubscribe"] = f"<{SITE_URL}/api/unsubscribe?token={unsub_token}>" if unsub_token else ""
-    msg.attach(MIMEText("This email is best viewed in an HTML-capable email client.", "plain"))
-    msg.attach(MIMEText(body, "html"))
-    return msg
+
+def send_via_resend(api_key: str, to_addr: str, subject: str, html: str, unsub_token: str | None) -> None:
+    body = {
+        "from": f"{FROM_DISPLAY_NAME} <{FROM_ADDRESS}>",
+        "to": [to_addr],
+        "subject": subject,
+        "html": html,
+    }
+    if unsub_token:
+        body["headers"] = {
+            "List-Unsubscribe": f"<{SITE_URL}/api/unsubscribe?token={unsub_token}>",
+            "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        }
+    req = urllib.request.Request(
+        RESEND_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": "healthcare-ai-weekly/1.0",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        resp.read()  # drain
 
 
 def main() -> int:
@@ -89,10 +104,9 @@ def main() -> int:
         return 2
     date_str = sys.argv[1]
 
-    user = os.environ.get("SMTP_USER")
-    password = os.environ.get("SMTP_PASSWORD")
-    if not user or not password:
-        print("error: SMTP_USER and SMTP_PASSWORD must be set", file=sys.stderr)
+    api_key = os.environ.get("RESEND_API_KEY")
+    if not api_key:
+        print("error: RESEND_API_KEY must be set", file=sys.stderr)
         return 1
 
     email_html_path = PIPELINE_DIR / "data" / "issues" / date_str / "email.html"
@@ -124,23 +138,26 @@ def main() -> int:
         print("error: no recipients", file=sys.stderr)
         return 1
 
-    # Send to all recipients
     sent = 0
     failed = 0
-    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30) as server:
-        server.login(user, password)
-        for recipient in recipients:
-            addr = recipient["email"]
-            try:
-                msg = build_email(subject, user, addr, html_body, recipient.get("token"))
-                server.sendmail(user, [addr], msg.as_string())
-                sent += 1
-            except Exception as e:
-                print(f"warning: failed to send to {addr}: {e}")
-                failed += 1
+    for recipient in recipients:
+        addr = recipient["email"]
+        token = recipient.get("token")
+        try:
+            personalized = inject_unsubscribe(html_body, token)
+            send_via_resend(api_key, addr, subject, personalized, token)
+            sent += 1
+        except urllib.error.HTTPError as e:
+            failed += 1
+            detail = e.read().decode("utf-8", errors="replace")
+            print(f"warning: failed to send to {addr}: {e.code} {detail}")
+        except Exception as e:
+            failed += 1
+            print(f"warning: failed to send to {addr}: {e}")
+        time.sleep(SEND_DELAY_SECONDS)
 
     print(f"sent {sent} emails, {failed} failures ({len(recipients)} total recipients)")
-    return 0
+    return 0 if failed == 0 else 1
 
 
 if __name__ == "__main__":

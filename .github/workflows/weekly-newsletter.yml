@@ -79,8 +79,7 @@ jobs:
       - name: Send newsletter
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python .github/scripts/send_newsletter.py ${{ steps.date.outputs.date }}

@@ -4,12 +4,12 @@ every active Supabase subscriber.
 
 One-shot production tool for when the template has changed mid-week and
 new subscribers (or existing ones) need the updated format. Uses the
-exact same SMTP + unsubscribe-token mechanics as send_newsletter.py.
+exact same Resend + unsubscribe-token mechanics as send_newsletter.py.
 
 Usage: resend_issue.py YYYY-MM-DD
 
 Env vars (required):
-  SMTP_USER, SMTP_PASSWORD
+  RESEND_API_KEY
   SUPABASE_URL, SUPABASE_KEY
 """
 
@@ -17,13 +17,11 @@ from __future__ import annotations
 
 import json
 import os
-import smtplib
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -33,10 +31,11 @@ CONTENT_DIR = REPO_ROOT / "content"
 sys.path.insert(0, str(PIPELINE_DIR))
 from generator.email_generator import render_email, LANDING_PAGE_URL, format_subject_line
 
-SMTP_HOST = "smtp.gmail.com"
-SMTP_PORT = 465
+FROM_ADDRESS = "newsletter@healthcareaibrief.com"
 FROM_DISPLAY_NAME = "Healthcare AI Weekly"
 SITE_URL = "https://healthcareaibrief.com"
+RESEND_URL = "https://api.resend.com/emails"
+SEND_DELAY_SECONDS = 0.6
 
 
 def compute_week_range(date_str: str) -> str:
@@ -55,24 +54,43 @@ def fetch_subscribers(supabase_url: str, supabase_key: str) -> list[dict]:
         return json.loads(resp.read())
 
 
-def build_email(subject, from_addr, to_addr, html_body, unsub_token=None):
-    body = html_body
-    if unsub_token and "Unsubscribe" not in body:
-        unsub_url = f"{SITE_URL}/api/unsubscribe?token={unsub_token}"
-        body = body.replace(
-            "</body>",
-            f'<div style="text-align:center;padding:12px;font-size:12px;color:#94a3b8;">'
-            f'<a href="{unsub_url}" style="color:#94a3b8;text-decoration:underline;">Unsubscribe</a></div></body>',
-        )
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = f"{FROM_DISPLAY_NAME} <{from_addr}>"
-    msg["To"] = to_addr
+def inject_unsubscribe(html_body: str, unsub_token: str | None) -> str:
+    if not unsub_token or "Unsubscribe" in html_body:
+        return html_body
+    unsub_url = f"{SITE_URL}/api/unsubscribe?token={unsub_token}"
+    footer = (
+        f'<div style="text-align:center;padding:12px;font-size:12px;color:#94a3b8;">'
+        f'<a href="{unsub_url}" style="color:#94a3b8;text-decoration:underline;">Unsubscribe</a></div>'
+    )
+    if "</body>" in html_body:
+        return html_body.replace("</body>", footer + "</body>")
+    return html_body + footer
+
+
+def send_via_resend(api_key: str, to_addr: str, subject: str, html: str, unsub_token: str | None) -> None:
+    body = {
+        "from": f"{FROM_DISPLAY_NAME} <{FROM_ADDRESS}>",
+        "to": [to_addr],
+        "subject": subject,
+        "html": html,
+    }
     if unsub_token:
-        msg["List-Unsubscribe"] = f"<{SITE_URL}/api/unsubscribe?token={unsub_token}>"
-    msg.attach(MIMEText("This email is best viewed in an HTML-capable email client.", "plain"))
-    msg.attach(MIMEText(body, "html"))
-    return msg
+        body["headers"] = {
+            "List-Unsubscribe": f"<{SITE_URL}/api/unsubscribe?token={unsub_token}>",
+            "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        }
+    req = urllib.request.Request(
+        RESEND_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": "healthcare-ai-weekly/1.0",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        resp.read()
 
 
 def main() -> int:
@@ -81,12 +99,11 @@ def main() -> int:
         return 2
     date_str = sys.argv[1]
 
-    user = os.environ.get("SMTP_USER")
-    password = os.environ.get("SMTP_PASSWORD")
+    api_key = os.environ.get("RESEND_API_KEY")
     supabase_url = os.environ.get("SUPABASE_URL")
     supabase_key = os.environ.get("SUPABASE_KEY")
     missing = [k for k, v in {
-        "SMTP_USER": user, "SMTP_PASSWORD": password,
+        "RESEND_API_KEY": api_key,
         "SUPABASE_URL": supabase_url, "SUPABASE_KEY": supabase_key,
     }.items() if not v]
     if missing:
@@ -115,18 +132,22 @@ def main() -> int:
     print(f"re-sending {date_str} to {len(subs)} active subscriber(s):")
     sent = 0
     failed = 0
-    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30) as server:
-        server.login(user, password)
-        for sub in subs:
-            addr = sub["email"]
-            try:
-                msg = build_email(subject, user, addr, html, sub.get("unsubscribe_token"))
-                server.sendmail(user, [addr], msg.as_string())
-                sent += 1
-                print(f"  sent -> {addr}")
-            except Exception as e:
-                failed += 1
-                print(f"  FAILED -> {addr}: {e}")
+    for sub in subs:
+        addr = sub["email"]
+        token = sub.get("unsubscribe_token")
+        try:
+            personalized = inject_unsubscribe(html, token)
+            send_via_resend(api_key, addr, subject, personalized, token)
+            sent += 1
+            print(f"  sent -> {addr}")
+        except urllib.error.HTTPError as e:
+            failed += 1
+            detail = e.read().decode("utf-8", errors="replace")
+            print(f"  FAILED -> {addr}: {e.code} {detail}")
+        except Exception as e:
+            failed += 1
+            print(f"  FAILED -> {addr}: {e}")
+        time.sleep(SEND_DELAY_SECONDS)
 
     print(f"done: {sent} sent, {failed} failed")
     return 0 if failed == 0 else 1

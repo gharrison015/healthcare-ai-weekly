@@ -27,8 +27,7 @@ jobs:
         run: pip install jinja2
       - name: Render and send to all active subscribers
         env:
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python .github/scripts/resend_issue.py "${{ github.event.inputs.date }}"
