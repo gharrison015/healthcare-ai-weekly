@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-24T10:58:39Z",
+  "slug": "anthropic-unauthorized-discord-group-gained-access-to-anthropic-s-myth",
+  "headline": "Anthropic's Mythos model accessed by unauthorized Discord group",
+  "body": "An unauthorized Discord group gained access to Anthropic's Mythos cybersecurity model, according to reports from multiple sources. This security breach raises critical questions about model governance and access controls at a major AI vendor as healthcare systems increasingly evaluate large language models for clinical applications. For healthcare organizations considering Anthropic's models in sensitive workflows like clinical decision support or patient data analysis, this incident demands clarity on how Anthropic secures proprietary tools and enforces access boundaries. The breach also signals potential vulnerabilities in the vendor landscape that compliance and security teams must factor into their model selection and implementation strategies. Healthcare IT leaders should request detailed information from Anthropic about their incident response, authentication protocols, and safeguards before deploying any models in production environments.",
+  "source_url": "https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/",
+  "source_name": "TechCrunch",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
