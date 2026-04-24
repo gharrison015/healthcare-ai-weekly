@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-24T18:37:45Z",
+  "slug": "claude-i-cancelled-claude-token-issues-declining-quality-and-poor-supp",
+  "headline": "Claude users report quality decline and support gaps amid token issues",
+  "body": "A documented wave of Claude user complaints has surfaced across developer communities, centering on token pricing, output quality degradation, and unresponsive support channels. For healthcare AI implementations, this matters directly: Claude powers clinical documentation automation, EHR integration workflows, and evidence retrieval pipelines at multiple health systems. Quality decline and support friction threaten continuity in production environments where AI-assisted diagnosis support and workflow optimization depend on stable model performance. Healthcare organizations currently relying on Claude for clinical decision support or documentation tasks should audit alternative vendors and establish clearer SLAs with Anthropic now, before token economics or model drift impact patient-facing systems.",
+  "source_url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
+  "source_name": "Nickyreinert",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

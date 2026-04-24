@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-04-24T18:37:48Z",
+  "slug": "gpt-gpt-5-5-no-arc-agi-3-scores",
+  "headline": "OpenAI releases GPT-5.5 with mixed performance signals across benchmarks",
+  "body": "OpenAI has released GPT-5.5 and GPT-5.5 Pro via API, marking another capability iteration in the large language model landscape. However, the model shows uneven performance on specialized benchmarks like ARC-AGI-3, and emerging reports indicate specialized models trained on domain-specific data outperform it in narrow tasks. For healthcare AI implementations, this underscores a critical reality: general-purpose LLMs require careful evaluation against clinical-specific requirements before deployment in EHRs or diagnostic workflows. Healthcare organizations should demand benchmark transparency on tasks relevant to their use cases rather than assuming each new model release represents across-the-board improvement. This trend will likely shift vendor conversations toward hybrid approaches combining specialized models with general capabilities for clinical decision support.",
+  "source_url": "https://news.ycombinator.com/item?id=47882153",
+  "source_name": "Hacker News",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata",
+    "substack"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
