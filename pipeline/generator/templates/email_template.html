@@ -72,10 +72,10 @@
   {% for i in range(0, stories|length, 2) %}
   <tr>
     {% if i + 1 < stories|length %}
-    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i], anchor, has_badge) }}</td>
-    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i+1], anchor, has_badge) }}</td>
+    <td width="50%" class="story-cell" style="width:50%;box-sizing:border-box;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i], anchor, has_badge) }}</td>
+    <td width="50%" class="story-cell" style="width:50%;box-sizing:border-box;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i+1], anchor, has_badge) }}</td>
     {% else %}
-    <td colspan="2" class="story-cell" style="width:100%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i], anchor, has_badge) }}</td>
+    <td colspan="2" class="story-cell" style="width:100%;box-sizing:border-box;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ story_card(stories[i], anchor, has_badge) }}</td>
     {% endif %}
   </tr>
   {% endfor %}
@@ -89,10 +89,10 @@
   {% for i in range(0, items|length, 2) %}
   <tr>
     {% if i + 1 < items|length %}
-    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i], anchor) }}</td>
-    <td width="50%" class="story-cell" style="width:50%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i+1], anchor) }}</td>
+    <td width="50%" class="story-cell" style="width:50%;box-sizing:border-box;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i], anchor) }}</td>
+    <td width="50%" class="story-cell" style="width:50%;box-sizing:border-box;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i+1], anchor) }}</td>
     {% else %}
-    <td colspan="2" class="story-cell" style="width:100%;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i], anchor) }}</td>
+    <td colspan="2" class="story-cell" style="width:100%;box-sizing:border-box;vertical-align:top;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;">{{ dyk_card(items[i], anchor) }}</td>
     {% endif %}
   </tr>
   {% endfor %}
