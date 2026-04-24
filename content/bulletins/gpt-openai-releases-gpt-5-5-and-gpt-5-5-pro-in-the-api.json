@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-24T22:32:45Z",
+  "slug": "gpt-openai-releases-gpt-5-5-and-gpt-5-5-pro-in-the-api",
+  "headline": "OpenAI launches GPT-5.5 and GPT-5.5 Pro models to developers",
+  "body": "OpenAI released GPT-5.5 and GPT-5.5 Pro through its API, expanding access to more capable models for developers and enterprises. For healthcare organizations, this capability jump directly impacts clinical documentation automation, evidence synthesis from medical literature, and decision support tools embedded in EHR workflows. The availability of Pro-tier models matters for high-stakes use cases where accuracy in patient summaries, drug interaction screening, and guideline interpretation cannot tolerate previous model limitations. Healthcare vendors should evaluate whether upgrading to GPT-5.5 variants improves their NLP pipelines for regulatory compliance and clinician adoption. The concurrent emergence of specialized smaller models (like the economic forecaster that outperformed GPT-5) signals that healthcare builders may gain efficiency by fine-tuning lighter models for specific clinical tasks rather than defaulting to flagship LLMs.",
+  "source_url": "https://developers.openai.com/api/docs/changelog",
+  "source_name": "Developers",
+  "velocity_score": 98,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

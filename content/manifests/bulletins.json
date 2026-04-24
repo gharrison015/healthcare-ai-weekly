@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-issues-apology-to-tumbler-ridge-after-mass-shooting",
+      "headline": "OpenAI's governance gaps raise clinical deployment risk questions",
+      "timestamp": "2026-04-24T22:32:48Z",
+      "source_name": "Tumblerridgelines",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "gpt-openai-releases-gpt-5-5-and-gpt-5-5-pro-in-the-api",
+      "headline": "OpenAI launches GPT-5.5 and GPT-5.5 Pro models to developers",
+      "timestamp": "2026-04-24T22:32:45Z",
+      "source_name": "Developers",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-5-no-arc-agi-3-scores",
       "headline": "OpenAI releases GPT-5.5 with mixed performance signals across benchmarks",
       "timestamp": "2026-04-24T18:37:48Z",
@@ -285,36 +305,6 @@
       "headline": "Claude Token Counter adds model comparison feature amid vendor security scrutiny",
       "timestamp": "2026-04-20T11:12:50Z",
       "source_name": "Simonwillison",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-to-spend-more-than-20b-on-cerebras-chips-receive-stake",
-      "headline": "OpenAI commits $20B to Cerebras chips as model capabilities accelerate",
-      "timestamp": "2026-04-17T22:29:40Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "google-show-hn-reloadium-search-describe-what-you-want-get-optimal-goo",
-      "headline": "Google expands Gemini AI capabilities as medicine market reaches 3.36 trillion",
-      "timestamp": "2026-04-17T18:44:14Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-claude-design",
-      "headline": "Anthropic releases Claude Design with capability upgrades and cost implications",
-      "timestamp": "2026-04-17T18:44:11Z",
-      "source_name": "Anthropic",
       "verification": "confirmed",
       "tags": [
         "claude"
