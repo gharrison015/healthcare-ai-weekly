@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-project-deal",
+      "headline": "Anthropic launches Project Deal amid Google's $40B investment push",
+      "timestamp": "2026-04-27T11:30:42Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-the-reporters-at-this-news-site-are-ai-bots-openai-appears-to-b",
+      "headline": "OpenAI funding AI-staffed news operation signals vendor expansion beyond healthcare",
+      "timestamp": "2026-04-27T11:30:40Z",
+      "source_name": "Modelrepublic",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-openai-issues-apology-to-tumbler-ridge-after-mass-shooting",
       "headline": "OpenAI's governance gaps raise clinical deployment risk questions",
       "timestamp": "2026-04-24T22:32:48Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "anthropic-uber-s-anthropic-ai-push-hits-a-wall",
-      "headline": "Uber's Anthropic integration stalls amid security and compliance concerns",
-      "timestamp": "2026-04-20T11:12:53Z",
-      "source_name": "Finance",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-token-counter-now-with-model-comparisons",
-      "headline": "Claude Token Counter adds model comparison feature amid vendor security scrutiny",
-      "timestamp": "2026-04-20T11:12:50Z",
-      "source_name": "Simonwillison",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
