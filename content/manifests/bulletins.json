@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-the-next-phase-of-the-microsoft-openai-partnership-openai",
+      "headline": "Microsoft shifts OpenAI partnership into new revenue-sharing phase",
+      "timestamp": "2026-04-27T15:29:51Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-evanflow-a-tdd-driven-feedback-loop-for-claude-code",
+      "headline": "Claude's code generation capabilities spark developer testing framework innovation",
+      "timestamp": "2026-04-27T15:29:49Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-project-deal",
       "headline": "Anthropic launches Project Deal amid Google's $40B investment push",
       "timestamp": "2026-04-27T11:30:42Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "anthropic-nsa-is-using-anthropic-s-mythos-despite-blacklist",
-      "headline": "NSA adopts Anthropic's Mythos model despite regulatory blacklist",
-      "timestamp": "2026-04-20T15:10:48Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "gpt-chatgpt-and-codex-down",
-      "headline": "ChatGPT outages disrupt healthcare AI workflows during critical deployment phase",
-      "timestamp": "2026-04-20T15:10:46Z",
-      "source_name": "Status",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
