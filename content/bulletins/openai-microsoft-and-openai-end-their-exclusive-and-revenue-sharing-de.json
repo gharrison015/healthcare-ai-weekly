@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-27T19:04:43Z",
+  "slug": "openai-microsoft-and-openai-end-their-exclusive-and-revenue-sharing-de",
+  "headline": "Microsoft and OpenAI end exclusive revenue-sharing partnership agreement",
+  "body": "Microsoft and OpenAI have terminated their exclusive and revenue-sharing deal, marking a significant structural shift in one of AI's most consequential partnerships. This separation creates immediate uncertainty for healthcare organizations that standardized on Microsoft's Copilot stack for clinical documentation and EHR integration, which relied on OpenAI's models as the underlying foundation. Healthcare systems will need to reassess their AI vendor strategy and contract terms as both companies pursue independent paths, potentially fragmenting the enterprise AI landscape that hospitals have been building around. For healthcare consultants and IT leaders, this change signals that no single vendor partnership can be assumed permanent, requiring more flexible architectural decisions around model selection and multi-vendor strategies for critical clinical workflows.",
+  "source_url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+  "source_name": "Bloomberg",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

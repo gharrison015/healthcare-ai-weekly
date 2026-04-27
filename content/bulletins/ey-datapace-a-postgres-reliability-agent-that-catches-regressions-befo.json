@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-27T19:04:45Z",
+  "slug": "ey-datapace-a-postgres-reliability-agent-that-catches-regressions-befo",
+  "headline": "Postgres reliability agent Datapace gains traction for catching database regressions",
+  "body": "Datapace, a Postgres reliability agent designed to identify regressions before deployment, has emerged as a notable development in database infrastructure tooling with a velocity score of 85 across 10 unique authors. For healthcare AI systems, database reliability directly impacts clinical decision support, EHR stability, and real-time patient data access. Healthcare organizations increasingly depend on Postgres for production workloads, making early regression detection critical to avoid costly downtime that affects patient care workflows. This type of infrastructure AI tooling addresses a specific pain point in vendor implementations where database failures can compromise value-based care reporting and clinical integration requirements.",
+  "source_url": "https://datapace.ai",
+  "source_name": "Datapace",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
