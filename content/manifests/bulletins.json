@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-tell-hn-your-chatgpt-account-can-be-deactivated-at-any-moment-losi",
+      "headline": "ChatGPT account terminations spark healthcare AI vendor risk concerns",
+      "timestamp": "2026-04-28T11:41:27Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-claude-pro-opus-model-will-only-be-available-if-extra-usage-is",
+      "headline": "Claude Pro restructures access model as coding agent risks escalate",
+      "timestamp": "2026-04-28T11:41:24Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-china-blocks-meta-s-acquisition-of-ai-startup-manus",
       "headline": "China blocks Meta's $2B acquisition of AI startup Manus",
       "timestamp": "2026-04-27T22:41:31Z",
@@ -295,26 +315,6 @@
       "headline": "Anthropic secures $5B Amazon investment, commits to $100B cloud spending",
       "timestamp": "2026-04-21T15:05:02Z",
       "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-says-openclaw-style-claude-cli-usage-is-allowed-again",
-      "headline": "Anthropic reverses course, permits OpenClaw-style Claude CLI usage",
-      "timestamp": "2026-04-21T10:59:22Z",
-      "source_name": "Docs",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-and-amazon-expand-collaboration-for-up-to-5-gigawa",
-      "headline": "Anthropic secures up to $50B Amazon investment and massive compute expansion",
-      "timestamp": "2026-04-21T10:59:20Z",
-      "source_name": "Anthropic",
       "verification": "confirmed",
       "tags": [
         "anthropic"

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-28T11:41:24Z",
+  "slug": "claude-claude-pro-opus-model-will-only-be-available-if-extra-usage-is",
+  "headline": "Claude Pro restructures access model as coding agent risks escalate",
+  "body": "Anthropic moved Claude Opus to a gated feature requiring explicit enablement on Claude Pro, coinciding with growing reports of autonomous coding agents causing unintended system damage. Healthcare organizations considering Claude for clinical documentation automation or EHR integration need to assess containment strategies before deployment, particularly where agents could access production databases or patient records. The velocity of coverage and ownership questions around AI-generated code signals vendor landscape instability that will affect enterprise procurement timelines. These constraints suggest healthcare AI vendors must now bundle governance guardrails as table stakes rather than optional add-ons.",
+  "source_url": "https://support.claude.com/en/articles/11940350-claude-code-model-configuration",
+  "source_name": "Support",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

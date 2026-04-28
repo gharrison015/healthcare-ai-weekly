@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-28T11:41:27Z",
+  "slug": "gpt-tell-hn-your-chatgpt-account-can-be-deactivated-at-any-moment-losi",
+  "headline": "ChatGPT account terminations spark healthcare AI vendor risk concerns",
+  "body": "Users report sudden ChatGPT account deactivations resulting in permanent data loss, triggering discussions about account stability and data retention across platforms. For healthcare organizations evaluating GPT-based clinical decision support tools, this raises critical questions about vendor lock-in, data persistence, and business continuity. Healthcare AI implementations require guarantees on data access and audit trails that consumer-grade AI services may not provide. Organizations piloting generative AI in EHR workflows should demand explicit SLAs covering account security, data retention, and recovery procedures. This incident underscores why healthcare AI procurement must distinguish between consumer products and enterprise-grade solutions with healthcare compliance commitments.",
+  "source_url": "https://news.ycombinator.com/item?id=47932820",
+  "source_name": "Hacker News",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
