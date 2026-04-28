@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-ceo-s-identity-verification-company-announced-fake-bruno",
+      "headline": "OpenAI's Identity Verification Misstep Signals Execution Risk in High-Stakes Year",
+      "timestamp": "2026-04-28T16:04:37Z",
+      "source_name": "Vice",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-who-owns-the-code-claude-code-wrote",
+      "headline": "Claude code ownership questions surface as autonomous agents gain capability",
+      "timestamp": "2026-04-28T16:04:35Z",
+      "source_name": "Legallayer",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-tell-hn-your-chatgpt-account-can-be-deactivated-at-any-moment-losi",
       "headline": "ChatGPT account terminations spark healthcare AI vendor risk concerns",
       "timestamp": "2026-04-28T11:41:27Z",
@@ -298,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-even-uncensored-models-can-t-say-what-they-want",
-      "headline": "Uncensored AI models face inherent constraints despite freedom claims",
-      "timestamp": "2026-04-21T15:05:11Z",
-      "source_name": "Morgin",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spe",
-      "headline": "Anthropic secures $5B Amazon investment, commits to $100B cloud spending",
-      "timestamp": "2026-04-21T15:05:02Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
