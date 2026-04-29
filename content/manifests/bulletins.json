@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-how-chatgpt-serves-ads",
+      "headline": "ChatGPT monetization shift signals new commercial pressures for healthcare AI",
+      "timestamp": "2026-04-29T11:24:48Z",
+      "source_name": "Buchodi",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "google-google-deepmind-paper-argues-llms-will-never-be-conscious",
       "headline": "Google DeepMind argues LLMs cannot achieve consciousness",
       "timestamp": "2026-04-28T19:20:16Z",
@@ -298,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "gpt-chatgpt-images-2-0",
-      "headline": "OpenAI launches ChatGPT Images 2.0 with expanded visual capabilities",
-      "timestamp": "2026-04-22T10:58:16Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-to-be-removed-from-anthropic-s-pro-plan",
-      "headline": "Anthropic removes Claude Code from Pro subscription tier",
-      "timestamp": "2026-04-22T10:58:13Z",
-      "source_name": "Bsky",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
