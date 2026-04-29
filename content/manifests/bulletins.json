@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-chatgpt-gemini-can-now-draw-on-your-screen-to-help-you-navigate-co",
+      "headline": "ChatGPT and Gemini gain screen annotation capabilities for software navigation",
+      "timestamp": "2026-04-29T22:46:38Z",
+      "source_name": "Sketchvlm",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-openai-has-in-practice-abandoned-its-stargate-jv",
+      "headline": "OpenAI abandons Stargate JV partnership in major infrastructure shift",
+      "timestamp": "2026-04-29T22:46:36Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-nvidia-exec-the-cost-of-compute-is-far-beyond-the-costs-of-my-emplo",
       "headline": "Nvidia exec confirms compute costs now dwarf employee spending",
       "timestamp": "2026-04-29T19:09:40Z",
@@ -295,26 +315,6 @@
       "headline": "Claude Code adoption faces skepticism while Anthropic tightens identity verification",
       "timestamp": "2026-04-23T11:01:05Z",
       "source_name": "Ethanding",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "gpt-workspace-agents-in-chatgpt",
-      "headline": "OpenAI releases workspace agents for ChatGPT as security concerns mount",
-      "timestamp": "2026-04-22T22:39:24Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-removed-from-20-a-month-pro-subscription-for-new-us",
-      "headline": "Anthropic removes Claude Code from Pro tier, reshaping AI tooling economics",
-      "timestamp": "2026-04-22T22:39:21Z",
-      "source_name": "Wheresyoured",
       "verification": "confirmed",
       "tags": [
         "claude"
