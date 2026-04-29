@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-models-coming-to-amazon-bedrock-interview-with-openai-an",
+      "headline": "OpenAI models now available through Amazon Bedrock managed agents",
+      "timestamp": "2026-04-29T15:53:00Z",
+      "source_name": "Stratechery",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-ai-unavailable-and-elevated-errors-on-the-api",
+      "headline": "Claude API experiences widespread outage, raising reliability questions",
+      "timestamp": "2026-04-29T15:52:57Z",
+      "source_name": "Status",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-how-chatgpt-serves-ads",
       "headline": "ChatGPT monetization shift signals new commercial pressures for healthcare AI",
       "timestamp": "2026-04-29T11:24:48Z",
@@ -295,16 +315,6 @@
       "headline": "Anthropic's Mythos finds 271 Firefox bugs, but security questions emerge",
       "timestamp": "2026-04-22T18:59:47Z",
       "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-mythos-model-is-being-accessed-by-unauthorized-u",
-      "headline": "Anthropic's Mythos model faces unauthorized access breach amid security investigations",
-      "timestamp": "2026-04-22T15:05:08Z",
-      "source_name": "Bloomberg",
       "verification": "confirmed",
       "tags": [
         "anthropic"

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-29T15:53:00Z",
+  "slug": "openai-openai-models-coming-to-amazon-bedrock-interview-with-openai-an",
+  "headline": "OpenAI models now available through Amazon Bedrock managed agents",
+  "body": "OpenAI has made its models available on Amazon Bedrock, AWS's managed AI service, following a CEO-level announcement between Sam Altman and Matt Garman. This integration gives healthcare organizations another pathway to deploy OpenAI's capabilities within existing AWS infrastructure without building custom integrations. For healthcare AI implementations, this matters because it reduces friction for enterprises already on AWS, simplifies compliance workflows through Bedrock's governance layer, and expands vendor options for clinical documentation, prior authorization, and care coordination use cases. The move signals continued consolidation around major cloud providers as the primary distribution channel for foundational models in healthcare, potentially reshaping how health systems evaluate and procure AI tooling.",
+  "source_url": "https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/",
+  "source_name": "Stratechery",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
