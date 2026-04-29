@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-nvidia-exec-the-cost-of-compute-is-far-beyond-the-costs-of-my-emplo",
+      "headline": "Nvidia exec confirms compute costs now dwarf employee spending",
+      "timestamp": "2026-04-29T19:09:40Z",
+      "source_name": "Fortune",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-claude-for-creative-work",
+      "headline": "Anthropic releases Claude for creative work, sparks production deployment debate",
+      "timestamp": "2026-04-29T19:09:38Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-models-coming-to-amazon-bedrock-interview-with-openai-an",
       "headline": "OpenAI models now available through Amazon Bedrock managed agents",
       "timestamp": "2026-04-29T15:53:00Z",
@@ -298,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "ey-sam-altman-s-creepy-eyeball-scanning-company-gets-in-bed-with-zoom",
-      "headline": "Biometric startups expand into mainstream platforms amid privacy scrutiny",
-      "timestamp": "2026-04-22T18:59:50Z",
-      "source_name": "Gizmodo",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-mozilla-used-anthropic-s-mythos-to-find-and-fix-271-bugs-in",
-      "headline": "Anthropic's Mythos finds 271 Firefox bugs, but security questions emerge",
-      "timestamp": "2026-04-22T18:59:47Z",
-      "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
