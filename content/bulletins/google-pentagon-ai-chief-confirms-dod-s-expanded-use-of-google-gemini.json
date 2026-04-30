@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-30T22:42:16Z",
+  "slug": "google-pentagon-ai-chief-confirms-dod-s-expanded-use-of-google-gemini",
+  "headline": "Pentagon expands Google Gemini deployment as DoD doubles down on AI",
+  "body": "The Department of Defense is broadening its use of Google's Gemini AI after the Pentagon AI chief confirmed the expanded partnership. This signals a major consolidation of defense AI infrastructure around a single vendor, which has implications for healthcare systems integrating with federal networks and managing compliance around AI procurement. For healthcare organizations handling DoD contracts or veteran care systems, vendor lock-in with Google infrastructure means reassessing data governance, model transparency, and interoperability with existing EHR systems. Healthcare AI consultants should flag this shift when advising on enterprise AI strategy, particularly regarding which foundational models to standardize on and how regulatory requirements differ between commercial and government-adjacent healthcare operations.",
+  "source_url": "https://www.cnbc.com/2026/04/28/pentagon-ai-chief-confirms-work-with-google-after-anthropic-blacklist.html",
+  "source_name": "CNBC",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}

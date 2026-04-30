@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-30T22:42:13Z",
+  "slug": "openai-elon-musk-confirms-xai-used-openai-s-models-to-train-grok",
+  "headline": "Musk confirms xAI trained Grok using OpenAI's models",
+  "body": "Elon Musk acknowledged that his xAI startup used OpenAI's models to train Grok, marking a significant development in the competitive AI landscape. For healthcare organizations evaluating large language models for clinical documentation, summarization, and decision support, this disclosure raises questions about model provenance and licensing implications when deploying third-party AI solutions. Healthcare systems must now scrutinize whether their AI vendors have clear intellectual property rights and training methodologies, particularly given regulatory requirements around transparency in clinical AI systems. This incident underscores why healthcare IT leaders need explicit vendor commitments on model origin and training data before integration into EHR workflows or value-based care analytics.",
+  "source_url": "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation",
+  "source_name": "The Verge",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
