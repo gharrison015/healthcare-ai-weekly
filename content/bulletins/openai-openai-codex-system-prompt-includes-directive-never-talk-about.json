@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-30T11:23:34Z",
+  "slug": "openai-openai-codex-system-prompt-includes-directive-never-talk-about",
+  "headline": "OpenAI faces legal pressure as litigation over ChatGPT use expands",
+  "body": "OpenAI is defending itself against lawsuits from seven families alleging that ChatGPT was used by a mass shooting suspect, adding significant legal risk to the vendor's operational landscape. This litigation signals emerging liability concerns around how large language models are deployed in production and what safeguards vendors implement for harmful use cases. For healthcare organizations evaluating OpenAI's models for clinical applications, these cases underscore the importance of governance frameworks, audit trails, and clear accountability structures before integrating external AI systems into sensitive workflows. The legal momentum here will likely shape how healthcare CIOs approach vendor due diligence and contractual liability protection in AI procurement. Expect healthcare legal teams to demand explicit safeguards and vendor accountability clauses in contracts with foundation model providers.",
+  "source_url": "https://arstechnica.com/ai/2026/04/openai-codex-system-prompt-includes-explicit-directive-to-never-talk-about-goblins/",
+  "source_name": "Ars Technica",
+  "velocity_score": 86,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

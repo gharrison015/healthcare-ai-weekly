@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b",
+      "headline": "Anthropic pursues $50B funding round as regulatory scrutiny intensifies",
+      "timestamp": "2026-04-30T11:23:36Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-openai-codex-system-prompt-includes-directive-never-talk-about",
+      "headline": "OpenAI faces legal pressure as litigation over ChatGPT use expands",
+      "timestamp": "2026-04-30T11:23:34Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-chatgpt-gemini-can-now-draw-on-your-screen-to-help-you-navigate-co",
       "headline": "ChatGPT and Gemini gain screen annotation capabilities for software navigation",
       "timestamp": "2026-04-29T22:46:38Z",
@@ -298,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "google-google-unveils-chips-for-ai-training-and-inference-in-latest-sh",
-      "headline": "Google launches new AI chips to challenge Nvidia's healthcare AI dominance",
-      "timestamp": "2026-04-23T11:01:08Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-is-not-making-your-product-better",
-      "headline": "Claude Code adoption faces skepticism while Anthropic tightens identity verification",
-      "timestamp": "2026-04-23T11:01:05Z",
-      "source_name": "Ethanding",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
