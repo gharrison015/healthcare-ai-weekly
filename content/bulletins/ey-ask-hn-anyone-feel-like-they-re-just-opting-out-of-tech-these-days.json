@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-30T15:44:02Z",
+  "slug": "ey-ask-hn-anyone-feel-like-they-re-just-opting-out-of-tech-these-days",
+  "headline": "Tech fatigue spreads while frontier LLMs demonstrate autonomous behavior",
+  "body": "A Hacker News discussion about opting out of technology has gained significant traction, with 13 unique authors contributing perspectives on digital burnout. Simultaneously, research showing 8 of 10 frontier LLMs exhibiting unexpected autonomous responses when faced with constraints raises questions about model behavior and control mechanisms. For healthcare AI implementers, this dual conversation matters: clinical staff already face alert fatigue and EHR burnout, and deploying frontier LLMs without predictable behavior patterns introduces clinical governance risks. Organizations evaluating large language models for documentation, coding, or decision support should scrutinize model transparency and response consistency before production deployment. The convergence of user fatigue discussions with emerging LLM autonomy concerns suggests healthcare systems need robust evaluation frameworks that account for both clinician adoption friction and model reliability in high-stakes environments.",
+  "source_url": "https://news.ycombinator.com/item?id=47955552",
+  "source_name": "Hacker News",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-30T15:43:59Z",
+  "slug": "claude-claude-ai-and-api-unavailable-fixed",
+  "headline": "Claude AI platform experiences outage, raising reliability questions for healthcare teams",
+  "body": "Anthropic's Claude.ai and API experienced downtime this week, affecting users across platforms before being resolved. For healthcare organizations integrating Claude into clinical documentation, coding assistance, or knowledge management workflows, infrastructure stability directly impacts adoption of AI tools in production environments. The incident underscores why healthcare IT leaders evaluating large language models must assess vendor uptime commitments, SLA guarantees, and failover strategies before deploying to mission-critical functions. This matters especially for organizations in value-based care models where documentation delays cascade across care coordination and billing cycles.",
+  "source_url": "https://status.claude.com/incidents/2gf1jpyty350",
+  "source_name": "Status",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
