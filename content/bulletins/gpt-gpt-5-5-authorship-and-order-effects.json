@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-30T19:06:25Z",
+  "slug": "gpt-gpt-5-5-authorship-and-order-effects",
+  "headline": "GPT-5.5 passes advanced cyber-attack simulation, raises clinical AI reliability questions",
+  "body": "GPT-5.5 has become the second model to complete AISI's multi-step cyber-attack simulation, demonstrating increased capability in complex reasoning tasks. For healthcare AI deployment, this capability milestone matters because clinical systems increasingly face similar multi-step validation requirements, from diagnostic reasoning chains to treatment protocol sequencing. However, emerging research on GPT-5.5's authorship and order effects, plus documented blind spots in code quality, suggests careful vetting is needed before integrating newer models into EHR workflows or clinical decision support systems. Healthcare organizations should treat capability benchmarks as one signal among many, not as clearance for production deployment in patient-facing applications.",
+  "source_url": "https://blog.valmont.dev/posts/gpt-5-5-authorship-and-order-effects/",
+  "source_name": "Blog",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

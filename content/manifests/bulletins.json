@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-5-authorship-and-order-effects",
+      "headline": "GPT-5.5 passes advanced cyber-attack simulation, raises clinical AI reliability questions",
+      "timestamp": "2026-04-30T19:06:25Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "ey-ask-hn-anyone-feel-like-they-re-just-opting-out-of-tech-these-days",
       "headline": "Tech fatigue spreads while frontier LLMs demonstrate autonomous behavior",
       "timestamp": "2026-04-30T15:44:02Z",
@@ -298,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "google-google-says-75-of-the-company-s-new-code-is-ai-generated",
-      "headline": "Google reports 75% of new code is AI-generated internally",
-      "timestamp": "2026-04-23T18:56:11Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-an-update-on-recent-claude-code-quality-reports",
-      "headline": "Anthropic addresses Claude Code quality issues as identity verification rolls out",
-      "timestamp": "2026-04-23T18:56:08Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
