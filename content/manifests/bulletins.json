@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-us-supreme-court-guts-key-provision-of-voting-rights-act",
+      "headline": "Healthcare AI Infrastructure Costs Surge as Compute Dominates Budget Decisions",
+      "timestamp": "2026-05-01T18:58:02Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-uber-torches-2026-ai-budget-on-claude-code-in-four-months",
+      "headline": "Uber's Claude spending surge signals AI agent adoption accelerating",
+      "timestamp": "2026-05-01T18:57:59Z",
+      "source_name": "Briefs",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-apple-accidentally-left-claude-md-files-apple-support-app",
       "headline": "Apple exposed Claude API documentation in support app files",
       "timestamp": "2026-05-01T14:47:06Z",
@@ -308,36 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-5-no-arc-agi-3-scores",
-      "headline": "OpenAI releases GPT-5.5 with mixed performance signals across benchmarks",
-      "timestamp": "2026-04-24T18:37:48Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-i-cancelled-claude-token-issues-declining-quality-and-poor-supp",
-      "headline": "Claude users report quality decline and support gaps amid token issues",
-      "timestamp": "2026-04-24T18:37:45Z",
-      "source_name": "Nickyreinert",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "google-google-stitch-s-design-md-format-is-now-open-source",
-      "headline": "Google open-sources Stitch design format for AI documentation",
-      "timestamp": "2026-04-24T15:01:37Z",
-      "source_name": "Blog",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
