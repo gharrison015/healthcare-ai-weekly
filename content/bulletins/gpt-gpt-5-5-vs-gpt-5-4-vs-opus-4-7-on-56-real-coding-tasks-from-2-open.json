@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-01T22:40:55Z",
+  "slug": "gpt-gpt-5-5-vs-gpt-5-4-vs-opus-4-7-on-56-real-coding-tasks-from-2-open",
+  "headline": "GPT-5.5 outperforms predecessors on real coding benchmarks",
+  "body": "OpenAI's GPT-5.5 has demonstrated measurable improvements over GPT-5.4 and competing models like Opus 4.7 across 56 real-world coding tasks from open source repositories. For healthcare AI, this matters because clinical documentation systems, EHR integrations, and algorithmic decision support tools increasingly rely on LLM-powered code generation and validation. The performance gains in real-world coding tasks suggest healthcare vendors can expect more reliable automation for custom workflow implementations and faster development cycles for compliance-heavy applications. Consulting teams should track these capability improvements when evaluating which model versions to standardize on for production healthcare deployments, especially as GitHub Copilot phases out older versions.",
+  "source_url": "https://www.stet.sh/blog/gpt-55-vs-opus-47",
+  "source_name": "Stet",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

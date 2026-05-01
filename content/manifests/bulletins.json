@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-5-vs-gpt-5-4-vs-opus-4-7-on-56-real-coding-tasks-from-2-open",
+      "headline": "GPT-5.5 outperforms predecessors on real coding benchmarks",
+      "timestamp": "2026-05-01T22:40:55Z",
+      "source_name": "Stet",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "ey-us-supreme-court-guts-key-provision-of-voting-rights-act",
       "headline": "Healthcare AI Infrastructure Costs Surge as Compute Dominates Budget Decisions",
       "timestamp": "2026-05-01T18:58:02Z",
@@ -308,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "openai-openai-issues-apology-to-tumbler-ridge-after-mass-shooting",
-      "headline": "OpenAI's governance gaps raise clinical deployment risk questions",
-      "timestamp": "2026-04-24T22:32:48Z",
-      "source_name": "Tumblerridgelines",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "gpt-openai-releases-gpt-5-5-and-gpt-5-5-pro-in-the-api",
-      "headline": "OpenAI launches GPT-5.5 and GPT-5.5 Pro models to developers",
-      "timestamp": "2026-04-24T22:32:45Z",
-      "source_name": "Developers",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
