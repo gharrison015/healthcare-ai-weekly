@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-01T11:01:59Z",
+  "slug": "claude-both-codex-and-claude-got-worse-this-week-across-every-plan-i-r",
+  "headline": "Claude model performance degradation raises questions about AI reliability",
+  "body": "Performance issues across Claude's product tiers this week, including refusals on specific requests and API key handling problems in cloud environments, have surfaced reliability concerns. For healthcare organizations evaluating Claude for clinical documentation, coding support, or workflow automation, these stability issues directly impact deployment decisions. Healthcare AI systems require predictable performance and consistent behavior, particularly when integrated into EHR systems or used for patient-facing applications. The reported problems with prepaid credits and environment-specific failures suggest potential friction points for healthcare IT teams managing multi-user implementations at scale. These incidents underscore the importance of thorough vendor testing and failover protocols before committing production healthcare workflows to any third-party AI service.",
+  "source_url": "https://desktopcommander.app/best-value-ai/",
+  "source_name": "Desktopcommander",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

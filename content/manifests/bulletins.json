@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-after-dissing-anthropic-for-limiting-mythos-openai-restricts-ac",
+      "headline": "OpenAI restricts Cyber access after criticizing Anthropic's limitations strategy",
+      "timestamp": "2026-05-01T11:02:02Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-both-codex-and-claude-got-worse-this-week-across-every-plan-i-r",
+      "headline": "Claude model performance degradation raises questions about AI reliability",
+      "timestamp": "2026-05-01T11:01:59Z",
+      "source_name": "Desktopcommander",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-pentagon-ai-chief-confirms-dod-s-expanded-use-of-google-gemini",
       "headline": "Pentagon expands Google Gemini deployment as DoD doubles down on AI",
       "timestamp": "2026-04-30T22:42:16Z",
@@ -308,16 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "anthropic-unauthorized-discord-group-gained-access-to-anthropic-s-myth",
-      "headline": "Anthropic's Mythos model accessed by unauthorized Discord group",
-      "timestamp": "2026-04-24T10:58:39Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
