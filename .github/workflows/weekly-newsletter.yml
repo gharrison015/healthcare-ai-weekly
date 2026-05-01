@@ -2,9 +2,15 @@ name: Weekly Newsletter
 
 on:
   schedule:
-    # Fridays 5:00 AM ET during EDT (9:00 UTC).
-    # During EST (Nov-Mar) this fires at 4am ET. Accept the shift.
-    - cron: '0 9 * * 5'
+    # Primary: Fridays ~5:07 AM ET during EDT (9:07 UTC). Off-the-hour
+    # to dodge GitHub Actions' top-of-hour load spike, which has caused
+    # missed runs (e.g. 2026-05-01 with the old `0 9` schedule).
+    # During EST (Nov-Mar) this fires at 4:07am ET. Accept the shift.
+    - cron: '7 9 * * 5'
+    # Backup: Fridays ~9:23 AM ET (13:23 UTC). Skips if the primary
+    # already published. Catches the cases where the primary cron
+    # is delayed or never fires.
+    - cron: '23 13 * * 5'
   workflow_dispatch:
     inputs:
       date_override:
@@ -59,25 +65,41 @@ jobs:
           echo "date=$DATE" >> "$GITHUB_OUTPUT"
           echo "Issue date: $DATE"
 
+      - name: Skip if already published
+        id: guard
+        run: |
+          DATE="${{ steps.date.outputs.date }}"
+          if [ -f "content/issues/$DATE/index.html" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Issue $DATE already exists in content/. Skipping pipeline (backup cron is a no-op when primary succeeded)."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Issue $DATE not yet published. Proceeding."
+          fi
+
       - name: Run collector
+        if: steps.guard.outputs.skip != 'true'
         working-directory: pipeline
         run: python pipeline.py --date ${{ steps.date.outputs.date }} --stage collector
 
       - name: Run curator
+        if: steps.guard.outputs.skip != 'true'
         working-directory: pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python pipeline.py --date ${{ steps.date.outputs.date }} --stage curator
 
       - name: Run generator
+        if: steps.guard.outputs.skip != 'true'
         working-directory: pipeline
         run: python pipeline.py --date ${{ steps.date.outputs.date }} --stage generator
 
       - name: Publish to content/
+        if: steps.guard.outputs.skip != 'true'
         run: python .github/scripts/publish_issue.py ${{ steps.date.outputs.date }}
 
       - name: Send newsletter
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: steps.guard.outputs.skip != 'true' && github.event.inputs.dry_run != 'true'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
@@ -85,7 +107,7 @@ jobs:
         run: python .github/scripts/send_newsletter.py ${{ steps.date.outputs.date }}
 
       - name: Commit and push
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: steps.guard.outputs.skip != 'true' && github.event.inputs.dry_run != 'true'
         run: |
           git config user.email "gh-actions@healthcareaibrief.com"
           git config user.name  "Healthcare AI Weekly Bot"
@@ -98,7 +120,7 @@ jobs:
           git push
 
       - name: Upload run artifacts
-        if: always()
+        if: always() && steps.guard.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: newsletter-${{ steps.date.outputs.date }}
@@ -108,3 +130,11 @@ jobs:
             pipeline/data/curated/${{ steps.date.outputs.date }}.json
           retention-days: 14
           if-no-files-found: warn
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ISSUE_DATE: ${{ steps.date.outputs.date }}
+          TRIGGER_EVENT: ${{ github.event_name }}
+        run: python .github/scripts/notify_failure.py
