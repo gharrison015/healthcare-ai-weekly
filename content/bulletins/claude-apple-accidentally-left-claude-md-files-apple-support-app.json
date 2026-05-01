@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-01T14:47:06Z",
+  "slug": "claude-apple-accidentally-left-claude-md-files-apple-support-app",
+  "headline": "Apple exposed Claude API documentation in support app files",
+  "body": "Apple inadvertently left Claude.md files accessible within its support application, exposing Anthropic's Claude AI documentation to unintended audiences. This incident highlights critical infrastructure vulnerabilities that healthcare organizations must address as they integrate large language models into clinical systems. Proper API documentation handling is essential in healthcare settings where data governance, patient privacy compliance, and secure model deployment directly impact patient safety and regulatory adherence. Healthcare IT teams should review their own Claude implementations and ensure configuration files, API keys, and documentation are properly secured across development, staging, and production environments. The broader implication underscores why vendor selection and deployment practices matter significantly for healthcare AI adoption.",
+  "source_url": "https://xcancel.com/aaronp613/status/2049986504617820551",
+  "source_name": "Xcancel",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
