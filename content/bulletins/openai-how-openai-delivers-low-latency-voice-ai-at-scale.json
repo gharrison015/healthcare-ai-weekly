@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-04T22:48:38Z",
+  "slug": "openai-how-openai-delivers-low-latency-voice-ai-at-scale",
+  "headline": "OpenAI achieves low-latency voice AI at scale, reshaping clinical interaction potential",
+  "body": "OpenAI published technical details on delivering low-latency voice AI infrastructure capable of handling scale, addressing a persistent engineering challenge in real-time conversational systems. For healthcare AI, this matters because clinical workflows increasingly depend on hands-free, real-time voice interactions for documentation, patient communication, and EHR integration. Low-latency voice at scale removes a major technical barrier that has limited deployment of voice assistants in time-sensitive care environments where millisecond delays create friction. Healthcare vendors and health systems evaluating AI vendors should assess whether these architectural improvements enable viable voice-first workflows for providers, particularly in settings where typing or manual input creates safety or efficiency risks.",
+  "source_url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+  "source_name": "OpenAI",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-white-house-considers-vetting-a-i-models-before-they-are-released",
+      "headline": "White House moves toward AI model vetting before public release",
+      "timestamp": "2026-05-04T22:48:40Z",
+      "source_name": "The New York Times",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "openai-how-openai-delivers-low-latency-voice-ai-at-scale",
+      "headline": "OpenAI achieves low-latency voice AI at scale, reshaping clinical interaction potential",
+      "timestamp": "2026-05-04T22:48:38Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-openai-google-and-microsoft-back-bill-to-fund-ai-literacy-in-sc",
       "headline": "OpenAI, Google, Microsoft back AI literacy bill for schools",
       "timestamp": "2026-05-04T19:14:31Z",
@@ -298,16 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "meta-china-blocks-meta-s-acquisition-of-ai-startup-manus",
-      "headline": "China blocks Meta's $2B acquisition of AI startup Manus",
-      "timestamp": "2026-04-27T22:41:31Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "meta"
       ]
     }
   ]
