@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-a-dark-money-campaign-is-paying-influencers-to-frame-chinese-ai-as",
+      "headline": "OpenAI-backed super PAC funds influencer campaign against Chinese AI",
+      "timestamp": "2026-05-04T11:43:25Z",
+      "source_name": "Wired",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-deepclaude-claude-code-agent-loop-with-deepseek-v4-pro",
+      "headline": "Claude agentic loops gain traction for specialized healthcare workflows",
+      "timestamp": "2026-05-04T11:43:22Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-5-vs-gpt-5-4-vs-opus-4-7-on-56-real-coding-tasks-from-2-open",
       "headline": "GPT-5.5 outperforms predecessors on real coding benchmarks",
       "timestamp": "2026-05-01T22:40:55Z",
@@ -298,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-project-deal",
-      "headline": "Anthropic launches Project Deal amid Google's $40B investment push",
-      "timestamp": "2026-04-27T11:30:42Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-the-reporters-at-this-news-site-are-ai-bots-openai-appears-to-b",
-      "headline": "OpenAI funding AI-staffed news operation signals vendor expansion beyond healthcare",
-      "timestamp": "2026-04-27T11:30:40Z",
-      "source_name": "Modelrepublic",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
