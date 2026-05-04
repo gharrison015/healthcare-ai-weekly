@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-ask-hn-is-a-hands-off-family-friendly-de-googled-home-lab-feasi",
+      "headline": "Healthcare technologists debate de-Googled infrastructure amid ecosystem shifts",
+      "timestamp": "2026-05-04T15:54:46Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-unveils-1-5b-joint-venture-with-wall-street-firms",
+      "headline": "Anthropic secures $1.5B Wall Street partnership targeting enterprise AI",
+      "timestamp": "2026-05-04T15:54:43Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-a-dark-money-campaign-is-paying-influencers-to-frame-chinese-ai-as",
       "headline": "OpenAI-backed super PAC funds influencer campaign against Chinese AI",
       "timestamp": "2026-05-04T11:43:25Z",
@@ -298,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "openai-the-next-phase-of-the-microsoft-openai-partnership-openai",
-      "headline": "Microsoft shifts OpenAI partnership into new revenue-sharing phase",
-      "timestamp": "2026-04-27T15:29:51Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-evanflow-a-tdd-driven-feedback-loop-for-claude-code",
-      "headline": "Claude's code generation capabilities spark developer testing framework innovation",
-      "timestamp": "2026-04-27T15:29:49Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
