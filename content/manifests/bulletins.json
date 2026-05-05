@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-y-combinator-s-stake-in-openai-0-6",
+      "headline": "Y Combinator's $5B OpenAI stake signals venture capital's AI infrastructure bet",
+      "timestamp": "2026-05-05T22:47:01Z",
+      "source_name": "Daringfireball",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-chrome-silently-installs-a-4-gb-ai-model-on-your-device",
       "headline": "Google Chrome deploys 4GB AI model without user consent",
       "timestamp": "2026-05-05T15:29:40Z",
@@ -288,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "google-google-deepmind-paper-argues-llms-will-never-be-conscious",
-      "headline": "Google DeepMind argues LLMs cannot achieve consciousness",
-      "timestamp": "2026-04-28T19:20:16Z",
-      "source_name": "404Media",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
