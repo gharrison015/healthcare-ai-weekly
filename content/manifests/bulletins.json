@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-chrome-silently-installs-a-4-gb-ai-model-on-your-device",
+      "headline": "Google Chrome deploys 4GB AI model without user consent",
+      "timestamp": "2026-05-05T15:29:40Z",
+      "source_name": "Thatprivacyguy",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "claude-amazon-rolls-out-claude-code-and-codex-internally",
       "headline": "Amazon deploys Claude Code across workforce, signaling enterprise AI adoption shift",
       "timestamp": "2026-05-05T11:11:18Z",
@@ -305,26 +315,6 @@
       "headline": "Claude code ownership questions surface as autonomous agents gain capability",
       "timestamp": "2026-04-28T16:04:35Z",
       "source_name": "Legallayer",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "gpt-tell-hn-your-chatgpt-account-can-be-deactivated-at-any-moment-losi",
-      "headline": "ChatGPT account terminations spark healthcare AI vendor risk concerns",
-      "timestamp": "2026-04-28T11:41:27Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-claude-pro-opus-model-will-only-be-available-if-extra-usage-is",
-      "headline": "Claude Pro restructures access model as coding agent risks escalate",
-      "timestamp": "2026-04-28T11:41:24Z",
-      "source_name": "Support",
       "verification": "confirmed",
       "tags": [
         "claude"

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-05T15:29:40Z",
+  "slug": "google-google-chrome-silently-installs-a-4-gb-ai-model-on-your-device",
+  "headline": "Google Chrome deploys 4GB AI model without user consent",
+  "body": "Google Chrome is silently installing a 4GB AI model on user devices without explicit consent, according to reports across multiple platforms. For healthcare organizations, this raises immediate security and compliance concerns: patient data could be processed locally through undisclosed models, creating HIPAA audit risks and potential data governance violations. Healthcare IT teams need to assess whether Chrome deployments in clinical environments are running unauthorized AI processing, particularly in settings where workstations access PHI. This incident also signals broader vendor behavior patterns in AI rollout that should inform healthcare procurement policies and endpoint security strategies.",
+  "source_url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+  "source_name": "Thatprivacyguy",
+  "velocity_score": 82,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}
