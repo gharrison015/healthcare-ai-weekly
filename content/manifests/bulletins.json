@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-mark-cuban-openai-will-never-return-the-1t-it-s-investing-video",
+      "headline": "OpenAI scales voice AI while facing investor return skepticism",
+      "timestamp": "2026-05-06T11:44:00Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claudette-an-open-source-desktop-companion-for-claude-code",
+      "headline": "Open-source Claude tools gain traction among developer communities",
+      "timestamp": "2026-05-06T11:43:58Z",
+      "source_name": "Utensils",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-y-combinator-s-stake-in-openai-0-6",
       "headline": "Y Combinator's $5B OpenAI stake signals venture capital's AI infrastructure bet",
       "timestamp": "2026-05-05T22:47:01Z",
@@ -288,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-how-chatgpt-serves-ads",
-      "headline": "ChatGPT monetization shift signals new commercial pressures for healthcare AI",
-      "timestamp": "2026-04-29T11:24:48Z",
-      "source_name": "Buchodi",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
