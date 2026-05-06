@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-higher-usage-limits-for-claude-and-a-compute-deal-with-spacex",
+      "headline": "Anthropic raises Claude usage limits and secures major compute partnership",
+      "timestamp": "2026-05-06T19:22:18Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "google-google-chrome-silently-installs-4-gb-gemini-nano-ai-model-witho",
+      "headline": "Google Chrome deploys Gemini Nano AI model without user consent",
+      "timestamp": "2026-05-06T19:22:12Z",
+      "source_name": "Alternativeto",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "openai-openai-president-forced-to-read-his-personal-diary-entries-to-j",
       "headline": "OpenAI president testifies in court amid internal leadership scrutiny",
       "timestamp": "2026-05-06T15:57:59Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-nvidia-exec-the-cost-of-compute-is-far-beyond-the-costs-of-my-emplo",
-      "headline": "Nvidia exec confirms compute costs now dwarf employee spending",
-      "timestamp": "2026-04-29T19:09:40Z",
-      "source_name": "Fortune",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-claude-for-creative-work",
-      "headline": "Anthropic releases Claude for creative work, sparks production deployment debate",
-      "timestamp": "2026-04-29T19:09:38Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
