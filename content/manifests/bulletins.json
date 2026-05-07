@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-natural-language-autoencoders-turning-claude-s-thoughts-into-te",
+      "headline": "Anthropic releases natural language autoencoders for Claude model interpretability",
+      "timestamp": "2026-05-07T19:26:25Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "anthropic-discord-group-guessed-the-url-to-anthropic-s-mythos-model-be",
+      "headline": "Anthropic's unreleased Mythos model accessed via URL guessing before official release",
+      "timestamp": "2026-05-07T19:26:23Z",
+      "source_name": "Msn",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-elon-musk-s-lawyers-ask-openai-s-president-why-he-is-worth-30b",
       "headline": "Musk litigation escalates as OpenAI valuation, leadership questioned",
       "timestamp": "2026-05-07T15:59:03Z",
@@ -258,16 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-5-authorship-and-order-effects",
-      "headline": "GPT-5.5 passes advanced cyber-attack simulation, raises clinical AI reliability questions",
-      "timestamp": "2026-04-30T19:06:25Z",
-      "source_name": "Blog",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-07T19:26:23Z",
+  "slug": "anthropic-discord-group-guessed-the-url-to-anthropic-s-mythos-model-be",
+  "headline": "Anthropic's unreleased Mythos model accessed via URL guessing before official release",
+  "body": "A Discord group discovered and accessed Anthropic's Mythos model by guessing its URL before the model was officially released or evaluated by CISA, highlighting a significant security gap in pre-release AI model deployment. This incident exposes the vulnerability of relying on URL obscurity rather than robust access controls for sensitive AI systems. For healthcare organizations, this underscores the critical need for strict API authentication, audit logging, and access controls when evaluating or integrating large language models into clinical workflows and EHR systems. Healthcare AI implementations must implement zero-trust security architectures rather than assuming pre-release models remain protected by obscurity. This event raises important vendor evaluation questions for healthcare consulting: any deployment of foundation models must include formal security assessments and access governance frameworks before clinical use.",
+  "source_url": "https://www.msn.com/en-us/technology/cybersecurity/discord-group-guessed-the-url-to-anthropic-s-most-dangerous-ai-and-used-it-before-cisa-did/ar-AA22enqY",
+  "source_name": "Msn",
+  "velocity_score": 99,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
