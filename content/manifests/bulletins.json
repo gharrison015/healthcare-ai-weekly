@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-elon-musk-s-lawyers-ask-openai-s-president-why-he-is-worth-30b",
+      "headline": "Musk litigation escalates as OpenAI valuation, leadership questioned",
+      "timestamp": "2026-05-07T15:59:03Z",
+      "source_name": "The New York Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-new-compute-partnership-with-anthropic",
       "headline": "Anthropic gains massive compute access through SpaceX partnership deal",
       "timestamp": "2026-05-06T22:40:05Z",
@@ -258,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "ey-ask-hn-anyone-feel-like-they-re-just-opting-out-of-tech-these-days",
-      "headline": "Tech fatigue spreads while frontier LLMs demonstrate autonomous behavior",
-      "timestamp": "2026-04-30T15:44:02Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-claude-ai-and-api-unavailable-fixed",
-      "headline": "Claude AI platform experiences outage, raising reliability questions for healthcare teams",
-      "timestamp": "2026-04-30T15:43:59Z",
-      "source_name": "Status",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
