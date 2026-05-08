@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-08T19:04:22Z",
+  "slug": "openai-what-microsoft-executives-thought-about-openai-in-2018",
+  "headline": "OpenAI sunsetting fine-tuning while advancing voice AI capabilities",
+  "body": "OpenAI is discontinuing its fine-tuning service while simultaneously releasing GPT-Realtime-2 with advanced reasoning capabilities for voice interactions. This shift reflects the vendor's pivot toward pre-trained models and real-time conversational AI over custom model adaptation. For healthcare AI implementations, this means organizations relying on fine-tuned models for clinical documentation or EHR integration need immediate migration strategies, while voice-enabled clinical workflows could benefit from improved reasoning in patient interaction scenarios. The deprecation signals a consolidation in OpenAI's product strategy that will force healthcare vendors and health systems to reassess their technical dependencies and consider alternative customization approaches.",
+  "source_url": "https://www.wired.com/story/microsoft-executives-discuss-openai-sam-altman-2018/",
+  "source_name": "Wired",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

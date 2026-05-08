@@ -1,15 +1,15 @@
 {
-  "timestamp_utc": "2026-05-08T15:14:02.533273+00:00",
+  "timestamp_utc": "2026-05-08T19:04:15.512326+00:00",
   "source_counts": {
     "hackernews": 181,
-    "newsdata": 82
+    "newsdata": 73
   },
-  "total_collected": 263,
+  "total_collected": 254,
   "candidate_count": 3,
   "disposition": "candidates_ready",
   "candidate_topics": [
+    "claude",
     "openai",
-    "google",
     "gpt"
   ]
 }

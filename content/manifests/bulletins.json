@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-what-microsoft-executives-thought-about-openai-in-2018",
+      "headline": "OpenAI sunsetting fine-tuning while advancing voice AI capabilities",
+      "timestamp": "2026-05-08T19:04:22Z",
+      "source_name": "Wired",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-cve-2026-39861-sandbox-escape-via-symlink",
+      "headline": "Claude sandbox escape vulnerability exposes risks in AI-assisted clinical coding",
+      "timestamp": "2026-05-08T19:04:19Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-5-price-increase-what-it-costs",
       "headline": "GPT-5.5 pricing surge forces healthcare AI budget recalculation",
       "timestamp": "2026-05-08T15:14:08Z",
@@ -248,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "ey-us-supreme-court-guts-key-provision-of-voting-rights-act",
-      "headline": "Healthcare AI Infrastructure Costs Surge as Compute Dominates Budget Decisions",
-      "timestamp": "2026-05-01T18:58:02Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-uber-torches-2026-ai-budget-on-claude-code-in-four-months",
-      "headline": "Uber's Claude spending surge signals AI agent adoption accelerating",
-      "timestamp": "2026-05-01T18:57:59Z",
-      "source_name": "Briefs",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
