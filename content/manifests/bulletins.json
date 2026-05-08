@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-5-price-increase-what-it-costs",
+      "headline": "GPT-5.5 pricing surge forces healthcare AI budget recalculation",
+      "timestamp": "2026-05-08T15:14:08Z",
+      "source_name": "Openrouter",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "google-google-removes-privacy-assurances-after-stuffing-devices-with-t",
+      "headline": "Google quietly removes privacy claims from on-device AI rollout",
+      "timestamp": "2026-05-08T15:14:05Z",
+      "source_name": "Thatprivacyguy",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "anthropic-notes-on-the-xai-anthropic-data-center-deal",
       "headline": "Anthropic secures major data center deal amid rapid capability expansion",
       "timestamp": "2026-05-08T11:03:11Z",
@@ -245,16 +265,6 @@
       "headline": "Uber's Claude spending surge signals AI agent adoption accelerating",
       "timestamp": "2026-05-01T18:57:59Z",
       "source_name": "Briefs",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "claude-apple-accidentally-left-claude-md-files-apple-support-app",
-      "headline": "Apple exposed Claude API documentation in support app files",
-      "timestamp": "2026-05-01T14:47:06Z",
-      "source_name": "Xcancel",
       "verification": "confirmed",
       "tags": [
         "claude"
