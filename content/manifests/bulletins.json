@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-notes-on-the-xai-anthropic-data-center-deal",
+      "headline": "Anthropic secures major data center deal amid rapid capability expansion",
+      "timestamp": "2026-05-08T11:03:11Z",
+      "source_name": "Simonwillison",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-openai-s-webrtc-problem",
+      "headline": "OpenAI's Real-Time API Hits Technical Friction as Privacy Scrutiny Intensifies",
+      "timestamp": "2026-05-08T11:03:08Z",
+      "source_name": "Moq",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-natural-language-autoencoders-turning-claude-s-thoughts-into-te",
       "headline": "Anthropic releases natural language autoencoders for Claude model interpretability",
       "timestamp": "2026-05-07T19:26:25Z",
@@ -235,26 +255,6 @@
       "headline": "Apple exposed Claude API documentation in support app files",
       "timestamp": "2026-05-01T14:47:06Z",
       "source_name": "Xcancel",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-after-dissing-anthropic-for-limiting-mythos-openai-restricts-ac",
-      "headline": "OpenAI restricts Cyber access after criticizing Anthropic's limitations strategy",
-      "timestamp": "2026-05-01T11:02:02Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-both-codex-and-claude-got-worse-this-week-across-every-plan-i-r",
-      "headline": "Claude model performance degradation raises questions about AI reliability",
-      "timestamp": "2026-05-01T11:01:59Z",
-      "source_name": "Desktopcommander",
       "verification": "confirmed",
       "tags": [
         "claude"

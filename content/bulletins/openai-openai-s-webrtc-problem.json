@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-08T11:03:08Z",
+  "slug": "openai-openai-s-webrtc-problem",
+  "headline": "OpenAI's Real-Time API Hits Technical Friction as Privacy Scrutiny Intensifies",
+  "body": "OpenAI is confronting infrastructure challenges with its WebRTC implementation for real-time voice interactions while facing regulatory pressure from Canadian privacy watchdogs over data handling practices. The company simultaneously launched GPT-Realtime-2 and ended support for fine-tuning APIs, signaling a shift in its product strategy. For healthcare AI implementations, these developments create immediate concerns around real-time clinical communication tools, patient data compliance in cross-border deployments, and the stability of OpenAI's API roadmap for production workflows. Organizations evaluating OpenAI for telehealth, clinical documentation, or real-time decision support need clarity on infrastructure reliability and regulatory alignment before committing to implementations. The combination of technical friction and privacy investigations suggests healthcare vendors should stress-test alternative architectures and diversify their AI infrastructure dependencies.",
+  "source_url": "https://moq.dev/blog/webrtc-is-the-problem/",
+  "source_name": "Moq",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
