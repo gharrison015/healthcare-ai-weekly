@@ -22,7 +22,7 @@
     },
     "consulting_intelligence": {
       "label": "Consulting Intelligence",
-      "description": "Consulting firm activity in healthcare AI: practice launches, AI investments, strategic hires, AI-related partnerships, acquisitions of AI companies by consulting firms. MUST involve AI or technology. If no consulting AI news this week, skip this section entirely.",
+      "description": "Activity at the AI-in-consulting layer for healthcare. Two qualifying patterns: (a) tracked consulting firm activity — practice launches, AI investments, strategic hires, AI-related partnerships, acquisitions of AI companies BY tracked firms; (b) competitive entrants to that layer — model labs (Anthropic, OpenAI, Google, etc.), hyperscalers, or PE-backed JVs launching AI services / consulting / implementation / advisory firms aimed at enterprise or regulated industries. Pattern (b) belongs here even when the announcement does not name healthcare directly — these JVs and services firms compete with the tracked consultancies for healthcare-system AI spend. MUST involve AI or technology. If no qualifying news this week, skip this section entirely.",
       "min_count": 0,
       "max_count": 3,
       "required_fields": ["headline", "so_what", "email_summary", "deep_dive_notes"],
@@ -30,7 +30,12 @@
         "Guidehouse", "Deloitte", "McKinsey", "BCG", "Accenture", "Chartis",
         "Optum Advisory", "EY Parthenon", "Huron", "BRG (Berkeley Research Group)",
         "Bain", "Oliver Wyman", "KPMG", "PwC"
-      ]
+      ],
+      "competitive_entrant_patterns": {
+        "model_labs": ["Anthropic", "OpenAI", "Google", "Meta", "Mistral", "Cohere", "DeepMind"],
+        "pe_and_banking": ["Blackstone", "KKR", "Apollo", "Carlyle", "Hellman & Friedman", "Bain Capital", "TPG", "Goldman Sachs", "Morgan Stanley", "JPMorgan"],
+        "services_signals": ["AI services firm", "enterprise AI services", "AI consulting firm", "AI implementation", "AI advisory", "implementation arm", "services joint venture", "AI services JV"]
+      }
     },
     "did_you_know": {
       "description": "General AI capability and release news. Educational tone. These are the ONLY items that don't need a healthcare angle, but they MUST be about AI. Always exactly 2.",

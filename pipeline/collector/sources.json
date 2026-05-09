@@ -68,7 +68,13 @@
     "\"Bain\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
     "\"Oliver Wyman\" AND \"healthcare\" AND (\"AI\" OR \"partnership\")",
     "\"KPMG\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
-    "\"PwC\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")"
+    "\"PwC\" AND \"healthcare\" AND (\"AI\" OR \"partnership\" OR \"acquisition\")",
+
+    "\"AI services firm\" OR \"enterprise AI services\" AND (launch OR partnership OR \"joint venture\")",
+    "\"AI consulting firm\" OR \"AI implementation\" OR \"AI advisory\"",
+    "(\"Anthropic\" OR \"OpenAI\" OR \"Google\" OR \"Meta\" OR \"Mistral\") AND (\"services firm\" OR \"consulting\" OR \"implementation arm\" OR \"advisory\")",
+    "(\"Blackstone\" OR \"KKR\" OR \"Apollo\" OR \"Carlyle\" OR \"Hellman\" OR \"Bain Capital\" OR \"TPG\") AND \"AI\" AND (\"services\" OR \"consulting\" OR \"advisory\" OR \"joint venture\")",
+    "(\"Goldman Sachs\" OR \"Morgan Stanley\" OR \"JPMorgan\") AND \"AI\" AND (\"consulting\" OR \"advisory\" OR \"services firm\")"
   ],
   "keywords": [
     "AI", "artificial intelligence", "machine learning", "LLM", "large language model",
