@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-11T16:25:03Z",
+  "slug": "ey-our-keyboards-are-tracking-us",
+  "headline": "Keyboard tracking tools expose new security risks in clinical environments",
+  "body": "Reports of keyboard monitoring technologies have surfaced across tech communities, raising immediate concerns about data capture in healthcare settings where clinicians input sensitive patient information daily. EHR systems, prescription details, and clinical notes typed into keyboards could be intercepted by tracking mechanisms, creating compliance violations under HIPAA and compromising patient privacy at the point of data entry. Healthcare organizations deploying AI agents for clinical workflows must now evaluate whether screen-based AI tools and agent integrations introduce similar surveillance vectors. This security gap requires vendors to implement keyboard-level encryption and healthcare IT teams to audit agent deployment architectures before broader clinical adoption.",
+  "source_url": "https://news.ycombinator.com/item?id=48092999",
+  "source_name": "Hacker News",
+  "velocity_score": 66,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
