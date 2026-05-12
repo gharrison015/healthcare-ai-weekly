@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-embraces-ai-investor-topping-40b-in-equity-bets-2026",
+      "headline": "Nvidia crosses $40B equity investment threshold amid GPU market consolidation",
+      "timestamp": "2026-05-12T16:15:01Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-anthropic-openai-meet-religious-leaders-to-discuss-faith-and-ai",
+      "headline": "OpenAI and Anthropic engage religious leaders on AI ethics framework",
+      "timestamp": "2026-05-12T16:14:58Z",
+      "source_name": "Fastcompany",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-claude-platform-on-aws",
       "headline": "Anthropic launches Claude Platform on AWS, reshaping AI integration options",
       "timestamp": "2026-05-12T11:48:06Z",
@@ -228,16 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "google-google-chrome-silently-installs-a-4-gb-ai-model-on-your-device",
-      "headline": "Google Chrome deploys 4GB AI model without user consent",
-      "timestamp": "2026-05-05T15:29:40Z",
-      "source_name": "Thatprivacyguy",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
