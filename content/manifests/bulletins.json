@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-unauthorized-anthropic-stock-sales-and-investment-scams",
+      "headline": "Anthropic warns of stock scams as Claude adoption accelerates healthcare",
+      "timestamp": "2026-05-12T22:52:42Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-sam-altman-s-business-dealings-under-gop-scrutiny-ahead-of-open",
       "headline": "OpenAI faces political scrutiny as IPO plans advance amid governance questions",
       "timestamp": "2026-05-12T19:28:40Z",
@@ -248,16 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-y-combinator-s-stake-in-openai-0-6",
-      "headline": "Y Combinator's $5B OpenAI stake signals venture capital's AI infrastructure bet",
-      "timestamp": "2026-05-05T22:47:01Z",
-      "source_name": "Daringfireball",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
