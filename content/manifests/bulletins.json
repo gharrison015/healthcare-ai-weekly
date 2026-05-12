@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-platform-on-aws",
+      "headline": "Anthropic launches Claude Platform on AWS, reshaping AI integration options",
+      "timestamp": "2026-05-12T11:48:06Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-we-got-our-first-paid-user-and-we-re-still-stuck-in-google-s-au",
       "headline": "Google's audit delays threaten startup viability even with paying customers",
       "timestamp": "2026-05-11T22:45:30Z",
@@ -228,36 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "claude-amazon-rolls-out-claude-code-and-codex-internally",
-      "headline": "Amazon deploys Claude Code across workforce, signaling enterprise AI adoption shift",
-      "timestamp": "2026-05-05T11:11:18Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "ey-white-house-considers-vetting-a-i-models-before-they-are-released",
-      "headline": "White House moves toward AI model vetting before public release",
-      "timestamp": "2026-05-04T22:48:40Z",
-      "source_name": "The New York Times",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "openai-how-openai-delivers-low-latency-voice-ai-at-scale",
-      "headline": "OpenAI achieves low-latency voice AI at scale, reshaping clinical interaction potential",
-      "timestamp": "2026-05-04T22:48:38Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

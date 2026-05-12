@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-12T11:48:06Z",
+  "slug": "claude-claude-platform-on-aws",
+  "headline": "Anthropic launches Claude Platform on AWS, reshaping AI integration options",
+  "body": "Anthropic announced Claude Platform availability on AWS, expanding deployment options beyond direct API access. This matters for healthcare organizations evaluating AI infrastructure because it opens AWS-native integration pathways for systems already running on that cloud, potentially simplifying compliance, data residency, and security model alignment. For EHR vendors and healthcare IT consultants, this adds another architectural option when designing clinical AI features. The move signals vendor landscape competition intensifying around deployment flexibility rather than capability alone, which will influence how healthcare systems evaluate total cost of ownership and operational control when adopting AI assistants for documentation, coding, and clinical decision support workflows.",
+  "source_url": "https://claude.com/blog/claude-platform-on-aws",
+  "source_name": "Claude",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
