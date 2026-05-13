@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-altman-forced-to-confront-claims-at-openai-trial-that-he-s-a-pr",
+      "headline": "OpenAI trial exposes leadership credibility questions amid drug advice liability claims",
+      "timestamp": "2026-05-13T19:40:44Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-use-the-claude-agent-sdk-with-your-claude-plan",
+      "headline": "Anthropic launches Claude Agent SDK with dedicated monthly credits",
+      "timestamp": "2026-05-13T19:40:41Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-googlebook-designed-for-gemini-intelligence",
       "headline": "Google launches Gemini-optimized device amid AI security concerns",
       "timestamp": "2026-05-13T16:14:40Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-higher-usage-limits-for-claude-and-a-compute-deal-with-spacex",
-      "headline": "Anthropic raises Claude usage limits and secures major compute partnership",
-      "timestamp": "2026-05-06T19:22:18Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "google-google-chrome-silently-installs-4-gb-gemini-nano-ai-model-witho",
-      "headline": "Google Chrome deploys Gemini Nano AI model without user consent",
-      "timestamp": "2026-05-06T19:22:12Z",
-      "source_name": "Alternativeto",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]

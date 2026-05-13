@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-13T19:40:41Z",
+  "slug": "claude-use-the-claude-agent-sdk-with-your-claude-plan",
+  "headline": "Anthropic launches Claude Agent SDK with dedicated monthly credits",
+  "body": "Anthropic released the Claude Agent SDK enabling developers to build agentic workflows within Claude plans, introducing dedicated monthly credits for programmatic usage. For healthcare AI applications, this reduces friction in deploying autonomous agents for clinical documentation, prior authorization workflows, and EHR integration tasks. The SDK's focus on structured, repeatable agent behavior addresses a critical gap in healthcare where compliance and audit trails are non-negotiable. Healthcare vendors and health systems evaluating Claude for production use now have a clearer pathway to scale AI-driven automation without unpredictable token costs. This positions Claude competitively against specialized healthcare AI platforms on implementation velocity and cost predictability.",
+  "source_url": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan",
+  "source_name": "Support",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
