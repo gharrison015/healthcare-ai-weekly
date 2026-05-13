@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-show-hn-grunden-frontier-ai-inference-hosted-in-sweden-openai-c",
+      "headline": "Swedish AI startup launches OpenAI-compatible inference infrastructure",
+      "timestamp": "2026-05-13T11:55:44Z",
+      "source_name": "Grunden",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-natural-language-autoencoders-inside-claude-s-activations",
+      "headline": "Claude's Internal Activations Decoded, Reshaping AI Transparency Debate",
+      "timestamp": "2026-05-13T11:55:41Z",
+      "source_name": "Philippdubach",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-unauthorized-anthropic-stock-sales-and-investment-scams",
       "headline": "Anthropic warns of stock scams as Claude adoption accelerates healthcare",
       "timestamp": "2026-05-12T22:52:42Z",
@@ -235,26 +255,6 @@
       "headline": "Claude integration tooling accelerates as developer workflows mature rapidly",
       "timestamp": "2026-05-06T15:57:56Z",
       "source_name": "Sindro",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-mark-cuban-openai-will-never-return-the-1t-it-s-investing-video",
-      "headline": "OpenAI scales voice AI while facing investor return skepticism",
-      "timestamp": "2026-05-06T11:44:00Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-claudette-an-open-source-desktop-companion-for-claude-code",
-      "headline": "Open-source Claude tools gain traction among developer communities",
-      "timestamp": "2026-05-06T11:43:58Z",
-      "source_name": "Utensils",
       "verification": "confirmed",
       "tags": [
         "claude"

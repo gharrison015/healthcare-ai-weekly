@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-13T11:55:41Z",
+  "slug": "claude-natural-language-autoencoders-inside-claude-s-activations",
+  "headline": "Claude's Internal Activations Decoded, Reshaping AI Transparency Debate",
+  "body": "Researchers have published analysis of Claude's natural language autoencoders, revealing how the model represents information in its activation layers. This technical breakthrough matters for healthcare AI because clinical decision support systems require explainability and auditability to meet regulatory standards and clinician trust requirements. Understanding what large language models actually compute internally, rather than just their outputs, gives healthcare organizations critical insight into potential failure modes when deploying Claude for EHR documentation, clinical summarization, or diagnostic reasoning tasks. The concurrent emergence of cost tracking tools and code review workflows suggests vendors are building production-grade infrastructure around Claude, indicating healthcare institutions should evaluate transparency and observability capabilities alongside model performance in their AI vendor assessments.",
+  "source_url": "https://philippdubach.com/posts/what-claude-thinks-but-doesnt-say/",
+  "source_name": "Philippdubach",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
