@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-finds-first-ai-developed-zero-day-that-bypasses-2fa",
+      "headline": "Google discovers first AI-generated zero-day exploiting two-factor authentication",
+      "timestamp": "2026-05-13T22:57:25Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-tell-hn-dont-use-claude-design-lost-access-to-my-projects-after",
+      "headline": "Claude subscription changes spark access loss concerns among users",
+      "timestamp": "2026-05-13T22:57:23Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-altman-forced-to-confront-claims-at-openai-trial-that-he-s-a-pr",
       "headline": "OpenAI trial exposes leadership credibility questions amid drug advice liability claims",
       "timestamp": "2026-05-13T19:40:44Z",
@@ -248,16 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-new-compute-partnership-with-anthropic",
-      "headline": "Anthropic gains massive compute access through SpaceX partnership deal",
-      "timestamp": "2026-05-06T22:40:05Z",
-      "source_name": "X",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]

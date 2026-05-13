@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-13T22:57:23Z",
+  "slug": "claude-tell-hn-dont-use-claude-design-lost-access-to-my-projects-after",
+  "headline": "Claude subscription changes spark access loss concerns among users",
+  "body": "Anthropic's Claude platform is experiencing significant friction over subscription model changes, with users reporting lost project access after unsubscribing and new restrictions on programmatic usage and code execution. For healthcare AI developers building clinical decision support tools, EHR integrations, or diagnostic workflows on Claude infrastructure, these access restrictions create material risk to production systems and project continuity. Organizations evaluating Claude for regulated healthcare applications should conduct thorough vendor stability assessments and implement backup inference pathways before committing to mission-critical deployments. The velocity and breadth of policy changes across subscription tiers suggest Anthropic is actively restructuring its commercial model, requiring healthcare consulting teams to reassess Claude's role in value-based care and clinical workflow solutions.",
+  "source_url": "https://news.ycombinator.com/item?id=48128003",
+  "source_name": "Hacker News",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

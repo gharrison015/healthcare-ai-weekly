@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-13T22:57:25Z",
+  "slug": "google-google-finds-first-ai-developed-zero-day-that-bypasses-2fa",
+  "headline": "Google discovers first AI-generated zero-day exploiting two-factor authentication",
+  "body": "Google researchers identified the first known zero-day vulnerability discovered and weaponized by AI systems, capable of bypassing two-factor authentication defenses. This marks a significant escalation in adversarial AI capabilities and signals a new threat vector for healthcare organizations relying on standard authentication protocols. Healthcare systems must immediately audit their cybersecurity posture, particularly around identity and access management for EHR systems and patient data repositories. The emergence of AI-developed exploits means healthcare IT teams need to shift from reactive patching to proactive threat modeling, especially for mission-critical infrastructure supporting clinical workflows. Healthcare vendors and consulting teams should prioritize zero-trust architecture implementations and behavioral analytics to detect compromised credentials before attackers gain database access.",
+  "source_url": "https://www.tomshardware.com/tech-industry/cyber-security/google-finds-first-ai-developed-zero-day-that-bypasses-2fa-self-morphing-malware-and-gemini-powered-backdoors-signal-a-new-era-of-cybercrime",
+  "source_name": "Tomshardware",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}
