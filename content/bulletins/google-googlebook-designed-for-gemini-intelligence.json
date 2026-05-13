@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-13T16:14:40Z",
+  "slug": "google-googlebook-designed-for-gemini-intelligence",
+  "headline": "Google launches Gemini-optimized device amid AI security concerns",
+  "body": "Google introduced Googlebook, a new device purpose-built for Gemini AI integration, while security researchers disclosed that Google's AI systems discovered a zero-day vulnerability bypassing two-factor authentication. Healthcare organizations deploying Google's AI infrastructure need immediate clarity on data handling practices, particularly given reports that cursor-tracked content feeds into Google's surveillance systems. For health systems evaluating AI vendors, this raises critical questions about what patient data gets processed through cloud-based AI models and whether sensitive clinical information inadvertently triggers data collection. The combination of expanded AI device ecosystems and emerging security gaps suggests healthcare IT teams should audit their Google AI implementations and establish explicit data governance policies before wider Gemini adoption in clinical workflows.",
+  "source_url": "https://blog.google/products-and-platforms/platforms/android/meet-googlebook/",
+  "source_name": "Blog",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}

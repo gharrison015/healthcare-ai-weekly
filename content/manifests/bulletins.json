@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-googlebook-designed-for-gemini-intelligence",
+      "headline": "Google launches Gemini-optimized device amid AI security concerns",
+      "timestamp": "2026-05-13T16:14:40Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-i-spent-100-in-claude-tokens-and-1k-battles-training-my",
+      "headline": "Developers optimize Claude for cost efficiency amid agent AI experimentation surge",
+      "timestamp": "2026-05-13T16:14:37Z",
+      "source_name": "Agentank",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-show-hn-grunden-frontier-ai-inference-hosted-in-sweden-openai-c",
       "headline": "Swedish AI startup launches OpenAI-compatible inference infrastructure",
       "timestamp": "2026-05-13T11:55:44Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "openai-openai-president-forced-to-read-his-personal-diary-entries-to-j",
-      "headline": "OpenAI president testifies in court amid internal leadership scrutiny",
-      "timestamp": "2026-05-06T15:57:59Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-my-claude-code-setup-pure-cli-pure-unix-zero-ide",
-      "headline": "Claude integration tooling accelerates as developer workflows mature rapidly",
-      "timestamp": "2026-05-06T15:57:56Z",
-      "source_name": "Sindro",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
