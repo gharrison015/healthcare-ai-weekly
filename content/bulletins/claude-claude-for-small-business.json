@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-14T11:44:20Z",
+  "slug": "claude-claude-for-small-business",
+  "headline": "Anthropic expands Claude access for small businesses amid subscription model shifts",
+  "body": "Anthropic launched a small business tier for Claude this week, broadening the model's accessibility while simultaneously implementing new subscription constraints and access restrictions. For healthcare AI deployments, this signals tightening programmatic usage controls that could affect clinical integration workflows and real-time EHR automation at smaller health systems. Organizations evaluating Claude for administrative tasks, coding assistance, or clinical documentation support should verify feature retention across subscription tiers before committing to production implementations. The simultaneous restrictions on design tools and code execution suggest Anthropic is segmenting capabilities by price tier, requiring healthcare IT teams to map use cases against specific licensing levels to avoid compliance gaps.",
+  "source_url": "https://www.anthropic.com/news/claude-for-small-business",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

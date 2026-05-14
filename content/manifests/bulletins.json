@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-emix-emulating-beyond-single-fpga-limits",
+      "headline": "FPGA emulation breakthrough enables larger AI model inference deployments",
+      "timestamp": "2026-05-14T11:44:23Z",
+      "source_name": "Arxiv",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-claude-for-small-business",
+      "headline": "Anthropic expands Claude access for small businesses amid subscription model shifts",
+      "timestamp": "2026-05-14T11:44:20Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-finds-first-ai-developed-zero-day-that-bypasses-2fa",
       "headline": "Google discovers first AI-generated zero-day exploiting two-factor authentication",
       "timestamp": "2026-05-13T22:57:25Z",
