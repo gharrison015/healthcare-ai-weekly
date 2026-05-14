@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-forms-200m-partnership-with-the-gates-foundation",
+      "headline": "Anthropic secures $200M Gates Foundation partnership for global health AI",
+      "timestamp": "2026-05-14T16:05:20Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-emix-emulating-beyond-single-fpga-limits",
       "headline": "FPGA emulation breakthrough enables larger AI model inference deployments",
       "timestamp": "2026-05-14T11:44:23Z",
@@ -278,16 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-elon-musk-s-lawyers-ask-openai-s-president-why-he-is-worth-30b",
-      "headline": "Musk litigation escalates as OpenAI valuation, leadership questioned",
-      "timestamp": "2026-05-07T15:59:03Z",
-      "source_name": "The New York Times",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
