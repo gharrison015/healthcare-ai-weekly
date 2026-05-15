@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare AI Weekly Deep Dive — May 08 - May 15, 2026</title>
+<style>
+  @font-face { font-family: 'Aptos'; src: local('Aptos'), local('Aptos Display'), local('Calibri'); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; color: #111827; min-height: 100vh; }
+  html { background: #f0f2f5; }
+
+  /* Ambient mesh gradient */
+  .ambient-bg {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+    background: linear-gradient(135deg, #e8edf5 0%, #dfe6f0 30%, #eae4f0 60%, #e0eaf5 100%);
+  }
+  .ambient-bg::before, .ambient-bg::after {
+    content: ""; position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.4;
+    animation: ambient-drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::before { width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 70%); top: -10%; right: -5%; }
+  .ambient-bg::after { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%); bottom: -10%; left: -5%; animation-delay: -10s; }
+  @keyframes ambient-drift { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -20px) scale(1.1); } }
+
+  /* Glass surfaces */
+  .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
+
+  /* Layout */
+  .container { padding: 0 40px; }
+  @media (max-width: 640px) { .container { padding: 0 16px; } }
+
+  /* Header */
+  .header { padding: 48px 0 32px; }
+  .header h1 { font-size: 38px; font-weight: 800; color: #0F1D35; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .header .subtitle { font-size: 16px; color: #6b7280; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .header .summary { font-size: 20px; line-height: 1.6; color: #374151; }
+  .back-link { display: inline-block; font-size: 20px; color: #0284C7; text-decoration: none; font-weight: 700; margin-bottom: 20px; padding: 8px 16px; border-radius: 8px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.15); }
+  .back-link:hover { text-decoration: underline; }
+
+  /* TOC */
+  .toc { border-radius: 16px; padding: 20px 24px; margin-bottom: 24px; }
+  .toc-title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 10px; }
+  .toc a { display: inline-block; font-size: 16px; color: #0284C7; text-decoration: none; padding: 4px 16px 4px 0; font-weight: 600; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* Section boxes */
+  .section-box { border-radius: 20px; padding: 32px; margin-bottom: 20px; }
+  .section-header { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0F1D35; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #0284C7; }
+
+  /* Story cards */
+  .story-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
+  .story-card:last-child { margin-bottom: 0; }
+
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; }
+  .badge-impact { background: rgba(220, 38, 38, 0.1); color: #dc2626; border: 1px solid rgba(220, 38, 38, 0.2); }
+  .badge-emerging { background: rgba(2, 132, 199, 0.1); color: #0284C7; border: 1px solid rgba(2, 132, 199, 0.2); }
+
+  .story-headline { font-size: 24px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; line-height: 1.3; }
+  .story-headline a { color: #0F1D35; text-decoration: none; }
+  .story-headline a:hover { color: #0284C7; }
+  .so-what { font-size: 18px; font-weight: 600; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .deep-dive-text { font-size: 18px; line-height: 1.7; color: #374151; }
+  .risk-angle {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 14px 18px; border-radius: 10px;
+    font-size: 17px; margin-top: 14px; color: #92400e;
+  }
+  .risk-angle strong { color: #78350f; }
+  .source-link { font-size: 14px; color: #94a3b8; margin-top: 14px; }
+  .source-link a { color: #0284C7; text-decoration: none; font-weight: 600; }
+  .source-link a:hover { text-decoration: underline; }
+
+  /* DYK */
+  .dyk-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
+  .dyk-card:last-child { margin-bottom: 0; }
+  .dyk-card h3 { font-size: 22px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; }
+  .dyk-card .explainer { font-size: 18px; line-height: 1.7; color: #374151; }
+
+  /* Trend */
+  .trend-box { border-radius: 20px; padding: 28px 32px; margin-bottom: 20px; border: 2px solid rgba(2, 132, 199, 0.2); }
+  .trend-label { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0284C7; margin-bottom: 8px; }
+  .trend-text { font-size: 18px; line-height: 1.6; color: #374151; }
+
+  /* Sources */
+  .sources-box { border-radius: 16px; padding: 24px 28px; margin-bottom: 20px; }
+  .sources-box h2 { font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px; color: #94a3b8; margin-bottom: 14px; font-weight: 800; }
+  .sources-box ul { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
+  .sources-box li { font-size: 14px; color: #6b7280; padding: 4px 0; break-inside: avoid; }
+  .sources-box li a { color: #0284C7; text-decoration: none; }
+  .sources-box li a:hover { text-decoration: underline; }
+  .sources-box li .src-name { color: #94a3b8; font-size: 12px; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 24px 0 48px; font-size: 15px; color: #94a3b8; }
+
+  /* Floating CTA */
+  .fab-container { position: fixed; bottom: 32px; right: 32px; z-index: 100; display: flex; align-items: center; gap: 0; }
+  .fab-label {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    padding: 10px 20px; border-radius: 24px 0 0 24px;
+    font-size: 15px; font-weight: 700; color: #0F1D35; white-space: nowrap;
+    opacity: 0; transform: translateX(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); pointer-events: none;
+  }
+  .fab-container:hover .fab-label { opacity: 1; transform: translateX(0); pointer-events: auto; }
+  .fab-button {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, #0284C7, #0F1D35);
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fab-pulse 3s ease-in-out infinite; position: relative; z-index: 2;
+  }
+  .fab-button:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(2, 132, 199, 0.4), 0 0 0 8px rgba(2, 132, 199, 0.08); animation: none; }
+  .fab-button svg { width: 24px; height: 24px; fill: none; stroke: #ffffff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  @keyframes fab-pulse { 0%, 100% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 0 rgba(2, 132, 199, 0.15); } 50% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 12px rgba(2, 132, 199, 0); } }
+  @media (max-width: 640px) { .fab-container { bottom: 20px; right: 20px; } .fab-button { width: 48px; height: 48px; } .fab-label { display: none; } }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 30px; }
+    .section-box { padding: 20px 16px; border-radius: 14px; }
+    .story-card { padding: 18px 16px; }
+    .story-headline { font-size: 20px; }
+    .deep-dive-text { font-size: 16px; }
+    .sources-box ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="ambient-bg"></div>
+
+<div class="container">
+  <div class="header">
+    <a href="/" class="back-link">&larr; All Issues</a>
+    <h1>Healthcare AI Weekly</h1>
+    <div class="subtitle">Deep Dive — May 08 - May 15, 2026</div>
+    <div class="summary">AI consulting has gone mainstream. OpenAI launched DeployCo with $4 billion in backing while Anthropic struck a $200 million partnership with Gates Foundation, signaling AI vendors are moving beyond models into implementation services. Meanwhile, payers are shifting from DIY AI to vendor partnerships, with 80% now preferring to buy rather than build. The big story buried in the noise: Epic continues its market dominance even as health systems redirect capital from EHR upgrades to AI initiatives.</div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc glass">
+    <div class="toc-title">In This Issue</div>
+    <a href="#top-stories">What Matters This Week</a>
+    <a href="#vbc-watch">Value-Based Care Watch</a>
+    <a href="#ma-partnerships">M&A & Partnerships</a>
+    <a href="#consulting-intelligence">Consulting Intelligence</a>
+    <a href="#did-you-know">Did You Know?</a>
+    <a href="#trend-watch">Trend Watch</a>
+    <a href="#all-sources">All Sources</a>
+  </div>
+
+  <!-- What Matters This Week -->
+  
+  <div class="section-box glass" id="top-stories">
+    <div class="section-header">What Matters This Week</div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-impact">This Week's Impact</span>
+      <div class="story-headline"><a href="https://openai.com/index/openai-launches-the-deployment-company">OpenAI Launches $4B AI Consulting Arm</a></div>
+      <div class="so-what">OpenAI is directly competing with traditional consultants for AI implementation work, backed by TPG's $4 billion investment. This changes the vendor landscape for health systems evaluating AI partnerships.</div>
+      <div class="deep-dive-text">OpenAI's launch of DeployCo represents a fundamental shift in the AI ecosystem. Unlike traditional software vendors who rely on implementation partners, OpenAI is building its own consulting arm with $4+ billion in backing from TPG, Goldman Sachs, and others. The move includes acquiring consulting firm Tomoro and signals OpenAI's recognition that the real money isn't in selling models but in helping enterprises actually deploy them. For health systems, this creates both opportunity and complexity. On one hand, working directly with the AI vendor could mean faster implementation and deeper technical integration. On the other, it bypasses the industry expertise that traditional healthcare consultants bring. The timing is telling: as AI hype cycles toward real implementation pressure, vendors are realizing they need services arms to capture more value and ensure their technology actually gets deployed successfully. DeployCo will likely focus on large enterprise deals initially, but health systems should expect this model to trickle down to smaller implementations over time.</div>
+      
+      <div class="risk-angle"><strong>Risk angle:</strong> Traditional consulting firms now face competition from AI vendors with deeper technical expertise and potentially lower costs, creating pressure on existing consulting relationships.</div>
+      
+      <div class="source-link">Source: <a href="https://openai.com/index/openai-launches-the-deployment-company">OpenAI Blog</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-impact">This Week's Impact</span>
+      <div class="story-headline"><a href="https://www.fiercehealthcare.com/payers/nearly-80-payers-prefer-vendor-built-ai-solutions-innovaccer">Payers Abandon DIY AI for Vendor Partnerships</a></div>
+      <div class="so-what">Payers have reversed course from building AI internally to buying from vendors, with 75% planning to spend $10+ million on AI over the next 3-5 years. This shifts the competitive landscape for health system AI partnerships.</div>
+      <div class="deep-dive-text">The Innovaccer survey reveals a dramatic shift in payer AI strategy. Just 18 months ago, 78% of payers were attempting to build AI capabilities internally. Now 80% prefer vendor-built solutions, and 75% are committing $10+ million to AI spending over 3-5 years. This reversal reflects the reality that building AI from scratch is harder than anticipated, especially for complex healthcare use cases. The implications for health systems are significant. First, the vendor market is about to get very crowded as payers bring serious budgets to bear. Second, proven AI solutions will command premium pricing as demand outstrips supply. Third, health systems that partnered with AI vendors early may find themselves competing with deep-pocketed payers for vendor attention and resources. The survey also highlights a critical gap: while payers are ready to spend, many still lack clear ROI metrics for AI investments. This suggests the market is still in an experimental phase, which could lead to significant consolidation once results become clearer.</div>
+      
+      <div class="risk-angle"><strong>Risk angle:</strong> The vendor market could become oversaturated as payers flood in with budget, leading to inflated valuations and rushed implementations that fail to deliver ROI.</div>
+      
+      <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/payers/nearly-80-payers-prefer-vendor-built-ai-solutions-innovaccer">Fierce Healthcare</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-emerging">Emerging</span>
+      <div class="story-headline"><a href="https://hitconsultant.net/2026/05/14/klas-2026-ehr-market-share-report/">Epic Gains Market Share Despite AI Shift</a></div>
+      <div class="so-what">Health systems are redirecting EHR upgrade budgets toward AI initiatives, yet Epic still gained market share for the fifth consecutive year. This suggests Epic's AI strategy is working while competitors struggle.</div>
+      <div class="deep-dive-text">The KLAS data tells a fascinating story about health system technology priorities. EHR purchase decisions dropped 40% compared to 2024, as systems redirected capital toward AI and operational efficiency solutions. Yet Epic gained market share for the fifth straight year while Oracle Health faced its third year of losses. This suggests Epic's strategy of integrating AI capabilities directly into its platform is resonating with health systems, while standalone EHR vendors struggle to compete. The shift has broader implications for health system technology strategy. Systems are essentially betting that AI implementations will deliver faster ROI than EHR upgrades. This could be smart if AI delivers on promises of clinical efficiency and cost reduction. But it's risky if systems end up with fragmented AI point solutions that don't integrate well with their core EHR infrastructure. Epic's continued dominance despite reduced EHR spending suggests they're successfully positioning themselves as an AI platform, not just an EHR vendor. Competitors who can't make that transition may find themselves increasingly marginalized as health systems consolidate technology relationships.</div>
+      
+      <div class="risk-angle"><strong>Risk angle:</strong> Health systems deferring EHR investments for AI could face technical debt and integration challenges down the road, especially if AI initiatives don't deliver expected ROI.</div>
+      
+      <div class="source-link">Source: <a href="https://hitconsultant.net/2026/05/14/klas-2026-ehr-market-share-report/">HIT Consultant</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-emerging">Emerging</span>
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxNRmwzdnJEOFRad2pqRTJXR29PNGZiR29RLU81VFkwZjZydm9sZDdhRjlmZFV1dl9ud01HUXdOelRJNWVFaGdCS29qVFNXQXFIMGZkVGEzODFDSDdNQ2JBTy1zR1ZFaV9JOE5rbmxpdUZqdV96SzJROTItSXZKOG9sMXJfM3hrX2E1dlYxRXppUllwNl9GUkF0b2hjSDA3aklBZC15VGZ3WFRFbzVDb0s2TmpKS3FNTXJ6QzNYQk5wcEh0c2pNeW9GUmNESnE0VnlsYmNXTW1QTzlEQmw2WkV1SWdrRXdXNFJRSUs0?oc=5">Anthropic Gates Foundation Strike $200M AI Deal</a></div>
+      <div class="so-what">Anthropic's $200 million partnership with Gates Foundation targets global health challenges, potentially creating AI solutions that could scale to U.S. health systems. This represents serious investment in healthcare AI applications.</div>
+      <div class="deep-dive-text">The Gates Foundation's $200 million partnership with Anthropic represents one of the largest philanthropic investments in AI for global health. The four-year initiative will focus on health, education, and agricultural applications in developing countries, with particular emphasis on maternal health, infectious disease management, and health system strengthening. While the partnership targets global health challenges, the AI solutions developed could have significant spillover effects for U.S. health systems. Innovations in resource-constrained environments often produce more efficient, cost-effective solutions that prove valuable in higher-resource settings. The partnership also signals growing institutional confidence in AI's potential to address complex health challenges at scale. For health system leaders, this validates the strategic importance of AI investment and suggests that proven solutions may emerge from unexpected sources. The Gates Foundation's track record in scaling health innovations globally means any successful AI applications from this partnership could become available to U.S. health systems within a few years. This is particularly relevant for safety-net hospitals and rural health systems that face resource constraints similar to those in developing countries.</div>
+      
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxNRmwzdnJEOFRad2pqRTJXR29PNGZiR29RLU81VFkwZjZydm9sZDdhRjlmZFV1dl9ud01HUXdOelRJNWVFaGdCS29qVFNXQXFIMGZkVGEzODFDSDdNQ2JBTy1zR1ZFaV9JOE5rbmxpdUZqdV96SzJROTItSXZKOG9sMXJfM3hrX2E1dlYxRXppUllwNl9GUkF0b2hjSDA3aklBZC15VGZ3WFRFbzVDb0s2TmpKS3FNTXJ6QzNYQk5wcEh0c2pNeW9GUmNESnE0VnlsYmNXTW1QTzlEQmw2WkV1SWdrRXdXNFJRSUs0?oc=5">Forbes</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Value-Based Care Watch -->
+  
+  <div class="section-box glass" id="vbc-watch">
+    <div class="section-header">Value-Based Care Watch</div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNWtaTUZaMmtoWExWZGhPZmpobDdxNmxnT0xjZ3ZDa3Y2RFhENW1TTmVrYXhoUzVMTXZjbWxzbFhSb0dIcDREU1dQVG50RV92WlFRTkM0VHVYYlltMERjdEpFOXBmdUZpby1HMG1CR01WQUNmaWdxUjlJcDdyQVRSRUJDMVBRUmRyVE42LWxaVEZxQ3dlOThYOHdzaFB4R05mRnNFSjcxUnd5MzBTZzFURXlKOXBrc2FnN21kanJMbGNBRTN1TklUSFRXNkhDRkdibmdj?oc=5">Doximity Partners with Aledade for VBC AI</a></div>
+      <div class="so-what">Doximity's physician network is bringing AI tools directly into Aledade's ACO workflows, potentially accelerating clinical AI adoption in value-based care settings where ROI measurement is more straightforward.</div>
+      <div class="deep-dive-text">The Doximity-Aledade partnership represents a strategic approach to AI deployment in value-based care that other organizations should watch closely. Doximity brings a network of over 2 million physicians and established clinical workflows, while Aledade manages ACOs serving more than 2.5 million patients. The combination creates a direct channel for AI tools to reach physicians in value-based care arrangements where financial incentives align with AI's promise of improved efficiency and outcomes. This partnership is significant because ACOs provide natural laboratories for AI ROI measurement. Unlike fee-for-service environments where AI benefits may be diffuse, ACOs have clear financial incentives to adopt tools that improve care quality while reducing costs. The partnership will likely focus on clinical decision support, care gap identification, and population health management tools that directly impact ACO quality metrics and shared savings. For health system leaders, this model suggests a pathway for AI adoption that leverages existing physician networks and aligns financial incentives. Rather than trying to implement AI across entire health systems, focusing on value-based care arrangements first may provide clearer ROI demonstration and physician buy-in.</div>
+      
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNWtaTUZaMmtoWExWZGhPZmpobDdxNmxnT0xjZ3ZDa3Y2RFhENW1TTmVrYXhoUzVMTXZjbWxzbFhSb0dIcDREU1dQVG50RV92WlFRTkM0VHVYYlltMERjdEpFOXBmdUZpby1HMG1CR01WQUNmaWdxUjlJcDdyQVRSRUJDMVBRUmRyVE42LWxaVEZxQ3dlOThYOHdzaFB4R05mRnNFSjcxUnd5MzBTZzFURXlKOXBrc2FnN21kanJMbGNBRTN1TklUSFRXNkhDRkdibmdj?oc=5">Business Wire</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- M&A & Partnerships -->
+  
+  <div class="section-box glass" id="ma-partnerships">
+    <div class="section-header">M&A & Partnerships</div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMisgFBVV85cUxQeldRcDk3WWpRMHo1a0Qwb3djcGNxOXVVbHAtYVNnT1dtbnZkdGsyc0FlZUNxNDZoaFlaZUhLWGRnMVRaemdvblp1MjVFQjFiajBFM3hZOThxS25zTG9HZFVCdGdRX1JnSVpaWUpaTkdjTjFFdVh0eXdhYk1lLTVjb1hacm00OHFjRDhlOGwtRWFjUUFRaHJsRjlXM0d3d1RJVTJMUEZjOGtqYndhRlktRVV3?oc=5">PwC Expands Anthropic Alliance for Enterprise AI</a></div>
+      <div class="so-what">PwC's expanded Anthropic partnership brings enterprise-grade agentic AI directly to consulting engagements, potentially accelerating AI implementation timelines for health system clients while demonstrating proven use cases.</div>
+      <div class="deep-dive-text">PwC's expanded alliance with Anthropic represents a significant escalation in how consulting firms are integrating AI into their service delivery. Rather than just advising on AI strategy, PwC is deploying Claude directly in client engagements for technology development, deal execution, and enterprise function transformation. This moves consulting from advisory to implementation, with AI as a core delivery mechanism rather than just a topic of conversation. For health systems, this partnership model offers several advantages. First, it provides access to enterprise-grade AI capabilities without the need to build internal expertise immediately. Second, it allows for AI experimentation in lower-risk consulting contexts before committing to large internal implementations. Third, it demonstrates proven use cases that can inform broader AI strategy. The focus on agentic AI is particularly relevant for healthcare, where autonomous agents could handle routine administrative tasks, clinical documentation, and patient communication. However, health systems should carefully evaluate the data governance and security implications of using AI tools provided through consulting relationships. The partnership also signals that major consulting firms view AI integration as essential for competitive differentiation, suggesting that health systems should expect AI-enabled consulting as standard rather than premium service.</div>
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMisgFBVV85cUxQeldRcDk3WWpRMHo1a0Qwb3djcGNxOXVVbHAtYVNnT1dtbnZkdGsyc0FlZUNxNDZoaFlaZUhLWGRnMVRaemdvblp1MjVFQjFiajBFM3hZOThxS25zTG9HZFVCdGdRX1JnSVpaWUpaTkdjTjFFdVh0eXdhYk1lLTVjb1hacm00OHFjRDhlOGwtRWFjUUFRaHJsRjlXM0d3d1RJVTJMUEZjOGtqYndhRlktRVV3?oc=5">PwC</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Consulting Intelligence -->
+  
+  <div class="section-box glass" id="consulting-intelligence">
+    <div class="section-header">Consulting Intelligence</div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMivwFBVV85cUxNblE4Y1hocjdaSGhGVzRJeWNBOE1YRXBrRE1hLU1KbkJDZzRDanZzSUVfWHlMajVFOEFLUG1WdUdtTzNXT2FSclR1Y3drQnJ0VVBwZ3Z2YThMRXBkNTdhTE9nR2dWM1NVRnlhU1dnbVpnY0hVT1dvYW9TN3NIeHhadDVNUkdKSGl6QTA2SlI2X3FZdlhxM0lDbzM0SzRGV2N0aUItZVJzOTNyMFlFSGZzWVJJa29oX1dKaU52YzBjWdIBxAFBVV85cUxQam1NdHd5d1k5V0xzNHk0OE5ZZmZmYlVrSWl0bkNnXzl1WkZCNWpoVEkyS1IxUVJYQkFValpNZVFzMG1LRHd6VzhoTkpvR2NvdVJxQUJSczhqU3NsWnowZmlBWjBHSlZmakw4bm9lcF9ZNnBqV0liN3c4b3N3MUZRYmZHYVFYbWVqSWExV21CeE1vUEdkOU5LTGp1VGM5MUtzOUo4d04wTm5NYU1jOWs1ZE5yTEJwcDUtdWNnNVRlLVJ5X0NW?oc=5">FTI Consulting Poaches 10 from Ankura</a></div>
+      <div class="so-what">FTI's aggressive hiring of cyber risk and data governance consultants from Ankura signals growing demand for AI-related risk management services as health systems implement AI at scale.</div>
+      <div class="deep-dive-text">FTI Consulting's recruitment of 10 cyber risk, data privacy, and governance consultants from Ankura represents more than routine talent poaching. It signals recognition that AI implementation creates new categories of risk that require specialized expertise. The timing coincides with health systems moving from AI pilots to production deployments, where governance and risk management become critical success factors. For health systems, this hiring spree indicates that consulting firms expect significant demand for AI risk management services. This includes not just technical security but also regulatory compliance, data governance, and algorithmic bias management. The movement of experienced consultants between firms also suggests that expertise in AI risk management is becoming a key differentiator in the consulting market. Health systems should take note that AI governance is complex enough to require specialized consulting support, and the market for these services is competitive enough to drive significant talent movement. The focus on data privacy expertise is particularly relevant given healthcare's regulatory environment and the sensitive nature of clinical data used in AI training and inference.</div>
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMivwFBVV85cUxNblE4Y1hocjdaSGhGVzRJeWNBOE1YRXBrRE1hLU1KbkJDZzRDanZzSUVfWHlMajVFOEFLUG1WdUdtTzNXT2FSclR1Y3drQnJ0VVBwZ3Z2YThMRXBkNTdhTE9nR2dWM1NVRnlhU1dnbVpnY0hVT1dvYW9TN3NIeHhadDVNUkdKSGl6QTA2SlI2X3FZdlhxM0lDbzM0SzRGV2N0aUItZVJzOTNyMFlFSGZzWVJJa29oX1dKaU52YzBjWdIBxAFBVV85cUxQam1NdHd5d1k5V0xzNHk0OE5ZZmZmYlVrSWl0bkNnXzl1WkZCNWpoVEkyS1IxUVJYQkFValpNZVFzMG1LRHd6VzhoTkpvR2NvdVJxQUJSczhqU3NsWnowZmlBWjBHSlZmakw4bm9lcF9ZNnBqV0liN3c4b3N3MUZRYmZHYVFYbWVqSWExV21CeE1vUEdkOU5LTGp1VGM5MUtzOUo4d04wTm5NYU1jOWs1ZE5yTEJwcDUtdWNnNVRlLVJ5X0NW?oc=5">Consulting.us</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Did You Know? -->
+  
+  <div class="section-box glass" id="did-you-know">
+    <div class="section-header">Did You Know?</div>
+    
+    <div class="dyk-card glass-card">
+      <h3>Microsoft Cancels Claude Code Licenses</h3>
+      <div class="explainer">Microsoft's decision to cancel Claude Code licenses reveals the complex dynamics of AI tool adoption within large enterprises. The company initially embraced Anthropic's coding assistant to encourage non-developers like project managers and designers to experiment with coding. However, the tool proved so popular among Microsoft's own developers that it created potential competitive issues with the company's own Copilot offerings. This situation illustrates a key challenge health systems will face as they adopt AI tools: balancing employee productivity gains with strategic technology decisions. When third-party AI tools become integral to workflows, organizations must weigh immediate productivity benefits against long-term platform strategy and vendor relationships. For health systems, this suggests the importance of establishing clear AI tool governance policies before widespread adoption occurs.</div>
+      <div class="source-link">Source: <a href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad">The Verge AI</a></div>
+    </div>
+    
+    <div class="dyk-card glass-card">
+      <h3>Americans Oppose AI Data Centers 70%</h3>
+      <div class="explainer">A Gallup survey reveals surprising public resistance to AI infrastructure, with Americans rating data centers as less desirable neighbors than nuclear power plants. This NIMBY sentiment could constrain AI development and increase costs as companies struggle to find suitable locations for the massive computing infrastructure AI requires. The opposition stems from concerns about energy consumption, environmental impact, and local disruption from construction and operations. For health systems, this trend could affect AI service costs and availability as cloud providers face increasing difficulty siting new facilities. It also suggests that public communication about AI benefits needs improvement, as the infrastructure required to deliver AI services faces significant grassroots opposition despite widespread interest in AI applications.</div>
+      <div class="source-link">Source: <a href="https://www.theverge.com/ai-artificial-intelligence/930477/ai-data-centers-gallup-survey-70-percent-opposition">The Verge AI</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Trend Watch -->
+  
+  <div class="trend-box glass" id="trend-watch">
+    <div class="trend-label">Trend Watch</div>
+    <div class="trend-text">AI vendors are moving aggressively into consulting services, creating new competitive dynamics that could reshape how health systems approach AI implementation partnerships.</div>
+  </div>
+  
+
+  <!-- All Sources -->
+  <div class="sources-box glass" id="all-sources">
+    <h2>All Sources Considered This Week</h2>
+    <ul>
+    
+      <li><a href="https://www.fiercehealthcare.com/providers/chutes-ladders-2026-hires-departures-firings-retirements-ceo-executives-healthcare">Chutes &amp; Ladders—Alignment Healthcare shuffles leadership team; Highmark hires former Optum CEO</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/health-tech/cms-health-systems-ehr-vendors-join-payers-pledge-address-prior-authorization">Epic, Oracle and Cleveland Clinic among companies to joining CMS prior authorization initiative</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/chromie-health-earns-2m-pre-seed-funding-launches-sms-ai-powered-staffing">Chromie Health picks up $2M in pre-seed funding, launches SMS AI-powered nurse staffing agent</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/vizai-launches-ai-powered-pulmonary-care-platform">Viz.ai launches AI-powered pulmonary care platform</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/payers/nearly-80-payers-prefer-vendor-built-ai-solutions-innovaccer">Nearly 80% of payers prefer vendor-built AI solutions, survey finds</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/salesforce-echo-health-ventures-backs-opturas-175m-series-track-value-ai">Salesforce Ventures, Echo Health Ventures back Optura's $17.5M series A to track AI performance</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/providers/elsevier-report-finds-docs-more-burnt-out-skeptical-ai-nurses">Docs more burned out, skeptical of AI than nurses, survey report finds</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/health-tech/health-systems-are-exploring-ai-powered-opportunistic-screening-new-cms-reimbursement">Health systems are exploring AI-powered cardiac risk screening. New CMS reimbursement could unlock a business case for it</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/providers/most-mental-health-practitioners-satisfied-work-simplepractice-finds">Most mental health practitioners satisfied with work, financially stable, SimplePractice finds</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/digital-health/fitness-wearable-whoop-adds-demand-clinician-access-ehr-syncing">Fitness wearable Whoop adds on-demand clinician access, EHR syncing</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/cms-electronic-prior-authorization-pledge-health-tech-ecosystem/820271/">CMS launches initiative to speed electronic prior authorization adoption</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/physicians-skeptical-insurer-pledges-reform-prior-authorization-ama/820126/">Physicians skeptical of insurer pledges to reform prior authorization: survey</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/labcorp-expands-epic-pact-to-make-full-test-menu-available-on-aura/820262/">Labcorp expands Epic pact to make full test menu available</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/bayesian-health-gets-fda-nod-for-ai-sepsis-detection-tool/820107/">Bayesian Health gets FDA nod for AI sepsis detection tool</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem">AI research papers are getting better, and it’s a big problem for scientists</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview">OpenAI’s Codex is now in the ChatGPT mobile app</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad">Microsoft starts canceling Claude Code licenses</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit">Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/930477/ai-data-centers-gallup-survey-70-percent-opposition">Americans do not want AI data centers in their backyards</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs">Microsoft&#8217;s Edge Copilot update uses AI to pull information from across your tabs</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/">The new AI-powered Google Finance is expanding to Europe.</a> <span class="src-name">Google AI Blog</span></li>
+    
+      <li><a href="https://blog.google/company-news/inside-google/company-announcements/the-small-brief/">See what happens when creative legends use AI to make ads for small businesses.</a> <span class="src-name">Google AI Blog</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/klas-2026-ehr-market-share-report/">KLAS 2026 EHR Market Share Report: Epic Gains as Oracle Health Faces Third Year of Losses</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/innovaccer-2026-payer-ai-report/">Innovaccer 2026 Payer AI Report: Nearly 80% of Insurers to Buy or Co-Develop AI Capabilities</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/optura-raises-series-a-healthcare-roai/">Optura Raises $17.5M to Measure Healthcare AI ROI and Performance</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/signant-health-acquires-ametris-clinical-evidence/">Signant Health Acquires Ametris to Combine Wearable Data and eCOA Technology</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/shyld-ai-raises-13m-active-intelligence-hospitals/">Shyld AI Secures $13.4M to Scale Agentic AI and Autonomous Disinfection Across U.S. Health Systems</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/iks-health-acquires-arai-solutions-ai-stack/">IKS Health Acquires ARAI Solutions to Build Full Agentic AI Stack for Healthcare</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/carrot-fertility-sprints-menopause-metabolic-health/">Carrot Fertility Expands Sprints AI Metabolic Program to Perimenopause and Menopause Care</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/14/chromie-health-raises-2m-ai-nurse-dispatch/">Chromie Health Raises $2M to Automate Hospital Operations via AI Agent “Dispatch”</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/13/9amhealth-raises-26m-series-b-virtual-specialty-care/">9amHealth Raises $26M to Expand AI-Driven Virtual Specialty Care for Chronic Conditions</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/13/anomaly-insights-funding-payer-intelligence-ai/">Anomaly Insights Secures $17M to Scale AI Payer Intelligence for Health Systems</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/05/13/fader-ai-functional-precision-medicine-oncology/">From Trial-and-Error to Data-Driven Oncology Decision Making: AI-Enabled Functional Precision Medicine Is Rewriting the Future of Cancer Treatment</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://www.beckershospitalreview.com/pharmacy/cvs-to-sell-its-troubled-long-term-care-pharmacy/">CVS to sell its troubled long-term care pharmacy</a> <span class="src-name">Becker's Hospital Review</span></li>
+    
+      <li><a href="https://www.beckershospitalreview.com/finance/92-of-hospital-leaders-expect-significant-financial-impact-from-medicaid-cuts-fti/">92% of hospital leaders expect significant financial impact from Medicaid cuts: FTI</a> <span class="src-name">Becker's Hospital Review</span></li>
+    
+      <li><a href="https://www.beckershospitalreview.com/healthcare-information-technology/ehrs/epics-market-share-over-the-last-5-years/">Epic’s market share over the last 5 years</a> <span class="src-name">Becker's Hospital Review</span></li>
+    
+      <li><a href="https://openai.com/index/sea-david-chen">Sea's View on the Future of Agentic Software Development with Codex</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/autoscout24">AutoScout24 scales engineering with AI-powered workflows</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/what-parameter-golf-taught-us">What Parameter Golf taught us about AI-assisted research</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/signals/research/2026q1-update">How ChatGPT adoption broadened in early 2026</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai">How enterprises are scaling AI</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/openai-campus-network-student-club-interest-form">OpenAI Campus Network: Student club interest form</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/openai-launches-the-deployment-company">OpenAI launches DeployCo to help businesses build around intelligence</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/amyfeldman/2026/05/13/isomorphic-labs-21-billion-fundraise-is-the-biggest-bet-yet-on-ai-drug-discovery/">Isomorphic Labs’ $2.1 Billion Fundraise Is The Biggest Bet Yet On AI Drug Discovery</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/innovationrx/2026/05/13/public-health-officials-believe-the-hantavirus-outbreak-is-under-control/">Public Health Officials Believe The Hantavirus Outbreak Is Under Control</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/amyfeldman/2026/05/12/billions-in-prescriptions-go-unfilled-this-startup-is-using-ai-to-fix-that/">Billions In Prescriptions Go Unfilled. This Startup Is Using AI To Fix That.</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://www.mobihealthnews.com/news/anomaly-raises-17m-expand-ai-platform-payer-intelligence">Anomaly raises $17M to expand AI platform for payer intelligence</a> <span class="src-name">MobiHealthNews</span></li>
+    
+      <li><a href="https://www.mobihealthnews.com/news/google-backed-isomorphic-labs-raises-21b-ai-drug-discovery-platform">Google-backed Isomorphic Labs raises $2.1B for AI drug discovery platform</a> <span class="src-name">MobiHealthNews</span></li>
+    
+      <li><a href="https://www.mobihealthnews.com/video/ai-accelerates-contract-data-analysis-requires-human-oversight">AI accelerates contract data analysis, but requires human oversight</a> <span class="src-name">MobiHealthNews</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOT3ZsUklnc21SUzhHLUpTSklvYzJ1UTNyUV9PRmlHM2dYUUFMWGtwRS1hRHhZdGRBc1BkNWt6M2sxQTZVNGlKd3NSa1hkTHhVNi1XUmR1ZzVlNldyU3FQYlpPWUxyaVRYVEx2Q0oxNDhtQjBZVE9LVHhicW42NmNPZ2s4UXE?oc=5">AI in MENA healthcare is not a single story - Healthcare IT News</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOUXNCU3cxZGc1cEQtcUxiUGZzY3NOTXhVaDVlTFZ6UjdpN1ZNbGhHYzlEUHVpRHVWZUswcVlXMW9GekE0a1NlUG5XdzRSMkNlYkxLMWh5LW5xU3o4YXEyMDJISFY2YUV1VG9nV0Q2ZXM1VUNMWFZuaHFyTU5uN0RXTHBvWXRUR2lqMWxLWmZtLXZzR1ExYUZyWVZzaHc?oc=5">Artificial Intelligence in Healthcare Market Revolutionizing Diagnostics and Patient Care with Forecast to 2033 - openPR.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPaEZEd0JpWDhSQ2RVNFB4NktOY0V6RUF6QkdPWGVVeG5KWm5tRjZBdU5QNkRucnJWYlhiR19ZMEZBampYTW5XLXM2N1Z6ekVLZjBlVDFQODBTZEhVd2YtSlJ2RENySk90RTlhSUlEeTNUT1RHRTdpSnNSejFlcmwwTEV3UTNJX0FyS3ZUYmRyRWhfNjlYd2d0ZlRHZGw3Vy1lY2kyLUd4c0NpU2hOMXdzUQ?oc=5">Artificial intelligence in healthcare, hospitals bid to lead the transformation - Il Sole 24 ORE</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOVkFKZ3B5a0RRTkRMVVRoWFNJRW5jSDVyOV9iWUVqYjM3STRDSm5qRjYyV3BRaXlQcGZKRW95d2hCRXJFRnJEQVlpWWpJd1RvWVBEZDVYcjlka1FDSk5URkw3WnNOWm14ZTBrUnd1VnVROWtZVEdCOEpVcXZwQmJ6UWNIejQxTkVVSDRacGZLOGRmT2RpbndlLWs5cGx5YUU?oc=5">Artificial Intelligence in Healthcare: Innovation Without Accountability? - Rising Kashmir</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOcDFqRGppN3hsbkJia29FVjVSVGVIS3VWc1VEU1VoYV9pQWxTWW9GUlNqUEM2aER1X3BMbXpvd0Vkb05CTTJOVXpjWDVMSTRzaUhPUzZ5RzhGX3F4RTRnbVlTQ3hhNE55RXhjblFhbDBYbHRZX21LRklnV3g1X2p0Uk5zV3dnTE52Q1I2U1VCOFduY2x0RHFIa2ZlMnotaG8zY0FIWW9yWEI3N05mRGc?oc=5">Women's Health AI Has No Standards—Until Now - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxNRmwzdnJEOFRad2pqRTJXR29PNGZiR29RLU81VFkwZjZydm9sZDdhRjlmZFV1dl9ud01HUXdOelRJNWVFaGdCS29qVFNXQXFIMGZkVGEzODFDSDdNQ2JBTy1zR1ZFaV9JOE5rbmxpdUZqdV96SzJROTItSXZKOG9sMXJfM3hrX2E1dlYxRXppUllwNl9GUkF0b2hjSDA3aklBZC15VGZ3WFRFbzVDb0s2TmpKS3FNTXJ6QzNYQk5wcEh0c2pNeW9GUmNESnE0VnlsYmNXTW1QTzlEQmw2WkV1SWdrRXdXNFJRSUs0?oc=5">Anthropic And Gates Foundation Sign $200 Million Deal For AI Use In Health, Education And More - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9tOUpEX1FmeEhsOHFLb1A1SnZLSjBldVBoVFJRdklTOUZBNDE3QlYyejhNN2JNMkktcW1xUTFtYmNJeE0xQmxKcHJxWlVQUTFYM0trVE5KMlJOSDdWRk96eHdEMGtlZFp4OUhycjZJZ0VXU0lyU210NA?oc=5">Inside Scale AI’s Business After Meta’s Bombshell $14 Billion Deal - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPbURPckdxUEliSFBveV9jZWJGVzA2ZVlNeDg1V2g2NGhmbXh1UEthRVc2MnBQNjlTSmFuLXRZYnljdUFYRTZZMHBPYlYxOThoV3JfaHFWSDA2b3A5OXdCcnhqbUV3SDk5RkNpVmdac3B3djhuT3pBek1XX2FjYkJXNV9ra0x4NmlTMnpIWl85UE5tTWJPamZwT0ZjLUxsUUhYNGd2QVdaakx5cm5PMjAwd3pnTXgzaFBpU2l0MVlJUl9OMmNHbkExUUVYTmF4bmc?oc=5">Nuclear Power Plants Far More Popular Than AI Data Centers For Local Areas - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPWWJqUE51TlFGSTJGVnRQWE4yejlfU1A5VTdBaWJyYTE0X3gtOVltMmJQRC1LM2Y1WU1qYmRtRXBKWVJsejBpbjlrVWpMaDVwdFlNaUxWbmtvMVdfZF9PdFNvUnlHTXZzNFh1YTJoMEVhbmx5TTdHT1JnbUhkYnNwZndVSXl4QnJ4dFpHd0F3aHhxQXRNSnhUbGJaXzRidDJWaHhBR2l4cjZWMHVDR0pTbEtBRFNYTHRaVW1vWjc2cnlSUWNJeEE?oc=5">The End Of The ERP Era? SAP Wants AI Agents To Run Your ‘Autonomous Enterprise’ - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxORXRWUzF1aUZVeVpremxVdEdjT0tFMnRfS051UlNCYnl5cWphN2F4OV8zYXl0WnNOYWJPQVpicGs1V3hrd1JOVDFNeWhkWEM5aUw1bllCUmIzdlRMajZmSUlYY3FiSFdWelZMa1BlYkloZFBkVUJxbHpNbjAtQUtzc3g5VF92NVg4OF8tUjk3MldBMF9VNkhxajhQYXczd2FVRDlEYkVzOFk5QTdZN3JpamNzZERfZXZmQmR1VWtDdE1jV0F6bGUtTA?oc=5">The AI Layoff Bill Is Coming Due, And CTOs Are Going To Pay It Twice - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxOUzVBMnE3elVJWWFYeU02cVhjOElYYzZIanJTZ3phQ1NvaWk3dGZBOF9aSTI1eWJjMnA1S2tTdUIyY3dFR1lhbEdaWFRUNmdQUFRJTXJ2bGkxb3RjZy02d2FFY2FxUGdyN25wLU9fLXV0cERRTGp0MWdvamVzblpMRUtjampneXdQVjM1YmFSejJPZGxuY2NKazUwT1BrOWtaZU10LUhoTU5tMlRILTItdml3V3VQZng2aFFBNE5UUGRTQWRPaG5wa2l6X0pWQ1lUYVJ4RGFubw?oc=5">How ​Physical AI Is Reshaping Customer Service Beyond Robots - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOUnUzb2FwUDFnS3ZkSlM0SlI0dDJ5VnhqOUMtTmhoYXFiNHpUWDRKYTR3Yi1YWm51d1czZDFtU3JGWWJTQWhyWkV2MV9pRkU5MXRwVVprc0JKUzVzQnhyX241Q3VoR0RocGtCdkhXb1ZtR3dxWWltTHgyYzFvbFpRTnlTVG5BY2NfajlQdU5pb0RaU2hEZFJ4N2p5UkFvcEhxbzVNckRHNFAzbGxESURr?oc=5">The AI Skills Paying More Than A College Degree In 2026 - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNTXdXbEUySjFiaGg2Y3NPVTcwRDU4QW00cDI3TG51MklJbVkwdlRkWjRuMDUwZHpCakcxTmpNaUdJcTJaVVdKWjVoTElDN0swdVFLS0I3N2xJU1pnLXhscGoybEtOZkFFdUdza29HNUlrcU1raThmRXBIanN1RkZkQnNDeVA3M3FGNXJpUk1SX1FEeUowODVkdjZLMTl5VXQyeWRHcW5lWjNpZm9pTzlZNHNXRlV4cEpfbmc?oc=5">Claude For Small Business Shows Where White-Collar AI Is Heading - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQcXF0Ti1GNE43c2gzVS15UTh6YWtQdk95MmwxTUlQOXJDby1FZG1FeEpOQ183aTl3ZG5raEFmMkhUeVdPYjVlNzBBVkIwVzFXeVFtZmpOZXdJTFFOVDh5Wno3MFVpbk44VGs0cldpcGx6dHVQMDNQMjZiUlFDeDBmTGU5QU1ZRFFJRi1KYW14NHR0aFhLRWVIRXdQOUVCLVNRMGFsWi1TSzFJX0dCbHNtN1M4bUR4WmtsT1E?oc=5">This Startup’s AI Found Critical Vulnerabilities That Anthropic’s Mythos Missed - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPaHE0c3ZRbUhSaHlfdWNueTRVLUdfNWQwX1FYS1lzelh6OXlPdHpiaUxvTHg1d3dUWFhEZV9sREtUMmR0M1BQTTBYTnR3dUdMdzNUWTM0c2ZYaEZDSERWdWRrazAzTUtLZDFDWFR4R2JfOExyT3p1Z1lOM2toMGUwZUlEV0h1XzFPYnNtUEFxa2gtbzcyd2pReVI1MXgzclIwWWF3UF9aNWRoZkV3TWkzYXppX19MZ3ZoTG5yYWt5U3FQUkdP?oc=5">The AI Governance Talent Gap Is Smaller Than It Looks - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQUEtSUEx4cnpESDh1SEN0b3Jaamh5RzctX1Zwc3REOTBBQWgyTXhOamJURWdnR1BJRXJ4bEctVzY5dE90Z2VHLWM4WGZHNjlSWG12MDFoa1BZbkdSZUYwOTFEZE8wYzFhVHZYSFo4WjFaS05heWRlM0QwMXd2N1lPamNrbVBuQmJQMDhUb0NndzJjZ0J3RjJ4LWh2dXhaM2JDa1NOc25IOUNsZi03?oc=5">Ukraine’s AI Drones Are Hunting Russian Supply Lines - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxNcWQxUDZZdENsaTFJZTVlb1lqVkFXM0x6VjdnZXJMZVVreGNZRjdheTZacjdjSGtiNHMzV0dzanBLbkJUdVVPZzRlZXEwbXlwRjhYODJfS2tqclhPd0lKWi1CbUtyUEdaSEhZbHhDMTE1bTJ2NlZycDFlWE1nVHBlSTdwejdxdi1jMHJNNTYzeVl0Nm80R3JieFFfWHJTOXJWUGJYWS1heWxwaGVZZGdYZXI1UldMTk1OOWo1YmI1TXpkVWNlZmc?oc=5">Nvidia Hits $5.5 Trillion For First Time As AI Darling Jumps Another 3% - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMC1KaWlyUm4zbkxOX2hSa25YdnFOWXB5djFCTXd6cHF5aFhBdmpKeEh1VXpWWGk0eWdHVHE3RzZNWXI3eE9VampZby02cFdZckJCWUpkYlZ5WWppX2xKVTgzdmJ2ZE5yUGpfQjJRZ0N2UFVoRVo5WS02MmoySHVZZ2ZzZUZSNXJORTBDSl9ISHZNOTJ4eUZpZVN0Ul9YOWhPYnN0UWZ5X1lPbUdDbEl5ZG0wanR0d0FlTHdlSldJMi03dFRUNWN1VTIydVVsMXpiNVRER2JqMXJRZw?oc=5">xAI Cofounder Igor Babuschkin In Talks To Raise Up To $1 Billion For A New AI Startup - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQckd4dzRFWkd4V2JQWm1meGticU5ISTJnLW96bkE3RE9fdnFOSmlQcVZBZndLSkpCYXVTMzJHMXBLN3VHU2hoeUNqME9hNEEwdENnMmF3dXNzMGF1dHZRaEFpYkozUkNNRG5YWFpDVkR0UmdMc1BiU1RmUTVvc2NBNHlWQVRVY0lnNGlJNmpLS3FSeHc5RHlnOXpaWHhYLW5XRXU5Rm9CXzVuSUpfVmFUQzVXLUFrc2lqYThNa3IxUjFWV0FFc0pSOW5OeTlqZFh6cURXeUh1T3A?oc=5">AI In Healthcare Marketing: Moving From Automation To Intelligent Engagement - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOZWZ4cnR3Um1xbjdOVGdpa1dBYVJZSGNXUDQ0Nm5OcnRtYzB0NG9HdnFXWnNGTHBsZnE1X3NWOF9LVF9hb3RoZ0hEY25panRVdWxsSzBwSGdxR0xtd29UREp1MmpvUlVXUE9pRkRQWmY2V1BKNTJfYlRsaUFnWlRRaEhPakN1ZnhVLWdtYi1kamhBdGk2YXRQWV80SXhzTzI5TXc?oc=5">Will AI in Healthcare Reduce Burnout or Redesign the Job Altogether - Forbes Councils</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxQWFNzc29PSGpzSllRZjgzcEJvTHNsSUYtZU5ZM3BqVlF3ZGVjcEJaNWJnYkROdUlmUnc5RlZrYzRNSTV3cXRhTmdvbmdsOXozYUdmaE1ZdTM5bW9NWVpJaHBpSVJDdE5RdS16SXR2bXVQb1pqZFMyN0RMUEgtOG84cmZOMHBWNnFVMURtVmtWNG9HQnMwSXpsN0owckpfejhxZTVWQVNlQ0F5ajdidjhxRXlaY3FKSm1vQ2hrdlZydHBRS2RmUEhmQTNqanZTTzZBRnFUYmI3czR4OWloTF9HWnpWS0hrX1I0MWZ3?oc=5">Healthcare's Quiet Revolution: Why The Industry That Resists Everything Is Finally Embracing AI - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOTmRzU2pUYTAxMFU1cDl4Y09RMnp5bXpvRTVFczNaOUJoNjlhaHAzeDRza1NKX2FEYzRrOVNYMDRWUjJPWHNVYUlnTkdzMThRT1A3UzdMX19rNXBlYmFJd3NPSWQ1ekRvOWpFU2NZYWdIbFI5TnpzYUJIb0MwZi13Ny05WEpmUERpSWV1bmUwY0psRlA2czVQWUtOWHdlMlpKRU5pWEt6YjF4OXctNmx2RGZSLWdNLVVEYTVGR3V3QW9vRkRmR09CVTVDcThUY1hqOXM3YS12X2xWTUJfZ1FSc3N5MXY?oc=5">When your AI agent goes off script: What Moffitt Cancer Center caught early - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPQkxsWkxEdE1MdkoyYTFJNjRDbHJDZ2ZZd19ZTTViOW9zVy04VlhQczVkWnJBNkM4MjdLV0xzXzVaVTh2ZmZldGJYSk1PQ1kxNk1xVlNicktPUG5mT21MX0ZTUzFoZDNaQmpnbHNGcHBqNWJocFJxREhHUXRnQ3pZNlRmeWtMN2ZTYnAySUduVkZUeUlwNmE3TUZMcU9Cd0J3?oc=5">State of AI in Driving Better Patient Care Outcomes - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxNU2gwSVZBbGU2djFpaXFrUFlucnNSWElXOXpnNUZoRHVPdDR0ZGRoS0xYMmtxNFRsenNrbXB3SFBLemcybGQwUGRLX1VKTHVxSTBpaTZad1RoUmh6TTJWb3p3LW1kMTd2c0Y4WFMwMWU4eWNMdVJOcVZtTTJha1hqVnNkamNEQXJkMWloODZDSTB0YnVoNi1tUlZFc1JZXzJTNnJMMW9yR3pZS3BjeU4wcFdUZU1qZHFiVzFaYmdPUm1zWkx6cmtKelBIZmFyQUFjN2liNDlMR1RwOUhLSFFVa25xeXBGd3FaN0x3NkE1QW55WUxy?oc=5">‘It’s no longer a theory. It’s here’: Tampa General’s revenue cycle chief on the age of AI agents - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTms2dWJmLWxKNFV0MVNiNUdJLW1ISWhrTS12djAyaXlLbnNEdHhEUTZ5QjI1ZTFNaFBmZVhnY2phalpUUnFFbXJjaF9MY2J4cVVZbmdyR3JIXzM0Sk1FY3lLNGxZMU1KVUhKYlVpSWFudEl4OUNfYldXV2VWZGVKdlk4cmxYZ19uSDVDbndRTUFsM0xlekRLVzlYaGQyWklHaU9LQnpodFR6QQ?oc=5">Pediatric radiology leaders launch AI brain tumor dataset - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxObDJ6bVdFaV83cDQtY3N3dVJVMDJlVlI2czhabkZWWU55bHZ6TDVZbHpOaC15T01oSGUyRTNzdWlUUV9mV1d5Uzh0bVJtNzNnVm9GRHhsVVktTlNRTG1ra0FXWWR0MF8wcTRkTFNOcmNaNnBuX1lDTGMtM1NTNGRXYTNhX3JZb0Rza0pXdUM4RmhKSlMtUlJ2R0c5eEp0cnFzQU1vanNTUmdjemJ5WjF0WmZ5THlXVVpLTVNLZFlpMGJsRUJlZG8xOWVLdmY?oc=5">How health systems can validate ROI and scale ambient AI - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUUI0U0w0dFE3SkhwV01pVVVLMV81SlBab0JaSTU2SW1nQW1KUHlCWlc2MkE1a05nR2EyUUpybEEtampEUlNjd29jZzc1SkJkeEk0WmVCZlhTdG5PdlRVN01KTlBrVlhvZ1hfSU9LTi1Jb1dERzVOWWpXYk5PVjZMZXRPTC1hSzZkRW52b2s2UEZObmhlNGFuOEhlbVdEWVNVY2xqdmtIbUlEa3FjRG0yMUh0enA1T09VQXlJRGczaWw?oc=5">Alda Mizaku, Chief AI Officer at Children’s National Hospital - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxPeU03a0lpUEo5enZFMzNsbnhXdy13YVZyZWJTWFA1Z1BlWkNaWmRLd2JGRkxsZnF0cjV4WC1pR0h1UVlJNnhkbHBYQjNIdjRsWnVtNHAxaEY2bmh4Tl9SUDRpLWQtendOQmlTZDgtaWdMSWZkd3lzUHB3MVhyajlYc21aRHFqR09EMXFVUk1Tb2luXzlHcVJrLVhQZGk0R2NlWFI5VDY0S29acjlJRkFyaGlXeUwyY2JSaTgwWUJzM3N4MUo3NXBwajZ0ZDZqeWUzcWc2MXpnUURSR3Z2SmJWWEw0RC0xTUJZY0ktRnAwNA?oc=5">Shadow AI: What health system CMIOs say about governing the ungovernable - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNZndrX2REaEtySHJtd0RzbnkxaXo1NTg2UlllWUl1dEVGUlU2NnVxVU50b0NyVUpIbWNmM3pRS3o1WG1vZW5OUVhMMml6NWhMeUI1VXFscDZtRnpDa19xNkxBdXZ0bEVDeTdMYWVKelZuOFhVWUhsY3c2VVdJWHZGak9FVXI3ZkJ4M05JR2RURFR0STlXWkNnekFuOHNONTh0RVo3dU93RTFoME1IdldSUVk0RHJsLTEwMFhNYzM3ZmVNcGNIWUZBR0lmX0JqLXFoZFVEUS1jOXUxZE8xSjJ0Yg?oc=5">How AI is turning UnitedHealth, CVS and Elevance into software companies - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQLVJzWHlRcU5pNkFmakFSUE1SMkpzYlQxdHdjNUFjdWp2WExVQnR5N3dnU29OMnlmMEVibGJwOEdpR0tvQlFJOTFtQkZYWTQwUnlYMWsyRFlJSTI0TEN2aFVEdEo3UHVTWXQ2ck9LZF9RTUNpSWZpNGxMX3MxUEFEQW1hNld4Y0c4QWpzREpxell0ZXJxMS1QeUR4MENSclhtbWlIVkVKZmJyWFY3aXdNaElpVlZhTGlNZ1B6RFZR?oc=5">AI may ease ED overcrowding: Mayo Clinic study - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWnJfQjlhbnJhQUdZNG14ZE5mcVZDX0lJNk5BalF1c1FEY0xKSUhjLUlwb1Z0bDRxUDRGeDlzT0RzZ1dWS05DcDNRVERxNDdwOEdDb1o5Mm01T2syTEdMRkFjY3o2V3JLQ2pSaGdOaVV1aE8zRjFNbGY4OWlpUUxzZjhqbEJ1Q2JCRXUzSVgwVHdkTVl2bnAwT0s5NS03WE5kVzFRN0llMEhOV1lqSEhMaWoxUkxfMlJDYi1DYklIYllHa1pEbk02YlpKMUJ0a0pZbzRVZTlwR2tpUzF6WnJFbmxQQnJoZWdK?oc=5">From skeptic to AI chief: How University of Utah Health is becoming AI-forward - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUEVhWklTVlpfa1RnYlBhVnRTX1RvOGMzazNTTWRCQ0FjYm92TTZqOHFnSjhNeEtfd3hpZVhENVk0TW1Yb0R4TnV2VERRVlZTakJWSjdFZzVNUEJ3NTRtRTZpU0RhdmlqZ29aVWRjaHhpMzJXUDhDM2RyRGJnSmc2ZjN2czQ0MjJuMTJvRTY1YW9GUnd5bzR5ZVgtUXVzcGp5NUx3S0NINlNpN09EUnJoSkVGY29waXZBUVp5LUdIdlRmSlc4YTVTR2Y4UEYwb1hoM3c?oc=5">Staffing, stewardship and AI: 5 resources for healthcare leaders - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQb3R1S01xRENwb2N3SFg5ekc4YzB6M2NET1VFZEZEa0E2TzUxekRfZ2ZrMGFRdVFvTjFucmVpNnVEWDVGY2hPRi1YTEdNUzNYOGEzbDR6UjF5aGljY3piNGI3dlV6cTRIaEY2V212RGRtS1g3SmVWcXY1RmxqZUhqYVdwbnlMWkUyamRvNHhRUEFJRTB1VksycVMzUDRqREJsQ3U5NVpBSlR0NlpDZEg2MGp1YkZucHhfQWdueElhWVdaQQ?oc=5">Nurses believe AI will improve patient care, but only 41% use it: Report - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSGk2bnVWcEl3MFk1WWxKV2xZZ25NRlJ6UWpnRGJJN1NpWVZXZHBteklLQzMtdG5CSnVXZlJrcFNxRzI5STE5TDZFeG44OWxlaTl4WHFlNHYyY2NsRWdnQ3FqOGJrWUpUVkNHZ0Q5Z3lqOFJwbFFMTnE2bVJ2Tk5zVGVIcUZyUG1wMFpIM2V1SXhhNzN6WU9hMTNlQnRNc1diVjhXRHpKbnV3WXV2bElldFJvaXNualR0SEkzVmpMRmk5T29uVnBBRVFmMVdDUDdER3c?oc=5">Stanford Health Care surpasses 1M notes with ambient AI tool - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxPeHhZTWwyTXBveTF3MVJfNG5rS3AwamlCMVNTbHd4Q09Fc1UxNEZuRmlUclhqNFdYd3F0bkVmRGI1elljeWJzUkp3aG9pdlhRcVdyZGNGcHQxSVZoWkF5cDdvbWhyNWIzaEpkREJCLTRUNF9JbFFTVVhpZk5aZkNobmtpR3d0ZC1SY1BkLXoyTHV6cUh3ckRtTndoUXE1bm5Xa3ZybnpuSVNwdWdYc2RXUEI0NnNWM2VnTnljdjlwcmdHOEdPUDdob25ZcmJRb3hoU1A4bDl3?oc=5">Vanderbilt Health rolls out 1st patient-facing AI tool at scale - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQYWMtNlBNbjkwb1hRWVU1dzBZcDVzM29DOHdWTWZuSW8yNWJ0SVVVSU1KRXFoblMyV3ZVUmVVWHJfdUxrNmQtWEFCS1hsU2dTdHZoM2hwNUpUTUt6bHdPX2NrZklmMExveTBzeU4wMDJ4ZnhiOW9MZ0djeTlGTmRLY2xxYTc3SkhRY0dxOWNSRld6OVF5SmpleVJMSjhxeXdYSXliWVlQY3F4ZmJ2dFJLTG42VlU?oc=5">Penn Medicine expects $105M ROI from AI - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVG12d05WSEY5MUwzOHEyMF9oZjE1eDFRYkVXaGk2MV9mRFBObEF2Vk5MSThnTl9SdFJ4dGszejc3RE5tdnEzWkt5MG9XUExhQXd0T3ViRXlOdHRwNjZYVWNUV2Z5REM2Wjk1VHdIMlRzTzNNRjhraVE3OHR6RUlMOWc2NHdSMGtYQXlKNnM5VEpkRzlYbE5lcnQ1aGkxc3ZyUEYwWS03X2YzZ2dJT1RoNWlyeldrYS1TY2tvcWMxaEpYRHExcmQ0MWx2empacFYwODRWdXFn?oc=5">Ambient AI scales across health systems as burnout data emerges - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQczVqUzNzcEpHYXpwRkxOWkE5RUF6emNUQ0ZhMUZrSFNzdmNfXzdWT1VTY1lOVW5VcUNFTGZLc0d0S2c5Z0g5NkZQS25xM2VoTHgxeWpaVVZCYk45T1lZd01PZlZmMF9KTmpIcWdMcTgwTERoVjFvOEo2T1JZenBxcDdXUXFJUWxONVdyS3FsY19peXFGc3ZyZTliTXdTeUM4OWFLaG5XX0R1UmVWb0NXQkJ4N3lKTFI4dnBsX1lTWG1SRFBrVkhtUg?oc=5">2 execs, 5 physicians changed Baystate CEO’s mind on AI - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNZkppMHM5U2V2SnQ2aVFDRFpnM21HWGRRWUNiYk9tZVFwYWZhSmVUZjctZ3J5aGZJVDd4MnVjQ2JNUlJlVnZvdzVhMmZWcW5ZdDlGeDg1amlOTHdCd1RUZVJyV0NUVWtDTGVsVHMxajd0cmJXMnItamJkQTZzV3FXU1B3LWIxYThiem0wT2tzcTdxcE1USHhJOXl2RkNoWTZ2Tm1zU1dLRVBEeTNUNjlmdFQ4S25GUnc?oc=5">FDA clears 1st AI sepsis monitoring tool - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxPNXpycHRQR04yay1ubzdUQnFUNFdzNHNrcnZfTy1GcUpHVTBmbXZoV2tkdlZHNXhOY0ZrOUFrMnB1QXVIaHI0VmZ1UjVVVXEzNHlFTFlZY040TFFqOFU2UkpTR1JFUVh6QUZIeHJqbmJSWG1LMkgtODBRa2N1cXhtSktYV1FTeTJyQ0dNN3RBeTN2REpyVnpGWFE4WEZYZWhzRS01SGlDSmI4LVpGdUtydGUxeHZXT2R6cnBpQzZWRC14b0h5NDNmTzhGTlc5NEdIZHpWOWNqTV9CekxM?oc=5">AI struggles with basic data tasks for hospital administrators: Study - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQM0tTbkloeTJfaWxPeU1RbzhWX2Z0LUppZjJaUkVpTjNTdHYwdFdtMklJV05mamt6UENaSUZjWmRCd3lDZExOZnJldzJPaVVLT00xZ2FOdWRQNzBRWmFlampXQW5YMlVWNXJsUXNVdHc0em00dFk2WTlPWnN6dFBjb2lCbmFIaWFFbmNIRA?oc=5">Artificial Intelligence Archives - Page 114 of 114 - Becker's Hospital Review | Healthcare News & Analysis - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNd2NtMUh0eWFwTFNXNzlEX2dSdnQyOUZyeGZUM18zVmJpbXdPcG9Oc082cHJvbEhhMlNaMllldGdFREoyVGtwOTRlVF9QbUxDOVZ6ODltYnJIcmFzVlRKQzl5R2dNUkV3dW5MRmlBeUd6M3VhU0xYLTViakpwRWlfNUI5VWFsZ2o4NjRONXVzTzBScmdDc3drREkwY3JSWXVMOUxab0JDMlJSNlVydldjeFVMN0dLX09pSEtKRDg5XzlvemYwLTRxdFFDNk1LZHZxWDlhSA?oc=5">Advocate Health speeds up prior authorizations with AI: 5 notes - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1UT25PT2ZVemEyNW5mY0RnYjlHa0NhUGw4cVlZWUNaaDdySnRMMXZXZVJMcHRKN25kRzBsVzNINFhUSHhmTGI4MU5JUDEtUVFLcEktM1VvbUZCc1RKUkhwcTFWY3gyWEdQMGZN?oc=5">Anthropic forms $200 million partnership with the Gates Foundation - Anthropic</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPOElJS0dZbnhTQUg1V2UtZjlnVFF4OUpoR1RPQlJlendoLTlrSnJhbG1xNWZXRlBuYVItVGhPQXpJSFM3OFdKdmlxckpkNDRyVmdSNEJkT1c0ZUtWX0JEaThKbm1EMlVnNUNBdWRmMWpPOFVvSXJDYUNER2g1UmpFWjF6MWRnZVdTYkVhM0FHM1NPM0lodmVKY3I1cjBUa3lkZE1RczhaX0pja21QM1VVSXRYV1dET0ZzQkVGYlFFTWxucEwxVHRvWm1JNGs?oc=5">Fitbit users may soon get AI-integrated, customised coaching through Google Health - MSN</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQV2N5UUhIdjhrd0JsaHBhV2JLaDlIMU9CdWJHaGVhY2J4a0tOUDJBZ2FZOWJnTXlZZnh4YkJjZUdBVWF2TDJfTS1kcGdPeXZDMVNENk9RVVFTS0lNUWQyaEExcDhDMklPenZheHM1RW44bTBtdEVpVEhlRU9mc3hhUUc1YmY3YXQ2NmN2V29HNDZ2SFRza2NUU1RXTW9CWmc1T3ktWDFob1R6SU5FRmVJbHNtZEo1LXlaRkduOUZXUVNJek1OODMyMldJQnc?oc=5">Google Announces Shift from Fitbit to Google Health: AI Health Coach Debuts in India - Gizbot</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNWtaTUZaMmtoWExWZGhPZmpobDdxNmxnT0xjZ3ZDa3Y2RFhENW1TTmVrYXhoUzVMTXZjbWxzbFhSb0dIcDREU1dQVG50RV92WlFRTkM0VHVYYlltMERjdEpFOXBmdUZpby1HMG1CR01WQUNmaWdxUjlJcDdyQVRSRUJDMVBRUmRyVE42LWxaVEZxQ3dlOThYOHdzaFB4R05mRnNFSjcxUnd5MzBTZzFURXlKOXBrc2FnN21kanJMbGNBRTN1TklUSFRXNkhDRkdibmdj?oc=5">Doximity Partners with Aledade to Bring Clinical AI to Value-Based Care Settings - Business Wire</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPSXhvaVJoVlpRdTJrTE5DalpTcFBQTm5yakNDNFNDTUxBZF9Kb3hCQzdsQVdGYUpZY0dYVjREVjFkNUh1bFAxcjZrYkZkV0hpR3pwaTVJX1QxREZ0S2t6OUtScHVjVHpuN2hnTjM2c3QyTzBTWTZOZ0h1OW1TajI0U1VIQ1VXTVVpbWM3SHFWUl9XVlB4Wk53VzVtMFh4SXRIa0tBUUhycXVnbG8wTnFhMXQxZnZwV2M?oc=5">AI takes on surgeons' paperwork in Auddia's Influence Healthcare push - Stock Titan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxQRjJhYThXZjdSTkxuT2UwcHFNODBJRGg4czZHd1QtYjU4SDNDa21CVkR3cmxSaV9kQ1dUMjdnQ2dFa3QwcGc0b0llbW5PMEhMYkZBckdjTEE4YTI1VHBtZXMzazJ2SHpPX0pwSXdSYS1SQy1XWEZPWjgzSmJUZmxqSllHRVlQblptVk1GWDdLUWxrelF3UUR1Z2cxZVVNX0JjVWF1MExtemJKSmdlM0MtZWNndkcxN1dZTnB5MWtFbTZuMWpPVHpFUkFydGY0UWd6cXNHRUpJcC1HajNUQkgxc3Y1anFWWVI2RHF4ak5rWU5xRXMtdlhSNHB1TTYyblJmRVY5Y0Izc1NoeEXSAZACQVVfeXFMTXFieEpOQkc4UjdLZnp3djZEQjZTWmZVZHVhVDE3ZlYtU3FyNEozWnZnUC1yc0RUMkxELTN6Z0EtZ1JEX3BNaktRd2I0d2N1QXRFanFzb3BLOHZPVEtBZXp1TnFoSW1QNGdYTGl4Rjl5bkJsd0VEMlFiSXJpNlV5WnNaZjYyYjh4R0hfemp5RUx1U0ZwaDQ1ajJ0TFNhVTRLaFdPUzlNMHJOX2VaM3JTWmhpUjU5Tk1KNVQzRENKYTBFcm1aV085enZCOGVNWU9BUkhHOFpRUW9OeC1QdGtzMWJYc3ZPRDNMUW1aQXV3cEV1cktIdzgtaXgtZ19odWFITEd4WFAwM1o0a1AwRUh3QWU?oc=5">Auddia Showcases Influence Healthcare as AI-Driven, High-Value Specialty Care Platform Ahead of S-4 Filing - The Manila Times</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZGxBMTRIalVqemZSdVZ1VDdTN2JlTklqYkY4RF9jS3hCMVdibWFud2E1Qy12aXdhN2ViaVRkMjhnSUR4NGk2alNfSDFmeHhWZVlNd2lMU0FVYVZXVWN4M05mQXdSMnJldTVGdHRlWWNtRWFKd2NaRDFJNndpTjN6RDVFWURLcHllX2RQRllQcWVEMnlIZldSbWVHWThGS200QmVxaXhSWGJMM2dpRjZMTzRCb2d5elRHNXhTTHVZamJCcUk?oc=5">‘Insatiable appetite’ for AI: Maven usage surged for strikes on Iran, Pentagon AI chief says - Breaking Defense</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaGdMZzMwRGQydGNzbVhWaXNTVHdYMnZHVklLMm85Szk1ZjB2d3NHTlFjb242RGxKd3otakRtWjZuMl91ZExGZTl2Sk1PenlidHhLb2hscjFON21pengydjRHZGdSNWVjV3lSV2R3T1VCMlNQN0pXc09pZG1FRENQUFVTQ2VHRVhlQTF2RlF4YWlKcDZOMjlHOURNazlyRTdncko2SVZ6Vk9WX0tNUm9vcWplcm52UV9ZSU5ySnZSMnQ?oc=5">Generative AI Such As ChatGPT Can Help Cope With Impulse Control Issues - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPTHRDUVc5X0kyMzhZb05TUncwamwtclI0c0VmYmpuYWFVZ19LenFQWjNxUGZvaW4xTHRqalo4T0ZXbkc2V3BublE5bVFDWldGSjRkaVVVenBTWXhXLUMwQm16MHJ1cnNyaFpUNVp0RV82SFQzSjVlT0ZTVjdDWk0xOXo5VkRlang4ZDBjdXdRTFVFZ3M?oc=5">PE seeks pharmaceutical and life sciences consulting firms: 7 deals - pehub.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNbmt6ODItSGxCS191UkRrRnR2T2pzSG5ZVm44dnFYcTJ0NmtKWDRic1BhVFhXamhtR2JiNGQ1WUZlc3hTd3dTN056SUlNX2twaEZtY1RNQ1JJYU5QNlRFVHRHRXQxLXBYSVBKeWlLZGRwb2FCUEpWbkhmbXhWRjFzN0d3STNNVlUya0R6am85TDAwazZsMmpKdTRkbDhLaEFGY3dibWJNTkJEQ0Y2YWpMdThWd1hTcWdmUG93SFNoZFZaWm50cXh0M1lfUDc5dnIxdHRDV2syZGNJRjhTWnBhTzBtVmJKeDA5UEE?oc=5">Inside Optum: News, stories and innovations that matter - Optum</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNbUV0ZEJDN3JiN0dDQndMT1RrN2ZXZXZNeDhEc1JzTmFsOUlxU3hlZlh5aVU2OWhGSldxSFNob2lIZVRySlNtZzRQVVl4Ui1UVjBZbkJrU1lCLWFPWTg4ZnZfWmVHd3FWUmVsSF8zZXpkMGNfUGZKbGp0V2dKWlJfcG9raGdiT3lZd2pEQUZDZjY3b0hG?oc=5">GP IT supplier Optum acquired by US equity firm TPG - Home | Digital Health</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQQkxHdUlyUkFZWm0zQWViRU9KTm5BZk1xbDlPdDRYUjZvbzFROUtNRVRsS0JreS1GaEpVLXJGMWUwclRmSGJYVTNJbHlUTzlCamdzWFQ5djZCVVRvcEd1OWJnZUF2eXY5b2dmTGwyZWlSVF84QzJzbEdjVDY0bWVUeU9vZTdSMXR2Z0M2Zk5xOXZlSkdGU0tHSmp3amNVdW93bkEya0hNNVpvdGtCX1ZpanJmN1JDaHZtZ0FwRQ?oc=5">Healthcare AI Acquisition (HAIUF) adds $196,919 loan and extends notes to 2026 - Stock Titan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5jb2hHcTZaNFdON21pRU92TkNaR0dTYl9uOHVQMk01d1ZNVkxCenA1aDl1Q3F0ZFU2QzFYT0s4ZGUtU0x5Yk9yUG9VQkdPekh6dWZqVFNMVVo?oc=5">HAIUF SEC Filings - Healthcare Ai Acquisition Corp. 10-K, 10-Q, 8-K Forms - Stock Titan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijAJBVV95cUxPVUx5Z2REeF9feVVrcWdBem5aYUNTWmc4c1M3cXV5Z3JQWlpVb3lRVnBDT3poUUo2UDNiTXVkM1hST1J6TVB1LVNvWHF4YjlqMkZhaHc4cTd0ek55eElNN1dIZ1B6cEhKMUdUZWh3WVpRT25Tb3NkZzU1eW1iN1ExdlN3ZWN5dEZSdmJ1LW5GZVZtOGZfYURzZGNDMTBRRHA3S0o1Y2JTRWtDcWlObl9vamk0MFZYVkFjMjg3N052T0xscnRueW50UlNESExqRmlKZUJHMzdQNlh5cUNCOGJ2YzluWlp4YWRMbXNUQVVGVnM3dVA0LWU5WFdQNWVTMUFIZ3Z1MUJTWVVVdDAw0gGSAkFVX3lxTE5WTU9RRTBBbFZETFliVjU1aWhselh6YkZLdEMxNERPejhKOFBIME4tZXh3cXhUNk1hU0g5R2ZwdGgyQVpSeWdEUVNJNWQtdjBMc2kxcHN5NkJVZ2U0TENOU29EU2Y5RWtWejVQdUNvTllRbk10QVJYbEh5S2FLQnFFRW1EZ0hLYlRfRTBTbUJmRy1VRy1RZ2Jiblo4SHdZUTV2dUdxNGlqdDNmVUJadno1NWQtZ3B2dXh3VWRjOHZKeUV3WTVwS2tEa2RDdWlPVGl4bWxfNHZZMDdCZTN2cDFoTUVjaTlmdTJ6YmpUSC1hSERmUzNvSUc2X01HTmRoY0R3Zmt3U09xLW5pRDhZb2xTUnc?oc=5">Auddia Submits S-4 for Merger with Thramann Holdings, Establishing McCarthy Finney as a Unified AI Platform - The Manila Times</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE05WUlRckJNNUVsWjl2ZmlBUVdLLVp1amtYcU4xY1VtMFF6RzcyNUNjMDBDT3E2S1dwV0J5QThWalBSZVR4UzNyRkJGSmRBel8zb3hoVGVlczVPamlsbVRydTU2Q2NVcVNvT2xNVEF4dVg5VnRXOGc?oc=5">Colorado Legislature Again Amends Landmark AI Law - EPIC – Electronic Privacy Information Center</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOX1ZQMnI2a3Q2SFI1ZmY1Vmtyd0tJQmtZeFVrcDkxR1BZTG9CTVZHY2VWZHZUcU1ndHpvTms2R1M3MXhHNlNudHgwc2owSmx2bXh0ajN1ejQtbXROZy04R1FSSXNwdjFGdDZ4VUFVbElXTmRoNUlVQ0RhRkNlT1FubU1teWZkMFNTRFB6RXM1elFoSWYxXzVCYXMyODVaQmtTMHY0WGwwT280SVoxWHJnM2pfbU84eE1teEx0YmhLUDg1NnJh?oc=5">AI tool has ‘saved a lot of aircraft’ in Epic Fury, AFSOC chief says - Military Times</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBSdUhDV3M5cWd4OEVmNzNHVjRuSV9MM2R1MzlWUjB4WGYzMnJSUWgwclJubzVTX05ZWFJuU29sMTM2SUNuSEYtb2s2SERsNnFCRzgwMUdpWHBwZ05PcnU5R2MwdlF6S09DUFJ2RXU3Zw?oc=5">EPIC AI Chip R&D Alliance Might Change The Case For Investing In Applied Materials (AMAT) - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxOUG82ekJ6NlA5TnVHZnR5RkVuZmtQWlNYQ01kX2hHZ0puNFFjMUtnT3JJVWNmTjVxckkyNFJrZVVJMlRfa3NwbnRtQkt5Qi15VUVkTmJuQjRNdl9hNk9Oa1I2SXVNMEFXRE5jNUNjd3ZaSHZoaXNZSW5PVVdOWFR6V29pREhSSGtCWjVOZFplN3REbk5JVHlWQVpzUWxXV0FUaDc4VGpacVJRNmtJOFJIblNNSWFmTndBNTB2QTVCMXUtUVVNSUVGakxtV1pkbHdoc3FEeUhSXzZid2QxcFozUWdmLVlIZmIxeVR3bnFKSGdPODY5VEE?oc=5">Labcorp and Epic Expand Collaboration to Advance Diagnostic Integration across Hospitals and Health Systems - PR Newswire</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQSnl1QkFMNlJqckwta3hGMFlrNDVEWUdETUVDeThtSWFReVJoZTZRZXpPQVd2VERjOFdka3FadjNaQUJSUXg4LUgzcHZOR3o4Unh4TFdYQmZCZTR0RGVDaGNPaVg2TW94NXB5eGVrVXRrNmdEMmFWSVhDMnlVNnEtenJfSDRSTE5fb2U3WURNbkR3VWZFSVVYVnRXa18tWjA?oc=5">Epic Games Veteran Is Reportedly Building AI-Heavy Game Engine - 80 Level</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPNlF3ZW9XV1VsNDlqVmlTTllieFkyMTl4RER6cUNxOUstOUdPLTVvNDhrcTBKdEZkaXhlUzlVSE1EeXhZd3g1YzZfVFFKNnEycFcwU3g2NWdTZVFLSGNrX1dNLXFGakdTSWtyOTZlZnlqLUFkODNfZDRwYTNWc2VUa0VWbDFZUmRVREhOdXJjSkFuelhSWkJnTEMyc25fQ1dKcmdzU1hacklrZ3QtampGOXFpSlUxS0x5UHRvWmd3?oc=5">MMO Business Roundup: Forza Horizon 6 megabans, Epic’s AI tools, and Steam Machine rumors - Massively Overpowered</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOYzg2ZjZ5TjJLNWZaS1QtY1VxaWRoQXJoOHVLSGRWZUQ4dkZQMGZVNGhORk9CdjlzTURZbTVyQjBlU0pTeFRaMHVyTDdBd0JKVjQ2ejVBNFNBSWplampVcGc1LTFqSVhiaWJjME1QdklfYjh1YlFFckFtY3J2ZzBfN2pmSDFpMllFdWk0VE5aVWV4RUtSSUt6cG1UdWN1VTQxYUhRU0RWQ2I2YU13VXJXU0tfdUZDSl9xSnNOVTlUNGJGN2dva0I4VDVSYjBjZ9IB0wFBVV95cUxQaHpybzZicVFhUGtTb2hTSGJlUU1YSzlSNkpEVkNjLWFoSmRyM3BkdFNhS0lVdmpxR2Q2TVJCa1hsd0dvODE2V3BnNmxka0NrOG04RW5WVTQtbjE2SzY3ZjVPMHZLYlphWWxkU2dMWVFFcnlaTDd2N1ZQMHc3Tml3WWJSQUp3RE9tZ2dhQVVHZ1hTdzRhMklna09jbzc2Rkl6SnJmQzgtRW5LdUVpUlBJYmpvMnNrSjh5V0dDd2ZFSnZ4ZExwTkxxN1RweEZBaUlTenBB?oc=5">Evaluating Labcorp Holdings (LH) After Expanded Epic Partnership And An 18% Estimated Valuation Gap - simplywall.st</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNTzBiV2d0WWVXLWczdXdEZUw1bXN0N0ZIeVJMdVJGNDNPTE5NVmxWcE5ycVVpUm00cVFNNWJEMnpzd2JldmNPM2o0SmgxRTNfZkNFOUlveGdsVHY3NjJIeU9HbGxld2JicHctcGh0Xy10aWdFTENSZU9kcTZ4UEZzZ3pnSWtQdUl3MkE?oc=5">Epic Says AI Won’t Replace Jobs, But Increase Efficiency - Insider Gaming</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOSWZBbzVXdDhqcU9BaWtTQlc0WTQ0V3VUbG5hWlQxNGFMVHFyaEVuMHMybmJveW42MGRsQzgzRFZQWUo5c3A2NUFBZVBSNUFBTFVZVjVCVExPX2p5SnlhMkVDMlFIcWE2eEhJUVpIY2VlOGxFMTNwTHJsRUdKSGtRN3IwN180ckZxUVdiQVJVUE5kcXdaZjNVZzBuTXVwbWdYdTRxRlptX3R4eHZtVXNiZEE2akMwN1U?oc=5">Applied Materials and TSMC Partner at the EPIC Center to Accelerate AI Scaling - HPCwire</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxONWFUMGo5NHBGM1RtTk9yNUc2am1rN25BUzBNX1d6bUV2THdma0liaTVrYjJ0QWJGdXc2TEpPb2RxUmFWM0QwNmhmYkFJTnNwUFI4SEtfeGUxaV9tdzFjenVpNno5X3hGRWk0aHdzSDhnSFE2X1VJeXZ2YmYxSmQzcGNfZnVaa2NjNkNFV3B3aDF2Wkp4OGM3ZlRHZm1wa0NNTHBKeGdxUFAyS09jRW83SEptSWthR2M?oc=5">Labcorp expands Epic integration for diagnostic testing By Investing.com - Investing.com Australia</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxNTWxuYmozMVJTb082UkRUY1Eyd0RkemdrdG9GemZMQXNoanR6ZlZhdVJVWHNXUFRhT2pGbnRxb3puMHZDSjlOcFhUU3pjaDdWX1VMeGRveGVkTmpGdXUyYWs2aWRrZUlWUVJmWFkxRUJTRVBwWVAwTzJFQlZmTEQtSE5mRlJZOUFiZkJaTHZUTEpZdWdqM1lmTkVGcnFNOThLWVUyU1JBQUEteWpiV2lCOFN5OGtIR1RuY3VDQkc5RGVGbXZ2eUhFblpR?oc=5">Markets 'love chasing bottlenecks': Wall Street weighs epic run in AI stocks - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNMzNKZ0lVMEM5bGd5WEtLdURYSlhpYktVSVhmazh4Sl9SVUhucFRxUmpkNXJURFhUNjEzUTdGOFhBMm5pUXZMQjFmZWNoTENvZU9QUFVtMHBjdG53S3cwMjhGRUh0OWJrdGVKOU83RzNvbU9fVS14SFJTd2FJVVRjejZaS29pVVpjamdNajQ1aEIyWGVXRUE5Vl9lNF9ncjcxbzd5TVFYV045R0gwYmVpSW1R?oc=5">Epic to host Labcorp’s full test menu, aiming to cut hospital IT headaches - Stock Titan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPT01IeThmSDl2alhSaHNDWXJvRjdEQWY4OFlnMVNJZl9UeG5oSWNEd2EyOTdpcV9OdTlvVHgyc2ozcU81WHE1dEVUN0dXQ2RoNzNWVmZoWkEzczU5NHZQcXJ3QXluNVBVeFVrenRldlBKZUhtWWhuaTlQRzNYa1VHaGx6T0tabkRtM2ZsWURvejE4N0dBNG5pZGZtdWVTQllqeTFmU1lHa202QmQ5QldIR2VRSm85eV91T2xDb1pEdw?oc=5">A $5B chip R&D hub: how Applied Materials and TSMC aim to scale AI - Stock Titan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPN0IwZHYzN2VCMEZWUmd3QkM3Tlp2T3J0ZnlkdDNoWGxDbWlXN0xJUHR4a01WXzdrMnZPeWVwOGFGT3RTRmt1c2FjT3Y4Wl9fTHV1YVEzTndiRGpqbm1JeWJBWW1xVVgyNVc5UEFXQVA3ejZiNWpNTmxEUmc0cVVQeUxjRi11MUFaQU1JMjdPXzNWN3lwT3otekxMWWpBUWFybHhBZnR6NDJYb0JyWDNz?oc=5">Replaced explores a robot-filled dystopia in an AI-powered human body - Epic Games</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQcDdhWUc4Y3RtdUVhbnV3bUFCdkhneW9uRUtiM2NQUHVFaWgwcTJJVjZ2Zm1lQ19NMUQ1LWdzd002RFdSRXRrVXFCX1d6ZXBjWlF3d3FzVEZzeXM0UV8xZ2RDaE96ODJJblRQanVlV1lCaDBMX2c5T2RTMDJULWxvQ0tMSnVkc0JNckZYX2hyMTZUT29GNU9ibGg5SVVWd1hlZy1QTjZ1Z0E1STQ0d0hBcU96QnNYdWZadUtsUjV0UXdzZk1XSjRBdDdsMA?oc=5">Former Epic tech director announces The Immense Engine, his AI-heavy "European alternative" to Unreal - Rock Paper Shotgun</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPdlU3SnhJZU5WeVJvdjVDRTJnOXR0Q0s5eHhjb3ZoRzNSVEt5ZktMcF9ocGZUb0pPMVgtSVppV3FIRVVYYWx5eU1TYlVCUDE1OWxqaGxmTlBjOXZYeUZEVXlLRHlCTUlfajFlQm4wWG1YS1ZfdHNvNTZoWUhSV3dWRmpsMXIzZ3VBZVRSdUlDUU1UZw?oc=5">Labcorp Integrates Full Diagnostic Menu into Epic Aura: Streamlining Lab Workflows for U.S. Health Systems - HIT Consultant</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBrRHN0aDQ5cWNydGd3WTFPcUdsblpmaDJOS0U4LS1sa0NwSVpZY0h6WG1XWVNzazNzNklNMl9pQmNCMFphc2JVQ25BSVhXdlBJT0dFLVlXNWJvQk5KcDdRdWczLWlKY0NEVzNV?oc=5">The Immense Engine: Former Epic Director's AI-First Unreal Alternative - games.gg</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaTE2S2RNNF9hR2ZrUGlBb1gzdEpLc0poR2pSdksyRzhVemRMSWRrZTQ4SHZUYUhQNXJVeklCU1U1WEhoVUNFOUZkYTZFVEZrbU04emQ2dGxDdGlvLW05LUhZN2kxejFjNDJtYUpWTm14UzhLQVdkLUY3eU13UktIVjBzYVF4UGJwWEpLVGFIbzI5WEs5MGk4VENXSzdVNlh1UG1XamQ1NEVpNG80Z3kyZHkzUHVZMGdEZjJNdDBtSGpMR3M?oc=5">Labcorp stock (US50540R4092): Expands Epic Integration for Diagnostic Testing - AD HOC NEWS</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQeldRcDk3WWpRMHo1a0Qwb3djcGNxOXVVbHAtYVNnT1dtbnZkdGsyc0FlZUNxNDZoaFlaZUhLWGRnMVRaemdvblp1MjVFQjFiajBFM3hZOThxS25zTG9HZFVCdGdRX1JnSVphWUpaTkdjTjFFdVh0eXdhYk1lLTVjb1hacm00OHFjRDhlOGwtRWFjUUFRaHJsRjlXM0d3d1RJVTJMUEZjOGtqYndhRlktRVV3?oc=5">PwC and Anthropic expand alliance for enterprise agentic AI - PwC</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOaFJieWJvR0JyWlp1VVpJVUZ2eGZZRk0xd3pYa25LenVrYnJ5bVYyU1V3TDNoeHJ1OTVfem45aUpVUHVnY0xETGZkdFNueDZBYVhlNWdzYWxNd0NjY1ZPbkRUcVJpeEctM0V5S2ZodU4yc0g5dGppTkNzMmNwbl9GZkx2aF9ZQXlFMlE?oc=5">Anthropic expands its partnership with PwC as it pushes to get Claude into the hands of corporate America - Business Insider</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQY1RLTU9kdkZ1bTBHMEc5ZUp0QUMxSjZsa0ZqaGhoZV9hNTRLQVBUZGlPNnhVN1UzMksyTkhhdXhvZzVhaUhoNl9fcGNPYzBmV2hKbTN2SGtKNlR4MnVwX3V4cW9VUjg5bEtlRGc3QzY1c1o5dlpGNTZoV0g1MHFLN3VsenF3UzYxU3VabzFnMklfYktGM1QyMUpVd0duRjRUQ3BlaWV1UmdXS2lUZ2dqMVBLdzd2a0U5VU9uX1hIMFdzbzRnLVZiVzkxWExobGxIQTVhV0ppVUgzQnZnWEE?oc=5">Thomson Reuters and Anthropic Expand Partnership to Connect Claude with CoCounsel Legal - Thomson Reuters</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxORERpY2xtVlNQcVFRaGVIV01lX2tTM1ItVGtpcXBITU8wYUJyQU43RkJDYllPUVlCRkd5SUNKSVQzWnR3OXZwcjRxajB4X2F5cERNZWN5OEJHQ3VteWhNWkJjeGIza093U0hyUU1xSThBOWtZS3VzV2ZDaEUtckVJRGdIYXk0STNoY2g2ag?oc=5">SAP and Anthropic Plan to Bring Claude to SAP Business AI Platform - SAP News Center</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOSkZhanQxVXVreF9YQlp4ZFQzbElQX3dxeEtLZ2U1bVRKbDFDQXRnUG1GWFA2Nk5OM0dEd0Q0MERtYzdfanExRmtFZHM0YVlEa2RZdFdhUDE4S0dkMTNKZkdTR2lmdm9BeUI5Ukd2MzA1U0N4R1V0WDlfWmh6U28xZzRxbFlMd0U?oc=5">Anthropic, Gates Foundation launch $200M AI health partnership - qz.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQcU9HZWU3UDFaNHlfbjhEN1E0dGJaS1NWLTZuR3FVZXdyZEYzOFg5SGx5UkdwS1EtTU5vczNRazFYVDI1UGJOVWFSbXh1S3hnTWhHakw5cWNiVUUzaGtVb2Q1dFZfc1BHem9iUUJYNzZsREgyX3VUN3h6UXRpTTI1NkJzRWJ6ZDRHMDRQMUV1RQ?oc=5">AWS expands Anthropic partnership with Claude Platform launch - Cloud Computing News</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiigJBVV95cUxPT3NiTm9ZWndSWWJCQ1RNdEZxaW9BTjBicGhmVjB2eEVfYUZFTVhIbUZaRHZDTjh1SXQ0dGw3bFVCOGVienB0NUdtaS13R09DSlhfZTFpZFpGNGtkbGQ5ejZsZ3JTLTAwTWtaQVF5QTBfRnlzTFJac2thdHJ3ZXVvYnNMelJ1aXF2UUZoMDBCaXpyUjJPUjYxWGE5bzdaNGY5V3ozX3FsbFhrMHluRnMzbzdIMFNISTA2dVhyOWpCZ0h5WFZWRVpBVzVmakRxWHFteklUUERaMnJSYWY5eHVRM3Vld3lSVDBSR3ZTTVNIVWtOQlpSQWM3WEhwQkYyS1RFU2lnTnhuZnlxQdIBjwJBVV95cUxPdkZoUmF3SW9OM0dvUUN1LUI2UjA2cnlrcmJKSGNucGRjaXZ6NE9JazZYR0ZWR3JQU2Nrd3E3bUdOM3hhZldXX1lJZWdCOXlxQXlVaG1oOF9CV0pRQmhqYjNGbVNkZDBjTkNmUVRqVnVYWU90aXdzeGVzU01ZS0lnRWNCS0JCSWxTRFE0OWZVVGZmSWJpVERqN3BxcUR6WWNzVFBpcGNDcHVyTnFaaWh6ajJlOUxCZDBCQkI3YnJ1N1F4bnk4aGstSHNOdUZxeF9MSm5uRWJrQkV1YVV1ZGJfOUlQY0FkN2hQdURQOFQ5ZzluQTF3MDNqa3FqRDBtSjY1X2tnRGt1VHp3cV9lZWlz?oc=5">Gates Foundation, Anthropic commit $200 million to AI tools for health, education and agriculture - Indiatimes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNeUtqQy1LMU9JWHh4dXJReVdVNEQ5dVVfZ3FxdjVZQ1B4QkFMS0hvaW0wY1FIYndoMU0yVUJSVjRnVEU5c1E0Z0FQcENjTXk3emN6V2ZHQUxUaWxBSlBEZ3dLdS1RWUdVOHJ3YkhrMk11UXFiWmpHelJKUHFqRU9TYzVVQXc1ZUM4NHpWWUVaNk50RjU4N2hpTg?oc=5">Here's Everything Investors Need to Know About SpaceX's New Compute Partnership With Anthropic - The Motley Fool</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNM3JsVEduVmVBazF5RkRkNVd6MWF2R2FsRmtObkFQUTRyc2RMZjVEdzFrWUtzd0t0My1TOHg2cnJnN2xvRjNrdFlUOGRiN3dQYWhlXzFTNTk2WDdGLWNZMWNxaDc2aEhlOVFWQzF6Y2tyQVZ6TzBONDN2ekhCZzdpdVBMYU1OeVVwdXFCRzlFbng3T2FwMU9zRjN2OFNyZTNKRUpKT3Y2SQ?oc=5">Anthropic Intensifies Partnership Spree With $1.8 Billion Akamai Deal - MIT Sloan Management Review Middle East</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPZ3ZnbGdoOWQzQXNjaWY4R2FIcFpJbzBwRUJTMWVKWFBuT3ZYb3NwU2M0eFBMcEVmTjYxQlIyUjQ0enlOckVQWXNkVWFJYUM2V2lQQldDeHgzSWlFWFhTWHlWYkNMeVBqZmU2UlJxNlNFRWhDak1jVHlSR09Gd21tTUpDZzlJTjh4QU1NUDRtRW5IOTNwaGFEYW5qTkNFMmRjSkNsWlRJMng4elB1RWx4WE8zVHNOdHpZdVlJdw?oc=5">Inside Thomson Reuters and Anthropic’s fiduciary-grade legal AI linkup - Stock Titan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxON1lQVXBhcUhRNHd4UFBTZzBXX0FMY1hNdTgxeWVacmhZQnZ0TzFNZVgxTjlNRzBMeW1BZDlrNmpTYlJOZ1J2WnZKYjhfaUpaNU1XTWplYUZkOUNfNzJ3LXhEdUNab3NoT3BxNk9NT0tRb0dTZHBOYVhOMWNNSmRuTmItVEMzOFZNT1c0WldqRm5lMWtfWUdEMzRIUXBPQ3A1VmlhZC0wUVBaOGVuNzFXUTBqaw?oc=5">Anthropic Eyes $300M Stainless Acquisition To Strengthen AI Infrastructure - Open Source For You</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQUW41dUladzIwaGpaU0FvR24yb1BFQmRUMlhhLWo3eEF3emlxeklEdGFraDJKaS02Z19laWQ1cHVPWWhuU3hvZ1J0S0FUTHVZbndKUTh1VjU4S0xUSkhXM1U5NUZ1R3A2UUJRSDBLOFU0MEZFY0MtRWpEUHh3VHhfb2pFclh6ejVHbnQya1BkajR3RlczdUVvSWZ5MWtKS2NoUHRBTTNibmpObE5WbDlxNw?oc=5">Nvidia Partnership With Anthropic And SpaceX Highlights AI Growth And Valuation - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOTXp1cXZPUEN5Q2VzUUZzZUtiY09aTnIyV0V4N2t1RFlhc0ZRQnNnTk5sVDJPa1NHOTYxT25waEMwWjhIZ281cDUtTU5KeWNEWC1WMmY0NE1pYzhNZEVNOTlFSDdCM3dJQm1XbE5mUEVBdFpJNHlXc1JoSkd0Y211ZktqbkJ0cjdzaTBIZGx0N2pmbUU0VDhNd3R4eVZZbHBKWEJ4bGg3WDF4RFVwNTdfa01YM2VtZw?oc=5">PayPal stock pares losses after Anthropic partnership - Investing.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQWlY2Y0dOWUNmZTd4N0xhUG5PU0ZUUnlrd05RMktwR1U4bGtWZUNoeWtSX1JfcHctRU5DLWQ3cVU0MWtLZkZwZ2V0QjRSNFVWb2pVZTBDMXRhVWU1UGZPY2hhNktFU1R5V1VYS2NLQm9zTkY4NzF2RkVwZENaZEtOZ0t6OGFKSTIzcVNLbVdQUnJBaWxwcjBhSXVmU3hzVlhzMUE?oc=5">Ron DeSantis Praises Elon Musk's 'Pro-Human' AI Vision After SpaceX-Anthropic Partnership - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE82bzJ5TDFXcWQzNzVWczdWdzl2cVNGWFB3LXV1QWRURmFZNzlFZ2s2NU9qSzdsenpxR2ZTdzBwR1BXemVKcGpiYnd1OE5pOHpjaTNPLXZoQmpCV2FCcDRfY0xRUUFyUFl0RFZ3Y3B1UUdnTkZaZXc?oc=5">Anthropic commits $200M to fix AI’s global blind spots - Rolling Out</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPcUtONTdQdUtxWnNrdmN3WDIzU1VDN0xxZUZiRTZLS2VqWVhaSjdyYndxYjB2enVhZ0FrNTJLaXNyWExWNTdDZzl6RHJicE1DX0pHMUlXQUh3SGgwNm9qTG5EcVhOUHpRSzBERWZENVR1dGxOdEVMdjRPcmNIbjM4NWdWalFHSlVvQW9oUW1PQUxoZ0VTY09yMi1kTkVNZjNvTUx6OVBrZ2hTelJPTWtsazZnd1BWZw?oc=5">Anthropic & Gates Foundation Expand AI Efforts in Health & Education with $200 Mn Plan - Digital Health News</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPZDh1U2Y3SlNsWG5VaDRLODdmbTNDYl9HTE9pWWxZOThvblJrbmVXMFFkNXVhTDU4R1ZtM3dOSDl6eUNEdnA0dTFBc2xRVVJ5VXFxbjBKSkVGU0NtdWcwTmRZam9tZkxZcnp6bnBtSGI5ZFV5UUJKaXpwX2VUQXAyX09sWkRwaWJCaThGOU10NGNkMTNvZ2djM09WNA?oc=5">SpaceX and Anthropic Partnership - StartupHub.ai</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOZTNSY05yemxQMWxtbjhSTkp6UjMxSkFYa2pwOVYzc3g0bXFtT25JVWRfZ1hfQUlYdElfMVp3aDRlbHJaUVpHSzJtVzZDYURUUlZDbGI4WDQ3XzBjRS1rbDF1eUI2UTBJYVljNWZldWJ4VWktLXFxbFFMOFN6OUNqMFFHVE5QbjVWUzc2azBNdjJ5akdJTFVfWmIxVnBDaXhrVjFxVkY5QlJhR0JWd0V2OEFHWTHSAboBQVVfeXFMTjdmUmdpZXZreW8tWmVZVXh1R1ZXeW1TQ2R6LU1BX084endWREhjV200clFMYjgtTXlja3FzUlZvSE9PSkVDU3J6elVvREJPRmxLMGN1ckdOQ2ZSRnJWRTZGLWNHUXc5eGNBNTVnd1FfSV9fb00yOWRDUXVYbkZUQzRnc2lvT29Tdnlfd3ctazdtZi1TLUFMQ2JuOFJUdTh3X3oxUWlMUWFfV2YzMkpoSVB3Yy1za2dxbzFB?oc=5">Anthropic, Gates Foundation form ₹1,900-cr partnership for AI in health | Anthropic-Gates Foundation venture to span 4 yrs | Inshorts - Inshorts</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPRG5FUnZOVks3Z1RMN1BmRlZoNXRISmJzWWNzcGpUTlpPclVlZXlQU21yOTlMUUkxTmgzdTlLT2JFbktBblJZaXN4VGduLWRkM2pUc3RUYlY2Zkp5eURyMjh6VFdHdjVYclFrYTBGWTlSZU9ELUp1eHg0Wk9tNmstRQ?oc=5">Top 10: Pharmaceutical Consulting Firms - Healthcare Digital</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM1hscUFPSTNQZnBKYXRTVnBfblNQNWhoQ0RlblZjQ2stTmdfQ1hBcWNXeGFkMFdXRXk1YkFSSkNaNmRvQktRckVROGticXdUdmNyQWhZMjh1M0lWc2MzejlXRFBMYTJMSzc5WkMxRmRnMkhhTnZvMDB4Y3FoSTZ2LUgzWFNIcmt1TXE5MTBOOEJobmJwZExXS1NTZGQ5V1lfQmt4V2JWU19NbWZMMm0yVlFOQ3JKYmpfVzF2clB3cEFFa3F2ME5kVGxueDYzX3VIS2N2UnBzOGV0NXBTRG5XNVpKOEVfSFXSAewBQVVfeXFMUDRTc1BTdkRLbjJqMmJfWTIweXpVY3FFMFZvcmJsMTJDcnZEWUlickd5dUpFWXhXNDNkZWhFSWItOUpSaXU3V2k5VUpmdlY2XzRjLUlwME5fYmxzNExEM0VEOXdTcVFtUlNFZ1RLMmxtVWpmLUtpUFMwQXJMQUdpX0Fxa0RpbDQ4S1NfRkNMVWFRZHBPY0lCeWtJT2I2M3N6WUpTUjh1VzFYWVJNRWZHdHdaamhHR0lDMm5aVV9PSUZTZ1c1cllicTFQSTFXaUhjNzQ3TVZ2anZJVlgza011dzNzWnJsYWVEdm8wcTA?oc=5">How Huron’s Q1 Beat, AI Spend and Buybacks At Huron Consulting Group (HURN) Have Changed Its Investment Story - simplywall.st</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPMlJuT2k5bFF5eE9IdDdyZlI5cTc4MWpicWlNN2Rxd1VMV2syWGd5UUNLTENSTWZkbHU4NmduSFdSeHIzeUxaVzZ0NklycnR5T0h4WDQwa0hpN2RHSGtGR0NxY0NfbTNzczlsR1BZS0VyYzdnZ2NWZ3c4ZjhFYmtOLS1OeTN5WWZUM1l5YmtLbzcwT0dxUFY2bA?oc=5">OpenAI Weighs Lawsuit as Apple AI Partnership Sours - PYMNTS.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBtYWJsbFNvLWNsUzNFRmdJcGdFbmNtWllLM2pBRmxndk1GbmRhc3VJUjVsU242SHJxZkpDUkR0Q0JpNW9YcW1fdHlmcWVMUXNZSlVZWlZraU5hc0ZxeFZEQUVQeU1kWmlTX1dDRXZRYW9vaXI1OFc2XzlhSQ?oc=5">OpenAI’s Apple Partnership Sours - The Information</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOeDcwbkN0emxHZGdTUW5OcEFLTmU4RVhxQzdsRGM4cXRKVHNlaUd4dzVSWnpyVkF2RWFPSFdIaTdlOHBfYzdJMjY5eVNrRzdiUGNmR0pwSENkQ2hvbU9oYnZiSTB2SzVwQ3pNb3hSYktkQ01kdmNZWXVaOU9JT1NJXzJhcTFuZWZlU3Rn?oc=5">OpenAI Considering Legal Action Against Apple Over 'Strained' Siri Partnership - MacRumors</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPTTM1S3FzMnRETnNTeTZ4VGswRTN3aFBtVlVaa0NuT1RBR3AxaGh2bXRTMWo2aTA2R010WHFQR2VmSXk4T2VWTWRNMFN0TG1pTGF1STVuOEhQb2tzaGh2bHlDUFZ2N3ZhWmJNVjJwcXBCZkxGbDEwYWxPcVR0Z1NrQjBFcFNMWFBjTGhac2I0dFZGY2ZSTU1PSDZKNzllSnd3Y3REQWI4VTNIMjZyS2VQUExpUGJYZUU?oc=5">Apple stock dips 1% on report of strained OpenAI partnership - Investing.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWG5fMzZOZUZDc1JEN296ZTRKNVBPOUt6ajVISHgwRnpNRFFvcUlfT1EzWGREYjRpTnA4Ujd5YW1hamRoaVZQTVNpckZ2Yi1SSzBkdzdSMmhVRWhjbGFqWWtGVEZtbGw2THdUQ2J6S0VYQ09tYXgza0Q4bDNDN1Vnb3RRSUNDaUdSbmRCcmxLZVFMb0t1QldJLURJUkpIOS1qREtNV0N6eUNEYnJWTXM4S3RvSmZDYUc0N0VR?oc=5">Bloomberg Deals: David Trujillo on TPG’s Partnership with OpenAI to launch DeployCo - Angelo Gordon & Co</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPS2Zic2tCWi1zcnFxQXptUV9NTnFZRG5wbG1aeXBBdnNPZ0pycTN0V1l1eldGdGc5a3djSzNtQWNzYk83THZBZndSQUxxNHQzQW5HRmRLbGtQOGFOVS1Vb0wtSXViRDctVU5VOWdTVXZTdU5zMk5NMW5hN3FoeU1rcmd4M3BERFo1eDRxRW5FRXlwVGM?oc=5">OpenAI and Apple partnership frays as legal threat looms - digitimes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPdUZmUjhBa1lhZXNFZTZOYkJIZUZYX3M0YWFCcDVFYWl0Zkxod1VhdnE3Mm1UcFBLZG1aZDB5ZFhpYzdfZ05KbF9YbzlGU0pvTy1SM1FJeGJqdkNZVVB2X01qSkg5eEZkUkVicEdTdVpjZC1tOEEtVzMtd3FJeWExeENraVhRNGJrTG1DNjN5T3lOMGZoUzNLYkFuNHNMbE9NTkEzNVM2bGNHWlgxMTdCYkpQN1o4ZXkwd1RHTUx0c9IBxAFBVV95cUxNOVV1T283SW1iaHV6cVZuQ2lDVVJjS2VaaklBdURaOW1jZDJQWGNGX003WHAzd2tpSVk2ZG1hVzV4XzhuZUFObThwa0VmTjhjTl9adkdzYjJNVXN4NVBUM3I3N3R6QkJoU2R5a1hJbjNiQm15ZzJ1VHpXUTdvUHg4d0JVUVdvQ0ZTdnNaMDBOYUFTVHlrY1RTTmdVSDFvRktjTHFrNTdfVXVTVl9tNU5WMzFqcFBOcEs5dFJ5UWFKZF9HRE9n?oc=5">OpenAI weighs legal action against Apple as partnership strains: Report - Storyboard18</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOczc3MGJmRlZNVXRhU09EZ2xha241LWdiazFWN21HTEVWU19VSUZ5N2Y1V0l3RUNVc3lrb2dUMUhDSGhRYkJ1N1Vra1dENl85ZnVmLThSTVFnYU84ck5GeFhwd19VUTgyV3VpMWN6ZWlqX29LZmdSNDRxTS0zSVJNdUJPZE5QZi1reVE?oc=5">OpenAI weighs legal action as Apple expands AI partnerships beyond ChatGPT - Interesting Engineering</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZEFyMVBHaWJLaVFCSlBKU3F3andUaTNNdXZkZlBZb2JBYTRLNzZKeUVqYjFiOFo1UUZBSEZtTDVldWFSRC1zeWFTZGg4WFJVVDAzVXltOXNnS1pQMUlfSWhwRUxPSHV6OGtENkstWHp0U2dkeGdDcjJ0RXdSYkNmVFRtUUl2WFlrVHFrRnJOamQ4cTFRbWJ3bjJCT1J3bUVlcnJjbExpR2FxbVNFWXd6S216b3NRWHdOMGg4RGNnQ0VSS05ha1JaWGZ4TGZQMG43c3VZOWdGUmdKMjlj?oc=5">Microsoft spent over $100 billion on OpenAI partnership - The Wenatchee World</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPa1ZaNHVjSW1DeVpTRVVQbFo0aGx6Wk9SZ0JNUmh6b21wZmEzT1BnN3FoMUM5Y21sZTNaZjBaZkh4TG5ucTVhOGxiVV9Qck91bi11UzlzLTdraTY1LWhtZndQSUQ1XzVZM3Ztb1FWTWxxQUZfSko5N1lJRmpramR1RXJyVldRb01fY3hOM21ZYkRsSEFuUDFJ?oc=5">TPG leads $4B investment in OpenAI partnership, Lone Star Funds sells South Florida shopping center - The Business Journals</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPNzBYYmV2RktoMENhclBMbW9IRl83THd5TDdZejF4bGozVGpxQlJSZWMxYzB5T0EzR0xoT044aS1ORFRkY19RbmpBaUNkRXdqTjBhM0R2VHVMLV8xekdyckNzc2FBUFJsMlBtWE8xQXRNT3IzNDF2dTd3MDZPTXBhUE1PMmhLZ01tZ25MZDlReTdVbFZfNEM1Zzh3YVdRT20xS2tZbk5iNXl4aFhVYnRKUmRQaERfWDZ1aTlZMUVJWHkyQnNlclIyTFdwcFdlMVZn0gHWAUFVX3lxTE1RbHVkUmtZbzRiZU0waDhZV2s5cEJHd2M2MGhBRDNldk5JRzZfbnBabzF6MkRBcXhUN0NVR1NicFc3NU1zanZtNk1YZlV0Q0h3NXBOeDNNRloxSE9UN3Bva0JQZE9pVmlVMmFDVVBrZGtwN2FIOVVfYXlrTmFKQTdwcTVVTDN3MEZUMWI5OEJkby1FTFdNWGNrSHktUVl5WW5uQWRtWTN2Zm5OT0IzQnd0dzJiaGVBWFgwdzlLc3B0dkQ4RmVJSmpGd1M1aFo1djgwVWJKNUE?oc=5">Apple-OpenAI partnership frays amid disappointing results, setting stage for potential legal battle - MacDailyNews</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNVXJ0M3JJbzF3ckJXSzBQYmpISVFnSHdXakkxT3NjNERGdTZtYmRrejRpUGdIWjUycmVhVUFmT1BSUjFPZmlKdTVaOTV4VWs2azBJVUh0MG85cnAwaTJiMzY5cE9RMjRiQVVNM0M5S1ZPODBpR3ZEUjg1R3RIbjlBdmxxYVNjZFVzdzAyNmlFUUVnMl9KWkM5Tw?oc=5">Watch Apple-OpenAI Partnership Frays, Setting Up a Possible Legal Battle - Bloomberg.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTm90SXFrdk80UjJsUjA4ZWxRTlZ6MXZ1ZmVOY0ZzbHNJLWNmRnhqRTc3emJxekpWaXpmVVZhRUtacmtTVks0R2tDblU0UDIxR2tUOERiRHNFM2gyOWVzcEVwWTk4dHpTVDNkUUtyVktSaWhDLUx2cVkwaG14enB2bERlTXptY1pP?oc=5">Apple and OpenAI Partnership Faces Growing Tension - Gizchina.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1ZLUVKaUFIYkdxUEdjdUx5RC0xSlhPMmRwUXhJeFBUcUNfVjBDaVV6bmducVQwV0ZjdFZUSldvY25Hd0JuZUMyWTJ3QTFHSDNfb1dWV1VJM3ozOTlSajFjMEYyUEJrM3dIVzR1cDA2NENYcXZNMm1vWA?oc=5">OpenAI eyes Apple lawsuit in another toxic partnership - Cryptopolitan</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPQUx0dW81dWU0aENCNnNVak05QjJuMkxXUWYtQndCclIxWmhxSG41dTdIVW1wYUdaNmNSVFVnUTJjcVFOTlYxMy1EZEFKVDBBMVBMUy1tSTI0Z2tObFBWU0g4UHpsWkRfeFQzZkhBQU9GMGVDSWl1OXBoUGRhTkdQTk9sTkxQYjBkM3ZvU05LbkhlVU1XTmxGazNvODQ?oc=5">OpenAI Pursues Legal Options Against Apple Partnership - Let's Data Science</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOaV8yNDR2Wngta245Xy1OSU1yd0ZHbkdoc29zcWRrTDVxSmZPU0lLQzh4VzhPX25GaFhTYkdFSTc4Qk9IVWxMYkdCb0dwM3VTclh2eUgxSmItdnltZzVMLW5yVlN5OVdjVXV4N0dNRm5ZQ0hhM3NHanR4R1BMZ2pDRDVkM2VzdTFpRnUwOG5YYUU4eFY2dVhlbktzZHpKaU84bjZLcm5sbWtXcEFocjFZ?oc=5">Microsoft's OpenAI partnership is older than Satya Nadella's strategic mistake with Windows Phone - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQZXFOVzM3QlNWN1prNTJTVWFqcjR1NGxOSjZYbjVFa1phZFYzRGZRMnU0dVZJUDFfWWxZZzg2T1dvMTVwMjhnaFVXZ1dyLXRtRVdHZ1Rqa3lFVUs4VDBqTTV5eG5OMEhGQ3dkYzJISGVscHFGVS1BS1hvU0k0N3Q5YkQzc0NUVVJmdnJxV184QmNZUUh1M0NqLTlHekk4SXVLSk5ScjNVXzA5eXpuLXRSSUMwLUJWUQ?oc=5">Apple and OpenAI's Partnership Strained Amid Legal Considerations - GuruFocus</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNdWg5eGNUNmFXYTJaVjFMekZqTm9YUmJOeE96TzByYVdWTzdwOFVBOV9oRmVudHFqRFJfMG9xSGw2SFdJbFdQVzd3b3R2T3JrVmhtbjVUTVF5RHR5M19CMmRfb2dfbWt5bTVLbUR5U0F1c1NTcGRMNHAtMmhVMkw3VGdGY0lHVkhFZEd2RWNYSERCdnZPemtiZ3phNk9aZEptSDdFbEs5bTlHRUUwUnMwVHNKRE1fdw?oc=5">Musk v. Altman — Day 9: Microsoft, OpenAI witnesses defend evolving partnership - Local News Matters</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOckxOcUJ1aUxzSV9xWUM3MEdEeW9VSzNFQUNHZHRYUkZxRWgxb1F3TVpueDZfUkxqN29SbHVZcEZobVEtcm85R0x2S3ZUNklETjY3bWJDeW9CNkJfNTlnRmVoZE85V1BrakR2Yk9pbkl3RF9LWTRxbVZrM3owTE1SQmF2cEx0VGh0ZkExUVF0UHN2UXJ4Skw1OXBKNEU5bHZLd2M2cThENnJFSlk?oc=5">Apple (AAPL)-OpenAI Partnership Shows Serious Strain as Legal Move Under Review - TipRanks</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQejlqTnBrSVZvYUxwbkUtZF9WR0JLRERDajVGYXBxTU1STmozOEpUVzREMEV2bzV6cmZ4M1VERXJzUFYtUG1KVEVTUVo4bncxaHNCN0hYLWJfTkstX19QNDVfSzAzakp4MGVlNGN3Z21HdTl1Y1BfUFBPbHlvTVcxNURnSWxZNjNzbTNUVlB3X21RaGdZUjluR3FDS25CNFBFdDNjYXllZ2NUcTgyZXBKWlRhWkdpbFhZcDlwNU5hYXgxUQ?oc=5">Building on three-year partnership, Bain invests in OpenAI Deployment Company - Auto Remarketing</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPWkREQkhDUTUyTWZ5NWFVVWxzNHJfZEt4SmpZV3dXRlN3WkpUejY1dE00c2x0Ml90MWlBenlEem53dmNsekcwSFYwQ3BYbjZGSllYd2JWNVd1cDZrVTBTdGRFaTRXTTVlRjVaS05MU0UzYVcyLU54bmREYzZJSWdYZDBmbzRaanZmNC1HbGlDZ1pjRXR4T1pQeGlsc1JUV2E1eXZkMFBiTlB0elhpYjk4?oc=5">Microsoft (MSFT) Seeks AI Startup Acquisition to Reduce OpenAI D - GuruFocus</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQzJrRXJOdHlwVm5YZkdqbEswWVVoYkR1c0NuOWJHblhSczMtZjFybHVBU3VVc0dqcFF4aHIzXzVVN3oxNVNwTm5UdHEzVGZiZGJqQmdmbEg1ZldnUDh6V2hIU0h4b0lNUFZyeXluVHptcUFEclV2a3FKVlpGc19yU3RTMTh4RGgyd3ZzQkl0RG50QWFILURBajZMLXJEMERQUlBBSUhPU0ZIVjlMNW5VYnZDdThqVnJO?oc=5">OpenAI Expands AWS Partnership to Bring Frontier AI Models to Amazon Bedrock - Cloud Wars</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxPQ0g2cjRsMFQ2SHZ4WDdqZ3FfdGlpaEdxY3BrVzhsb01TajFWRFZLTzhILTk2dHcxc2VFUmJmc3RHQWF2OXZTbFFFVjBpWUlaVWdCSThMdFp1SlE2RFpBaHptYnp5aUJuOEVVbWIxcGQ5NTVRUno0ZjBKS3Z6Wmw2Q2RJdWJMcjJBR2d4RW9IeDRzMzc2eXUyRVNIVGstWTVwOEgxN0kta3ItRF9BRXI0Yzc2UmZWZkhSVHMzbHBuODlsZXJUZkxYU2xtdDZwdXd6ZW5PMDZDTG96RDjSAeABQVVfeXFMTVh1ZHFFdkJENFI5YUJWTU1VUC1SUUtSd3lXeFBkYy0zNHZxdTJtV0tMUjRlUG5qX1lZTV9ha0NSU2RraXZ2SEdXX2hQRDI1NEZGOTJGOE5zaS1Obm55LTZabThJdThXZHNyTnVmN25sY2xDaGlsZzZxRHo3Rnc0eHhDQ21tVm1TSmhlcm5uZEJTR1hmcUdSeDJoX3JhQW81a2d6ZzNFMTV4ZGZmQllXQ1NGYVVPS3B3dUowWGJtY2RvbWEyR1hVcllsZGRaNHQwZGRCc2t1NGJwTllVWnJ5NzY?oc=5">Why OpenAI Could Take Legal Action Against Apple: Inside the Growing AI Partnership Dispute - Republic World</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOX3FwT25sbGdKUFN4dzNlZWhSeVlQNkJ1Zjg3RFdVY2trdWQ1VUpUb2ZNWVpPMEM2bE44dE9oNkZJNkVjRmpEV2pCLVQ2RlhrblFRY3JheUNUbi1LSDlOVlI4Q04xcHlEZEFnUTlGVUQxNC1haWNrQnloWnUyYXhQSjhHa2M2NTdSX0NlS2RpMjU4cW1YNFloeGFxV29oSnJnNG5kUVpRWDVOMnBKSERhQlVKaWVpcnZxalRkaWRzOXJvVXJ6RndFdHlwVTQ?oc=5">Accenture Federal Services and OpenAI Partner to Accelerate AI Adoption Across U.S. Government - citybiz</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPVVp6T0dZdTVNZTczVHJlSDM4QmlhYWdaYWFYbWJ0dHhlaUt6eGN5a21KcndHQnN2VWpQbzVJR3hIQ2lwMGxnNm5zaWwwbHlpa3FUZ3AzeXRnREFfQXl1aE0zZnpSTnlHT3VxbjM5M3hwWDRyWHhibUxUU05yMmFHd0FYYWJ4VjJ0eDh1dXEzNVNkNDNDd2h4WmlvOXcwQQ?oc=5">OpenAI hints at more fundraising as Apple partnership splinters - Business Post</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOT1JCb3dVamhsNW41ZlVxU1BJLWF6MGJWQmpacFRoX3h0Z1h1WkFONG4xQ1FodzJHY3RsQUVrd2xkTHlXVHZNbEJmNFpLNVlianNkcWVVODFleFlzUjVXVUhSNnV4QWRUc1RONllic05LcVRaLTFMM2I5V0luSExqNGlCWTAwWTJCTVhOT1N2T2FYcUxvTnhGaThMcWpZbFJoVEtodzA1eWF0RXRCc0d6czRlMjEzcElaRGs0ZlVKTnUzTDF1azlxVFBmcGbSAdIBQVVfeXFMT0lvaWlvbGxvbEhvcEhiczFBb0dEMW1Nb1d4OFljTENZek4wYzBsTXU1d0UzZnBWUjF1aW5Md28wSHNHaDZ5VWYwUEREcHRpX1VtZ29Od3pxWkFSWm16NFNKZkNiX296SC1XalE4WEdZVHpUQ0t1YmNJeG5WZTlJVDNTQ29sbDhoWENnTGpuend4eHFBTGxNb3ZhMlFsaEFHNW9xWVR2akRwR194WUtjRDVEanJBMWIzcjUtV0ZVaU40UEd4bk9TZzBFcDY2cGN1UkxR?oc=5">Apple-OpenAI partnership deteriorates as legal options are explored - Business Standard</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPd3dYWTRYdU1DUHpqcUdPcm9xUURBdERtWjZSWllhSy0wVUFmbS1fMmlrZ092V3hIN0hEakxPeFU3aE5TeXBRZElyT1p2dFQzanVDOEx0aUZqalA1SmdPZHdsNGJNRUFyTUh6S29sSFB5bTRuSkJYdzhRemZReFlSQlpQdXU5RU0zaFVfQVJJMXFHcTNYOVhxdmoxNlNFVC1xc3RzWjlIdjRtVEl2VmZJU0NOaFEtZ9IBuwFBVV95cUxQekFzVE5DU04tYTQ5c2VqSjNLSFhJQWtoQTlkNGRzOG1wQmxlMlZmbTE0NG9famF6UEpnWW1ZM2lvVXJleS1VMTNoaWxrY09Gamk0bEh5a2tyc0ZjM0s4Y1hZM3JPZVdVR0toT0hkSkp0Y2l0SmJaUGVtVXhkM2tYRHU3QTRrRzlEU3d1ZHFQNmkyeHlnM19mdk8xc1VxT3ZHUWZhU1FyemFEclRXQklIUDlOY2hCSkd5VmZB?oc=5">Apple-OpenAI Partnership Reportedly Strained Over ChatGPT Integration Across iPhone, Mac - Gadgets 360</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxOYXdLM3ZjMFh1NDBnUWEyX1VmV0dfUGxZOEFjV191cXNvSjN4WEh3UVBBZk9SRVBSNVUyc0xSQ19JM2hKR2E4czdKZzdtOFIxdl9mOHdySzVUeno3WUExU25iNWhnQmFPSEMxNzQ2NmFpZGNmUC1BTmx5Q3BJRmZlZEg5dlFfQQ?oc=5">Microsoft explores AI startup deals as OpenAI partnership changes - Tech Wire Asia</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9heWZSZ1RYbmVBMXlldzVHQms0N05UUEFDS2lQS044X0dZMmxST2FLN215d1hCR2hxZGZyVHhiTlJFV2Z5MDJDTTNZYWc5SVhCTXFRRDNfVWRpUjdfeWZkcEs4OG5KZldCY0NFZlJaNEZYT3NHX2p5ZTFsZw?oc=5">Why the Apple and OpenAI partnership is falling apart - Rolling Out</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOR1dnNEd4NlZReDRqMWd4REJBc0h2NFp4QUR1TDg0ZjhhSHMwY2E2Z1gwZHB2ZXhza3FiOFhyMEVrdGVQQmYtVjA4dTQxLXB6YV95d3JuRnNhYi1EQzZjT243eF9iM3NJZzZCQ0prU3FxcWI2eEdPTjl3ckZwLW1UdUxzbHFrUjRDTE9maWF4MEtxU2ZBS2kzT2xsVHRiUWdERDExTVd4S2V3cjJBYXpQa3kzU1A1cktaQktzR3B0Q0l4SU1YZ1I40gHMAUFVX3lxTFBzX0VXNHdCNHB5VnZqcnk2WUlUczlfalE0MXcwSHprSEg3MGNVd3hqTFpnQmQxN0UtTzJUdFpqblg1VjVoVG9OdXMwX3RWUXRya1lwX2hNM2FrYUNQM1FJdVpIZ3M5OHczZFlXd2h4RXhuQlRFSnYyLWJXbGgyQjZtVExhTzFkOEVOWF9ZX1ZTNWJsWFB2NnVfS2lVRGtLejdYVnp3bE9fUDNpWXpLVG5VeExtLWt6RVgtTHhyVHZzR3lRdUthQjY0ZWlNYQ?oc=5">Apple-OpenAI ChatGPT Partnership Faces Strain as Legal Options Surface - The Hans India</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPajJGeUNpd29wV21FdWhPN0xNQXpadjZLenh4cmNxd2F3TDZXcmpxQUVIU1U2Mkx0WS1GUHNSVlFRcnZYWnA5UFZ6RzV3OTJMZ3pzZDFFQ3hVR1VxY0pXOS1KMElMVGEtUXFXaWhjYlRnR2RBWlVZLUpHT3Ruelp4YTJ5VTJDTGhJYXBjb3E1RE95Z0tpa0xqZUZxSDFBWm1kYnlaZEYxU0VSQlpsMFVTWWg0bw?oc=5">OpenAI's Acquisition Sparks Concerns, But UBS Reaffirms Accenture (ACN) Rating - GuruFocus</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQc05udXp0SGVJOWpod0VLbWEyRVA1elZVZE1zQkstOGVnOUJMRkpiLXZuM1I0U0JhdWxWY01NQUJ5OVQ3cFRTLVVYVmhrUU5nLUdEbGdSRlFHNVRBREJaOEluaXIxakRoNHdLc2tJOXJzZWM2a2Q3d1lXYnc5aWI0ZnlyS2lMS2kzRnktMDJ3?oc=5">OpenAI launches AI deployment arm with more than $4B backing - TechInformed</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNTUowXy1DTi1GSFJNVlF5dk5rSUJTQVBYVE15LTdrMXpPWmh4c2pjNjgtX2RrTFR5aWw4Y0JsbGxaM2lNM0ZZLTRMdDZkd1ZpMVlncUJpVEZoM3Q1ajZVT1d0RXBPZ3NNUk5nSzdiQkdld0t3V0FpbHJ2dERxa3Z5NnlwRDRERHI2NXZVVHloUGlvVHpZQVRnMjFjUXBGUm1KZkRTRk1QcE1pQ0VONmdkTlBMa3hNZ9IBuwFBVV95cUxNSlZ1cjdfYVp0Q1luSTZ6TnpIa3pwaGc4WXZ1ZkxhakRfdFdqVm1kMGY1ejNYb1NGM21kdE54cmQzLUVXYmpzWDhaTWNpaXRrT0MtMHZhWmFna1NrRVNjNGlhdUlQbV9LRUF0ZFoxa0NPY1dmeXJhclVieUdHdlhSUU9rS20tMkJZNFdSOEM4dzVHLXRWY2t2eUUxVEtXQXNMdHJsMEtKQ3RKTDZVSXZGTkZOeTBCWHNfQmFJ?oc=5">OpenAI plans legal fight against Apple over 'failed' partnership: Report | 'Apple hasn't even made an honest effort' | Inshorts - Inshorts</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNQ1FmMHVORHVBR2Z5MzJOSFZYX3RPR044Y3FSdWpVVHgzNDZiR09Eb2NFeHFsOWNGOFVyQXJ5U01ja1Z3cjluTkpYSFo1TVliVExlcmlWNGtVV0ppS0pSOGM0elNncnlLQTJueVgwY0t5Tk1SQ2xRZmtFX1JUVlRkRHlBVWZYRWF6TzBPWlBmYk5pZmZNc2M2d1dOZjJINENCSWpFa3lYLUFySWt5VURLUTZxR0xkc1BBTUZRNXJWQUVtSGdDanh5T3JiTnJvQdIB0wFBVV95cUxOX2ZQMnBWQVRabVNIYXJzWHdLMVhYMVEwYUZNbG16eHgxbWRiSlRQbVREQmJZSFd6eVJOdE1YeDVlTU0yR1I3endXOEluSlhxTnZaWjNscUFSamNuLWc1aWQ3YTRmcFNkNlFVUTlLMV9qTDR5QWZEUGttNzRWdmx1VUljWXRwczR0c3ZkdElBQVE3N0xkNnlCTm4ycEhnakszSU4tZmczcTRUMHJqV2VCUll0enF5ckRocElvRFI2cDkzNDkycFBHYVRXTWNRZG5zNy1F?oc=5">Apple–OpenAI partnership under pressure over ChatGPT expansion: Report - Business Today</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPQzNxdHdGRndIamVGdDd1akdnR3lZWlFwdG90ZXZfdjNwZ3Z4eG83MXA2RE9UaTNBNk1OOTJDWjRjOWRyb05YbUVvS1RGcDd0TUstUUpnNzZWQjJsa3ZkME5hRi1kQUdNLWlIOTdacXA5Sl9kYlNOMElQSHdoZl9pZjhZMVhlOHFsb1Q2bS03Z29KVTdMTk5laEh4TQ?oc=5">Microsoft stock edges lower as OpenAI partnership cap increases antitrust risk - Traders Union</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOc0ZiTjI3SE1ockdpaTRhU1J2UFdLMktBMFhKMUprc2VBZnZsVGZaVzdwYUVCLVI2ZzEzYkMySTlwczJfV2xrZ0dKZ1phRlFKMlEwalNhOC1NcXdmQlVsMWtBQWFaNFJGWHBMTG1oUmhVYWt5OFJBTmdmY3BzekZOUVBPVEJnV0xORFFGYjJFVXliSjJ3TUdhYVJRZFQ?oc=5">AI in Healthcare Market is expected to Hit US$ 305.96 Billion - openPR.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiggJBVV95cUxOM3hJb3RrTGExOVlMSlQ2bTdoWTRXSjY3Z2RGNFBJYlRBVWJEN2JoRTRYN0x0NW8yQVNuYTdGOXhCTzB1VmszaVRHR1YxMnF6Y2JLOElvWXliZWVHZExHbzZ5aW9MOG0zdWFtOTRQOWFxWVpadEVISXVBT2FIZ3BzakIzVUxDcmwwYTlwUXI1YzhUQktNUVhvXzlTNDRlYThaMWNNd3o3d3ZXVEFhc28wcDk2R0NqNFZldm9GVHRsdnQxX2tNQ2VXWXRqdXRqd3pGel9UaUtVRDUyQXA3UTFPMHlLdG5ycHdkelNYNVF1ejlqeDFuLVRGRm9kOU1neFNkWEE?oc=5">Anthropic confirms deal to launch enterprise AI services business - MSN</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOU1d4UF9YVWcyaVllZzE2WHE5dmRVaHF4YUhLQnBqSlVnS2VTa1ZtNHlOSDVhOEkwdlJuWlhldzJnZ3E5SlRuZW1kZ24yVDdjOG55VUNvQ0FIQmFEQ2NGYmpBRlkzVlBSMFh0aWlxOGlfZ1BhdWFnWE50Q2pKWEJjQjBheWtISVpJalBKeXloZjJ2TlE4d3I1V0lMYTktcWVkczU5eWpTS00xZGw3UGgzazRQS3haOEhnSWZVQkg1OXVLTjBXRE1vX2Z4Vlp3QmVpUkNtZ3FPZXJQS19uMDRuR3BtdUM?oc=5">New threat to Indian IT services? Anthropic to launch AI services firm: What it means - Business Standard</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcHFJc1pSTXFQSUpScXZPY3d2YnFBWVNRZnNHX0ltMVY3WWlaVmYtUE5WMVpDQndSYUc0RWVoNHJSSDZhcERLRFRwNEdLQWowTXgxNnAwbmVtVEJlengzbUlyNGhLZ2RNNktVdkRLaHZQcFI4V0E0UUhVTzVBcXRJaHh1NTh3OHB4U2g4SFVvVzgyd0VOelJrQXZQM0lBQTFsNUh0NVRTaV9GcnM?oc=5">Anthropic launches AI agent templates for finance sector - MSN</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPMHE5R0VUUkE0ZjdGelJqeXNQcTJYLWU3MnNoYkRkczBmei1DYV9zdXYtb3EweGxGQk9CY2hTX3dkRTdZQ0RWOXBGOFp5MkY3N1JZV3RYSndaSnI3VjFDVXA2NTdLX090U1ZmckFuN1FkdFp5aFljV0RxY0lRN1VRd05pUlkyNThNcXdsbnQ1c2lCWXlWeVdHZlVpdDBid2FjclYyQ3h5dk5CZ0ctWWZxWFJILVU?oc=5">Hippocratic AI Announces New Senior Executive Appointments - PR Newswire</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxORG0xTFNuWFU2LWxSNjdkOGkyT1oxQ1FDTnR4MlA3U0FqWWV1QmJQSmFhQmhWNkFHVEEwQnItSFlqa1FVaXdZU3NXLU1HN1prUU9yYzFMQ1Jkdk5Td1VySnBDUTluS1V5YmZIbkNaYkVVbFhUbXRaTGhXS3VaeGFyUXliRWNUdjdfQm12dG42TDVrclVBWlZqS0VyMDBfLWRlTEVYZEh1SG1SYThsTjNUVHM4RF9pTC1tU3hOeUlIbnlKYnBkb1BHYmlYRldwbFM0?oc=5">Hippocratic AI Expands Executive Bench to Support Rapid Scale of Healthcare AI Platform - TipRanks</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPM014Y1h6UXdjTjdZeC1KUFcyZ0YxalVlRmsxQmxrSTNZcmg2Z2NVbGF4THZHb3NRZER0T3lvTTh5QkNVcUtEUFc0Q3hxQl9Rcl9QNFV5RmJXQTZvcXJ6X3VsNFQxeTFJZGV2M3E0X053Ml9mUWREQUdtdGdKLVZUNnNOUG16ZmdEdDRfX2o0UTBTUjQ4SHlhd0xCd29uTHdVTFpMUUxwZzRwLWQtRnY5ejR6MNIBuAFBVV95cUxOT0wtdE1BZTdpLXdYS2dHcm9JUGNzdnpFc254NHRac3pOelMwWjZiVjVneWZJdzBDQ2M3WjdQb0dSRWJ0Z3pFMXFjUlpYUTNJZXpoNTg0MHFxcUJyN2xqX1BfdUIyU3FfYUY4ajBZSE9lZl9rTUhUTmlobkViZ29XRkdyQ1lpZHRTNEdJOEowakl1RklkSDYzemVGYTVRYTFVRFB2ZlUxb3NvWTVXeF82RHRlN00wRFY0?oc=5">BRG adds two senior hires to forensic accounting and investigations practice - Consulting.us</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ReTF6M0Q4WkJuaEZjQUpSZXFhSHBCM09CUy1tNmFpalZvXzF1UlB6Y0k5Sm5LTUl6TDYwcXRFMEpwYUpZSnJnQjBGSUR1M0tvd1lXclNlNVBiRFVRN2c?oc=5">Bridge AI Price Today in United States | BRG to USD Live Price & Chart - Binance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPc2Vic0dMdW1JV1lMNHMwLWVMZGQ5OWlEQjJ3cEtxaHg0YXRuRThsazZWaUhzc0xiR0p3c1ZZSDN2S01lUl82bUpDdlZuSXcwNm9EdUFCTUlsaFVyWXlaMDhNT3pVVTJnelVYSUhwUERpY082Z01jY2dCZWhsMmJvUWswSVdhN0tya1JGN1N5OGE4YXpwX0FhWGYzblN2bXFob1E?oc=5">Viz.ai and NRHA Aim to Close Technology Gap for Rural Hospitals - The Consulting Report</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOVHpuVUNTUGtqeHVoOTdpbEdBOVNva0N4N1ZiTmJmUzFyYzhJYzY5aEwxVksyVDNHS1dPemJndTBxcEJZZnp5LXB2U1pudFhDV3ptNEtkNnJNd0VqTHgzbldCemF2STRQRE9pcVhNbC1valJLVFJOSnVwTTlsckRJSURhS2J6d2pVTEphYmttN3JxTXI0enN0c3NEZjdRLVVPRGkzM2dhRWNTQVR2bVpnZ29XOGZWV2s?oc=5">Kearney Launches Global [w]Health Index to Benchmark Gender-Responsive Healthcare - The Consulting Report</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQQU1aR0Nua01tcTlLeGJvay1yWEZ5T3p6Y19NMml2S3hiSE95QUljZVFmc19Da1pQT1pqUkhsWjFCWXZXREZRc3RMekxaM3U0N1dxb0hYaGFrWnN0bnBvYXR2eS0xc2dKSDFESUtvRU9Xa0MxNlFCekdaVklPZzR2cno2QnctSW5fMG9qV3VuclpGb0dWNENERDY0WmRLRUpINWZWck9B?oc=5">Marsh Leadership Pivot: O’Sullivan to Lead Mercer Global Investments - The Consulting Report</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNVTU1ODdtWVladFVVZDI0cXpnN1RMTW9tVFotYkFQcGVhNFZub2p0RXU4TFE3OGx1OWg3Yl9EY0J5WnJCcHU2THE3bnBaQmk1LUtpMXRYb2xvTllGcVN6clJHRDlvYnpONzlDN0l1LU9Odi16QWJRR2xZb3VYbDRnUUx4aVh6UUdIWG1xWGRUWnNTOEwzRWI1REQwQXdSTEVJMWp1UlFPOG94OUszb0VyRUR4SWY?oc=5">Accenture Fast-Tracks CM2US Initiative to Strengthen American Energy Security - The Consulting Report</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPejlnV2NYN2RlYjkyU1hGeHdIX29MVjVJczJpMnE0RGkxS3NVelhFZUNwUlRtOGVQejZnZE1RTUM2YWhIMy1Nd3N6OGpwVVdpbXhXcDV1Wjl5eU9sRVVXeFVSUnJfOGxzaWZmLU51eURCeElnMmhyNml5dWJBYXRmRGxORnBoMGxfdy1PTjI0ZjF3bFVsSXl3endsT195ZkJYc0ltcHM3UzFZU1U?oc=5">Booz Allen Strengthens Executive Tier with New President and CFO Roles - The Consulting Report</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNUEYxdDVOU3JXQkF0WUZjV0hKREl3LUxpWUp6UDNpbl83dUNuMDlZRDVZVTVnUlFrWmFMUzROZ2xiV0I5YnB1UENvenkzTFdrd2dHWmsyR052RkhVYk82RFVDZENHenRkQnNYN2xEZXV6Uk9wVm5YaXdiMkxnamh1NmNpaFJQM1pqX0tZNThzN3dPRXJDUExUY3ZqWGFRblZxU0g5UnU5dWprcGd6LVZB?oc=5">Booz Allen Enters Maritime Sector via Strategic Stake in Ulysses Robotics - The Consulting Report</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNblE4Y1hocjdaSGhGVzRJeWNBOE1YRXBrRE1hLU1KbkJDZzRDanZzSUVfWHlMajVFOEFLUG1WdUdtTzNXT2FSclR1Y3drQnJ0VVBwZ3Z2YThMRXBkNTdhTE9nR2dWM1NVRnlhU1dnbVpnY0hVT1dvYW9TN3NIeHhadDVNUkdKSGl6QTA2SlI2X3FZdlhxM0lDbzM0SzRGV2N0aUItZVJzOTNyMFlFSGZzWVJJa29oX1dKaU52YzBjWdIBxAFBVV95cUxQam1NdHd5d1k5V0xzNHk0OE5ZZmZmYlVrSWl0bkNnXzl1WkZCNWpoVEkyS1IxUVJYQkFValpNZVFzMG1LRHd6VzhoTkpvR2NvdVJxQUJSczhqU3NsWnowZmlBWjBHSlZmakw4bm9lcF9ZNnBqV0liN3c4b3N3MUZRYmZHYVFYbWVqSWExV21CeE1vUEdkOU5LTGp1VGM5MUtzOUo4d04wTm5NYU1jOWs1ZE5yTEJwcDUtdWNnNVRlLVJ5X0NW?oc=5">FTI Consulting adds 10 cyber risk, data privacy, and governance consultants from Ankura - Consulting.us</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5tSU1NdEJPY2ZHX2JYNjhBa01YeXFybGc1Q1F3VmxySlZueVduREMxZ2FkTU1PYy1BWlJFX2h1VWRTcXZBSWdMQXdUQmtLekk3QWd5Ynl2bV81dXB1b3BZekNEREFuQQ?oc=5">PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients - Anthropic</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOa2NkcVNQRl9DaXpqMVE4ZEFhRDNLSTJjVm9UYkxwQnVfc0tqY2RqSXJTdnZrb1VzZzBZR1JKdmJXMDVVU0hFak9nbDY4UDN0UVNRb1lfZUI1NFBxemVVak5QbmRibmVhNWVSOTJWZUlDOGh4bGRTd2IzWDFDUkx4dTRWTzM4aW9sZ3FqX3J4LVp6QjItVXlMVE5xSlJYeWxFWHdsNTdkZ1dkVXBiNUE?oc=5">Goldman Sachs and Blackstone partner with Anthropic on new AI services firm - Business Post</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPU213alpCVGhrSEdJNVNOQ2JKcUhoVXVrcFNLQVJJei1Id2lxTmN3QzZRX1hqRU1KWnMyTlpReVdSNldqSXFYZ2xoT1A4eENUVy1hRmVubkZoV1RobkFTVUppZWJFVVV1VGlTc1BfTEN3X0dHNzVpWmF2bHM0QTRrenNSbkQ4c2xvTTZFd3d1Wms0Nl93UFNNb1E1ZWFSbElSUnpSVHlUOVlhYVdZYktocndaUmp2QnN5ZUdDRF9qOTFSZGtBUWRqSjZjZ01jMXhIbExrWUpMVjRpX0ZrSGJDSUN30gHnAUFVX3lxTE1qcWRDVGlBcm5RdF9TNzZRal8zUnlKdVZQLXd1d2lqUUhoczgxQ0w3Q25HbFdGdmJLd3J2aHUxOFB3MEhtNERRQXFUeWFCVzZ1V01SQUVqUTdjOEhmbFhTTldHOFNWZExFc1k2WXpKOG9TSjhyZ2xHTko0aU02YnlCd1RoMGhPM0FobmdzVURiQ3lYdnJUREJFQ1hQOVZsbkZFMmtpOEtHSURaYmZGWGVGN1d0SlU3ODZjWHJSR3g4VlZqOTdKeWF4aDZVZkJrMTFzOUNsVEtNa0w5UVBpdm9MclM0ckJ5UQ?oc=5">Goldman Sachs Expands Fee Based Growth With FGI Deal And Anthropic AI Bet - simplywall.st</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxNdU5TU292UWhnTHR2OGhyT1lSS2drVGhiQXBSb3pUWGdjQWE4SDJRZ3AwcTBnRDRIdkNic0xNd2pManRmT252WGI1eFNiMDRUVGU5bUZEVmRVZ3NNbTVyN1gyZXdpZHhBS1RDM0tvcmhUcUs5UEstNnFnV0U4bU5vdm03VkdvUzR4dUJJdWhodl9KMEdnWExKMDNKQ2RTd3pnRE53Nm80OVU3cUxabEw3SjlLWXA3dHNQS0pjdHphT2VOREZ0cnp1cVFSQWZiZ2M?oc=5">New APTA Resources Provide Real-World Applications; Roadmap for Responsible AI Implementation - aptapassengertransport.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcXI4ZWdqWG1QZXhQRU1vNHZ2YktoR1pjdHlqbkkwb0JMTFVva2NlMFhfTDBGZWpOQjR5eGlIaWZydXpWYnFvWFVlRHROZnkzeWU4VGRQenhGZ2tBNUgwMHFjamQ4dlBKVEwtelpTRWllTlFBWXh3dWo4TFM0VEFzeG5lZ19TWFZY?oc=5">Venture for Canada Launches New AI Advisory Council - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxPd3AzWDNWdHBpTDUwZTVEMFJDT3lHME5lNjhDUmgxMGNIVnhOcFV0LUNnMjY3blVENUM0Q2JyYnpUSl9PLW5udHZ1SE9PRjhWV3kyakdKZmZxSklRdXRMZHlVY0ZuRjlWR0ptWXBkbTJfRFhsV2liTDNnUy1fbnhaUTIzUFF3SW9DOXVMc2J2ZWIxZTVsTllKZ2JMNUdWQl9oTk91WEdyRmx1SWQ4LVYyU2hTY093Tk9Ja2VldFFpRllzTFhtYlBCU9IBzgFBVV95cUxQVVBGWHRVQkViMkxWYWZwT2w3MEJUbHV5TmhPczZ5OElIS3ptNFBGb3BhckoydWJFcjRXdXA2WHY1bXhzTE9ZVGw4RW1WYlhUOGRFZG5kN0NwNk1OZ3lVUUVNdGdSNEZWQ3RNWVJHalZ1MndJVDBHaTQzTFZOcHI4ZVNCXzd4eDh1R1lUWnpLUEpHekZoRzY3SHFGWWc2dE80NGNpUkU1eWdhOW5DZkQ5cmN0WDg0VEhZS19JYW1FUndzay1fbnFlR2pKRVlkZw?oc=5">OpenAI Confirms Deployment Company Launch With More Than $4 Billion Backing, Acquires AI Consulting Firm Tomoro - Pulse 2.0</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9RSXRqaUdJMllGRG1mbF9CVUE2d3AzMUphcWd4MGxpc3hndGJERmQ2MFI0bS1XTWVQLWZoWm9QSG80UXk4YjFIV05VMi11TlFvTWJfRk5UZw?oc=5">First Take: OpenAI’s DeployCo Moves Up the Value Chain to AI Implementation - Gartner</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQTXUxX3lWb19lajdoQmRzT3NQa19ZbUhZRWNjdzEwNjVWbWI4VElJcVZ5Sk9jNmgtWGNyc3dBTzY4TFVOeWVUZlBES1JuQklJMnFraTdZdDg0MVhGYi03cjFVU2Jxb2lTczI1R19tYXlScm5zNmNRaGEzV3JiV1QzcFBDZDFGa29RMVMxV0NTRTRqX1NqY3dyTlBVeVlLOFJrcVFzYXR0emQtRVB5OTBRdi1saUNNUW8yYk1MLVRVTGZZdkZsSkNWY3Z5VWg5R29tWDJNTw?oc=5">AI Without Alignment Is Just Automation: How Enterprises Can Avoid Costly AI Implementation Mistakes - Security Boulevard</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeWdlTUxOd2l1YUtJLXNBTGZNQWZ6TVRCa2ZSRXdHVEc2VHcyY3M2X0xtT3hmX01jeW9nUG5xX0dObzNxX19zNHJER2pLRmhXd2REcGtVNXRqc1NsbWRwME9VSkI5UmZuc2JWVTJjby13TWU1amhIcU9ENTZBdXFzRHgzT3dEWFJZWjZnZHFNcU9maU8yYlJ0NmVxaE05anIzV25XdUEyNDFFMVRnek5uaklXN2J2QUx6R3Z3?oc=5">City’s schools need to pause AI implementation and clarify standards for use: Gounardes - Brooklyn Eagle</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPdENMNUhWbjhvOGhqaFZZT3hNdjJxYlpza3BhN1phUDU3SGZxbVFpMzZJZ1VhTWY1NlJxZEdoZmpYV1lod1BFaDZJSDhQS1d3NmlFMGhPcjdZV00zczdOdXlqZWJNaWtBcHBNNVdaQm5USVdrdXhuSk5UWWVqYTU0QUhvUVQtOF92MU55cVRuRVc5bU1kNEotbUpxMmlhRkFDQVdzaFBOV0R4a1Z5NnhmUVA3ekFmWGswNWp1M09scTloUzlj?oc=5">Cybersecurity firms warn of risks with AI implementation in organizations - marketscreener.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOelVUTFlXU1dUMDBnLXBRc0dyLTdQdFBZdlE5aGlOZVY4MVk4YTU1SWtOMWM0dE93R2JjaktZejZJbnUtM09TMW84ZGhFVWQ2b0xUTHVMRHM5MXAwT2JSN3o4a3dMUDgxVW83R2NNZ1VsekcwdGN5c1phZGhMMkNfbWltclBXa2tyN2ZncU9VM1BDSnBzZTEtbnFhc0E0VFpoSDJIdjFLZ0otXzVuTXBXVFNzTzZtNGtTWmNKU0dyUF9Vd3RqMVdMS2Z0LVBYUmk3bWRvYng0d1lOd2FD?oc=5">Sam Altman’s OpenAI spends $4 billion to create new company, acquires AI consulting firm to … - MSN</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPLUJmOE1SbjdsV2cyMENQaGZ1VWlvMF9wUXlOREJyRUs5dHhjTWNWRXFQX2hyQnZ4ZnNFSTZkNEFsMlVHcjRlWjB6VUNTMGVIOWZydFVkSkE1cUN6VjR2UzQ0S0hpUU1OeF9ZZ0d6MHcwVUlQeGh4WEItOVhZNzBJVTNR?oc=5">AI & Automation - Leading AI implementation - Business Reporter</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNTkpGOHFQdUd6dkxwUzRvWFJIM2RpNE9hQkRBRVB5TFJYeHhaQThRTjRLd3V2V2ZDRkllMFZyOUdOOERLUWtkOUh1WUVUNC11Y2cyMkVUd0xFYXliV2VZVlBlOVRxdV9VbHNtUHFvWE93RjUtMjMxTUlYbXJkb21yMkVjRXJ0dFRlTlM4a0syZEx3XzBvTkg1V0pWLW9kM0VYSmd6QkFoWEZkZDd4aDZMSQ?oc=5">UBS Group Survey: Companies Systematically Overestimate the Speed of AI Implementation, Widening Gap Between Expectations and Reality - 富途牛牛</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNjYxV0ViVXdTMXZZcVBlWnFFX1pGUG92cFpUT1BQQjc5eWVtZHFqb1pWbVZJdVBsNW11QUtCeTdTMFBnMVlITmozUFpVck5kbjQ4WUhmZl9oM3A5VWpLVkUtSEF0QXFuMVUzUFZFRWpYVUdTcjBOaTRkbEd5eXpTZXByN25xTkltV2sxYjZWUzJsOVNzQWUyb2dscThoTXF1ck8yVzZ4YkZKYTVMckNWeVkyQWRBWnAyTFVIcVh0TnpCYXdGNTgzMjIzUVE4ZFhEWWY4RVBoaEVFZw?oc=5">Solutions+, Inception partner to scale enterprise AI implementation across GCC - ZAWYA</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQazk2OGFscm9vVFkyYkg5VTEzYl9YS0NrTEpjc281UEs1bzg2ZzM0c3lvRmhVa2ZFV0VoV1UxZmw5MGJjQTRQcGN0ZjVvU19CSWFlZmp5UGdGTzhqem92eWQ4UW9JY1hQcGhDbnVlaFdHVnhrYWlFMzB3aDh6TGVWM2JyTE1XTDZ0NFE?oc=5">South Africa appoints AI advisory panel - Telecompaper</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNNE5Wam5oMlZ3UHM1dkZ6X0NJSnBkTGRtQ2F1cnYzdUllRl80Z3cyeWF3U2IwWHh6dW9KVk04OUc0MVJzNnFpNW9fVVY5aDJnWFBVOEtiVG13eUJjcnlteHJPcF9kTHlVS3hvYzVZczN4XzBPanY3a0ZTd2RiNkY5ZThWSFpBeWF0RTNCdGMwY1NSeU9mcW9uSUJCN3BoUUtLVmM1a29MVXFyZFZnNnVoVGhB?oc=5">Govt Constitutes Department-Specific Officers’ Groups For AI Implementation In J&K - Daily Excelsior</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE51QUtsM0czTWtzWXBfMEw2amtqdEhOUFlDNUh4UXRtYmM2VUZRQ0NiQXVMclBnSE9tM0t5SWwwTVBRZUx4WWVkNGJFVDdncVZwRURnOVlyYmFKZkZYYVBGZnE3bE9VRnAyVzQyVzFzbjU?oc=5">OpenAI launches AI consulting arm valued at $14 billion - Axios</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3gwbnBYSHlHLTRwOXlROHVDWVZ3ZVR3X25qQ2Zqc0RJQWdJMWRSNzZKbUZZZXFaa2VfdzE3S1JiZHNoSkc2RW1mb0xwb18tajREY29mZm5OMkdvUkVJLWFrUmlNdWNEOEkxdnZvQTlhdkw5WEhEbTNiQUpJclZZVG5iWVl0SGFJZ091Z0wxUUdfQml2NWluSXVuZGNEQS1jM293bA?oc=5">OpenAI spins up standalone consulting business - Channel Dive</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQVUotNGNNTS1wNjlzZXRRWDdNNVF5MEZ6QmRQeERZNTVjeHlOdEFYaFBNd0lac0hRWElQeVdUSlVOWTFxcVQ3VlA3OFNBbjg5X2txMzRKNVI5OHRUUWRyRXM0OGlaWElITXFSeVAzS3RVRldHQVNqNHN3RzR6c3hFZ2YyaTFJX2dkbExEMg?oc=5">OpenAI Launches AI Consulting Company, Following Anthropic - AI Business</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQTlJQNG9GTXlhcU5iZzVGUEtsMURCdmhSSnRtVmtCekF2QXd1S05ESkJKa3pZNXlLclY4WU5RQmVqNXFYOGFtWkpvV0lkV0Y2WUI3SlRReGh6ck1rUjFnMWdHVFVHNmRXVlNlb3JqeUtLOF9fNk1lZnBBMFRndmJrTGJ1UEhoMThQYzVUVTBoNkp2akVETnkwUGpGLTdYUGk5UzRNWkFSc0V5czZpSU93?oc=5">OpenAI’s new AI consulting offering raises questions of trust, strategy - cio.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPaDFab21LMU5LY2ZvX1p2YTROWEtDVkZ1Y01pdXgwVVJ2eE5rekJ5QzIzbkFOWW84dnd4T0VCSWhVU09Sejh0SzNpRmh2SnI2dklwV3owcjFsVXJEOU1ITnd4aEFtRURlQjVfdmdEX19ZeXEwR0pRTXVCYkx4MVpxWWhhcmxkdHh1LXRHZkdpV3Q3bWxfRjA2SW16OE9NTnRmQWFDUHhfNA?oc=5">OpenAI Just Launched a Consulting Arm to Help Companies Deploy AI - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOakRtc0pVREczSm5pcUZScjJrNU5pQUFETGVUUEtqdTJSSjlmeDVKQWJwR25ZTnAyV1MtZmtwQTRVcGJIZ1ZucFZwRGhMbW5TeU5yVjJrNXZUYmlzTE9LR1FKQjdxOTBLMjhDSkh1R1I4blcxWkF6NVNiWE9yX2ozREZtX3dFczlLTTFybGZUVDNkUi1ZRlhES1dRaTVyUUFDajZuem5yOGg4TldZUTRBLTJoSQ?oc=5">OpenAI to Buy Consulting Firm for JV With Private Equity - Bloomberg.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5PZ1puQ1YtenJWVGVsbEVMZ25Bc3BmRkFnT3BJeVVZaUJrU0RGQ2drYk5Fa0YtdXZIX2Z0WFFvdFRFMjA2clhmVHpNMUpfYUY2Q05VcW5zaWZxQ0RlZVp2bGZ6WVQxakZfbjNhMWE1Y0FwT3hsaFE1SzBR?oc=5">OpenAI and Anthropic target consulting market with $5.5B in new joint ventures - Crypto Briefing</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQekVKcGtCSlQ2bGU0WVBrX3RjcVFfYlFvRk9WM0pxWkQ5YVE2OVVrVEJZblEwZTdnNXgzTFY5U1hOeWJLWEhkUEhPdUhKZjJOa0hRRVpiWVB0aXNIOEl4ZjhVd0JUWUpreWpJTW9xaTZLSmpoTExldFV5SFAzYy1MLXlKOF96M29RUkNfZWdxcnNxMmJsR2dDMjMtaXJ4SnZFcGJBcmYtUnNBbDFtV3c?oc=5">Breakingviews - AI labs’ consulting push defies corporate history - Reuters</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE13ZUFtbThzZTJ3a1VvOERzZWFHb05DNzVleHhDWFBNMHkyZlNEVGdTSTVuSW5VaF9COWRTQzNRNnJpelhyQmU5VVlFOXBWb081X3p4VWMybjhiTlRkcWFRSExkV01jWGE5bTVUUDNacmw4X0pCMVHSAXtBVV95cUxNcWZlYXpvTkJfN2RSVzBCSlhMWHUxcjVwLU82MXZGeDdabVhFTk52ZVktTDVtYkZNMHI2dFZVcUYtd1pTNGtTeTRRZC1ER2E0V1hwUG5zWjhqT2g3WFo2QnE2NHlkRnJCUjYxUUU4VEhkQ2dla0dKeXl5UUU?oc=5">Their son died of a drug overdose after consulting ChatGPT. Now they're suing OpenAI. - CBS News</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQamVpUXdBUzA2b0ludmhxY2RMUU1KYno1VWl4Z19KT1hiRTJGRmQ0UTZFdUVwRnFRUDZtUXExZzdaQW5uc1lIRFVjVmhWZFltdFRua0lYZDJXNWdrWmpNVTFZdm9DYWY1Q3lvdnVVSl9kM2ZMV09JS2diVVh6YzFUdTI3dHdfTEVka2dwMGFIa09BRWc4c1M0NmtqQl9adnFVdThrQjlhUTZ4QzJDamFCV1NNZUItcC1N?oc=5">OpenAI teams up with consulting firms to sell AI coding agent Codex - MSN</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPSVBBWmZhcDFYTk9sQm1zcGRSR0FGZVhLODVFYkhWMlhiTWhSak05dTdxbUlEQ2hhTUo3Q0d3QmJzOVNVREFJX2s1S0ZJZEV0dFliMFZDU0NUeGVPaVFuTTA2MVBnT0pVQ1FqTEdTNVRQdl9rZW1aNmV2S0s2NFJnR01BZzJsTHM5V3lKZDVabVVhenB6dUZnMHBmRlJnQQ?oc=5">OpenAI snaps up consulting company to help spread the word about AI - TechRadar</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9US21nYWtBZElBdUhlYm03Q3BXVUxLS0RTdm9IcmNDczAxdEFCNUdhZTBjRWtCOVIxeFZmTmY0blQ1VktHSDNBd2pfTmJIWjQxMk1VV0xVYTA1RmJBcEdTUXFPMUdtMkVLSHF1azBrTk5QbGJMUEQ5ejVqMkI?oc=5">From AI models to consulting: OpenAI launches DeployCo for bespoke AI - Marketing4eCommerce</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeTN2bHZJUERWV3ZvazBocFpxMHJmUzlhWmplWFJsdmUxLTNvN3BPSi00QnJuZHdDR1Fqd2M2QXRHbE9wNWNSaVRKRDNRV0JCM2NNNk5FVk94d2tpaFA0Rk1PcTBfZ2lPVU9NRDNCdFNHMFFEN0hJRGZvSlR4X3RTeThNTFkwMklsS0ZOcXJQbEVfbVhqUmZXMDdvUW5MWVNXOU50OG8yNU9reGJvQXV2bk5TTFA2ZzR5U0VIRFRuTE00Zw?oc=5">Texas couple suing OpenAI after their son died of a drug overdose after consulting ChatGPT - KWTX</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9aUzR4UVp5UUk1d1hQaEJHbmdoVmNnTW4ySkcyZWlOUy1pNWV1WjZFV3ZKTFN3TmhQaWtMcFNKRzk0Rkszc2VVRm5JYXJrNjBuNllMM0tyM0wtYTluTjBpMWNRWS1pUkFoRDlMZ2E4UzV6aVFmSWRv?oc=5">OpenAI Launches DeployCo, a $4B-Backed AI Consulting Powerhouse - eWeek</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxNN3hLVndPRDA5WUNGY0pXXzhPaVRhNGtnVE82T242YnRNaE9PbkdpMEhldlFrRUY1cDF6UjlNVjEtUE5Lc1pBb3hqX2t3eWlSQXhkendjS1hjR0RMSkx6MF9fXzFYb3hlSzZvWnJBSjlkVjA5VDNzZjhXcG9kRE56WFdxM282RGxFWmFjNXF6dWxxOXRLRmdCaF8xMl93aGYxNkZwd0N0dE5Sckw0M0RudUk4aWdsMEVNTW9WaXBpZjJRSlNiNE1XOUhva0d6eGlKMG1mM2xCRHc1Mnh1MGc3WjFjVzhUVUMwMmJsV0t1WUs4MGlORDR2aDh3d3NVUXlCZUZv?oc=5">Rainman Consulting Expands Local SEO Services to Help East Valley Businesses Improve Google Maps and AI Search Visibility - USA Today</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiP0FVX3lxTE41V3VrWW8yODcyRjFPa1ViX3hNYnROdkNxaHNuS2dGaDZSaEJYVFJSWlRzdGZBckdLSGFKOHd5OA?oc=5">OpenAI acquires Tomoro Engineering Consulting - Round - جولة</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOU2lZb0hRVzhLQURBaTl4Ml9pM1lZS0ZIbmRWTTRlX2EtOXVhTTFWQTlZWlhjR081OEpobnltUVNCdkpzakFORDdoTVZXd3BYbko3T3F1TFBjSmhNd1RVX1RLdk1BdjBCbm9MeUh0WE41dGhlRHV5eUJIbmZDR2FQR0hNRFNOWUFmaU1ZQQ?oc=5">OpenAI is buying its way into the AI consulting business - Startup Fortune</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPbktzeVhrLWNkcjk4OE95NVdvMEczOFlqODJGb2JKQVowUmhGZ25ObjlkYkZBd1NaWkNKLWU0dWZEWVhiZGdnTHB3TmFZVWpvbkF5b29QVnF1dFRaVVQwUGR1Tk0tZXRnQlBzN3BOTkxUUnZNeG5pUmRJWUh1eExTWVZiUkF5a1N2dWZMTVZya2h6cHFpWEtVaVdmM2ZRdFVoYjA3aGMtTUpHMnB6eVFLeVNWVnVOTDg?oc=5">OpenAI establishes a deployment company to disrupt the consulting industry, but UBS Group remains bullish on Accenture (ACN.US): new entrants still rely on the established foundation of veteran firms. - Moomoo</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxPMURkQTMyellDQlpkRU9Nb2lQOHYtNFVmOFBXQ2NfeDh3RGpMRjFGMld3eEY3TS1zbkw1YUI5M2tZeUdmbFdmX1FoV283UGFrMkJrV1ZtZWo1SUM4Tk9CTWhnV2ZPTEdZVUtsVFZ0aUkxNWRIQlpxZy1xa2xzVHRUeE1sMFJlaEFhbUdWNXlvcXV1a0tSdUQ1MmQzSm82UGpBVUt6V2N3WF9salU0bTNvT0NjVGRPWGMySXBudW01Nm9qcjR3OG9wZ3pnRkVjT3dSZU1TR2xGLW41MFNlcnJwMzQ2X0Q0SUtnUjJkenFHUkrSAfYBQVVfeXFMTzduZG94NjRtT2tXWjlobHROcHlqS0JfZm5DVjRySDdvZnVWLW0xQUtLTzczVW5IU0otZTlpcUhzYVozdEkwdUVDUlprRTAtSVdiRXdRWG1KbEVqS3VySVloWjZLWksxSEFpT0d2ZEgzZVJ5TDBEY3lDZllvZGF4ZGFaajdrSVJ6N1J3SV9SX1BFUllMQzRqamdYSnJVdElHcUhSTlVmYTByMlFkTEE2andEVk5ZbzJYWERCYWUwdVdJRVh4ZEpPN2h5Wm5tNHlwZEw4eXVUM0FMOFJyUGhwMWlpdFk2RDZyRGpTV2hvN2dhNTh3dHJR?oc=5">OpenAI launches enterprise AI deployment unit, acquires consulting firm Tomoro - Indiatimes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPLXYtalBxNzQ1d3ROVEFVdE9pR3FKOElOUVNFTUZqOENaRkNKR2xEb1l5UlJvdkFITFVfZGJ5OWlkWlJqMThNclZhODRGbGZtTmxZNzZZbVpyX0tQQWVjS0ZsZGVqdFhwQnZNeEZ5TXIxUVNJdU1HWHpZUXB1NUNya0RDNnVNaUdHVjdUVnJ3ZGV5N0FtMWEzMWdZeUtzNVFyRV9sMVcyVzJtdkdMdklfaWpsTk1pVmfSAb4BQVVfeXFMTjJRbm1FczI1UUlRTDF1bWFodTRCN2YzVGxWajMxdk5Lb1JmZGFELXE4cy10aklrbFVqaWdaUVVGcWJoRVl5N0RSYjlxWEdaR3UxU2k1YVRTY1duYnVmbW1rRDRIVm9qMDFiaHJPUFY0clM1RjQ5LTVWcXRiUm5nMHozcGR5cDh6QmMyaGFxUXU1UXRCblEtdlROMWo3ZGhfWmxXeDdLM2hoVFlUMVpIWWxOZjY2MmtQRjhubzlCZw?oc=5">OpenAI is now in the consulting business, and it has $4 billion to prove it - digit.in</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNM1RySmI2bV9UWkpHYUhlTXhvdldrVm5YS21WSnhZeW82WHBtN1pob2ZfdUpNNU1MZXRqTUM1ellfUWxPWVFtWmNQZkd2cFhicnRQSlA1TDNzWFpPN3hRRE5zZEYxNllyNzZ3ellHLWhzSE9EbTBuTjNJVHJiSDkyZWthb2FkSnFHT2YzMWQ1S0IwOTNXcGV2eVRVMUdvQWhvcjAxeDBENXhYZXlLdXR5S05Eai0?oc=5">OpenAI Enters Consulting Arena, and India's IT Stocks are Paying the Price - Analytics India Magazine</a> <span class="src-name">Google News</span></li>
+    
+    </ul>
+  </div>
+
+  <div class="footer">Healthcare AI Weekly by Greg Harrison</div>
+</div>
+
+<!-- Floating "Let's Talk AI" Button -->
+<div class="fab-container">
+  <div class="fab-label" onclick="document.getElementById('fab-btn').click()">Let's Talk AI</div>
+  <button class="fab-button" id="fab-btn" aria-label="Let's Talk AI" onclick="window.location.href='mailto:gharrison@guidehouse.com?subject='+encodeURIComponent('Healthcare AI Weekly - Let\'s Talk AI')+'&body='+encodeURIComponent('Hi Greg,\n\nI came across Healthcare AI Weekly and I\'d love to connect on AI in healthcare.\n\nSpecifically, I\'m interested in:\n- \n\nBest,\n')">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </button>
+</div>
+</body>
+</html>
