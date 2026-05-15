@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-15T15:57:25Z",
+  "slug": "claude-how-claude-code-works-in-large-codebases",
+  "headline": "Claude Code gains traction while Microsoft pulls support, reshaping AI coding landscape",
+  "body": "Anthropic's Claude Code is generating significant developer interest with new guidance on large codebase implementation, but momentum faces headwinds as Microsoft cancels licenses and Anthropic decouples the SDK from subscription tiers. For healthcare AI, this matters because coding automation tools directly impact the speed of building clinical decision support systems, EHR integrations, and data pipeline infrastructure that vendors depend on. The fragmentation between Anthropic's product decisions and enterprise partner commitments signals instability in the vendor landscape that healthcare organizations relying on AI-assisted development should monitor closely. Teams evaluating Claude for healthcare IT projects should verify licensing terms independently rather than assuming enterprise continuity.",
+  "source_url": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start",
+  "source_name": "Claude",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

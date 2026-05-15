@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-apple-openai-relationship-frays-setting-up-possible-legal-fight",
+      "headline": "Apple-OpenAI partnership deteriorates as legal conflict looms",
+      "timestamp": "2026-05-15T15:57:27Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-how-claude-code-works-in-large-codebases",
+      "headline": "Claude Code gains traction while Microsoft pulls support, reshaping AI coding landscape",
+      "timestamp": "2026-05-15T15:57:25Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-bitcoin-trader-recovers-wallet-with-help-of-claude",
       "headline": "Claude's brute force capabilities spark questions about security and scale",
       "timestamp": "2026-05-15T11:47:53Z",
@@ -248,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-5-price-increase-what-it-costs",
-      "headline": "GPT-5.5 pricing surge forces healthcare AI budget recalculation",
-      "timestamp": "2026-05-08T15:14:08Z",
-      "source_name": "Openrouter",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "google-google-removes-privacy-assurances-after-stuffing-devices-with-t",
-      "headline": "Google quietly removes privacy claims from on-device AI rollout",
-      "timestamp": "2026-05-08T15:14:05Z",
-      "source_name": "Thatprivacyguy",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
