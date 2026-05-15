@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-15T19:17:09Z",
+  "slug": "openai-openai-is-connecting-chatgpt-to-bank-accounts-via-plaid",
+  "headline": "OpenAI expands ChatGPT capabilities with financial data integration via Plaid",
+  "body": "OpenAI is integrating Plaid's banking infrastructure into ChatGPT, enabling the chatbot to connect directly to user bank accounts. This move signals OpenAI's broader push to give AI agents access to real-world systems and sensitive data ecosystems. For healthcare AI, this demonstrates the path toward similar integrations with EHR systems and patient financial data. Healthcare organizations should monitor how OpenAI's approach to data permissions and security protocols evolves, as these patterns will likely inform future healthcare AI capabilities. The integration raises critical questions about data governance, consent frameworks, and liability that vendors building clinical AI tools will need to address proactively.",
+  "source_url": "https://firethering.com/chatgpt-bank-account-plaid-openai/",
+  "source_name": "Firethering",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

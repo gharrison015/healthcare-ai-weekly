@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-where-s-ed-anthropic-told-court-5b-but-public-19b",
+      "headline": "Anthropic valuation discrepancies raise questions about AI vendor reliability",
+      "timestamp": "2026-05-15T19:17:12Z",
+      "source_name": "Flyingpenguin",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-openai-is-connecting-chatgpt-to-bank-accounts-via-plaid",
+      "headline": "OpenAI expands ChatGPT capabilities with financial data integration via Plaid",
+      "timestamp": "2026-05-15T19:17:09Z",
+      "source_name": "Firethering",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-apple-openai-relationship-frays-setting-up-possible-legal-fight",
       "headline": "Apple-OpenAI partnership deteriorates as legal conflict looms",
       "timestamp": "2026-05-15T15:57:27Z",
@@ -245,26 +265,6 @@
       "headline": "Claude infrastructure experiments reveal latency performance characteristics",
       "timestamp": "2026-05-11T12:35:18Z",
       "source_name": "Dunkels",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-what-microsoft-executives-thought-about-openai-in-2018",
-      "headline": "OpenAI sunsetting fine-tuning while advancing voice AI capabilities",
-      "timestamp": "2026-05-08T19:04:22Z",
-      "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-cve-2026-39861-sandbox-escape-via-symlink",
-      "headline": "Claude sandbox escape vulnerability exposes risks in AI-assisted clinical coding",
-      "timestamp": "2026-05-08T19:04:19Z",
-      "source_name": "Github",
       "verification": "confirmed",
       "tags": [
         "claude"
