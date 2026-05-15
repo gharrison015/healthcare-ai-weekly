@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-15T11:47:53Z",
+  "slug": "claude-bitcoin-trader-recovers-wallet-with-help-of-claude",
+  "headline": "Claude's brute force capabilities spark questions about security and scale",
+  "body": "Anthropic's Claude AI made headlines this week after successfully running 3.5 trillion password attempts to recover a lost Bitcoin wallet, demonstrating significant computational persistence. While the recovery story captured attention across tech communities, the underlying capability raises immediate concerns for healthcare organizations managing sensitive patient data and encrypted records. Healthcare AI implementations must account for how large language models handle cryptographic tasks and security protocols, especially as EHR systems increasingly integrate AI for data access and recovery scenarios. The velocity of coverage and mixed user reports (including account suspension issues) suggest vendors and health IT leaders should evaluate Claude's reliability and access controls before deployment in production clinical environments. Expect this week's discussion to influence how healthcare organizations assess AI vendor security postures and encryption handling in value-based care data pipelines.",
+  "source_url": "https://www.tomshardware.com/tech-industry/cryptocurrency/bitcoin-trader-recovers-usd400-000-using-claude-ai-after-losing-wallet-password-11-years-ago-bot-tried-3-5-trillion-passwords-before-decrypting-an-old-wallet-backup",
+  "source_name": "Tomshardware",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

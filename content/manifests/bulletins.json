@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-bitcoin-trader-recovers-wallet-with-help-of-claude",
+      "headline": "Claude's brute force capabilities spark questions about security and scale",
+      "timestamp": "2026-05-15T11:47:53Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-meta-s-new-reality-record-high-profits-record-low-morale",
       "headline": "Meta's AI ambitions clash with internal turmoil over surveillance",
       "timestamp": "2026-05-14T22:49:22Z",
@@ -258,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "anthropic-notes-on-the-xai-anthropic-data-center-deal",
-      "headline": "Anthropic secures major data center deal amid rapid capability expansion",
-      "timestamp": "2026-05-08T11:03:11Z",
-      "source_name": "Simonwillison",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-webrtc-problem",
-      "headline": "OpenAI's Real-Time API Hits Technical Friction as Privacy Scrutiny Intensifies",
-      "timestamp": "2026-05-08T11:03:08Z",
-      "source_name": "Moq",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
