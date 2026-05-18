@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-18T22:49:41Z",
+  "slug": "claude-mexican-government-breached-by-solo-user-with-claude-150-gb-exf",
+  "headline": "Mexican government breach via Claude raises AI security stakes for healthcare",
+  "body": "A solo attacker exploited Claude to breach the Mexican government and exfiltrate 150 GB of data, demonstrating how LLM-based tools can amplify attack surface when improperly secured. For healthcare organizations deploying Claude or similar models in clinical workflows and EHR integrations, this signals urgent need to audit access controls, data handling practices, and model usage policies. Healthcare systems storing PHI or operating under HIPAA face exponential risk if LLMs are used without proper guardrails for data isolation and audit logging. Consultants advising on Claude adoption in value-based care programs must now include security architecture reviews and threat modeling as baseline requirements, not optional enhancements. Vendors offering Claude-integrated healthcare solutions need demonstrable evidence of data compartmentalization and breach prevention mechanisms before hospitals sign procurement agreements.",
+  "source_url": "https://konstantintkachuk.com/writing/the-floor-doesnt-exist/",
+  "source_name": "Konstantintkachuk",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

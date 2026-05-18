@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-hershey-bets-on-agentic-ai-to-rethink-2b-in-marketing-spend",
+      "headline": "Agentic AI moves beyond marketing into autonomous enterprise operations",
+      "timestamp": "2026-05-18T22:49:44Z",
+      "source_name": "Adweek",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-mexican-government-breached-by-solo-user-with-claude-150-gb-exf",
+      "headline": "Mexican government breach via Claude raises AI security stakes for healthcare",
+      "timestamp": "2026-05-18T22:49:41Z",
+      "source_name": "Konstantintkachuk",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-tokenshield-cut-your-claude-code-bill-40-70",
       "headline": "Developer tools emerge to optimize Claude API costs for healthcare AI",
       "timestamp": "2026-05-18T19:24:39Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "google-we-got-our-first-paid-user-and-we-re-still-stuck-in-google-s-au",
-      "headline": "Google's audit delays threaten startup viability even with paying customers",
-      "timestamp": "2026-05-11T22:45:30Z",
-      "source_name": "Indiehackers",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
