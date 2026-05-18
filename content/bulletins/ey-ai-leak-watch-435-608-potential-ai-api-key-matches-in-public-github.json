@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-18T13:00:10Z",
+  "slug": "ey-ai-leak-watch-435-608-potential-ai-api-key-matches-in-public-github",
+  "headline": "Over 435K AI API keys exposed in public GitHub repositories",
+  "body": "Security researchers identified 435,608 potential AI API key matches leaked across public GitHub code, representing a critical exposure vector for organizations deploying AI systems. Healthcare organizations using third-party AI APIs for clinical decision support, imaging analysis, or administrative automation face immediate risk if their API credentials were among those exposed. This incident underscores why healthcare AI implementations must enforce credential management protocols separate from application code, implement regular key rotation, and audit API access logs for unauthorized usage. Vendors integrating AI capabilities into EHR systems and point-of-care tools need documented processes to prevent developers from hardcoding authentication credentials. For healthcare consulting practices, this event reinforces the compliance and security due diligence required before recommending any external AI vendor or cloud-based AI service to health systems.",
+  "source_url": "https://ai-keys-leaks.begimher.com/",
+  "source_name": "Ai Keys Leaks",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
