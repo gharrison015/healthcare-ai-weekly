@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-court-grants-musk-s-bid-to-add-craig-federighi-to-apple-openai",
+      "headline": "Court expands Musk lawsuit against Apple and OpenAI with new defendant",
+      "timestamp": "2026-05-18T16:43:25Z",
+      "source_name": "9To5Mac",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-s-1-5b-copyright-settlement-is-getting-messy-as-ju",
+      "headline": "Anthropic's $1.5B copyright settlement faces court delays amid author disputes",
+      "timestamp": "2026-05-18T16:43:22Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "gpt-show-hn-gpt-2-inference-in-pure-c-0-bytes-allocated-per-token",
       "headline": "Memory-efficient GPT-2 inference in C# gains traction among developers",
       "timestamp": "2026-05-18T13:00:13Z",
@@ -248,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "ey-our-keyboards-are-tracking-us",
-      "headline": "Keyboard tracking tools expose new security risks in clinical environments",
-      "timestamp": "2026-05-11T16:25:03Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "openai-the-openai-deployment-company",
-      "headline": "OpenAI launches deployment company amid AI services consolidation",
-      "timestamp": "2026-05-11T16:25:01Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
