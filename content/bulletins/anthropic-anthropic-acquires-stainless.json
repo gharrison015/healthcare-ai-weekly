@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-19T12:34:29Z",
+  "slug": "anthropic-anthropic-acquires-stainless",
+  "headline": "Anthropic acquires Stainless to strengthen API infrastructure capabilities",
+  "body": "Anthropic acquired Stainless, a company focused on API development tools and infrastructure, signaling the AI vendor's push to build deeper technical capabilities in integration layers. For healthcare AI deployments, this matters because seamless API infrastructure directly impacts how quickly and reliably clinical decision support systems, EHR connectors, and real-time data pipelines can be implemented in hospital settings. Healthcare organizations evaluating Anthropic models for production workflows should expect tighter integration options and potentially faster vendor implementations as this acquisition matures. The move also reflects how AI vendors are consolidating infrastructure layers to compete in enterprise markets where healthcare systems demand robust, hospital-grade tooling alongside model capabilities.",
+  "source_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

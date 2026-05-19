@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-acquires-stainless",
+      "headline": "Anthropic acquires Stainless to strengthen API infrastructure capabilities",
+      "timestamp": "2026-05-19T12:34:29Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-hershey-bets-on-agentic-ai-to-rethink-2b-in-marketing-spend",
       "headline": "Agentic AI moves beyond marketing into autonomous enterprise operations",
       "timestamp": "2026-05-18T22:49:44Z",
@@ -288,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "claude-claude-platform-on-aws",
-      "headline": "Anthropic launches Claude Platform on AWS, reshaping AI integration options",
-      "timestamp": "2026-05-12T11:48:06Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
