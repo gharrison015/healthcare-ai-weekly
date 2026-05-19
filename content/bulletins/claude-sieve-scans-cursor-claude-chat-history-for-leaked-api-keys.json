@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-19T22:57:21Z",
+  "slug": "claude-sieve-scans-cursor-claude-chat-history-for-leaked-api-keys",
+  "headline": "Claude security gaps emerge as developers leak API keys in chat histories",
+  "body": "A new tool called Sieve is scanning Claude and Cursor chat histories to detect leaked API keys, highlighting a critical vulnerability in how developers handle sensitive credentials during AI-assisted coding sessions. For healthcare organizations deploying Claude in clinical workflows, this exposes a significant risk vector: PHI exposure through chat logs containing hardcoded credentials or unfiltered patient data. The broader ecosystem shows vendors racing to optimize Claude for agent-based tasks (with reported 79% token reduction gains), but security maturity lags deployment velocity. Healthcare AI implementations must enforce strict data governance policies around AI chat histories, credential management, and audit trails before scaling Claude agents into EHR integrations or value-based care platforms.",
+  "source_url": "https://apps.apple.com/us/app/sieve-secret-scanner/id6767409365?mt=12",
+  "source_name": "Apps",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-is-preparing-for-ipo-and-we-should-be-worried",
+      "headline": "Anthropic preps IPO while recruiting AI talent and restricting EU access",
+      "timestamp": "2026-05-19T22:57:24Z",
+      "source_name": "Vincentschmalbach",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-sieve-scans-cursor-claude-chat-history-for-leaked-api-keys",
+      "headline": "Claude security gaps emerge as developers leak API keys in chat histories",
+      "timestamp": "2026-05-19T22:57:21Z",
+      "source_name": "Apps",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-cisa-admin-leaked-aws-govcloud-keys-on-github",
       "headline": "CISA Admin Accidentally Exposes AWS GovCloud Credentials on GitHub",
       "timestamp": "2026-05-19T19:43:36Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-unauthorized-anthropic-stock-sales-and-investment-scams",
-      "headline": "Anthropic warns of stock scams as Claude adoption accelerates healthcare",
-      "timestamp": "2026-05-12T22:52:42Z",
-      "source_name": "Support",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
