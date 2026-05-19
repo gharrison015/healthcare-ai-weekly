@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-cisa-admin-leaked-aws-govcloud-keys-on-github",
+      "headline": "CISA Admin Accidentally Exposes AWS GovCloud Credentials on GitHub",
+      "timestamp": "2026-05-19T19:43:36Z",
+      "source_name": "Krebsonsecurity",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "gemini-gemini-3-5-flash-frontier-intelligence-with-action",
+      "headline": "Google releases Gemini 3.5 Flash with multimodal action capabilities",
+      "timestamp": "2026-05-19T19:43:34Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-acquires-stainless",
       "headline": "Anthropic acquires Stainless to strengthen API infrastructure capabilities",
       "timestamp": "2026-05-19T12:34:29Z",
@@ -268,16 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-sam-altman-s-business-dealings-under-gop-scrutiny-ahead-of-open",
-      "headline": "OpenAI faces political scrutiny as IPO plans advance amid governance questions",
-      "timestamp": "2026-05-12T19:28:40Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

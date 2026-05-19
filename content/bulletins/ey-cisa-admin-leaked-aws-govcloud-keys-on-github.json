@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-19T19:43:36Z",
+  "slug": "ey-cisa-admin-leaked-aws-govcloud-keys-on-github",
+  "headline": "CISA Admin Accidentally Exposes AWS GovCloud Credentials on GitHub",
+  "body": "A U.S. Cybersecurity and Infrastructure Security Agency administrator inadvertently leaked AWS GovCloud access keys on GitHub, a security breach verified across multiple sources. This incident directly threatens healthcare organizations relying on GovCloud for HIPAA-compliant infrastructure and federal health data systems. Healthcare AI vendors and health systems deploying cloud-based clinical workflows on government infrastructure must immediately audit their credential management practices and implement automated secret detection in code repositories. The breach underscores why healthcare organizations cannot treat infrastructure security as a separate concern from clinical AI deployment. Expect increased federal scrutiny of credential handling across the healthcare sector.",
+  "source_url": "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/",
+  "source_name": "Krebsonsecurity",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
