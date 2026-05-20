@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-openai-adopts-google-s-synthid-watermark-for-ai-images-with-ver",
+      "headline": "OpenAI Adopts Google's SynthID Watermark for AI-Generated Images",
+      "timestamp": "2026-05-20T12:15:35Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-we-cut-claude-s-token-usage-79-by-redesigning-our-cli-for-agent",
+      "headline": "Claude token optimization reaches 79 percent through agent workflow redesign",
+      "timestamp": "2026-05-20T12:15:32Z",
+      "source_name": "Infracost",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-is-preparing-for-ipo-and-we-should-be-worried",
       "headline": "Anthropic preps IPO while recruiting AI talent and restricting EU access",
       "timestamp": "2026-05-19T22:57:24Z",
@@ -275,26 +295,6 @@
       "headline": "Developers optimize Claude for cost efficiency amid agent AI experimentation surge",
       "timestamp": "2026-05-13T16:14:37Z",
       "source_name": "Agentank",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-show-hn-grunden-frontier-ai-inference-hosted-in-sweden-openai-c",
-      "headline": "Swedish AI startup launches OpenAI-compatible inference infrastructure",
-      "timestamp": "2026-05-13T11:55:44Z",
-      "source_name": "Grunden",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-natural-language-autoencoders-inside-claude-s-activations",
-      "headline": "Claude's Internal Activations Decoded, Reshaping AI Transparency Debate",
-      "timestamp": "2026-05-13T11:55:41Z",
-      "source_name": "Philippdubach",
       "verification": "confirmed",
       "tags": [
         "claude"

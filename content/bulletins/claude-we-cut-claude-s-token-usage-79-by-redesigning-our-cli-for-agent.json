@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-20T12:15:32Z",
+  "slug": "claude-we-cut-claude-s-token-usage-79-by-redesigning-our-cli-for-agent",
+  "headline": "Claude token optimization reaches 79 percent through agent workflow redesign",
+  "body": "Infrastructure engineering teams are achieving significant token consumption reductions by restructuring CLI interactions for Claude-powered agents, with one documented case cutting usage by 79 percent. For healthcare AI implementations, this optimization pattern directly addresses cost control in clinical decision support systems and EHR integration agents where token sprawl can quickly erode ROI on AI deployments. Health systems evaluating Claude or similar models for documentation automation, clinical workflow optimization, and data processing should apply these redesign principles to their use cases. The ability to cut computational overhead substantially while maintaining agent performance impacts vendor selection criteria and total cost of ownership calculations for enterprise healthcare AI projects.",
+  "source_url": "https://www.infracost.io/resources/blog/we-cut-claude-s-token-usage-79-by-redesigning-our-cli-for-agents",
+  "source_name": "Infracost",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
