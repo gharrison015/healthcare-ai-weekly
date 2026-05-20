@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-ask-hn-shouldn-t-google-need-to-give-a-public-statement-about-r",
+      "headline": "Google's AI credibility faces scrutiny amid transparency demands",
+      "timestamp": "2026-05-20T20:02:10Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "openai-an-openai-model-has-disproved-a-central-conjecture-in-discrete",
+      "headline": "OpenAI's AI model solves decades-old geometry problem",
+      "timestamp": "2026-05-20T20:02:04Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-openai-co-founder-andrej-karpathy-joins-anthropic",
       "headline": "OpenAI co-founder Karpathy joins Anthropic amid SDK shift",
       "timestamp": "2026-05-20T16:45:22Z",
@@ -275,26 +295,6 @@
       "headline": "Claude subscription changes spark access loss concerns among users",
       "timestamp": "2026-05-13T22:57:23Z",
       "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-altman-forced-to-confront-claims-at-openai-trial-that-he-s-a-pr",
-      "headline": "OpenAI trial exposes leadership credibility questions amid drug advice liability claims",
-      "timestamp": "2026-05-13T19:40:44Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-use-the-claude-agent-sdk-with-your-claude-plan",
-      "headline": "Anthropic launches Claude Agent SDK with dedicated monthly credits",
-      "timestamp": "2026-05-13T19:40:41Z",
-      "source_name": "Support",
       "verification": "confirmed",
       "tags": [
         "claude"
