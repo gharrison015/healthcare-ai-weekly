@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-announces-financial-results-for-first-quarter-fiscal-202",
+      "headline": "Nvidia posts record quarter as healthcare AI infrastructure demand accelerates",
+      "timestamp": "2026-05-21T16:35:19Z",
+      "source_name": "Nvidianews",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "google-google-officially-announces-that-ads-will-be-included-in-ai-mod",
       "headline": "Google embeds ads directly into AI Mode search results",
       "timestamp": "2026-05-21T12:39:15Z",
@@ -268,16 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "meta"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-forms-200m-partnership-with-the-gates-foundation",
-      "headline": "Anthropic secures $200M Gates Foundation partnership for global health AI",
-      "timestamp": "2026-05-14T16:05:20Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
