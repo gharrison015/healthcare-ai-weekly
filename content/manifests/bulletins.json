@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-officially-announces-that-ads-will-be-included-in-ai-mod",
+      "headline": "Google embeds ads directly into AI Mode search results",
+      "timestamp": "2026-05-21T12:39:15Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "anthropic-mind-blowing-growth-is-about-to-propel-anthropic-into-first",
+      "headline": "Anthropic scales infrastructure and approaches first profitable quarter",
+      "timestamp": "2026-05-21T12:39:12Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "google-ask-hn-shouldn-t-google-need-to-give-a-public-statement-about-r",
       "headline": "Google's AI credibility faces scrutiny amid transparency demands",
       "timestamp": "2026-05-20T20:02:10Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "ey-emix-emulating-beyond-single-fpga-limits",
-      "headline": "FPGA emulation breakthrough enables larger AI model inference deployments",
-      "timestamp": "2026-05-14T11:44:23Z",
-      "source_name": "Arxiv",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-claude-for-small-business",
-      "headline": "Anthropic expands Claude access for small businesses amid subscription model shifts",
-      "timestamp": "2026-05-14T11:44:20Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
