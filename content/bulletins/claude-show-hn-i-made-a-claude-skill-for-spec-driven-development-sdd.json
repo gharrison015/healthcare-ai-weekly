@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-22T12:13:25Z",
+  "slug": "claude-show-hn-i-made-a-claude-skill-for-spec-driven-development-sdd",
+  "headline": "Claude Spec-Driven Development Tool Gains Traction Among Developers",
+  "body": "A new Claude skill for spec-driven development is generating significant developer interest across multiple platforms, with 23 unique authors covering the capability. The tool enables developers to use Claude for code generation guided by formal specifications, potentially reducing ambiguity in software requirements. For healthcare AI applications, this pattern has direct relevance to clinical workflow automation and EHR integration projects, where precise specifications are critical for regulatory compliance and patient safety. Healthcare vendors and consulting teams should monitor how spec-driven approaches evolve, as they could improve the reliability and auditability of AI-assisted clinical decision support systems and documentation tools.",
+  "source_url": "https://github.com/FredAntB/Spec-Driven-Development",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

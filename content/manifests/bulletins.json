@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-google-is-dethroning-openai-as-the-king-of-consumer-ai",
+      "headline": "Google displaces OpenAI atop consumer AI landscape amid leadership shifts",
+      "timestamp": "2026-05-22T12:13:28Z",
+      "source_name": "Economist",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-i-made-a-claude-skill-for-spec-driven-development-sdd",
+      "headline": "Claude Spec-Driven Development Tool Gains Traction Among Developers",
+      "timestamp": "2026-05-22T12:13:25Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-to-open-milan-office-expanding-push-into-europe",
       "headline": "Anthropic expands Europe footprint while scaling enterprise AI infrastructure",
       "timestamp": "2026-05-21T22:58:17Z",
@@ -285,16 +305,6 @@
       "headline": "Claude Code gains traction while Microsoft pulls support, reshaping AI coding landscape",
       "timestamp": "2026-05-15T15:57:25Z",
       "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "claude-bitcoin-trader-recovers-wallet-with-help-of-claude",
-      "headline": "Claude's brute force capabilities spark questions about security and scale",
-      "timestamp": "2026-05-15T11:47:53Z",
-      "source_name": "Tomshardware",
       "verification": "confirmed",
       "tags": [
         "claude"
