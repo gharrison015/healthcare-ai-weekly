@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-steve-wozniak-cheered-after-telling-students-they-have-ai-actual-in",
+      "headline": "Tech Leaders Split on AI's Role in Human Capability and Learning",
+      "timestamp": "2026-05-22T19:23:43Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-microsoft-starts-canceling-claude-code-licenses",
+      "headline": "Microsoft cancels Claude Code licenses, reshaping AI coding tool landscape",
+      "timestamp": "2026-05-22T19:23:40Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gemini-tell-hn-gemini-3-5-flash-breaks-in-stupid-ways",
       "headline": "Gemini 3.5 Flash defaults globally despite documented production failures",
       "timestamp": "2026-05-22T16:15:24Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-where-s-ed-anthropic-told-court-5b-but-public-19b",
-      "headline": "Anthropic valuation discrepancies raise questions about AI vendor reliability",
-      "timestamp": "2026-05-15T19:17:12Z",
-      "source_name": "Flyingpenguin",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-openai-is-connecting-chatgpt-to-bank-accounts-via-plaid",
-      "headline": "OpenAI expands ChatGPT capabilities with financial data integration via Plaid",
-      "timestamp": "2026-05-15T19:17:09Z",
-      "source_name": "Firethering",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
