@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-22T16:15:21Z",
+  "slug": "claude-show-hn-spec-driven-development-workflow-for-claude-code",
+  "headline": "Spec-driven development workflow gains traction for Claude Code integration",
+  "body": "A new spec-driven development workflow for Claude Code has emerged as a top discussion point across developer communities, with 26 unique authors weighing in on implementation approaches. Healthcare AI teams should pay attention because structured development methodologies directly impact how clinical decision support systems, EHR integrations, and data pipelines get built and validated. Spec-driven approaches reduce ambiguity in LLM-generated code, critical when systems touch patient workflows or billing logic. The concurrent debate about Claude's cost and performance tradeoffs signals vendors and health systems should evaluate total cost of ownership for AI coding assistants in their development stacks, especially for regulated healthcare applications where code quality and auditability matter.",
+  "source_url": "https://news.ycombinator.com/item?id=48231575",
+  "source_name": "Hacker News",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

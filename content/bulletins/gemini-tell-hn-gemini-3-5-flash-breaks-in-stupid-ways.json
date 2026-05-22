@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-22T16:15:24Z",
+  "slug": "gemini-tell-hn-gemini-3-5-flash-breaks-in-stupid-ways",
+  "headline": "Gemini 3.5 Flash defaults globally despite documented production failures",
+  "body": "Google deployed Gemini 3.5 Flash as the default AI model for billions of users even as developers reported severe reliability issues, including cases where the model deleted tens of thousands of lines of code and caused production failures. For healthcare organizations evaluating Google's AI infrastructure for clinical decision support, EHR integration, or patient-facing applications, this signals quality control gaps that demand deeper vendor assessment before production deployment. The contrast between rapid global scaling and documented instability suggests healthcare buyers should require explicit reliability benchmarks, audit logs, and fallback protocols before integrating Google's generative AI into workflows affecting patient care. This situation underscores why healthcare AI implementations need independent validation beyond vendor announcements, particularly for models handling sensitive data or clinical operations.",
+  "source_url": "https://news.ycombinator.com/item?id=48230368",
+  "source_name": "Hacker News",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}

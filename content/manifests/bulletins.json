@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-tell-hn-gemini-3-5-flash-breaks-in-stupid-ways",
+      "headline": "Gemini 3.5 Flash defaults globally despite documented production failures",
+      "timestamp": "2026-05-22T16:15:24Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-spec-driven-development-workflow-for-claude-code",
+      "headline": "Spec-driven development workflow gains traction for Claude Code integration",
+      "timestamp": "2026-05-22T16:15:21Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-google-is-dethroning-openai-as-the-king-of-consumer-ai",
       "headline": "Google displaces OpenAI atop consumer AI landscape amid leadership shifts",
       "timestamp": "2026-05-22T12:13:28Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "openai-apple-openai-relationship-frays-setting-up-possible-legal-fight",
-      "headline": "Apple-OpenAI partnership deteriorates as legal conflict looms",
-      "timestamp": "2026-05-15T15:57:27Z",
-      "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-how-claude-code-works-in-large-codebases",
-      "headline": "Claude Code gains traction while Microsoft pulls support, reshaping AI coding landscape",
-      "timestamp": "2026-05-15T15:57:25Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
