@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T12:56:20Z",
+  "slug": "claude-claude-is-not-your-architect-stop-letting-it-pretend",
+  "headline": "Healthcare teams debate Claude's limits as architectural decision tool",
+  "body": "Discussions across developer communities reveal significant skepticism about using Claude as a primary architect for complex systems, with concerns ranging from design oversight capabilities to potential remote prompt injection vulnerabilities. For healthcare AI implementations, this matters critically because clinical workflows depend on validated architectural decisions, and relying on Claude for system design without human oversight could introduce compliance and safety gaps. EHR integrations, data governance frameworks, and HIPAA-compliant infrastructure require human architects who take final responsibility. Healthcare organizations should treat Claude as a capable development assistant rather than a replacement for licensed architects, particularly when designing systems that directly impact patient care delivery or data security.",
+  "source_url": "https://www.hollandtech.net/claude-is-not-your-architect/",
+  "source_name": "Hollandtech",
+  "velocity_score": 76,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

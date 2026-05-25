@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T12:56:23Z",
+  "slug": "ey-can-t-they-get-the-small-science-stuff-right",
+  "headline": "AI vulnerability detection outpaces patch cycles in critical infrastructure",
+  "body": "Security researchers report that AI systems now identify software vulnerabilities faster than development teams can release patches, creating a widening gap in infrastructure protection. For healthcare systems, this gap poses direct risk to EHR platforms, medical devices, and cloud-based clinical tools that depend on timely security updates. The velocity of AI-driven threat detection exceeds human patch management capabilities, meaning healthcare IT leaders must fundamentally shift from reactive patching to predictive vulnerability frameworks. This dynamic reshapes vendor accountability in healthcare AI procurement and creates new consulting demands around continuous security monitoring for clinical workflows. Healthcare organizations should prioritize vendors demonstrating rapid patch deployment and AI-assisted vulnerability assessment as baseline requirements rather than optional capabilities.",
+  "source_url": "https://www.theguardian.com/commentisfree/2026/may/24/hill-i-will-die-on-hollywood-blockbusters-science",
+  "source_name": "Theguardian",
+  "velocity_score": 64,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
