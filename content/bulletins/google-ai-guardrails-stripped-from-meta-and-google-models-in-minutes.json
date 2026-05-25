@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T16:15:36Z",
+  "slug": "google-ai-guardrails-stripped-from-meta-and-google-models-in-minutes",
+  "headline": "Security researchers bypass Google and Meta AI safety guardrails in minutes",
+  "body": "Researchers demonstrated that safety guardrails protecting Google and Meta's large language models can be stripped away in minutes, according to reporting from the Financial Times. This vulnerability matters for healthcare AI because clinical LLMs increasingly power diagnostic support, clinical documentation, and patient-facing chatbots where guardrail failures create direct patient safety and liability risks. If healthcare organizations deploy these models without additional protective measures, compromised guardrails could expose sensitive patient data or generate harmful medical advice. Healthcare AI vendors and health systems must now reassess their model selection criteria and implement organizational controls beyond manufacturer safeguards.",
+  "source_url": "https://www.ft.com/content/5630ed79-a263-41ed-9a1a-321617ae310e",
+  "source_name": "Financial Times",
+  "velocity_score": 77,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}

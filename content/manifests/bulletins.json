@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-ai-guardrails-stripped-from-meta-and-google-models-in-minutes",
+      "headline": "Security researchers bypass Google and Meta AI safety guardrails in minutes",
+      "timestamp": "2026-05-25T16:15:36Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "ey-can-t-they-get-the-small-science-stuff-right",
       "headline": "AI vulnerability detection outpaces patch cycles in critical infrastructure",
       "timestamp": "2026-05-25T12:56:23Z",
@@ -308,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "gpt-show-hn-gpt-2-inference-in-pure-c-0-bytes-allocated-per-token",
-      "headline": "Memory-efficient GPT-2 inference in C# gains traction among developers",
-      "timestamp": "2026-05-18T13:00:13Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "ey-ai-leak-watch-435-608-potential-ai-api-key-matches-in-public-github",
-      "headline": "Over 435K AI API keys exposed in public GitHub repositories",
-      "timestamp": "2026-05-18T13:00:10Z",
-      "source_name": "Ai Keys Leaks",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
