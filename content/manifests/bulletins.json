@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-trump-s-25-cut-on-nvidia-chips-to-china-backfired-as-beijing-bl",
+      "headline": "US-China chip tensions escalate as Nvidia faces export restrictions",
+      "timestamp": "2026-05-26T19:56:00Z",
+      "source_name": "Finance",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "ey-investigation-update-github-enterprise-server-signing-key-rotation",
+      "headline": "GitHub Enterprise Server breach exposes healthcare AI infrastructure risks",
+      "timestamp": "2026-05-26T19:55:57Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "gpt-gpt-image-2-left-me-amazed-but-exhausted-so-i-built-a-little-tool",
       "headline": "Developers build GPT image tools while security threats escalate",
       "timestamp": "2026-05-26T17:21:18Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "ey-cisa-admin-leaked-aws-govcloud-keys-on-github",
-      "headline": "CISA Admin Accidentally Exposes AWS GovCloud Credentials on GitHub",
-      "timestamp": "2026-05-19T19:43:36Z",
-      "source_name": "Krebsonsecurity",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "gemini-gemini-3-5-flash-frontier-intelligence-with-action",
-      "headline": "Google releases Gemini 3.5 Flash with multimodal action capabilities",
-      "timestamp": "2026-05-19T19:43:34Z",
-      "source_name": "Blog",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
       ]
     }
   ]

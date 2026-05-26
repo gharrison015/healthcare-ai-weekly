@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-26T19:55:57Z",
+  "slug": "ey-investigation-update-github-enterprise-server-signing-key-rotation",
+  "headline": "GitHub Enterprise Server breach exposes healthcare AI infrastructure risks",
+  "body": "GitHub disclosed unauthorized access to its internal repositories after detecting compromised signing keys in GitHub Enterprise Server, prompting a security investigation and key rotation. Healthcare organizations using GitHub Enterprise for clinical AI model development, EHR integrations, or proprietary healthcare algorithms must audit their repository access logs and assess exposure of sensitive code. The incident highlights supply chain vulnerabilities in healthcare AI tooling: if source code for diagnostic models, data pipelines, or vendor integrations leaked, competitors and bad actors gain architectural intelligence on clinical implementations. Healthcare IT teams should immediately review their GitHub Enterprise configurations, enforce multi-factor authentication, and rotate any credentials stored in affected repositories. This breach underscores why healthcare AI vendors and health systems cannot treat development infrastructure as separate from clinical risk management.",
+  "source_url": "https://github.blog/security/investigating-unauthorized-access-to-githubs-internal-repositories/",
+  "source_name": "Github",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
