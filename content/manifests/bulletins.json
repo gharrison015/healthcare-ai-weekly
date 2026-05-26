@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-image-2-left-me-amazed-but-exhausted-so-i-built-a-little-tool",
+      "headline": "Developers build GPT image tools while security threats escalate",
+      "timestamp": "2026-05-26T17:21:18Z",
+      "source_name": "Imagesv2",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "nvidia-michael-burry-warns-nvidia-stock-faces-aggressive-fall",
+      "headline": "Nvidia Vera CPU benchmarks show strength amid stock skepticism",
+      "timestamp": "2026-05-26T17:21:15Z",
+      "source_name": "Letsdatascience",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-cofounder-chris-olah-s-remarks-on-pope-leo-xiv-s-m",
       "headline": "Anthropic cofounder calls for external AI governance beyond tech industry",
       "timestamp": "2026-05-25T22:52:08Z",
@@ -288,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "gemini"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-acquires-stainless",
-      "headline": "Anthropic acquires Stainless to strengthen API infrastructure capabilities",
-      "timestamp": "2026-05-19T12:34:29Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
