@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-cve-2026-28952-apple-macos-26-5-kernel-vuln-found-by-claude",
+      "headline": "Claude AI finds critical macOS kernel vulnerability, raising security questions",
+      "timestamp": "2026-05-26T23:01:45Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-trump-s-25-cut-on-nvidia-chips-to-china-backfired-as-beijing-bl",
       "headline": "US-China chip tensions escalate as Nvidia faces export restrictions",
       "timestamp": "2026-05-26T19:56:00Z",
@@ -285,26 +295,6 @@
       "headline": "Claude token optimization reaches 79 percent through agent workflow redesign",
       "timestamp": "2026-05-20T12:15:32Z",
       "source_name": "Infracost",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-is-preparing-for-ipo-and-we-should-be-worried",
-      "headline": "Anthropic preps IPO while recruiting AI talent and restricting EU access",
-      "timestamp": "2026-05-19T22:57:24Z",
-      "source_name": "Vincentschmalbach",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-sieve-scans-cursor-claude-chat-history-for-leaked-api-keys",
-      "headline": "Claude security gaps emerge as developers leak API keys in chat histories",
-      "timestamp": "2026-05-19T22:57:21Z",
-      "source_name": "Apps",
       "verification": "confirmed",
       "tags": [
         "claude"
