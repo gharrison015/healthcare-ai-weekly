@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-27T12:47:33Z",
+  "slug": "claude-claude-code-as-a-daily-driver-claude-md-skills-subagents-plugin",
+  "headline": "Claude emerges as production-grade coding assistant amid capability debate",
+  "body": "Anthropic's Claude is gaining traction as a daily coding driver with new extensibility features including skills, subagents, and model context protocols (MCPs), according to multi-source developer discussion this week. The momentum reflects broader industry momentum toward AI-assisted code generation in production environments. For healthcare AI teams, this signals maturation in AI coding assistants that could accelerate EHR integration work, clinical workflow automation, and regulatory documentation. However, parallel discussions about measurement frameworks and potential capability degradation suggest healthcare organizations need robust evaluation protocols before adopting Claude for mission-critical systems. Consulting teams advising on AI tooling should prepare clients with clear benchmarking approaches and containment strategies specific to regulated healthcare workflows.",
+  "source_url": "https://arps18.github.io/posts/claude-code-mastery/",
+  "source_name": "Arps18",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

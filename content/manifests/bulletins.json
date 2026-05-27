@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-s-dogma-on-us-china-ai-competition",
+      "headline": "Anthropic reaches $900B valuation amid geopolitical tensions",
+      "timestamp": "2026-05-27T12:47:36Z",
+      "source_name": "Chinai",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-as-a-daily-driver-claude-md-skills-subagents-plugin",
+      "headline": "Claude emerges as production-grade coding assistant amid capability debate",
+      "timestamp": "2026-05-27T12:47:33Z",
+      "source_name": "Arps18",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-cve-2026-28952-apple-macos-26-5-kernel-vuln-found-by-claude",
       "headline": "Claude AI finds critical macOS kernel vulnerability, raising security questions",
       "timestamp": "2026-05-26T23:01:45Z",
@@ -275,26 +295,6 @@
       "headline": "Claude Code gains traction as developers build autonomous workflows",
       "timestamp": "2026-05-20T16:45:19Z",
       "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "google-openai-adopts-google-s-synthid-watermark-for-ai-images-with-ver",
-      "headline": "OpenAI Adopts Google's SynthID Watermark for AI-Generated Images",
-      "timestamp": "2026-05-20T12:15:35Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-we-cut-claude-s-token-usage-79-by-redesigning-our-cli-for-agent",
-      "headline": "Claude token optimization reaches 79 percent through agent workflow redesign",
-      "timestamp": "2026-05-20T12:15:32Z",
-      "source_name": "Infracost",
       "verification": "confirmed",
       "tags": [
         "claude"
