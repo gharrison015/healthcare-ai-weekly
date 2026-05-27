@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-duckduckgo-search-saw-28-more-visits-after-google-said-people-l",
+      "headline": "User backlash against Google AI features drives competitor adoption surge",
+      "timestamp": "2026-05-27T16:57:08Z",
+      "source_name": "Pcgamer",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-s-dogma-on-us-china-ai-competition",
       "headline": "Anthropic reaches $900B valuation amid geopolitical tensions",
       "timestamp": "2026-05-27T12:47:36Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-openai-co-founder-andrej-karpathy-joins-anthropic",
-      "headline": "OpenAI co-founder Karpathy joins Anthropic amid SDK shift",
-      "timestamp": "2026-05-20T16:45:22Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-using-claude-code-the-unreasonable-effectiveness-of-html",
-      "headline": "Claude Code gains traction as developers build autonomous workflows",
-      "timestamp": "2026-05-20T16:45:19Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
