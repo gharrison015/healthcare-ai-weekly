@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-27T23:10:20Z",
+  "slug": "ey-gemini-gophers-and-fingers-oh-my-alternative-internets-beyond-https",
+  "headline": "Alternative internet protocols gain traction among developers building offline AI systems",
+  "body": "Developer communities are exploring Gemini, Gopher, and other non-HTTPS protocols as viable alternatives for hosting and accessing services, with discussions spanning local LLM deployment and agentic endpoints. For healthcare AI, this matters because clinical environments often operate under strict network isolation requirements and bandwidth constraints that make alternative protocols potentially valuable for on-premises model serving. The ability to run local LLMs with API-key rate limiting directly addresses concerns about data residency and compliance in regulated healthcare settings. As healthcare organizations evaluate agentic AI for clinical workflows and EHR integration, understanding these alternative infrastructure approaches becomes relevant for vendors and implementers managing deployment options beyond standard cloud connectivity.",
+  "source_url": "https://brennan.day/gemini-gophers-and-fingers-oh-my-alternative-internets-beyond-https/",
+  "source_name": "Brennan",
+  "velocity_score": 84,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

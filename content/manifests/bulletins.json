@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-tiny-gpt-in-go-optimised-for-understanding-trained-on-jules-verne",
+      "headline": "Lightweight GPT implementations gain traction as cost optimization pressures mount",
+      "timestamp": "2026-05-27T23:10:23Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "ey-gemini-gophers-and-fingers-oh-my-alternative-internets-beyond-https",
+      "headline": "Alternative internet protocols gain traction among developers building offline AI systems",
+      "timestamp": "2026-05-27T23:10:20Z",
+      "source_name": "Brennan",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "anthropic-i-think-anthropic-and-openai-have-found-product-market-fit",
       "headline": "Anthropic and OpenAI achieve product-market fit as competition intensifies",
       "timestamp": "2026-05-27T19:59:41Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "google-ask-hn-shouldn-t-google-need-to-give-a-public-statement-about-r",
-      "headline": "Google's AI credibility faces scrutiny amid transparency demands",
-      "timestamp": "2026-05-20T20:02:10Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "openai-an-openai-model-has-disproved-a-central-conjecture-in-discrete",
-      "headline": "OpenAI's AI model solves decades-old geometry problem",
-      "timestamp": "2026-05-20T20:02:04Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
