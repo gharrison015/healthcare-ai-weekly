@@ -37,8 +37,9 @@ jobs:
             echo "Keepalive WRITE failed — Supabase may be paused, creds rotated, or keepalive_log table missing (apply supabase/keepalive.sql)."
             exit 1
           fi
-          # Confirm the response body contains the timestamp we just wrote.
-          if ! grep -q "${now}" /tmp/body; then
+          # Confirm the response body echoes the timestamp we just wrote.
+          # Strip trailing Z because Postgres returns the same instant as "+00:00".
+          if ! grep -q "${now%Z}" /tmp/body; then
             echo "Keepalive WRITE returned 200 but response did not echo the new timestamp."
             exit 1
           fi
