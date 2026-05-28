@@ -16,20 +16,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Ping subscribers table
+      - name: Write to keepalive_log
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
           set -euo pipefail
+          now=$(date -u +%FT%TZ)
           code=$(curl -sS -o /tmp/body -w "%{http_code}" \
-            "${SUPABASE_URL}/rest/v1/subscribers?select=id&limit=1" \
+            -X PATCH "${SUPABASE_URL}/rest/v1/keepalive_log?id=eq.1" \
             -H "apikey: ${SUPABASE_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_KEY}")
+            -H "Authorization: Bearer ${SUPABASE_KEY}" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: return=representation" \
+            -d "{\"pinged_at\": \"${now}\"}")
           echo "HTTP ${code}"
           head -c 500 /tmp/body || true
           echo
           if [ "${code}" != "200" ]; then
-            echo "Keepalive failed — Supabase may be paused or creds rotated."
+            echo "Keepalive WRITE failed — Supabase may be paused, creds rotated, or keepalive_log table missing (apply supabase/keepalive.sql)."
+            exit 1
+          fi
+          # Confirm the response body contains the timestamp we just wrote.
+          if ! grep -q "${now}" /tmp/body; then
+            echo "Keepalive WRITE returned 200 but response did not echo the new timestamp."
             exit 1
           fi
