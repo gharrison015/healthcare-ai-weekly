@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "meta-meta-launches-instagram-facebook-and-whatsapp-subscriptions-inclu",
+      "headline": "Meta monetizes AI through paid subscriptions across social platforms",
+      "timestamp": "2026-05-28T17:31:47Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ey-do-they-know-we-can-tell-it-s-ai-slop",
+      "headline": "AI-generated content detection becomes critical as healthcare systems face quality risks",
+      "timestamp": "2026-05-28T17:31:44Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "gpt-validate-a-physical-product-idea-in-15-minutes-with-a-free-gpt",
       "headline": "OpenAI's rapid product validation GPT signals faster clinical tool prototyping",
       "timestamp": "2026-05-28T13:41:05Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-announces-financial-results-for-first-quarter-fiscal-202",
-      "headline": "Nvidia posts record quarter as healthcare AI infrastructure demand accelerates",
-      "timestamp": "2026-05-21T16:35:19Z",
-      "source_name": "Nvidianews",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
