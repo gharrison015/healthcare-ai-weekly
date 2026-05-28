@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-28T20:08:26Z",
+  "slug": "claude-claude-opus-4-8",
+  "headline": "Anthropic releases Claude Opus 4.8 amid cost competition and security concerns",
+  "body": "Anthropic released Claude Opus 4.8 with enhanced dynamic workflows capabilities, generating significant developer attention across platforms. The release coincides with growing cost-sensitivity in the AI market, as users report 99% API savings by switching to alternative models like DeepSeek. For healthcare AI implementations, this creates a critical decision point: organizations must weigh Claude's performance and safety track record against emerging cost pressures and competitive alternatives. Security incidents targeting Claude users also underscore the importance of vetting vendor security posture when deploying AI in clinical environments. Healthcare teams evaluating foundation models should treat this moment as a reset opportunity to compare total cost of ownership, clinical task suitability, and security controls across the evolving vendor landscape.",
+  "source_url": "https://www.anthropic.com/news/claude-opus-4-8",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

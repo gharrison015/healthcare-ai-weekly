@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-raises-65b-in-series-h-funding-at-965b-post-money",
+      "headline": "Anthropic's $65B funding round reshapes AI startup valuation hierarchy",
+      "timestamp": "2026-05-28T20:08:28Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-opus-4-8",
+      "headline": "Anthropic releases Claude Opus 4.8 amid cost competition and security concerns",
+      "timestamp": "2026-05-28T20:08:26Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-meta-launches-instagram-facebook-and-whatsapp-subscriptions-inclu",
       "headline": "Meta monetizes AI through paid subscriptions across social platforms",
       "timestamp": "2026-05-28T17:31:47Z",
@@ -288,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "openai-openai-to-confidentially-file-for-ipo-as-soon-as-friday",
-      "headline": "OpenAI IPO filing imminent as AI market leadership shifts",
-      "timestamp": "2026-05-21T19:43:18Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
