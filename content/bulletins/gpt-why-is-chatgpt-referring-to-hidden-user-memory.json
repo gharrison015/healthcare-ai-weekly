@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-29T23:04:04Z",
+  "slug": "gpt-why-is-chatgpt-referring-to-hidden-user-memory",
+  "headline": "ChatGPT's hidden memory feature raises questions about data persistence",
+  "body": "OpenAI has deployed a memory system in ChatGPT that references retained user data, sparking discussion about how the model stores and accesses conversation history. For healthcare organizations, this development carries direct implications for patient privacy compliance and EHR integration workflows. Any persistent memory mechanism in generative AI systems used in clinical settings must align with HIPAA requirements and clear audit trails. Healthcare vendors evaluating ChatGPT for clinical documentation or decision support need immediate clarity on what data ChatGPT retains, how long it persists, and whether it meets regulated data handling standards. This feature demands explicit review before deployment in patient-facing or data-sensitive healthcare workflows.",
+  "source_url": "https://aiweekly.co/alerts/openai-deploys-silent-memory-pre-flight-in-chatgpt",
+  "source_name": "Aiweekly",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
