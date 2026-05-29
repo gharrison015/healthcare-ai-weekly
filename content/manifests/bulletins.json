@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-llms-believe-false-statements-even-after-explicit-warnings-that-the",
+      "headline": "LLMs retain false beliefs despite explicit contradictions, raising clinical safety concerns",
+      "timestamp": "2026-05-29T20:08:43Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-s-growth-is-just-the-tip-of-the-sphere-for-ai-rall",
+      "headline": "Anthropic surpasses OpenAI valuation as enterprise AI consolidation accelerates",
+      "timestamp": "2026-05-29T20:08:40Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "gemini-apple-working-to-cram-gemini-into-iphone",
       "headline": "Apple pursues on-device Gemini deployment for iPhone intelligence",
       "timestamp": "2026-05-29T17:27:32Z",
@@ -255,26 +275,6 @@
       "headline": "Healthcare teams debate Claude's limits as architectural decision tool",
       "timestamp": "2026-05-25T12:56:20Z",
       "source_name": "Hollandtech",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "ey-steve-wozniak-cheered-after-telling-students-they-have-ai-actual-in",
-      "headline": "Tech Leaders Split on AI's Role in Human Capability and Learning",
-      "timestamp": "2026-05-22T19:23:43Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-microsoft-starts-canceling-claude-code-licenses",
-      "headline": "Microsoft cancels Claude Code licenses, reshaping AI coding tool landscape",
-      "timestamp": "2026-05-22T19:23:40Z",
-      "source_name": "The Verge",
       "verification": "confirmed",
       "tags": [
         "claude"

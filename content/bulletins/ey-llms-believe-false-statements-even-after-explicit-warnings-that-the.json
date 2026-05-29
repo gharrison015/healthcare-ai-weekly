@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-29T20:08:43Z",
+  "slug": "ey-llms-believe-false-statements-even-after-explicit-warnings-that-the",
+  "headline": "LLMs retain false beliefs despite explicit contradictions, raising clinical safety concerns",
+  "body": "Research shows large language models continue to believe false statements even after being explicitly told they are incorrect. This finding directly threatens clinical AI applications where accuracy is non-negotiable. Healthcare systems deploying LLMs for documentation, clinical decision support, or EHR integration must now confront a fundamental reliability problem: these models cannot be corrected through standard instruction methods. The implications are severe for value-based care models that depend on accurate data capture and for healthcare organizations seeking AI vendors. Until this persistence-of-false-belief issue is solved, LLMs cannot be safely deployed for clinical workflows where patient safety depends on factual accuracy.",
+  "source_url": "https://arstechnica.com/ai/2026/05/llms-believe-false-statements-even-after-explicit-warnings-that-theyre-false/",
+  "source_name": "Ars Technica",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
