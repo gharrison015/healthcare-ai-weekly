@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-apple-working-to-cram-gemini-into-iphone",
+      "headline": "Apple pursues on-device Gemini deployment for iPhone intelligence",
+      "timestamp": "2026-05-29T17:27:32Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-everything-you-can-configure-that-the-docs-don-t-te",
+      "headline": "Claude Code configuration depths emerge as developers unlock hidden customization options",
+      "timestamp": "2026-05-29T17:27:30Z",
+      "source_name": "Buildingbetter",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-why-do-llm-keys-all-start-with-sk",
       "headline": "LLM API security practices draw scrutiny as healthcare vendors scale deployments",
       "timestamp": "2026-05-29T12:41:27Z",
@@ -255,26 +275,6 @@
       "headline": "Microsoft cancels Claude Code licenses, reshaping AI coding tool landscape",
       "timestamp": "2026-05-22T19:23:40Z",
       "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "gemini-tell-hn-gemini-3-5-flash-breaks-in-stupid-ways",
-      "headline": "Gemini 3.5 Flash defaults globally despite documented production failures",
-      "timestamp": "2026-05-22T16:15:24Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-spec-driven-development-workflow-for-claude-code",
-      "headline": "Spec-driven development workflow gains traction for Claude Code integration",
-      "timestamp": "2026-05-22T16:15:21Z",
-      "source_name": "Hacker News",
       "verification": "confirmed",
       "tags": [
         "claude"

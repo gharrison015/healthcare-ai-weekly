@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-29T17:27:32Z",
+  "slug": "gemini-apple-working-to-cram-gemini-into-iphone",
+  "headline": "Apple pursues on-device Gemini deployment for iPhone intelligence",
+  "body": "Apple is working to distill Google's Gemini model down to run directly on iPhones, according to multiple reporting sources. This reflects the industry shift toward on-device AI inference rather than cloud-dependent processing. For healthcare, on-device Gemini could enable real-time clinical decision support, faster EHR documentation, and improved patient privacy by processing sensitive health data locally. The move also signals that vendors will need to evaluate which large language models can meet both performance and compliance requirements for clinical workflows. Apple's approach may reshape how healthcare organizations evaluate AI infrastructure costs and data residency obligations.",
+  "source_url": "https://arstechnica.com/ai/2026/05/apple-reportedly-trying-to-distill-googles-multi-trillion-parameter-gemini-ai-to-run-on-iphone/",
+  "source_name": "Ars Technica",
+  "velocity_score": 75,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}

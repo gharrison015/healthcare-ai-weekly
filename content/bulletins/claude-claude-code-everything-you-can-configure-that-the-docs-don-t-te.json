@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-29T17:27:30Z",
+  "slug": "claude-claude-code-everything-you-can-configure-that-the-docs-don-t-te",
+  "headline": "Claude Code configuration depths emerge as developers unlock hidden customization options",
+  "body": "Developers are discovering undocumented configuration options in Claude Code through source code analysis, with a lead article detailing customization capabilities missing from official documentation. For healthcare AI implementations, this matters because clinical workflow automation often requires fine-tuned model behavior that documentation alone cannot support. Healthcare organizations deploying Claude-based tools for EHR integration, documentation assistance, or clinical decision support need visibility into these configuration levers to ensure HIPAA compliance, audit trails, and deterministic outputs. The emergence of community tools like Python utility packages for Claude Code hooks signals that healthcare vendors may need deeper technical expertise than standard documentation provides to build production-grade solutions. This gap between published specs and actual capabilities should inform procurement decisions and integration planning for health systems evaluating Claude-powered applications.",
+  "source_url": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
+  "source_name": "Buildingbetter",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
