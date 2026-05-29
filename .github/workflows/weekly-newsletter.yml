@@ -2,15 +2,22 @@ name: Weekly Newsletter
 
 on:
   schedule:
-    # Primary: Fridays ~5:07 AM ET during EDT (9:07 UTC). Off-the-hour
-    # to dodge GitHub Actions' top-of-hour load spike, which has caused
-    # missed runs (e.g. 2026-05-01 with the old `0 9` schedule).
-    # During EST (Nov-Mar) this fires at 4:07am ET. Accept the shift.
-    - cron: '7 9 * * 5'
-    # Backup: Fridays ~9:23 AM ET (13:23 UTC). Skips if the primary
-    # already published. Catches the cases where the primary cron
-    # is delayed or never fires.
-    - cron: '23 13 * * 5'
+    # Target send window: 5:00-6:30 AM ET, every Friday, year-round.
+    #
+    # GitHub cron is UTC-only and best-effort (runs are delayed under load
+    # and occasionally dropped). So instead of one punctual cron, we STACK
+    # attempts every 15 min and let the "guard" step below drop any attempt
+    # that lands outside the real ET window or after the issue is published.
+    # The first attempt GitHub actually grants a runner does the send; the
+    # rest are ~15s no-ops via the already-published guard + concurrency group.
+    #
+    # The :07/:22/:37/:52 offset dodges the top-of-hour load spike.
+    # The 9-11 UTC span covers BOTH daylight regimes:
+    #   EDT (Mar-Nov): 5:00-6:30 ET = 09:00-10:30 UTC
+    #   EST (Nov-Mar): 5:00-6:30 ET = 10:00-11:30 UTC
+    # Out-of-window attempts (e.g. 09:07 UTC during EST = 4:07 ET) are
+    # skipped by the ET-window guard, so they never send early/late.
+    - cron: '7,22,37,52 9-11 * * 5'
   workflow_dispatch:
     inputs:
       date_override:
@@ -65,16 +72,32 @@ jobs:
           echo "date=$DATE" >> "$GITHUB_OUTPUT"
           echo "Issue date: $DATE"
 
-      - name: Skip if already published
+      - name: Skip if outside ET window or already published
         id: guard
         run: |
           DATE="${{ steps.date.outputs.date }}"
+
+          # On SCHEDULED runs only, enforce the 5:00-6:30am ET send window.
+          # The crons fan out across 9-11 UTC (covering both EDT and EST);
+          # this guard drops any attempt whose real ET wall-clock time is
+          # outside the window, so we never send early or late regardless of
+          # daylight saving. Manual workflow_dispatch runs bypass this check
+          # so you can trigger a send at any time.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            NOW_ET=$((10#$(TZ='America/New_York' date '+%H%M')))
+            if [ "$NOW_ET" -lt 500 ] || [ "$NOW_ET" -gt 630 ]; then
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              echo "Now $(TZ='America/New_York' date '+%H:%M %Z') is outside the 05:00-06:30 ET window. Skipping this attempt."
+              exit 0
+            fi
+          fi
+
           if [ -f "content/issues/$DATE/index.html" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Issue $DATE already exists in content/. Skipping pipeline (backup cron is a no-op when primary succeeded)."
+            echo "Issue $DATE already published. Skipping (an earlier attempt already sent it)."
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
-            echo "Issue $DATE not yet published. Proceeding."
+            echo "Issue $DATE not yet published and within window. Proceeding."
           fi
 
       - name: Run collector
