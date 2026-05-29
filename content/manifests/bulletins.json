@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-why-do-llm-keys-all-start-with-sk",
+      "headline": "LLM API security practices draw scrutiny as healthcare vendors scale deployments",
+      "timestamp": "2026-05-29T12:41:27Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-raises-65b-in-series-h-funding-at-965b-post-money",
       "headline": "Anthropic's $65B funding round reshapes AI startup valuation hierarchy",
       "timestamp": "2026-05-28T20:08:28Z",
@@ -265,26 +275,6 @@
       "headline": "Spec-driven development workflow gains traction for Claude Code integration",
       "timestamp": "2026-05-22T16:15:21Z",
       "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-google-is-dethroning-openai-as-the-king-of-consumer-ai",
-      "headline": "Google displaces OpenAI atop consumer AI landscape amid leadership shifts",
-      "timestamp": "2026-05-22T12:13:28Z",
-      "source_name": "Economist",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-i-made-a-claude-skill-for-spec-driven-development-sdd",
-      "headline": "Claude Spec-Driven Development Tool Gains Traction Among Developers",
-      "timestamp": "2026-05-22T12:13:25Z",
-      "source_name": "Github",
       "verification": "confirmed",
       "tags": [
         "claude"

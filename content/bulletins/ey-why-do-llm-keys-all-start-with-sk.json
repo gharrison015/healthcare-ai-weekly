@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-29T12:41:27Z",
+  "slug": "ey-why-do-llm-keys-all-start-with-sk",
+  "headline": "LLM API security practices draw scrutiny as healthcare vendors scale deployments",
+  "body": "Widespread discussion across developer communities reveals questions about LLM API key conventions and potential security implications as these systems proliferate. For healthcare organizations deploying AI-assisted clinical workflows, EHR integrations, or diagnostic support systems, understanding API security practices directly impacts patient data protection and regulatory compliance. Healthcare vendors must validate that their LLM integrations follow robust key management standards, especially given that foundation models can produce false outputs even when explicitly warned against them. This matters for value-based care implementations where AI assists in clinical decision-making and data handling requires HIPAA-level security controls. Healthcare AI consultants should audit vendor practices around API key generation and rotation as part of due diligence for any LLM-dependent clinical deployment.",
+  "source_url": "https://news.ycombinator.com/item?id=48311226",
+  "source_name": "Hacker News",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
