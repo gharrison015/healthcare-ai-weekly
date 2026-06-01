@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-llms-are-closer-to-religion-than-they-appear",
+      "headline": "LLM theology emerges as critical blindspot for healthcare AI deployment",
+      "timestamp": "2026-06-01T23:21:58Z",
+      "source_name": "The Register",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-confidentially-submits-draft-s-1-to-the-sec",
       "headline": "Anthropic Files for IPO, Signaling Major Shift in AI Capital Markets",
       "timestamp": "2026-06-01T21:21:47Z",
@@ -258,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-cofounder-chris-olah-s-remarks-on-pope-leo-xiv-s-m",
-      "headline": "Anthropic cofounder calls for external AI governance beyond tech industry",
-      "timestamp": "2026-05-25T22:52:08Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "ey-uber-s-coo-says-it-s-getting-harder-to-justify-money-spent-on-token",
-      "headline": "Uber's spending spree on AI tokens faces ROI scrutiny",
-      "timestamp": "2026-05-25T22:52:05Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]

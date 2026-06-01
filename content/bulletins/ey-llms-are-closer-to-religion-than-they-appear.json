@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-01T23:21:58Z",
+  "slug": "ey-llms-are-closer-to-religion-than-they-appear",
+  "headline": "LLM theology emerges as critical blindspot for healthcare AI deployment",
+  "body": "A high-velocity discussion across tech communities is framing large language models as closer to belief systems than deterministic tools, with The Register's analysis raising concerns about advocates who prefer this ambiguity. For healthcare AI, this matters acutely: clinical workflows, EHR integrations, and regulatory compliance all demand transparency and reproducibility that incompatible with treating LLMs as opaque oracles. When vendors and health systems begin treating model outputs as articles of faith rather than auditable decisions, you get failures in value-based care attribution, liability exposure, and clinician trust erosion. Healthcare AI consultants should now expect pushback on any deployment lacking explainability layers and cryptographic verification of model behavior, especially as regulatory bodies begin scrutinizing the theological posturing around AI \"reasoning.\"",
+  "source_url": "https://www.theregister.com/ai-ml/2026/06/01/llms-are-closer-to-religion-than-they-appear-watch-out-for-those-who-like-it-that-way/5248189",
+  "source_name": "The Register",
+  "velocity_score": 84,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
