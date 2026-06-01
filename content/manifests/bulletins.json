@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-confidentially-submits-draft-s-1-to-the-sec",
+      "headline": "Anthropic Files for IPO, Signaling Major Shift in AI Capital Markets",
+      "timestamp": "2026-06-01T21:21:47Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "claude-my-client-is-replacing-me-with-claude-for-all-devops-infra-and",
       "headline": "Claude displaces developers in infrastructure and feature development roles",
       "timestamp": "2026-06-01T15:49:10Z",
@@ -268,36 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-new-openai-phone",
-      "headline": "OpenAI expands beyond software with phone hardware and detection tools",
-      "timestamp": "2026-05-25T19:15:35Z",
-      "source_name": "Msn",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-olah-says-ai-must-be-guided-from-outside-big-tec",
-      "headline": "Anthropic leadership pushes external governance as AI oversight accelerates",
-      "timestamp": "2026-05-25T19:15:32Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "google-ai-guardrails-stripped-from-meta-and-google-models-in-minutes",
-      "headline": "Security researchers bypass Google and Meta AI safety guardrails in minutes",
-      "timestamp": "2026-05-25T16:15:36Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
