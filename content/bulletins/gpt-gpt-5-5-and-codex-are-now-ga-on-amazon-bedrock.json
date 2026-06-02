@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-02T17:59:44Z",
+  "slug": "gpt-gpt-5-5-and-codex-are-now-ga-on-amazon-bedrock",
+  "headline": "GPT-5.5 and Codex reach general availability on Amazon Bedrock",
+  "body": "OpenAI's GPT-5.5 and Codex models are now generally available through Amazon Bedrock, expanding enterprise access to advanced language and code generation capabilities. For healthcare organizations, this means easier integration of generative AI into existing AWS infrastructure without managing separate API contracts. The move matters for clinical documentation automation, EHR data abstraction, and code review workflows where both language understanding and code generation reduce manual effort. Healthcare systems evaluating vendor partnerships should assess how Bedrock's native integration affects their AI strategy and total cost of ownership for AI-powered applications.",
+  "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-openai-models-codex-generally-available/",
+  "source_name": "Aws",
+  "velocity_score": 75,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

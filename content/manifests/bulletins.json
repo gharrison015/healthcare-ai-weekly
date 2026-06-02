@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-5-and-codex-are-now-ga-on-amazon-bedrock",
+      "headline": "GPT-5.5 and Codex reach general availability on Amazon Bedrock",
+      "timestamp": "2026-06-02T17:59:44Z",
+      "source_name": "Aws",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "nvidia-michael-burry-just-called-nvidia-s-spacex-chip-deal-fugazi",
       "headline": "Nvidia's SpaceX chip deal draws skepticism from prominent investor",
       "timestamp": "2026-06-02T13:51:42Z",
@@ -268,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-image-2-left-me-amazed-but-exhausted-so-i-built-a-little-tool",
-      "headline": "Developers build GPT image tools while security threats escalate",
-      "timestamp": "2026-05-26T17:21:18Z",
-      "source_name": "Imagesv2",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "nvidia-michael-burry-warns-nvidia-stock-faces-aggressive-fall",
-      "headline": "Nvidia Vera CPU benchmarks show strength amid stock skepticism",
-      "timestamp": "2026-05-26T17:21:15Z",
-      "source_name": "Letsdatascience",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
