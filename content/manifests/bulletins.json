@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-ceo-jensen-huang-keynote-at-computex-2026",
+      "headline": "Nvidia accelerates AI PC rollout with agent-focused hardware launch",
+      "timestamp": "2026-06-02T20:51:40Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-scales-claude-mythos-to-critical-infrastructure-in-15",
+      "headline": "Anthropic deploys Claude Mythos across critical infrastructure in 15 nations",
+      "timestamp": "2026-06-02T20:51:37Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-5-and-codex-are-now-ga-on-amazon-bedrock",
       "headline": "GPT-5.5 and Codex reach general availability on Amazon Bedrock",
       "timestamp": "2026-06-02T17:59:44Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-trump-s-25-cut-on-nvidia-chips-to-china-backfired-as-beijing-bl",
-      "headline": "US-China chip tensions escalate as Nvidia faces export restrictions",
-      "timestamp": "2026-05-26T19:56:00Z",
-      "source_name": "Finance",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "ey-investigation-update-github-enterprise-server-signing-key-rotation",
-      "headline": "GitHub Enterprise Server breach exposes healthcare AI infrastructure risks",
-      "timestamp": "2026-05-26T19:55:57Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
