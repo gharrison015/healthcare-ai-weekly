@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-anthopic-openai-should-not-be-allowed-to-ipo-says-ed-zitron-vid",
+      "headline": "OpenAI faces IPO scrutiny amid data privacy and nonprofit structure questions",
+      "timestamp": "2026-06-03T20:47:18Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-opus-4-8-max-responding-to-an-empty-message",
+      "headline": "Claude Opus 4.8 Max gains traction as enterprises debate AI tool costs",
+      "timestamp": "2026-06-03T20:47:16Z",
+      "source_name": "Xcancel",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-use-your-nvidia-gpu-s-vram-as-swap-space-on-linux",
       "headline": "Nvidia's infrastructure push accelerates AI inference capabilities for healthcare",
       "timestamp": "2026-06-03T14:21:51Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-i-think-anthropic-and-openai-have-found-product-market-fit",
-      "headline": "Anthropic and OpenAI achieve product-market fit as competition intensifies",
-      "timestamp": "2026-05-27T19:59:41Z",
-      "source_name": "Simonwillison",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "google-duckduckgo-search-saw-28-more-visits-after-google-said-people-l",
-      "headline": "User backlash against Google AI features drives competitor adoption surge",
-      "timestamp": "2026-05-27T16:57:08Z",
-      "source_name": "Pcgamer",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
