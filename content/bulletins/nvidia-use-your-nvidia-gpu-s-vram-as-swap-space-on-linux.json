@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-03T14:21:51Z",
+  "slug": "nvidia-use-your-nvidia-gpu-s-vram-as-swap-space-on-linux",
+  "headline": "Nvidia's infrastructure push accelerates AI inference capabilities for healthcare",
+  "body": "Nvidia is investing heavily in GPU infrastructure and tooling, with $150B annual spending in Taiwan and new inference optimization frameworks like Groq 3 emerging across developer communities. For healthcare AI, faster inference directly impacts real-time clinical decision support, radiology image analysis, and pathology workflows where latency affects patient care. Healthcare organizations deploying AI models for EHR integration and value-based care analytics depend on inference speed to justify implementation costs. Vendors building clinical AI solutions now have access to more efficient hardware-software stacks, reducing deployment friction for hospital systems evaluating AI adoption.",
+  "source_url": "https://github.com/c0dejedi/nbd-vram",
+  "source_name": "Github",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}

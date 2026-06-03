@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-use-your-nvidia-gpu-s-vram-as-swap-space-on-linux",
+      "headline": "Nvidia's infrastructure push accelerates AI inference capabilities for healthcare",
+      "timestamp": "2026-06-03T14:21:51Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-look-who-just-crashed-openai-and-softbank-s-ipo-party",
+      "headline": "OpenAI faces IPO scrutiny amid privacy, data security concerns",
+      "timestamp": "2026-06-03T14:21:49Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-testing-google-s-gemini-spark-ai-agent-it-s-incredible-and-cree",
       "headline": "Google's Gemini Spark AI agent raises questions about autonomous capabilities",
       "timestamp": "2026-06-02T23:27:23Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-dogma-on-us-china-ai-competition",
-      "headline": "Anthropic reaches $900B valuation amid geopolitical tensions",
-      "timestamp": "2026-05-27T12:47:36Z",
-      "source_name": "Chinai",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-as-a-daily-driver-claude-md-skills-subagents-plugin",
-      "headline": "Claude emerges as production-grade coding assistant amid capability debate",
-      "timestamp": "2026-05-27T12:47:33Z",
-      "source_name": "Arps18",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
