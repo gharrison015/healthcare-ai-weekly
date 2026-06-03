@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-gooey-a-gpu-accelerated-ui-framework-for-zig",
+      "headline": "GPU-accelerated UI framework Gooey gains traction among developer communities",
+      "timestamp": "2026-06-03T23:26:53Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "openai-anthopic-openai-should-not-be-allowed-to-ipo-says-ed-zitron-vid",
       "headline": "OpenAI faces IPO scrutiny amid data privacy and nonprofit structure questions",
       "timestamp": "2026-06-03T20:47:18Z",
@@ -258,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "gpt-tiny-gpt-in-go-optimised-for-understanding-trained-on-jules-verne",
-      "headline": "Lightweight GPT implementations gain traction as cost optimization pressures mount",
-      "timestamp": "2026-05-27T23:10:23Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "ey-gemini-gophers-and-fingers-oh-my-alternative-internets-beyond-https",
-      "headline": "Alternative internet protocols gain traction among developers building offline AI systems",
-      "timestamp": "2026-05-27T23:10:20Z",
-      "source_name": "Brennan",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
