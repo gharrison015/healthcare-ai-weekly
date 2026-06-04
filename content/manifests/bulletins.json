@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-ceo-sam-altman-makes-a-lot-of-predictions-here-s-how-the",
+      "headline": "OpenAI CEO Altman's track record shows mixed results on AI predictions",
+      "timestamp": "2026-06-04T16:44:28Z",
+      "source_name": "Fastcompany",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-the-ways-we-contain-claude-across-products",
+      "headline": "Anthropic releases containment framework for Claude deployments across products",
+      "timestamp": "2026-06-04T16:44:26Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-s-relentless-race-to-the-top",
       "headline": "Anthropic files for IPO as it scales frontier AI capabilities",
       "timestamp": "2026-06-04T12:38:48Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "gpt-validate-a-physical-product-idea-in-15-minutes-with-a-free-gpt",
-      "headline": "OpenAI's rapid product validation GPT signals faster clinical tool prototyping",
-      "timestamp": "2026-05-28T13:41:05Z",
-      "source_name": "Chatgpt",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
