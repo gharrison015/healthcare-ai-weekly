@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-04T19:54:22Z",
+  "slug": "nvidia-nvidia-nemotron-3-ultra",
+  "headline": "Nvidia releases Nemotron 3 Ultra open model for enterprises",
+  "body": "Nvidia released Nemotron 3 Ultra, a new open-source large language model designed for enterprise deployment. The model addresses a critical gap in healthcare AI where organizations need capable LLMs they can run on-premise without vendor lock-in constraints. For healthcare systems evaluating generative AI for clinical documentation, coding assistance, and evidence synthesis, an open model from a trusted infrastructure provider shifts the economics and control dynamics of implementation. This development matters for health systems and consulting firms calculating total cost of ownership on LLM deployments and assessing independence from closed-model providers.",
+  "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/",
+  "source_name": "Research",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
