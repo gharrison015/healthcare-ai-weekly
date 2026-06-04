@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-the-llm-warnings-google-fired-timnit-gebru-over-have-all-come-t",
+      "headline": "Google's AI missteps validate researcher warnings on LLM risks",
+      "timestamp": "2026-06-04T23:01:25Z",
+      "source_name": "Tumblr",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-nemotron-3-ultra",
       "headline": "Nvidia releases Nemotron 3 Ultra open model for enterprises",
       "timestamp": "2026-06-04T19:54:22Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-raises-65b-in-series-h-funding-at-965b-post-money",
-      "headline": "Anthropic's $65B funding round reshapes AI startup valuation hierarchy",
-      "timestamp": "2026-05-28T20:08:28Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-opus-4-8",
-      "headline": "Anthropic releases Claude Opus 4.8 amid cost competition and security concerns",
-      "timestamp": "2026-05-28T20:08:26Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
