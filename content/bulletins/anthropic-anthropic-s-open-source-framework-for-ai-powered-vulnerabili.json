@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-06-05T12:32:00Z",
+  "slug": "anthropic-anthropic-s-open-source-framework-for-ai-powered-vulnerabili",
+  "headline": "Anthropic releases open-source framework for detecting AI security vulnerabilities",
+  "body": "Anthropic has published an open-source framework designed to identify security vulnerabilities in AI systems through automated discovery methods. This development carries direct implications for healthcare organizations deploying AI in clinical workflows, where security gaps could expose patient data or compromise diagnostic accuracy. Healthcare IT leaders and EHR vendors need to evaluate this framework's applicability to their AI implementations, particularly as regulatory pressure increases around AI safety and data protection. The release signals that vulnerability detection in AI systems is becoming a practical, accessible concern rather than theoretical, making security audits of clinical decision support tools increasingly feasible.",
+  "source_url": "https://github.com/anthropics/defending-code-reference-harness",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews",
+    "substack"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

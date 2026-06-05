@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-05T12:31:58Z",
+  "slug": "claude-show-hn-boxes-dev-ditch-localhost-run-claude-code-and-codex-in",
+  "headline": "Claude Code moves from local development to cloud infrastructure",
+  "body": "Boxes.dev launched a cloud-based platform that eliminates localhost constraints for Claude Code and Codex execution, addressing infrastructure friction in AI-assisted development workflows. For healthcare organizations, this shift matters because it reduces deployment barriers for clinical decision support tools and EHR integrations that require robust, scalable infrastructure without on-premise maintenance. The ability to run AI code generation at scale in the cloud simplifies how health systems can iterate on vendor integrations and internal tools, reducing the technical bottlenecks that typically slow healthcare AI implementations. This infrastructure pattern also enables faster prototyping of use cases like clinical documentation automation and care pathway optimization where development velocity directly impacts time-to-value.",
+  "source_url": "https://boxes.dev",
+  "source_name": "Boxes",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

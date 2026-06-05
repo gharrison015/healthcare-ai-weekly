@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-s-open-source-framework-for-ai-powered-vulnerabili",
+      "headline": "Anthropic releases open-source framework for detecting AI security vulnerabilities",
+      "timestamp": "2026-06-05T12:32:00Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-boxes-dev-ditch-localhost-run-claude-code-and-codex-in",
+      "headline": "Claude Code moves from local development to cloud infrastructure",
+      "timestamp": "2026-06-05T12:31:58Z",
+      "source_name": "Boxes",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-the-llm-warnings-google-fired-timnit-gebru-over-have-all-come-t",
       "headline": "Google's AI missteps validate researcher warnings on LLM risks",
       "timestamp": "2026-06-04T23:01:25Z",
