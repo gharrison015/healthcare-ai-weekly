@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-benevolent-dictator-zuck-will-give-meta-staff-30-minute-break-keylo",
+      "headline": "Meta's staff monitoring practices raise data privacy concerns for healthcare tech",
+      "timestamp": "2026-06-05T19:41:58Z",
+      "source_name": "The Register",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "claude-programmers-will-document-for-claude-but-not-for-each-other",
       "headline": "Developers prioritize AI documentation over peer knowledge sharing",
       "timestamp": "2026-06-05T16:25:25Z",
@@ -288,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "gemini-apple-working-to-cram-gemini-into-iphone",
-      "headline": "Apple pursues on-device Gemini deployment for iPhone intelligence",
-      "timestamp": "2026-05-29T17:27:32Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-everything-you-can-configure-that-the-docs-don-t-te",
-      "headline": "Claude Code configuration depths emerge as developers unlock hidden customization options",
-      "timestamp": "2026-05-29T17:27:30Z",
-      "source_name": "Buildingbetter",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
