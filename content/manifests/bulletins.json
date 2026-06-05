@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-programmers-will-document-for-claude-but-not-for-each-other",
+      "headline": "Developers prioritize AI documentation over peer knowledge sharing",
+      "timestamp": "2026-06-05T16:25:25Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-s-open-source-framework-for-ai-powered-vulnerabili",
       "headline": "Anthropic releases open-source framework for detecting AI security vulnerabilities",
       "timestamp": "2026-06-05T12:32:00Z",
@@ -298,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "ey-why-do-llm-keys-all-start-with-sk",
-      "headline": "LLM API security practices draw scrutiny as healthcare vendors scale deployments",
-      "timestamp": "2026-05-29T12:41:27Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]

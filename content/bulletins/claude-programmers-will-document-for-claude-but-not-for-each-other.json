@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-05T16:25:25Z",
+  "slug": "claude-programmers-will-document-for-claude-but-not-for-each-other",
+  "headline": "Developers prioritize AI documentation over peer knowledge sharing",
+  "body": "Developers are investing significantly more effort into documenting code for Claude than for human colleagues, according to widespread discussion across technical communities. This shift reflects how AI coding assistants are reshaping software development practices and documentation standards. For healthcare AI systems, this trend raises critical concerns about clinical validation and human oversight. When documentation is optimized for LLM interpretation rather than clinician review, it complicates the ability of medical professionals to understand system logic, audit decision pathways, and maintain accountability in EHR integrations and clinical workflows. Healthcare organizations deploying Claude-based tools must establish documentation standards that serve both AI processing and human clinical governance.",
+  "source_url": "https://blog.plover.com/2026/03/09/#documentation-wins-2",
+  "source_name": "Blog",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
