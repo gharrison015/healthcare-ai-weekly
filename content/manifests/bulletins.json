@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-did-claude-increase-bugs-in-rsync",
+      "headline": "Claude's code generation reliability questioned as bug rates spike",
+      "timestamp": "2026-06-05T22:58:40Z",
+      "source_name": "Alexispurslane",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "anthropic-zec-drops-30-after-anthropic-ai-finds-zcash-counterfeit-vuln",
+      "headline": "Anthropic demonstrates AI security capabilities while calling for development pause",
+      "timestamp": "2026-06-05T22:58:37Z",
+      "source_name": "Tradingview",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-benevolent-dictator-zuck-will-give-meta-staff-30-minute-break-keylo",
       "headline": "Meta's staff monitoring practices raise data privacy concerns for healthcare tech",
       "timestamp": "2026-06-05T19:41:58Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-llms-believe-false-statements-even-after-explicit-warnings-that-the",
-      "headline": "LLMs retain false beliefs despite explicit contradictions, raising clinical safety concerns",
-      "timestamp": "2026-05-29T20:08:43Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-growth-is-just-the-tip-of-the-sphere-for-ai-rall",
-      "headline": "Anthropic surpasses OpenAI valuation as enterprise AI consolidation accelerates",
-      "timestamp": "2026-05-29T20:08:40Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
