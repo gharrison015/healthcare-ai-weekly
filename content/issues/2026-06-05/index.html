@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare AI Weekly Deep Dive — May 29 - June 05, 2026</title>
+<style>
+  @font-face { font-family: 'Aptos'; src: local('Aptos'), local('Aptos Display'), local('Calibri'); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Aptos, Calibri, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; color: #111827; min-height: 100vh; }
+  html { background: #f0f2f5; }
+
+  /* Ambient mesh gradient */
+  .ambient-bg {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+    background: linear-gradient(135deg, #e8edf5 0%, #dfe6f0 30%, #eae4f0 60%, #e0eaf5 100%);
+  }
+  .ambient-bg::before, .ambient-bg::after {
+    content: ""; position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.4;
+    animation: ambient-drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::before { width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 70%); top: -10%; right: -5%; }
+  .ambient-bg::after { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%); bottom: -10%; left: -5%; animation-delay: -10s; }
+  @keyframes ambient-drift { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -20px) scale(1.1); } }
+
+  /* Glass surfaces */
+  .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
+
+  /* Layout */
+  .container { padding: 0 40px; }
+  @media (max-width: 640px) { .container { padding: 0 16px; } }
+
+  /* Header */
+  .header { padding: 48px 0 32px; }
+  .header h1 { font-size: 38px; font-weight: 800; color: #0F1D35; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .header .subtitle { font-size: 16px; color: #6b7280; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .header .summary { font-size: 20px; line-height: 1.6; color: #374151; }
+  .back-link { display: inline-block; font-size: 20px; color: #0284C7; text-decoration: none; font-weight: 700; margin-bottom: 20px; padding: 8px 16px; border-radius: 8px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.15); }
+  .back-link:hover { text-decoration: underline; }
+
+  /* TOC */
+  .toc { border-radius: 16px; padding: 20px 24px; margin-bottom: 24px; }
+  .toc-title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 10px; }
+  .toc a { display: inline-block; font-size: 16px; color: #0284C7; text-decoration: none; padding: 4px 16px 4px 0; font-weight: 600; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* Section boxes */
+  .section-box { border-radius: 20px; padding: 32px; margin-bottom: 20px; }
+  .section-header { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0F1D35; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #0284C7; }
+
+  /* Story cards */
+  .story-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
+  .story-card:last-child { margin-bottom: 0; }
+
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; }
+  .badge-impact { background: rgba(220, 38, 38, 0.1); color: #dc2626; border: 1px solid rgba(220, 38, 38, 0.2); }
+  .badge-emerging { background: rgba(2, 132, 199, 0.1); color: #0284C7; border: 1px solid rgba(2, 132, 199, 0.2); }
+
+  .story-headline { font-size: 24px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; line-height: 1.3; }
+  .story-headline a { color: #0F1D35; text-decoration: none; }
+  .story-headline a:hover { color: #0284C7; }
+  .so-what { font-size: 18px; font-weight: 600; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .deep-dive-text { font-size: 18px; line-height: 1.7; color: #374151; }
+  .risk-angle {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 14px 18px; border-radius: 10px;
+    font-size: 17px; margin-top: 14px; color: #92400e;
+  }
+  .risk-angle strong { color: #78350f; }
+  .source-link { font-size: 14px; color: #94a3b8; margin-top: 14px; }
+  .source-link a { color: #0284C7; text-decoration: none; font-weight: 600; }
+  .source-link a:hover { text-decoration: underline; }
+
+  /* DYK */
+  .dyk-card { border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; }
+  .dyk-card:last-child { margin-bottom: 0; }
+  .dyk-card h3 { font-size: 22px; font-weight: 700; color: #0F1D35; margin-bottom: 10px; }
+  .dyk-card .explainer { font-size: 18px; line-height: 1.7; color: #374151; }
+
+  /* Trend */
+  .trend-box { border-radius: 20px; padding: 28px 32px; margin-bottom: 20px; border: 2px solid rgba(2, 132, 199, 0.2); }
+  .trend-label { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0284C7; margin-bottom: 8px; }
+  .trend-text { font-size: 18px; line-height: 1.6; color: #374151; }
+
+  /* Sources */
+  .sources-box { border-radius: 16px; padding: 24px 28px; margin-bottom: 20px; }
+  .sources-box h2 { font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px; color: #94a3b8; margin-bottom: 14px; font-weight: 800; }
+  .sources-box ul { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
+  .sources-box li { font-size: 14px; color: #6b7280; padding: 4px 0; break-inside: avoid; }
+  .sources-box li a { color: #0284C7; text-decoration: none; }
+  .sources-box li a:hover { text-decoration: underline; }
+  .sources-box li .src-name { color: #94a3b8; font-size: 12px; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 24px 0 48px; font-size: 15px; color: #94a3b8; }
+
+  /* Floating CTA */
+  .fab-container { position: fixed; bottom: 32px; right: 32px; z-index: 100; display: flex; align-items: center; gap: 0; }
+  .fab-label {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    padding: 10px 20px; border-radius: 24px 0 0 24px;
+    font-size: 15px; font-weight: 700; color: #0F1D35; white-space: nowrap;
+    opacity: 0; transform: translateX(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); pointer-events: none;
+  }
+  .fab-container:hover .fab-label { opacity: 1; transform: translateX(0); pointer-events: auto; }
+  .fab-button {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, #0284C7, #0F1D35);
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fab-pulse 3s ease-in-out infinite; position: relative; z-index: 2;
+  }
+  .fab-button:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(2, 132, 199, 0.4), 0 0 0 8px rgba(2, 132, 199, 0.08); animation: none; }
+  .fab-button svg { width: 24px; height: 24px; fill: none; stroke: #ffffff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  @keyframes fab-pulse { 0%, 100% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 0 rgba(2, 132, 199, 0.15); } 50% { box-shadow: 0 4px 24px rgba(2, 132, 199, 0.3), 0 0 0 12px rgba(2, 132, 199, 0); } }
+  @media (max-width: 640px) { .fab-container { bottom: 20px; right: 20px; } .fab-button { width: 48px; height: 48px; } .fab-label { display: none; } }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 30px; }
+    .section-box { padding: 20px 16px; border-radius: 14px; }
+    .story-card { padding: 18px 16px; }
+    .story-headline { font-size: 20px; }
+    .deep-dive-text { font-size: 16px; }
+    .sources-box ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="ambient-bg"></div>
+
+<div class="container">
+  <div class="header">
+    <a href="/" class="back-link">&larr; All Issues</a>
+    <h1>Healthcare AI Weekly</h1>
+    <div class="subtitle">Deep Dive — May 29 - June 05, 2026</div>
+    <div class="summary">Microsoft and Mayo Clinic just announced they're building a frontier AI model for healthcare, while health systems are simultaneously killing more AI projects than they're starting. The gap between Big Tech's healthcare AI promises and operational reality is widening, not shrinking. Meanwhile, consulting firms are doubling down on AI transformation plays as enterprise deals multiply, but the workflow integration problems that killed previous AI rollouts remain unsolved.</div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc glass">
+    <div class="toc-title">In This Issue</div>
+    <a href="#top-stories">What Matters This Week</a>
+    <a href="#vbc-watch">Value-Based Care Watch</a>
+    <a href="#ma-partnerships">M&A & Partnerships</a>
+    <a href="#consulting-intelligence">Consulting Intelligence</a>
+    <a href="#did-you-know">Did You Know?</a>
+    <a href="#trend-watch">Trend Watch</a>
+    <a href="#all-sources">All Sources</a>
+  </div>
+
+  <!-- What Matters This Week -->
+  
+  <div class="section-box glass" id="top-stories">
+    <div class="section-header">What Matters This Week</div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-impact">This Week's Impact</span>
+      <div class="story-headline"><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/microsoft-mayo-clinic-plan-build-frontier-ai-model-healthcare">Mayo and Microsoft Build Frontier AI Model</a></div>
+      <div class="so-what">This is Microsoft's biggest healthcare AI bet since GPT-4 integration, targeting earlier diagnosis and treatment planning with Mayo's clinical data at scale.</div>
+      <div class="deep-dive-text">Microsoft and Mayo Clinic are collaborating to develop a frontier AI model specifically designed for healthcare applications, with Mayo contributing its vast clinical datasets and Microsoft providing the computational infrastructure. This represents Microsoft's most aggressive healthcare AI play since integrating GPT-4 into clinical workflows, positioning the partnership as a direct challenge to Google's Med-PaLM and other specialized healthcare models. The collaboration aims to support earlier and more accurate diagnoses and treatment planning, leveraging Mayo's decades of clinical data and research expertise. However, the real test will be whether this frontier model can translate beyond Mayo's sophisticated infrastructure to community hospitals and smaller health systems. Previous academic medical center AI partnerships have struggled with this translation problem, creating impressive proof-of-concepts that remain confined to elite institutions. The timing is significant as health systems are actually starting fewer AI projects and killing more existing ones, suggesting the industry is becoming more selective about AI investments. Microsoft's healthcare AI strategy appears to be shifting from broad platform plays to specialized, high-value use cases with prestigious partners. The success of this partnership could determine whether frontier models become the next wave of healthcare AI or remain expensive experiments for well-funded academic centers.</div>
+      
+      <div class="risk-angle"><strong>Risk angle:</strong> Another academic medical center partnership that looks great in press releases but won't translate to community hospitals where most care happens.</div>
+      
+      <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/ai-and-machine-learning/microsoft-mayo-clinic-plan-build-frontier-ai-model-healthcare">Fierce Healthcare</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-impact">This Week's Impact</span>
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNallzVnFHTFIzR0tFdTVWMEVuRVRIeTAtdm9wWFZpeFZKNy1BTUMyRHlFUE8zcUU2WjZYWWpndmRqQ1F3Vm1QZlozLUlfTUVJaXBfYjlSdy1HcGxaMHMtSEFIbU9FSnpJbmREaENIUFpPT2hXR01UaVdnQWdjdnMzQlQ3SFUybG9UUERGME53bkYwR0lBUmZWclRjWFpwbUVyMkpHSHBCR0xGa2xQSTU0VklsdVhHUzlORDdab0w0ZUMyeE4zWnVZNkZNUjhCcm45cXJBT2Jqd3R2RFlBTDY0OVpB">Health Systems Kill More AI Projects Than They Start</a></div>
+      <div class="so-what">The AI project failure rate is accelerating as health systems get more selective about ROI and workflow integration, signaling a major market correction.</div>
+      <div class="deep-dive-text">Health systems are not only terminating more AI initiatives than they're launching, but they're also becoming increasingly cautious about starting new projects, marking a significant shift in the healthcare AI adoption curve. This trend represents a market correction as early AI experiments fail to demonstrate clear ROI or integrate successfully into clinical workflows. The high failure rate suggests that many initial AI deployments were driven by innovation theater rather than practical necessity, and health systems are now applying more rigorous evaluation criteria before committing resources. Common failure points include poor workflow integration, lack of clinician adoption, unclear value propositions, and technical performance that doesn't match vendor promises. The pullback is particularly pronounced in areas like predictive analytics and clinical decision support, where the gap between laboratory performance and real-world utility has proven larger than expected. This selectivity is actually healthy for the market long-term, as it forces vendors to focus on solving real problems rather than creating impressive demos. Health systems that survive this correction phase will likely emerge with more targeted, higher-impact AI implementations. The trend also suggests that the consulting opportunity is shifting from broad AI strategy to helping organizations evaluate existing projects, implement rigorous ROI frameworks, and focus on proven use cases with clear workflow benefits.</div>
+      
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNallzVnFHTFIzR0tFdTVWMEVuRVRIeTAtdm9wWFZpeFZKNy1BTUMyRHlFUE8zcUU2WjZYWWpndmRqQ1F3Vm1QZlozLUlfTUVJaXBfYjlSdy1HcGxaMHMtSEFIbU9FSnpJbmREaENIUFpPT2hXR01UaVdnQWdjdnMzQlQ3SFUybG9UUERGME53bkYwR0lBUmZWclRjWFpwbUVyMkpHSHBCR0xGa2xQSTU0VklsdVhHUzlORDdab0w0ZUMyeE4zWnVZNkZNUjhCcm45cXJBT2Jqd3R2RFlBTDY0OVpB">Becker's Hospital Review</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-emerging">Emerging</span>
+      <div class="story-headline"><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/athenahealth-rolls-out-over-80-new-expanded-ai-rcm-features-roadmap">Athenahealth Ships 80 New AI RCM Features</a></div>
+      <div class="so-what">This is the largest single AI feature release in RCM this year, positioning athena to challenge Epic's revenue cycle dominance with AI-native capabilities.</div>
+      <div class="deep-dive-text">Athenahealth's release of over 80 new and expanded AI-driven revenue cycle management features represents the most comprehensive AI RCM rollout of 2026, including automated insurance selection, AI copay calculation, voice AI integration, and express coding capabilities. This massive feature drop positions athena as the first major EHR vendor to go fully AI-native in revenue cycle, potentially challenging Epic's longstanding dominance in this lucrative market segment. The breadth of features spans the entire revenue cycle from patient registration through final payment, with particular emphasis on automation points that traditionally require manual intervention. However, the sheer volume raises questions about whether this represents focused problem-solving or feature proliferation that could overwhelm users and complicate implementations. Early feedback will be critical to determine whether AI-native RCM delivers measurably better outcomes than incremental AI additions to proven workflows. The timing is strategic as health systems face increasing financial pressure and are more receptive to RCM solutions that can demonstrate clear ROI. Athena's approach also represents a direct challenge to Epic's strategy of gradual AI integration, betting instead that wholesale AI transformation will provide competitive advantage. The success or failure of this comprehensive approach could influence how other EHR vendors approach AI integration, making this a bellwether release for the broader healthcare AI market.</div>
+      
+      <div class="risk-angle"><strong>Risk angle:</strong> 80 features sounds like feature bloat rather than focused solutions, and AI-native doesn't guarantee better outcomes than proven RCM processes.</div>
+      
+      <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/ai-and-machine-learning/athenahealth-rolls-out-over-80-new-expanded-ai-rcm-features-roadmap">Fierce Healthcare</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <span class="badge badge-emerging">Emerging</span>
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMi7wFBVV85cUxPNnl4NUtJb25UaG1tdHNxVTVVWGJVMXBDak1rdTRFbzlXellPeF9tVGRnZVl3d3Z0ZGgwaWRycjFYNmFwOU5LZUoxQ29WNHR3Nk04bDRWajVYemlCaFhIVzhIOFFrZGpOV2FtVXlhZjY2SWJXMDZjLUdQVk44bmg4WlllX3FZaUVWY2lfcnNNNW12cjROclBkX0tDTUtTbzBqZ0xzbW9yaHRUZG9jV1R6QTFFTy1RZTUwQTNtZ29FU09HX1RUN1JDd2s5aFQxLXFKV25RcTB6Wlc1YW1jc3lxRVpUYi1RZWFwc3dYXzlwOA">Providence Tracks 1,547 Ambient AI Users</a></div>
+      <div class="so-what">This is one of the largest ambient AI data sets published, providing real EHR performance data beyond vendor marketing claims about documentation burden reduction.</div>
+      <div class="deep-dive-text">Providence Health's tracking of 1,547 clinicians using ambient AI represents one of the most comprehensive real-world performance datasets published to date, offering EHR-based evidence that goes beyond vendor marketing claims about documentation efficiency. The study provides crucial insights into actual usage patterns, adoption rates, and workflow integration challenges that smaller pilot studies often miss. This data is particularly valuable because it comes from EHR logs rather than self-reported surveys, providing objective metrics on documentation time, note quality, and clinician behavior changes. The scale of the study also allows for meaningful analysis of variation across different specialties, practice settings, and clinician experience levels. The findings will likely influence enterprise ambient AI purchasing decisions, as health system executives increasingly demand proof of real-world performance before making large-scale investments. Providence's willingness to share this data signals confidence in their ambient AI results and could establish benchmarks for the industry. The study also addresses the critical question of whether ambient AI actually reduces documentation burden or simply shifts it to different parts of the workflow. For consulting firms, this data provides evidence-based frameworks for helping clients evaluate ambient AI vendors and set realistic expectations for implementation outcomes. The timing is significant as more health systems move from pilot phases to enterprise rollouts.</div>
+      
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMi7wFBVV85cUxPNnl4NUtJb25UaG1tdHNxVTVVWGJVMXBDak1rdTRFbzlXellPeF9tVGRnZVl3d3Z0ZGgwaWRycjFYNmFwOU5LZUoxQ29WNHR3Nk04bDRWajVYemlCaFhIVzhIOFFrZGpOV2FtVXlhZjY2SWJXMDZjLUdQVk44bmg4WlllX3FZaUVWY2lfcnNNNW12cjROclBkX0tDTUtTbzBqZ0xzbW9yaHRUZG9jV1R6QTFFTy1RZTUwQTNtZ29FU09HX1RUN1JDd2s5aFQxLXFKV25RcTB6Wlc1YW1jc3lxRVpUYi1RZWFwc3dYXzlwOA">Becker's Hospital Review</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Value-Based Care Watch -->
+  
+  <div class="section-box glass" id="vbc-watch">
+    <div class="section-header">Value-Based Care Watch</div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://hitconsultant.net/2026/06/02/ilant-health-raises-15m-series-a-obesity-care/">Ilant Health Raises $15M for AI Obesity Care</a></div>
+      <div class="so-what">Value-based obesity care is getting serious funding as GLP-1 costs force payers to seek precision approaches that can demonstrate ROI on expensive medications.</div>
+      <div class="deep-dive-text">Ilant Health's $15 million Series A funding round signals growing investor confidence in value-based obesity management platforms that use AI to optimize treatment selection and patient outcomes. Founded by former McKinsey consultants, the company targets the intersection of rising GLP-1 medication costs and the need for precision medicine approaches in obesity care. The funding comes at a critical time as payers grapple with the financial impact of expensive weight loss medications like Ozempic and Wegovy, which can cost over $1,000 per month per patient. Ilant's platform uses AI to identify which patients are most likely to benefit from different obesity interventions, potentially reducing wasteful spending on treatments that won't work for specific patient populations. The value-based care model aligns provider incentives with patient outcomes, addressing the traditional fee-for-service problem where providers are paid regardless of treatment effectiveness. The timing is strategic as Medicare Advantage plans face increasing pressure to demonstrate value while managing the costs of covering obesity medications. The company's McKinsey pedigree also suggests sophisticated approaches to health economics and outcomes research, which will be crucial for demonstrating ROI to payers. This funding round indicates that precision obesity care could become a significant market segment within value-based care, particularly as health systems seek ways to participate in obesity-related risk arrangements.</div>
+      
+      <div class="source-link">Source: <a href="https://hitconsultant.net/2026/06/02/ilant-health-raises-15m-series-a-obesity-care/">HIT Consultant</a></div>
+    </div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/anomaly-insights-launches-ai-solution-managed-care-executives">Anomaly Insights Launches AI for Payer Claims</a></div>
+      <div class="so-what">AI-powered claims analysis across all payers in a health system's contracts could identify patterns that traditional analytics miss, especially around value-based care performance.</div>
+      <div class="deep-dive-text">Anomaly Insights' new Manage platform represents an attempt to solve one of value-based care's most persistent challenges: gaining comprehensive visibility into performance across multiple payer contracts simultaneously. The AI solution examines claims data from all payers in a health system's portfolio, identifying behavioral patterns and synthesizing complex data relationships that traditional analytics tools often miss. This cross-payer analysis capability is particularly valuable for health systems participating in multiple value-based care arrangements, where understanding performance variations between contracts can reveal optimization opportunities. The platform's focus on managed care executives suggests targeting decision-makers who need actionable insights for contract negotiations, provider performance management, and financial risk assessment. However, the claims analytics market is increasingly crowded, with established players like Appriss Health, Change Healthcare, and numerous smaller vendors offering similar pattern detection capabilities. The key differentiator appears to be the platform's ability to synthesize data across payer boundaries, which could reveal systemic issues or opportunities that single-payer analyses miss. Success will depend heavily on the platform's ability to handle the complex data integration challenges that have plagued similar solutions, particularly around data standardization and real-time processing. For consulting firms, this represents another tool in the value-based care technology stack, but clients will need guidance on whether the incremental insights justify the additional complexity and cost.</div>
+      
+      <div class="risk-angle"><strong>Risk angle:</strong> Another claims analytics tool in a crowded market, and complex data integration across multiple payers often proves more difficult than vendors promise.</div>
+      
+      <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/ai-and-machine-learning/anomaly-insights-launches-ai-solution-managed-care-executives">Fierce Healthcare</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- M&A & Partnerships -->
+  
+  <div class="section-box glass" id="ma-partnerships">
+    <div class="section-header">M&A & Partnerships</div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://www.fiercehealthcare.com/health-tech/wellspan-health-strikes-strategic-partnership-philips-deploy-co-develop-new-healthcare">WellSpan and Philips Strike 7-Year AI Deal</a></div>
+      <div class="so-what">This is Philips' first joint innovation partnership with a U.S. community health system, potentially creating a template for vendor-health system co-development deals.</div>
+      <div class="deep-dive-text">WellSpan Health's seven-year strategic alliance with Philips represents a new model for health system-vendor partnerships, moving beyond traditional customer relationships to joint innovation and co-development arrangements. This is Philips' first such partnership with a U.S. community health system, suggesting a strategic shift toward deeper engagement with mid-market providers rather than focusing exclusively on academic medical centers. The partnership encompasses advanced imaging technology deployment across WellSpan's network while establishing a collaborative framework for developing new healthcare technologies. The seven-year timeframe indicates both parties' confidence in the relationship but also raises questions about flexibility as AI capabilities evolve rapidly. The co-development aspect is particularly significant, as it gives WellSpan influence over Philips' product roadmap and potential revenue sharing from jointly developed innovations. This partnership model could become a template for other health systems seeking to move from technology consumers to innovation partners. However, long-term vendor commitments can also create lock-in effects that limit future technology choices, particularly in rapidly evolving areas like AI where seven years represents multiple technology generations. The success of this partnership will likely influence whether other health systems pursue similar co-development arrangements and whether vendors expand this relationship model beyond select partners. For consulting firms, this represents a new category of strategic advisory work around innovation partnerships and co-development deal structuring.</div>
+      <div class="source-link">Source: <a href="https://www.fiercehealthcare.com/health-tech/wellspan-health-strikes-strategic-partnership-philips-deploy-co-develop-new-healthcare">Fierce Healthcare</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Consulting Intelligence -->
+  
+  <div class="section-box glass" id="consulting-intelligence">
+    <div class="section-header">Consulting Intelligence</div>
+    
+    <div class="story-card glass-card">
+      <div class="story-headline"><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE84bGs5cFY5cmpKMUQzSnpDc2xPTks3ZTJvMjEtX2ppRGVjbW5KVEMzc0dfenpMY2txcFRMWHJ5MVJvdzU2S3E0cUY0MWE0TVdaWTV5REhqNGJ6eFZINk9ob0RxSEhhUU1jYkNTMlNQTQ">BCG Publishes AI-First Payer Playbook</a></div>
+      <div class="so-what">BCG is positioning itself as the AI transformation leader for payers, creating frameworks that competitors will need to match or beat in client engagements.</div>
+      <div class="deep-dive-text">Boston Consulting Group's publication of an AI-first strategy framework for healthcare payers represents a major competitive move to establish thought leadership in the lucrative payer transformation market. The timing is strategic as health plans face increasing pressure to demonstrate value while managing costs, making AI adoption a critical differentiator for Medicare Advantage and commercial payers. BCG's framework likely addresses key payer pain points including prior authorization automation, risk adjustment optimization, fraud detection, and member engagement, areas where AI can deliver measurable ROI. The 'AI-first' positioning suggests a comprehensive transformation approach rather than incremental AI additions, appealing to payer executives who want to leapfrog competitors through technology adoption. This publication signals BCG's intent to own the payer AI consulting market, creating frameworks and methodologies that other consulting firms will need to match or exceed in competitive situations. The healthcare payer AI transformation market represents hundreds of millions in consulting revenue as plans invest in technology capabilities to compete with tech-enabled entrants like Oscar and Devoted Health. BCG's public framework also serves as a lead generation tool, demonstrating expertise to prospective clients while establishing the firm's point of view on payer AI strategy. For competing consulting firms, this creates pressure to develop equally sophisticated payer AI frameworks and case studies. The publication also suggests that payer AI transformation is moving from experimental phase to enterprise implementation, creating opportunities for large-scale technology and organizational change engagements.</div>
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE84bGs5cFY5cmpKMUQzSnpDc2xPTks3ZTJvMjEtX2ppRGVjbW5KVEMzc0dfenpMY2txcFRMWHJ5MVJvdzU2S3E0cUY0MWE0TVdaWTV5REhqNGJ6eFZINk9ob0RxSEhhUU1jYkNTMlNQTQ">Boston Consulting Group</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Did You Know? -->
+  
+  <div class="section-box glass" id="did-you-know">
+    <div class="section-header">Did You Know?</div>
+    
+    <div class="dyk-card glass-card">
+      <h3>OpenAI Built Stargate Data Center in Michigan</h3>
+      <div class="explainer">OpenAI's Michigan data center represents a massive infrastructure investment designed to support the next generation of AI capabilities, including the frontier models that companies like Mayo Clinic want to build. The 1-gigawatt facility is part of the broader Stargate initiative, a multi-billion dollar commitment to AI infrastructure that will determine which companies can access the computational resources needed for advanced AI development. For healthcare organizations, this infrastructure buildout is crucial because frontier AI models require enormous computational resources that only a few companies can provide. The Michigan location also signals OpenAI's strategy to distribute AI infrastructure geographically, potentially reducing latency for healthcare applications that require real-time processing. This infrastructure race between OpenAI, Google, Microsoft, and other AI leaders will ultimately determine which platforms healthcare organizations can access for their most demanding AI applications, from real-time clinical decision support to population health analytics.</div>
+      <div class="source-link">Source: <a href="https://openai.com/index/stargate-michigan-data-center">OpenAI Blog</a></div>
+    </div>
+    
+    <div class="dyk-card glass-card">
+      <h3>Tech Industry Cuts 123,000 Jobs, AI Cited Most</h3>
+      <div class="explainer">The tech industry's massive job cuts, with AI automation as the leading cause, provide a preview of what healthcare organizations might expect as AI capabilities mature. While healthcare has been slower to adopt AI due to regulatory and safety concerns, the same automation pressures that are reshaping tech companies will eventually reach health systems. Areas like medical coding, prior authorization processing, and administrative functions are already seeing AI automation pilots that could lead to similar workforce reductions. However, healthcare's regulatory environment and patient safety requirements may slow the pace of AI-driven job displacement compared to other industries. The key difference is that healthcare organizations must balance efficiency gains with clinical quality and patient safety, potentially leading to workforce transformation rather than pure elimination. For healthcare leaders, the tech industry's experience offers lessons about managing AI-driven workforce changes, including the importance of retraining programs and strategic workforce planning.</div>
+      <div class="source-link">Source: <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQYjFybDJ4ZUl3TnN0T2hEeFBmb3ZESUxROGNwZFdidm9MVWdLcnVZZG5CSWZPRUs0Z01UUWJycHlyZDJBNHU3aTdJWi1CbnhCSmtFd2ZXQTZSb0E0T2Z4ZDJaRGpPX0hPX3hKQXkxTXF6Tm4tc0hDWGwxNmJrcHNhRGRTSjgxekZCMllRX2FWSGsxeGhJZGhoa1NCWHlSRVdWNEVEX3VSM2NQTzdQR1JVMURfVWhKVHkxQkJwVFRQdEdJMnB1MGlFZG5yTk11b2lE">Forbes</a></div>
+    </div>
+    
+  </div>
+  
+
+  <!-- Trend Watch -->
+  
+  <div class="trend-box glass" id="trend-watch">
+    <div class="trend-label">Trend Watch</div>
+    <div class="trend-text">The gap between Big Tech healthcare AI announcements and practical health system implementation is widening, creating a two-tier market where elite academic centers get frontier models while community hospitals struggle with basic AI integration.</div>
+  </div>
+  
+
+  <!-- All Sources -->
+  <div class="sources-box glass" id="all-sources">
+    <h2>All Sources Considered This Week</h2>
+    <ul>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/fullspan-health-debuts-healthline-ai-companion-users-find-verified-health">Fullspan Health debuts Healthline AI companion to connect consumers to medical content and providers</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/health-tech/weekly-rundown-vida-health-instacart-partner-healthy-food-access-study-finds-patients">Weekly Rundown: Trump signs AI executive order; Health Catalyst to sell Vitalware for $147M</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/health-tech/wellspan-health-strikes-strategic-partnership-philips-deploy-co-develop-new-healthcare">WellSpan Health strikes strategic partnership with Philips to deploy, co-develop new healthcare tech</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/anomaly-insights-launches-ai-solution-managed-care-executives">Anomaly Insights launches AI solution for managed care executives</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/finance/fierce-healthcare-layoff-tracker-2026-job-cuts-eliminations-health-systems-hospitals">Fierce Healthcare Layoff Tracker—Centra restructure hits 90 workers; Optum cuts 58 jobs in New Jersey</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/health-tech/fierce-healthcare-fundraising-tracker-26">Fierce Healthcare Fundraising Tracker '26: Novellia picks up $18M; Lassie nabs $35M to build AI agents for practices</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/providers/western-pennylvanias-independence-health-system-join-wvu-health-system-2026">WVU Health System, Independence Health System target late 2026 for merger</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/athenahealth-rolls-out-over-80-new-expanded-ai-rcm-features-roadmap">Athenahealth rolls out over 80 new, expanded AI RCM features in ‘roadmap’ on athenaOne platform</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.fiercehealthcare.com/ai-and-machine-learning/microsoft-mayo-clinic-plan-build-frontier-ai-model-healthcare">Microsoft, Mayo Clinic plan to build frontier AI model for healthcare</a> <span class="src-name">Fierce Healthcare</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/ascension-closes-acquisition-amsurg-following-ftc-scrutiny/822070/">Ascension closes AmSurg deal following FTC scrutiny</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/epic-dismisses-selfrx-claims-medical-record-misuse-lawsuit/822031/">Epic dismisses claims against SelfRx in medical record misuse lawsuit</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/wvu-health-system-takes-next-step-toward-buying-independence-health/821971/">WVU Health System takes next step toward buying Independence Health</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/mayo-clinic-microsoft-frontier-ai-model/821947/">Mayo’s latest AI bet: A frontier model with Microsoft</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/ascension-amsurg-ftc-consent-order-surgery-center-divestitures/821741/">FTC requires Ascension divestitures in $3.9B AmSurg deal</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://www.healthcaredive.com/news/healthcare-ai-adoption-accelerates-provider-worries-deskilling-wolters-kluwer/821653/">AI adoption surges, but providers worry about deskilling</a> <span class="src-name">Healthcare Dive</span></li>
+    
+      <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">The latest AI news we announced in May 2026</a> <span class="src-name">Google AI Blog</span></li>
+    
+      <li><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/">How we used Gemini to build Google I/O 2026</a> <span class="src-name">Google AI Blog</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/944235/meta-app-ai-clickbait-articles">Meta made its own AI-generated clickbait news feed</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/tech/944245/apple-wwdc-2026-ai-siri-gemini">Here comes new Siri again</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/podcast/944058/ai-laptop-nvidia-build-gemini-spark-vergecast">This is your laptop… on AI</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/943531/ai-script-quilty-simon-horsman-daniel-wood">This AI startup says it can tell if a script will make a hit film</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/tech/943066/tsmc-ai-demand-struggles">TSMC struggles to keep up with AI demand: &#8216;We can only support so much&#8217;</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/942909/let-us-filter-ai-slop-google-youtube-meta-instagram-tiktok">Let us filter AI slop, you cowards</a> <span class="src-name">The Verge AI</span></li>
+    
+      <li><a href="https://www.beckershospitalreview.com/healthcare-information-technology/cybersecurity/judge-blocks-munson-healthcares-bid-to-transfer-oracle-health-data-breach-lawsuits/">Judge blocks Munson Healthcare’s bid to transfer Oracle Health data breach lawsuits</a> <span class="src-name">Becker's Hospital Review</span></li>
+    
+      <li><a href="https://www.beckershospitalreview.com/hospital-transactions-and-valuation/wellstar-to-acquire-25-bed-critical-access-hospital-4-things-to-know/">Wellstar to acquire 25-bed critical access hospital: 4 things to know</a> <span class="src-name">Becker's Hospital Review</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/demetrigiannikopoulos/2026/06/05/i-could-only-acknowledge/">When ‘I Acknowledge’ Isn’t The Same As Consent In Healthcare AI</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/amyfeldman/2026/06/04/why-pfizer-and-eli-lilly-are-betting-on-this-13-billion-ai-drug-discovery-startup/">Why Pfizer And Eli Lilly Are Betting On This $1.3 Billion AI Drug Discovery Startup</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/talpatalon/2026/06/03/ai-ecg-a-new-market-for-a-century-old-test/">AI-ECG: A New Market For A Century-Old Test</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://www.forbes.com/sites/innovationrx/2026/06/03/ai-startup-collate-raises-95-million-to-automate-life-sciences-paperwork/">AI Startup Collate Raises $95 Million To Automate Life Sciences Paperwork</a> <span class="src-name">Forbes Healthcare</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/04/health-catalyst-divests-vitalware-med-metrix/">Health Catalyst to Divest Vitalware Unit for $147M to Med-Metrix</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/04/philips-wellspan-health-7-year-strategic-alliance/">Philips and WellSpan Health Launch 7-Year Strategic AI and Imaging Partnership</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/04/vida-health-partners-with-instacart-fresh-funds/">Vida Health Partners with Instacart to Launch Category-Specific Grocery Stipends for Cardiometabolic Care</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/04/dont-let-legacy-data-derail-your-health-systems-growth/">Don’t Let Legacy Data Derail Your Health System’s Growth</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/02/ilant-health-raises-15m-series-a-obesity-care/">Ilant Health Secures $15M to Expand Value-Based Precision Obesity Management</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/02/noah-medical-jian-zhang-community-hospital-tech-playbook/">4 Critical Guardrails for Community Hospital Tech Procurement</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://hitconsultant.net/2026/06/01/rural-hospitals-administrative-burden-ai/">Rural Hospitals Are Collapsing Under Administrative Burden That AI Alone Cannot Solve</a> <span class="src-name">HIT Consultant</span></li>
+    
+      <li><a href="https://openai.com/index/endava-frontiers">How Endava is redesigning software delivery around AI agents</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/biodefense-in-the-intelligence-age">Biodefense in the Intelligence Age</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/frontier-safety-blueprint">A blueprint for democratic governance of frontier AI</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/public-policy-agenda">OpenAI public policy agenda</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/travelers">Travelers deploys AI-powered claims countrywide with OpenAI</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/codex-for-every-role-tool-workflow">Codex for every role, tool, and workflow</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership">Advancing youth safety and opportunity through global leadership</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/codex-for-knowledge-work">Codex is becoming a productivity tool for everyone</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/our-views-on-ai-policy-and-political-advocacy">Our views on AI policy and political advocacy</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://openai.com/index/stargate-michigan-data-center">Building the infrastructure for the Intelligence Age in Michigan</a> <span class="src-name">OpenAI Blog</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxPay02VlVLbXlsUGFWZ3A2ZTBUVG05TU9Fb2JBVlRZTWwzdTNJZDJSYUpIMU4yeXVYSTA4Zi1DVHE0WGdqeDdDNkR6UFVfbXdaYVN5VklfWWFnU1l1UFIwNXhvcjBkU2psX0gyOUNMUVpKRm5QME1jTEo4aWpKQktieWxxbDFUMDdqejRmTDRBNnRGWUcwNUJpb1VpY0J1WmI1S0xFa2U2MHF1VnZsNE5EV0JubGNsRVJvOGFhUnZGMnNOM21ERHhES1ZIcVJrcVFsaGF4bktzXzVfSnhZWHBrLUt0MDQ5dw?oc=5">Ilant Health Raises $15M to Replace Fragmented Obesity Care With AI-supported, Precision Care - Business Wire</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPNW1QY1JkRWhjR0xyV3ZOQTRQTWZjdXpiTXVaZmlCMm5FaTd6dnc2Ql9lQVhZT0Z5bzBnTHdhWEM5a1FvYWVLaF90Wkpxd1YyLTZZRDdrV0VSMzBWWXR3ek1NX1N6anB5WkhYLTlrUXhOSHk4cTVGSU5fR2lUSnc2aGRkeVE4V0pjaUE3X1NLMWVlUHVOdktHMw?oc=5">How Google could turn Siri into the AI health coach my Apple Watch needs - ZDNET</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPdWQ0ZllhRUpTQkhjTmx6Vjd6dVRudkE5QXlUdDBWeFFuOVk5bGwtMXZqV1hncThsV19oTG5mWmE2Ny05alBvM1ZyVEJKLU1NdllmNC14bTRSZWxRazBfNDZaNVpoUjdrUnVrOUh2MXllUXJrY2taWlFVOFVOeEZfcEJ3?oc=5">Samsung Health app is getting a big AI-centric redesign ahead of Galaxy Watch 9 [Gallery] - 9to5Google</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPMzRLTXpRZlNzMVhGSlBPNnFsQkN0VUpUR1dTWmNWUlZvalp3aEdNVHRfeUEtQjFTN2ZjY2pTdGw5SXVjSjdFNjQ4NkRkeFQ3MVJYLVA2NXlfR2I1TWpka1Q5cXd6UlY5clRYenJzcDlZUVZnTC0zTkZKaHhIR2RIUmJoenRtczRqaTFXS2RYbEpyVXVyNmYwZmhGeFE5Rk5XamhWWjlENEVKRmh0?oc=5">The Fitbit Air is a good wearable weighed down by a chatty AI "coach" - Ars Technica</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jOWRWWkhJYXZuRFNRc2dlZ0dzVE1kamlCeWk2V09OTmRQMnZHSkJmWXR4TlFOYS1xdkJ3QXk1RE56aXZPX2RlVXRjZ202Y3V4VWxoeDEzQ1lfbms?oc=5">Andy Murray V Thanasi Kokkinakis: An Epic Comeback | Australian Open 2023 Artificial Intelligence (1BzFEPrSCx) - Mshale</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRDNwdnBuVC1OQmU3WldqeWVHM0hGcUZBb28tcDhmZU5NYVNmVV9tZmJEUUpjOXpxR1FESmtlX2VvOHJCNFJEUWU4QlNNWm5xN3Mybk9lWldtM3pOQXhNUk5iRTc4VUdON2FLcm5PZzlaSkV6dTQ2WG15M3JBc1lMWjVTNkhnTE5QWXRfd2RKbjFlSnlHMGE4SFhlNXpxbFNfVjZ1NzRiZkM?oc=5">Microsoft Deepens Healthcare AI Push And Eases OpenAI Reliance For Investors - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQSG9pMms0MmZtTmFBV3hpYWJWaC16cVR5a2pUbHlMaG9aVXUzLVdaZTZfX0JjR25MWEtJMWpibXN3emc3ZDRsbnBPR0s4elRhZDNiaDktVWgxVW96LUFBZG5EUW5lcGhzdkw2aVQ3TVg5cGZtamhSNENmd2N4SVM3M2JPTjZUbHRTYTQ0eXczckZFUU94?oc=5">Wolters Kluwer, OpenAI expand enterprise AI partnership - MobiHealthNews</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU3RyUDV3QnRnU0t4RW1qWk5GT1RjOUVCd1NrVkZmVUNCN3RTVEJkWTh3enBfMWFmYVRHR2VLX0NuZldNajByeFFCNTdYV0ROQ2NPaGhBMkhrSXpyXzBxelpwM3puei1BNU9hdjAyb2ZOX2x4ckpDdW9TZHg5U3lvZHJVQjNBdk1KSjZrdV85RlozTUNJSXpoS21kNEU2OFY4V1VoLVdDQ3RYVmczU0o0RlpoemJCSDVQWWg1aW5yVEtnOC1FY0xlTVlHQmRVYmRkZWszUHdTTzZob1FKdEZ4NHNtbkVkdFdM0gHuAUFVX3lxTE5TajBiSnl5Ym1OcDlRSllQSmJBV19WNUVTMUpjMEJEa0hTT3hGclpMZVpIdUtxdzJWdlpyVnJUTFZLVUQ5TFBKSGw1aDNSa004ZVp2Z1hlZk5zc2hlSHRXUWE5bjU3NkVSblJoajBPQ3lnN3ZtYkhhMEdrM1RnYlZyWWNzUEt4YUhQM1VCNHU4VkFxc2trX0MzenVRazhXV2Y0ZE1kclAxZm9sNThIZS11cUk0eW02NjJKQWo4dkVhWldycElYM1VGM0lOR1FVcXNfN1NqZEx2QXNxUEwteXFiWDMwWHBNQ1FFY0ZCVEE?oc=5">Meta AI's step forward: Alexandr Wang outlines Meta's plan to take on OpenAI, Google, Anthropic through healt - India.Com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBxQS1rNlJJTFh0WFBkckw5dTdYZ2VrbDFFY0s5eGE4b0NIN0g5UFFjZHVVczRyYmZuZy1oQjRRMkJVVDB5R2FJWGRPU2psWW50Y0hxdTcyWi1nVUg3LU1F?oc=5">How artificial intelligence and human expertise will improve access to healthcare in the Global South - Nature</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPQXVmdEFvcFJKNEE0LUFtTDIyTjZhX2lIaGVnQ3NEZFFXYlF6Q0RMYXVJcXBENjdmX0stcGtoNHNsOU1FOE94NDRaMEJ1Z1NrS1U5Q1l0MWpyN1ZnVXl0Rk9VSGFlQUM4ZmxhakhoX3hUVHctbHJaU18wdm4tWWRXQU8xZnBJZVUxUFpteFdYMEtwYW5GbjRHR1Bzd1UxSmdIbUFuZkFCbU1HV29KcTBtM1dzcWwyYnliYWFOT1hBZzI5REJldXdJ?oc=5">Joint Commission launches AI certification program - Fierce Healthcare</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNbkVINnZBai1GZFc1cGZwVjNCbVU4eXN6UkV6Z1p2dVJTbHBqcmNlbHIxeHR4M0d0Nnlsd09IUHlPdjBxOUE4ckVOb241REhOaTFPRExnRFI0M2RHVTJiWVliRnZPbDc1SVRnd3BSWXEtdW1GYnZ6UWhuNVZsT3lhdUllVFdwSkFTNm5HRlA3ck9icGE1cGZNY2J5MXVDMWRHeVd3Y1ZneTVTZWY2?oc=5">Brooks senior develops national index tracking AI healthcare policy - Cornell Chronicle</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBIeGF5SVI1UERlM2xDTFV5Y0FVMjhnajNNWGxCVE41dnNxbTFMWTVzTnR5OUVnbkhRLUFwSThtbXNKbWQ0V2dnaGNlZDBTTzg4dkV0MEFHNjlhbHRrSWdDN1BZVlNGRHJQR2p3VVduVjVNeG1mN0lpd29LTXA?oc=5">How Open Banking Shows the Path Artificial Intelligence in Healthcare – Numan - politicsuk.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQek02aEhCZFNmWUNfTkZkM1RMdVV4aEpOYzJhcDgtTFI5OW1BamlZSEJ0c1ZrR1A0bU9kN1dvQXlNaERJd25IMlBpOGdSY1A0Yi1ZZ0ROakdydExxMDMwZTdreHZVV0F3dTBpN1VTbVQ2dWlpTldMZ3BKNjM4S3lrZElPaXRWTTAwLVRDQ05uYzVhVlRrR1A0Zml3N0NBTW94YTJiOFlmNV8ybDlNSnk5RzNTeEZQQQ?oc=5">HIMS Stock Slides Overnight: CEO Sees Healthcare Potential In Anthropic's AI Leap As Lilly, WeightWatchers Turn Up The Heat - Stocktwits</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOVzk4MmY5Zk5zUHJiYVVlQXpaemt3c1ZpQ2xQVG9YSnZQUFNZRXNHVXc4TVIxWm1IeDlvN1FtbkNaSnlKV0lNd3E5Slk0bDVHZnhKZ1NOMWxMTG5LT2Ffd1JubnhZUm5oeFRabFJ4V3JjOWs3em05Z2hnWXllaWtiWl9QMUFpV2dfV2hPeXV1a29EMVpuV1I5cEZ5RThxMEN3b2FpVnNSSkNvNXc0M2R0QjFoNng4WC1lV1JwYkl1dnp0cVluR2dJ?oc=5">Trump administration pushes for AI physicians: Report - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPVEM0MlFSc0dvR1ctV1h5ZEJuYXVrQWlvLTNHTVJaU0ZfV0dwSVlkbnlOWkZ5eVVLZVRpMTlhNXlOMVhLcjNQdUs2Z0JZQVZCbG9JZ1pRSTJIZGtPT1EweUpoeVdNanEya24zT2pqUUFoSHhlUnZLN0YybEdnMG44TFVWUXdsN0hLNm53TVVNZDgya3M2U2RhVWx0XzZ1cVRwOGtteFZlY09iT1ZGMDJremt3?oc=5">4 states regulating AI in healthcare - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNallzVnFHTFIzR0tFdTVWMEVuRVRIeTAtdm9wWFZpeFZKNy1BTUMyRHlFUE8zcUU2WjZYWWpndmRqQ1F3Vm1QZlozLUlfTUVJaXBfYjlSdy1HcGxaMHMtSEFIbU9FSnpJbmREaENIUFpPT2hXR01UaVdnQWdjdnMzQlQ3SFUybG9UUURGME53bkYwR0lBUmZWclRjWFpwbUVyMkpHSHBCR0xGa2xQSTU0VklsdVhHUzlORDdab0w0ZUMyeE4zWnVZNkZNUjhCcm45cXJBT2Jqd3R2RFlBTDY0OVpB?oc=5">Health systems aren’t just killing more AI projects — they’re starting fewer - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNHdDcUZBZ1BWQmJnMEhvSzdKb3VFQkdUY1BKVlJsNkZ1ODRhUHFCelpIQVlfajdxMVJIYVl3RGNFalBUdi05T1U2RG5nMjhEWU9yY0ZEZ2FsendDbDdfUFNodjQ3R2tPdERnd3U5S3NfcmNFZGp3WGJJLU5zOG1nbDBjSlY5SnVBOVJpUGFfU0VXaFRiOHUteHJaS21vQ1JXaFNDVGZxeVFFNzUzbERkU1lZaXNKOXZDcWpXMTAxYmp4VUE?oc=5">Novant Health pilots AI-powered virtual assistant - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVTB1RjV2QUJ6TWpZeHE5enpzd0dCcXhmSHFrNW9VMlF5ZEFXZHhWOG5meVZ4OVJDSjE5YmQxek83SE02S09TVlFJa2x3UnZLYlNjdm5fdWY1Q21DazZrdEhLZlVkd2o1NlNtV3RvcUpCYlpqQ3pkbWRfNU9SQnVCMFRudkJGblg4c2NKRzF6OWpBSGwyLVVBRDV4SktiYUI4RWIyeDk0dmZDNXBXVmhmWXdaRkxaZjRlRFBTUURWQUhuTHR0a1hRRUtNSWxWU2VKbjJOWQ?oc=5">15 health systems that have signed enterprise AI deals in 2026 - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQdy1yeEJXX0o3VHhMRW4wT3dwNHJmTGQwcWJDam9oa2FnT1ZQYkt3aGZaSHk5Mml5bE13N0Z4b25iaGZtMDh6VG9PTUQ5RGp2cl9JaEdsWE0zY0NWaFhqM0tlNmJGWlFwWWJwbnhLNDZQRUl3Nm9JcmFJaVNKNmpIQ0VuUUtwc2FNbjJxV0VaUDlUeDFfWmJwR0NMaXhZdHhFTUlJOElGYUVpWnhmTV9Ybnk4N2YtMlIyVkowTGw3SG5Cc3UtQ3Nidld2Yms?oc=5">Mayo Clinic, Microsoft team up to build frontier AI model - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQdlVBcGZ5NTdlOTU0cnAzTUVrOWhYRlM3WDI0Rl90QTRkRnpIck52WmRrcEZPQ1BXNGx0Z29vY3pUWGpOMHpaRzdwQzFDWnNGSlR4WHVPWUJRSnNQbVVxd3FzYXdKVHZFX2h5WG94cktFaUJrdXFhOGxGLUZjNTU5Q3NnUU5qVDRGR2pLdXJKbXJhT3lCNkFQLTJ4S19QUFk1R1hSdWU1bG94V09POVlCWHVybjBmRHI4Z0MwTDlUQWx2Q2ZqcU1NUGctSVpsVjhzX3c?oc=5">Health care AI doesn’t need more hype. It needs accountability. - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMihgJBVV95cUxQd1R5T1F3aWRZTy01S0ZuYldyYWZlT2JFdkRQSGh0dTZvWU40RHpQYTVhNlBTcjZuenY1Q2RkaDdhVVhlTzJOR2FycG9YdVVLZjlvd2YyRlhFc1NaQzBwTnBpN0hjWUROblpVVGQ2TFN5WS1mMlVqZ3htcFhLX2VONTduSm1PTnpVRm9lUWNNc0p1d2pJd0dteTBEd19hLWdMT1hiVDRBVGlaMGVLR0toeG03c01qNS1kS3dPa3lPYUJoUWU2dHJ2czJSQ0hmRjJhWWx5aF9TZmVWZ3VkUTFvbEFEWklONVo5RHpvTEhuTGlRZE5ubHFDN3lxb19ZdG5qVlozSUFn?oc=5">OSF HealthCare Expands Strategic Partnership with hellocare.ai to Deploy AI Assisted Intelligent Hospital Rooms Enterprise Wide - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTzFJWTlZeUk3YjE4ckdPQURBbjR5VWVwSTJ2YmxYN1ZhdC1iLVRwODJDZUpJd2tsVW1LU2pVejlNeUtlWE1FZzlPaTRWTTNqNEx4MTdGMlk0TkJ4c0NXNC12SFd6S2ZpT3o0TjJEWmZSQTR1OVEtZjZMNThBa1lXbU5kaEk1VmpZeElYMi1URklVbFdkUGRhUFBWOFFxVFZPNzJsbHdSRDJseVRGdWdTRWV0MjA2R1h1bXBud3ZTTGJjSTlKakNKbFUxWHY3bE1oU0p2N0UyZ0ExVlVV?oc=5">WellSpan Health, Philips launch 7-year AI, imaging partnership - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxNRGVXMDY2WUNNbFVCQTE5OGpId3RNNTE2ajc3ZVlnZFB5dnQweDhYa3EteGtIYzhsNFpXUF9KeDI1YWR1X29xc3Uxd05fbjRsYUtmODlOY2pacHBtajY5cE1Dc3ExWTJJcWRxNHN6QTdsM1UtbXE0cVlldW9mUFNSbDZKdjkxbXYxT05yR3ZFbVRlWEMtWWxMcEtPMHA2cnZ3OGJTb3ZacmpuMkVOVXFVX3lIem43RDloUFNQaWtCQ0NtQV8tajJjLW8xVjJ2UkJmd3I0?oc=5">Trump signs AI cybersecurity executive order: 7 things to know - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQMjNIakRaZjdvTkg4clpSUURRaEh1RXNfTkJXaU1ydm9oYnpyZ0VIUTNQWFhQRUZVb0J6bmtGWUpKUkhDRVM2V1RNTFkxTm5hTU05VGkyS0R3SkZlY3FRUHE4Rk14RkZCeWdsc20wWlZyOTE4Q3RHSkRJbTJ4UkNtUTM0eUdCOTNzVGN6X3dfYmM3a2ZRSm9jSHFqQkdHQ0RNX2Rvb0tfWEtURU85cUJTcG1nbUlYOC1pY3JKc2QyWmtnVEoxdDR2WWhvcw?oc=5">The AI ‘taker, shaker or maker’ balance for health systems - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcUhXTXZxVUpCUFdBTDJHb18zUk5jZHQtWjhMOXEwSnJZZlRGX2RSM3dUcFpoYjc3QUJQOWp5aXlGU3luNm9TbXg0SnN1cG5tbmpGU0NFa0JyOWZkYjNqTE5xdmx1ekhxQzR2QWhnVFd2aUhfSDkwcGFQNERfTHVMQ05oZWZ4M3ZUMnFNTkFLaWRvQ3ZQanVJcktVd0l2QkFSNnY1RGtzd0lXc21UOGFNMC1RWVpROS12NXRzODAzS3JDNV9neGpPR2FrbGx2YngyX2dhdGVrRmpsQzA?oc=5">University of Utah Health uses AI to scale hospital at home - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNnl4NUtJb25UaG1tdHNxVTVVWGJVMXBDak1rdTRFbzlXellPeF9tVGRnZVl3d3Z0ZGgwaWRycjFYNmFwOU5LZUoxQ29WNHR3Nk04bDRWajVYemlCaFhIVzhIOFFrZGpOV2FtVXlhZjY2SWJXMDZjLUdQVk44bmg4WlllX3FZaUVWY2lfcnNNNW12cjROclBkX0tDTUtTbzBqZ0xzbW9yaHRUZG9jV1R6QTFFTy1RZTUwQTNtZ29FU09HX1RUN1JDd2s5aFQxLXFKV25RcTB6Wlc1YW1jc3lxRVpUYi1RZWFwc3dYXzlwOA?oc=5">Providence tracked 1,547 clinicians using ambient AI — here’s what the EHR data showed - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQVThsTVVJVDNvRWx4ZE83NVJlYXZRWmVNTlFBNjNSa1lrOUFCOXlRaVJGRkcxVGxjNVdLemtBUW9aOEVlZ0dFenN5QVozMTRlS2FyX0l0Z1BzMWZoV3RodFlCZUZqa19xbFQ5NTZRUXJPZUUwakJ1TlVUcG9lUWxTUkd2bDE0ck9qM1JvOFJuYUlveHRUaUpHQXNtVDZCVVhZNnc3VUNMbjRFN0NndVNOcjl6UXFrUmxQaUhnUA?oc=5">Joint Commission launches certification for responsible healthcare AI use - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxNb2k1M2pnSWI1YWMwWnVPWFNQLUNEMGNnMU9uOHZPT0Fjb3BqaktwRVlsaUwyUzhjMUFGMHBXYmdZcmpRbWxkZWFicXlBMFdXNmJkeEI2Z2syd1hJNGs0TmxxSDZnUExYRFowV3lpTGpkZ1duWnpEU0dVcm5QSm82MTZQaV91RzBPbmUwRGJ3cjZCaVZJNjhYQzBEeEYwTVMtQnl5ZmdSdzBHQzNzbzExLWpsbXZIQmd2ZFRoX3JRRDVSLUZZM191LXIzc2RlYVhFeGF5N0Jtck5yVFY2TU94clhrR3NOX29oaFFsTnpmLXFDSEktdVVJ?oc=5">A flaw in AI medication monitoring software comes to light after drug diversion in Tennessee hospital - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxQWEdWdGluUTRTeHpNQWxRVkoxelZhRHdjbzlYNUhvY0UxZ01oS3JHcFFiR3hCaUtsT2dXdjdRQmVLM09MODJVMTR0NG81blp3S0NRV0FqMllrTkxqMjBhUV94a0dYUGhOZkpiWmE0Wk4zTERkQmdYVjVJek5RaGFVT1RxcU1aay00alRMMXBxdXFGckpKMHZ5eW5aX0ZEOUJpUFllUTFoZ2c3aUl1VzBxWjV1a1c4R0xaWWh5anBFUnBmXzREcUdtOUVUb25iNndvcExHbFNYQ21xQzhYR3piX0hjNVBRQmg3U1FB?oc=5">AI operationalization in healthcare: The signals, support and metrics that matter - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNREthd3kteEdIT0hRbFJ1Q3liQ1lHQnV4bG1GbXRHdmhuTFFRNXVpdVJDTzR0MFI2VUtXYjJLcDh6QW5yeEplSExBWk5vU0J2LVFvN3dVeGVTRkZZS25XS2ZROUJLcWpQQ1NnV3RQNmRJcFpGeW9UVzZpbDI4MkNXZHRwOFRYNkVsTVZTcW12TEI1TjZsVW1xY3dOQ3JMSUpWZFpmNGdZbkxPa1RVR1E?oc=5">FDA accepts letter of intent for 1st AI drug development tool - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQSzgyblU4TnlFSWljellJeVJGYVBVNlNvMEVzUHBSWmdxbkRDV0xHbHdkbkJLaVNZTlRNY1BFa0MySEN5LXJSellHSlBwT0R5bzhudlhrTkl5NVJaOTFqSmNNZXJMVHpOQTRiYmdDRTdzSG9nbUVCNnNwbTVGNk56ZlNVSHJETTA3NmtqNUtabk4yak1wUXhyV25DcEM0WHc1QXIxdHNmWXlfVGI3NHJINGwtRnFtYzFsaEZ3TFYxeUJuMkxqSzBDYVZEVkJMeGtRQTlGa1RIanU?oc=5">Health sector releases AI cybersecurity best practices - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQbDAyai1CTGZ3NF9GZkF0QXJwMUkxYUNvRi1WWldRZGxibEZYZW1Ra3h2OHpJbVh1OGlJaHQyS3J3X1pUaHg1dW1Cem1RVlJnVDdxMzJNT04xRVBnQ2xYQVhhR3E2WDBRUUhtS0wwSmN6MTRrTzFsZkR6Mko4dm9ZblhmcmIwSm9KRFM3QXVrcVRPczNTRTVDbG51OWdhc0pUcTVCQ3NkcXEycTZYc0FscW5uRE5xQU1xdXA4Yg?oc=5">AI linked to 40% of US job cuts in May: Report - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMihwJBVV95cUxQVWFuODlCdFVLQW5wTl9QbTRPaHEyX0NjUVlWY0dncUxuLVZiSTZwQ3hXYzBwRElPVjlOeG5WVzFtYjVsQXRZV1NZNk1mNGFTNUp5UWlTc2VPMjVKblNZXzBEbVlsbEo5bWgtYnJ0SUFlWklDYlUtNFhkUkxKdkhKT2pIWWVZVGxiQVlIcXdXd1VVaUpoSy0yQmFRaXpvb2ZGNVlDTmpBUlQ0YzNMS2wtT0s4RW5BQUg3dXgwVG0wRWJWWmZTbWdyT2l2ZVVhNWJlU1RDeHkwSG1wUV9yQ1FHSUluQ3lOaDNJVVBjRUdyakpmVEFOYXh0Z3hDYkpVLXJxdHFEbmVVNA?oc=5">How University Hospitals and Northwestern Medicine are proving agentic AI’s value — 4 takeaways - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi3wJBVV95cUxQSmlwM3cyUVNUcEtrUEJHcnZKRTYyMGZPN2E5cUxsS0pNUjhnRDhUd3d2bHA0Q3FfN1NEelVvUkFnb3RNdHpfcVlnWTlSd2ZRSWZCLXV4aXI4MjJkdG9VaVk3alltTmwzcXR4N0VjLU1PQ1czQWJVZ0Z6NXA0aWtVb0xBZmtQVmF6cnNqUzF2bVdIdGlBcHlJWm04T1duT0xVbllkMEQyY091ZHRBc3JHaDg1QW1CeWs2WjBwODNWRmtUOTRhRzFsN1RHN0luS1NzbEpIaVAzZW5Sd3FQdHRMRkNjcUtNaWQtV1lzbUJjTUJTcEtRc0FIZ2UzRXppa2gzODNmTTRoUVdPNkcxSmFpZG8yOTJpWkVGNHVwRUdIRkZCTVJYdWp0b0JDRFlmeDlWam9xb0FLMWlrcmxxT3VWb2hiWEpzRnh1Q0E4WkRmRXRKWTc0S0JTb1JwaEc4Qk0?oc=5">Systems lose money on virtual care | Epic dismisses SelfRx from patient records lawsuit - Becker's Hospital Review - Becker's Hospital Review</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxORnR6RElPVkpYVTF4dlFqZTlhdktGTFdmaUdKLXo4RHJsZ1ZFQjRhSW82NUo3YnJKbkduUFFzR3F4all1UFZiUHhQR2pzaXVrcEVwQXpkRmhVeVJKNjhUSGtDeFhWUFV0SVRmN3pJN1ZsQU9uSmVHNk5lSXJxUGhJeU00bURIQms0ZGV2NjVCeUg2bWk5a0dwLWhmVmluNHljeXh3bUFBY0FlMkxPMUF1MXBR?oc=5">How Anthropic, OpenAI And Nvidia Are Defining The AI Economy - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQT1MzeW00TC1VUlpxdm5GeEFJUVNmRGJKNEFkS2x2RHdTNG1QQm1uUmhHMlIwbW1paGlMMkI0OU13NldXb2swdElITk83SjktOVhLOUxFUTNDX1JCOG5fVlVmWE5VTUhpVjZHTXZ4cDVVSWc2SUJEZ2t4eE16OFlZSzZ0UWhaOXlPdEc2OUxlOHVJeWJ6cW84dzF5V2RiZDFGRUNEMjRHZFVLX2I4aXlyVUFiQlN1cEdQcHQyNHhqTEppX2RHbnBGU0FmWWZTV1p4?oc=5">AI Coding Startup Lovable In Talks To Raise Funding At A $12 Billion Valuation - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQYjFybDJ4ZUl3TnN0T2hEeFBmb3ZESUxROGNwZFdidm9MVWdLcnVZZG5CSWZPRUs0Z01UUWJycHlyZDJBNHU3aTdJWi1CbnhCSmtFd2ZXQTZSb0E0T2Z4ZDJaRGpPX0hPX3hKQXkxTXF6Tm4tc0hDWGwxNmJrcHNhRGRTSjgxekZCMllRX2FWSGsxeGhJZGhoa1NCWHlSRVdWNEVEX3VSM2NQTzdQR1JVMURfVWhKVHkxQkJwVFRQdEdJMnB1MGlFZG5yTk11b2lE?oc=5">Tech Industry Loses 123,000 Jobs This Year—AI Is The Most Cited Reason For Layoffs - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOaUNfajVHNXphX19TZzlCT1NyWUtaSWhlQ0hYTTdBalNHZmw4c1RiUUlzaFREd3ZrdmlzSHhFOHF6ajJ3XzNkZnVOM2tuZzExVGd1cldBQjg4Rm9yaGFIemVsTEpubU9CQlA4TW9HMkRzZlgtV0FReGRKM3ZGd0lkWE1Ec2d6aEtpZkhETHhoMG1jaUlxMmg0ODJ6X2piM0ZWdEJoZXNndTRSb2VUUE9wUDBDTld4YUJ5aHc?oc=5">AI-Native Transformation: Escaping The Modernization Trap - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNbmZNajByVjd4Nkd4TWxXUzJqR3REc2l6ZkNkdWZjMG04NnFRLVRQV2I5OWlMVlVjdUVtQ3BSWGpib1loVGJqWDJjNWVSYk1QQ2IwMU9NSy1wZ3hXLXZ3Q1ZHNFRqX1ozYVNzazNkdTdoQU9LWjViTjhnZF9JTFc4UFFGZE1udUJ4WWFPdFNQb2o0eS1UOUlVY196N0NYSEJFQzRhQWdVMy05dUxwMnhwejBmMA?oc=5">SpaceX And xAI Power A $1.77 Trillion Bet On AI Infrastructure - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPSlhpUTg0OVZlTm9Cc056bUd1YjJmU19HenZmcUMwZUMzQmhxbi1hTnh2TEN5MU9RdmlOVDh0QV9iczk0N2U0VWhCOGRMbXpxU1VGNzdmVE40ZVYtekNtdEdaSFRjdHRib1FKREpQT29oZ3VXdVJsZWNtM0JyWEhyUWFxeTg0SzBEOWN0SWJVRjI4UV9kbU54TXpVUHhwOHE4WEJRXzdrQjVUdW5PSU1GMDln?oc=5">SoftBank’s Masayoshi Son Becomes Asia’s Richest Person Amid AI Boom - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPWmpqd0tYdnpmY09qMTd5ZnRBZnQwaDdITl9Sb3RnWjN4dGdWR21aRzY3SU95SmRUb2RjT3dUcC1YbmNQV0xwa2dHcTJWblVseUlmTnpFMWxxOEhleXdTZEF0Q2tVSHBDM0VWMGNyb0V4SmtieDgyV2VSTU1faGYxSndEOGFjV19XNFg3MzZXQVdUM09uQ3VfR1A1SXZsYTM3Uk5VREV5VQ?oc=5">5 AI Tools That Replace A $10,000/month Marketing Agency - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQ2pod1pNeFhkOXpubG1IOGJENHFtYVZmMkJPcUFlcWpqNUZBRXNpbnlwWnRPdC1Gazh5MmhvYkdYZzlldWhKY216MkVhX19GZzNZSzFTWmtjZjBSSlJQSUgydjZrb0xpUDVaUGlybUU4alJrWjc1MUUzUEEwT3BSMXd0Vk8wenhjUkRSdVNJUmZqSmN1bXY0R3d2UEQyZXBEeWltU2VjakNyR3lKRFc1Z3FKWmN0UEE5bVU2eXRheXdWcUhfYmxQOHRQcElZWTdjUEM5SXJ3?oc=5">Sports Is The ‘Antithesis Of AI,’ JPMorgan Expert Says, And Team Valuations Will Surge - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQY0dUVk1RXy1fZ2RQd2tNcjVERUlDTG1KT0o3M3lNcVVkVmREN1NQOURoUW12SThYVnVfVzJQN3ZnTW1heGpYOXM2QkIydjBOb2lBUE1jZk1HbVAxeFdiOTZOWGNsWmxJLUxhWnhHWW5lOGxXcWhPMmV2d0V4bjlsZzdIWlN5UDlqUDcxaVQ1b2l1c0o4QmRSYld4UW9nRkN2OXJxcXdKRGtPV1JhNUwzcGRiVGtFZ3Q5bWUtcktR?oc=5">America’s Top Women Lawyers On Career Success, AI, And Raising The Bar - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi8gFBVV95cUxNQUJ5TmJQc1NscDFmc0s4aHJoaV93Z0lfNjE5TF9saUxRLWYwc05CRVQ0QTZkVmx2MHVBT1dnbGdGMFRSbU1aZXBDakpPWWdWem5nemEtZ3RITnI5bVpmT0hqa3BiSVoxS25feFJmdHNzendyeVJ4RzdTanFWUEp1XzVqSk9HQ0ZyMWJGZWgtdE5zSnlCY1FEV2Fobm0wZEJCV2E4NVE2bGVtM0lpN1ktT1pJVk10RVEta3ZhTzVNeGp5d0txNjVZWTI5bUJoM284UURVeVlEcEczUkN5dGd6VlBCcDRwbElkRWVYUThMUVNXZw?oc=5">The AI Recommendation Era: Preparing Healthcare Practices For AI-Driven Patient Discovery - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOQnRBa01YTzVLcjFhOUJjX3ZyNTJBN0szNHBLVTV3QmFFWUVZZnlaTnpGZHlNMlV2MUhuZ3hRX0gzXzV0cnd5WEZUY1RERVJzckVoSXNzTS1la1VHZW9RM185b3RWbmtXTlJTa3p3WUVHaFBVY3VGcUFlMkR1aFlsWDRvV1d2V1VRNXdlRjB3NWMxTmFLLXRyRjhXMzZJd1hLb2dJ?oc=5">Where The AI Trade In Healthcare Actually Lives - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxObXpqX3BrZFpEOHBlbTA3SnJITGVhSVF1ME9FYmtzZUppdU9lZHRpR3ZXa2o5djZ6Ti1lMFFhTlNtUmZ1aENCTlZRY1FsdGNlYjN4eHgxc1VYRk5HdXBKWDNVWkdpbkE1SlFIeE1pNTVNWkJIekdDMVB4blpnc1drM3F2ZWNLN2FrNHNmQV9RM25mdDdsRENsTXBjT0kzN2VEcUwxZFFNMUUxM2FoeHNnMjE3OG9XeHNRckktam5PYmFfSnY2d1NBaA?oc=5">Healthcare AI Is Booming. So Why Are Providers Still Losing Billions? - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRzk5QVBlRTVqSmdOX3VtMTNVd2U2dDdZM3hyNWhyaURFX2VXMk1BSmJsYVduZ3BrZERvYkxtQ1dTSVIxbHNsdEJXVnhQRzlzX0RYYm1EVEpYQVc5RC00alBLTHJwYnJmbGJSYlhqazlJczE5VkgyRzRRMWdvRmNRVXZpNV8tbURzSTQ1ekRNdEp6azBYeVhGSUh5MjJINGhIdGVXWXFkUmFOSmVJUTJOd29nZzJHa1JkaTRXajRLTVNIdVIwTVk4cFMxTmJ2YjU5ajRnUHhodU4?oc=5">Dr. Joe Kvedar on Digital Health | Can AI Fix Healthcare? - Forbes Books</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTjEwcDQ3T3lJNWwwMjZLUUh5d1E1TTJzSk5vbWZJMVJlZkNrM1dxemdfOHFKVFFyWVIwbnY2cUc1b3FTZmhjWG5qQnhhSmVkTm4tX0Z2T2VVNmFTMWNXZTdJSFlQNU9RVmVXSkYxTUFZaHgtZXBfcEE1UXQ4TjV3NjJVbURvVkxtUVZwOTR2RkY0QnBEVzNUR0JKZU5IM1dDX2E1UFMtQU9nWlo1ZE95SzB5OVFZbHd4?oc=5">Why Healthcare AI Often Fails At The Workflow Layer - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOT1p1QzRLV2RCZTE0YXBlZ2F6SHBlMC1FUGR3eTVCVHF2ZDRGUmN3cUdwaE5ubHZldWQtNGRKRWdCaHhLMDA3cnQyX211QU1TWjY0RHlEWVZQSEtOeFBBajNlel92M3RSRkJMWmktdGtYTi1DNC1TR0JXXzRsMjVkZy1FZm44ZWdTa0JVNTdMM2ZFWXhWN1VaWktuaHNENjZidjNXMzBlRTYydzk0aUhXVUc3YjFZbXVNaUQ2Ukh6UHBPNE42NzdDUnBQZXg0alB4?oc=5">Why Central AI Governance Committees Are Failing Healthcare—And Their Fix - Forbes</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE84bGs5cFY5cmpKMUQzSnpDc2xPTks3ZTJvMjEtX2ppRGVjbW5KVEMzc0dfenpMY2txcFRMWHJ5MVJvdzU2S3E0cUY0MWE0TVdaWTV5REhqNGJ6eFZINk9ob0RxSEhhUU1jYkNTMlNQTQ?oc=5">AI for Healthcare Payers: How to Become AI-First - Boston Consulting Group</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOWUcwTG4zaEp2c19aZ0dpd1FTejFWeXM0N1RrTFQ3RktkcEVJV0FDZFQtMkZZRU9LdmtsZ2JacVNzdmp1UjJNdWJlUGp4MWEyR1ZOODZvWlA3ZEZXVlMyUGVHZUhlNTZGN0hlWGJfQzlEdXBxOUdWYVk5clhYWGNHRDdKT1NCbFFIaDI0a0cyUnd3NHM5TWNBcTZNOG9IRktlV3FBUERyUTVVS3hEb1pRa1NGbGJQLXZLUlpIOXJXVlJDb0tRNXBPd2EwTHFiZw?oc=5">Agilent Partners With OpenAI and BCG to Scale AI Across Products, Operations, and Customer Workflows - Digital Health News</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaDVTNXM0N0pNdzF1TndmYVhTd2l0ZXRrUC1VZmZxV2lSNzFLcy1SNnk0d0V0NlpTR0NnaHFQWHA0b2pvb282RTFiQzdyT2g3NmVfWmJMVnJBcGtkRlFSS0dRR0JqYXhhUkJ3akdrWDRzQlkzVHhqdGFKVGQzZ0JZLW5YbFd4ZkEwdnRfa25NeXVFSTBoLTRtd19GU2MtVUxxT1dnc2s4Q1ZsWDRhU2RaRld5cGU3Sm50SHVn?oc=5">Microsoft AI chief says company was “set free” from OpenAI to pursue superintelligence - VentureBeat</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVN0aW1tS1JUdkYtdUFXS3ItX1NsMnNoQXB0YUZwSzlZTjhLZ1RVOFVUT0tON0E2R2RRcHc5R2M5UXZjOENjdy1qWnozLVBBWE1RQklKTjV1VGtRNHFHNFFHajlfU2ZhWF9GeGFOeHRlSEVIOGFscE1XOGVNRnhuMmluMDdCNm96cmc5OE00U00yM01uWVZjeVB3?oc=5">How Microsoft, OpenAI went from partnership to 'situationship' - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOMVdFdEdQQTRodDJqeW95ZGJxRzdoRjZOWWdvSU5Rc2EyeHJoLTRrZ0d1Z3FJSVpTSmJRNVBIU2tKSTJwVWtqS2lCT1VUSG9GbVhKY19vVHNyeDJxaTgzRkJHdklHV25SNTN6NlFnYURWVlNxMTdsb09neHhSOC1meWZWb2psMFl5Q2VDY2dXcnpTVUVsOUR6cDZNTTIxWDByMHcwdENn?oc=5">Microsoft AI chief Mustafa Suleyman says there are three labs that matter — and he wants Microsoft to be the fourth. - The Verge</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOSlMweDEyakpBY1JkY21ydXI5bjcwbUVVS2UzM0s0QXk4dnEtNHR5V1pYcV93bTNOc3JvX1N4U0lsdGpzUnhZRU81c1FDY0NkZDB2SE5ic1BibG9JRTNGc1hIYWlRVWxfeFlIbEN3NlliYXpDczhFQVBrSk5TbC1UVTRIOEdBQWR2MjA0ZzdMMVM2UU5HUHk3SFJFU2R1ZlYwTUZlMjJjZDRMakV6T2s3ZFlGRkliOFNzdVE?oc=5">The Relationship Between Microsoft And OpenAI Has Evolved Into A Competitive Partnership - thewealthadvisor.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZXUwSTVVLUtJbktZay1PNjVEaXBHOG45Ykd6U0JHTmlwSU12dE0tMVgtYUZXN2dQR0hmMW8wb2swRmlQX0gyanpmM3UtX3FENkRIRV9xem4yOHFYQkRKbjljc0lrb0NHQ3BGREtVUmlocGJJeXEyOHZqaXR4VE5IMUFPb3BsOEpKYnoweHZUd0I2ZzFSUDhVcmZRcDNRdklYcFE5UWdlQTFZZw?oc=5">Wolters Kluwer Deepens OpenAI Partnership As Shares Come Under Pressure - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNTFRiSDRVT3RHd2JiOGZqTmZFTFAxeFZaZk13QXp2UmdncW1KQ0ZSSHZQYmtvdkpqc0FZWXIzWC1TY2Z2WXJmcWl2TjBLUFl0QVo0NlZsejI5ZjJ6S2ZRaXpLV05OTDZWQkRKdm9yR2xPdG12ZTR3ejdwb1JGdUIyS0toZ2hRZi1oV1drdHNSLTJKU0k2WEtrU2MzcGJtdHBPbjB5Zw?oc=5">Micron’s Anthropic Partnership Links US$1t Valuation To AI Memory Demand - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOMmpHOTZyQjJRUzNlckpSd2VEamM1c24xSE1acnM3TktSbTdkUGxIVnJxRm9qQVdVQk41SmhDVkJ4QW1GeDFYaXdDbi1wR1A5bGFmOXZ3Y3dtZmVhZ0wzUlZHZko5bV92ZmVNZ1FTZTVrRENoNXI1cV9qaVg4SlJNWnFoU2ZQOTNrUDdNa3RB?oc=5">Alphabet and Anthropic's Partnership Could Be a Major Boost - The Motley Fool</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQaUhJUF9RVG9xbnBVTlMtREpSYmkxQmtOTlNueHlmMzFITGZNYmtwd29URGVwelhYbUZpM1RhREQwYWtqQXk2R3g4S3RCNzVycm5KVEVGV1B6N2FoZHoxQ2hMd1JUang5N0p3MzFBR2ZOWk9mODFDbmVqT01zNVVyZktReHhTN09nMnYxQ2R4eHhxQ09RcVlIZTNoYjhYNjFRRG9BaVJ0cGZPdmJ1WEpTQ3ZJZEctbkJqblFEUl9JYV8wV2ZFaVZzTDR30gHKAUFVX3lxTFBpSElQX1FUb3FucFVOUy1ESlJiaTFCa05OU254eWYzMUhMZk1ia3B3b1REZXB6WFhtRmkzVGFERDBha2pBeTZHeDhLdEI3NXJybkpURUZXUHo3YWhkejFDaEx3UlRqeDk3SnczMUFHZk5aT2Y4MUNuZWpPTXM1VXJmS1F4eFM3T2cydjFDZHh4eHFDT1FxWUhlM2hiOFg2MVFEb0FpUnRwZk92YnVYSlNDdklkRy1uQmpuUURSX0lhXzBXZkVpVnNMNHc?oc=5">How Cloudflare’s AI-Agent Push And Anthropic Partnership At Cloudflare (NET) Has Changed Its Investment Story - simplywall.st</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPeVFyOXRma3lrQWxqNjRNYTUtUk1ObHBWbXNsVUZscVFmNjJIMUxXelMzX1RXRG1YTmppZ2hJc2pqbDFLZjlBNFpqckNRX3dUdlJPXzhaOUJIbFpuY0pLbzdZWlhsRnlKMEZxUFFfQ29LdFVBT0tyNWZJOXNlbEQtaENHZXpWcWk4UmFHcGpJRmpmcDJIVmQ1Um5QTlJnZm9KWHBUMTFPbzlrNXNJNlF3dnNHWkFpR1NRLW90dEtERQ?oc=5">EPAM partners with Anthropic to accelerate enterprise AI delivery - Investing.com</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPeHRXeVNFQlU4Z25NeGhMdWNjSVV5UUp3d3h6cS1ZaXdkeEJ4VHRnNFZIMTNOTFJ0WEIxa1EwUmt5aDJFRkJmdHJ1Tk53dTFXVldNdC1CaklQUzAyamdHeVY1RHJmUzg4dkp3UmFYTVozVTFfSTNwb0FUTEo4NWV2VDlKVjF5aVExWE9ZYTNyeENXYjk1ZUFQVkxMZUI5WUxwb3dBSA?oc=5">EPAM Systems (EPAM), Anthropic Forge Multi-Year Partnership to Accelerate Enterprise AI Transformation - Yahoo Finance</a> <span class="src-name">Google News</span></li>
+    
+      <li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1TVmVKWTVDM015SURhVDJ3MDZOdUV2NFJFaU1aajE3SG12NUlWcFBPbXFIVUFZMlgzS0ZvQVJFT3Z6QWg1dXgtMlVtRkw5Vm9XSENXdlRoOUM4RWh4aUhTN1RIbHhQSkU?oc=5">Snowflake Deepens Anthropic Partnership to Expand Enterprise AI Deployment - thelec.net</a> <span class="src-name">Google News</span></li>
+    
+    </ul>
+  </div>
+
+  <div class="footer">Healthcare AI Weekly by Greg Harrison</div>
+</div>
+
+<!-- Floating "Let's Talk AI" Button -->
+<div class="fab-container">
+  <div class="fab-label" onclick="document.getElementById('fab-btn').click()">Let's Talk AI</div>
+  <button class="fab-button" id="fab-btn" aria-label="Let's Talk AI" onclick="window.location.href='mailto:gharrison@guidehouse.com?subject='+encodeURIComponent('Healthcare AI Weekly - Let\'s Talk AI')+'&body='+encodeURIComponent('Hi Greg,\n\nI came across Healthcare AI Weekly and I\'d love to connect on AI in healthcare.\n\nSpecifically, I\'m interested in:\n- \n\nBest,\n')">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </button>
+</div>
+</body>
+</html>
