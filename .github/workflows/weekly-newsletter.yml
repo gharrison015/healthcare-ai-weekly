@@ -5,16 +5,16 @@ on:
     # Goal: an email in every inbox every Friday morning, no exceptions.
     #
     # GitHub cron is UTC-only and BEST-EFFORT: under load it delays or
-    # silently drops scheduled events, and the 09-11 UTC slot (5-7am ET) is
-    # one of the most oversubscribed windows there is. Relying on a punctual
+    # silently drops scheduled events, and the early-UTC morning slots are
+    # among the most oversubscribed windows there is. Relying on a punctual
     # morning grant is exactly what kept failing.
     #
     # Two-part reliability strategy:
-    #   1. Fan out MANY attempts across a WIDE morning band (09-13 UTC =
-    #      ~5-9am ET) so GitHub almost certainly grants at least one runner.
+    #   1. Fan out MANY attempts across a WIDE morning band (08-13 UTC =
+    #      ~4-9am ET) so GitHub almost certainly grants at least one runner.
     #   2. The guard below NEVER rejects a run for being "late" — the first
-    #      runner granted on Friday at/after 5:00am ET does the send, however
-    #      delayed. It only refuses to send EARLY (pre-5am) or twice (the
+    #      runner granted on Friday at/after 4:00am ET does the send, however
+    #      delayed. It only refuses to send EARLY (pre-4am) or twice (the
     #      already-published dedup + concurrency group handle duplicates).
     #
     # So even on a morning where GitHub drops every early slot and doesn't
@@ -22,9 +22,9 @@ on:
     # For minute-exact timing, drive workflow_dispatch from a punctual
     # external scheduler (see README) — this cron is the always-works floor.
     #
-    # :02/:17/:32/:47 dodges the top-of-hour spike; 09-13 UTC covers both
-    # daylight regimes (EDT 5-9am ET; EST 4-8am ET, pre-5am skipped by guard).
-    - cron: '2,17,32,47 9-13 * * 5'
+    # :02/:17/:32/:47 dodges the top-of-hour spike; 08-13 UTC covers both
+    # daylight regimes (EDT 4-9am ET; EST 3-8am ET, pre-4am skipped by guard).
+    - cron: '2,17,32,47 8-13 * * 5'
   workflow_dispatch:
     inputs:
       date_override:
@@ -107,19 +107,19 @@ jobs:
           #    that whichever runner GitHub finally grants on Friday — even
           #    hours late — still sends. We only guard the two real hazards:
           #      - wrong day (belt-and-suspenders vs odd cron delivery)
-          #      - too EARLY (before 5:00am ET — no pre-dawn emails)
+          #      - too EARLY (before 4:00am ET — no pre-dawn emails)
           DOW="$(TZ='America/New_York' date '+%u')"          # 5 = Friday
           NOW_ET=$((10#$(TZ='America/New_York' date '+%H%M')))
           NOW_STR="$(TZ='America/New_York' date '+%a %H:%M %Z')"
           if [ "$DOW" != "5" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
             echo "Not Friday in ET ($NOW_STR). Skipping."
-          elif [ "$NOW_ET" -lt 500 ]; then
+          elif [ "$NOW_ET" -lt 400 ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "$NOW_STR is before the 05:00 ET floor. Skipping (too early)."
+            echo "$NOW_STR is before the 04:00 ET floor. Skipping (too early)."
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
-            echo "$NOW_STR — Friday, after 05:00 ET, issue $DATE not yet published. Sending."
+            echo "$NOW_STR — Friday, after 04:00 ET, issue $DATE not yet published. Sending."
           fi
 
       - name: Run collector
