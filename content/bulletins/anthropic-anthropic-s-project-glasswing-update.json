@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-08T20:01:21Z",
+  "slug": "anthropic-anthropic-s-project-glasswing-update",
+  "headline": "Anthropic's Project Glasswing advances AI security capabilities amid vulnerability research",
+  "body": "Anthropic released updates to Project Glasswing, its research initiative focused on measuring and mitigating AI model vulnerabilities and exploits. The work includes new vulnerability discovery tools and assessments of how LLMs impact N-day exploits, drawing attention from both security researchers and developers. For healthcare AI deployments, this matters directly: clinical decision support systems and EHR integrations built on LLMs require rigorous security validation before handling sensitive patient data. Vendor selection now requires understanding model security posture beyond accuracy metrics. Healthcare organizations adopting Anthropic-based tools should factor this research into procurement decisions and model governance frameworks.",
+  "source_url": "https://www.schneier.com/blog/archives/2026/06/anthropics-project-glasswing-update.html",
+  "source_name": "Schneier",
+  "velocity_score": 77,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

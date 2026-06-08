@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-08T20:01:19Z",
+  "slug": "claude-show-hn-rayline-routes-claude-code-subagents-to-on-device-and-c",
+  "headline": "Claude agentic routing and efficiency gains reshape AI deployment economics",
+  "body": "Developers are rapidly improving Claude-based agentic workflows through intelligent routing systems and cost optimization techniques, with one builder achieving 100x better performance and 40% efficiency gains. For healthcare AI, this matters because clinical workflows often require expensive multi-step reasoning that routing to smaller on-device models could reduce substantially. EHR integration costs and API spend have become material line items in healthcare AI budgets, making cost-per-inference optimization directly relevant to whether value-based care organizations can afford AI augmentation. Consultants advising health systems on AI vendor selection should factor emerging routing architectures into total cost of ownership calculations, as the landscape is shifting away from monolithic model calls toward hybrid deployment strategies.",
+  "source_url": "https://rayline.ai/",
+  "source_name": "Rayline",
+  "velocity_score": 90,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

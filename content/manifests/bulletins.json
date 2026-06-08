@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-s-project-glasswing-update",
+      "headline": "Anthropic's Project Glasswing advances AI security capabilities amid vulnerability research",
+      "timestamp": "2026-06-08T20:01:21Z",
+      "source_name": "Schneier",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-rayline-routes-claude-code-subagents-to-on-device-and-c",
+      "headline": "Claude agentic routing and efficiency gains reshape AI deployment economics",
+      "timestamp": "2026-06-08T20:01:19Z",
+      "source_name": "Rayline",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-plots-biggest-chatgpt-overhaul-since-launch",
       "headline": "OpenAI unveils largest ChatGPT overhaul since platform launch",
       "timestamp": "2026-06-08T17:22:22Z",
