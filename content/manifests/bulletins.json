@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-deepseek-v4-pro-beats-gpt-5-5-pro-on-precision",
+      "headline": "DeepSeek V4 Pro outperforms GPT-5.5 Pro on precision benchmarks",
+      "timestamp": "2026-06-08T13:58:44Z",
+      "source_name": "Runtimewire",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-i-made-claude-code-100x-better-and-40-more-efficient",
+      "headline": "Claude Code efficiency gains spark developer optimization wave",
+      "timestamp": "2026-06-08T13:58:41Z",
+      "source_name": "Claynicholson",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-did-claude-increase-bugs-in-rsync",
       "headline": "Claude's code generation reliability questioned as bug rates spike",
       "timestamp": "2026-06-05T22:58:40Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-why-is-chatgpt-referring-to-hidden-user-memory",
-      "headline": "ChatGPT's hidden memory feature raises questions about data persistence",
-      "timestamp": "2026-05-29T23:04:04Z",
-      "source_name": "Aiweekly",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-openai-announces-rosalind-biodefense",
-      "headline": "OpenAI launches Rosalind biodefense tool amid competitive AI valuation surge",
-      "timestamp": "2026-05-29T23:04:01Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
