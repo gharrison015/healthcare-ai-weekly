@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-confidentially-files-for-ipo",
+      "headline": "OpenAI Files for IPO as Company Plans Major ChatGPT Overhaul",
+      "timestamp": "2026-06-09T12:30:59Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-fable-5-by-anthropic-releasing-tomorrow",
+      "headline": "Anthropic releases Claude Fable 5 amid routing and efficiency innovations",
+      "timestamp": "2026-06-09T12:30:56Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gemini-apple-reveals-new-ai-architecture-built-around-google-gemini-mo",
       "headline": "Apple builds core AI architecture around Google Gemini models",
       "timestamp": "2026-06-08T23:08:13Z",
@@ -308,16 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-llms-are-closer-to-religion-than-they-appear",
-      "headline": "LLM theology emerges as critical blindspot for healthcare AI deployment",
-      "timestamp": "2026-06-01T23:21:58Z",
-      "source_name": "The Register",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
