@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-nvidia-s-ai-pc-push-banks-on-unproven-demand-beyond-niche-users",
+      "headline": "Nvidia pushes AI PCs while doctors report inconsistent AI training gaps",
+      "timestamp": "2026-06-09T23:10:51Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "apple-apple-decided-not-to-roll-out-siri-in-eu-after-denied-request-fo",
       "headline": "Apple pulls Siri from EU over AI regulation compliance failure",
       "timestamp": "2026-06-09T19:56:41Z",
@@ -298,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-ceo-jensen-huang-keynote-at-computex-2026",
-      "headline": "Nvidia accelerates AI PC rollout with agent-focused hardware launch",
-      "timestamp": "2026-06-02T20:51:40Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-scales-claude-mythos-to-critical-infrastructure-in-15",
-      "headline": "Anthropic deploys Claude Mythos across critical infrastructure in 15 nations",
-      "timestamp": "2026-06-02T20:51:37Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
