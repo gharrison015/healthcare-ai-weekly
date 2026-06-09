@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "apple-apple-decided-not-to-roll-out-siri-in-eu-after-denied-request-fo",
+      "headline": "Apple pulls Siri from EU over AI regulation compliance failure",
+      "timestamp": "2026-06-09T19:56:41Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "apple"
+      ]
+    },
+    {
+      "slug": "claude-claude-fable-5",
+      "headline": "Anthropic releases Claude Fable 5 and Mythos 5 frontier models",
+      "timestamp": "2026-06-09T19:56:38Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-confidentially-files-for-ipo",
       "headline": "OpenAI Files for IPO as Company Plans Major ChatGPT Overhaul",
       "timestamp": "2026-06-09T12:30:59Z",
@@ -298,16 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-5-and-codex-are-now-ga-on-amazon-bedrock",
-      "headline": "GPT-5.5 and Codex reach general availability on Amazon Bedrock",
-      "timestamp": "2026-06-02T17:59:44Z",
-      "source_name": "Aws",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]

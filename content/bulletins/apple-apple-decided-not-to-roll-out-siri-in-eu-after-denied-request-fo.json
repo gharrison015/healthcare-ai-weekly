@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-09T19:56:41Z",
+  "slug": "apple-apple-decided-not-to-roll-out-siri-in-eu-after-denied-request-fo",
+  "headline": "Apple pulls Siri from EU over AI regulation compliance failure",
+  "body": "Apple declined to launch Siri in the European Union after regulators denied its exemption request from the AI Act's requirements. The company determined it could not meet EU compliance standards for the assistant's deployment. For healthcare AI vendors, this signals that regulatory bodies will enforce technical compliance without exception, regardless of company size or market pressure. Healthcare organizations relying on Apple's ecosystem for clinical workflows should expect similar enforcement across jurisdictions, forcing vendors to build compliant architectures upfront rather than seeking post-launch relief. This outcome reshapes the calculus for AI integration in medical devices and EHR systems operating across regulated markets.",
+  "source_url": "https://www.reuters.com/business/apple-failed-make-its-ai-tool-comply-eu-regulations-eu-commission-says-2026-06-09/",
+  "source_name": "Reuters",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "apple"
+  ]
+}

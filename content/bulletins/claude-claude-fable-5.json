@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-06-09T19:56:38Z",
+  "slug": "claude-claude-fable-5",
+  "headline": "Anthropic releases Claude Fable 5 and Mythos 5 frontier models",
+  "body": "Anthropic announced Claude Fable 5 and Claude Mythos 5, new frontier-tier models with pricing at $10 and $50 respectively, expanding its model lineup with system cards documenting their capabilities and limitations. For healthcare AI, these models represent meaningful compute-performance tradeoffs at different price points, enabling organizations to match model tier to specific clinical use cases without over-provisioning expensive inference. The velocity of adoption across developer platforms suggests rapid integration into healthcare applications, making it critical for health systems and vendors to evaluate these models against existing workflows for clinical documentation, evidence synthesis, and decision support. The detailed system cards provide essential transparency on model behavior and safety considerations that healthcare organizations require for compliance and risk assessment in regulated environments.",
+  "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews",
+    "substack"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
