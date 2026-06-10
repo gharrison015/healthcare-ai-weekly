@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-10T12:48:55Z",
+  "slug": "anthropic-aws-bedrock-to-require-sharing-data-with-anthropic-for-mytho",
+  "headline": "AWS Bedrock now requires data sharing with Anthropic for new models",
+  "body": "AWS updated its Bedrock service to mandate data sharing with Anthropic when using Mythos and future Claude models, a policy shift that affects every healthcare organization running inference through the platform. This creates a critical compliance consideration for systems handling protected health information, as data governance requirements now involve a third party beyond AWS. Healthcare AI implementations must reassess data residency obligations, business associate agreements, and whether routing clinical workloads through Bedrock aligns with HIPAA and internal security policies. For consultants advising on LLM infrastructure, this narrows the appeal of Bedrock for sensitive healthcare use cases unless explicit opt-outs or regional exceptions are negotiated. The move signals tighter integration between AWS and Anthropic in the model marketplace, raising questions about long-term vendor lock-in and negotiating power for healthcare deployments at scale.",
+  "source_url": "https://news.ycombinator.com/item?id=48473166",
+  "source_name": "Hacker News",
+  "velocity_score": 98,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

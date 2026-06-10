@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-tokkeycc-openai-compatible-api-for-100-ai-models-0-22-per-1m-tokens",
+      "headline": "OpenAI-compatible API slashes inference costs to $0.22 per million tokens",
+      "timestamp": "2026-06-10T12:48:58Z",
+      "source_name": "Tokkeycc",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "anthropic-aws-bedrock-to-require-sharing-data-with-anthropic-for-mytho",
+      "headline": "AWS Bedrock now requires data sharing with Anthropic for new models",
+      "timestamp": "2026-06-10T12:48:55Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-nvidia-s-ai-pc-push-banks-on-unproven-demand-beyond-niche-users",
       "headline": "Nvidia pushes AI PCs while doctors report inconsistent AI training gaps",
       "timestamp": "2026-06-09T23:10:51Z",
@@ -298,16 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "google-testing-google-s-gemini-spark-ai-agent-it-s-incredible-and-cree",
-      "headline": "Google's Gemini Spark AI agent raises questions about autonomous capabilities",
-      "timestamp": "2026-06-02T23:27:23Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
