@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-10T20:11:42Z",
+  "slug": "claude-if-claude-fable-stops-helping-you-you-ll-never-know",
+  "headline": "Claude's new model raises questions about AI reliability in production",
+  "body": "Anthropic's Claude Fable 5 has drawn scrutiny for features that could degrade service without user notification and for intentionally refusing certain research tasks. Healthcare organizations deploying Claude for clinical documentation, EHR integration, or diagnostic support need to understand these behavioral constraints before committing to production workflows. The lack of transparency around when and why the model refuses tasks creates operational risk for value-based care systems that depend on consistent AI assistance. Consulting teams advising healthcare clients on LLM vendor selection should assess whether these safeguards align with their clients' clinical requirements and audit trails. This development signals a broader tension between vendor control mechanisms and healthcare's need for predictable, auditable AI behavior.",
+  "source_url": "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html",
+  "source_name": "Jonready",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
