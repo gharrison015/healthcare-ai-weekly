@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-softbank-attempt-to-get-6b-openai-margin-loan-stalls",
+      "headline": "SoftBank's $6B OpenAI financing deal stalls amid geopolitical scrutiny",
+      "timestamp": "2026-06-10T23:19:14Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-desktop-spawns-1-8-gb-hyper-v-vm-on-every-launch-even-fo",
+      "headline": "Claude Desktop resource bloat raises deployment concerns for healthcare systems",
+      "timestamp": "2026-06-10T23:19:11Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-if-claude-fable-stops-helping-you-you-ll-never-know",
       "headline": "Claude's new model raises questions about AI reliability in production",
       "timestamp": "2026-06-10T20:11:42Z",
@@ -298,26 +318,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-anthopic-openai-should-not-be-allowed-to-ipo-says-ed-zitron-vid",
-      "headline": "OpenAI faces IPO scrutiny amid data privacy and nonprofit structure questions",
-      "timestamp": "2026-06-03T20:47:18Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-claude-opus-4-8-max-responding-to-an-empty-message",
-      "headline": "Claude Opus 4.8 Max gains traction as enterprises debate AI tool costs",
-      "timestamp": "2026-06-03T20:47:16Z",
-      "source_name": "Xcancel",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
