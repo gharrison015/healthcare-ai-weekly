@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-gemini-is-down",
+      "headline": "Google Gemini outage affects enterprise AI access across platforms",
+      "timestamp": "2026-06-10T16:54:10Z",
+      "source_name": "Techradar",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "ey-tokkeycc-openai-compatible-api-for-100-ai-models-0-22-per-1m-tokens",
       "headline": "OpenAI-compatible API slashes inference costs to $0.22 per million tokens",
       "timestamp": "2026-06-10T12:48:58Z",
@@ -298,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-use-your-nvidia-gpu-s-vram-as-swap-space-on-linux",
-      "headline": "Nvidia's infrastructure push accelerates AI inference capabilities for healthcare",
-      "timestamp": "2026-06-03T14:21:51Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-look-who-just-crashed-openai-and-softbank-s-ipo-party",
-      "headline": "OpenAI faces IPO scrutiny amid privacy, data security concerns",
-      "timestamp": "2026-06-03T14:21:49Z",
-      "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

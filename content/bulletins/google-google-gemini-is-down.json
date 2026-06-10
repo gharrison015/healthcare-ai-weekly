@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-10T16:54:10Z",
+  "slug": "google-google-gemini-is-down",
+  "headline": "Google Gemini outage affects enterprise AI access across platforms",
+  "body": "Google Gemini experienced a widespread outage affecting users across multiple platforms including Workspace integrations. Healthcare organizations relying on Gemini for clinical documentation, data analysis, or enterprise AI workflows faced service disruptions during the incident. This outage underscores vendor dependency risk in healthcare AI adoption, particularly as organizations embed third-party AI tools into EHR systems and clinical decision support. The incident highlights why healthcare IT leaders must evaluate failover strategies and redundancy when selecting AI vendors for mission-critical workflows. As healthcare AI vendor consolidation continues, single-point-of-failure scenarios like this will increasingly influence procurement decisions.",
+  "source_url": "https://www.techradar.com/news/live/gemini-down-june-2026",
+  "source_name": "Techradar",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}
