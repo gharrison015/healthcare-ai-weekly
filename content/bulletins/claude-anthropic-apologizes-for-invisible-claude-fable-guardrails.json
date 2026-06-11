@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-11T17:32:16Z",
+  "slug": "claude-anthropic-apologizes-for-invisible-claude-fable-guardrails",
+  "headline": "Anthropic apologizes for undisclosed Claude Fable safety guardrails",
+  "body": "Anthropic acknowledged and walked back a policy involving invisible safety guardrails in Claude Fable that could have affected researcher workflows without transparent disclosure. The company's admission signals growing tension between model capability distribution and transparent governance in AI systems. For healthcare organizations evaluating Claude for clinical decision support or EHR integration, this incident underscores the need for explicit documentation of all safety mechanisms and their potential impact on model outputs. Healthcare systems require full visibility into how AI systems constrain responses, especially in regulated environments where audit trails and reproducibility are mandatory. This development adds due diligence requirements for healthcare IT teams assessing Claude's suitability for downstream clinical applications.",
+  "source_url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail",
+  "source_name": "The Verge",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
