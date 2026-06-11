@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-prc-linked-influence-operations-are-targeting-ai-debates",
+      "headline": "OpenAI reports Chinese influence operations targeting US AI policy debates",
+      "timestamp": "2026-06-11T13:52:40Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "anthropic-cybersecurity-researchers-aren-t-happy-about-the-guardrails",
+      "headline": "Anthropic's guardrails spark pushback from security research community",
+      "timestamp": "2026-06-11T13:52:36Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-softbank-attempt-to-get-6b-openai-margin-loan-stalls",
       "headline": "SoftBank's $6B OpenAI financing deal stalls amid geopolitical scrutiny",
       "timestamp": "2026-06-10T23:19:14Z",
@@ -288,36 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-relentless-race-to-the-top",
-      "headline": "Anthropic files for IPO as it scales frontier AI capabilities",
-      "timestamp": "2026-06-04T12:38:48Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "microsoft-microsoft-project-solara-platform-for-devices-that-run-ai-ag",
-      "headline": "Microsoft Project Solara shifts computing from apps to AI agents",
-      "timestamp": "2026-06-04T12:38:43Z",
-      "source_name": "Geekwire",
-      "verification": "confirmed",
-      "tags": [
-        "microsoft"
-      ]
-    },
-    {
-      "slug": "ey-gooey-a-gpu-accelerated-ui-framework-for-zig",
-      "headline": "GPU-accelerated UI framework Gooey gains traction among developer communities",
-      "timestamp": "2026-06-03T23:26:53Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
