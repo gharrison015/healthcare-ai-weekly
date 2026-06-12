@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-director-resigns-citing-military-deals-management-lost-m",
+      "headline": "Google director exits over military AI deals amid trust erosion",
+      "timestamp": "2026-06-12T23:07:47Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "openai-openai-prepping-for-on-prem-product",
       "headline": "OpenAI Signals On-Premises Deployment Model Coming Soon",
       "timestamp": "2026-06-12T19:53:04Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "claude-did-claude-increase-bugs-in-rsync",
-      "headline": "Claude's code generation reliability questioned as bug rates spike",
-      "timestamp": "2026-06-05T22:58:40Z",
-      "source_name": "Alexispurslane",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-zec-drops-30-after-anthropic-ai-finds-zcash-counterfeit-vuln",
-      "headline": "Anthropic demonstrates AI security capabilities while calling for development pause",
-      "timestamp": "2026-06-05T22:58:37Z",
-      "source_name": "Tradingview",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
