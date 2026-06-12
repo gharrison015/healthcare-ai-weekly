@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-12T12:49:39Z",
+  "slug": "anthropic-openai-considers-drastic-price-cuts-anticipating-war-for-use",
+  "headline": "OpenAI readies price cuts as Anthropic competition intensifies market",
+  "body": "OpenAI is considering significant price reductions to compete with Anthropic as both vendors battle for market share. For healthcare AI deployments, this pricing pressure creates immediate opportunities to reduce inference costs on clinical applications, but also raises questions about model stability and vendor viability in value-based care contracts. Healthcare organizations evaluating foundation models for EHR integration or clinical decision support should monitor pricing and security posture closely, as the competitive pressure may accelerate feature releases but could also impact long-term vendor reliability. The reported jailbreaking of Anthropic's Fable model adds complexity to vendor selection, requiring deeper due diligence on model robustness before production deployment in regulated healthcare workflows.",
+  "source_url": "https://www.wsj.com/tech/ai/openai-considers-drastic-price-cuts-anticipating-war-for-users-with-anthropic-9b8c178e",
+  "source_name": "Wall Street Journal",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
