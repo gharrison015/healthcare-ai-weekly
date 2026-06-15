@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-ask-hn-has-anyone-replaced-claude-gpt-with-a-local-model-for-da",
+      "headline": "Developers actively testing local model alternatives to Claude for production coding",
+      "timestamp": "2026-06-15T20:45:26Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-s-safety-superpower",
+      "headline": "Anthropic's safety focus becomes competitive differentiator amid regulatory scrutiny",
+      "timestamp": "2026-06-15T20:45:23Z",
+      "source_name": "Stratechery",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "anthropic-did-anthropic-ask-for-this",
       "headline": "Anthropic navigates regulatory pressure amid safety debate escalation",
       "timestamp": "2026-06-15T15:37:02Z",
@@ -255,36 +275,6 @@
       "headline": "OpenAI files confidential S-1 with SEC, signals major ChatGPT overhaul",
       "timestamp": "2026-06-08T23:08:10Z",
       "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-project-glasswing-update",
-      "headline": "Anthropic's Project Glasswing advances AI security capabilities amid vulnerability research",
-      "timestamp": "2026-06-08T20:01:21Z",
-      "source_name": "Schneier",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-rayline-routes-claude-code-subagents-to-on-device-and-c",
-      "headline": "Claude agentic routing and efficiency gains reshape AI deployment economics",
-      "timestamp": "2026-06-08T20:01:19Z",
-      "source_name": "Rayline",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-plots-biggest-chatgpt-overhaul-since-launch",
-      "headline": "OpenAI unveils largest ChatGPT overhaul since platform launch",
-      "timestamp": "2026-06-08T17:22:22Z",
-      "source_name": "Financial Times",
       "verification": "confirmed",
       "tags": [
         "openai"
