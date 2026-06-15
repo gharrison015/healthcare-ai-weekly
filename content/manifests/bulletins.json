@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-nano-vulnerability-test-results-you-should-know-before-deplo",
+      "headline": "GPT-5 Nano vulnerabilities surface ahead of healthcare deployments",
+      "timestamp": "2026-06-15T23:28:37Z",
+      "source_name": "Lateos",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "claude-ask-hn-has-anyone-replaced-claude-gpt-with-a-local-model-for-da",
       "headline": "Developers actively testing local model alternatives to Claude for production coding",
       "timestamp": "2026-06-15T20:45:26Z",
@@ -258,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gemini-apple-reveals-new-ai-architecture-built-around-google-gemini-mo",
-      "headline": "Apple builds core AI architecture around Google Gemini models",
-      "timestamp": "2026-06-08T23:08:13Z",
-      "source_name": "Macrumors",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
-      ]
-    },
-    {
-      "slug": "openai-openai-submits-s-1-draft-to-sec",
-      "headline": "OpenAI files confidential S-1 with SEC, signals major ChatGPT overhaul",
-      "timestamp": "2026-06-08T23:08:10Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
