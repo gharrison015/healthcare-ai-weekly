@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-did-anthropic-ask-for-this",
+      "headline": "Anthropic navigates regulatory pressure amid safety debate escalation",
+      "timestamp": "2026-06-15T15:37:02Z",
+      "source_name": "Verysane",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-why-is-claude-turning-into-an-a-hole",
+      "headline": "Claude's behavioral shifts spark debate among healthcare developers",
+      "timestamp": "2026-06-15T15:36:59Z",
+      "source_name": "Bramcohen",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-director-resigns-citing-military-deals-management-lost-m",
       "headline": "Google director exits over military AI deals amid trust erosion",
       "timestamp": "2026-06-12T23:07:47Z",
@@ -268,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "gpt-deepseek-v4-pro-beats-gpt-5-5-pro-on-precision",
-      "headline": "DeepSeek V4 Pro outperforms GPT-5.5 Pro on precision benchmarks",
-      "timestamp": "2026-06-08T13:58:44Z",
-      "source_name": "Runtimewire",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-i-made-claude-code-100x-better-and-40-more-efficient",
-      "headline": "Claude Code efficiency gains spark developer optimization wave",
-      "timestamp": "2026-06-08T13:58:41Z",
-      "source_name": "Claynicholson",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
