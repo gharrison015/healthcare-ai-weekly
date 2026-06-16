@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-16T20:38:14Z",
+  "slug": "claude-claude-elevated-errors-across-many-models",
+  "headline": "Claude experiences widespread service degradation amid pricing lawsuit",
+  "body": "Anthropic's Claude AI platform reported elevated errors across multiple models this week, coinciding with legal action alleging misleading pricing claims and false advertising regarding Claude Max subscription limits. For healthcare organizations integrating Claude into clinical documentation, coding, or EHR workflows, service reliability directly impacts care delivery and operational continuity. The combination of infrastructure issues and contractual disputes raises procurement risk for healthcare systems considering large-scale AI deployments. Healthcare IT leaders should verify uptime SLAs and incident response protocols before expanding Claude implementations in production environments.",
+  "source_url": "https://status.claude.com/incidents/xmhsglsz3h3w",
+  "source_name": "Status",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

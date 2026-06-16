@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-16T20:38:18Z",
+  "slug": "anthropic-the-white-house-is-ratcheting-up-its-war-against-anthropic",
+  "headline": "White House escalates restrictions on Anthropic amid export control tensions",
+  "body": "The White House has intensified regulatory pressure against Anthropic, citing national security concerns related to AI model exports and capabilities. For healthcare organizations, this signals potential disruption to Claude-based AI solutions currently integrated into clinical workflows and EHR systems. Healthcare vendors relying on Anthropic's models for documentation automation, clinical decision support, or administrative tasks may face availability gaps and should audit their AI vendor dependencies immediately. The geopolitical AI race is now directly impacting vendor stability in healthcare, making diversified AI architecture a critical risk management requirement for health systems planning value-based care implementations.",
+  "source_url": "https://www.theatlantic.com/technology/2026/06/trump-anthropic-export-control-ai-race/687555/",
+  "source_name": "Theatlantic",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
