@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-16T14:52:38Z",
+  "slug": "claude-claude-corps",
+  "headline": "Anthropic launches Claude Corps enterprise program for scaled deployment",
+  "body": "Anthropic announced Claude Corps, an enterprise offering designed for organizations deploying Claude at scale. The program addresses a critical gap in healthcare AI infrastructure where institutions need standardized, auditable access to foundation models across clinical and administrative workflows. For health systems evaluating Claude for EHR integration, clinical decision support, or documentation automation, Corps provides the governance and deployment framework necessary for regulated environments. This matters for healthcare vendors and consulting firms architecting AI solutions because enterprise-grade access to capable models directly impacts timeline and feasibility of value-based care and operational efficiency initiatives. The pause on credit changes for Claude Code indicates Anthropic is stabilizing pricing while expanding institutional access, reducing procurement uncertainty for healthcare organizations planning multi-year AI roadmaps.",
+  "source_url": "https://www.anthropic.com/news/claude-corps",
+  "source_name": "Anthropic",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
