@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-17T16:51:08Z",
+  "slug": "openai-leaked-openai-financials-show-38-5b-loss-and-compute-burn",
+  "headline": "OpenAI's massive compute spending reveals AI infrastructure cost crisis",
+  "body": "Leaked OpenAI financials show the company burned through $34 billion in spending last year while posting $21 billion in losses against $13 billion in revenue. This compute cost structure directly impacts healthcare AI economics: vendors building clinical decision support, EHR integrations, and diagnostic tools face similar infrastructure pressures that will eventually flow into pricing models and deployment feasibility for health systems. The scale of losses required to train and run frontier models means healthcare AI applications must demonstrate immediate ROI in clinical workflows or face vendor consolidation. Expect continued vendor pressure on pricing and increased focus on smaller, fine-tuned models optimized for specific healthcare tasks rather than general-purpose systems.",
+  "source_url": "https://runtimewire.com/article/openai-leaked-financials-altman-compute-burn",
+  "source_name": "Runtimewire",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
