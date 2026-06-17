@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-a-robot-is-sprinting-towards-you-do-you-want-it-running-on-clau",
+      "headline": "Claude dominates AI agent development as healthcare systems evaluate foundation models",
+      "timestamp": "2026-06-17T23:16:47Z",
+      "source_name": "Openrouter",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-employees-accuse-trump-administration-of-targeting",
       "headline": "Anthropic faces Trump administration pressure over AI safety compliance",
       "timestamp": "2026-06-17T19:59:40Z",
@@ -285,16 +295,6 @@
       "headline": "Claude Desktop resource bloat raises deployment concerns for healthcare systems",
       "timestamp": "2026-06-10T23:19:11Z",
       "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "claude-if-claude-fable-stops-helping-you-you-ll-never-know",
-      "headline": "Claude's new model raises questions about AI reliability in production",
-      "timestamp": "2026-06-10T20:11:42Z",
-      "source_name": "Jonready",
       "verification": "confirmed",
       "tags": [
         "claude"
