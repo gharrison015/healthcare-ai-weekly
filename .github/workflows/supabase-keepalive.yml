@@ -1,8 +1,21 @@
 name: Supabase Keepalive
 
+# Prevents the free-tier project from auto-pausing after 7 days of inactivity.
+#
+# WHY THE OLD VERSION WASN'T ENOUGH: Supabase tracks *database* activity, and
+# it credits genuine, uncacheable queries that hit Postgres. A single tiny
+# daily PATCH was not being counted as "sufficient activity," so the project
+# still got a pause warning. The activity that HAS been keeping it alive is the
+# weekly newsletter's SELECT on the subscribers table. So this job now performs
+# that same kind of real READ (an exact count forces Postgres to execute),
+# plus a real WRITE, every day, twice a day for redundancy.
+
 on:
   schedule:
-    - cron: '17 13 * * *'
+    # Twice daily. GitHub cron is best-effort and silently drops runs; two
+    # slots a day mean a dropped run can never open a 7-day gap. Either run
+    # alone is sufficient.
+    - cron: '17 1,13 * * *'
   workflow_dispatch:
 
 permissions:
@@ -14,32 +27,43 @@ env:
 jobs:
   ping:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
     steps:
-      - name: Write to keepalive_log
+      - name: Generate real database activity (read + write)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
           set -euo pipefail
+          fail() { echo "::error::$1"; exit 1; }
+
+          # 1) REAL READ — an exact count forces Postgres to run an
+          #    uncacheable query (same kind of read the weekly newsletter does
+          #    when it fetches subscribers, which is the activity Supabase has
+          #    been crediting). PostgREST returns 200 or 206 for count queries.
+          read_code=$(curl -sS -o /tmp/read -w "%{http_code}" \
+            "${SUPABASE_URL}/rest/v1/subscribers?select=count" \
+            -H "apikey: ${SUPABASE_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_KEY}" \
+            -H "Prefer: count=exact")
+          echo "READ subscribers -> HTTP ${read_code}: $(head -c 200 /tmp/read)"
+          case "${read_code}" in
+            200|206) : ;;
+            *) fail "Keepalive READ failed (HTTP ${read_code}). Supabase may be paused or creds rotated." ;;
+          esac
+
+          # 2) REAL WRITE — update the ping row so there is write activity too,
+          #    and confirm Postgres echoed the new value (proves it committed).
           now=$(date -u +%FT%TZ)
-          code=$(curl -sS -o /tmp/body -w "%{http_code}" \
+          write_code=$(curl -sS -o /tmp/write -w "%{http_code}" \
             -X PATCH "${SUPABASE_URL}/rest/v1/keepalive_log?id=eq.1" \
             -H "apikey: ${SUPABASE_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_KEY}" \
             -H "Content-Type: application/json" \
             -H "Prefer: return=representation" \
             -d "{\"pinged_at\": \"${now}\"}")
-          echo "HTTP ${code}"
-          head -c 500 /tmp/body || true
-          echo
-          if [ "${code}" != "200" ]; then
-            echo "Keepalive WRITE failed — Supabase may be paused, creds rotated, or keepalive_log table missing (apply supabase/keepalive.sql)."
-            exit 1
-          fi
-          # Confirm the response body echoes the timestamp we just wrote.
-          # Strip trailing Z because Postgres returns the same instant as "+00:00".
-          if ! grep -q "${now%Z}" /tmp/body; then
-            echo "Keepalive WRITE returned 200 but response did not echo the new timestamp."
-            exit 1
-          fi
+          echo "WRITE keepalive_log -> HTTP ${write_code}: $(head -c 200 /tmp/write)"
+          [ "${write_code}" = "200" ] || fail "Keepalive WRITE failed (HTTP ${write_code}). Supabase may be paused or the keepalive_log row/table is missing."
+          grep -q "${now%Z}" /tmp/write || fail "Keepalive WRITE returned 200 but did not echo the new timestamp — write may not have reached Postgres."
+
+          echo "Keepalive OK — real read + write committed to the database at ${now}."
