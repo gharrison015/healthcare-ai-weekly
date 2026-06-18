@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-18T20:11:04Z",
+  "slug": "anthropic-the-korean-telecom-giant-at-the-center-of-anthropic-s-mythos",
+  "headline": "Trump administration export controls disrupt Anthropic's international healthcare AI deployments",
+  "body": "The Trump administration has imposed restrictions on Anthropic's model availability, citing export control concerns and alleged security risks, forcing JPMorgan Chase to cut off access for Hong Kong staff and blocking the Fable 5 rerelease. For healthcare organizations, this creates immediate operational friction: EHR vendors and health systems integrating Anthropic's Claude models may face geographic limitations on deployment, particularly across Asia-Pacific markets. The restrictions introduce vendor instability during a critical period when healthcare systems are evaluating AI partners for clinical documentation and diagnostic support workflows. Healthcare CIOs should audit their AI vendor agreements for geographic deployment terms and prepare contingency plans for potential model availability changes. This regulatory uncertainty underscores the strategic risk of concentrating healthcare AI infrastructure with vendors exposed to geopolitical policy shifts.",
+  "source_url": "https://www.wired.com/story/sk-telecom-anthropic-mythos-export-controls/",
+  "source_name": "Wired",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

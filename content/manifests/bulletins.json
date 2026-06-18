@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-the-korean-telecom-giant-at-the-center-of-anthropic-s-mythos",
+      "headline": "Trump administration export controls disrupt Anthropic's international healthcare AI deployments",
+      "timestamp": "2026-06-18T20:11:04Z",
+      "source_name": "Wired",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "anthropic-the-hacker-sent-by-anthropic-to-calm-the-government-s-nerves",
       "headline": "Anthropic navigates regulatory pressure and operational restrictions amid safety demands",
       "timestamp": "2026-06-18T16:51:00Z",
@@ -235,46 +245,6 @@
       "headline": "Claude Fable deployment patterns reshape autonomous AI workflows",
       "timestamp": "2026-06-12T12:49:36Z",
       "source_name": "Simonwillison",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "gpt-china-linked-operatives-used-chatgpt-to-influence-data-centers-deb",
-      "headline": "China-linked operatives weaponize ChatGPT for infrastructure policy influence",
-      "timestamp": "2026-06-11T20:10:19Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "anthropic-openai-mulls-slashing-prices-as-it-competes-with-anthropic-f",
-      "headline": "OpenAI cuts prices as Anthropic competition intensifies in LLM market",
-      "timestamp": "2026-06-11T20:10:16Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-model-naming-extrapolated",
-      "headline": "Anthropic model pricing and refusal patterns trigger healthcare AI community debate",
-      "timestamp": "2026-06-11T17:32:19Z",
-      "source_name": "Samwilkinson",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-apologizes-for-invisible-claude-fable-guardrails",
-      "headline": "Anthropic apologizes for undisclosed Claude Fable safety guardrails",
-      "timestamp": "2026-06-11T17:32:16Z",
-      "source_name": "The Verge",
       "verification": "confirmed",
       "tags": [
         "claude"
