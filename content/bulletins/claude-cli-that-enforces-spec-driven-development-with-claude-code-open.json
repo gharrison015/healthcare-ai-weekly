@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-18T23:28:23Z",
+  "slug": "claude-cli-that-enforces-spec-driven-development-with-claude-code-open",
+  "headline": "Claude Code tools shift toward spec-driven development in healthcare tech",
+  "body": "Claude Code expanded its capabilities this week with new spec-driven development tooling, artifact support, and community plugins for job search and token optimization. For healthcare AI implementations, spec-driven workflows matter because clinical software demands documented, auditable decision logic that regulators and compliance teams can verify. The emerging plugin ecosystem creates faster iteration cycles for EHR integrations and real-time clinical decision support, though a reported bias issue against accessible code patterns signals vendors need active governance on code quality standards. Healthcare organizations evaluating Claude-based development tools should prioritize those enforcing specification compliance, given FDA oversight of clinical AI systems.",
+  "source_url": "https://github.com/davidpv/opsx-spec-driven-development-toolkit",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
