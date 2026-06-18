@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-leaked-financial-docs-show-openai-is-losing-billions-of-dollars",
+      "headline": "Leaked docs reveal OpenAI hemorrhaging billions annually amid expansion",
+      "timestamp": "2026-06-18T12:45:30Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-a-robot-is-sprinting-towards-you-do-you-want-it-running-on-clau",
       "headline": "Claude dominates AI agent development as healthcare systems evaluate foundation models",
       "timestamp": "2026-06-17T23:16:47Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-softbank-attempt-to-get-6b-openai-margin-loan-stalls",
-      "headline": "SoftBank's $6B OpenAI financing deal stalls amid geopolitical scrutiny",
-      "timestamp": "2026-06-10T23:19:14Z",
-      "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-claude-desktop-spawns-1-8-gb-hyper-v-vm-on-every-launch-even-fo",
-      "headline": "Claude Desktop resource bloat raises deployment concerns for healthcare systems",
-      "timestamp": "2026-06-10T23:19:11Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
