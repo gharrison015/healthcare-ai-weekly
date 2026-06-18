@@ -1,6 +1,8 @@
 name: Supabase Keepalive
 
-# Prevents the free-tier project from auto-pausing after 7 days of inactivity.
+# Prevents the free-tier project from auto-pausing after 7 days of inactivity,
+# and ALERTS Greg by email the moment it can't (i.e. the project is actually
+# paused/unreachable or creds rotated).
 #
 # WHY THE OLD VERSION WASN'T ENOUGH: Supabase tracks *database* activity, and
 # it credits genuine, uncacheable queries that hit Postgres. A single tiny
@@ -8,7 +10,7 @@ name: Supabase Keepalive
 # still got a pause warning. The activity that HAS been keeping it alive is the
 # weekly newsletter's SELECT on the subscribers table. So this job now performs
 # that same kind of real READ (an exact count forces Postgres to execute),
-# plus a real WRITE, every day, twice a day for redundancy.
+# plus a real WRITE, twice a day, with retries and a failure alert.
 
 on:
   schedule:
@@ -27,9 +29,9 @@ env:
 jobs:
   ping:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
     steps:
-      - name: Generate real database activity (read + write)
+      - name: Generate real database activity (read + write, with retries)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
@@ -37,33 +39,58 @@ jobs:
           set -euo pipefail
           fail() { echo "::error::$1"; exit 1; }
 
-          # 1) REAL READ — an exact count forces Postgres to run an
-          #    uncacheable query (same kind of read the weekly newsletter does
-          #    when it fetches subscribers, which is the activity Supabase has
-          #    been crediting). PostgREST returns 200 or 206 for count queries.
-          read_code=$(curl -sS -o /tmp/read -w "%{http_code}" \
+          # Retry wrapper: only a SUSTAINED failure (real pause / creds gone)
+          # trips the alert. Transient network blips are retried, so they don't
+          # generate false-alarm emails. 3 attempts, 15s apart.
+          attempt() { # $1=label  $2..=curl args
+            local label="$1"; shift
+            local code i
+            for i in 1 2 3; do
+              code=$(curl -sS -m 20 "$@") || code="000"
+              if [ "$code" = "200" ] || [ "$code" = "206" ]; then echo "$code"; return 0; fi
+              echo "  ${label}: attempt $i got HTTP ${code}; retrying..." >&2
+              sleep 15
+            done
+            echo "$code"; return 1
+          }
+
+          # 1) REAL READ — an exact count forces Postgres to run an uncacheable
+          #    query (the same kind of read the weekly newsletter does, which is
+          #    the activity Supabase credits). PostgREST returns 200 or 206.
+          read_code=$(attempt "READ" -o /tmp/read -w "%{http_code}" \
             "${SUPABASE_URL}/rest/v1/subscribers?select=count" \
             -H "apikey: ${SUPABASE_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_KEY}" \
-            -H "Prefer: count=exact")
+            -H "Prefer: count=exact") \
+            || fail "Keepalive READ failed after retries (HTTP ${read_code}). Project is likely PAUSED or creds rotated."
           echo "READ subscribers -> HTTP ${read_code}: $(head -c 200 /tmp/read)"
-          case "${read_code}" in
-            200|206) : ;;
-            *) fail "Keepalive READ failed (HTTP ${read_code}). Supabase may be paused or creds rotated." ;;
-          esac
 
-          # 2) REAL WRITE — update the ping row so there is write activity too,
-          #    and confirm Postgres echoed the new value (proves it committed).
+          # 2) REAL WRITE — update the ping row, confirm Postgres echoed it.
           now=$(date -u +%FT%TZ)
-          write_code=$(curl -sS -o /tmp/write -w "%{http_code}" \
+          write_code=$(attempt "WRITE" -o /tmp/write -w "%{http_code}" \
             -X PATCH "${SUPABASE_URL}/rest/v1/keepalive_log?id=eq.1" \
             -H "apikey: ${SUPABASE_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_KEY}" \
             -H "Content-Type: application/json" \
             -H "Prefer: return=representation" \
-            -d "{\"pinged_at\": \"${now}\"}")
+            -d "{\"pinged_at\": \"${now}\"}") \
+            || fail "Keepalive WRITE failed after retries (HTTP ${write_code}). Project is likely PAUSED or the keepalive_log row is missing."
           echo "WRITE keepalive_log -> HTTP ${write_code}: $(head -c 200 /tmp/write)"
-          [ "${write_code}" = "200" ] || fail "Keepalive WRITE failed (HTTP ${write_code}). Supabase may be paused or the keepalive_log row/table is missing."
-          grep -q "${now%Z}" /tmp/write || fail "Keepalive WRITE returned 200 but did not echo the new timestamp — write may not have reached Postgres."
+          grep -q "${now%Z}" /tmp/write || fail "Keepalive WRITE returned ${write_code} but did not echo the new timestamp — write may not have reached Postgres."
 
           echo "Keepalive OK — real read + write committed to the database at ${now}."
+
+      - name: Alert by email if the keepalive failed (project may be paused)
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${RESEND_API_KEY:-}" ]; then echo "no RESEND_API_KEY; cannot alert"; exit 0; fi
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          html="<p><b>The Supabase keepalive job FAILED after retries.</b></p><p>The <code>healthcare-ai-weekly-analytics</code> project (ref wjwubjahhbhhsctnpfcb) is likely <b>paused or unreachable</b>, which means the Friday newsletter could reach only Greg unless it is restored.</p><ul><li>Failed run: <a href=\"${run_url}\">${run_url}</a></li><li>Fix: open <a href=\"https://supabase.com/dashboard/project/wjwubjahhbhhsctnpfcb\">the project dashboard</a>, click Restore/Resume, then re-run this workflow.</li></ul>"
+          payload=$(printf '{"from":"Healthcare AI Weekly <newsletter@healthcareaibrief.com>","to":["gharrison@guidehouse.com","gharrison015@gmail.com"],"subject":"[ALERT] Supabase keepalive failed — project may be pausing","html":%s}' "$(python3 -c 'import json,sys;print(json.dumps(sys.argv[1]))' "$html")")
+          curl -sS -m 20 -X POST https://api.resend.com/emails \
+            -H "Authorization: Bearer ${RESEND_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d "$payload" && echo "alert email sent" || echo "alert email send failed"
