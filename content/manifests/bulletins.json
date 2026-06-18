@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-the-hacker-sent-by-anthropic-to-calm-the-government-s-nerves",
+      "headline": "Anthropic navigates regulatory pressure and operational restrictions amid safety demands",
+      "timestamp": "2026-06-18T16:51:00Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-leaked-financial-docs-show-openai-is-losing-billions-of-dollars",
       "headline": "Leaked docs reveal OpenAI hemorrhaging billions annually amid expansion",
       "timestamp": "2026-06-18T12:45:30Z",
@@ -268,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-prc-linked-influence-operations-are-targeting-ai-debates",
-      "headline": "OpenAI reports Chinese influence operations targeting US AI policy debates",
-      "timestamp": "2026-06-11T13:52:40Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-cybersecurity-researchers-aren-t-happy-about-the-guardrails",
-      "headline": "Anthropic's guardrails spark pushback from security research community",
-      "timestamp": "2026-06-11T13:52:36Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
