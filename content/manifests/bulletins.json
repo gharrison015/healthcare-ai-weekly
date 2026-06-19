@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-is-a-non-profit-after-all",
+      "headline": "OpenAI affirms nonprofit status amid executive shuffling and tech talent raids",
+      "timestamp": "2026-06-19T13:27:30Z",
+      "source_name": "Lemmy",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-artifacts",
+      "headline": "Anthropic launches Claude Artifacts to streamline AI-assisted code generation",
+      "timestamp": "2026-06-19T13:27:27Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-writing-a-singularity-scenario-2025",
       "headline": "GPT-5 capabilities spark debate on AI singularity and clinical applications",
       "timestamp": "2026-06-18T23:28:26Z",
@@ -248,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-openai-considers-drastic-price-cuts-anticipating-war-for-use",
-      "headline": "OpenAI readies price cuts as Anthropic competition intensifies market",
-      "timestamp": "2026-06-12T12:49:39Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-fable-is-relentlessly-proactive",
-      "headline": "Claude Fable deployment patterns reshape autonomous AI workflows",
-      "timestamp": "2026-06-12T12:49:36Z",
-      "source_name": "Simonwillison",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
