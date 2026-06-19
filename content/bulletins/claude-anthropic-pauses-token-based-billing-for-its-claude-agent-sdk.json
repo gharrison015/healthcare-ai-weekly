@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-19T22:44:00Z",
+  "slug": "claude-anthropic-pauses-token-based-billing-for-its-claude-agent-sdk",
+  "headline": "Anthropic pauses token billing for Claude Agent SDK amid adoption surge",
+  "body": "Anthropic has paused token-based billing for its Claude Agent SDK, signaling a shift in how the company monetizes agentic workflows. This move matters for healthcare AI builders because agent-based systems are becoming central to clinical decision support, documentation automation, and care coordination tasks. Healthcare organizations evaluating Claude for high-volume agentic deployments now face uncertainty around long-term pricing models, which directly impacts ROI calculations for EHR integration and value-based care initiatives. Vendors and consulting firms advising on Claude implementations should clarify billing expectations with Anthropic before recommending agent architectures for production healthcare workflows.",
+  "source_url": "https://arstechnica.com/ai/2026/06/anthropic-pauses-token-based-billing-for-its-claude-agent-sdk/",
+  "source_name": "Ars Technica",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

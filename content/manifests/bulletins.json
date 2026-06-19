@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-amazon-drops-sam-altman-movie-after-announcing-openai-partnersh",
+      "headline": "Amazon cancels Altman biopic amid OpenAI partnership announcement",
+      "timestamp": "2026-06-19T22:44:02Z",
+      "source_name": "The Independent",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-pauses-token-based-billing-for-its-claude-agent-sdk",
+      "headline": "Anthropic pauses token billing for Claude Agent SDK amid adoption surge",
+      "timestamp": "2026-06-19T22:44:00Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-amazon-employees-say-they-re-facing-termination-for-backing-data-ce",
       "headline": "Amazon faces internal revolt over data center expansion plans",
       "timestamp": "2026-06-19T16:28:08Z",
@@ -268,16 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "openai-openai-prepping-for-on-prem-product",
-      "headline": "OpenAI Signals On-Premises Deployment Model Coming Soon",
-      "timestamp": "2026-06-12T19:53:04Z",
-      "source_name": "Ledger",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
