@@ -331,7 +331,7 @@ Return ONLY a JSON array (no markdown fencing) where each element has:
     print(f"    Generating quiz via Anthropic for '{topic_title}'...")
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=4000,
             messages=[{"role": "user", "content": prompt}],
         )

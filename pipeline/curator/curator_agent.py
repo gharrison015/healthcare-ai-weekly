@@ -151,7 +151,7 @@ def run_curator(raw_data_path, output_path, persona_path="curator/persona.md",
 
     client = Anthropic()
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=16000,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -170,7 +170,7 @@ def run_curator(raw_data_path, output_path, persona_path="curator/persona.md",
         print("Re-running curator with correction prompt...")
         correction = prompt + f"\n\nYour previous output had these issues: {validation_errors}\nPlease fix them and return corrected JSON."
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=16000,
             messages=[{"role": "user", "content": correction}],
         )
