@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-22T15:13:23Z",
+  "slug": "ey-show-hn-keyghost-keyboard-app-launcher-for-macos",
+  "headline": "AI safety tools gain traction as runtime detection and bias governance evolve",
+  "body": "Developer communities are increasingly focused on AI safety mechanisms, with new tools emerging for detecting manipulated AI agents at runtime and addressing bias in large language models. For healthcare AI systems, this trend signals growing maturity in governance frameworks that could impact clinical deployment. Runtime detection capabilities become particularly relevant in EHR integrations and clinical decision support where AI model drift or prompt injection could compromise patient safety. Healthcare organizations evaluating AI vendors should prioritize solutions demonstrating these safety layers, especially as regulatory scrutiny around algorithmic bias in diagnostics and treatment recommendations intensifies. The velocity of discussion around these tools suggests healthcare will soon face vendor expectations for transparent bias mitigation and runtime monitoring.",
+  "source_url": "https://keyghost.dev/",
+  "source_name": "Keyghost",
+  "velocity_score": 95,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

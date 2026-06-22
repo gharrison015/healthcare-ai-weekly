@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-22T15:13:26Z",
+  "slug": "claude-show-hn-recall-local-project-memory-for-claude-code",
+  "headline": "Claude API reliability issues emerge amid expanded code generation capabilities",
+  "body": "Anthropic's Claude experienced elevated error rates across multiple model versions this week, with developers reporting issues in Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6. The timing coincides with increased adoption of Claude Code and extended thinking features for clinical automation tasks. For healthcare AI deployments relying on Claude for EHR integration, documentation automation, or clinical decision support coding, reliability at scale directly impacts production stability and compliance requirements. Healthcare organizations evaluating Claude for workflow automation should request incident details and SLA commitments before integrating into mission-critical systems. The broader developer ecosystem is simultaneously exploring extended tooling through MCP servers and local memory systems, signaling both optimization demands and confidence in the platform's trajectory.",
+  "source_url": "https://github.com/raiyanyahya/recall",
+  "source_name": "Github",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

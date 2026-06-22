@@ -1,7 +1,14 @@
 {
-  "timestamp_utc": "2026-06-22T14:05:36.660132+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-06-22T15:13:19.441560+00:00",
+  "source_counts": {
+    "hackernews": 166,
+    "newsdata": 89
+  },
+  "total_collected": 255,
+  "candidate_count": 2,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "ey",
+    "claude"
+  ]
 }

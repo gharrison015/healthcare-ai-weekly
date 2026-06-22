@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-show-hn-recall-local-project-memory-for-claude-code",
+      "headline": "Claude API reliability issues emerge amid expanded code generation capabilities",
+      "timestamp": "2026-06-22T15:13:26Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "ey-show-hn-keyghost-keyboard-app-launcher-for-macos",
+      "headline": "AI safety tools gain traction as runtime detection and bias governance evolve",
+      "timestamp": "2026-06-22T15:13:23Z",
+      "source_name": "Keyghost",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "openai-amazon-drops-sam-altman-movie-after-announcing-openai-partnersh",
       "headline": "Amazon cancels Altman biopic amid OpenAI partnership announcement",
       "timestamp": "2026-06-19T22:44:02Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "google-google-director-resigns-citing-military-deals-management-lost-m",
-      "headline": "Google director exits over military AI deals amid trust erosion",
-      "timestamp": "2026-06-12T23:07:47Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
