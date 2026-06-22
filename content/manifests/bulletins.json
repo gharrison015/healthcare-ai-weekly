@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-five-eyes-warns-ai-models-capable-of-toppling-governments-are-month",
+      "headline": "Five Eyes agencies warn of AI models posing imminent government threats",
+      "timestamp": "2026-06-22T20:34:26Z",
+      "source_name": "Theguardian",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-the-text-in-claude-code-s-extended-thinking-output",
+      "headline": "Claude's Extended Thinking feature faces authenticity questions amid elevated error rates",
+      "timestamp": "2026-06-22T20:34:22Z",
+      "source_name": "Patrickmccanna",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-recall-local-project-memory-for-claude-code",
       "headline": "Claude API reliability issues emerge amid expanded code generation capabilities",
       "timestamp": "2026-06-22T15:13:26Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "anthropic-did-anthropic-ask-for-this",
-      "headline": "Anthropic navigates regulatory pressure amid safety debate escalation",
-      "timestamp": "2026-06-15T15:37:02Z",
-      "source_name": "Verysane",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-why-is-claude-turning-into-an-a-hole",
-      "headline": "Claude's behavioral shifts spark debate among healthcare developers",
-      "timestamp": "2026-06-15T15:36:59Z",
-      "source_name": "Bramcohen",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

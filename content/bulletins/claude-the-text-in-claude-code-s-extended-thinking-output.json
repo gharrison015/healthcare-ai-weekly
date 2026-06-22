@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-22T20:34:22Z",
+  "slug": "claude-the-text-in-claude-code-s-extended-thinking-output",
+  "headline": "Claude's Extended Thinking feature faces authenticity questions amid elevated error rates",
+  "body": "Anthropic's Claude is experiencing elevated error rates across multiple model versions (Opus 4.8, 4.7, 4.6, and Sonnet 4.6), while simultaneously facing scrutiny over the authenticity of outputs from its Extended Thinking feature. For healthcare AI implementations, this raises critical concerns about model reliability in clinical decision support and documentation tasks where accuracy directly impacts patient safety. Error rate elevation in production models used for EHR integration, clinical note generation, or diagnostic assistance could compromise the trustworthiness that clinicians require. Healthcare organizations evaluating Claude-based solutions should validate error rates against their specific use cases and implement additional verification layers before deployment in high-stakes clinical workflows.",
+  "source_url": "https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/",
+  "source_name": "Patrickmccanna",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
