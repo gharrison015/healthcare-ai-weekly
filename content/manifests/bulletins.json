@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-ask-hn-are-you-being-529-overloaded-by-anthropic-too",
+      "headline": "Anthropic faces mounting operational and compliance challenges amid rapid scaling",
+      "timestamp": "2026-06-22T23:12:03Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-five-eyes-warns-ai-models-capable-of-toppling-governments-are-month",
       "headline": "Five Eyes agencies warn of AI models posing imminent government threats",
       "timestamp": "2026-06-22T20:34:26Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "claude-ask-hn-has-anyone-replaced-claude-gpt-with-a-local-model-for-da",
-      "headline": "Developers actively testing local model alternatives to Claude for production coding",
-      "timestamp": "2026-06-15T20:45:26Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-safety-superpower",
-      "headline": "Anthropic's safety focus becomes competitive differentiator amid regulatory scrutiny",
-      "timestamp": "2026-06-15T20:45:23Z",
-      "source_name": "Stratechery",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
