@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-tag",
+      "headline": "Anthropic launches Claude Tag, reshaping AI model deployment landscape",
+      "timestamp": "2026-06-23T19:49:41Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-ask-hn-anthropic-banned-me-from-using-claude-code-and-i-don-t-k",
       "headline": "Claude access restrictions spark user backlash as Anthropic tightens platform controls",
       "timestamp": "2026-06-23T16:21:00Z",

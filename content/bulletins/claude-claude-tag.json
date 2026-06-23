@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-23T19:49:41Z",
+  "slug": "claude-claude-tag",
+  "headline": "Anthropic launches Claude Tag, reshaping AI model deployment landscape",
+  "body": "Anthropic introduced Claude Tag, a new capability generating significant developer discussion across technical communities. The release addresses a critical gap in how organizations version and manage AI model deployments. For healthcare implementations, this directly impacts EHR integration stability and clinical workflow reproducibility, where consistent model behavior across deployments is non-negotiable for compliance and safety. Healthcare AI vendors and health systems adopting Claude-based solutions should evaluate how tagging streamlines version control in regulated environments, particularly for applications requiring audit trails and rollback capabilities in production systems.",
+  "source_url": "https://www.anthropic.com/news/introducing-claude-tag",
+  "source_name": "Anthropic",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
