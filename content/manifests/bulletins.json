@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-announces-bionemo-agent-toolkit",
+      "headline": "Nvidia launches BioNeMo agent toolkit for accelerated scientific discovery",
+      "timestamp": "2026-06-23T22:59:51Z",
+      "source_name": "Nvidianews",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "meta-meta-launches-cheaper-range-of-ai-smart-glasses-starting-at-299",
+      "headline": "Meta launches affordable AI smart glasses at $299 price point",
+      "timestamp": "2026-06-23T22:59:48Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "meta"
+      ]
+    },
+    {
       "slug": "claude-claude-tag",
       "headline": "Anthropic launches Claude Tag, reshaping AI model deployment landscape",
       "timestamp": "2026-06-23T19:49:41Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-the-white-house-is-ratcheting-up-its-war-against-anthropic",
-      "headline": "White House escalates restrictions on Anthropic amid export control tensions",
-      "timestamp": "2026-06-16T20:38:18Z",
-      "source_name": "Theatlantic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-elevated-errors-across-many-models",
-      "headline": "Claude experiences widespread service degradation amid pricing lawsuit",
-      "timestamp": "2026-06-16T20:38:14Z",
-      "source_name": "Status",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
