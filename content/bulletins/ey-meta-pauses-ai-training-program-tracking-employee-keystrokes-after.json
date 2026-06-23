@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-23T12:28:27Z",
+  "slug": "ey-meta-pauses-ai-training-program-tracking-employee-keystrokes-after",
+  "headline": "Meta pauses keystroke tracking AI program after employee data exposure",
+  "body": "Meta halted an internal AI training initiative that monitored employee keystrokes after sensitive activity data leaked. This incident underscores a critical vulnerability in healthcare AI development: when training data collection becomes invasive, it erodes the trust and compliance frameworks that healthcare systems require. Healthcare AI vendors and health IT consultants must recognize that aggressive data harvesting practices create liability and regulatory risk, particularly under HIPAA and emerging state AI transparency laws. Organizations building clinical AI tools should expect heightened scrutiny around how training data is collected, stored, and secured. The incident reinforces that sustainable healthcare AI adoption depends on transparent, consent-based data practices, not surveillance-style monitoring.",
+  "source_url": "https://www.businessinsider.com/meta-ai-training-data-leak-exposed-employee-activity-across-company-2026-6",
+  "source_name": "Businessinsider",
+  "velocity_score": 92,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

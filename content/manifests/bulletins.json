@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-meta-pauses-ai-training-program-tracking-employee-keystrokes-after",
+      "headline": "Meta pauses keystroke tracking AI program after employee data exposure",
+      "timestamp": "2026-06-23T12:28:27Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "openai-openai-daybreak-gpt-5-5-cyber",
+      "headline": "OpenAI launches GPT-5.5-Cyber amid regulatory scrutiny and cost pressures",
+      "timestamp": "2026-06-23T12:28:24Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-ask-hn-are-you-being-529-overloaded-by-anthropic-too",
       "headline": "Anthropic faces mounting operational and compliance challenges amid rapid scaling",
       "timestamp": "2026-06-22T23:12:03Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-nano-vulnerability-test-results-you-should-know-before-deplo",
-      "headline": "GPT-5 Nano vulnerabilities surface ahead of healthcare deployments",
-      "timestamp": "2026-06-15T23:28:37Z",
-      "source_name": "Lateos",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
