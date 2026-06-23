@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-ask-hn-anthropic-banned-me-from-using-claude-code-and-i-don-t-k",
+      "headline": "Claude access restrictions spark user backlash as Anthropic tightens platform controls",
+      "timestamp": "2026-06-23T16:21:00Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-meta-pauses-ai-training-program-tracking-employee-keystrokes-after",
       "headline": "Meta pauses keystroke tracking AI program after employee data exposure",
       "timestamp": "2026-06-23T12:28:27Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "claude-claude-corps",
-      "headline": "Anthropic launches Claude Corps enterprise program for scaled deployment",
-      "timestamp": "2026-06-16T14:52:38Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-the-ai-price-war-is-here-piling-pressure-on-openai-and-anthr",
-      "headline": "AI price war intensifies as Anthropic faces regulatory and competitive pressure",
-      "timestamp": "2026-06-16T14:52:35Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-23T16:21:00Z",
+  "slug": "claude-ask-hn-anthropic-banned-me-from-using-claude-code-and-i-don-t-k",
+  "headline": "Claude access restrictions spark user backlash as Anthropic tightens platform controls",
+  "body": "Anthropic is enforcing stricter access policies on Claude Code and other features, with users reporting sudden account suspensions and unclear appeals processes. This matters for healthcare AI builders because clinical AI applications increasingly rely on Claude for code generation, workflow automation, and EHR integration tasks. When foundational model access becomes unpredictable, healthcare organizations lose development velocity during critical implementation phases. The incident highlights a broader vendor risk that healthcare consultants must now factor into LLM selection criteria, particularly for mission-critical applications where continuity of access directly impacts patient-facing systems and care team workflows.",
+  "source_url": "https://news.ycombinator.com/item?id=48641160",
+  "source_name": "Hacker News",
+  "velocity_score": 92,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
