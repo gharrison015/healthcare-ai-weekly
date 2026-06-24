@@ -1,0 +1,16 @@
+{
+  "firm": "OpenAI",
+  "headline": "OpenAI deploys custom inference chip to control AI infrastructure costs",
+  "summary": "OpenAI announced its first proprietary chip, built in partnership with Broadcom, designed specifically to optimize large language model inference. This move signals a major shift in how leading AI labs approach computational economics and hardware dependency. For healthcare AI vendors, this development matters because inference costs directly impact the viability of real-time clinical decision support, EHR integration, and continuous monitoring applications. As OpenAI vertically integrates hardware, healthcare AI consulting strategies must now account for potential shifts in model pricing, API availability, and the competitive advantage gained by vendors with proprietary infrastructure. Organizations evaluating AI vendors should clarify how infrastructure decisions will affect long-term deployment costs in value-based care environments.",
+  "so_what": "OpenAI announced its first proprietary chip, built in partnership with Broadcom, designed specifically to optimize large language model inference. This move signals a major shift in how leading AI labs approach computational economics and hardware dependency.",
+  "relevance": "healthcare_direct",
+  "source_url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+  "published_date": "2026-06-24",
+  "slug": "openai-openai-deploys-custom-inference-chip-to-control-ai-infrastructure-costs",
+  "auto_promoted": true,
+  "promotion_trigger": "model_lab_services",
+  "promotion_matched_terms": [
+    "OpenAI",
+    "AI consulting"
+  ]
+}

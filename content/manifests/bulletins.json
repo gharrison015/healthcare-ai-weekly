@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-unveils-its-first-custom-chip-built-by-broadcom",
+      "headline": "OpenAI deploys custom inference chip to control AI infrastructure costs",
+      "timestamp": "2026-06-24T19:26:32Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-world-modeling-the-us-vs-anthropic-on-claude-fable",
+      "headline": "Claude faces elevated error rates as capabilities debate intensifies",
+      "timestamp": "2026-06-24T19:26:29Z",
+      "source_name": "Lesswrong",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-advertise-in-chatgpt",
       "headline": "OpenAI launches ChatGPT advertising platform as AI capability accelerates",
       "timestamp": "2026-06-24T16:09:18Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-leaked-openai-financials-show-38-5b-loss-and-compute-burn",
-      "headline": "OpenAI's massive compute spending reveals AI infrastructure cost crisis",
-      "timestamp": "2026-06-17T16:51:08Z",
-      "source_name": "Runtimewire",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-apparently-the-real-reason-anthropic-s-models-are-offline-a",
-      "headline": "Anthropic's model disruption reveals governance tensions reshaping AI vendor landscape",
-      "timestamp": "2026-06-17T16:51:06Z",
-      "source_name": "Techdirt",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
