@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-guadagnino-s-sam-altman-movie-dropped-by-amazon-after-partnersh",
+      "headline": "OpenAI spending surges to $34B as vendor landscape shifts",
+      "timestamp": "2026-06-24T12:14:07Z",
+      "source_name": "Theguardian",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "ey-beyond-enterprise-managed-authorization-for-mcp",
+      "headline": "Model Context Protocol shifts toward granular action-level authorization",
+      "timestamp": "2026-06-24T12:14:03Z",
+      "source_name": "Arcade",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-announces-bionemo-agent-toolkit",
       "headline": "Nvidia launches BioNeMo agent toolkit for accelerated scientific discovery",
       "timestamp": "2026-06-23T22:59:51Z",
@@ -288,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-openai-losses-increased-nearly-8x-in-2025-with-spending-hitting",
-      "headline": "OpenAI losses surge eightfold as spending hits $34 billion",
-      "timestamp": "2026-06-16T23:17:44Z",
-      "source_name": "Wheresyoured",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

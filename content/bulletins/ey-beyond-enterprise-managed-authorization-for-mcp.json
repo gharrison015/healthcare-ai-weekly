@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-24T12:14:03Z",
+  "slug": "ey-beyond-enterprise-managed-authorization-for-mcp",
+  "headline": "Model Context Protocol shifts toward granular action-level authorization",
+  "body": "The AI agent infrastructure conversation is moving beyond enterprise-managed authorization toward per-action authorization controls, as detailed in emerging technical guidance on Model Context Protocol (MCP) implementations. This matters for healthcare AI because clinical workflows demand audit trails and permission controls at the individual task level, not just system entry points. EHR integrations and value-based care analytics require clinicians to verify exactly what actions an AI agent can execute within patient records. Healthcare organizations evaluating AI vendors need to understand whether their MCP implementations support this granular authorization, especially as regulatory scrutiny around AI in clinical settings increases.",
+  "source_url": "https://www.arcade.dev/blog/enterprise-managed-authorization-per-action-authorization-ai-agents/",
+  "source_name": "Arcade",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
