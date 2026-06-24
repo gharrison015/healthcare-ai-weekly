@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-advertise-in-chatgpt",
+      "headline": "OpenAI launches ChatGPT advertising platform as AI capability accelerates",
+      "timestamp": "2026-06-24T16:09:18Z",
+      "source_name": "Ads",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-openai-and-broadcom-unveil-llm-optimized-inference-chip",
+      "headline": "OpenAI and Broadcom jointly launch inference chip for LLM workloads",
+      "timestamp": "2026-06-24T16:09:15Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-guadagnino-s-sam-altman-movie-dropped-by-amazon-after-partnersh",
       "headline": "OpenAI spending surges to $34B as vendor landscape shifts",
       "timestamp": "2026-06-24T12:14:07Z",
@@ -288,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "google-show-hn-flathawk-like-google-image-search-but-for-finding-a-hou",
-      "headline": "HSBC deploys Google Cloud to operationalize 200 AI use cases",
-      "timestamp": "2026-06-17T13:36:31Z",
-      "source_name": "Flathawk",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "ey-we-need-to-start-planning-beyond-leo",
-      "headline": "Healthcare AI community shifts focus beyond current model limitations",
-      "timestamp": "2026-06-17T13:36:28Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]

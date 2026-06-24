@@ -1,0 +1,16 @@
+{
+  "firm": "OpenAI",
+  "headline": "OpenAI and Broadcom jointly launch inference chip for LLM workloads",
+  "summary": "OpenAI and Broadcom have unveiled a new LLM-optimized inference chip designed to reduce computational costs for large language model deployment. For healthcare organizations, this development directly impacts the economics of embedding AI into clinical workflows and EHR systems, where inference costs have been a major barrier to adoption at scale. The specialized hardware addresses a critical pain point in healthcare AI consulting: helping health systems justify AI investments when inference expenses rival model licensing fees. Vendors building clinical decision support, documentation automation, and diagnostic assistance tools will need to evaluate whether custom silicon reduces their per-inference costs enough to improve margins in value-based care contracts.",
+  "so_what": "OpenAI and Broadcom have unveiled a new LLM-optimized inference chip designed to reduce computational costs for large language model deployment. For healthcare organizations, this development directly impacts the economics of embedding AI into clinical workflows and EHR systems, where inference costs have been a major barrier to adoption at scale.",
+  "relevance": "healthcare_direct",
+  "source_url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+  "published_date": "2026-06-24",
+  "slug": "openai-openai-and-broadcom-jointly-launch-inference-chip-for-llm-workloads",
+  "auto_promoted": true,
+  "promotion_trigger": "model_lab_services",
+  "promotion_matched_terms": [
+    "OpenAI",
+    "AI consulting"
+  ]
+}
