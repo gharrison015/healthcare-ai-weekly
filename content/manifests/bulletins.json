@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "meta-the-worst-it-s-ever-been-why-meta-s-ai-reorg-backfired-spectacula",
+      "headline": "Meta's AI reorganization creates internal friction amid regulatory scrutiny",
+      "timestamp": "2026-06-24T22:59:13Z",
+      "source_name": "Inc",
+      "verification": "confirmed",
+      "tags": [
+        "meta"
+      ]
+    },
+    {
       "slug": "openai-openai-unveils-its-first-custom-chip-built-by-broadcom",
       "headline": "OpenAI deploys custom inference chip to control AI infrastructure costs",
       "timestamp": "2026-06-24T19:26:32Z",
@@ -285,26 +295,6 @@
       "headline": "Claude dominates AI agent development as healthcare systems evaluate foundation models",
       "timestamp": "2026-06-17T23:16:47Z",
       "source_name": "Openrouter",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-employees-accuse-trump-administration-of-targeting",
-      "headline": "Anthropic faces Trump administration pressure over AI safety compliance",
-      "timestamp": "2026-06-17T19:59:40Z",
-      "source_name": "The New York Times",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-ask-hn-what-are-your-best-claude-hacks",
-      "headline": "Healthcare developers experiment with Claude across clinical and operational workflows",
-      "timestamp": "2026-06-17T19:59:37Z",
-      "source_name": "Hacker News",
       "verification": "confirmed",
       "tags": [
         "claude"
