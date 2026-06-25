@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-llms-amplify-code-quality-they-don-t-improve-it",
+      "headline": "Research shows LLMs amplify rather than improve code quality standards",
+      "timestamp": "2026-06-25T16:15:37Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "google-google-s-gemini-3-5-pro-release-slips-to-july",
       "headline": "Google delays Gemini 3.5 Pro launch to July amid agent expansion",
       "timestamp": "2026-06-25T12:12:08Z",
@@ -298,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-leaked-financial-docs-show-openai-is-losing-billions-of-dollars",
-      "headline": "Leaked docs reveal OpenAI hemorrhaging billions annually amid expansion",
-      "timestamp": "2026-06-18T12:45:30Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

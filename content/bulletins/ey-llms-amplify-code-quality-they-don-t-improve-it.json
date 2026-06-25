@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-25T16:15:37Z",
+  "slug": "ey-llms-amplify-code-quality-they-don-t-improve-it",
+  "headline": "Research shows LLMs amplify rather than improve code quality standards",
+  "body": "A high-velocity discussion across developer communities challenges the assumption that large language models enhance software development outcomes. The analysis finds that LLMs tend to amplify existing code patterns rather than introduce substantive quality improvements. For healthcare AI deployments, this distinction matters significantly: clinical software powering EHRs, diagnostic tools, and value-based care systems requires code reliability that goes beyond pattern matching. Healthcare organizations and their consulting partners should reassess vendor claims about LLM-assisted development in regulated environments where code defects directly impact patient safety and compliance workflows.",
+  "source_url": "https://news.ycombinator.com/item?id=48670364",
+  "source_name": "Hacker News",
+  "velocity_score": 80,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
