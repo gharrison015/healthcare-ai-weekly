@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-s-gemini-3-5-pro-release-slips-to-july",
+      "headline": "Google delays Gemini 3.5 Pro launch to July amid agent expansion",
+      "timestamp": "2026-06-25T12:12:08Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capa",
+      "headline": "Anthropic accuses Alibaba of extracting Claude AI model capabilities",
+      "timestamp": "2026-06-25T12:12:04Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-the-worst-it-s-ever-been-why-meta-s-ai-reorg-backfired-spectacula",
       "headline": "Meta's AI reorganization creates internal friction amid regulatory scrutiny",
       "timestamp": "2026-06-24T22:59:13Z",
@@ -288,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "claude-a-robot-is-sprinting-towards-you-do-you-want-it-running-on-clau",
-      "headline": "Claude dominates AI agent development as healthcare systems evaluate foundation models",
-      "timestamp": "2026-06-17T23:16:47Z",
-      "source_name": "Openrouter",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

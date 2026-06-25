@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-25T12:12:04Z",
+  "slug": "claude-anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capa",
+  "headline": "Anthropic accuses Alibaba of extracting Claude AI model capabilities",
+  "body": "Anthropic has alleged that Alibaba illicitly extracted capabilities from Claude, its flagship AI model. This incident highlights critical intellectual property and security vulnerabilities in healthcare AI deployments, where model extraction could expose proprietary clinical decision-support logic or patient data patterns. For healthcare organizations evaluating Claude or competing models, vendor security practices and contractual safeguards against model distillation become essential due diligence items. The incident underscores why healthcare AI procurement must include clear terms around model access, API usage restrictions, and audit rights to protect both competitive advantage and patient privacy in clinical workflows.",
+  "source_url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+  "source_name": "Reuters",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
