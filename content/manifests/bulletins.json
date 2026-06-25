@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-accuses-alibaba-of-illicitly-accessing-ai-models",
+      "headline": "Anthropic accuses Alibaba of largest model distillation attack yet",
+      "timestamp": "2026-06-25T19:45:24Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-tell-hn-openai-has-started-putting-ads-on-paid-programs",
+      "headline": "OpenAI monetization push raises questions about enterprise AI reliability",
+      "timestamp": "2026-06-25T19:45:21Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-llms-amplify-code-quality-they-don-t-improve-it",
       "headline": "Research shows LLMs amplify rather than improve code quality standards",
       "timestamp": "2026-06-25T16:15:37Z",
@@ -295,16 +315,6 @@
       "headline": "Trump administration export controls disrupt Anthropic's international healthcare AI deployments",
       "timestamp": "2026-06-18T20:11:04Z",
       "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "anthropic-the-hacker-sent-by-anthropic-to-calm-the-government-s-nerves",
-      "headline": "Anthropic navigates regulatory pressure and operational restrictions amid safety demands",
-      "timestamp": "2026-06-18T16:51:00Z",
-      "source_name": "Wall Street Journal",
       "verification": "confirmed",
       "tags": [
         "anthropic"

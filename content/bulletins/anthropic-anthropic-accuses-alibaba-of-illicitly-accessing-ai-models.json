@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-25T19:45:24Z",
+  "slug": "anthropic-anthropic-accuses-alibaba-of-illicitly-accessing-ai-models",
+  "headline": "Anthropic accuses Alibaba of largest model distillation attack yet",
+  "body": "Anthropic publicly accused Alibaba of illicitly accessing and distilling its AI models in what appears to be the largest such attack to date. This incident underscores a critical vulnerability in the healthcare AI supply chain: proprietary models trained on sensitive clinical data face mounting IP theft risks from international competitors. Healthcare organizations deploying Anthropic's models for clinical decision support, documentation automation, or EHR integration must now assess whether their vendor's security posture adequately protects patient data embedded in model weights. For healthcare consultants and CIOs, this raises urgent questions about model provenance, access controls, and contractual protections when selecting foundation model vendors for regulated environments.",
+  "source_url": "https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models",
+  "source_name": "Bloomberg",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

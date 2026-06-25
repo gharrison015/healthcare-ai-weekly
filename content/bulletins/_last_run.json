@@ -1,15 +1,15 @@
 {
-  "timestamp_utc": "2026-06-25T16:15:33.779985+00:00",
+  "timestamp_utc": "2026-06-25T19:45:17.391600+00:00",
   "source_counts": {
-    "hackernews": 209,
+    "hackernews": 205,
     "newsdata": 85
   },
-  "total_collected": 294,
+  "total_collected": 290,
   "candidate_count": 3,
   "disposition": "candidates_ready",
   "candidate_topics": [
     "claude",
     "openai",
-    "ey"
+    "anthropic"
   ]
 }
