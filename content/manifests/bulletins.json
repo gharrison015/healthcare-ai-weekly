@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-u-s-government-will-decide-who-gets-to-use-gpt-5-6",
+      "headline": "U.S. government vetting GPT-5.6 access, reshaping AI deployment controls",
+      "timestamp": "2026-06-26T22:59:15Z",
+      "source_name": "Washingtonpost",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-the-white-house-is-asking-openai-to-slow-roll-the-release-of-it",
+      "headline": "White House pressures OpenAI to delay model release over safety concerns",
+      "timestamp": "2026-06-26T22:59:12Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-benchmarking-ai-gateways-gomodel-vs-litellm-vs-portkey-vs-bifrost",
       "headline": "AI Gateway Performance Benchmarks Emerge as Infrastructure Selection Grows Critical",
       "timestamp": "2026-06-26T19:28:08Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-amazon-drops-sam-altman-movie-after-announcing-openai-partnersh",
-      "headline": "Amazon cancels Altman biopic amid OpenAI partnership announcement",
-      "timestamp": "2026-06-19T22:44:02Z",
-      "source_name": "The Independent",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-pauses-token-based-billing-for-its-claude-agent-sdk",
-      "headline": "Anthropic pauses token billing for Claude Agent SDK amid adoption surge",
-      "timestamp": "2026-06-19T22:44:00Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

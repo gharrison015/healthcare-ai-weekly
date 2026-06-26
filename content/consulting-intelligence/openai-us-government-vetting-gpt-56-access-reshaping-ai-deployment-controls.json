@@ -1,0 +1,17 @@
+{
+  "firm": "OpenAI",
+  "headline": "U.S. government vetting GPT-5.6 access, reshaping AI deployment controls",
+  "summary": "The U.S. government will approve individual users and organizations before they can access OpenAI's GPT-5.6 model, marking a significant shift in AI model distribution. This government vetting requirement directly impacts healthcare organizations planning to integrate advanced AI into clinical workflows and EHR systems, as approval timelines could delay implementation of AI-powered diagnostics, documentation, or administrative automation. Healthcare systems and vendors will need to navigate a new regulatory approval pathway for any enterprise AI deployment, potentially affecting the speed of value-based care innovations and competitive timelines. The predeployment evaluation framework being applied to GPT-5.6 signals that healthcare AI consulting will increasingly require navigating government oversight as a critical implementation variable.",
+  "so_what": "The U.S. government will approve individual users and organizations before they can access OpenAI's GPT-5.6 model, marking a significant shift in AI model distribution.",
+  "relevance": "healthcare_direct",
+  "source_url": "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/",
+  "published_date": "2026-06-26",
+  "slug": "openai-us-government-vetting-gpt-56-access-reshaping-ai-deployment-controls",
+  "auto_promoted": true,
+  "promotion_trigger": "model_lab_services",
+  "promotion_matched_terms": [
+    "OpenAI",
+    "AI consulting",
+    "enterprise AI"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-26T22:59:15Z",
+  "slug": "gpt-u-s-government-will-decide-who-gets-to-use-gpt-5-6",
+  "headline": "U.S. government vetting GPT-5.6 access, reshaping AI deployment controls",
+  "body": "The U.S. government will approve individual users and organizations before they can access OpenAI's GPT-5.6 model, marking a significant shift in AI model distribution. This government vetting requirement directly impacts healthcare organizations planning to integrate advanced AI into clinical workflows and EHR systems, as approval timelines could delay implementation of AI-powered diagnostics, documentation, or administrative automation. Healthcare systems and vendors will need to navigate a new regulatory approval pathway for any enterprise AI deployment, potentially affecting the speed of value-based care innovations and competitive timelines. The predeployment evaluation framework being applied to GPT-5.6 signals that healthcare AI consulting will increasingly require navigating government oversight as a critical implementation variable.",
+  "source_url": "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/",
+  "source_name": "Washingtonpost",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
