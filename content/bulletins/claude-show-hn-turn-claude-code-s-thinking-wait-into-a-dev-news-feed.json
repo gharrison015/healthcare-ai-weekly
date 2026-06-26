@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-26T12:06:41Z",
+  "slug": "claude-show-hn-turn-claude-code-s-thinking-wait-into-a-dev-news-feed",
+  "headline": "Claude Code's extended thinking feature sparks developer tooling innovation",
+  "body": "A surge in Claude Code implementations shows developers building practical tools around Anthropic's extended thinking capabilities, with 21 unique authors across platforms creating solutions for the latency inherent in Claude's reasoning process. For healthcare AI teams, this matters because extended thinking directly impacts clinical decision support systems where reasoning transparency and accuracy are non-negotiable. Organizations deploying Claude for clinical workflows need to understand these emerging patterns for managing the increased computational latency during diagnosis assistance or care protocol recommendations. The vendor landscape is also shifting as security concerns around model distillation attacks highlight the importance of securing proprietary clinical logic built on large language models.",
+  "source_url": "https://github.com/bhpark1013/claudenews",
+  "source_name": "Github",
+  "velocity_score": 90,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

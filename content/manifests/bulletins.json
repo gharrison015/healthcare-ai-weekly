@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-show-hn-turn-claude-code-s-thinking-wait-into-a-dev-news-feed",
+      "headline": "Claude Code's extended thinking feature sparks developer tooling innovation",
+      "timestamp": "2026-06-26T12:06:41Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-openai-leans-toward-waiting-until-next-year-for-ipo",
+      "headline": "OpenAI delays IPO plans while government requests staggered AI releases",
+      "timestamp": "2026-06-26T12:06:39Z",
+      "source_name": "The New York Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-accuses-alibaba-of-illicitly-accessing-ai-models",
       "headline": "Anthropic accuses Alibaba of largest model distillation attack yet",
       "timestamp": "2026-06-25T19:45:24Z",
@@ -285,26 +305,6 @@
       "headline": "Anthropic launches Claude Artifacts to streamline AI-assisted code generation",
       "timestamp": "2026-06-19T13:27:27Z",
       "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-writing-a-singularity-scenario-2025",
-      "headline": "GPT-5 capabilities spark debate on AI singularity and clinical applications",
-      "timestamp": "2026-06-18T23:28:26Z",
-      "source_name": "Lesswrong",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-cli-that-enforces-spec-driven-development-with-claude-code-open",
-      "headline": "Claude Code tools shift toward spec-driven development in healthcare tech",
-      "timestamp": "2026-06-18T23:28:23Z",
-      "source_name": "Github",
       "verification": "confirmed",
       "tags": [
         "claude"
