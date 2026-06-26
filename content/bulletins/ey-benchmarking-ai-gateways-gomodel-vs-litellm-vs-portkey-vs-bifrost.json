@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-26T19:28:08Z",
+  "slug": "ey-benchmarking-ai-gateways-gomodel-vs-litellm-vs-portkey-vs-bifrost",
+  "headline": "AI Gateway Performance Benchmarks Emerge as Infrastructure Selection Grows Critical",
+  "body": "A comprehensive benchmark comparison of AI gateways including GoModel, LiteLLM, Portkey, and Bifrost is gaining traction across developer communities, with high velocity and multiple independent sources validating the findings. For healthcare AI implementations, gateway selection directly impacts clinical workflow reliability, EHR integration latency, and the ability to route LLM requests across multiple providers without disrupting patient-facing applications. Healthcare organizations evaluating AI infrastructure must now factor gateway performance into their vendor assessments, as poor gateway choices can introduce bottlenecks in time-sensitive clinical decision support systems. This benchmark data becomes actionable input for healthcare AI consultants advising on enterprise deployment architecture and multi-model strategies.",
+  "source_url": "https://enterpilot.io/blog/benchmarking-ai-gateways-gomodel-litellm-portkey-bifrost-june-2026/",
+  "source_name": "Enterpilot",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

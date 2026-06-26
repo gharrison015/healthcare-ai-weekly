@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-benchmarking-ai-gateways-gomodel-vs-litellm-vs-portkey-vs-bifrost",
+      "headline": "AI Gateway Performance Benchmarks Emerge as Infrastructure Selection Grows Critical",
+      "timestamp": "2026-06-26T19:28:08Z",
+      "source_name": "Enterpilot",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-smart-model-routing-directly-in-claude-codex-and-cursor",
+      "headline": "Claude ecosystem expands with routing tools, security concerns surface",
+      "timestamp": "2026-06-26T19:28:05Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-ask-hn-can-anyone-use-claude-fable-5",
       "headline": "Claude adoption accelerates while security threats intensify around model access",
       "timestamp": "2026-06-26T16:07:03Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "ey-amazon-employees-say-they-re-facing-termination-for-backing-data-ce",
-      "headline": "Amazon faces internal revolt over data center expansion plans",
-      "timestamp": "2026-06-19T16:28:08Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "openai-barret-zoph-is-out-at-openai-again-after-just-five-months",
-      "headline": "OpenAI loses key AI researcher Barret Zoph after five-month tenure",
-      "timestamp": "2026-06-19T16:28:06Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-26T19:28:05Z",
+  "slug": "claude-show-hn-smart-model-routing-directly-in-claude-codex-and-cursor",
+  "headline": "Claude ecosystem expands with routing tools, security concerns surface",
+  "body": "Developers are building smart model routing capabilities directly into Claude, Codex, and Cursor, expanding Claude's integration into development workflows. Simultaneously, Anthropic reported a significant distillation attack by Alibaba targeting Claude models, raising security questions for healthcare organizations deploying Claude in clinical decision support systems. For healthcare AI vendors and consultants, this dual development means increased workflow flexibility but requires careful evaluation of model governance and data protection controls. Healthcare implementations leveraging Claude for clinical documentation, coding automation, or diagnostic assistance must factor security posture into vendor selection. The rapid ecosystem expansion signals both opportunity and the need for stronger guardrails in production healthcare environments.",
+  "source_url": "https://github.com/workweave/router",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
