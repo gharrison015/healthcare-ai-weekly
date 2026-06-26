@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-ask-hn-can-anyone-use-claude-fable-5",
+      "headline": "Claude adoption accelerates while security threats intensify around model access",
+      "timestamp": "2026-06-26T16:07:03Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-turn-claude-code-s-thinking-wait-into-a-dev-news-feed",
       "headline": "Claude Code's extended thinking feature sparks developer tooling innovation",
       "timestamp": "2026-06-26T12:06:41Z",
@@ -288,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "openai-openai-is-a-non-profit-after-all",
-      "headline": "OpenAI affirms nonprofit status amid executive shuffling and tech talent raids",
-      "timestamp": "2026-06-19T13:27:30Z",
-      "source_name": "Lemmy",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-claude-artifacts",
-      "headline": "Anthropic launches Claude Artifacts to streamline AI-assisted code generation",
-      "timestamp": "2026-06-19T13:27:27Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
