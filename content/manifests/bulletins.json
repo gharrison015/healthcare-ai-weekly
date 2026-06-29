@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-anthropic-new-ai-spending-reality-as-users-shift-to-effi",
+      "headline": "Healthcare AI buyers shift focus to cost efficiency over raw capability",
+      "timestamp": "2026-06-29T16:52:10Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-show-hn-nanoeuler-gpt-2-scale-model-in-pure-c-cuda-from-scratch",
       "headline": "Open source GPT-2 model in C/CUDA gains traction among developers",
       "timestamp": "2026-06-29T13:58:29Z",
@@ -298,26 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-recall-local-project-memory-for-claude-code",
-      "headline": "Claude API reliability issues emerge amid expanded code generation capabilities",
-      "timestamp": "2026-06-22T15:13:26Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "ey-show-hn-keyghost-keyboard-app-launcher-for-macos",
-      "headline": "AI safety tools gain traction as runtime detection and bias governance evolve",
-      "timestamp": "2026-06-22T15:13:23Z",
-      "source_name": "Keyghost",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
