@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-show-hn-nanoeuler-gpt-2-scale-model-in-pure-c-cuda-from-scratch",
+      "headline": "Open source GPT-2 model in C/CUDA gains traction among developers",
+      "timestamp": "2026-06-29T13:58:29Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-glm-5-2-beats-claude-in-our-benchmarks",
+      "headline": "Claude faces competitive pressure as GLM 5.2 gains benchmark ground",
+      "timestamp": "2026-06-29T13:58:26Z",
+      "source_name": "Semgrep",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-u-s-government-will-decide-who-gets-to-use-gpt-5-6",
       "headline": "U.S. government vetting GPT-5.6 access, reshaping AI deployment controls",
       "timestamp": "2026-06-26T22:59:15Z",

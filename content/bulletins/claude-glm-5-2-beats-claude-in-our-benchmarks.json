@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-29T13:58:26Z",
+  "slug": "claude-glm-5-2-beats-claude-in-our-benchmarks",
+  "headline": "Claude faces competitive pressure as GLM 5.2 gains benchmark ground",
+  "body": "GLM 5.2 has outperformed Claude on cybersecurity benchmarks, signaling intensifying competition in the large language model landscape. For healthcare AI implementations, this matters because model selection directly impacts clinical decision support reliability, EHR integration capabilities, and the quality of AI-assisted code generation for health tech development. Healthcare organizations evaluating Claude-based solutions should monitor emerging alternatives and ensure their vendor partnerships include performance benchmarking against competing models. With Claude Fable 5 expected imminently and new testing frameworks like Caliper emerging for reliability validation, the healthcare market will have better tools to assess which models actually perform in production clinical workflows rather than relying solely on vendor claims.",
+  "source_url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+  "source_name": "Semgrep",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
