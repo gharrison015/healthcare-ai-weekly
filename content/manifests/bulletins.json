@@ -1,1 +1,24 @@
-{"bulletins":[]}
+{
+  "bulletins": [
+    {
+      "slug": "anthropic-anthropic-ceo-open-source-ai-is-getting-dangerous-2023",
+      "headline": "Anthropic warns open-source AI risks as market shifts toward efficiency",
+      "timestamp": "2026-06-29T22:45:59Z",
+      "source_name": "Xcancel",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-you-really-shouldn-t-copy-paste-errors-into-claude-code",
+      "headline": "Claude Code adoption accelerates as developers navigate new error handling risks",
+      "timestamp": "2026-06-29T22:45:57Z",
+      "source_name": "Home",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    }
+  ]
+}

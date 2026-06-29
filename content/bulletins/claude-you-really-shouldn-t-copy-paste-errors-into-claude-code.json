@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-29T22:45:57Z",
+  "slug": "claude-you-really-shouldn-t-copy-paste-errors-into-claude-code",
+  "headline": "Claude Code adoption accelerates as developers navigate new error handling risks",
+  "body": "Claude Code is seeing rapid developer adoption, with 21 unique authors discussing implementation patterns across major platforms this week. A critical conversation has emerged around copy-pasting errors into Claude Code sessions, highlighting potential workflow contamination risks that could propagate mistakes through clinical decision support systems. For healthcare AI implementations, this matters directly to EHR integration and clinical workflow automation, where error propagation could affect patient safety and data integrity. Healthcare organizations evaluating Claude for clinical documentation, coding, or diagnostic assistance should establish clear protocols for error validation before deployment in production environments.",
+  "source_url": "https://home.robusta.dev/blog/you-really-shouldnt-copy-paste-errors-into-claude-code",
+  "source_name": "Home",
+  "velocity_score": 90,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
