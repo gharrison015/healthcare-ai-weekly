@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-30T19:42:29Z",
+  "slug": "ey-why-llms-invent-answers-instead-of-saying-they-don-t-know",
+  "headline": "LLM hallucination research gains urgency as healthcare adopts AI diagnostics",
+  "body": "A high-velocity discussion around why large language models invent answers instead of acknowledging knowledge gaps is accelerating across technical communities, with 9 unique authors covering the topic across major platforms. For healthcare AI specifically, this hallucination problem directly threatens clinical workflows and diagnostic automation where false confidence in incorrect answers creates liability and patient safety risks. Healthcare organizations implementing AI-assisted diagnostics cannot tolerate systems that fabricate plausible-sounding medical information, making research into model transparency and uncertainty quantification essential before widespread EHR integration. Vendors and consultants advising health systems on AI adoption must now prioritize solutions that can reliably identify and flag when models are operating outside their reliable knowledge boundaries rather than confidently inventing answers.",
+  "source_url": "https://cristobalsantana.substack.com/p/hallucination-vs-confabulation-why",
+  "source_name": "Cristobalsantana",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

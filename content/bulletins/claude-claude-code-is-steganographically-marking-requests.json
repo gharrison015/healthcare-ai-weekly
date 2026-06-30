@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-30T19:42:26Z",
+  "slug": "claude-claude-code-is-steganographically-marking-requests",
+  "headline": "Anthropic's Claude Code raises security and data retention concerns",
+  "body": "Anthropic's Claude Code tool is drawing scrutiny for steganographic request marking and aggressive transcript deletion policies that remove conversations older than 30 days without user recovery options. Healthcare organizations deploying Claude for clinical documentation, coding analysis, or EHR integration need to understand these architectural choices before production implementation. The steganographic marking raises questions about request tracking and audit trails, critical for HIPAA compliance and clinical governance. Automatic transcript deletion conflicts with healthcare's retention requirements for clinical decision support and malpractice protection. Healthcare AI teams should evaluate whether Claude's current architecture meets your organization's security, compliance, and data governance standards before expanding deployment.",
+  "source_url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
+  "source_name": "Thereallo",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

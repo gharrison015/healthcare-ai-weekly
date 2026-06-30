@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-why-llms-invent-answers-instead-of-saying-they-don-t-know",
+      "headline": "LLM hallucination research gains urgency as healthcare adopts AI diagnostics",
+      "timestamp": "2026-06-30T19:42:29Z",
+      "source_name": "Cristobalsantana",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-is-steganographically-marking-requests",
+      "headline": "Anthropic's Claude Code raises security and data retention concerns",
+      "timestamp": "2026-06-30T19:42:26Z",
+      "source_name": "Thereallo",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-avogadro-s-number-and-the-stars-an-anthropic-near-miss",
       "headline": "Anthropic tightens usage limits as AI pricing volatility reshapes vendor landscape",
       "timestamp": "2026-06-30T16:19:28Z",
