@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-30T23:03:15Z",
+  "slug": "anthropic-show-hn-frontier-ai-lab-jobs-open-jobs-by-function-at-openai",
+  "headline": "Anthropic expands AI drug discovery while managing infrastructure constraints",
+  "body": "Anthropic launched a new AI drug discovery program while simultaneously implementing usage limits on its platform and addressing a critical security vulnerability in its protobuf decoder. The company is also actively hiring across frontier AI roles at its lab. For healthcare AI practitioners, this signals both opportunity and operational concern: Anthropic's drug discovery initiative represents direct competition in clinical AI applications, while the reported usage limits and security issues raise questions about platform reliability for mission-critical healthcare deployments. Organizations evaluating Anthropic's Claude models for EHR integration or clinical decision support should factor infrastructure stability and long-term API availability into vendor assessments.",
+  "source_url": "https://frontierjobs.org/",
+  "source_name": "Frontierjobs",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

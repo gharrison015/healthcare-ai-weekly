@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-launched-strongest-new-models",
+      "headline": "OpenAI releases strongest models yet, addresses Codex token consumption issue",
+      "timestamp": "2026-06-30T23:03:17Z",
+      "source_name": "Superhuman",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "anthropic-show-hn-frontier-ai-lab-jobs-open-jobs-by-function-at-openai",
+      "headline": "Anthropic expands AI drug discovery while managing infrastructure constraints",
+      "timestamp": "2026-06-30T23:03:15Z",
+      "source_name": "Frontierjobs",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-why-llms-invent-answers-instead-of-saying-they-don-t-know",
       "headline": "LLM hallucination research gains urgency as healthcare adopts AI diagnostics",
       "timestamp": "2026-06-30T19:42:29Z",
