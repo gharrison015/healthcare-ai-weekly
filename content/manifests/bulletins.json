@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-says-us-lifts-export-ban-on-fable-5",
+      "headline": "US lifts export restrictions on Anthropic's Fable 5 model",
+      "timestamp": "2026-07-01T16:16:34Z",
+      "source_name": "Bbc",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-sonnet-5",
+      "headline": "Anthropic releases Claude Sonnet 5, reshapes model access landscape",
+      "timestamp": "2026-07-01T16:16:29Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-gemini-claims-to-be-structurally-protective-of-donald-tr",
       "headline": "Google Gemini expands enterprise features amid guardrail scrutiny",
       "timestamp": "2026-07-01T12:27:36Z",

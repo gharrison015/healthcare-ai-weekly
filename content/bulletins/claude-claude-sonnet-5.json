@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-07-01T16:16:29Z",
+  "slug": "claude-claude-sonnet-5",
+  "headline": "Anthropic releases Claude Sonnet 5, reshapes model access landscape",
+  "body": "Anthropic launched Claude Sonnet 5 alongside changes to model availability and export controls, generating significant developer attention across technical communities. For healthcare AI implementations, this matters because Claude models power clinical documentation automation, evidence synthesis, and care coordination tools that many health systems now depend on. The velocity and author diversity around this release indicates substantial shifts in the available model infrastructure that healthcare vendors and enterprises use for EHR integrations and clinical decision support. Organizations should assess whether Sonnet 5 capabilities address current limitations in their deployed AI workflows, particularly around complex medical reasoning and documentation quality. The changes to model access and controls will likely affect vendor roadmaps and the competitive positioning of AI-assisted clinical tools.",
+  "source_url": "https://www.anthropic.com/news/claude-sonnet-5",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "substack",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
