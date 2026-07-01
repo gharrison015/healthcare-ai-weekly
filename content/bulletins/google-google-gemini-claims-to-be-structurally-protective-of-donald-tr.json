@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-01T12:27:36Z",
+  "slug": "google-google-gemini-claims-to-be-structurally-protective-of-donald-tr",
+  "headline": "Google Gemini expands enterprise features amid guardrail scrutiny",
+  "body": "Google is rolling out Gemini AI capabilities across consumer and enterprise products, including meeting notes integration into paid plans and personal art generation from Google Photos, while facing questions about its content moderation guardrails. For healthcare AI implementation, this matters because enterprise deployments of large language models require transparent, auditable content policies, especially in clinical documentation and decision support contexts. The expansion of Gemini into productivity workflows signals Google's push to embed AI deeper into organizational tools, which healthcare IT teams evaluating vendor partnerships need to assess carefully against their compliance and governance requirements. Healthcare organizations considering Gemini for clinical note summarization or administrative automation should scrutinize guardrail documentation and test bias in medical contexts before broader rollout.",
+  "source_url": "https://www.thatprivacyguy.com/blog/google-ai-guardrails-protect-trump/",
+  "source_name": "Thatprivacyguy",
+  "velocity_score": 60,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}
