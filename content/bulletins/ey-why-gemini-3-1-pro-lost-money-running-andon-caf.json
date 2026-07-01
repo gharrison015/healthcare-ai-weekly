@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-01T19:29:54Z",
+  "slug": "ey-why-gemini-3-1-pro-lost-money-running-andon-caf",
+  "headline": "AI cost failures expose real-world constraints on autonomous healthcare agents",
+  "body": "Gemini 3.1 Pro's unprofitable performance running a caf\u00e9 operation demonstrates fundamental economic vulnerabilities in AI agents operating under real operational constraints. Healthcare systems deploying autonomous agents for clinical workflows, scheduling, or administrative tasks face identical margin compression risks when model costs exceed value captured. The emerging pattern of AI agent failures in constrained environments directly informs vendor selection for EHR integration and value-based care automation, where cost-per-transaction economics determine ROI. Healthcare AI consulting must now account for hidden operational costs and failure modes that pure benchmark performance obscures. Organizations evaluating agent-based solutions need explicit cost modeling before integration, not retroactive margin analysis after deployment.",
+  "source_url": "https://andonlabs.com/blog/why-gemini-lost-money-andon-cafe",
+  "source_name": "Andonlabs",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

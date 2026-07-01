@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-07-01T19:29:51Z",
+  "slug": "claude-claude-code-just-got-5x-more-expensive",
+  "headline": "Anthropic raises Claude Code pricing 5x while expanding global access",
+  "body": "Anthropic has significantly increased pricing for Claude Code while simultaneously lifting export controls on Claude Fable 5 and making it available globally. For healthcare AI implementations, this pricing shift directly impacts cost-benefit analyses for clinical documentation automation and code generation workflows that leverage Claude's API. Organizations building EHR integrations or deploying Claude-based clinical decision support tools will need to reassess their vendor economics and budget forecasts. The expanded global availability of Fable 5 creates new competitive options for cost-sensitive healthcare systems, potentially offsetting the Code tier increase for certain use cases.",
+  "source_url": "https://www.vincentschmalbach.com/claude-code-quietly-looks-5x-more-expensive/",
+  "source_name": "Vincentschmalbach",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "substack",
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
