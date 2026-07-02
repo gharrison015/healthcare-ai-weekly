@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-02T12:02:28Z",
+  "slug": "ey-hey-glm-5-2-build-me-a-hypervisor",
+  "headline": "AI agents face mounting reliability gaps in real-world deployments",
+  "body": "Recent technical discussions highlight critical failure points where AI agents struggle with basic operational tasks, from infrastructure management to secure credential handling. For healthcare AI specifically, these reliability gaps present serious risks in clinical workflows where agents interact with EHR systems, handle patient data, or coordinate care decisions. Healthcare organizations evaluating AI agent vendors need to pressure-test how these systems handle permission management, audit trails, and failure recovery before production deployment. The pattern emerging across platforms shows agents require substantial human oversight and structured guardrails to operate safely in regulated environments. This fundamentally constrains the value-based care and operational efficiency gains that healthcare systems are counting on from agentic AI.",
+  "source_url": "https://technotes.substack.com/p/hey-glm-52-build-me-a-hypervisor",
+  "source_name": "Technotes",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
