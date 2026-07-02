@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-02T22:56:56Z",
+  "slug": "claude-claude-s-askuserquestion-no-response-after-60s-continued-withou",
+  "headline": "Claude's timeout handling flaw surfaces as code execution scrutinized",
+  "body": "Anthropic's Claude AI model is facing reported issues with its AskUserQuestion feature timing out after 60 seconds and continuing without user input, according to discussions across developer communities. For healthcare implementations relying on Claude for clinical documentation, coding assistance, or workflow automation, timeout failures could create silent errors where decisions proceed without required human validation or context. This reliability gap matters directly to EHR integration projects and AI-assisted diagnostic tools where 60-second windows may be insufficient for complex clinical queries requiring physician input. Healthcare organizations evaluating Claude for sensitive workflows should prioritize testing timeout scenarios and fallback mechanisms before production deployment.",
+  "source_url": "https://github.com/anthropics/claude-code/issues/73125",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-s-askuserquestion-no-response-after-60s-continued-withou",
+      "headline": "Claude's timeout handling flaw surfaces as code execution scrutinized",
+      "timestamp": "2026-07-02T22:56:56Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-in-early-talks-to-give-5-stake-to-us-government",
       "headline": "OpenAI negotiates government stake amid regulatory pressure",
       "timestamp": "2026-07-02T15:59:46Z",
