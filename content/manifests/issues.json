@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-07-03",
+    "week_range": "June 26 - July 03, 2026",
+    "editorial_summary": "Two stories dominate this week and they're connected. Anthropic is everywhere: drug discovery, California state agencies, Samsung chip talks, HIPAA-compliant clinical platforms, and a STAT piece asking whether Claude Science is the real deal. The second big thread is the FDA clearing its first LLM-based diabetes management device, which opens a genuinely new regulatory frontier that every health system AI team should be tracking. Underneath those two, the consulting landscape is moving fast: Huron just bought RelateCare to grab patient access workflow, Accenture dropped $4.2 billion on Dragos, and Bain quietly partnered with Google Cloud. The prior auth AI story is getting sharper too. A Forbes piece argues the industry is automating prior auth backwards, which matches exactly what we've been saying for months. The week also surfaced a quiet but important data point: 29% of adults are already using AI chatbots for health advice monthly, and most health systems have zero strategy for that traffic.",
+    "top_stories": 5,
+    "vbc_watch": 2,
+    "did_you_know": 2,
+    "ma_partnerships": 2,
+    "consulting_intelligence": 2
+  },
+  {
     "date": "2026-06-26",
     "week_range": "June 19 - June 26, 2026",
     "editorial_summary": "Three big forces shaped this week. First, the federal government is actively betting on autonomous clinical AI agents that can diagnose and adjust medications on their own, which is either the most important healthcare policy moment of the decade or a disaster waiting to happen. Second, the patient access automation market just got a lot more expensive: Assort Health hit a $1.2B valuation on $120M raised, Cadence hit the same number on chronic care AI, and Prosper AI pulled $30M from a16z, all in the same week. Third, CMS's WISeR prior auth pilot is getting torched from both sides: patients and doctors say it's causing delays and errors, and Democrats are demanding data. The through-line is the same one every week: deployment is outpacing governance, money is chasing the category, and the real test of whether any of this works is still mostly in the future.",
