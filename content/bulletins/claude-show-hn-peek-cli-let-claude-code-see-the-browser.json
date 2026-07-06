@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-06T19:41:53Z",
+  "slug": "claude-show-hn-peek-cli-let-claude-code-see-the-browser",
+  "headline": "Claude Code gains browser visibility tool amid privacy concerns",
+  "body": "A new open-source tool called Peek-CLI enables Claude Code to see and interact with browser content, expanding the AI model's capabilities for visual task automation. This development arrives as Anthropic faces scrutiny over data retention policies and user tracking in Claude Code, including automatic conversation deletion after 30 days and geolocation-based flagging. For healthcare AI implementations, the ability to access browser-based workflows could streamline EHR data entry and clinical documentation processes, but the privacy implications demand careful evaluation before deployment in HIPAA-regulated environments. Organizations considering Claude Code for healthcare workflows should audit data handling practices and retention policies against compliance requirements. The emergence of open-source alternatives signals market demand for transparency that vendors will need to address.",
+  "source_url": "https://github.com/puffinsoft/peek-cli",
+  "source_name": "Github",
+  "velocity_score": 86,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
