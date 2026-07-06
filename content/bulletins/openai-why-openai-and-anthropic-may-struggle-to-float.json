@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-06T16:47:39Z",
+  "slug": "openai-why-openai-and-anthropic-may-struggle-to-float",
+  "headline": "OpenAI and Anthropic face IPO headwinds amid regulatory scrutiny",
+  "body": "OpenAI and Anthropic are encountering significant obstacles toward going public, with regulatory concerns and token payment models drawing increased scrutiny. For healthcare AI implementers, IPO delays at major foundation model providers create uncertainty around vendor stability and long-term API pricing for clinical applications. Healthcare organizations currently building on OpenAI or Anthropic platforms should model scenarios for potential cost increases or service changes, particularly for mission-critical workflows in EHR integration and clinical decision support. The competitive landscape shift may accelerate adoption of provider-agnostic frameworks and open-source alternatives to reduce dependency on any single vendor's public market performance.",
+  "source_url": "https://www.ft.com/content/7bff5ad3-a7dc-4641-be97-7f383446ff75",
+  "source_name": "Financial Times",
+  "velocity_score": 60,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
