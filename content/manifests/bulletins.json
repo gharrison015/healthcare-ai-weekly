@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-has-the-worst-pricing-but-people-want-it",
+      "headline": "Claude dominates developer preference despite premium pricing model",
+      "timestamp": "2026-07-06T22:58:12Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-peek-cli-let-claude-code-see-the-browser",
       "headline": "Claude Code gains browser visibility tool amid privacy concerns",
       "timestamp": "2026-07-06T19:41:53Z",
@@ -288,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-ceo-open-source-ai-is-getting-dangerous-2023",
-      "headline": "Anthropic warns open-source AI risks as market shifts toward efficiency",
-      "timestamp": "2026-06-29T22:45:59Z",
-      "source_name": "Xcancel",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-you-really-shouldn-t-copy-paste-errors-into-claude-code",
-      "headline": "Claude Code adoption accelerates as developers navigate new error handling risks",
-      "timestamp": "2026-06-29T22:45:57Z",
-      "source_name": "Home",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
