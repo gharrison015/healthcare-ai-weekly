@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "apple-gpu-accelerated-context-memory-for-on-device-ai-agents-on-apple",
+      "headline": "Apple Silicon accelerates on-device AI inference for healthcare workflows",
+      "timestamp": "2026-07-07T19:41:14Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "apple"
+      ]
+    },
+    {
       "slug": "gpt-show-hn-what-if-your-personal-website-was-chatgpt",
       "headline": "GPT API momentum accelerates with realtime models and developer tooling expansion",
       "timestamp": "2026-07-07T16:18:08Z",
@@ -288,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-avogadro-s-number-and-the-stars-an-anthropic-near-miss",
-      "headline": "Anthropic tightens usage limits as AI pricing volatility reshapes vendor landscape",
-      "timestamp": "2026-06-30T16:19:28Z",
-      "source_name": "Aleph",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "gpt-ask-hn-is-codex-with-gpt-5-5-extra-high-being-dumbed-down",
-      "headline": "GPT model capabilities spark debate as healthcare AI adoption accelerates",
-      "timestamp": "2026-06-30T16:19:25Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
