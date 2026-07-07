@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-abnormal-ai-response-to-anthropic-lawsuit",
+      "headline": "Anthropic faces legal pressure while vendor relationships fracture across sectors",
+      "timestamp": "2026-07-07T22:51:34Z",
+      "source_name": "Abnormal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-rowboat-open-source-local-first-alternative-to-claude-d",
+      "headline": "Open-source Claude alternative emerges as local-first healthcare AI option",
+      "timestamp": "2026-07-07T22:51:29Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "apple-gpu-accelerated-context-memory-for-on-device-ai-agents-on-apple",
       "headline": "Apple Silicon accelerates on-device AI inference for healthcare workflows",
       "timestamp": "2026-07-07T19:41:14Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "ey-why-llms-invent-answers-instead-of-saying-they-don-t-know",
-      "headline": "LLM hallucination research gains urgency as healthcare adopts AI diagnostics",
-      "timestamp": "2026-06-30T19:42:29Z",
-      "source_name": "Cristobalsantana",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-is-steganographically-marking-requests",
-      "headline": "Anthropic's Claude Code raises security and data retention concerns",
-      "timestamp": "2026-06-30T19:42:26Z",
-      "source_name": "Thereallo",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
