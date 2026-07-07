@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-07-07T10:05:41.617809+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-07-07T12:21:46.573196+00:00",
+  "source_counts": {
+    "hackernews": 193,
+    "newsdata": 87
+  },
+  "total_collected": 280,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "claude",
+    "anthropic",
+    "ey"
+  ]
 }

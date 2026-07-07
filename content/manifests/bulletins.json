@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-s-method-to-losing-goodwill-in-a-few-easy-steps",
+      "headline": "Anthropic faces mounting scrutiny over strategic priorities and user trust",
+      "timestamp": "2026-07-07T12:21:50Z",
+      "source_name": "Raheeljunaid",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "claude-claude-has-the-worst-pricing-but-people-want-it",
       "headline": "Claude dominates developer preference despite premium pricing model",
       "timestamp": "2026-07-06T22:58:12Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "nvidia-super-micro-office-raided-as-taiwan-expands-nvidia-chip-smuggli",
-      "headline": "Taiwan escalates Nvidia chip smuggling probe amid supply chain friction",
-      "timestamp": "2026-06-30T12:04:23Z",
-      "source_name": "Finance",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "ey-a-right-wing-media-chain-tried-to-replace-47-newspapers-with-ai-the",
-      "headline": "Media chain's AI newspaper replacement experiment fails spectacularly",
-      "timestamp": "2026-06-30T12:04:20Z",
-      "source_name": "Werd",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
