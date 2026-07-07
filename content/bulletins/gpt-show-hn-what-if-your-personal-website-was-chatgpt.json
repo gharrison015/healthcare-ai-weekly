@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-07T16:18:08Z",
+  "slug": "gpt-show-hn-what-if-your-personal-website-was-chatgpt",
+  "headline": "GPT API momentum accelerates with realtime models and developer tooling expansion",
+  "body": "OpenAI released new GPT Realtime models (2.1 and 2.1-mini) on its API, alongside emerging developer integrations showing faster adoption of conversational AI at scale. Healthcare AI teams should track this velocity because realtime capabilities directly enable ambient documentation, real-time clinical decision support, and lower-latency EHR integrations that improve provider workflow without adding cognitive burden. The expanding developer ecosystem around GPT APIs signals stronger vendor options for healthcare organizations building custom clinical applications, but also indicates market consolidation around OpenAI infrastructure that consulting teams must factor into architectural recommendations. Blocking patterns (GPTBot crawler restrictions) suggest growing caution about training data usage, a concern healthcare organizations share given HIPAA and patient privacy requirements.",
+  "source_url": "https://antonlorani.de/en-us/conversation",
+  "source_name": "Antonlorani",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

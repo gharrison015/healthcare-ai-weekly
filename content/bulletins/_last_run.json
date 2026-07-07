@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-07-07T14:05:43.257172+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-07-07T16:18:01.421871+00:00",
+  "source_counts": {
+    "hackernews": 202,
+    "newsdata": 81
+  },
+  "total_collected": 283,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "claude",
+    "gpt",
+    "ey"
+  ]
 }
