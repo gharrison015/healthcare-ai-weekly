@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-08T11:42:14Z",
+  "slug": "ey-activity-frames-give-your-ai-agent-eyes-on-your-day",
+  "headline": "Activity-frames framework gives AI agents visual context for autonomous tasks",
+  "body": "A new open-source framework called activity-frames enables AI agents to observe and understand real-time user activity, moving beyond text-based interactions toward contextual awareness. This capability directly addresses a critical gap in clinical AI deployment: the ability for agents to understand EHR workflows, patient interaction context, and care team activities without requiring constant manual input. For healthcare organizations building AI assistants for documentation, order placement, or care coordination, visual context recognition could reduce friction in adoption and improve the accuracy of agent-initiated actions. The concurrent focus on secure credential handling across multiple sources suggests the healthcare vendor landscape is converging on practical solutions for agentic AI in regulated environments. Healthcare consultants should track this technical direction as a foundational capability for next-generation clinical decision support and workflow automation tools.",
+  "source_url": "https://github.com/nossa-y/activity-frames",
+  "source_name": "Github",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

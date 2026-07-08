@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-activity-frames-give-your-ai-agent-eyes-on-your-day",
+      "headline": "Activity-frames framework gives AI agents visual context for autonomous tasks",
+      "timestamp": "2026-07-08T11:42:14Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "openai-trump-administration-lifts-restrictions-on-openai-s-gpt-5-6",
+      "headline": "Trump administration removes GPT 5.6 restrictions, reshaping AI regulatory landscape",
+      "timestamp": "2026-07-08T11:42:11Z",
+      "source_name": "Axios",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-abnormal-ai-response-to-anthropic-lawsuit",
       "headline": "Anthropic faces legal pressure while vendor relationships fracture across sectors",
       "timestamp": "2026-07-07T22:51:34Z",
@@ -275,26 +295,6 @@
       "headline": "Trump administration lifts export restrictions on Anthropic's advanced AI models",
       "timestamp": "2026-07-01T12:27:33Z",
       "source_name": "Politico",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-openai-launched-strongest-new-models",
-      "headline": "OpenAI releases strongest models yet, addresses Codex token consumption issue",
-      "timestamp": "2026-06-30T23:03:17Z",
-      "source_name": "Superhuman",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-show-hn-frontier-ai-lab-jobs-open-jobs-by-function-at-openai",
-      "headline": "Anthropic expands AI drug discovery while managing infrastructure constraints",
-      "timestamp": "2026-06-30T23:03:15Z",
-      "source_name": "Frontierjobs",
       "verification": "confirmed",
       "tags": [
         "anthropic"
