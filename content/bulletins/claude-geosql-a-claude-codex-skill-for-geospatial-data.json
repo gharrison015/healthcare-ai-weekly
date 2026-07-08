@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-08T19:06:57Z",
+  "slug": "claude-geosql-a-claude-codex-skill-for-geospatial-data",
+  "headline": "Claude gains geospatial capabilities as developers expand AI model skills",
+  "body": "Developers have introduced GeoSQL, a new skill enabling Claude to process and analyze geospatial data directly within the model's workflow. This expansion comes alongside parallel developments in Claude's reasoning transparency (J-Space) and extended availability windows, signaling rapid capability iteration from Anthropic. For healthcare AI, geospatial data integration matters when analyzing patient populations by region, optimizing clinical resource distribution across facilities, or correlating population health outcomes with geographic determinants. Healthcare organizations evaluating Claude for EHR-adjacent analytics or population health consulting should assess whether these emerging geospatial capabilities address current workflow gaps in their value-based care initiatives.",
+  "source_url": "https://github.com/dekart-xyz/geosql",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

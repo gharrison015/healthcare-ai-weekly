@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-live",
+      "headline": "OpenAI launches GPT-Live as competitive model releases accelerate",
+      "timestamp": "2026-07-08T19:07:05Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-geosql-a-claude-codex-skill-for-geospatial-data",
+      "headline": "Claude gains geospatial capabilities as developers expand AI model skills",
+      "timestamp": "2026-07-08T19:06:57Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unles",
       "headline": "Meta enables AI image generation from Instagram photos without explicit consent",
       "timestamp": "2026-07-08T15:57:13Z",
@@ -265,26 +285,6 @@
       "headline": "Anthropic raises Claude Code pricing 5x while expanding global access",
       "timestamp": "2026-07-01T19:29:51Z",
       "source_name": "Vincentschmalbach",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-says-us-lifts-export-ban-on-fable-5",
-      "headline": "US lifts export restrictions on Anthropic's Fable 5 model",
-      "timestamp": "2026-07-01T16:16:34Z",
-      "source_name": "Bbc",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-sonnet-5",
-      "headline": "Anthropic releases Claude Sonnet 5, reshapes model access landscape",
-      "timestamp": "2026-07-01T16:16:29Z",
-      "source_name": "Anthropic",
       "verification": "confirmed",
       "tags": [
         "claude"
