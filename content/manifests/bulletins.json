@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "meta-meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unles",
+      "headline": "Meta enables AI image generation from Instagram photos without explicit consent",
+      "timestamp": "2026-07-08T15:57:13Z",
+      "source_name": "Wired",
+      "verification": "confirmed",
+      "tags": [
+        "meta"
+      ]
+    },
+    {
       "slug": "ey-activity-frames-give-your-ai-agent-eyes-on-your-day",
       "headline": "Activity-frames framework gives AI agents visual context for autonomous tasks",
       "timestamp": "2026-07-08T11:42:14Z",
@@ -278,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "google-google-gemini-claims-to-be-structurally-protective-of-donald-tr",
-      "headline": "Google Gemini expands enterprise features amid guardrail scrutiny",
-      "timestamp": "2026-07-01T12:27:36Z",
-      "source_name": "Thatprivacyguy",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "anthropic-trump-to-lift-limits-on-anthropic-s-fable-model",
-      "headline": "Trump administration lifts export restrictions on Anthropic's advanced AI models",
-      "timestamp": "2026-07-01T12:27:33Z",
-      "source_name": "Politico",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
