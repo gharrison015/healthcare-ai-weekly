@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-we-made-grok-4-5-gpt-5-5-and-claude-build-the-same-apps",
+      "headline": "Claude faces direct capability comparison against GPT-5.5 and Grok 4.5",
+      "timestamp": "2026-07-09T16:21:59Z",
+      "source_name": "Tryai",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-the-classifiers-anthropic-puts-in-front-of-fable-are-too-zea",
       "headline": "Anthropic's Fable model faces criticism for overly restrictive safety classifiers",
       "timestamp": "2026-07-08T22:55:33Z",
@@ -235,46 +245,6 @@
       "headline": "Claude's timeout handling flaw surfaces as code execution scrutinized",
       "timestamp": "2026-07-02T22:56:56Z",
       "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-in-early-talks-to-give-5-stake-to-us-government",
-      "headline": "OpenAI negotiates government stake amid regulatory pressure",
-      "timestamp": "2026-07-02T15:59:46Z",
-      "source_name": "Theguardian",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "openai-openai-proposes-handing-trump-administration-5-stake",
-      "headline": "OpenAI proposes stake handoff to Trump administration amid regulatory pressure",
-      "timestamp": "2026-07-02T12:02:31Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "ey-hey-glm-5-2-build-me-a-hypervisor",
-      "headline": "AI agents face mounting reliability gaps in real-world deployments",
-      "timestamp": "2026-07-02T12:02:28Z",
-      "source_name": "Technotes",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-zcode-claude-code-from-the-makers-of-glm",
-      "headline": "Anthropic expands Claude access globally, lifting export restrictions",
-      "timestamp": "2026-07-01T23:02:35Z",
-      "source_name": "Zcode",
       "verification": "confirmed",
       "tags": [
         "claude"
