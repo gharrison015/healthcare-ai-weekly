@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-10T22:50:57Z",
+  "slug": "meta-turn-off-this-meta-setting-before-someone-generates-ai-images-of",
+  "headline": "Meta's AI image generation defaults raise identity verification risks for healthcare",
+  "body": "Meta is enabling users to generate AI images from public Instagram profiles without explicit consent, while its AI detection tools fail to identify manipulated synthetic images. For healthcare organizations, this creates immediate compliance and security concerns around patient privacy, synthetic identity fraud, and the reliability of AI-generated content in clinical documentation. Healthcare IT leaders must evaluate how deepfake and synthetic media risks apply to telemedicine platforms, patient communications, and vendor AI tools that may incorporate similar generative capabilities. The detection failures highlight a broader vendor landscape problem: healthcare systems cannot assume AI safety features work as marketed. Organizations should audit employee social media exposure and strengthen identity verification protocols for patient-facing systems.",
+  "source_url": "https://www.malwarebytes.com/blog/ai/2026/07/turn-off-this-meta-setting-before-someone-generates-ai-images-of-you",
+  "source_name": "Malwarebytes",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "meta"
+  ]
+}
