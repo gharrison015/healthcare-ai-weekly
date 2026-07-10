@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-6-sol-ultra-produces-proof-of-the-cycle-double-cover-conject",
+      "headline": "GPT-5.6 Sol Ultra advances mathematical reasoning capabilities significantly",
+      "timestamp": "2026-07-10T19:15:59Z",
+      "source_name": "Cdn",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-tr",
+      "headline": "OpenAI faces copyright allegations as leadership exits amid product cuts",
+      "timestamp": "2026-07-10T19:15:56Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-should-open-source-gemini-all-of-it",
       "headline": "Google's Gemini strategy faces pressure as developers demand open source access",
       "timestamp": "2026-07-10T16:14:03Z",
@@ -238,16 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-own-mockery-of-a-bad-product-release-2003",
-      "headline": "Nvidia accelerates AI security footprint with Verkada backing",
-      "timestamp": "2026-07-03T19:01:52Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
