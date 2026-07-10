@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-07-10",
+    "week_range": "July 03 - July 10, 2026",
+    "editorial_summary": "Three signals define this week. First, OpenAI is making its most aggressive healthcare push yet, and the Forbes deep-dive on their strategy reveals a company that knows it needs clinical credibility fast. Second, the governance chickens are coming home to roost: Mayo Clinic gets sued by its own research director for allegedly retaliating against AI oversight concerns, CMS floats a new Medicare payment category for AI diagnostics, and CIOs are publicly reckoning with hallucination risk. Third, the EHR ecosystem keeps consolidating around Epic while the broader market hits a five-year purchasing low. Underneath all of it, Pearl Health's $110M raise for Medicare VBC AI and NewYork-Presbyterian's enterprise-wide OpenEvidence rollout are the two cleanest signals of where real deployment dollars are flowing. The governance story is the one to watch. When a system the size of Mayo allegedly silences internal AI critics, every health system board in the country should be asking who owns that conversation at their shop.",
+    "top_stories": 5,
+    "vbc_watch": 2,
+    "did_you_know": 2,
+    "ma_partnerships": 2,
+    "consulting_intelligence": 1
+  },
+  {
     "date": "2026-07-03",
     "week_range": "June 26 - July 03, 2026",
     "editorial_summary": "Two stories dominate this week and they're connected. Anthropic is everywhere: drug discovery, California state agencies, Samsung chip talks, HIPAA-compliant clinical platforms, and a STAT piece asking whether Claude Science is the real deal. The second big thread is the FDA clearing its first LLM-based diabetes management device, which opens a genuinely new regulatory frontier that every health system AI team should be tracking. Underneath those two, the consulting landscape is moving fast: Huron just bought RelateCare to grab patient access workflow, Accenture dropped $4.2 billion on Dragos, and Bain quietly partnered with Google Cloud. The prior auth AI story is getting sharper too. A Forbes piece argues the industry is automating prior auth backwards, which matches exactly what we've been saying for months. The week also surfaced a quiet but important data point: 29% of adults are already using AI chatbots for health advice monthly, and most health systems have zero strategy for that traffic.",
