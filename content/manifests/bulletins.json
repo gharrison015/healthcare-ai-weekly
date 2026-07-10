@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-should-open-source-gemini-all-of-it",
+      "headline": "Google's Gemini strategy faces pressure as developers demand open source access",
+      "timestamp": "2026-07-10T16:14:03Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "openai-openai-faked-inability-to-search-training-data-hid-billions-of",
       "headline": "OpenAI accused of hiding training data logs in copyright litigation",
       "timestamp": "2026-07-10T12:19:55Z",
@@ -238,16 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-amazon-launches-new-1b-fde-org-following-openai-and-anthropi",
-      "headline": "Amazon joins OpenAI and Anthropic in billion-dollar AI foundation spending",
-      "timestamp": "2026-07-03T15:49:01Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
