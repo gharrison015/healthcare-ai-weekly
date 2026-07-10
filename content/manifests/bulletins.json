@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-faked-inability-to-search-training-data-hid-billions-of",
+      "headline": "OpenAI accused of hiding training data logs in copyright litigation",
+      "timestamp": "2026-07-10T12:19:55Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-deepmind-unionization-talks-are-off-to-a-rocky-start",
       "headline": "Google DeepMind unionization efforts face early friction amid workforce tensions",
       "timestamp": "2026-07-09T19:22:35Z",
@@ -238,26 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-openai-courts-trump-administration-as-its-latest-investor",
-      "headline": "OpenAI seeks Trump administration investment as AI consolidation accelerates",
-      "timestamp": "2026-07-03T12:00:24Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-alibaba-to-ban-claude-code-in-workplace-over-alleged-backdoor-r",
-      "headline": "Alibaba bans Claude Code over security concerns amid China tensions",
-      "timestamp": "2026-07-03T12:00:20Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

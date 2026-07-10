@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-07-10T10:05:49.463190+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-07-10T12:19:52.066402+00:00",
+  "source_counts": {
+    "hackernews": 240,
+    "newsdata": 86
+  },
+  "total_collected": 326,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "openai",
+    "gpt",
+    "google"
+  ]
 }

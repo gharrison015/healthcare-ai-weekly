@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-10T12:19:55Z",
+  "slug": "openai-openai-faked-inability-to-search-training-data-hid-billions-of",
+  "headline": "OpenAI accused of hiding training data logs in copyright litigation",
+  "body": "The New York Times reported that OpenAI misrepresented its ability to search training data and concealed billions of logs during the ChatGPT copyright infringement trial. This disclosure undermines OpenAI's credibility on data governance and transparency, critical issues for healthcare organizations evaluating generative AI platforms for clinical use. Healthcare systems deploying AI for documentation, coding, or clinical decision support depend on vendors' ability to demonstrate data provenance and compliance controls. The allegations raise questions about what training data influenced model outputs and whether healthcare entities can trust vendor assertions about data handling practices. This incident will likely inform healthcare procurement teams' due diligence requirements and contractual language around data transparency and liability.",
+  "source_url": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
+  "source_name": "Ars Technica",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
