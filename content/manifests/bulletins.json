@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-zig-creator-calls-spade-a-spade-anthropic-blows-smoke",
+      "headline": "Anthropic faces credibility scrutiny as developer community questions claims",
+      "timestamp": "2026-07-13T22:44:52Z",
+      "source_name": "Raymyers",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-but-open-source-one-workplace-not-five-tools-that-hate-e",
+      "headline": "Open-source Claude alternatives consolidate fragmented AI tool ecosystems",
+      "timestamp": "2026-07-13T22:44:50Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-grok-4-5-and-gpt5-6-beat-anthropic-for-finding-security-vulnerabil",
       "headline": "GPT-5.6 and Grok 4.5 outperform Anthropic in security vulnerability detection",
       "timestamp": "2026-07-13T19:12:07Z",
@@ -235,16 +255,6 @@
       "headline": "Claude dominates developer preference despite premium pricing model",
       "timestamp": "2026-07-06T22:58:12Z",
       "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-peek-cli-let-claude-code-see-the-browser",
-      "headline": "Claude Code gains browser visibility tool amid privacy concerns",
-      "timestamp": "2026-07-06T19:41:53Z",
-      "source_name": "Github",
       "verification": "confirmed",
       "tags": [
         "claude"
