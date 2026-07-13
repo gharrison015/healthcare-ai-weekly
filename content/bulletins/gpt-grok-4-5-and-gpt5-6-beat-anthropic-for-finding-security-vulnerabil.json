@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-13T19:12:07Z",
+  "slug": "gpt-grok-4-5-and-gpt5-6-beat-anthropic-for-finding-security-vulnerabil",
+  "headline": "GPT-5.6 and Grok 4.5 outperform Anthropic in security vulnerability detection",
+  "body": "OpenAI's GPT-5.6 and xAI's Grok 4.5 are demonstrating superior performance in identifying security vulnerabilities within pull requests, surpassing Anthropic's models in recent benchmarking. For healthcare AI vendors and health system IT teams, this shift matters because clinical applications increasingly rely on secure code repositories and automated security scanning in EHR integrations and AI-powered clinical decision support systems. The cost efficiency gap noted in benchmarks (GPT-5.6 at $1.46 versus Anthropic's $47 Opus) directly impacts vendor economics and consulting fees for healthcare implementations. Healthcare organizations evaluating AI-assisted code review tools for HIPAA-compliant systems should reassess their vendor partnerships against these emerging performance and cost metrics.",
+  "source_url": "https://docs.damsecure.ai/blog/pr-review-security-benchmark/",
+  "source_name": "Docs",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
