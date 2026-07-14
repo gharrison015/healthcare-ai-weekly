@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-14T11:17:54Z",
+  "slug": "gpt-ask-hn-does-anyone-else-find-gpt-5-6-sol-in-codex-slow",
+  "headline": "GPT-5.6 Sol performance issues surface across Codex deployments",
+  "body": "Users report latency problems with GPT-5.6 Sol in Codex environments, with concurrent discussions flagging reduced context windows (258K) and variable ROI across security benchmarks. For healthcare AI implementations, performance degradation in code generation tools directly impacts clinical decision support system development velocity and EHR integration timelines. Healthcare organizations evaluating Codex for workflow automation should pressure vendors for transparent performance baselines before committing to production deployments. These variances underscore the importance of independent validation before adopting new model versions in regulated healthcare settings.",
+  "source_url": "https://news.ycombinator.com/item?id=48903663",
+  "source_name": "Hacker News",
+  "velocity_score": 95,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
