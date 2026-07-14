@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-images-gets-a-pinterest-like-redesign-focused-on-discove",
+      "headline": "Google pushes discovery focus as AI regulation debate intensifies",
+      "timestamp": "2026-07-14T22:46:30Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "openai-openai-s-ad-business-is-on-pace-to-miss-its-own-forecast-by-90",
       "headline": "OpenAI ad business falters as revenue forecast misses by 90 percent",
       "timestamp": "2026-07-14T19:02:17Z",
@@ -268,16 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "apple-gpu-accelerated-context-memory-for-on-device-ai-agents-on-apple",
-      "headline": "Apple Silicon accelerates on-device AI inference for healthcare workflows",
-      "timestamp": "2026-07-07T19:41:14Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "apple"
       ]
     }
   ]
