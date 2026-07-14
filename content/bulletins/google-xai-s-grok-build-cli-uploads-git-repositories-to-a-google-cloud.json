@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-14T15:16:25Z",
+  "slug": "google-xai-s-grok-build-cli-uploads-git-repositories-to-a-google-cloud",
+  "headline": "xAI's Grok CLI uploads developer code to Google Cloud without clear consent",
+  "body": "xAI's Grok Build CLI tool is uploading entire Git repositories to Google Cloud buckets, raising data governance concerns across the developer community. For healthcare AI vendors and health systems deploying development tools, this incident underscores the critical need to audit third-party CLI tools and understand where proprietary code and patient-adjacent data flows during the build process. Healthcare organizations must implement strict software supply chain controls, particularly when tools integrate with cloud infrastructure, since unauthorized data transfers could violate HIPAA requirements and compliance frameworks. This incident amplifies existing scrutiny around AI vendors' data handling practices at a moment when healthcare enterprises are already evaluating trustworthiness of large language model providers for clinical documentation and decision support.",
+  "source_url": "https://www.internationalcyberdigest.com/xais-grok-build-cli-uploads-entire-git-repositories-to-a-google-cloud-bucket/",
+  "source_name": "Internationalcyberdigest",
+  "velocity_score": 84,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-14T15:16:30Z",
+  "slug": "ey-show-hn-rejourney-open-source-revenue-leak-prediction-for-web-and-m",
+  "headline": "Open-source tools emerge for detecting revenue leaks in healthcare apps",
+  "body": "Rejourney, a new open-source project gaining traction across developer communities, provides revenue leak prediction for web and mobile applications. The timing reflects broader healthcare industry concerns about software reliability and financial accountability in digital health platforms. For healthcare organizations deploying custom apps or cloud-based EHR extensions, detection tools like this address a critical gap: identifying where patient engagement workflows or transaction processing fail silently. This matters directly to value-based care models where app performance directly impacts care delivery and revenue cycle integrity. Healthcare vendors and health systems should evaluate similar monitoring approaches as part of their digital health stack validation.",
+  "source_url": "https://github.com/rejourneyco/rejourney",
+  "source_name": "Github",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

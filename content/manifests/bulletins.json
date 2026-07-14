@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-show-hn-rejourney-open-source-revenue-leak-prediction-for-web-and-m",
+      "headline": "Open-source tools emerge for detecting revenue leaks in healthcare apps",
+      "timestamp": "2026-07-14T15:16:30Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "google-xai-s-grok-build-cli-uploads-git-repositories-to-a-google-cloud",
+      "headline": "xAI's Grok CLI uploads developer code to Google Cloud without clear consent",
+      "timestamp": "2026-07-14T15:16:25Z",
+      "source_name": "Internationalcyberdigest",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "gpt-ask-hn-does-anyone-else-find-gpt-5-6-sol-in-codex-slow",
       "headline": "GPT-5.6 Sol performance issues surface across Codex deployments",
       "timestamp": "2026-07-14T11:17:54Z",
@@ -258,16 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-method-to-losing-goodwill-in-a-few-easy-steps",
-      "headline": "Anthropic faces mounting scrutiny over strategic priorities and user trust",
-      "timestamp": "2026-07-07T12:21:50Z",
-      "source_name": "Raheeljunaid",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
