@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-ad-business-is-on-pace-to-miss-its-own-forecast-by-90",
+      "headline": "OpenAI ad business falters as revenue forecast misses by 90 percent",
+      "timestamp": "2026-07-14T19:02:17Z",
+      "source_name": "Adweek",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-how-to-stop-claude-from-saying-load-bearing",
+      "headline": "Claude dominates developer discourse as Code plugin adoption accelerates",
+      "timestamp": "2026-07-14T19:02:14Z",
+      "source_name": "Jola",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-show-hn-rejourney-open-source-revenue-leak-prediction-for-web-and-m",
       "headline": "Open-source tools emerge for detecting revenue leaks in healthcare apps",
       "timestamp": "2026-07-14T15:16:30Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "apple"
-      ]
-    },
-    {
-      "slug": "gpt-show-hn-what-if-your-personal-website-was-chatgpt",
-      "headline": "GPT API momentum accelerates with realtime models and developer tooling expansion",
-      "timestamp": "2026-07-07T16:18:08Z",
-      "source_name": "Antonlorani",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-the-making-of-claude-code",
-      "headline": "Claude Code release sparks debate over pricing, privacy, and clinical integration",
-      "timestamp": "2026-07-07T16:18:05Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
