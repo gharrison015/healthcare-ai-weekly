@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-german-media-regulator-says-google-s-ai-overviews-subject-to-ge",
+      "headline": "German regulator subjects Google AI Overviews to media law compliance",
+      "timestamp": "2026-07-15T11:21:51Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "openai-openai-mandates-hardware-backed-passkeys-for-trusted-access-cyb",
+      "headline": "OpenAI enforces hardware-backed passkeys for high-security member access",
+      "timestamp": "2026-07-15T11:21:48Z",
+      "source_name": "Yubico",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-images-gets-a-pinterest-like-redesign-focused-on-discove",
       "headline": "Google pushes discovery focus as AI regulation debate intensifies",
       "timestamp": "2026-07-14T22:46:30Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-abnormal-ai-response-to-anthropic-lawsuit",
-      "headline": "Anthropic faces legal pressure while vendor relationships fracture across sectors",
-      "timestamp": "2026-07-07T22:51:34Z",
-      "source_name": "Abnormal",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-rowboat-open-source-local-first-alternative-to-claude-d",
-      "headline": "Open-source Claude alternative emerges as local-first healthcare AI option",
-      "timestamp": "2026-07-07T22:51:29Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

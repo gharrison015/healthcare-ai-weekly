@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-15T11:21:48Z",
+  "slug": "openai-openai-mandates-hardware-backed-passkeys-for-trusted-access-cyb",
+  "headline": "OpenAI enforces hardware-backed passkeys for high-security member access",
+  "body": "OpenAI has mandated hardware-backed passkeys for Trusted Access Cyber members logging into ChatGPT accounts, marking a shift toward stronger authentication standards for sensitive user tiers. For healthcare organizations deploying large language models in clinical settings, this signals that AI vendors are prioritizing security infrastructure around authenticated access, which directly impacts how health systems integrate these tools into EHR workflows and HIPAA-compliant environments. Healthcare AI implementations handling patient data require multi-factor authentication and tamper-proof credential management, making hardware-backed authentication a baseline expectation rather than optional. This move also reflects broader vendor consolidation pressures: as OpenAI and competitors scale hardware offerings alongside software, healthcare IT leaders should evaluate whether unified hardware-software ecosystems simplify or complicate their authentication and data residency requirements. The security mandate will likely become table stakes for enterprise healthcare deployments within 12-18 months.",
+  "source_url": "https://www.yubico.com/blog/openai-mandates-hardware-backed-passkeys-for-trusted-access-cyber-members-to-log-into-chatgpt-accounts/",
+  "source_name": "Yubico",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
