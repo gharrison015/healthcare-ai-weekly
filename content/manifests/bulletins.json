@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-loses-trademark-dispute-at-eu-court",
+      "headline": "OpenAI faces EU trademark loss while advancing hardware strategy",
+      "timestamp": "2026-07-15T18:55:08Z",
+      "source_name": "Dpa International",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-openai-s-first-hardware-device-will-be-a-portable-desktop-robot",
       "headline": "OpenAI enters hardware with portable desktop robot as AI race accelerates",
       "timestamp": "2026-07-15T15:18:08Z",
@@ -268,16 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "meta-meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unles",
-      "headline": "Meta enables AI image generation from Instagram photos without explicit consent",
-      "timestamp": "2026-07-08T15:57:13Z",
-      "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "meta"
       ]
     }
   ]
