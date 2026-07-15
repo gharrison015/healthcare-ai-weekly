@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-first-hardware-device-will-be-a-portable-desktop-robot",
+      "headline": "OpenAI enters hardware with portable desktop robot as AI race accelerates",
+      "timestamp": "2026-07-15T15:18:08Z",
+      "source_name": "Machinesociety",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-i-tricked-claude-into-leaking-your-deepest-darkest-secrets",
+      "headline": "Claude prompt injection vulnerabilities trigger healthcare security reassessment",
+      "timestamp": "2026-07-15T15:18:05Z",
+      "source_name": "Ayush",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-german-media-regulator-says-google-s-ai-overviews-subject-to-ge",
       "headline": "German regulator subjects Google AI Overviews to media law compliance",
       "timestamp": "2026-07-15T11:21:51Z",
@@ -258,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "meta"
-      ]
-    },
-    {
-      "slug": "ey-activity-frames-give-your-ai-agent-eyes-on-your-day",
-      "headline": "Activity-frames framework gives AI agents visual context for autonomous tasks",
-      "timestamp": "2026-07-08T11:42:14Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "openai-trump-administration-lifts-restrictions-on-openai-s-gpt-5-6",
-      "headline": "Trump administration removes GPT 5.6 restrictions, reshaping AI regulatory landscape",
-      "timestamp": "2026-07-08T11:42:11Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
