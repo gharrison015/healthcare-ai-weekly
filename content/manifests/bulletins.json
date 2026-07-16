@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-6-sol-pro-solves-open-problem-in-convex-optimization",
+      "headline": "GPT-5.6 Sol Pro tackles 30-year optimization problem with AI",
+      "timestamp": "2026-07-16T22:48:59Z",
+      "source_name": "Medium",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "google-google-gemini-launch-delayed-as-tech-falls-short-of-internal-go",
       "headline": "Google Gemini delays amid performance gaps, safety concerns intensify",
       "timestamp": "2026-07-16T18:55:43Z",
@@ -268,26 +278,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "google-google-deepmind-unionization-talks-are-off-to-a-rocky-start",
-      "headline": "Google DeepMind unionization efforts face early friction amid workforce tensions",
-      "timestamp": "2026-07-09T19:22:35Z",
-      "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-6",
-      "headline": "OpenAI releases GPT-5.6 with significant efficiency gains for agentic workflows",
-      "timestamp": "2026-07-09T19:22:33Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
