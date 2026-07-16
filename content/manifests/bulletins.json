@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-eu-officials-peeved-after-anthropic-sends-junior-staffer-to",
+      "headline": "Anthropic's regulatory misstep signals deeper healthcare AI governance gaps",
+      "timestamp": "2026-07-16T11:26:57Z",
+      "source_name": "Politico",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-brainless-shadcn-components-that-look-like-claude-code-codex-an",
+      "headline": "Claude tooling ecosystem expands with open source alternatives and integrations",
+      "timestamp": "2026-07-16T11:26:54Z",
+      "source_name": "Brainless",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-loses-trademark-dispute-at-eu-court",
       "headline": "OpenAI faces EU trademark loss while advancing hardware strategy",
       "timestamp": "2026-07-15T18:55:08Z",
@@ -248,16 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-the-classifiers-anthropic-puts-in-front-of-fable-are-too-zea",
-      "headline": "Anthropic's Fable model faces criticism for overly restrictive safety classifiers",
-      "timestamp": "2026-07-08T22:55:33Z",
-      "source_name": "Combine Lab",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
