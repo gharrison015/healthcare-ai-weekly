@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-gemini-launch-delayed-as-tech-falls-short-of-internal-go",
+      "headline": "Google Gemini delays amid performance gaps, safety concerns intensify",
+      "timestamp": "2026-07-16T18:55:43Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "gpt-gpt-red-unlocking-self-improvement-for-robustness",
       "headline": "OpenAI releases GPT-Red framework for AI model robustness testing",
       "timestamp": "2026-07-16T15:26:08Z",
@@ -278,16 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "claude-we-made-grok-4-5-gpt-5-5-and-claude-build-the-same-apps",
-      "headline": "Claude faces direct capability comparison against GPT-5.5 and Grok 4.5",
-      "timestamp": "2026-07-09T16:21:59Z",
-      "source_name": "Tryai",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
