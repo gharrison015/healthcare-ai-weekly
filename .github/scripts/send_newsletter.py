@@ -42,6 +42,109 @@ def format_subject(date_str: str) -> str:
     return f"Healthcare AI Weekly: Week of {display}"
 
 
+def claim_send(supabase_url: str, supabase_key: str, date_str: str) -> str:
+    """Atomically claim this issue_date so it can never be sent twice.
+
+    Inserts one row into newsletter_sends keyed by issue_date (PRIMARY KEY).
+    Returns:
+      "claimed"      -> we own the send; caller MUST proceed to send.
+      "already"      -> a prior run already claimed/sent this date; caller MUST
+                        skip sending (the workflow still publishes the page).
+      "unavailable"  -> the ledger is missing/unreachable after retries. We fail
+                        OPEN (caller sends anyway, loudly) because a broken guard
+                        must NEVER cause a missed Friday, delivery is the higher
+                        priority. A duplicate here is far less likely than a miss:
+                        the 409 dedup only fails to fire if the ledger is actually
+                        down, and the stacked runs are serialized by the
+                        concurrency group. This branch should be effectively dead
+                        once the newsletter_sends table exists.
+    """
+    url = f"{supabase_url}/rest/v1/newsletter_sends"
+    payload = json.dumps({"issue_date": date_str, "status": "claimed"}).encode("utf-8")
+
+    last_detail = ""
+    for attempt in range(1, 4):  # 3 tries for transient blips
+        req = urllib.request.Request(
+            url,
+            data=payload,
+            headers={
+                "apikey": supabase_key,
+                "Authorization": f"Bearer {supabase_key}",
+                "Content-Type": "application/json",
+                "Prefer": "return=minimal",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                resp.read()
+            print(f"claimed send for {date_str} (newsletter_sends row created)")
+            return "claimed"
+        except urllib.error.HTTPError as e:
+            if e.code == 409:
+                print(f"send for {date_str} was already claimed by an earlier run, skipping send.")
+                return "already"
+            last_detail = f"{e.code} {e.read().decode('utf-8', errors='replace')}"
+            # 4xx other than 409 (e.g. 404 missing table) won't fix on retry.
+            if 400 <= e.code < 500:
+                break
+        except urllib.error.URLError as e:
+            last_detail = str(e)
+        if attempt < 3:
+            time.sleep(3)
+
+    print(
+        f"WARNING: could not claim send guard for {date_str} after retries "
+        f"({last_detail}). DOUBLE-SEND GUARD UNAVAILABLE, sending anyway to "
+        f"honor the Friday delivery guarantee. Investigate the newsletter_sends table."
+    )
+    return "unavailable"
+
+
+def finalize_send(supabase_url: str, supabase_key: str, date_str: str, sent_count: int) -> None:
+    """Mark the claim as fully sent, recording how many emails went out."""
+    url = f"{supabase_url}/rest/v1/newsletter_sends?issue_date=eq.{date_str}"
+    payload = json.dumps({"status": "sent", "sent_count": sent_count}).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "apikey": supabase_key,
+            "Authorization": f"Bearer {supabase_key}",
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal",
+        },
+        method="PATCH",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            resp.read()
+    except urllib.error.URLError as e:
+        # Non-fatal: the row already guards against a resend; this is bookkeeping.
+        print(f"warning: could not mark {date_str} as sent: {e}")
+
+
+def release_claim(supabase_url: str, supabase_key: str, date_str: str) -> None:
+    """Delete the claim so a later attempt can retry, used only when ZERO
+    emails went out (total send failure), so we never strand the issue."""
+    url = f"{supabase_url}/rest/v1/newsletter_sends?issue_date=eq.{date_str}"
+    req = urllib.request.Request(
+        url,
+        headers={
+            "apikey": supabase_key,
+            "Authorization": f"Bearer {supabase_key}",
+            "Prefer": "return=minimal",
+        },
+        method="DELETE",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            resp.read()
+        print(f"released claim for {date_str} (0 emails sent) so a retry can re-send.")
+    except urllib.error.URLError as e:
+        print(f"warning: could not release claim for {date_str}: {e}")
+
+
 def fetch_subscribers(supabase_url: str, supabase_key: str) -> list[dict]:
     """Fetch active subscribers from Supabase REST API (no SDK needed)."""
     url = f"{supabase_url}/rest/v1/subscribers?active=eq.true&select=email,unsubscribe_token"
@@ -138,6 +241,21 @@ def main() -> int:
         print("error: no recipients", file=sys.stderr)
         return 1
 
+    # DOUBLE-SEND GUARD: atomically claim this issue_date in Supabase BEFORE
+    # sending a single email. This marker is durable and independent of the
+    # git push (whose failure caused the 2026-07-17 double send). If the date
+    # is already claimed, a prior run already sent it, skip and let the
+    # workflow still publish the page (self-heals a send-ok/push-failed run).
+    guard_claimed = False
+    if supabase_url and supabase_key:
+        outcome = claim_send(supabase_url, supabase_key, date_str)
+        if outcome == "already":
+            print(f"issue {date_str} already sent, no emails sent this run.")
+            return 0
+        guard_claimed = (outcome == "claimed")
+    else:
+        print("WARNING: no Supabase creds, DOUBLE-SEND GUARD DISABLED for this run.")
+
     sent = 0
     failed = 0
     for recipient in recipients:
@@ -157,7 +275,18 @@ def main() -> int:
         time.sleep(SEND_DELAY_SECONDS)
 
     print(f"sent {sent} emails, {failed} failures ({len(recipients)} total recipients)")
-    return 0 if failed == 0 else 1
+
+    # Finalize the durable guard. If ZERO emails went out (total failure),
+    # release the claim so a later attempt can retry, otherwise the issue
+    # would be stranded, claimed-but-never-delivered. If at least one email
+    # went out, KEEP the claim so no run ever re-blasts the list; record it.
+    if guard_claimed:
+        if sent == 0:
+            release_claim(supabase_url, supabase_key, date_str)
+        else:
+            finalize_send(supabase_url, supabase_key, date_str, sent)
+
+    return 0 if sent > 0 else 1
 
 
 if __name__ == "__main__":

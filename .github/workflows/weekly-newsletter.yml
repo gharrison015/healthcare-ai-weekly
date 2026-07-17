@@ -56,7 +56,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          # Full history so the post-send push can rebase onto the latest
+          # main (other bots push to main routinely) instead of being rejected.
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -162,7 +164,28 @@ jobs:
             exit 0
           fi
           git commit -m "newsletter: ${{ steps.date.outputs.date }}"
-          git push
+
+          # Other bots (bulletin, keepalive) push to main routinely, so a
+          # plain push can be REJECTED as non-fast-forward, which is exactly
+          # what stranded the 2026-07-17 marker and caused a double send.
+          # The send itself is now guarded by the Supabase claim, so this push
+          # only needs to land the issue page + git marker. Rebase and retry.
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              echo "pushed on attempt $attempt"
+              pushed=true
+              break
+            fi
+            echo "push attempt $attempt rejected; rebasing onto origin/main..."
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; echo "rebase aborted"; }
+            sleep 5
+          done
+          if [ "$pushed" != "true" ]; then
+            echo "ERROR: could not push newsletter commit after 5 attempts"
+            exit 1
+          fi
 
       - name: Upload run artifacts
         if: always() && steps.guard.outputs.skip != 'true'
