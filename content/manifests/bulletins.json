@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-apple-targets-dozens-of-openai-employees-with-legal-letters",
+      "headline": "Apple legal action targets OpenAI staff as talent exodus accelerates",
+      "timestamp": "2026-07-17T15:05:40Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gemini-notebooklm-is-now-gemini-notebook",
       "headline": "Google rebrand NotebookLM to Gemini Notebook amid capability delays",
       "timestamp": "2026-07-17T11:14:38Z",
@@ -288,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "openai-openai-faked-inability-to-search-training-data-hid-billions-of",
-      "headline": "OpenAI accused of hiding training data logs in copyright litigation",
-      "timestamp": "2026-07-10T12:19:55Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
