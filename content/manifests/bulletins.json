@@ -1,1 +1,24 @@
-{"bulletins":[]}
+{
+  "bulletins": [
+    {
+      "slug": "google-show-hn-waylandar-a-wayland-calendar-widget-syncs-google-calend",
+      "headline": "Google escalates AI chip competition while privacy tensions mount in enterprise",
+      "timestamp": "2026-07-20T19:24:55Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-claude-fable-produced-a-counterexample-to-the-jacobian-conjectu",
+      "headline": "Claude demonstrates advanced reasoning on unsolved mathematical problems",
+      "timestamp": "2026-07-20T19:24:52Z",
+      "source_name": "Xcancel",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    }
+  ]
+}
