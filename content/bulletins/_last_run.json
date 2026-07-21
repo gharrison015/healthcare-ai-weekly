@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-07-21T18:06:45.595123+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-07-21T19:03:07.518586+00:00",
+  "source_counts": {
+    "hackernews": 242,
+    "newsdata": 83
+  },
+  "total_collected": 325,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "gemini",
+    "gpt",
+    "apple"
+  ]
 }
