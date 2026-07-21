@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-21T15:28:32Z",
+  "slug": "ey-github-suddenly-rejected-my-ssh-key-the-fix-was-a-pub-file",
+  "headline": "GitHub deploy key failures expose infrastructure vulnerability risks",
+  "body": "GitHub experienced a significant incident affecting SSH key authentication and deploy keys, leaving developers unable to access repositories. For healthcare AI teams, this directly impacts CI/CD pipelines that pull code for clinical decision support systems, EHR integrations, and HIPAA-compliant deployments. When authentication fails silently or unexpectedly, it can delay critical security patches, compliance updates, and production deployments for time-sensitive healthcare applications. Healthcare organizations relying on GitHub for vendor-managed AI solutions should audit their key management protocols and implement redundant authentication methods to prevent similar outages from affecting patient-facing systems.",
+  "source_url": "https://thorsell.io/2026/07/21/github-ssh-keys.html",
+  "source_name": "Thorsell",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

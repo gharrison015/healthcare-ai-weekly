@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-github-suddenly-rejected-my-ssh-key-the-fix-was-a-pub-file",
+      "headline": "GitHub deploy key failures expose infrastructure vulnerability risks",
+      "timestamp": "2026-07-21T15:28:32Z",
+      "source_name": "Thorsell",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-claude-is-not-a-compiler",
+      "headline": "Claude's Code Generation Limits Spark Developer Debate on AI Capabilities",
+      "timestamp": "2026-07-21T15:28:29Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-kimi-k3-qwen-3-8-and-anthropic-s-potential-unravelling",
       "headline": "Anthropic settles $1.5B copyright lawsuit as competitive pressure intensifies",
       "timestamp": "2026-07-21T11:42:02Z",
