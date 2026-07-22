@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-22T15:25:35Z",
+  "slug": "nvidia-nvidia-vera-rubin-driving-performance-per-watt-lowest-token-cos",
+  "headline": "Nvidia Vera Rubin reduces inference costs while doubling Jetson pricing",
+  "body": "Nvidia announced its Vera Rubin CPU architecture delivering the lowest token cost for LLM inference partners and a 10x throughput-per-megawatt advantage over Blackwell, while simultaneously raising Jetson module prices up to 101%. For healthcare AI vendors, the cost-per-token improvement directly impacts the economic viability of deploying large language models in clinical workflows, particularly for note generation and documentation automation. However, the steep Jetson price increases create friction for edge deployment projects in hospitals and smaller health systems. Healthcare consulting teams should expect vendors to pass through infrastructure cost savings selectively while navigating increased edge device costs, reshaping ROI timelines for real-time clinical AI applications.",
+  "source_url": "https://www.hpcwire.com/off-the-wire/nvidia-vera-rubin-driving-performance-per-watt-lowest-token-cost-for-partners-worldwide/",
+  "source_name": "Hpcwire",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
