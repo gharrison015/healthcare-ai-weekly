@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-22T11:41:48Z",
+  "slug": "claude-judge-approves-1-5b-anthropic-settlement-for-pirated-books-used",
+  "headline": "Judge approves $1.5B settlement for Anthropic over Claude training data",
+  "body": "A federal judge has approved a $1.5 billion settlement between Anthropic and authors whose copyrighted books were used to train Claude without permission. This ruling establishes legal precedent for generative AI training practices and forces vendors to reckon with data sourcing transparency. Healthcare organizations deploying Claude for clinical documentation, decision support, or EHR integration should expect stricter vendor disclosure requirements around training data provenance going forward. The settlement signals that regulators and courts will hold AI companies accountable for training methodologies, which directly impacts how healthcare systems evaluate vendor trustworthiness and compliance posture. This precedent will likely influence future contracts and vendor selection criteria, particularly for organizations in regulated environments requiring documented audit trails.",
+  "source_url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
+  "source_name": "Apnews",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
