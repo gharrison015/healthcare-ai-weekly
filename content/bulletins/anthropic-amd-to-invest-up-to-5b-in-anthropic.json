@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-22T18:57:15Z",
+  "slug": "anthropic-amd-to-invest-up-to-5b-in-anthropic",
+  "headline": "AMD commits $5B to Anthropic as AI infrastructure race intensifies",
+  "body": "AMD announced plans to invest up to $5 billion in Anthropic while simultaneously committing to deploy up to 2 gigawatts of MI450 GPUs through their partnership. The investment and infrastructure commitment signal major consolidation in the foundation model space as compute suppliers and AI labs tighten integration. For healthcare AI, this matters because clinical LLM deployments depend on reliable, scaled compute infrastructure and model availability. The partnership reduces vendor fragmentation and could accelerate adoption timelines for organizations building AI into EHR workflows and clinical decision support. Healthcare systems evaluating foundation models for care delivery should monitor how this infrastructure expansion affects model availability, pricing, and performance guarantees in regulated environments.",
+  "source_url": "https://www.reuters.com/business/amd-invest-up-5-billion-anthropic-wsj-reports-2026-07-22/",
+  "source_name": "Reuters",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
