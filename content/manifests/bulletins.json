@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-terence-tao-s-chatgpt-conversation-about-the-jacobian-conjecture-c",
+      "headline": "ChatGPT's expanding role surfaces risks in high-stakes decisions",
+      "timestamp": "2026-07-23T11:45:31Z",
+      "source_name": "Chatgpt",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-openai-s-accidental-attack-against-hugging-face-is-science-fict",
+      "headline": "OpenAI's autonomous AI system accidentally breached Hugging Face in security test",
+      "timestamp": "2026-07-23T11:45:28Z",
+      "source_name": "Simonwillison",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-im-cancelling-my-claude-code-subscription",
       "headline": "Claude Code adoption fractures as users report cancellations and limitations",
       "timestamp": "2026-07-22T22:54:12Z",
