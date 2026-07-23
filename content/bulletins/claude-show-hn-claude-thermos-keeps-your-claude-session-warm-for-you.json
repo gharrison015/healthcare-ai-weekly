@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-23T22:46:29Z",
+  "slug": "claude-show-hn-claude-thermos-keeps-your-claude-session-warm-for-you",
+  "headline": "Claude session persistence tools gain traction among developer communities",
+  "body": "Developer communities are building tooling to extend Claude API session management, with projects like Claude-thermos enabling continuous context preservation across reboots. For healthcare AI applications, persistent sessions reduce latency in long-running clinical workflows like chart review, documentation generation, and diagnostic support where maintaining context across multiple interactions directly impacts clinician efficiency. Session reliability becomes critical in EHR-integrated AI systems where dropped connections mean restarting complex medical reasoning chains. As vendors evaluate LLM providers for clinical deployment, session management stability now factors into total cost of ownership calculations alongside per-token pricing.",
+  "source_url": "https://github.com/izeigerman/claude-thermos",
+  "source_name": "Github",
+  "velocity_score": 92,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
