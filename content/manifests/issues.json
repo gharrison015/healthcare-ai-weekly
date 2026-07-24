@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-07-24",
+    "week_range": "July 17 - July 24, 2026",
+    "editorial_summary": "Three stories dominate this week. Anthropic launched Claude for Healthcare and locked in a partnership with Optum, which is the biggest foundation model move in clinical AI this year. The White House ordered HHS and NIH to prioritize AI the same week HHS convened its own expert panel on clinical AI standards, which means the regulatory environment is moving fast in two directions simultaneously. And the ambient scribe arms race hit a new milestone: Ardent Health topped 1 million patient encounters, while KLAS data shows Epic AI users report measurably stronger EHR experiences. Underneath all of it is a single pressure: health systems are getting buried in vendor ROI claims they can't verify, CIOs are publicly calling AI both the most overhyped and most exciting trend in health IT, and the gap between pilot theater and deployed value has never been more visible. The money is moving fast. The proof is lagging.",
+    "top_stories": 5,
+    "vbc_watch": 2,
+    "did_you_know": 2,
+    "ma_partnerships": 2,
+    "consulting_intelligence": 2
+  },
+  {
     "date": "2026-07-17",
     "week_range": "July 10 - July 17, 2026",
     "editorial_summary": "Three storylines dominated this week and they all point the same direction: the AI-in-healthcare arms race is moving from pilot theater to real infrastructure bets. Anthropic made its most aggressive clinical move yet, wiring Claude into both Optum's advisory engine and UST's CarePath platform for insurers and providers. CMS dropped two bombshells: a proposal to kill MIPS, expand ACOs, and reshape how it pays for clinical AI and RPM, which means the reimbursement floor just shifted under every health system's AI strategy. And the governance crisis hiding in plain sight got statistical: 83% of clinicians were already using AI before their employers had any framework in place. That last number is the one keeping CMOs up at night, and it should. Underneath all of it, the funding keeps flowing: Pearl Health closed $110M for Medicare VBC AI, Bunkerhill Health closed $55M for agentic infrastructure, and UCSF launched an accelerator with Kleiner Perkins inside its own walls. The week also handed consultants a gift: CMS's MIPS phase-out proposal is going to generate a wave of client questions, and whoever has the sharpest answer on ACO participation strategy with AI-enabled care management wins the room.",
