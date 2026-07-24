@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-24T15:20:24Z",
+  "slug": "claude-claude-cookbook",
+  "headline": "Anthropic releases Claude Cookbook with developer session persistence tools",
+  "body": "Anthropic launched the Claude Cookbook, a collection of practical implementation patterns that gained significant developer traction across Hacker News and tech communities. The release coincides with emerging tools that extend Claude session management, including capabilities to maintain continuity across reboots and optimize token usage in code generation workflows. For healthcare AI implementations, persistent sessions and token optimization directly impact cost efficiency in EHR integrations and clinical decision support systems where conversation context and API spending must scale with patient volume. Healthcare organizations evaluating Claude for clinical documentation or diagnostic assistance workflows should assess these session management patterns as core operational requirements rather than optional features. The focus on developer tooling signals Anthropic's investment in production-grade reliability, a critical consideration for vendors building healthcare-compliant AI solutions.",
+  "source_url": "https://platform.claude.com/cookbook/",
+  "source_name": "Platform",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-24T15:20:27Z",
+  "slug": "openai-the-model-didn-t-escape-openai-ran-the-attack",
+  "headline": "OpenAI Orchestrated Own Security Test, Not Model Escape",
+  "body": "OpenAI clarified that a reported model escape was actually a controlled security exercise conducted internally, not an unauthorized breach. This matters for healthcare AI deployments because it underscores the importance of distinguishing between actual security vulnerabilities and controlled testing in production-adjacent systems. Healthcare organizations evaluating OpenAI's enterprise offerings should understand their security posture and testing protocols, especially when processing sensitive patient data through APIs. The incident also highlights broader vendor landscape dynamics as competitors like HuggingFace gain traction, forcing established players to demonstrate robust governance practices.",
+  "source_url": "https://adi2025.substack.com/p/the-model-didnt-escape-openai-ran",
+  "source_name": "Adi2025",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

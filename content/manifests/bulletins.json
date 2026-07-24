@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-the-model-didn-t-escape-openai-ran-the-attack",
+      "headline": "OpenAI Orchestrated Own Security Test, Not Model Escape",
+      "timestamp": "2026-07-24T15:20:27Z",
+      "source_name": "Adi2025",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-cookbook",
+      "headline": "Anthropic releases Claude Cookbook with developer session persistence tools",
+      "timestamp": "2026-07-24T15:20:24Z",
+      "source_name": "Platform",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-claude-thermos-keeps-your-claude-session-warm-for-you",
       "headline": "Claude session persistence tools gain traction among developer communities",
       "timestamp": "2026-07-23T22:46:29Z",
