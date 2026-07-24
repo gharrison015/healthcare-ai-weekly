@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-24T19:11:58Z",
+  "slug": "claude-claude-opus-5",
+  "headline": "Anthropic releases Claude Opus 5 with expanded capabilities",
+  "body": "Anthropic launched Claude Opus 5, marking a significant capability jump in their flagship model. For healthcare AI applications, the model's improved reasoning and expanded context window directly impact clinical documentation automation, EHR integration complexity, and real-time clinical decision support systems. The release reduces token costs through optimizations like RTK (Retrieval Token Kit), which improves economics for high-volume healthcare deployments processing patient records and clinical literature. Healthcare AI vendors and health systems evaluating large language models now have a materially stronger alternative for regulated use cases requiring documented reasoning and compliance audit trails.",
+  "source_url": "https://www.anthropic.com/news/claude-opus-5",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

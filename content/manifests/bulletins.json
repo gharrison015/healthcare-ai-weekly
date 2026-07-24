@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-be-skeptical-of-openai-s-rogue-hacker-agent-story",
+      "headline": "OpenAI's autonomous agent claims face skepticism across tech community",
+      "timestamp": "2026-07-24T19:12:01Z",
+      "source_name": "Theguardian",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-opus-5",
+      "headline": "Anthropic releases Claude Opus 5 with expanded capabilities",
+      "timestamp": "2026-07-24T19:11:58Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-the-model-didn-t-escape-openai-ran-the-attack",
       "headline": "OpenAI Orchestrated Own Security Test, Not Model Escape",
       "timestamp": "2026-07-24T15:20:27Z",
