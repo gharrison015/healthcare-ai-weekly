@@ -1,1 +1,24 @@
-{"bulletins":[]}
+{
+  "bulletins": [
+    {
+      "slug": "claude-elevated-errors-on-claude-opus-5",
+      "headline": "Claude Opus 5 experiences elevated error rates amid developer adoption surge",
+      "timestamp": "2026-07-27T12:50:27Z",
+      "source_name": "Status",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-openai-a-bubble-bigger-than-dotcom",
+      "headline": "OpenAI valuation skepticism rises amid agent concerns and transparency debates",
+      "timestamp": "2026-07-27T12:50:24Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    }
+  ]
+}

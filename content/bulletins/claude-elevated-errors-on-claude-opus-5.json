@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-27T12:50:27Z",
+  "slug": "claude-elevated-errors-on-claude-opus-5",
+  "headline": "Claude Opus 5 experiences elevated error rates amid developer adoption surge",
+  "body": "Anthropic's Claude Opus 5 model is experiencing elevated error rates according to status reports, occurring as developer tools built on Claude continue gaining traction across coding platforms. For healthcare AI implementations, this reliability issue directly impacts clinical decision support systems and EHR integration workflows that depend on Claude's inference quality. Healthcare organizations evaluating Claude for clinical documentation, chart analysis, or care coordination need to assess current stability before production deployment. The incident underscores the vendor landscape risk when adopting frontier models for regulated healthcare use cases where downtime and accuracy failures carry compliance and patient safety implications.",
+  "source_url": "https://status.claude.com/incidents/lhqp09kxq7pb",
+  "source_name": "Status",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
