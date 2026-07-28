@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-28T11:50:18Z",
+  "slug": "claude-claude-shared-chats-and-artifacts-may-have-ended-up-on-google",
+  "headline": "Claude shared chats exposed to Google indexing, raising data privacy concerns",
+  "body": "Anthropic's Claude platform experienced a significant privacy incident where shared chats and Artifacts were inadvertently indexed by Google search, potentially exposing user conversations. For healthcare organizations using Claude in clinical workflows or EHR integrations, this incident underscores critical risks around data handling and compliance with HIPAA and other privacy regulations. Healthcare AI implementations require explicit guarantees that patient data, clinical notes, and protected health information cannot be publicly exposed through search indexing or other unintended disclosure vectors. Vendors and consulting teams deploying Claude-based solutions must immediately audit data sharing settings and implement strict controls around what can be shared or published. This event reinforces that healthcare AI tool selection demands robust data governance frameworks and transparent privacy practices from AI providers.",
+  "source_url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+  "source_name": "TechCrunch",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
