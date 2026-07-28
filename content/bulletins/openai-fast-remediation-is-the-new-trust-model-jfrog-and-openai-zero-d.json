@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-28T15:58:04Z",
+  "slug": "openai-fast-remediation-is-the-new-trust-model-jfrog-and-openai-zero-d",
+  "headline": "OpenAI Zero-Day Findings Shift Security Focus to Fast Remediation",
+  "body": "JFrog and OpenAI disclosed collaborative findings on zero-day vulnerabilities, establishing rapid remediation as the new standard for trust in AI infrastructure. For healthcare AI deployments, this signals that security models must prioritize speed-to-patch over prevention-only strategies, particularly as EHR integrations and clinical AI tools expand across vendor ecosystems. Healthcare organizations using OpenAI-powered applications or considering AI vendors should now evaluate remediation timelines and disclosure practices as core due diligence criteria. The shift reflects maturation in how AI vendors handle security incidents, with direct implications for compliance frameworks like HIPAA and procurement decisions in value-based care environments.",
+  "source_url": "https://jfrog.com/blog/jfrog-and-openai-collaboration-on-zero-day-security-findings/",
+  "source_name": "Jfrog",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
