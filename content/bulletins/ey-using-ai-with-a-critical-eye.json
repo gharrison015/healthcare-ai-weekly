@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-28T19:07:35Z",
+  "slug": "ey-using-ai-with-a-critical-eye",
+  "headline": "Healthcare must evaluate AI models with scrutiny as cheaper alternatives emerge",
+  "body": "Discussion around critical evaluation of AI systems is intensifying across tech communities, while simultaneously cheaper and open-source AI models from Chinese developers are gaining traction in US markets. For healthcare organizations, this dual trend creates immediate vendor assessment challenges: cost pressures push toward lower-cost alternatives, but clinical workflows and EHR integration demand rigorous validation of model reliability, bias, and regulatory compliance. Healthcare AI deployments cannot trade clinical safety for expense reduction. Organizations should implement formal evaluation frameworks that test model performance on representative patient populations before adoption, particularly for value-based care initiatives where model accuracy directly impacts reimbursement outcomes.",
+  "source_url": "https://www.loserbydesign.com/new-page-3",
+  "source_name": "Loserbydesign",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

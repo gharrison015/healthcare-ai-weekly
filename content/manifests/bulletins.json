@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-using-ai-with-a-critical-eye",
+      "headline": "Healthcare must evaluate AI models with scrutiny as cheaper alternatives emerge",
+      "timestamp": "2026-07-28T19:07:35Z",
+      "source_name": "Loserbydesign",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-discovering-cryptographic-weaknesses-with-claude",
+      "headline": "Claude's cryptographic research capabilities draw scrutiny amid service reliability concerns",
+      "timestamp": "2026-07-28T19:07:33Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-fast-remediation-is-the-new-trust-model-jfrog-and-openai-zero-d",
       "headline": "OpenAI Zero-Day Findings Shift Security Focus to Fast Remediation",
       "timestamp": "2026-07-28T15:58:04Z",
