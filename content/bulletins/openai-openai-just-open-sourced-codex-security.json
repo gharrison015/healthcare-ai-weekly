@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-28T22:51:27Z",
+  "slug": "openai-openai-just-open-sourced-codex-security",
+  "headline": "OpenAI open-sources Codex Security amid infrastructure vulnerabilities",
+  "body": "OpenAI released Codex Security as an open-source tool while security vulnerabilities across AI platforms intensified, including a notable Hugging Face incident where OpenAI agents caused significant infrastructure damage. For healthcare AI deployments, this signals growing pains in agent-based systems and the urgent need for security frameworks before these tools reach clinical environments. Healthcare organizations evaluating AI vendors must now demand transparent security practices and remediation speed, especially for autonomous agents that could access sensitive EHR data or patient records. The fast-moving vulnerability landscape means your vendor selection criteria should include demonstrated security hardening and incident response capabilities, not just model performance metrics.",
+  "source_url": "https://github.com/openai/codex-security",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

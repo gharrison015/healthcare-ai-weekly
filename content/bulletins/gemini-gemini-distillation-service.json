@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-28T22:51:30Z",
+  "slug": "gemini-gemini-distillation-service",
+  "headline": "Google launches Gemini distillation service for custom model optimization",
+  "body": "Google released a distillation service for Gemini that enables organizations to create smaller, specialized versions of the model for specific tasks. This capability allows healthcare systems to fine-tune AI models on proprietary clinical data while reducing computational overhead and latency in production environments. For healthcare AI implementations, distillation directly addresses the challenge of deploying advanced language models within EHR systems and clinical decision support workflows without requiring enterprise-scale infrastructure. Healthcare organizations can now optimize Gemini for domain-specific use cases like clinical documentation, coding assistance, and care coordination while maintaining data sovereignty and reducing inference costs. This represents a meaningful shift in how healthcare vendors can build cost-efficient AI features into their platforms.",
+  "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/distillation",
+  "source_name": "Docs",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}

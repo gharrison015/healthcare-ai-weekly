@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-gemini-distillation-service",
+      "headline": "Google launches Gemini distillation service for custom model optimization",
+      "timestamp": "2026-07-28T22:51:30Z",
+      "source_name": "Docs",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
+      "slug": "openai-openai-just-open-sourced-codex-security",
+      "headline": "OpenAI open-sources Codex Security amid infrastructure vulnerabilities",
+      "timestamp": "2026-07-28T22:51:27Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-using-ai-with-a-critical-eye",
       "headline": "Healthcare must evaluate AI models with scrutiny as cheaper alternatives emerge",
       "timestamp": "2026-07-28T19:07:35Z",
