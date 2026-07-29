@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-29T22:50:27Z",
+  "slug": "claude-claude-elevated-errors-across-all-models",
+  "headline": "Anthropic's Claude experiences widespread service errors across model lineup",
+  "body": "Anthropic reported elevated errors affecting all Claude models this week, triggering conversations across developer communities about model reliability. For healthcare organizations evaluating Claude for clinical documentation, chart review automation, or diagnostic support systems, service stability directly impacts production deployment decisions and workflow continuity. The incident underscores why healthcare AI implementations require robust fallback strategies and SLA guarantees from vendors. Healthcare teams should clarify incident response protocols and uptime commitments before integrating large language models into mission-critical EHR workflows or clinical decision support systems.",
+  "source_url": "https://status.claude.com/incidents/q2kg8n613kr3",
+  "source_name": "Status",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

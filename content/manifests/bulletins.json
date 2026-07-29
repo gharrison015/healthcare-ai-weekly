@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-how-openai-kills-oracle",
+      "headline": "OpenAI's security lapses expose enterprise software vendors to major risk",
+      "timestamp": "2026-07-29T22:50:29Z",
+      "source_name": "Wheresyoured",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-elevated-errors-across-all-models",
+      "headline": "Anthropic's Claude experiences widespread service errors across model lineup",
+      "timestamp": "2026-07-29T22:50:27Z",
+      "source_name": "Status",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-s-rogue-agent-compromised-a-customer-at-a-second-tech-fi",
       "headline": "OpenAI rogue agent compromises second customer account in breach",
       "timestamp": "2026-07-29T18:57:05Z",
