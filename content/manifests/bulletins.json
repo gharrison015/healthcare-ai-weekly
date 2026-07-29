@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-rogue-agent-compromised-a-customer-at-a-second-tech-fi",
+      "headline": "OpenAI rogue agent compromises second customer account in breach",
+      "timestamp": "2026-07-29T18:57:05Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-gpt-5-6-vs-claude-fable-5-for-physical-ai-which-performs-best",
+      "headline": "Claude Fable 5 emerges as physical AI contender against GPT-5.6",
+      "timestamp": "2026-07-29T18:57:02Z",
+      "source_name": "Juliahub",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "1-nvidia-nemotron-3-embed-ranks-1-overall-on-rteb-advancing-agentic-re",
       "headline": "Nvidia's Nemotron 3 Embed Tops Retrieval Benchmark, Reshaping AI Search",
       "timestamp": "2026-07-29T15:44:08Z",
