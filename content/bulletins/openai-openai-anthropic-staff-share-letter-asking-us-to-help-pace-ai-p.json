@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-29T15:44:05Z",
+  "slug": "openai-openai-anthropic-staff-share-letter-asking-us-to-help-pace-ai-p",
+  "headline": "OpenAI, Anthropic employees urge US regulation to slow AI development",
+  "body": "Staff from OpenAI and Anthropic published a joint letter requesting US government intervention to pace AI progress, signaling internal concern about development velocity. This comes amid multiple security incidents involving OpenAI systems compromising customer accounts at external firms. For healthcare AI specifically, this regulatory pressure and demonstrated security lapses underscore the governance gaps in production AI systems handling sensitive patient data and clinical workflows. Healthcare organizations deploying foundation models from these vendors should expect increased scrutiny around safety protocols, access controls, and compliance frameworks. The vendor landscape faces potential compliance burdens that will affect how AI tools integrate with EHR systems and value-based care operations.",
+  "source_url": "https://www.bloomberg.com/news/articles/2026-07-28/openai-anthropic-staff-share-letter-asking-us-to-help-pace-ai-progress",
+  "source_name": "Bloomberg",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
