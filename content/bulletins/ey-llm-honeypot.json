@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-30T11:45:20Z",
+  "slug": "ey-llm-honeypot",
+  "headline": "LLM honeypot exposes security vulnerabilities in AI deployment",
+  "body": "Researchers have demonstrated a honeypot that reveals how large language models can be manipulated through adversarial prompting techniques, drawing significant attention across developer communities. For healthcare AI implementations, this matters because clinical decision support systems, EHR integrations, and patient-facing chatbots all rely on LLM robustness against prompt injection attacks. Healthcare organizations deploying AI solutions need to understand these vulnerability patterns before integrating models into production workflows where security breaches could compromise patient data or clinical outputs. Consulting teams advising healthcare clients should treat LLM security testing as a mandatory requirement, not an optional add-on.",
+  "source_url": "https://llm2human.pages.dev/",
+  "source_name": "Llm2Human",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

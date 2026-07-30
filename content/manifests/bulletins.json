@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-llm-honeypot",
+      "headline": "LLM honeypot exposes security vulnerabilities in AI deployment",
+      "timestamp": "2026-07-30T11:45:20Z",
+      "source_name": "Llm2Human",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "openai-the-way-gpt-5-6-fuses-frontier-intelligence-with-frontier-effic",
+      "headline": "OpenAI releases GPT-5.6 combining advanced intelligence with operational efficiency",
+      "timestamp": "2026-07-30T11:45:18Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-how-openai-kills-oracle",
       "headline": "OpenAI's security lapses expose enterprise software vendors to major risk",
       "timestamp": "2026-07-29T22:50:29Z",
