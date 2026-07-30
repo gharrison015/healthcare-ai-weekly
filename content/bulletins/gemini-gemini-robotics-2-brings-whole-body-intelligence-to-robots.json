@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-30T15:45:24Z",
+  "slug": "gemini-gemini-robotics-2-brings-whole-body-intelligence-to-robots",
+  "headline": "Google releases Gemini Robotics 2 with embodied AI capabilities",
+  "body": "Google DeepMind released Gemini Robotics 2, bringing multimodal AI reasoning to physical robotic systems with whole body intelligence. While the announcement focuses on robotics, the underlying architecture patterns matter for healthcare: embodied reasoning systems could enable medical robots in surgical suites, patient mobility assistance, and pharmacy automation to understand spatial context and adapt to dynamic clinical environments. Healthcare vendors building robotic solutions for OR automation or patient care logistics should monitor how these multimodal models handle real-world reasoning under operational constraints. The velocity around Gemini updates (note concurrent deprecation of Gemini 2.5 models) signals Google's aggressive iteration cycle, which healthcare organizations relying on Gemini-powered clinical tools should track for compatibility and migration planning.",
+  "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+  "source_name": "Deepmind",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}
