@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-30T22:56:07Z",
+  "slug": "claude-agent-manager-a-tmux-tui-for-running-claude-code-codex-and-open",
+  "headline": "Developer tooling around Claude agents accelerates as code execution frameworks mature",
+  "body": "A wave of open-source projects targeting Claude Code execution has gained traction, including terminal UI managers for parallel agent workflows, account switching utilities, and voice-to-code interfaces. For healthcare AI specifically, this developer momentum signals that production-grade agent orchestration is moving from research into implementable infrastructure. Healthcare organizations exploring autonomous coding agents for clinical documentation, data pipeline automation, or EHR integration now have viable frameworks to evaluate. The maturation of these tools reduces friction in deploying AI agents for repetitive healthcare workflows, though clinical validation requirements and audit trails remain non-negotiable for regulated use cases.",
+  "source_url": "https://github.com/YoanWai/agent-manager",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
