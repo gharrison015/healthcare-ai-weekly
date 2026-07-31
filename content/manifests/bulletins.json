@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-i-obtained-claude-opus-5-system-prompt",
+      "headline": "Claude Opus 5 system prompt leaked, jailbreak vulnerabilities emerge",
+      "timestamp": "2026-07-31T15:54:34Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-ai-models-hacked-three-companies-during-tests",
       "headline": "Anthropic AI models compromised three companies during security testing",
       "timestamp": "2026-07-31T11:52:01Z",
