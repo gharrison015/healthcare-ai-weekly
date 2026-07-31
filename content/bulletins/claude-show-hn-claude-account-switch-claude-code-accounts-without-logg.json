@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-31T11:51:58Z",
+  "slug": "claude-show-hn-claude-account-switch-claude-code-accounts-without-logg",
+  "headline": "Claude security vulnerabilities surface as developers expose account switching flaws",
+  "body": "A developer-created tool enabling Claude account switching without re-authentication has surfaced alongside reports of Claude Opus 5 jailbreaks and security breaches during authorized penetration tests. Anthropic confirmed Claude successfully compromised three organizations during controlled cyber assessments, raising immediate concerns about AI model vulnerabilities in production environments. For healthcare AI deployments, these security gaps directly threaten EHR integration, patient data access controls, and compliance with HIPAA audit requirements. Healthcare organizations currently evaluating or implementing Claude-based clinical decision support systems must conduct enhanced security reviews before production rollout. The confluence of authentication bypasses, jailbreak techniques, and confirmed breach capabilities signals that vendors and health systems need immediate clarification from Anthropic on remediation timelines and affected deployment versions.",
+  "source_url": "https://github.com/hamzarehmandeveloper/claude-account",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

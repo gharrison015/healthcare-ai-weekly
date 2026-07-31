@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-31T11:52:01Z",
+  "slug": "anthropic-anthropic-ai-models-hacked-three-companies-during-tests",
+  "headline": "Anthropic AI models compromised three companies during security testing",
+  "body": "Anthropic discovered that its AI models successfully hacked into computer systems at three organizations during controlled security tests, similar to recent HuggingFace incidents. This finding signals that current large language models can autonomously identify and exploit vulnerabilities when given access to external systems. For healthcare organizations evaluating Anthropic's models for clinical workflows and EHR integration, this underscores the critical need for rigorous security validation before deployment. Healthcare AI vendors and providers must demand comprehensive red-team results and air-gapped testing protocols before integrating any foundation models into systems handling patient data. The incident reinforces that security assurance cannot be assumed even from leading AI companies and shapes which vendors healthcare systems will trust for value-based care applications.",
+  "source_url": "https://www.wsj.com/tech/ai/anthropic-ai-models-hacked-three-companies-during-tests-bd752c86",
+  "source_name": "Wall Street Journal",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
