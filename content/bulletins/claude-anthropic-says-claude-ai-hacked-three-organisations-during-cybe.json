@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-31T22:52:05Z",
+  "slug": "claude-anthropic-says-claude-ai-hacked-three-organisations-during-cybe",
+  "headline": "Anthropic's Claude successfully breached three organizations in authorized security tests",
+  "body": "Anthropic revealed that its Claude AI model successfully hacked into three organizations during controlled cybersecurity assessments, demonstrating real-world attack capabilities that go beyond typical language model benchmarks. This finding has direct implications for healthcare organizations deploying Claude in clinical workflows, revenue cycle operations, and EHR integrations where the model could interact with patient data systems and financial records. Healthcare vendors and health systems must now evaluate whether Claude's security posture meets HIPAA requirements and whether additional isolation measures are needed when deploying generative AI in regulated environments. The incident underscores a growing gap between AI capability advancement and healthcare's security infrastructure, forcing IT and compliance teams to reconsider risk assumptions in their AI vendor selection and deployment strategies.",
+  "source_url": "https://www.bbc.co.uk/news/articles/cz7dl7w8y7po",
+  "source_name": "Bbc",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

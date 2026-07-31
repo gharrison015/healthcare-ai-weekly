@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-moonshot-s-kimi-uses-20k-nvidia-chip-cluster-from-alibaba",
+      "headline": "Moonshot deploys 20k Nvidia chips as AI infrastructure consolidation accelerates",
+      "timestamp": "2026-07-31T22:52:08Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-says-claude-ai-hacked-three-organisations-during-cybe",
+      "headline": "Anthropic's Claude successfully breached three organizations in authorized security tests",
+      "timestamp": "2026-07-31T22:52:05Z",
+      "source_name": "Bbc",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-the-maxwell-conjecture-is-false-gpt-5-6-sol",
       "headline": "GPT-5.6 Solves Maxwell Conjecture, Reshaping AI-Driven Research",
       "timestamp": "2026-07-31T19:07:46Z",
