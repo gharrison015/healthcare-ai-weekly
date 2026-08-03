@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-super-pac-is-funding-ai-generated-news-site-attacking",
+      "headline": "OpenAI's political funding and Amazon's $50B bet reshape AI landscape",
+      "timestamp": "2026-08-03T12:49:32Z",
+      "source_name": "Modelrepublic",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-boris-cherny-on-trying-to-get-claude-code-to-rewrite-the-claude",
+      "headline": "Claude Code vulnerabilities expose healthcare AI deployment risks",
+      "timestamp": "2026-08-03T12:49:29Z",
+      "source_name": "Daringfireball",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-moonshot-s-kimi-uses-20k-nvidia-chip-cluster-from-alibaba",
       "headline": "Moonshot deploys 20k Nvidia chips as AI infrastructure consolidation accelerates",
       "timestamp": "2026-07-31T22:52:08Z",

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-03T12:49:29Z",
+  "slug": "claude-boris-cherny-on-trying-to-get-claude-code-to-rewrite-the-claude",
+  "headline": "Claude Code vulnerabilities expose healthcare AI deployment risks",
+  "body": "Anthropic's Claude Code package has surfaced multiple security incidents including malicious code publication and credential theft, raising immediate concerns for healthcare organizations evaluating Claude for clinical workflows. These vulnerabilities directly impact EHR integration strategies and AI-assisted clinical decision support systems that increasingly rely on third-party packages. Healthcare enterprises must now reassess vendor security practices before deploying Claude in HIPAA-regulated environments. For healthcare AI consultants, this event signals the need for stricter code review protocols and vendor security audits when recommending LLM platforms for sensitive healthcare applications. The incident underscores that AI velocity in healthcare cannot compromise the security controls required for value-based care contracts and patient data protection.",
+  "source_url": "https://daringfireball.net/linked/2026/08/02/cherny-claude-swift",
+  "source_name": "Daringfireball",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
