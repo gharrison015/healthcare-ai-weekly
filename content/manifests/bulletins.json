@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-google-s-200b-wall-street-finance-machine-for-anthropic",
+      "headline": "Google backs Anthropic with $200B finance infrastructure deal",
+      "timestamp": "2026-08-04T19:18:26Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-apple-says-more-ex-employees-may-have-taken-confidential-data-t",
+      "headline": "Apple reports ex-employees may have leaked confidential data to OpenAI",
+      "timestamp": "2026-08-04T19:18:22Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-why-it-s-impossible-to-get-relevant-news-on-google-news",
       "headline": "Google News filtering problems raise healthcare information discovery concerns",
       "timestamp": "2026-08-04T16:06:55Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-using-ai-with-a-critical-eye",
-      "headline": "Healthcare must evaluate AI models with scrutiny as cheaper alternatives emerge",
-      "timestamp": "2026-07-28T19:07:35Z",
-      "source_name": "Loserbydesign",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-discovering-cryptographic-weaknesses-with-claude",
-      "headline": "Claude's cryptographic research capabilities draw scrutiny amid service reliability concerns",
-      "timestamp": "2026-07-28T19:07:33Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
