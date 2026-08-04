@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-why-it-s-impossible-to-get-relevant-news-on-google-news",
+      "headline": "Google News filtering problems raise healthcare information discovery concerns",
+      "timestamp": "2026-08-04T16:06:55Z",
+      "source_name": "Elgan",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-agent-skills-that-bring-team-coding-standards-to-claude-code-an",
+      "headline": "Claude agent skills enforce coding standards across distributed development teams",
+      "timestamp": "2026-08-04T16:06:51Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-ask-hn-claude-multisession",
       "headline": "Claude adoption accelerates with advanced coding capabilities gaining traction",
       "timestamp": "2026-08-04T11:55:46Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-fast-remediation-is-the-new-trust-model-jfrog-and-openai-zero-d",
-      "headline": "OpenAI Zero-Day Findings Shift Security Focus to Fast Remediation",
-      "timestamp": "2026-07-28T15:58:04Z",
-      "source_name": "Jfrog",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

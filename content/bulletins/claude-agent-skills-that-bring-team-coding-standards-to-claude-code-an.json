@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-04T16:06:51Z",
+  "slug": "claude-agent-skills-that-bring-team-coding-standards-to-claude-code-an",
+  "headline": "Claude agent skills enforce coding standards across distributed development teams",
+  "body": "Anthropic's Claude is gaining capability to enforce team coding standards through agent skills, addressing a persistent challenge in multi-developer environments. For healthcare AI systems, this matters because clinical-grade code requires consistent standards across teams building EHR integrations, diagnostic algorithms, and compliance-critical workflows. Standardized code reduces security vulnerabilities, improves maintainability during audits, and accelerates onboarding for healthcare developers unfamiliar with domain-specific patterns. Healthcare vendors and consultants deploying Claude for internal tool development can now enforce HIPAA-aligned practices and clinical coding conventions automatically, reducing manual review cycles and human error in regulated environments.",
+  "source_url": "https://github.com/tikalk/adlc-team-skills",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
