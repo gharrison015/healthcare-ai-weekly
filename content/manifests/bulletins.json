@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-ask-hn-claude-multisession",
+      "headline": "Claude adoption accelerates with advanced coding capabilities gaining traction",
+      "timestamp": "2026-08-04T11:55:46Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-who-s-legally-to-blame-for-anthropic-and-openai-s-autonomous-ai",
+      "headline": "Legal liability questions emerge as OpenAI and Anthropic face autonomous AI incidents",
+      "timestamp": "2026-08-04T11:55:43Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-if-ai-outputs-aren-t-speech-who-has-to-prove-they-re-human",
       "headline": "Legal ambiguity over AI-generated content authenticity challenges healthcare documentation",
       "timestamp": "2026-08-03T19:18:29Z",
@@ -268,26 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-show-hn-feynobg-automatic-background-removal-model-and-training-lib",
-      "headline": "Open source background removal tool gains traction among developer community",
-      "timestamp": "2026-07-28T11:50:21Z",
-      "source_name": "Usefeyn",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-claude-shared-chats-and-artifacts-may-have-ended-up-on-google",
-      "headline": "Claude shared chats exposed to Google indexing, raising data privacy concerns",
-      "timestamp": "2026-07-28T11:50:18Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
