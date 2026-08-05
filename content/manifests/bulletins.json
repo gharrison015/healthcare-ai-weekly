@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-alpamayo-2-super-the-frontier-open-model-for-autonomous",
+      "headline": "Nvidia releases Alpamayo 2 Super open model for autonomous systems",
+      "timestamp": "2026-08-05T15:54:21Z",
+      "source_name": "Blogs",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-iowa-led-states-ask-openai-to-keep-their-bots-on-a-leash",
+      "headline": "Iowa-led coalition demands OpenAI transparency after security breach",
+      "timestamp": "2026-08-05T15:54:19Z",
+      "source_name": "Iowaattorneygeneral",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-a-mass-shooter-s-harrowing-history-with-chatgpt",
       "headline": "ChatGPT dominance in federal AI spending raises clinical governance questions",
       "timestamp": "2026-08-05T11:51:14Z",
@@ -268,36 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "1-nvidia-nemotron-3-embed-ranks-1-overall-on-rteb-advancing-agentic-re",
-      "headline": "Nvidia's Nemotron 3 Embed Tops Retrieval Benchmark, Reshaping AI Search",
-      "timestamp": "2026-07-29T15:44:08Z",
-      "source_name": "Huggingface",
-      "verification": "confirmed",
-      "tags": [
-        "1"
-      ]
-    },
-    {
-      "slug": "openai-openai-anthropic-staff-share-letter-asking-us-to-help-pace-ai-p",
-      "headline": "OpenAI, Anthropic employees urge US regulation to slow AI development",
-      "timestamp": "2026-07-29T15:44:05Z",
-      "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-kospi-plunges-after-nvidia-ceo-s-visits-spark-huang-curse-fears",
-      "headline": "Nvidia's infrastructure momentum accelerates amid geopolitical scrutiny",
-      "timestamp": "2026-07-29T11:53:53Z",
-      "source_name": "Chosun",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
