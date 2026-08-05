@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-05T19:14:36Z",
+  "slug": "ey-a-survey-on-llm-as-a-judge",
+  "headline": "Survey maps LLM-as-Judge frameworks reshaping AI evaluation landscape",
+  "body": "Researchers published a comprehensive survey on LLM-as-Judge methodologies, a technique where language models evaluate outputs from other AI systems. This matters for healthcare AI because clinical decision support, diagnostic assistance, and documentation review increasingly rely on LLM evaluation pipelines to ensure quality and safety. Healthcare organizations deploying AI in EHR workflows need to understand how LLM judges validate clinical accuracy and flag potential errors before patient impact. The survey provides practical guidance for vendors and health systems evaluating which judge architectures work best for regulated healthcare environments where audit trails and reproducibility are non-negotiable requirements.",
+  "source_url": "https://arxiv.org/abs/2411.15594",
+  "source_name": "Arxiv",
+  "velocity_score": 68,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

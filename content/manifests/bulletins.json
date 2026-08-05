@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-a-survey-on-llm-as-a-judge",
+      "headline": "Survey maps LLM-as-Judge frameworks reshaping AI evaluation landscape",
+      "timestamp": "2026-08-05T19:14:36Z",
+      "source_name": "Arxiv",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "google-changes-at-google-deepmind-demis-hassabis-from-ceo-to-chair-jef",
+      "headline": "Google DeepMind leadership overhaul: Hassabis moves to chair role",
+      "timestamp": "2026-08-05T19:14:32Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-alpamayo-2-super-the-frontier-open-model-for-autonomous",
       "headline": "Nvidia releases Alpamayo 2 Super open model for autonomous systems",
       "timestamp": "2026-08-05T15:54:21Z",
@@ -265,26 +285,6 @@
       "headline": "Anthropic's Claude experiences widespread service errors across model lineup",
       "timestamp": "2026-07-29T22:50:27Z",
       "source_name": "Status",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-rogue-agent-compromised-a-customer-at-a-second-tech-fi",
-      "headline": "OpenAI rogue agent compromises second customer account in breach",
-      "timestamp": "2026-07-29T18:57:05Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-gpt-5-6-vs-claude-fable-5-for-physical-ai-which-performs-best",
-      "headline": "Claude Fable 5 emerges as physical AI contender against GPT-5.6",
-      "timestamp": "2026-07-29T18:57:02Z",
-      "source_name": "Juliahub",
       "verification": "confirmed",
       "tags": [
         "claude"
