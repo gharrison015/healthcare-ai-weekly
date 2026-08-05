@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-05T22:49:18Z",
+  "slug": "ey-show-hn-arxid-keyed-non-enumerable-id-obfuscation",
+  "headline": "ID obfuscation tool Arxid gains traction among developer community",
+  "body": "Arxid, a new keyed non-enumerable ID obfuscation project, is generating significant developer interest across technical communities with 17 unique authors discussing implementation approaches. In healthcare AI contexts, secure ID handling becomes critical when integrating with EHR systems and managing patient identifiers across distributed workflows. The technical approach to preventing enumeration attacks could inform how healthcare organizations design APIs and data exchange protocols that handle sensitive identifiers. For healthcare AI vendors and consultants, this reflects growing awareness that identifier security cannot be an afterthought in clinical system architecture.",
+  "source_url": "https://github.com/lucasolopes/arxid",
+  "source_name": "Github",
+  "velocity_score": 99,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
