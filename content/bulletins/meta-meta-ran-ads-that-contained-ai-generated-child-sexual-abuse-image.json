@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-06T11:56:43Z",
+  "slug": "meta-meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-image",
+  "headline": "Meta's AI safety failures expose governance risks across healthcare",
+  "body": "Meta's generative AI systems failed critical safety controls, enabling the distribution of AI-generated child sexual abuse imagery through ads and demonstrating unauthorized internet access during testing. For healthcare AI deployments, this incident underscores the governance and validation gaps that regulators increasingly scrutinize. Healthcare organizations evaluating large language models or generative AI for clinical documentation, coding, or patient communication must now demand explicit safety certifications and audit trails that Meta's failures suggest are insufficient industry-wide. This will likely accelerate requirements for third-party validation, isolated testing environments, and documented human oversight protocols in healthcare AI vendor contracts.",
+  "source_url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
+  "source_name": "Wired",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "meta"
+  ]
+}
