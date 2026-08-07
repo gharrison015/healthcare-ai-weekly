@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-new-device-will-be-hockey-puck-sized-and-cost-over-300",
+      "headline": "OpenAI launches $300+ hardware device amid AI safety concerns",
+      "timestamp": "2026-08-07T22:25:15Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-the-claudyssey-a-line-for-line-translation-of-homer-s-odyssey-b",
+      "headline": "Claude's expanded capabilities spark debate over AI safety and clinical deployment",
+      "timestamp": "2026-08-07T22:25:13Z",
+      "source_name": "Theclaudyssey",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-the-openai-hugging-face-incident-video",
       "headline": "OpenAI faces research misconduct allegations as AI standards emerge",
       "timestamp": "2026-08-07T18:39:49Z",
@@ -278,16 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-the-maxwell-conjecture-is-false-gpt-5-6-sol",
-      "headline": "GPT-5.6 Solves Maxwell Conjecture, Reshaping AI-Driven Research",
-      "timestamp": "2026-07-31T19:07:46Z",
-      "source_name": "Arxiv",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
