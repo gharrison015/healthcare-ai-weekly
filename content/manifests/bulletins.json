@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-the-openai-hugging-face-incident-video",
+      "headline": "OpenAI faces research misconduct allegations as AI standards emerge",
+      "timestamp": "2026-08-07T18:39:49Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-mirafold-your-agent-with-generative-ui-codex-claude-cod",
+      "headline": "Claude infrastructure expansion signals vendor consolidation in healthcare AI",
+      "timestamp": "2026-08-07T18:39:46Z",
+      "source_name": "Mirafold",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-shifts-ai-power-back-to-brin-as-deepmind-s-hassabis-step",
       "headline": "Google consolidates AI leadership as DeepMind's Hassabis exits",
       "timestamp": "2026-08-07T14:44:40Z",
@@ -268,16 +288,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "claude-i-obtained-claude-opus-5-system-prompt",
-      "headline": "Claude Opus 5 system prompt leaked, jailbreak vulnerabilities emerge",
-      "timestamp": "2026-07-31T15:54:34Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

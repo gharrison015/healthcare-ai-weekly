@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-07T18:39:46Z",
+  "slug": "claude-show-hn-mirafold-your-agent-with-generative-ui-codex-claude-cod",
+  "headline": "Claude infrastructure expansion signals vendor consolidation in healthcare AI",
+  "body": "Anthropic announced plans to design proprietary hardware for Claude, while simultaneously a thousand system prompts from Claude and competing models surfaced publicly. This represents a critical inflection point: Claude is becoming a vertically integrated platform rather than a model-only offering. For healthcare AI deployments, this matters because hardware ownership affects latency, compliance certifications, and data residency controls that clinical workflows demand. The prompt transparency also exposes how these systems handle sensitive instruction sets, directly impacting your vendor risk assessment for EHR integration and documentation automation. Expect healthcare IT teams to accelerate hardware and model consolidation decisions within the next two quarters.",
+  "source_url": "https://mirafold.com/",
+  "source_name": "Mirafold",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
