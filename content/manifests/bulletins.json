@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-switching-from-gpt-5-5-to-gpt-5-6-made-me-less-productive",
+      "headline": "GPT-5.6 rollout surfaces productivity trade-offs in real-world use",
+      "timestamp": "2026-08-10T14:50:05Z",
+      "source_name": "Vincentschmalbach",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-an-openai-strategist-says-ai-labs-should-rival-government-power",
+      "headline": "OpenAI strategist argues AI labs should match government institutional power",
+      "timestamp": "2026-08-10T14:50:02Z",
+      "source_name": "Ai Updates",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-70-of-ai-revenue-comes-from-openai-and-anthropic-video",
       "headline": "OpenAI and Anthropic capture 70% of AI revenue amid security incidents",
       "timestamp": "2026-08-10T10:57:40Z",
@@ -278,26 +298,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-super-pac-is-funding-ai-generated-news-site-attacking",
-      "headline": "OpenAI's political funding and Amazon's $50B bet reshape AI landscape",
-      "timestamp": "2026-08-03T12:49:32Z",
-      "source_name": "Modelrepublic",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-boris-cherny-on-trying-to-get-claude-code-to-rewrite-the-claude",
-      "headline": "Claude Code vulnerabilities expose healthcare AI deployment risks",
-      "timestamp": "2026-08-03T12:49:29Z",
-      "source_name": "Daringfireball",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
