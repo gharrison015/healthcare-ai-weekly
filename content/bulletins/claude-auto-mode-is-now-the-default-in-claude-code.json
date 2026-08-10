@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-10T10:57:37Z",
+  "slug": "claude-auto-mode-is-now-the-default-in-claude-code",
+  "headline": "Claude Code auto mode becomes default, reshaping AI-assisted development workflows",
+  "body": "Anthropic has enabled auto mode by default in Claude Code, allowing the AI to execute code changes without requiring manual approval at each step. This shift reduces friction in development cycles and represents a meaningful evolution in how AI handles autonomous decision-making during task execution. For healthcare AI vendors and EHR integrators, this change has direct implications: faster prototyping of clinical decision support tools, streamlined validation workflows, and accelerated deployment cycles for compliance-sensitive applications. The tradeoff between speed and oversight creates consulting opportunities around governance frameworks, especially for organizations managing AI modifications to patient-facing systems.",
+  "source_url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+  "source_name": "Claude",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

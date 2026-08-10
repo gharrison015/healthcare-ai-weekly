@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-70-of-ai-revenue-comes-from-openai-and-anthropic-video",
+      "headline": "OpenAI and Anthropic capture 70% of AI revenue amid security incidents",
+      "timestamp": "2026-08-10T10:57:40Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-auto-mode-is-now-the-default-in-claude-code",
+      "headline": "Claude Code auto mode becomes default, reshaping AI-assisted development workflows",
+      "timestamp": "2026-08-10T10:57:37Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-s-new-device-will-be-hockey-puck-sized-and-cost-over-300",
       "headline": "OpenAI launches $300+ hardware device amid AI safety concerns",
       "timestamp": "2026-08-07T22:25:15Z",
@@ -275,26 +295,6 @@
       "headline": "Claude Code vulnerabilities expose healthcare AI deployment risks",
       "timestamp": "2026-08-03T12:49:29Z",
       "source_name": "Daringfireball",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-moonshot-s-kimi-uses-20k-nvidia-chip-cluster-from-alibaba",
-      "headline": "Moonshot deploys 20k Nvidia chips as AI infrastructure consolidation accelerates",
-      "timestamp": "2026-07-31T22:52:08Z",
-      "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-says-claude-ai-hacked-three-organisations-during-cybe",
-      "headline": "Anthropic's Claude successfully breached three organizations in authorized security tests",
-      "timestamp": "2026-07-31T22:52:05Z",
-      "source_name": "Bbc",
       "verification": "confirmed",
       "tags": [
         "claude"
