@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "meta-mark-zuckerberg-attacks-closed-ai-rivals-as-meta-returns-to-open",
+      "headline": "Meta pivots to open-source AI as Zuckerberg challenges closed model vendors",
+      "timestamp": "2026-08-10T22:26:28Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "meta"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-6-cyber",
       "headline": "OpenAI releases GPT 5.6 Cyber amid rising healthcare security demands",
       "timestamp": "2026-08-10T18:42:12Z",
@@ -298,16 +308,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-if-ai-outputs-aren-t-speech-who-has-to-prove-they-re-human",
-      "headline": "Legal ambiguity over AI-generated content authenticity challenges healthcare documentation",
-      "timestamp": "2026-08-03T19:18:29Z",
-      "source_name": "Lawfaremedia",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]

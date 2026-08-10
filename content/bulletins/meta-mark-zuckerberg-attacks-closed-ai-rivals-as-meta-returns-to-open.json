@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-10T22:26:28Z",
+  "slug": "meta-mark-zuckerberg-attacks-closed-ai-rivals-as-meta-returns-to-open",
+  "headline": "Meta pivots to open-source AI as Zuckerberg challenges closed model vendors",
+  "body": "Meta is releasing Muse Glimmer, a 30-billion parameter open-weight model designed for local agentic AI that runs on consumer hardware under 20GB VRAM, with Mark Zuckerberg publicly attacking closed AI competitors. For healthcare AI, this shift matters because open models lower deployment barriers for hospitals and health systems that lack massive compute budgets, enabling on-premise clinical agent development without vendor lock-in. The move reshapes the vendor landscape by making locally-executable AI infrastructure a competitive reality rather than theoretical, which directly impacts how healthcare organizations can build custom clinical workflows and EHR integrations. Healthcare AI teams should monitor whether open-weight models at this scale can match proprietary performance on clinical NLP and decision-support tasks, as cost and data sovereignty advantages could accelerate adoption in value-based care environments.",
+  "source_url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+  "source_name": "Financial Times",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "meta"
+  ]
+}
