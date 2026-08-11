@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-head-of-ethics-leaves-less-than-a-year-after-joining",
+      "headline": "OpenAI ethics chief exits after less than one year tenure",
+      "timestamp": "2026-08-11T22:32:03Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-is-leaking-real-email-address-as-a-user-agent-strin",
+      "headline": "Claude Code security flaw exposes user data in API requests",
+      "timestamp": "2026-08-11T22:32:01Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-why-did-openai-s-head-of-ethics-chlo-bakalar-leave",
       "headline": "OpenAI's head of ethics departs amid leadership changes",
       "timestamp": "2026-08-11T18:46:31Z",
@@ -308,26 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "anthropic-google-s-200b-wall-street-finance-machine-for-anthropic",
-      "headline": "Google backs Anthropic with $200B finance infrastructure deal",
-      "timestamp": "2026-08-04T19:18:26Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-apple-says-more-ex-employees-may-have-taken-confidential-data-t",
-      "headline": "Apple reports ex-employees may have leaked confidential data to OpenAI",
-      "timestamp": "2026-08-04T19:18:22Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

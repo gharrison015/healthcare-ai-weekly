@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-11T22:32:01Z",
+  "slug": "claude-claude-code-is-leaking-real-email-address-as-a-user-agent-strin",
+  "headline": "Claude Code security flaw exposes user data in API requests",
+  "body": "Anthropic's Claude Code leaked real email addresses through User-Agent strings in curl commands, raising immediate security concerns for healthcare organizations. Healthcare AI implementations depend on secure data handling in clinical workflows and EHR integrations, where HIPAA compliance is non-negotiable. This vulnerability demonstrates the risks when deploying third-party AI coding assistants in regulated environments where patient data proximity demands rigorous vetting. Healthcare systems and consultants must now audit their Claude implementations and establish strict controls on what data these tools can access. The incident highlights why healthcare AI adoption requires vendor security audits before integration into production systems.",
+  "source_url": "https://github.com/anthropics/claude-code/issues/78431",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
