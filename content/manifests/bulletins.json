@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-is-pulling-wall-street-into-the-ai-buildout",
+      "headline": "Nvidia secures $500B Wall Street partnership for AI infrastructure buildout",
+      "timestamp": "2026-08-11T10:41:48Z",
+      "source_name": "Thenextweb",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-learning-more-about-claude-s-mathematical-capabilities",
+      "headline": "Claude demonstrates advanced mathematical reasoning in Riemann Hypothesis research",
+      "timestamp": "2026-08-11T10:41:46Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-mark-zuckerberg-attacks-closed-ai-rivals-as-meta-returns-to-open",
       "headline": "Meta pivots to open-source AI as Zuckerberg challenges closed model vendors",
       "timestamp": "2026-08-10T22:26:28Z",
