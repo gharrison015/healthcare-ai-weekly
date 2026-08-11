@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-s-risky-business",
+      "headline": "Nvidia secures $500B Wall Street backing for AI infrastructure buildout",
+      "timestamp": "2026-08-11T14:49:54Z",
+      "source_name": "Stratechery",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-openai-s-only-ethicist-reportedly-left-last-month",
+      "headline": "OpenAI loses ethics leader with no replacement in sight",
+      "timestamp": "2026-08-11T14:49:51Z",
+      "source_name": "Gizmodo",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-is-pulling-wall-street-into-the-ai-buildout",
       "headline": "Nvidia secures $500B Wall Street partnership for AI infrastructure buildout",
       "timestamp": "2026-08-11T10:41:48Z",
@@ -308,26 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "claude-ask-hn-claude-multisession",
-      "headline": "Claude adoption accelerates with advanced coding capabilities gaining traction",
-      "timestamp": "2026-08-04T11:55:46Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-who-s-legally-to-blame-for-anthropic-and-openai-s-autonomous-ai",
-      "headline": "Legal liability questions emerge as OpenAI and Anthropic face autonomous AI incidents",
-      "timestamp": "2026-08-04T11:55:43Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
