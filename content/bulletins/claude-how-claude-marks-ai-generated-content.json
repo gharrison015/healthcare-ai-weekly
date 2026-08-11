@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-11T18:46:28Z",
+  "slug": "claude-how-claude-marks-ai-generated-content",
+  "headline": "Claude adds AI content marking as technical issues surface across platform",
+  "body": "Anthropic's Claude has implemented content marking for AI-generated output, but multiple technical issues are emerging across the platform. Claude Code is leaking email addresses via User-Agent strings, pricing has reached 40x token costs for identical models, and the system is generating verbose code comments despite user instructions otherwise. For healthcare AI implementations, these issues directly impact compliance risk (unintended data exposure in clinical workflows), cost modeling for EHR integrations, and reliability concerns when deploying Claude in production healthcare environments. Organizations evaluating Claude for clinical documentation, coding assistance, or data analysis should flag these technical gaps before vendor selection.",
+  "source_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+  "source_name": "Support",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
