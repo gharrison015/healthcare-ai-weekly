@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-nemotron-3-5-lightning-and-nemo-switchyard",
+      "headline": "Nvidia releases Nemotron 3.5 Lightning for faster clinical AI inference",
+      "timestamp": "2026-08-12T14:49:46Z",
+      "source_name": "Blogs",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-someone-is-running-mass-vulnerability-scans-spoofing-ai-bots-li",
+      "headline": "Mass vulnerability scans targeting Claude deployments signal emerging security gaps",
+      "timestamp": "2026-08-12T14:49:43Z",
+      "source_name": "Knownagents",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-chatgpt-and-codex-desktop-apps-now-support-linux",
       "headline": "ChatGPT and Codex desktop apps expand to Linux infrastructure",
       "timestamp": "2026-08-12T10:51:11Z",
@@ -318,16 +338,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "gpt-a-mass-shooter-s-harrowing-history-with-chatgpt",
-      "headline": "ChatGPT dominance in federal AI spending raises clinical governance questions",
-      "timestamp": "2026-08-05T11:51:14Z",
-      "source_name": "Motherjones",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]

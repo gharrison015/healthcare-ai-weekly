@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-12T14:49:46Z",
+  "slug": "nvidia-nvidia-nemotron-3-5-lightning-and-nemo-switchyard",
+  "headline": "Nvidia releases Nemotron 3.5 Lightning for faster clinical AI inference",
+  "body": "Nvidia launched Nemotron 3.5 Lightning and NeMo Switchyard, new tools designed to accelerate large language model inference on RTX and DGX hardware. For healthcare AI deployments, this matters because inference speed directly impacts real-time clinical decision support and EHR integration workflows where latency costs patient outcomes and clinician adoption. The performance improvements from compiler optimizations enable healthcare organizations to run specialized medical LLMs locally rather than through cloud APIs, reducing data residency risks and operational costs tied to value-based care metrics. Vendors building clinical copilots and documentation automation tools now have a clearer pathway to deploy models that meet latency requirements in busy hospital environments.",
+  "source_url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+  "source_name": "Blogs",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
