@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-12T22:30:30Z",
+  "slug": "ey-mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in",
+  "headline": "Mozilla's compromised signing key exposes software supply chain risks",
+  "body": "Mozilla revoked its Firefox signing key after an unencrypted copy was exposed on GitHub, forcing a security incident response that affected millions of users. This incident highlights a critical vulnerability in software supply chain security that healthcare organizations depend on. Healthcare AI implementations increasingly rely on open-source tools and browser-based clinical interfaces, making signing key compromises a direct threat to EHR integrity and patient data protection. Healthcare IT teams must now evaluate whether their vendor dependencies and internal tooling have similar key management weaknesses. The incident demonstrates why healthcare AI consulting must include supply chain risk assessment as a core component of security due diligence.",
+  "source_url": "https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908",
+  "source_name": "The Register",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

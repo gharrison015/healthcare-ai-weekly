@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-gemini-becomes-google-s-fastest-growing-product-ever-as-it-hits",
+      "headline": "Google's Gemini reaches 1 billion users, fastest product adoption ever",
+      "timestamp": "2026-08-12T22:30:33Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "ey-mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in",
+      "headline": "Mozilla's compromised signing key exposes software supply chain risks",
+      "timestamp": "2026-08-12T22:30:30Z",
+      "source_name": "The Register",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "openai-openai-launches-chatgpt-desktop-app-for-linux",
       "headline": "OpenAI expands ChatGPT desktop access with Linux launch",
       "timestamp": "2026-08-12T18:47:31Z",
@@ -308,26 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-a-survey-on-llm-as-a-judge",
-      "headline": "Survey maps LLM-as-Judge frameworks reshaping AI evaluation landscape",
-      "timestamp": "2026-08-05T19:14:36Z",
-      "source_name": "Arxiv",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "google-changes-at-google-deepmind-demis-hassabis-from-ceo-to-chair-jef",
-      "headline": "Google DeepMind leadership overhaul: Hassabis moves to chair role",
-      "timestamp": "2026-08-05T19:14:32Z",
-      "source_name": "Blog",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
