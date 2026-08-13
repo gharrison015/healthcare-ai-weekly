@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-13T14:50:05Z",
+  "slug": "claude-if-i-own-claude-s-outputs-why-can-t-i-train-my-own-model-on-the",
+  "headline": "Anthropic restricts Claude output reuse for model training",
+  "body": "Anthropic clarified that users cannot train their own AI models on Claude outputs, despite owning the generated content. This policy sparked developer backlash across technical communities, with users questioning the limitation's fairness and practical implications. For healthcare AI teams, this constraint directly impacts your ability to fine-tune Claude-based solutions on proprietary clinical data or internal workflows without vendor lock-in concerns. Healthcare organizations evaluating Claude for EHR integration, clinical decision support, or specialized medical AI should factor this restriction into vendor selection criteria and long-term AI strategy planning.",
+  "source_url": "https://support.claude.com/en/articles/12326764-can-i-use-my-outputs-to-train-an-ai-model",
+  "source_name": "Support",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

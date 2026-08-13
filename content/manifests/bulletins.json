@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-chatgpt-desktop-codex-desktop-for-linux",
+      "headline": "OpenAI launches ChatGPT Desktop for Linux, expanding platform reach",
+      "timestamp": "2026-08-13T14:50:07Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-if-i-own-claude-s-outputs-why-can-t-i-train-my-own-model-on-the",
+      "headline": "Anthropic restricts Claude output reuse for model training",
+      "timestamp": "2026-08-13T14:50:05Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-doubles-rtx-pro-6000-blackwell-s-msrp-to-a-staggering-16",
       "headline": "Nvidia doubles Blackwell GPU pricing as healthcare AI infrastructure costs surge",
       "timestamp": "2026-08-13T10:53:06Z",
@@ -308,26 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "meta-meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-image",
-      "headline": "Meta's AI safety failures expose governance risks across healthcare",
-      "timestamp": "2026-08-06T11:56:43Z",
-      "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "meta"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-wallfacer-a-terminal-session-manager-for-claude-code-an",
-      "headline": "Developer tools ecosystem accelerates around Claude Code capabilities",
-      "timestamp": "2026-08-06T11:56:41Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
