@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-13T18:48:24Z",
+  "slug": "google-lord-of-the-rings-fan-fighting-for-a-refund-gets-it-from-google",
+  "headline": "Google AI Doctor Experiment Decouples Conversation from Clinical Reasoning",
+  "body": "Google is testing a new approach to clinical AI that separates conversational interfaces from the underlying clinical reasoning engine. This architectural shift addresses a critical limitation in current healthcare AI systems: the tendency to conflate user interaction patterns with medical decision-making logic. For healthcare AI implementations, this separation enables more rigorous validation of clinical reasoning independent of UI design choices, reducing the risk of workflows that appear intuitive but mask diagnostic inconsistencies. This matters for EHR integration and value-based care deployments where clinical accountability requires transparent, auditable reasoning paths separate from how clinicians experience the tool.",
+  "source_url": "https://www.polygon.com/lotr-lord-of-the-rings-digital-refund-google-denied/",
+  "source_name": "Polygon",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}

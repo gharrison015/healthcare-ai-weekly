@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-13T18:48:22Z",
+  "slug": "gpt-codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview",
+  "headline": "OpenAI expands coding capabilities with Linux desktop Codex preview",
+  "body": "OpenAI has made Codex available in preview for the ChatGPT desktop application on Linux, expanding access to its code generation tool across operating systems. For healthcare AI implementations, this matters because clinical software development teams can now leverage Codex directly on Linux servers and workstations where EHR integrations and data pipelines typically run. The desktop availability reduces friction in healthcare IT workflows, allowing developers to generate code for HL7/FHIR connectors, clinical decision support logic, and interoperability tools without context switching. This development also signals OpenAI's commitment to the developer tooling space that healthcare organizations increasingly rely on for building custom AI solutions around their existing technology stacks.",
+  "source_url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
+  "source_name": "Community",
+  "velocity_score": 96,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
