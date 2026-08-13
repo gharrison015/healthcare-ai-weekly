@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-08-13T10:10:12.785600+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-08-13T10:52:59.825757+00:00",
+  "source_counts": {
+    "hackernews": 207,
+    "newsdata": 89
+  },
+  "total_collected": 296,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "claude",
+    "ey",
+    "nvidia"
+  ]
 }

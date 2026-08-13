@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-13T10:53:06Z",
+  "slug": "nvidia-nvidia-doubles-rtx-pro-6000-blackwell-s-msrp-to-a-staggering-16",
+  "headline": "Nvidia doubles Blackwell GPU pricing as healthcare AI infrastructure costs surge",
+  "body": "Nvidia has doubled the MSRP of its RTX PRO 6000 Blackwell GPU to $16,000, up from initial pre-order pricing under $8,000. This pricing shift signals tightening margins in enterprise GPU supply and raises significant cost considerations for healthcare organizations deploying on-premises AI infrastructure. Healthcare systems evaluating large language models for clinical documentation, diagnostic imaging analysis, or EHR-integrated applications will face materially higher capital expenditures for GPU acceleration. Consulting firms advising health systems on AI infrastructure must now recalibrate ROI models and may see increased interest in cloud-based alternatives or partnerships with major AI service providers. The gap between consumer and enterprise hardware pricing also underscores why healthcare vendors are increasingly licensing pretrained models rather than building custom inference pipelines in-house.",
+  "source_url": "https://www.tomshardware.com/pc-components/gpus/nvidia-doubles-rtx-pro-6000-blackwells-msrp-to-a-staggering-usd16-000-96gb-card-started-pre-orders-below-usd8-000-last-year",
+  "source_name": "Tomshardware",
+  "velocity_score": 74,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
