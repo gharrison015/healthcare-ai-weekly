@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-14T18:40:46Z",
+  "slug": "claude-show-hn-graft-claude-code-hooks-that-cut-grep-tokens-by-42",
+  "headline": "Graft tool reduces Claude API token consumption by 42 percent",
+  "body": "Anthropic's Claude gained attention this week for Graft, a new tool using code hooks to cut token usage by 42 percent in grep operations. For healthcare AI implementations, token efficiency directly impacts cost per clinical interaction and determines whether LLM-powered workflows can scale across EHR systems. Reduced token consumption means healthcare organizations can deploy Claude for higher-volume tasks like clinical documentation review or prior authorization processing without proportional cost increases. This efficiency gain matters for value-based care models where AI cost reduction improves margins on bundled payments.",
+  "source_url": "https://github.com/NanoNets/Graft",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

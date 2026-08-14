@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-show-hn-graft-claude-code-hooks-that-cut-grep-tokens-by-42",
+      "headline": "Graft tool reduces Claude API token consumption by 42 percent",
+      "timestamp": "2026-08-14T18:40:46Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-if-the-markets-reject-openai-and-anthropic-the-us-should-nation",
+      "headline": "OpenAI revenue surge to $40B ignites nationalization debate",
+      "timestamp": "2026-08-14T18:40:43Z",
+      "source_name": "Theguardian",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-accelerating-gpt-5-6-sol-ultrafast",
       "headline": "GPT-5.6 Sol achieves 14x speed boost with new ultrafast processing mode",
       "timestamp": "2026-08-14T14:44:10Z",
@@ -318,36 +338,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-the-openai-hugging-face-incident-video",
-      "headline": "OpenAI faces research misconduct allegations as AI standards emerge",
-      "timestamp": "2026-08-07T18:39:49Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-mirafold-your-agent-with-generative-ui-codex-claude-cod",
-      "headline": "Claude infrastructure expansion signals vendor consolidation in healthcare AI",
-      "timestamp": "2026-08-07T18:39:46Z",
-      "source_name": "Mirafold",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "google-google-shifts-ai-power-back-to-brin-as-deepmind-s-hassabis-step",
-      "headline": "Google consolidates AI leadership as DeepMind's Hassabis exits",
-      "timestamp": "2026-08-07T14:44:40Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
