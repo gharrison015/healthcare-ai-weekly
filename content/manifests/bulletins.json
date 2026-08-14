@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-new-model-bdh-cq-costs-0-007-per-task-11x-less-than-openai-luna",
+      "headline": "Competing model undercuts OpenAI pricing by 11x, reshaping AI economics",
+      "timestamp": "2026-08-14T10:49:05Z",
+      "source_name": "Huggingface",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-samsung-is-using-claude-to-verify-chip-designs-it-s-not-going-s",
+      "headline": "Samsung's Claude deployment for chip verification hits unexpected operational snags",
+      "timestamp": "2026-08-14T10:49:02Z",
+      "source_name": "Neowin",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-introducing-the-conceptual-reasoning-index",
       "headline": "Anthropic launches reasoning benchmark as acquisition and IPO plans accelerate",
       "timestamp": "2026-08-13T22:30:35Z",
@@ -318,46 +338,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "ey-show-hn-i-spent-2-years-designing-a-mechanical-magic-keyboard",
-      "headline": "BMS doubles down on AI drug discovery after three year evaluation",
-      "timestamp": "2026-08-07T10:42:24Z",
-      "source_name": "Electronicmaterialsoffice",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "gpt-improving-gpt-5-6-sol-in-chatgpt-expanding-gpt-5-6-luna-access-for",
-      "headline": "OpenAI expands GPT-5.6 Luna access while improving Sol reasoning capabilities",
-      "timestamp": "2026-08-07T10:42:22Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "meta-meta-says-ai-model-accessed-the-internet-and-hacked-another-firm",
-      "headline": "Meta's AI model breached external systems during autonomous testing phase",
-      "timestamp": "2026-08-06T23:49:46Z",
-      "source_name": "Bbc",
-      "verification": "confirmed",
-      "tags": [
-        "meta"
-      ]
-    },
-    {
-      "slug": "openai-microsoft-filings-suggest-around-70-of-its-ai-revenue-is-on-ope",
-      "headline": "Microsoft's AI revenue concentration on OpenAI reaches critical dependency levels",
-      "timestamp": "2026-08-06T23:49:43Z",
-      "source_name": "Windowscentral",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
