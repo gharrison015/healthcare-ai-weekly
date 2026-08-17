@@ -1,15 +1,15 @@
 {
-  "timestamp_utc": "2026-08-17T10:21:36.765236+00:00",
+  "timestamp_utc": "2026-08-17T14:17:45.318553+00:00",
   "source_counts": {
-    "hackernews": 144,
-    "newsdata": 89
+    "hackernews": 152,
+    "newsdata": 84
   },
-  "total_collected": 233,
+  "total_collected": 236,
   "candidate_count": 3,
   "disposition": "candidates_ready",
   "candidate_topics": [
     "claude",
     "anthropic",
-    "nvidia"
+    "gpt"
   ]
 }

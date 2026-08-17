@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-6-sol-is-the-best-vision-model-openai-ever-released",
+      "headline": "OpenAI releases GPT 5.6 Sol with major vision capabilities upgrade",
+      "timestamp": "2026-08-17T14:17:50Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-s-watermark-text-adulteration-in-claude-is-a-perversi",
+      "headline": "Anthropic's Claude watermarking approach sparks debate over text integrity",
+      "timestamp": "2026-08-17T14:17:48Z",
+      "source_name": "Daringfireball",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-ipo-valuation-hinges-on-190-200b-2028-revenue-fore",
       "headline": "Anthropic targets $190-200B revenue by 2028 ahead of IPO filing",
       "timestamp": "2026-08-17T10:21:43Z",
@@ -338,26 +358,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "openai-70-of-ai-revenue-comes-from-openai-and-anthropic-video",
-      "headline": "OpenAI and Anthropic capture 70% of AI revenue amid security incidents",
-      "timestamp": "2026-08-10T10:57:40Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-auto-mode-is-now-the-default-in-claude-code",
-      "headline": "Claude Code auto mode becomes default, reshaping AI-assisted development workflows",
-      "timestamp": "2026-08-10T10:57:37Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
