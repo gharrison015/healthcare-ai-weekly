@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-discloses-21b-stake-in-spacex-at-end-of-second-quarter",
+      "headline": "Nvidia's $21B SpaceX stake signals hardware dominance beyond healthcare",
+      "timestamp": "2026-08-17T18:22:34Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-nvidia-dramatically-reduces-amount-of-openai-infra-financing-it",
+      "headline": "Nvidia slashes OpenAI infrastructure guarantee, reshaping AI vendor landscape",
+      "timestamp": "2026-08-17T18:22:31Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-6-sol-is-the-best-vision-model-openai-ever-released",
       "headline": "OpenAI releases GPT 5.6 Sol with major vision capabilities upgrade",
       "timestamp": "2026-08-17T14:17:50Z",
@@ -338,26 +358,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "gpt-switching-from-gpt-5-5-to-gpt-5-6-made-me-less-productive",
-      "headline": "GPT-5.6 rollout surfaces productivity trade-offs in real-world use",
-      "timestamp": "2026-08-10T14:50:05Z",
-      "source_name": "Vincentschmalbach",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-an-openai-strategist-says-ai-labs-should-rival-government-power",
-      "headline": "OpenAI strategist argues AI labs should match government institutional power",
-      "timestamp": "2026-08-10T14:50:02Z",
-      "source_name": "Ai Updates",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
