@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-ipo-valuation-hinges-on-190-200b-2028-revenue-fore",
+      "headline": "Anthropic targets $190-200B revenue by 2028 ahead of IPO filing",
+      "timestamp": "2026-08-17T10:21:43Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-system-prompts",
+      "headline": "Anthropic releases system prompts feature for Claude API",
+      "timestamp": "2026-08-17T10:21:40Z",
+      "source_name": "Platform",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-maximizing-the-value-of-your-claude-code-sessions",
       "headline": "Claude Code sessions drive developer efficiency gains across healthcare AI",
       "timestamp": "2026-08-14T22:12:26Z",
@@ -335,26 +355,6 @@
       "headline": "Claude Code auto mode becomes default, reshaping AI-assisted development workflows",
       "timestamp": "2026-08-10T10:57:37Z",
       "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-new-device-will-be-hockey-puck-sized-and-cost-over-300",
-      "headline": "OpenAI launches $300+ hardware device amid AI safety concerns",
-      "timestamp": "2026-08-07T22:25:15Z",
-      "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-the-claudyssey-a-line-for-line-translation-of-homer-s-odyssey-b",
-      "headline": "Claude's expanded capabilities spark debate over AI safety and clinical deployment",
-      "timestamp": "2026-08-07T22:25:13Z",
-      "source_name": "Theclaudyssey",
       "verification": "confirmed",
       "tags": [
         "claude"

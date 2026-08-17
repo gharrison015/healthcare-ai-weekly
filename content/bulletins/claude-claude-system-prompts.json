@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-17T10:21:40Z",
+  "slug": "claude-claude-system-prompts",
+  "headline": "Anthropic releases system prompts feature for Claude API",
+  "body": "Anthropic has introduced system prompts functionality in Claude, allowing developers to customize model behavior through API parameters. This capability enables healthcare organizations to establish consistent clinical guidelines, safety guardrails, and documentation standards across AI-assisted workflows without retraining models. For EHR integration and clinical decision support systems, system prompts reduce implementation complexity by letting vendors tailor Claude's responses to specialty-specific requirements, coding standards, and compliance frameworks. This moves the vendor landscape toward more configurable AI infrastructure that healthcare systems can control without deep ML expertise. The feature directly addresses healthcare AI's need for consistent, auditable, and clinically aligned outputs across diverse institutional workflows.",
+  "source_url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+  "source_name": "Platform",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
