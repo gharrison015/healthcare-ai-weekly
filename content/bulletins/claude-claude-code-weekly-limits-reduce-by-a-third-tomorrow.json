@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-18T18:22:11Z",
+  "slug": "claude-claude-code-weekly-limits-reduce-by-a-third-tomorrow",
+  "headline": "Claude Code limits drop one-third as users debate reliability tradeoffs",
+  "body": "Anthropic is reducing Claude Code weekly usage limits by approximately 33 percent starting tomorrow, according to official support documentation. This capacity constraint arrives amid growing user concerns about Claude's reliability in autonomous coding tasks, evidenced by increased demand for monitoring tools like Doberman and Agents Workbook that track AI-generated code for safety issues. For healthcare AI implementations, reduced coding capacity directly impacts development velocity on clinical decision support systems, EHR integrations, and automated compliance documentation. Healthcare organizations relying on Claude for rapid prototyping of HIPAA-compliant workflows or vendor teams building AI-assisted documentation tools will need to reassess resource allocation and development timelines. The limit reduction, combined with user backlash over watermarking policies, signals that reliability and governance constraints are now primary factors in AI tool selection for regulated healthcare environments.",
+  "source_url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+  "source_name": "Support",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

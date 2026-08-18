@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-what-we-learned-moving-our-agent-loops-from-anthropic-to-glm",
+      "headline": "Developers switching agent loops away from Anthropic amid pricing pressure",
+      "timestamp": "2026-08-18T18:22:13Z",
+      "source_name": "Getunblocked",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-weekly-limits-reduce-by-a-third-tomorrow",
+      "headline": "Claude Code limits drop one-third as users debate reliability tradeoffs",
+      "timestamp": "2026-08-18T18:22:11Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-discloses-21b-stake-in-spacex",
       "headline": "Nvidia's $105B OpenAI commitment signals massive compute infrastructure bet",
       "timestamp": "2026-08-18T14:22:50Z",
@@ -348,26 +368,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-s-risky-business",
-      "headline": "Nvidia secures $500B Wall Street backing for AI infrastructure buildout",
-      "timestamp": "2026-08-11T14:49:54Z",
-      "source_name": "Stratechery",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-only-ethicist-reportedly-left-last-month",
-      "headline": "OpenAI loses ethics leader with no replacement in sight",
-      "timestamp": "2026-08-11T14:49:51Z",
-      "source_name": "Gizmodo",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

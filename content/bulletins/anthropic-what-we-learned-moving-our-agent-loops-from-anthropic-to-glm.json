@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-18T18:22:13Z",
+  "slug": "anthropic-what-we-learned-moving-our-agent-loops-from-anthropic-to-glm",
+  "headline": "Developers switching agent loops away from Anthropic amid pricing pressure",
+  "body": "A documented case study shows teams migrating multi-agent workflows from Anthropic's models to alternatives like GLM, citing cost and performance tradeoffs. This signals growing scrutiny of AI model economics as healthcare organizations scale agentic systems for clinical decision support and administrative automation. The shift reflects intensifying competition between Anthropic, OpenAI, and Chinese providers, which directly impacts vendor selection criteria for health systems evaluating large language models for EHR integration and care workflow optimization. Healthcare AI implementations must now weigh model switching costs against long-term pricing models and API stability, particularly for mission-critical agents handling patient data or care coordination.",
+  "source_url": "https://getunblocked.com/blog/moving-agent-loops-from-anthropic-to-glm/",
+  "source_name": "Getunblocked",
+  "velocity_score": 87,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
