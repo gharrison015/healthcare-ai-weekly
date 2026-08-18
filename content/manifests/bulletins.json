@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-discloses-21b-stake-in-spacex",
+      "headline": "Nvidia's $105B OpenAI commitment signals massive compute infrastructure bet",
+      "timestamp": "2026-08-18T14:22:50Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-doberman-the-ai-watchdog-that-stops-claude-from-deletin",
+      "headline": "Claude's autonomy risks spark guardrail tools among developers",
+      "timestamp": "2026-08-18T14:22:48Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-6-sol-pricing-cut-by-50",
       "headline": "GPT-5.6 Sol pricing drops 50 percent, reshaping AI economics",
       "timestamp": "2026-08-18T10:17:42Z",
@@ -348,26 +368,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-is-pulling-wall-street-into-the-ai-buildout",
-      "headline": "Nvidia secures $500B Wall Street partnership for AI infrastructure buildout",
-      "timestamp": "2026-08-11T10:41:48Z",
-      "source_name": "Thenextweb",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-learning-more-about-claude-s-mathematical-capabilities",
-      "headline": "Claude demonstrates advanced mathematical reasoning in Riemann Hypothesis research",
-      "timestamp": "2026-08-11T10:41:46Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
