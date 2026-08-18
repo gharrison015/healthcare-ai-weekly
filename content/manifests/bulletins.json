@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-5-6-sol-pricing-cut-by-50",
+      "headline": "GPT-5.6 Sol pricing drops 50 percent, reshaping AI economics",
+      "timestamp": "2026-08-18T10:17:42Z",
+      "source_name": "Openrouter",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-becomes-the-apple-of-ai-most-revenue-despite-being",
+      "headline": "Anthropic captures dominant revenue despite premium pricing strategy",
+      "timestamp": "2026-08-18T10:17:37Z",
+      "source_name": "Techradar",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "claude-show-hn-a-community-library-for-claude-code-status-lines",
       "headline": "Claude developer ecosystem expands with community tools and agent capabilities",
       "timestamp": "2026-08-17T22:13:58Z",
@@ -348,16 +368,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "meta-mark-zuckerberg-attacks-closed-ai-rivals-as-meta-returns-to-open",
-      "headline": "Meta pivots to open-source AI as Zuckerberg challenges closed model vendors",
-      "timestamp": "2026-08-10T22:26:28Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "meta"
       ]
     }
   ]
