@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-moves-a2a-under-agentic-ai-foundation",
+      "headline": "Google consolidates agentic AI capabilities under unified foundation structure",
+      "timestamp": "2026-08-19T18:18:56Z",
+      "source_name": "Techstrong",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-teaching-macos-to-natively-print-to-the-hp-laser-10",
+      "headline": "Claude Code expands capabilities for scientific workflows and enterprise automation",
+      "timestamp": "2026-08-19T18:18:54Z",
+      "source_name": "Cdn",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-5-6-sol-70-off-in-devin",
       "headline": "OpenAI GPT-5.6 Sol launches with aggressive pricing push via Devin",
       "timestamp": "2026-08-19T10:18:29Z",
@@ -328,26 +348,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-nemotron-3-5-lightning-and-nemo-switchyard",
-      "headline": "Nvidia releases Nemotron 3.5 Lightning for faster clinical AI inference",
-      "timestamp": "2026-08-12T14:49:46Z",
-      "source_name": "Blogs",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-someone-is-running-mass-vulnerability-scans-spoofing-ai-bots-li",
-      "headline": "Mass vulnerability scans targeting Claude deployments signal emerging security gaps",
-      "timestamp": "2026-08-12T14:49:43Z",
-      "source_name": "Knownagents",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
