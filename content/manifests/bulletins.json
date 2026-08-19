@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-s-unraveling-has-begun",
+      "headline": "OpenAI faces internal turbulence as growth questions mount",
+      "timestamp": "2026-08-19T22:14:27Z",
+      "source_name": "Garymarcus",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-how-claude-is-accelerating-protein-design-and-analytical-chemis",
+      "headline": "Claude shows measurable impact on protein design and wet lab validation",
+      "timestamp": "2026-08-19T22:14:24Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-moves-a2a-under-agentic-ai-foundation",
       "headline": "Google consolidates agentic AI capabilities under unified foundation structure",
       "timestamp": "2026-08-19T18:18:56Z",
@@ -338,16 +358,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-openai-launches-chatgpt-desktop-app-for-linux",
-      "headline": "OpenAI expands ChatGPT desktop access with Linux launch",
-      "timestamp": "2026-08-12T18:47:31Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
