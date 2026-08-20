@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "ey-robots-are-asking-for-tips-but-who-gets-the-money",
+      "headline": "Robot tipping culture raises questions about AI labor economics",
+      "timestamp": "2026-08-20T22:16:44Z",
+      "source_name": "Bbc",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
       "slug": "google-google-styleguide-code-review-skills",
       "headline": "Google releases styleguide for AI code review in healthcare systems",
       "timestamp": "2026-08-20T18:23:17Z",
@@ -318,26 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "google-lord-of-the-rings-fan-fighting-for-a-refund-gets-it-from-google",
-      "headline": "Google AI Doctor Experiment Decouples Conversation from Clinical Reasoning",
-      "timestamp": "2026-08-13T18:48:24Z",
-      "source_name": "Polygon",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "gpt-codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview",
-      "headline": "OpenAI expands coding capabilities with Linux desktop Codex preview",
-      "timestamp": "2026-08-13T18:48:22Z",
-      "source_name": "Community",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
