@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-styleguide-code-review-skills",
+      "headline": "Google releases styleguide for AI code review in healthcare systems",
+      "timestamp": "2026-08-20T18:23:17Z",
+      "source_name": "Jeanbza",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-clean-up-claude-5-s-token-vomit-with-a-separate-llm",
+      "headline": "Claude developers tackle token efficiency across clinical AI deployments",
+      "timestamp": "2026-08-20T18:23:15Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-has-stopped-pushing-git-tags-for-some-android-source-cod",
       "headline": "Google halts Android source code Git tags, raising healthcare developer concerns",
       "timestamp": "2026-08-20T10:19:47Z",
@@ -318,26 +338,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "gpt-chatgpt-desktop-codex-desktop-for-linux",
-      "headline": "OpenAI launches ChatGPT Desktop for Linux, expanding platform reach",
-      "timestamp": "2026-08-13T14:50:07Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-if-i-own-claude-s-outputs-why-can-t-i-train-my-own-model-on-the",
-      "headline": "Anthropic restricts Claude output reuse for model training",
-      "timestamp": "2026-08-13T14:50:05Z",
-      "source_name": "Support",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
