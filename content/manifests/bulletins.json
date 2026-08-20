@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-has-stopped-pushing-git-tags-for-some-android-source-cod",
+      "headline": "Google halts Android source code Git tags, raising healthcare developer concerns",
+      "timestamp": "2026-08-20T10:19:47Z",
+      "source_name": "Grapheneos",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-turning-websites-into-micro-clis-for-claude-code-to-sav",
+      "headline": "Claude Code gains concise output mode and token optimization tools",
+      "timestamp": "2026-08-20T10:19:44Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-s-unraveling-has-begun",
       "headline": "OpenAI faces internal turbulence as growth questions mount",
       "timestamp": "2026-08-19T22:14:27Z",
@@ -335,26 +355,6 @@
       "headline": "Legal liability gap emerges as AI agents operate without accountability",
       "timestamp": "2026-08-13T10:53:03Z",
       "source_name": "Theguardian",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "google-gemini-becomes-google-s-fastest-growing-product-ever-as-it-hits",
-      "headline": "Google's Gemini reaches 1 billion users, fastest product adoption ever",
-      "timestamp": "2026-08-12T22:30:33Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "ey-mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in",
-      "headline": "Mozilla's compromised signing key exposes software supply chain risks",
-      "timestamp": "2026-08-12T22:30:30Z",
-      "source_name": "The Register",
       "verification": "confirmed",
       "tags": [
         "ey"

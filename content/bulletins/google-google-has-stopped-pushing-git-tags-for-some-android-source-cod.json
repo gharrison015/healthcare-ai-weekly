@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-20T10:19:47Z",
+  "slug": "google-google-has-stopped-pushing-git-tags-for-some-android-source-cod",
+  "headline": "Google halts Android source code Git tags, raising healthcare developer concerns",
+  "body": "Google has stopped pushing Git tags for certain Android source code repositories, creating friction for developers who rely on stable version tracking. For healthcare organizations building on Android infrastructure, this disrupts reproducible builds and compliance documentation that FDA and other regulators increasingly require. Healthcare AI vendors dependent on Android for clinical applications face complications in maintaining audit trails and version control integrity. This move signals potential shifts in Google's open source governance that warrant monitoring by health tech teams managing long-term roadmaps and regulatory obligations.",
+  "source_url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
+  "source_name": "Grapheneos",
+  "velocity_score": 72,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}

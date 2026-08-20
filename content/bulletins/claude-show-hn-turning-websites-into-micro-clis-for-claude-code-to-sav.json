@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-20T10:19:44Z",
+  "slug": "claude-show-hn-turning-websites-into-micro-clis-for-claude-code-to-sav",
+  "headline": "Claude Code gains concise output mode and token optimization tools",
+  "body": "Claude Code rolled out a new concise output style setting this week alongside community tools designed to reduce token consumption by converting websites into micro CLIs. The token optimization trend reflects growing developer focus on cost efficiency with Claude deployments. For healthcare AI implementations, this matters significantly: reducing token overhead directly lowers API costs in high-volume clinical documentation, note summarization, and EHR integration workflows. As healthcare organizations scale Claude-powered solutions across multiple departments, token efficiency improvements translate to material savings in value-based care models where operational costs directly impact margins. Vendors building on Claude should monitor these output optimization features closely for their consulting recommendations and architectural decisions.",
+  "source_url": "https://github.com/only-cli/oc",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
