@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-we-let-200-gpt-pro-think-for-7-days-on-unsolved-math",
+      "headline": "OpenAI's extended reasoning GPT-Pro tackles unsolved math problems",
+      "timestamp": "2026-08-21T14:24:42Z",
+      "source_name": "Youtube",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-openai-is-becoming-a-surveillance-company",
+      "headline": "OpenAI faces scrutiny over surveillance practices and security breaches",
+      "timestamp": "2026-08-21T14:24:39Z",
+      "source_name": "Garymarcus",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-openai-is-backing-away-from-reddit-as-reddit-tries-to-become-op",
       "headline": "OpenAI distances from Reddit while expanding AI capabilities",
       "timestamp": "2026-08-21T10:20:00Z",
@@ -308,26 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "openai-new-model-bdh-cq-costs-0-007-per-task-11x-less-than-openai-luna",
-      "headline": "Competing model undercuts OpenAI pricing by 11x, reshaping AI economics",
-      "timestamp": "2026-08-14T10:49:05Z",
-      "source_name": "Huggingface",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-samsung-is-using-claude-to-verify-chip-designs-it-s-not-going-s",
-      "headline": "Samsung's Claude deployment for chip verification hits unexpected operational snags",
-      "timestamp": "2026-08-14T10:49:02Z",
-      "source_name": "Neowin",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
