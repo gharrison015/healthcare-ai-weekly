@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-21T22:13:10Z",
+  "slug": "claude-claudette-make-claude-stop-talking-like-a-buzzfeed-article",
+  "headline": "Developers push back on Claude's verbose output patterns",
+  "body": "A GitHub project called Claudette has emerged to address Claude's tendency toward conversational, marketing-style language in outputs. The issue signals growing developer frustration with LLM response formatting consistency. For healthcare AI implementations, verbose or unnecessarily casual outputs create friction in clinical workflows where precision and efficiency matter. EHR integrations and clinical decision support systems require deterministic, structured responses that clinicians can quickly parse during patient care. Healthcare organizations deploying Claude for documentation, coding assistance, or workflow automation should monitor these usability concerns closely.",
+  "source_url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+  "source_name": "Github",
+  "velocity_score": 88,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
