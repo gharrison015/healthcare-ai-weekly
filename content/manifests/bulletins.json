@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-is-backing-away-from-reddit-as-reddit-tries-to-become-op",
+      "headline": "OpenAI distances from Reddit while expanding AI capabilities",
+      "timestamp": "2026-08-21T10:20:00Z",
+      "source_name": "Gizmodo",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-robots-are-asking-for-tips-but-who-gets-the-money",
       "headline": "Robot tipping culture raises questions about AI labor economics",
       "timestamp": "2026-08-20T22:16:44Z",
@@ -318,16 +328,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-introducing-the-conceptual-reasoning-index",
-      "headline": "Anthropic launches reasoning benchmark as acquisition and IPO plans accelerate",
-      "timestamp": "2026-08-13T22:30:35Z",
-      "source_name": "Alignment",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
