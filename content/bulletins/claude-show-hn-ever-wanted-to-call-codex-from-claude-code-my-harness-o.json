@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-24T10:27:44Z",
+  "slug": "claude-show-hn-ever-wanted-to-call-codex-from-claude-code-my-harness-o",
+  "headline": "Claude integration tools proliferate as developers build orchestration layers",
+  "body": "Developers are creating new orchestration frameworks to integrate Claude with other AI systems, as evidenced by emerging tools like Harness Orchestrator that enable multi-model workflows. For healthcare AI, this modular approach matters because clinical workflows often require chaining multiple language models for different tasks\u2014documentation generation, clinical decision support, and data extraction each benefit from specialized models. The security discussion around Claude's insider threat capabilities and watermarking suggests vendors implementing Claude in EHR systems need explicit governance frameworks to prevent unauthorized access to protected health information. As the vendor landscape fragments into multi-model platforms, healthcare organizations evaluating Claude deployments should assess whether orchestration at the application layer introduces additional compliance risks or operational overhead compared to single-vendor solutions.",
+  "source_url": "https://github.com/ptmrio/harness-subagent",
+  "source_name": "Github",
+  "velocity_score": 60,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
