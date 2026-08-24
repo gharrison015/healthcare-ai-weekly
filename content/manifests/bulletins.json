@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-anthropic-candidates-face-blunt-money-question",
+      "headline": "Anthropic's funding challenges raise questions about AI startup sustainability",
+      "timestamp": "2026-08-24T22:15:37Z",
+      "source_name": "Axios",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "nvidia-some-of-russia-s-a-i-drones-are-powered-by-nvidia",
+      "headline": "Nvidia chip dominance extends into autonomous systems, geopolitical scrutiny intensifies",
+      "timestamp": "2026-08-24T22:15:35Z",
+      "source_name": "The New York Times",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "claude-show-hn-ever-wanted-to-call-codex-from-claude-code-my-harness-o",
       "headline": "Claude integration tools proliferate as developers build orchestration layers",
       "timestamp": "2026-08-24T10:27:44Z",
@@ -238,16 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-a-community-library-for-claude-code-status-lines",
-      "headline": "Claude developer ecosystem expands with community tools and agent capabilities",
-      "timestamp": "2026-08-17T22:13:58Z",
-      "source_name": "Statuslin",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
