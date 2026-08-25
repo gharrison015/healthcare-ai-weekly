@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-25T18:23:51Z",
+  "slug": "openai-openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-u",
+  "headline": "OpenAI restores usage limits for ChatGPT Plus subscribers amid regulatory scrutiny",
+  "body": "OpenAI has reinstated 5-hour usage caps and work limits for ChatGPT Plus users following recent policy changes. The move comes as OpenAI faces regulatory investigations, including scrutiny from Alabama over a HuggingFace hacking incident, while the company simultaneously pursues aggressive compute scaling through its Jalape\u00f1O chip development. For healthcare AI implementers, this signals OpenAI's shifting approach to product access and governance, which could affect deployment strategies in clinical environments where API consistency and capacity planning are critical. Organizations integrating ChatGPT into EHR systems or clinical decision support workflows should monitor these policy changes closely, as usage restrictions could impact scaling of AI-augmented clinical workflows and documentation automation. Vendor landscape implications are significant: capacity constraints from leading LLM providers may accelerate healthcare systems toward exploring competing models or on-premise solutions for mission-critical applications.",
+  "source_url": "https://9to5mac.com/2026/08/24/openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-users/",
+  "source_name": "9To5Mac",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
