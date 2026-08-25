@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-show-hn-coffeetable-a-new-ux-to-discover-books-inside-claude",
+      "headline": "Claude ecosystem expands with developer tools addressing workflow bottlenecks",
+      "timestamp": "2026-08-25T22:16:01Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-u",
       "headline": "OpenAI restores usage limits for ChatGPT Plus subscribers amid regulatory scrutiny",
       "timestamp": "2026-08-25T18:23:51Z",
@@ -228,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "google-google-is-buying-all-of-spirit-airlines-data-to-feed-its-ai-mod",
-      "headline": "Google acquires Spirit Airlines data to train AI models",
-      "timestamp": "2026-08-18T22:12:20Z",
-      "source_name": "Cnn",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "openai-norway-should-buy-openai",
-      "headline": "OpenAI governance questions intensify as Norway considers acquisition",
-      "timestamp": "2026-08-18T22:12:17Z",
-      "source_name": "Onethousandmeans",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
