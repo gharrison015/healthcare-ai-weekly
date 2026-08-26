@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-who-bears-the-risk-in-nvidia-s-500b-financing-platform",
+      "headline": "Nvidia's $500B financing platform raises questions about credit risk exposure",
+      "timestamp": "2026-08-26T19:29:59Z",
+      "source_name": "Sascha Steffen",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "openai-openai-s-head-of-data-centers-has-left-the-company",
       "headline": "OpenAI's data center leader exits amid infrastructure scaling questions",
       "timestamp": "2026-08-26T14:34:52Z",
@@ -245,26 +255,6 @@
       "headline": "Claude shows measurable impact on protein design and wet lab validation",
       "timestamp": "2026-08-19T22:14:24Z",
       "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "google-google-moves-a2a-under-agentic-ai-foundation",
-      "headline": "Google consolidates agentic AI capabilities under unified foundation structure",
-      "timestamp": "2026-08-19T18:18:56Z",
-      "source_name": "Techstrong",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-teaching-macos-to-natively-print-to-the-hp-laser-10",
-      "headline": "Claude Code expands capabilities for scientific workflows and enterprise automation",
-      "timestamp": "2026-08-19T18:18:54Z",
-      "source_name": "Cdn",
       "verification": "confirmed",
       "tags": [
         "claude"
