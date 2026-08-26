@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-26T14:34:52Z",
+  "slug": "openai-openai-s-head-of-data-centers-has-left-the-company",
+  "headline": "OpenAI's data center leader exits amid infrastructure scaling questions",
+  "body": "OpenAI's Head of Data Centers has left the company, according to Wall Street Journal reporting. The departure comes as OpenAI scales computational infrastructure for increasingly large model training runs and inference operations. For healthcare AI vendors and healthcare organizations relying on OpenAI's API for clinical applications, infrastructure leadership changes signal potential shifts in service reliability, latency, and cost structures. Healthcare IT leaders should monitor OpenAI's infrastructure stability closely, particularly those building patient-facing AI tools dependent on consistent API performance. This transition adds uncertainty to the vendor landscape at a critical moment when healthcare systems are evaluating foundation models for EHR integration and clinical decision support.",
+  "source_url": "https://www.wsj.com/tech/ai/openais-head-of-data-centers-has-left-company-6d24fd83",
+  "source_name": "Wall Street Journal",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
