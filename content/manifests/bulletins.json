@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-i-m-a-cto-we-took-pe-money-6-months-ago-ama",
+      "headline": "PE-backed healthcare tech founders navigate growth and capital pressures",
+      "timestamp": "2026-08-26T10:24:34Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-i-miss-the-old-claude-code",
+      "headline": "Claude's evolution sparks developer debate over focus versus capability",
+      "timestamp": "2026-08-26T10:24:31Z",
+      "source_name": "Alexkras",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-coffeetable-a-new-ux-to-discover-books-inside-claude",
       "headline": "Claude ecosystem expands with developer tools addressing workflow bottlenecks",
       "timestamp": "2026-08-25T22:16:01Z",
@@ -228,16 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-5-6-sol-70-off-in-devin",
-      "headline": "OpenAI GPT-5.6 Sol launches with aggressive pricing push via Devin",
-      "timestamp": "2026-08-19T10:18:29Z",
-      "source_name": "Devin",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]

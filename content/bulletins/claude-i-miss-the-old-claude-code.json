@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-26T10:24:31Z",
+  "slug": "claude-i-miss-the-old-claude-code",
+  "headline": "Claude's evolution sparks developer debate over focus versus capability",
+  "body": "Developer communities are actively discussing tradeoffs in Claude's recent iterations, with a high-velocity conversation centered on whether newer versions sacrifice focused problem-solving for expanded capabilities. The discussion spans practical concerns like verbosity and session management alongside emerging tools that attempt to optimize Claude's workflow integration. For healthcare AI implementations, this signals that foundational model behavior directly impacts clinical adoption: verbose outputs complicate EHR integration, while focus limitations affect real-time diagnostic support and documentation automation. Healthcare organizations piloting Claude-based solutions should stress-test prompt engineering and output parsing strategies now, as vendor expectations around model stability may shift. The vendor landscape intensity here suggests Claude's positioning in healthcare AI workflows remains unsettled enough that alternative configurations and tooling are actively competing for mindshare.",
+  "source_url": "https://alexkras.com/focus-is-the-main-feature-why-i-miss-the-old-claude-code/",
+  "source_name": "Alexkras",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
