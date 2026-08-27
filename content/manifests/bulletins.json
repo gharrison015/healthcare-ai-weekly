@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-webmcp-challenge-openai",
+      "headline": "OpenAI launches WebMCP Challenge amid agent safety concerns",
+      "timestamp": "2026-08-27T20:03:49Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-the-load-bearing-vocabulary-of-claude",
+      "headline": "Claude's core vocabulary and token efficiency emerge as critical optimization targets",
+      "timestamp": "2026-08-27T20:03:46Z",
+      "source_name": "Louisabraham",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-is-80-of-the-way-to-agi",
       "headline": "OpenAI claims 80% progress toward AGI amid security concerns",
       "timestamp": "2026-08-27T02:24:38Z",
@@ -218,46 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "google-google-styleguide-code-review-skills",
-      "headline": "Google releases styleguide for AI code review in healthcare systems",
-      "timestamp": "2026-08-20T18:23:17Z",
-      "source_name": "Jeanbza",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-clean-up-claude-5-s-token-vomit-with-a-separate-llm",
-      "headline": "Claude developers tackle token efficiency across clinical AI deployments",
-      "timestamp": "2026-08-20T18:23:15Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "google-google-has-stopped-pushing-git-tags-for-some-android-source-cod",
-      "headline": "Google halts Android source code Git tags, raising healthcare developer concerns",
-      "timestamp": "2026-08-20T10:19:47Z",
-      "source_name": "Grapheneos",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-turning-websites-into-micro-clis-for-claude-code-to-sav",
-      "headline": "Claude Code gains concise output mode and token optimization tools",
-      "timestamp": "2026-08-20T10:19:44Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

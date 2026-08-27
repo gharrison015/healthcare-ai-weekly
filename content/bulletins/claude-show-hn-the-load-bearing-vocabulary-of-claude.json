@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-27T20:03:46Z",
+  "slug": "claude-show-hn-the-load-bearing-vocabulary-of-claude",
+  "headline": "Claude's core vocabulary and token efficiency emerge as critical optimization targets",
+  "body": "Developers are dissecting Claude's foundational vocabulary patterns and token consumption behaviors, with multiple tools now available to measure and optimize API usage. This focus on understanding model efficiency reflects the practical cost pressures healthcare organizations face when deploying Claude in production workflows. For healthcare AI implementations, token optimization directly impacts the economics of clinical decision support, chart summarization, and documentation automation. As Salesforce deepens integration with Anthropic through Claudeforce, healthcare enterprises relying on Salesforce Health Cloud now have direct access to Claude capabilities, making vocabulary and efficiency analysis essential for predicting TCO in EHR-connected applications.",
+  "source_url": "https://louisabraham.github.io/load-bearing/",
+  "source_name": "Louisabraham",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
