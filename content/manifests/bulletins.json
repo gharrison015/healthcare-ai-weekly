@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-is-80-of-the-way-to-agi",
+      "headline": "OpenAI claims 80% progress toward AGI amid security concerns",
+      "timestamp": "2026-08-27T02:24:38Z",
+      "source_name": "Time",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-agrees-to-acquire-hugging-face-for-13b",
+      "headline": "Nvidia acquires Hugging Face for $13B, consolidating AI model control",
+      "timestamp": "2026-08-27T02:24:35Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "nvidia-who-bears-the-risk-in-nvidia-s-500b-financing-platform",
       "headline": "Nvidia's $500B financing platform raises questions about credit risk exposure",
       "timestamp": "2026-08-26T19:29:59Z",
@@ -235,26 +255,6 @@
       "headline": "Claude Code gains concise output mode and token optimization tools",
       "timestamp": "2026-08-20T10:19:44Z",
       "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-unraveling-has-begun",
-      "headline": "OpenAI faces internal turbulence as growth questions mount",
-      "timestamp": "2026-08-19T22:14:27Z",
-      "source_name": "Garymarcus",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-how-claude-is-accelerating-protein-design-and-analytical-chemis",
-      "headline": "Claude shows measurable impact on protein design and wet lab validation",
-      "timestamp": "2026-08-19T22:14:24Z",
-      "source_name": "Anthropic",
       "verification": "confirmed",
       "tags": [
         "claude"
