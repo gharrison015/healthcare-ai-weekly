@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-28T21:01:59Z",
+  "slug": "gpt-show-hn-beating-gpt5-5-xhigh-for-coding-agent-security-with-slms-a",
+  "headline": "Smaller language models outperform GPT on coding security tasks",
+  "body": "Researchers demonstrated that smaller language models combined with integrity risk management can exceed GPT-5.5-xhigh performance on coding agent security, while Simular's Sai model achieves comparable results to top-tier systems at two-thirds the cost. This matters for healthcare AI because many clinical coding and documentation workflows rely on LLM agents, where cost efficiency and security are non-negotiable. Healthcare organizations evaluating AI infrastructure can now consider smaller, specialized models for specific EHR and clinical coding tasks without sacrificing capability. The shift toward smaller, purpose-built models has direct implications for vendor selection and total cost of ownership in healthcare implementations.",
+  "source_url": "https://harden.run/blog/aif-research-and-evidence",
+  "source_name": "Harden",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

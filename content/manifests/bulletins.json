@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-insists-it-can-keep-printing-money-to-fund-the-ai-boom",
+      "headline": "Nvidia acquisition of Hugging Face signals consolidation in AI infrastructure stack",
+      "timestamp": "2026-08-28T21:02:01Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "gpt-show-hn-beating-gpt5-5-xhigh-for-coding-agent-security-with-slms-a",
+      "headline": "Smaller language models outperform GPT on coding security tasks",
+      "timestamp": "2026-08-28T21:01:59Z",
+      "source_name": "Harden",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "anthropic-judge-rules-trump-administration-s-blacklisting-of-anthropic",
       "headline": "Court strikes down Trump admin's Anthropic blacklist, reshaping AI vendor landscape",
       "timestamp": "2026-08-28T05:52:52Z",
@@ -208,46 +228,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-avo-achieves-100-in-arc-agi-3",
-      "headline": "Nvidia AVO achieves perfect score on frontier AI reasoning benchmark",
-      "timestamp": "2026-08-21T18:22:26Z",
-      "source_name": "Developer",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-we-let-200-gpt-pro-think-for-7-days-on-unsolved-math",
-      "headline": "OpenAI's extended reasoning GPT-Pro tackles unsolved math problems",
-      "timestamp": "2026-08-21T14:24:42Z",
-      "source_name": "Youtube",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-openai-is-becoming-a-surveillance-company",
-      "headline": "OpenAI faces scrutiny over surveillance practices and security breaches",
-      "timestamp": "2026-08-21T14:24:39Z",
-      "source_name": "Garymarcus",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "openai-openai-is-backing-away-from-reddit-as-reddit-tries-to-become-op",
-      "headline": "OpenAI distances from Reddit while expanding AI capabilities",
-      "timestamp": "2026-08-21T10:20:00Z",
-      "source_name": "Gizmodo",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
