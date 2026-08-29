@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-we-re-rolling-out-ads-in-chatgpt",
+      "headline": "OpenAI introduces advertising into ChatGPT free and paid tiers",
+      "timestamp": "2026-08-29T03:25:43Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "anthropic-pentagon-s-blacklisting-of-anthropic-was-unlawful-us-judge-r",
+      "headline": "US judge strikes down Pentagon's unlawful blacklisting of Anthropic",
+      "timestamp": "2026-08-29T03:25:40Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-insists-it-can-keep-printing-money-to-fund-the-ai-boom",
       "headline": "Nvidia acquisition of Hugging Face signals consolidation in AI infrastructure stack",
       "timestamp": "2026-08-28T21:02:01Z",
@@ -214,16 +234,6 @@
       "slug": "claude-show-hn-ever-wanted-to-call-codex-from-claude-code-my-harness-o",
       "headline": "Claude integration tools proliferate as developers build orchestration layers",
       "timestamp": "2026-08-24T10:27:44Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "claude-claudette-make-claude-stop-talking-like-a-buzzfeed-article",
-      "headline": "Developers push back on Claude's verbose output patterns",
-      "timestamp": "2026-08-21T22:13:10Z",
       "source_name": "Github",
       "verification": "confirmed",
       "tags": [
