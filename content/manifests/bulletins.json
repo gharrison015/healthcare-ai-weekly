@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-breaking-claude-code-opus-5-auto-mode",
+      "headline": "Claude Opus 5 Auto Mode launches amid usage limits and reliability concerns",
+      "timestamp": "2026-08-31T17:18:27Z",
+      "source_name": "Embracethered",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-apple-is-suddenly-an-ai-infra-stock-as-openai-buys-10k-macs",
+      "headline": "OpenAI bulk purchases Apple hardware, signaling shift in AI infrastructure strategy",
+      "timestamp": "2026-08-31T17:18:24Z",
+      "source_name": "247Wallst",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-we-re-rolling-out-ads-in-chatgpt",
       "headline": "OpenAI introduces advertising into ChatGPT free and paid tiers",
       "timestamp": "2026-08-29T03:25:43Z",
@@ -228,16 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-ever-wanted-to-call-codex-from-claude-code-my-harness-o",
-      "headline": "Claude integration tools proliferate as developers build orchestration layers",
-      "timestamp": "2026-08-24T10:27:44Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

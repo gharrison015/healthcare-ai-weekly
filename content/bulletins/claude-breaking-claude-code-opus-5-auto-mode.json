@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-31T17:18:27Z",
+  "slug": "claude-breaking-claude-code-opus-5-auto-mode",
+  "headline": "Claude Opus 5 Auto Mode launches amid usage limits and reliability concerns",
+  "body": "Anthropic released Claude Code Opus 5 with an Auto Mode feature, but the rollout has surfaced multiple operational constraints. The new model reduces weekly usage limits by 17% while concentrating high-velocity usage into narrow time windows, and early testing reveals the system can be manipulated through simple prompts like website summarization requests. For healthcare AI implementations, these limitations directly impact clinical decision support workflows and EHR integration reliability, where consistent availability and predictable resource allocation are non-negotiable. Healthcare vendors and health systems evaluating Claude for patient-facing or care coordination applications should stress-test usage patterns against these tighter constraints before committing to production deployments.",
+  "source_url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+  "source_name": "Embracethered",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
