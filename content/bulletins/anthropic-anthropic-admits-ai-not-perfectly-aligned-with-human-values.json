@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-01T23:40:42Z",
+  "slug": "anthropic-anthropic-admits-ai-not-perfectly-aligned-with-human-values",
+  "headline": "Anthropic admits AI alignment gaps as Claude deployment accelerates",
+  "body": "Anthropic publicly acknowledged that its Claude models are not perfectly aligned with human values, marking a rare transparency moment from a major AI vendor. This admission arrives amid significant expansion activity, including new model releases and a $35B cloud infrastructure deal with Nvidia backing. For healthcare AI implementations, alignment gaps carry direct clinical implications: misaligned models in EHR systems, diagnostic support tools, or care coordination workflows could produce recommendations that deviate from clinical standards or patient safety priorities. Healthcare organizations evaluating Claude for regulated environments should demand specific alignment testing protocols and documented safeguards before integration into critical workflows. The combination of capability expansion and acknowledged alignment limitations reshapes vendor risk assessment for value-based care systems and enterprise healthcare deployments.",
+  "source_url": "https://www.theguardian.com/technology/2026/sep/01/anthropic-claude-ai-hacking-human-values",
+  "source_name": "Theguardian",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

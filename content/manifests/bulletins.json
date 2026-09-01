@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-admits-ai-not-perfectly-aligned-with-human-values",
+      "headline": "Anthropic admits AI alignment gaps as Claude deployment accelerates",
+      "timestamp": "2026-09-01T23:40:42Z",
+      "source_name": "Theguardian",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-apple-reveals-shocking-evidence-from-ex-employee-s-macbook-in-o",
+      "headline": "Apple alleges OpenAI destroyed evidence in ongoing trade secrets dispute",
+      "timestamp": "2026-09-01T23:40:39Z",
+      "source_name": "9To5Mac",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-apple-says-openai-is-destroying-evidence-in-trade-secrets-case",
       "headline": "Apple accuses OpenAI of destroying evidence in trade secrets lawsuit",
       "timestamp": "2026-09-01T20:18:22Z",
@@ -205,16 +225,6 @@
       "headline": "Claude's evolution sparks developer debate over focus versus capability",
       "timestamp": "2026-08-26T10:24:31Z",
       "source_name": "Alexkras",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-coffeetable-a-new-ux-to-discover-books-inside-claude",
-      "headline": "Claude ecosystem expands with developer tools addressing workflow bottlenecks",
-      "timestamp": "2026-08-25T22:16:01Z",
-      "source_name": "Claude",
       "verification": "confirmed",
       "tags": [
         "claude"
