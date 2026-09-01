@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-apple-says-openai-is-destroying-evidence-in-trade-secrets-case",
+      "headline": "Apple accuses OpenAI of destroying evidence in trade secrets lawsuit",
+      "timestamp": "2026-09-01T20:18:22Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-fable-5-1-and-claude-mythos-5-1",
+      "headline": "Anthropic releases Claude Fable 5.1 and Mythos 5.1 models",
+      "timestamp": "2026-09-01T20:18:19Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-chatgpt-to-face-tougher-regulation-in-the-eu",
       "headline": "EU tightens ChatGPT regulation as military AI adoption accelerates",
       "timestamp": "2026-09-01T14:24:41Z",
@@ -198,36 +218,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-u",
-      "headline": "OpenAI restores usage limits for ChatGPT Plus subscribers amid regulatory scrutiny",
-      "timestamp": "2026-08-25T18:23:51Z",
-      "source_name": "9To5Mac",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-openai-jalape-o-better-than-nvidia-blackwell",
-      "headline": "OpenAI's custom chips challenge Nvidia's hardware dominance in AI",
-      "timestamp": "2026-08-25T18:23:47Z",
-      "source_name": "Newsletter",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-openai-gpt-5-6-sol-price-reduction-until-at-least-nov-21",
-      "headline": "OpenAI cuts GPT pricing while expanding ChatGPT capabilities",
-      "timestamp": "2026-08-25T14:34:21Z",
-      "source_name": "Developers",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-01T20:18:19Z",
+  "slug": "claude-claude-fable-5-1-and-claude-mythos-5-1",
+  "headline": "Anthropic releases Claude Fable 5.1 and Mythos 5.1 models",
+  "body": "Anthropic announced Claude Fable 5.1 and Claude Mythos 5.1, marking a significant update to its Claude model lineup. For healthcare AI implementation, these releases carry implications for clinical decision support systems and EHR integration workflows that depend on model stability and performance. The velocity of discussion across developer communities suggests early adoption testing is underway, which matters for healthcare organizations evaluating Claude for compliance-heavy use cases like documentation automation and clinical note analysis. Vendors building on Anthropic's models should assess whether these versions address prior performance concerns and how they affect production deployments in regulated healthcare environments.",
+  "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+  "source_name": "Anthropic",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
