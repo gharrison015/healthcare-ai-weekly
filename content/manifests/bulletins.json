@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-chatgpt-to-face-tougher-regulation-in-the-eu",
+      "headline": "EU tightens ChatGPT regulation as military AI adoption accelerates",
+      "timestamp": "2026-09-01T14:24:41Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-legal-fight-with-pentagon-shows-shifting-politics",
+      "headline": "Anthropic faces legal pressure from Pentagon, studios, and subscribers simultaneously",
+      "timestamp": "2026-09-01T14:24:38Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "claude-breaking-claude-code-opus-5-auto-mode",
       "headline": "Claude Opus 5 Auto Mode launches amid usage limits and reliability concerns",
       "timestamp": "2026-08-31T17:18:27Z",
@@ -208,46 +228,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "claude-a-claude-code-skill-that-recovers-export-blocked-kindle-highlig",
-      "headline": "Claude's coding capabilities spark developer tool expansion wave",
-      "timestamp": "2026-08-25T10:21:23Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-groq-3-lpx-unlocks-ultrafast-interactivity-at-long-conte",
-      "headline": "Nvidia Groq 3 LPX delivers ultrafast inference for long-context clinical applications",
-      "timestamp": "2026-08-25T10:21:20Z",
-      "source_name": "Developer",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "ey-anthropic-candidates-face-blunt-money-question",
-      "headline": "Anthropic's funding challenges raise questions about AI startup sustainability",
-      "timestamp": "2026-08-24T22:15:37Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "nvidia-some-of-russia-s-a-i-drones-are-powered-by-nvidia",
-      "headline": "Nvidia chip dominance extends into autonomous systems, geopolitical scrutiny intensifies",
-      "timestamp": "2026-08-24T22:15:35Z",
-      "source_name": "The New York Times",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
