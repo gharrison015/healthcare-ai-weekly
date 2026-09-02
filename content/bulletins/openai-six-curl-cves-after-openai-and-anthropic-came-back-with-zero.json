@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-02T23:41:20Z",
+  "slug": "openai-six-curl-cves-after-openai-and-anthropic-came-back-with-zero",
+  "headline": "OpenAI security findings expose critical gaps in AI vendor vetting",
+  "body": "Security researchers discovered six critical vulnerabilities in curl after OpenAI and Anthropic returned zero findings in a vulnerability assessment, highlighting significant inconsistencies in how major AI vendors identify security risks. This matters for healthcare organizations evaluating AI vendors for clinical workflows and EHR integration, where security assessments directly impact patient data protection and regulatory compliance. Healthcare systems relying on vendor security claims without independent verification face material risk, especially as AI agents become embedded in clinical decision support. For consulting and procurement teams, this signals the need for mandatory third-party security audits rather than vendor self-assessments when selecting AI solutions for healthcare operations.",
+  "source_url": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
+  "source_name": "Aisle",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

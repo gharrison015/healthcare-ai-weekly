@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-six-curl-cves-after-openai-and-anthropic-came-back-with-zero",
+      "headline": "OpenAI security findings expose critical gaps in AI vendor vetting",
+      "timestamp": "2026-09-02T23:41:20Z",
+      "source_name": "Aisle",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-check-if-a-file-was-made-with-claude",
       "headline": "Anthropic launches Claude content verification tool amid safety concerns",
       "timestamp": "2026-09-02T20:17:01Z",
