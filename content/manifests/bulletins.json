@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-check-if-a-file-was-made-with-claude",
+      "headline": "Anthropic launches Claude content verification tool amid safety concerns",
+      "timestamp": "2026-09-02T20:17:01Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gemini-gemini-3-8-flash-and-3-8-flash-cyber",
       "headline": "Google releases Gemini 3.8 Flash, positioning speed-optimized models in healthcare AI",
       "timestamp": "2026-09-02T17:33:57Z",
@@ -195,16 +205,6 @@
       "headline": "Nvidia acquires Hugging Face for $13B, consolidating AI model control",
       "timestamp": "2026-08-27T02:24:35Z",
       "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "nvidia-who-bears-the-risk-in-nvidia-s-500b-financing-platform",
-      "headline": "Nvidia's $500B financing platform raises questions about credit risk exposure",
-      "timestamp": "2026-08-26T19:29:59Z",
-      "source_name": "Sascha Steffen",
       "verification": "confirmed",
       "tags": [
         "nvidia"
