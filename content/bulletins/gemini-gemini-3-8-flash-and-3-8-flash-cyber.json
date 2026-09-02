@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-02T17:33:57Z",
+  "slug": "gemini-gemini-3-8-flash-and-3-8-flash-cyber",
+  "headline": "Google releases Gemini 3.8 Flash, positioning speed-optimized models in healthcare AI",
+  "body": "Google announced Gemini 3.8 Flash and 3.8 Flash Cyber, lighter-weight models designed for faster inference and lower latency. For healthcare AI vendors, this matters because speed-optimized models directly impact clinical workflow integration, particularly in real-time EHR documentation, radiology interpretation support, and point-of-care decision assistance where latency delays patient care. The Cyber variant suggests specialized tooling for security-sensitive healthcare environments. Healthcare organizations currently evaluating foundation models should benchmark these releases against existing deployments to assess whether faster processing times justify retraining on clinical datasets and revalidating for regulatory compliance.",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+  "source_name": "Blog",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}

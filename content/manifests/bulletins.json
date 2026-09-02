@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-gemini-3-8-flash-and-3-8-flash-cyber",
+      "headline": "Google releases Gemini 3.8 Flash, positioning speed-optimized models in healthcare AI",
+      "timestamp": "2026-09-02T17:33:57Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-s-controversial-dlss-5-will-launch-september-3",
       "headline": "Nvidia accelerates AI infrastructure push with Hugging Face acquisition nearing close",
       "timestamp": "2026-09-02T13:57:34Z",
@@ -195,26 +205,6 @@
       "headline": "Nvidia's $500B financing platform raises questions about credit risk exposure",
       "timestamp": "2026-08-26T19:29:59Z",
       "source_name": "Sascha Steffen",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-openai-s-head-of-data-centers-has-left-the-company",
-      "headline": "OpenAI's data center leader exits amid infrastructure scaling questions",
-      "timestamp": "2026-08-26T14:34:52Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-openai-claims-its-new-chips-can-outperform-nvidia-processors-in",
-      "headline": "OpenAI's custom chips challenge Nvidia's healthcare AI infrastructure dominance",
-      "timestamp": "2026-08-26T14:34:49Z",
-      "source_name": "Bloomberg",
       "verification": "confirmed",
       "tags": [
         "nvidia"
