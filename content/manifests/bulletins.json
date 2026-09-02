@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-s-controversial-dlss-5-will-launch-september-3",
+      "headline": "Nvidia accelerates AI infrastructure push with Hugging Face acquisition nearing close",
+      "timestamp": "2026-09-02T13:57:34Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-admits-ai-not-perfectly-aligned-with-human-values",
       "headline": "Anthropic admits AI alignment gaps as Claude deployment accelerates",
       "timestamp": "2026-09-01T23:40:42Z",
@@ -208,26 +218,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "ey-i-m-a-cto-we-took-pe-money-6-months-ago-ama",
-      "headline": "PE-backed healthcare tech founders navigate growth and capital pressures",
-      "timestamp": "2026-08-26T10:24:34Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-i-miss-the-old-claude-code",
-      "headline": "Claude's evolution sparks developer debate over focus versus capability",
-      "timestamp": "2026-08-26T10:24:31Z",
-      "source_name": "Alexkras",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
