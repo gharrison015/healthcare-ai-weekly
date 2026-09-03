@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-astra",
+      "headline": "OpenAI releases GPT-6 Astra with expanded multimodal capabilities",
+      "timestamp": "2026-09-03T20:17:23Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-ask-hn-why-were-openai-claude-and-grok-simultaneously-down",
+      "headline": "OpenAI, Claude, Grok experience simultaneous outage amid GPT-6 rollout",
+      "timestamp": "2026-09-03T20:17:21Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-show-hn-i-built-my-first-mcp-to-manage-google-ads",
       "headline": "Google accelerates AI model releases while tightening platform governance rules",
       "timestamp": "2026-09-03T17:34:42Z",
@@ -218,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "openai-webmcp-challenge-openai",
-      "headline": "OpenAI launches WebMCP Challenge amid agent safety concerns",
-      "timestamp": "2026-08-27T20:03:49Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-the-load-bearing-vocabulary-of-claude",
-      "headline": "Claude's core vocabulary and token efficiency emerge as critical optimization targets",
-      "timestamp": "2026-08-27T20:03:46Z",
-      "source_name": "Louisabraham",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-03T20:17:21Z",
+  "slug": "openai-ask-hn-why-were-openai-claude-and-grok-simultaneously-down",
+  "headline": "OpenAI, Claude, Grok experience simultaneous outage amid GPT-6 rollout",
+  "body": "Multiple AI platforms including OpenAI, Anthropic Claude, and xAI Grok went offline simultaneously, triggering community investigation into root causes. The incident occurred during OpenAI's GPT-6 Astra rollout, raising questions about infrastructure resilience for healthcare organizations integrating these models into clinical workflows. Healthcare systems relying on AI-assisted documentation, diagnostic support, or administrative automation need contingency plans for multi-vendor dependency failures. This outage pattern underscores the operational risk healthcare enterprises face when consolidating critical workflows on third-party AI services without adequate fallback mechanisms.",
+  "source_url": "https://news.ycombinator.com/item?id=49551096",
+  "source_name": "Hacker News",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
