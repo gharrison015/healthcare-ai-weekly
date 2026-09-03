@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-show-hn-i-built-my-first-mcp-to-manage-google-ads",
+      "headline": "Google accelerates AI model releases while tightening platform governance rules",
+      "timestamp": "2026-09-03T17:34:42Z",
+      "source_name": "Adchestra",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-claude-outage-resolved",
+      "headline": "Claude experiences major outage affecting multiple AI platforms simultaneously",
+      "timestamp": "2026-09-03T17:34:39Z",
+      "source_name": "Status",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-claude-for-commerce-agents",
       "headline": "Claude agentic capabilities expand while security concerns surface",
       "timestamp": "2026-09-03T13:59:40Z",

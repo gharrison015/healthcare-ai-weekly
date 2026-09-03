@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-03T17:34:39Z",
+  "slug": "claude-claude-outage-resolved",
+  "headline": "Claude experiences major outage affecting multiple AI platforms simultaneously",
+  "body": "Anthropic's Claude service went down in a significant outage that also affected OpenAI's ChatGPT and other AI platforms, raising questions about infrastructure resilience across the sector. For healthcare organizations integrating Claude into clinical decision support, documentation automation, or EHR workflows, this incident underscores the operational risks of depending on third-party AI services without robust fallback protocols. Healthcare systems must now evaluate whether their AI vendor contracts include uptime guarantees, redundancy options, and incident communication standards. This outage demonstrates that healthcare AI deployment requires the same disaster recovery planning applied to mission-critical infrastructure like imaging systems or lab ordering platforms.",
+  "source_url": "https://status.claude.com/incidents/461yvfrzpwtt",
+  "source_name": "Status",
+  "velocity_score": 98,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

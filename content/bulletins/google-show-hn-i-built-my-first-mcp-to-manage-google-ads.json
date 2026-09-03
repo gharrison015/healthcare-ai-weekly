@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-03T17:34:42Z",
+  "slug": "google-show-hn-i-built-my-first-mcp-to-manage-google-ads",
+  "headline": "Google accelerates AI model releases while tightening platform governance rules",
+  "body": "Google released Gemini 3.8 Flash and expanded its Model Context Protocol (MCP) ecosystem this week, while simultaneously enforcing stricter third-party usage policies that can result in account suspension. For healthcare AI implementations, this dual approach creates immediate friction: clinicians and vendors adopting Google's newer models gain performance improvements, but integration risks increase when third-party tools access Google services within clinical workflows. Healthcare organizations evaluating Google's AI infrastructure must now factor account security policies into their EHR integration roadmaps, particularly for those considering MCP-based tools that connect Google services to downstream clinical systems. This pattern mirrors the broader vendor landscape shift where AI capability advances outpace governance frameworks, forcing healthcare IT teams to choose between cutting-edge performance and operational risk management.",
+  "source_url": "https://adchestra.com/",
+  "source_name": "Adchestra",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}
