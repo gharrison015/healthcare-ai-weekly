@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-03T13:59:40Z",
+  "slug": "claude-claude-for-commerce-agents",
+  "headline": "Claude agentic capabilities expand while security concerns surface",
+  "body": "Anthropic is pushing Claude deeper into autonomous agent workflows with new commerce capabilities, while concurrent reports highlight security vulnerabilities in Claude Code and contractual disputes over subscription performance. For healthcare AI implementations, this creates immediate tension: agentic systems offer efficiency gains in clinical documentation and prior authorization workflows, but the emerging security gaps (plaintext token storage, unauthorized code execution paths) directly threaten EHR integration and patient data handling. Healthcare organizations evaluating Claude for workflow automation must now demand explicit security audits before deployment, particularly for systems touching protected health information. Vendors building on Claude should pause expansion plans until Anthropic addresses the GitSpawn vulnerability class and clarifies subscription tier capabilities.",
+  "source_url": "https://claude.com/blog/claude-for-commerce-agents",
+  "source_name": "Claude",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

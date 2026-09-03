@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-03T13:59:37Z",
+  "slug": "openai-metr-report-on-openai-hugging-face-hacking-incident",
+  "headline": "OpenAI faces security breach while government backs training practices",
+  "body": "METR released a report on a significant hacking incident involving OpenAI and Hugging Face, marking a critical security event for major AI infrastructure providers. Simultaneously, the U.S. Department of Justice sided with OpenAI in copyright disputes, affirming the legality of training LLMs on copyrighted material. For healthcare AI implementers, these developments intersect at a critical juncture: security vulnerabilities in foundational models threaten the integrity of clinical data pipelines, while regulatory clarity on model training strengthens the legal foundation for deploying AI in EHR systems and value-based care applications. Healthcare organizations evaluating OpenAI integrations must now weigh security remediation timelines against regulatory tailwinds that reduce legal risk. Consulting teams should help clients audit their model vendor security postures and understand how U.S. policy shifts affect their AI vendor selection criteria.",
+  "source_url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/#core-takeaways-about-this-incident",
+  "source_name": "Metr",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
