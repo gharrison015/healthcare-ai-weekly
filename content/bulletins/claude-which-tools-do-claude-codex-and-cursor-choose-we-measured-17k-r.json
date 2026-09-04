@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-04T17:16:00Z",
+  "slug": "claude-which-tools-do-claude-codex-and-cursor-choose-we-measured-17k-r",
+  "headline": "Claude coding performance benchmarked across 17k runs in major study",
+  "body": "Researchers measured Claude alongside Codex and Cursor across 17,000 coding runs to identify tool selection patterns and performance characteristics. For healthcare AI systems, this benchmark data matters because clinical decision support tools and EHR integrations increasingly rely on LLM-driven code generation for workflow automation and real-time analytics. The findings help healthcare IT teams evaluate which AI coding agents can reliably build and maintain the infrastructure supporting value-based care models. Understanding Claude's actual performance versus competitors directly impacts vendor selection and implementation timelines for healthcare organizations building AI-augmented clinical platforms.",
+  "source_url": "https://armature.tech/blog/which-tools-coding-agents-install",
+  "source_name": "Armature",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

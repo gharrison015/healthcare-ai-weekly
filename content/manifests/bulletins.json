@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-which-tools-do-claude-codex-and-cursor-choose-we-measured-17k-r",
+      "headline": "Claude coding performance benchmarked across 17k runs in major study",
+      "timestamp": "2026-09-04T17:16:00Z",
+      "source_name": "Armature",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-discovery-of-a-new-openai-agent-message-board",
+      "headline": "OpenAI agent discovery raises questions about autonomous AI behavior",
+      "timestamp": "2026-09-04T17:15:57Z",
+      "source_name": "Collusion",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "nvidia-tell-hn-nvidia-s-acquisition-of-huggingface-was-for-huggingface",
       "headline": "NVIDIA acquires Hugging Face in major consolidation of AI model infrastructure",
       "timestamp": "2026-09-04T13:52:59Z",
