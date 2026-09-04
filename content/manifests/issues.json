@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-04",
+    "week_range": "August 28 - September 04, 2026",
+    "editorial_summary": "Two stories ate this week: OpenAI wiring ChatGPT directly into Epic's EHR, and the growing body of evidence that AI scribes carry real malpractice exposure. Those two stories are actually the same story told from opposite ends. On one end, OpenAI is racing to own the clinical data layer before Epic locks it down with its own Agent Factory. On the other end, clinicians and legal experts are starting to document exactly how ambient AI documentation fails quietly and dangerously. Add GPT-6 Astra dropping with 'AGI era' claims, the FDA's TEMPO pilot letting generative AI devices reach patients before full authorization, Deloitte launching a healthcare restructuring venture, and UnitedHealthcare cutting 1,700 prior auth codes, and you have a week where the infrastructure of clinical AI shifted in three directions at once. The question for health system leaders isn't whether to adopt. It's whether your governance can keep up with the speed at which these systems are being deployed into patient-facing workflows.",
+    "top_stories": 5,
+    "vbc_watch": 3,
+    "did_you_know": 2,
+    "ma_partnerships": 3,
+    "consulting_intelligence": 2
+  },
+  {
     "date": "2026-08-28",
     "week_range": "August 21 - August 28, 2026",
     "editorial_summary": "Epic's UGM aftermath is still reverberating, and this week the strategic picture got sharper. Agent Factory is the real story: Epic is building a healthcare-specific AI agent ecosystem that makes every horizontal AI vendor's pitch harder to land. Anthropic had a massive week, getting cleared by a federal judge after the Pentagon blacklisting, announcing a deep partnership with Salesforce (Claudeforce), and surfacing in Bain's new enterprise AI practice. All three moves matter for health system AI strategy. UPMC quietly did something more important than any of these announcements: it actually scaled an agentic AI transitional care program to 18 hospitals. Physicians are now demanding a cut of AI productivity gains. Northwell built a KPI architecture for ambient AI that actually measures outcomes. And Sutter Health pushed ambient scribe past physicians and onto nursing floors. The underlying theme this week: the pilot-to-scale gap is the defining challenge, and the health systems actually closing it are separating fast from the ones still running pilots.",
