@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-04T23:34:02Z",
+  "slug": "claude-tell-hn-check-your-claude-settings-it-may-have-silently-enabled",
+  "headline": "Claude users report unexpected remote access settings enabled by default",
+  "body": "Users discovered that Anthropic's Claude AI platform silently enabled remote access settings without explicit consent, prompting community-driven security audits and tooling to detect configuration changes. For healthcare organizations deploying Claude in clinical workflows or EHR integrations, this highlights critical gaps in transparency around default permissions and data access controls. Healthcare AI implementations require explicit audit trails and user consent for any remote capabilities, especially when handling patient data or clinical decision support. Vendors and healthcare IT teams must now verify their Claude deployments against these settings and establish governance policies before expanding use in production environments. This incident underscores the need for healthcare-specific contractual requirements and technical controls when adopting third-party AI platforms.",
+  "source_url": "https://news.ycombinator.com/item?id=49565799",
+  "source_name": "Hacker News",
+  "velocity_score": 99,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

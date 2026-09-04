@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-astra-on-openrouter",
+      "headline": "OpenAI releases GPT-6 Astra with broad availability across platforms",
+      "timestamp": "2026-09-04T23:34:05Z",
+      "source_name": "Openrouter",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-tell-hn-check-your-claude-settings-it-may-have-silently-enabled",
+      "headline": "Claude users report unexpected remote access settings enabled by default",
+      "timestamp": "2026-09-04T23:34:02Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-which-tools-do-claude-codex-and-cursor-choose-we-measured-17k-r",
       "headline": "Claude coding performance benchmarked across 17k runs in major study",
       "timestamp": "2026-09-04T17:16:00Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-insists-it-can-keep-printing-money-to-fund-the-ai-boom",
-      "headline": "Nvidia acquisition of Hugging Face signals consolidation in AI infrastructure stack",
-      "timestamp": "2026-08-28T21:02:01Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-show-hn-beating-gpt5-5-xhigh-for-coding-agent-security-with-slms-a",
-      "headline": "Smaller language models outperform GPT on coding security tasks",
-      "timestamp": "2026-08-28T21:01:59Z",
-      "source_name": "Harden",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
