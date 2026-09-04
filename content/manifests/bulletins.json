@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-tell-hn-nvidia-s-acquisition-of-huggingface-was-for-huggingface",
+      "headline": "NVIDIA acquires Hugging Face in major consolidation of AI model infrastructure",
+      "timestamp": "2026-09-04T13:52:59Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "openai-openai-begins-rolling-out-gpt-6-astra",
       "headline": "OpenAI launches GPT-6 Astra amid reasoning capability concerns",
       "timestamp": "2026-09-03T23:41:11Z",
@@ -228,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "anthropic-judge-rules-trump-administration-s-blacklisting-of-anthropic",
-      "headline": "Court strikes down Trump admin's Anthropic blacklist, reshaping AI vendor landscape",
-      "timestamp": "2026-08-28T05:52:52Z",
-      "source_name": "The New York Times",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "google-show-hn-baiseball-org-google-for-historical-baseball-stats",
-      "headline": "Google deploys URL redirects as AI search integration accelerates",
-      "timestamp": "2026-08-28T05:52:49Z",
-      "source_name": "Baiseball",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]
