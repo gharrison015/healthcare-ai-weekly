@@ -1,1 +1,24 @@
-{"bulletins":[]}
+{
+  "bulletins": [
+    {
+      "slug": "openai-nvidia-s-jensen-huang-says-agi-has-arrived-and-congratulates-op",
+      "headline": "Nvidia CEO declares AGI has arrived as OpenAI IPO approaches",
+      "timestamp": "2026-09-07T15:23:40Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "gpt-openai-s-gpt-6-astra-on-arc-agi-3-scored-99-95-with-provider-adapt",
+      "headline": "OpenAI GPT-6 Astra reaches 99.95% on reasoning benchmark test",
+      "timestamp": "2026-09-07T15:23:37Z",
+      "source_name": "Arcprize",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    }
+  ]
+}
