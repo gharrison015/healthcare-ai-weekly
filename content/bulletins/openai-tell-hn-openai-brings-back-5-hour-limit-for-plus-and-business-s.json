@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-07T20:55:01Z",
+  "slug": "openai-tell-hn-openai-brings-back-5-hour-limit-for-plus-and-business-s",
+  "headline": "OpenAI reinstates usage caps on Plus and Business Standard tiers",
+  "body": "OpenAI has reintroduced a 5-hour usage limit for Plus and Business Standard subscribers, signaling resource constraints as the company scales. This move matters for healthcare organizations because many are building clinical decision support and documentation workflows on OpenAI's API and ChatGPT products. Usage limits directly impact deployment feasibility for continuous EHR integration, real-time diagnostic assistance, and ambient documentation features that healthcare systems depend on. Healthcare IT leaders evaluating GenAI vendors should now factor in usage tier restrictions when assessing long-term operational costs and compliance with 24/7 clinical workflows.",
+  "source_url": "https://news.ycombinator.com/item?id=49600233",
+  "source_name": "Hacker News",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
