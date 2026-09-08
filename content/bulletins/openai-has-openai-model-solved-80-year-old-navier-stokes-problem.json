@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-08T17:46:44Z",
+  "slug": "openai-has-openai-model-solved-80-year-old-navier-stokes-problem",
+  "headline": "OpenAI's claimed Navier-Stokes breakthrough sparks mathematician credibility questions",
+  "body": "OpenAI is facing scrutiny over claims that its model solved an 80-year-old mathematical problem, with mathematicians questioning the validity of the breakthrough and raising concerns about how the company obtained research data. Multiple reports indicate OpenAI extracted private researcher communications from Codex interactions without consent. For healthcare AI stakeholders, this matters because it exposes how foundation model developers source training data and raises trust issues around enterprise deployments that already concentrate 80% of revenue among just 1% of customers. Healthcare organizations evaluating AI partnerships need to understand data governance practices and IP handling before integrating these systems into clinical workflows or EHR infrastructure.",
+  "source_url": "https://www.firstpost.com/tech/has-openai-model-solved-80-year-old-navier-stokes-problem-mathematician-raises-questions-14044080.html",
+  "source_name": "Firstpost",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
