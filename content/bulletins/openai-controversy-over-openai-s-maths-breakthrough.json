@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-08T20:28:42Z",
+  "slug": "openai-controversy-over-openai-s-maths-breakthrough",
+  "headline": "OpenAI's disputed math breakthrough raises data governance questions",
+  "body": "OpenAI claimed a major mathematical breakthrough while controversy erupted over allegations the company accessed mathematicians' private research from Codex chat sessions. For healthcare AI, this incident underscores critical risks around proprietary clinical data, model training practices, and vendor trustworthiness. Healthcare systems adopting AI tools must establish explicit data governance policies specifying what research, EHR content, and patient-adjacent information remains off-limits for model training. Vendors cannot be assumed to respect boundaries between customer inputs and training datasets, making contractual protections and audit trails essential for compliance and clinical workflow integrity.",
+  "source_url": "https://www.scientificamerican.com/article/openai-claims-blockbuster-math-breakthrough-amid-swirl-of-controversy/",
+  "source_name": "Scientificamerican",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
