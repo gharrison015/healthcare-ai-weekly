@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-08T13:59:19Z",
+  "slug": "anthropic-anthropic-ai-formalizes-proof-of-fermat-s-last-theorem-in-ju",
+  "headline": "Anthropic formalizes Fermat's last theorem proof in 11 days",
+  "body": "Anthropic's AI system completed a formal mathematical proof of Fermat's last theorem in 11 days, demonstrating significant capability in complex logical reasoning and proof verification. This advancement signals that foundation models can now handle rigorous formal verification tasks at scale. For healthcare AI, formal verification capacity directly improves clinical decision support reliability, EHR validation workflows, and the ability to prove safety guarantees in AI-assisted diagnostics and treatment algorithms. Healthcare organizations evaluating AI vendors should assess formal verification capabilities as a core requirement for high-stakes clinical applications where proof of correctness matters more than speed.",
+  "source_url": "https://www.nature.com/articles/d41586-026-02822-9",
+  "source_name": "Nature",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
