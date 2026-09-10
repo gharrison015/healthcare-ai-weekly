@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-says-it-blocked-possible-efforts-to-build-biologic",
+      "headline": "Anthropic reports blocking bioweapon development attempts through Claude",
+      "timestamp": "2026-09-10T20:13:34Z",
+      "source_name": "The New York Times",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-more-questions-about-whether-researchers-can-trust-openai-with",
+      "headline": "Researchers question OpenAI's data practices amid unpublished work concerns",
+      "timestamp": "2026-09-10T20:13:31Z",
+      "source_name": "Mathstodon",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-discloses-fourth-ai-hacking-incident-missed-in-ear",
       "headline": "Anthropic discovers fourth security breach in Claude AI model review",
       "timestamp": "2026-09-10T17:25:56Z",

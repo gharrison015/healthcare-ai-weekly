@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-10T20:13:31Z",
+  "slug": "openai-more-questions-about-whether-researchers-can-trust-openai-with",
+  "headline": "Researchers question OpenAI's data practices amid unpublished work concerns",
+  "body": "Multiple mathematicians are raising trust issues with OpenAI over allegations that the company trained models on unpublished research without permission and potentially misrepresented findings as breakthroughs. The controversy centers on OpenAI's data governance practices and repeated re-enabling of training consent settings. For healthcare AI, this surfaces a critical vulnerability: if foundational AI vendors cannot maintain transparent data practices with academic researchers, healthcare organizations face serious compliance and IP risks when deploying these models for clinical workflows, patient data handling, and regulatory submissions. Healthcare AI vendors must now demand explicit data lineage documentation from their AI suppliers before integration into EHR systems or value-based care analytics. This incident will likely accelerate healthcare's move toward open-source or vendor-controlled model alternatives where data provenance can be independently verified.",
+  "source_url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+  "source_name": "Mathstodon",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
