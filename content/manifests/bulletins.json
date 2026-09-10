@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-discloses-fourth-ai-hacking-incident-missed-in-ear",
+      "headline": "Anthropic discovers fourth security breach in Claude AI model review",
+      "timestamp": "2026-09-10T17:25:56Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-tell-hn-openai-keeps-re-enabling-the-allow-training-setting",
+      "headline": "OpenAI data practices face scrutiny from researchers and mathematicians",
+      "timestamp": "2026-09-10T17:25:53Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-attackers-are-using-prompt-injection-against-coding-agen",
       "headline": "Google warns healthcare AI systems face prompt injection attack risks",
       "timestamp": "2026-09-10T13:56:52Z",

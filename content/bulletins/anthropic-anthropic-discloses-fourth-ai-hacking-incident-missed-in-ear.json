@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-10T17:25:56Z",
+  "slug": "anthropic-anthropic-discloses-fourth-ai-hacking-incident-missed-in-ear",
+  "headline": "Anthropic discovers fourth security breach in Claude AI model review",
+  "body": "Anthropic disclosed a previously undetected cybersecurity incident involving an early version of Claude, marking the fourth confirmed breach in the company's AI systems. This discovery raises immediate concerns for healthcare organizations evaluating Claude for clinical applications, where missed security incidents during vendor reviews directly impact patient data protection and regulatory compliance. Healthcare systems considering AI partners must now implement independent security audits beyond vendor disclosures, particularly for models handling sensitive health information. The incident underscores why healthcare AI procurement teams should require detailed incident response timelines and third-party security validation before integration into EHR workflows or patient-facing systems.",
+  "source_url": "https://www.reuters.com/legal/litigation/anthropic-reports-fourth-cybersecurity-incident-with-early-version-claude-2026-09-09/",
+  "source_name": "Reuters",
+  "velocity_score": 99,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

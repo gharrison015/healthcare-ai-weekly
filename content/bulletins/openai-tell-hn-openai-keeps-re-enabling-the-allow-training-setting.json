@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-10T17:25:53Z",
+  "slug": "openai-tell-hn-openai-keeps-re-enabling-the-allow-training-setting",
+  "headline": "OpenAI data practices face scrutiny from researchers and mathematicians",
+  "body": "Multiple researchers are raising concerns that OpenAI automatically re-enables a setting allowing model training on user conversations, and may have trained on unpublished mathematical work without permission. This pattern suggests potential misuse of proprietary and sensitive content. For healthcare organizations, this creates direct risk: patient data in prompts, clinical trial information, and unpublished research could feed model training without explicit consent or audit trails. Healthcare AI deployments increasingly rely on third-party LLMs for clinical documentation, coding, and decision support, making data governance and contractual clarity non-negotiable. Vendors and health systems must now demand transparent data handling policies, explicit opt-out guarantees with enforcement mechanisms, and legal indemnification before integrating OpenAI's tools into regulated workflows.",
+  "source_url": "https://news.ycombinator.com/item?id=49643556",
+  "source_name": "Hacker News",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
