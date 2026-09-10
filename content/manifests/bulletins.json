@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-attackers-are-using-prompt-injection-against-coding-agen",
+      "headline": "Google warns healthcare AI systems face prompt injection attack risks",
+      "timestamp": "2026-09-10T13:56:52Z",
+      "source_name": "Cloud",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "openai-mathematicians-want-proof-openai-didn-t-use-their-work",
+      "headline": "Mathematicians demand OpenAI disclose training data sources and methods",
+      "timestamp": "2026-09-10T13:56:49Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-astra-looped-transformers-and-hidden-reasoning",
       "headline": "GPT-6 Astra brings looped transformers and hidden reasoning to production",
       "timestamp": "2026-09-09T23:40:10Z",

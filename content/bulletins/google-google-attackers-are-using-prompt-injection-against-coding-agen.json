@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-10T13:56:52Z",
+  "slug": "google-google-attackers-are-using-prompt-injection-against-coding-agen",
+  "headline": "Google warns healthcare AI systems face prompt injection attack risks",
+  "body": "Google published threat intelligence revealing that attackers are actively exploiting prompt injection vulnerabilities in AI coding agents. This directly impacts healthcare organizations deploying autonomous AI systems for clinical documentation, EHR integration, and decision support tools. Prompt injection attacks could compromise the integrity of AI-generated clinical workflows, potentially leading to incorrect patient data processing or unsafe clinical recommendations. Healthcare AI vendors and health systems must urgently review their agent-based systems for input validation and implement robust safeguards before deploying these tools in production environments. The attack vector underscores that healthcare AI security requires more than traditional software controls when autonomous agents interact with uncontrolled inputs.",
+  "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+  "source_name": "Cloud",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}

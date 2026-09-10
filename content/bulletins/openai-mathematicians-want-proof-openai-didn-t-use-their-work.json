@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-10T13:56:49Z",
+  "slug": "openai-mathematicians-want-proof-openai-didn-t-use-their-work",
+  "headline": "Mathematicians demand OpenAI disclose training data sources and methods",
+  "body": "A group of mathematicians is publicly challenging OpenAI to prove it did not use their copyrighted work in model training, citing lack of transparency around data sourcing practices. This dispute underscores a critical vulnerability in healthcare AI development: the inability to verify that foundational models comply with intellectual property law and ethical data governance. For healthcare systems and EHR vendors integrating OpenAI capabilities, unresolved training data disputes create legal and compliance risk. Healthcare AI consultants should flag this issue when evaluating third-party model dependencies, as liability chains in regulated environments demand full provenance documentation. The vendor landscape will face increasing pressure to demonstrate clean data lineage as healthcare organizations tighten procurement standards.",
+  "source_url": "https://www.theverge.com/ai-artificial-intelligence/993263/where-does-openai-get-mathematics-training-data",
+  "source_name": "The Verge",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
