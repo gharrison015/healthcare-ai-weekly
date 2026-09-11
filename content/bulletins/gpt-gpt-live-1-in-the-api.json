@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-11T17:27:00Z",
+  "slug": "gpt-gpt-live-1-in-the-api",
+  "headline": "OpenAI releases GPT-Live-1 API access amid rapid model iteration",
+  "body": "OpenAI has made GPT-Live-1 available through its API, marking another milestone in the accelerating pace of large language model releases. For healthcare organizations, this development signals the need to establish clear protocols around model versioning and API stability as foundation models continue to evolve. Healthcare AI implementations dependent on specific model versions will require careful governance of API updates to maintain compliance, reproducibility in clinical workflows, and compatibility with downstream EHR integrations. Consulting teams advising healthcare clients should prioritize conversations about upgrade cycles and change management strategies now rather than treating API updates as purely technical matters.",
+  "source_url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+  "source_name": "OpenAI",
+  "velocity_score": 96,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
