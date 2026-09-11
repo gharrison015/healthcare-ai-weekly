@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-11T13:56:27Z",
+  "slug": "openai-openai-agents-api",
+  "headline": "OpenAI launches Agents API for autonomous workflow automation",
+  "body": "OpenAI released its Agents API, enabling developers to build autonomous AI systems that can execute complex workflows independently. For healthcare, this directly impacts clinical decision support, administrative automation, and EHR integration by allowing AI agents to handle multi-step tasks like prior authorization processing, patient triage documentation, and care coordination without constant human intervention. Healthcare organizations and vendors should evaluate how agentic systems could reduce clinician documentation burden and accelerate value-based care operations, though careful governance around clinical oversight remains critical before deployment in high-stakes scenarios.",
+  "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+  "source_name": "Developers",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

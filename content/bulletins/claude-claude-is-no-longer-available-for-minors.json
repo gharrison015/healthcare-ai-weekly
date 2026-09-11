@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-11T13:56:30Z",
+  "slug": "claude-claude-is-no-longer-available-for-minors",
+  "headline": "Anthropic restricts Claude access to users under 18 years old",
+  "body": "Anthropic has implemented age verification requirements that block minors from accessing Claude, its flagship AI assistant. This move reflects growing regulatory pressure around AI safety and liability for underage users. For healthcare organizations, the restriction highlights emerging compliance considerations when deploying AI tools across patient-facing and employee workflows, particularly in pediatric settings or organizations with younger staff. Healthcare vendors integrating Claude into clinical decision support or documentation systems will need to audit user demographics and ensure compliance frameworks account for age-based access policies. The decision also signals how foundational model providers are responding to governance demands that will likely shape enterprise healthcare AI contracts moving forward.",
+  "source_url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+  "source_name": "Support",
+  "velocity_score": 92,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

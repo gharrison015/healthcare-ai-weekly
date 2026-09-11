@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-is-no-longer-available-for-minors",
+      "headline": "Anthropic restricts Claude access to users under 18 years old",
+      "timestamp": "2026-09-11T13:56:30Z",
+      "source_name": "Support",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-openai-agents-api",
+      "headline": "OpenAI launches Agents API for autonomous workflow automation",
+      "timestamp": "2026-09-11T13:56:27Z",
+      "source_name": "Developers",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-cognition-launches-new-swe-2-model-rivaling-fable-5-1-and-gpt-astr",
       "headline": "Cognition launches SWE-2, intensifying AI coding model competition",
       "timestamp": "2026-09-10T23:33:33Z",
