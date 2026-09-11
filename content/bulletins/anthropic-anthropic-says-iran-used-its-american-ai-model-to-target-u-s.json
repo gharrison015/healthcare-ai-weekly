@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-11T23:41:38Z",
+  "slug": "anthropic-anthropic-says-iran-used-its-american-ai-model-to-target-u-s",
+  "headline": "Anthropic's AI model weaponized by Iranian and Houthi forces",
+  "body": "Anthropic disclosed that state and non-state actors, including Iran and Houthi militants, exploited its AI model for military applications ranging from targeting U.S. Navy vessels to developing guided weapons and ballistic missiles. The company also revealed blocking attempts to use its systems for biological weapons development. This incident exposes a critical vulnerability in healthcare AI deployment: if foundational models can be repurposed for weaponization despite safety measures, similar risks apply to clinical decision support systems and EHR integrations where model outputs directly influence patient care decisions. Healthcare organizations must demand transparent security audits, usage monitoring, and contractual accountability from AI vendors before integrating external models into production workflows. The incident reinforces that vendor landscape concentration and insufficient governance frameworks pose both national security and clinical safety risks.",
+  "source_url": "https://www.wsj.com/politics/national-security/anthropic-says-iran-used-its-american-ai-model-to-target-u-s-navy-warships-67583e05",
+  "source_name": "Wall Street Journal",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

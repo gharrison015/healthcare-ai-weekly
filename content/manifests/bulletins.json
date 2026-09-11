@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-considers-slowing-advanced-ai-development-sam-altman-tel",
+      "headline": "OpenAI signals potential slowdown in advanced AI development",
+      "timestamp": "2026-09-11T23:41:40Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-says-iran-used-its-american-ai-model-to-target-u-s",
+      "headline": "Anthropic's AI model weaponized by Iranian and Houthi forces",
+      "timestamp": "2026-09-11T23:41:38Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-openai-s-navier-stokes-release-included-a-lean-4-formal-proof",
       "headline": "OpenAI releases formal proof system for Navier-Stokes problem",
       "timestamp": "2026-09-11T20:12:36Z",
