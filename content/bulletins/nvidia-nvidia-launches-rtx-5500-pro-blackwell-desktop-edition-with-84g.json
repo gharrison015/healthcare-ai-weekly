@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-14T21:10:58Z",
+  "slug": "nvidia-nvidia-launches-rtx-5500-pro-blackwell-desktop-edition-with-84g",
+  "headline": "Nvidia launches RTX 5500 Pro with 84GB memory for workstation AI",
+  "body": "Nvidia released the RTX 5500 Pro Blackwell desktop edition, delivering 2.6x the VRAM of comparable chips at matching performance specs. The 84GB GDDR7 architecture addresses the memory bottleneck that constrains medical imaging inference, genomics processing, and large language model deployment in clinical settings. Healthcare organizations building on-premises AI infrastructure now have a professional-grade option that reduces data transfer latency for sensitive patient information compared to cloud alternatives. The move reflects vendor competition to capture enterprise healthcare buyers seeking GPU acceleration without cloud dependency or compliance complexity. Expect healthcare IT teams to evaluate this chip against data center strategies as in-house medical AI deployment becomes more technically feasible.",
+  "source_url": "https://www.tomshardware.com/pc-components/gpus/gaming-takes-a-backseat-as-nvidia-overhauls-the-rtx-5090-for-maximum-ai-margins-rtx-pro-5500-delivers-2-6x-vram-at-matching-specs",
+  "source_name": "Tomshardware",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
