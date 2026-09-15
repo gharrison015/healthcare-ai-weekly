@@ -1,1 +1,24 @@
-{"bulletins":[]}
+{
+  "bulletins": [
+    {
+      "slug": "anthropic-anthropic-tells-investors-it-will-be-profitable-for-second-s",
+      "headline": "Anthropic projects second consecutive profitable quarter amid geopolitical scrutiny",
+      "timestamp": "2026-09-15T00:05:11Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-ceo-jensen-huang-tells-trump-we-re-not-going-to-let-an-a",
+      "headline": "Nvidia accelerates hardware rollout as demand for AI inference chips peaks",
+      "timestamp": "2026-09-15T00:05:09Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    }
+  ]
+}

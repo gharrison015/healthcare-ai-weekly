@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-15T00:05:09Z",
+  "slug": "nvidia-nvidia-ceo-jensen-huang-tells-trump-we-re-not-going-to-let-an-a",
+  "headline": "Nvidia accelerates hardware rollout as demand for AI inference chips peaks",
+  "body": "Nvidia launched multiple RTX Blackwell variants and confirmed aggressive infrastructure expansion while CEO Jensen Huang signaled no tolerance for AI momentum loss. The rapid hardware iterations, from desktop to workstation editions with 84GB VRAM, directly address the compute bottleneck healthcare organizations face when deploying clinical AI models at scale. For health systems building in-house AI infrastructure (as evidenced by enterprise legal firms following the same path), these new GPU tiers matter because they reduce latency in real-time EHR integration and diagnostic support workflows. Healthcare AI consultants should expect vendors to reference these Blackwell capabilities in RFPs within months, pushing procurement conversations away from cloud-only strategies toward hybrid on-premise deployments for compliance-sensitive use cases.",
+  "source_url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+  "source_name": "TechCrunch",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
