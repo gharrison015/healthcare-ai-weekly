@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-18T23:45:00Z",
+  "slug": "claude-claude-code-now-reads-agents-md-if-there-is-no-claude-md",
+  "headline": "Claude Code expands agent configuration support with AGENTS.md fallback",
+  "body": "Anthropic updated Claude Code to read AGENTS.md files when Claude.md is unavailable, expanding how developers can configure agent behavior in code environments. This change reduces friction for teams migrating workflows or standardizing on agent definition formats across projects. For healthcare AI implementations, clearer agent configuration pathways matter when deploying clinical decision support tools or EHR-integrated assistants that require explicit behavioral guardrails. The update signals Anthropic's focus on making Claude a more flexible foundation for production healthcare applications where configuration consistency directly impacts audit trails and compliance documentation.",
+  "source_url": "https://code.claude.com/docs/en/changelog",
+  "source_name": "Code",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

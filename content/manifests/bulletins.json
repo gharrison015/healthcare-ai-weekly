@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-sets-up-biology-lab-as-it-ramps-ai-drug-program",
+      "headline": "Anthropic establishes biology lab to accelerate AI drug discovery programs",
+      "timestamp": "2026-09-18T23:45:03Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-now-reads-agents-md-if-there-is-no-claude-md",
+      "headline": "Claude Code expands agent configuration support with AGENTS.md fallback",
+      "timestamp": "2026-09-18T23:45:00Z",
+      "source_name": "Code",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-let-gpt-6-astra-code-without-using-codex-usage",
       "headline": "GPT-6 Astra gains independent coding capability without external dependencies",
       "timestamp": "2026-09-18T20:08:52Z",
