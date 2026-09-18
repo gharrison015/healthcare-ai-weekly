@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-code-from-source",
+      "headline": "Claude Code capability generates security concerns across healthcare vendor ecosystem",
+      "timestamp": "2026-09-18T17:29:35Z",
+      "source_name": "Claude Code From Source",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-astra-solves-a-wwi-german-radio-cipher",
       "headline": "GPT-6 Astra demonstrates advanced reasoning on historical cryptanalysis tasks",
       "timestamp": "2026-09-18T13:58:36Z",
