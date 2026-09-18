@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-18T13:58:33Z",
+  "slug": "openai-a-heap-overflow-and-sso-misconfiguration-to-compromise-openai-i",
+  "headline": "OpenAI security failures expose internal repos to compromise",
+  "body": "Security researchers disclosed that OpenAI's internal repositories were vulnerable to compromise through heap overflow and single sign-on misconfigurations. For healthcare AI implementations, this signals operational risk in vendor infrastructure that many health systems now depend on for clinical decision support and documentation tools. Organizations deploying OpenAI models in regulated environments should urgently audit their data handling agreements and assess whether their vendor's security posture meets HIPAA and state privacy requirements. These vulnerabilities underscore the need for healthcare CIOs to conduct independent security reviews before expanding AI tool adoption, particularly for vendors with documented infrastructure weaknesses.",
+  "source_url": "https://www.hacktron.ai/blog/hacking-openai",
+  "source_name": "Hacktron",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

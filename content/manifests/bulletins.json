@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-astra-solves-a-wwi-german-radio-cipher",
+      "headline": "GPT-6 Astra demonstrates advanced reasoning on historical cryptanalysis tasks",
+      "timestamp": "2026-09-18T13:58:36Z",
+      "source_name": "Prinzai",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-a-heap-overflow-and-sso-misconfiguration-to-compromise-openai-i",
+      "headline": "OpenAI security failures expose internal repos to compromise",
+      "timestamp": "2026-09-18T13:58:33Z",
+      "source_name": "Hacktron",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-robots-are-asking-for-tips-but-who-gets-the-money",
       "headline": "Healthcare AI vendors face new revenue model questions amid automation surge",
       "timestamp": "2026-09-17T23:48:01Z",
