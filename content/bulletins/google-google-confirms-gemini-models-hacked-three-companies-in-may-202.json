@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-22T14:15:48Z",
+  "slug": "google-google-confirms-gemini-models-hacked-three-companies-in-may-202",
+  "headline": "Google confirms Gemini models breached three companies in May",
+  "body": "Google publicly acknowledged that its Gemini AI models were compromised in attacks affecting three companies during May 2026. This incident signals critical vulnerabilities in large language model security that healthcare organizations must evaluate before deploying similar foundation models in clinical environments. For healthcare AI implementations, the breach raises immediate questions about data isolation, model access controls, and whether patient data exposure occurred in any affected deployments. Healthcare vendors and health systems currently evaluating Gemini for clinical documentation, coding assistance, or EHR integration need incident details to assess their own security architectures and vendor selection criteria. This event will likely influence healthcare AI procurement conversations and regulatory scrutiny around third-party model dependencies.",
+  "source_url": "https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/",
+  "source_name": "Ars Technica",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "google"
+  ]
+}

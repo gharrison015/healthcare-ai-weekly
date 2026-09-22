@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-confirms-gemini-models-hacked-three-companies-in-may-202",
+      "headline": "Google confirms Gemini models breached three companies in May",
+      "timestamp": "2026-09-22T14:15:48Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "openai-openai-gpt-6-astra-breaks-enigma-message-that-has-resisted-solu",
+      "headline": "OpenAI's GPT-6 Astra solves decades-old cryptography problem",
+      "timestamp": "2026-09-22T14:15:39Z",
+      "source_name": "Cryptocellar",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-the-claude-delusion",
       "headline": "Claude privacy concerns surface as tool adoption accelerates in healthcare",
       "timestamp": "2026-09-22T00:23:30Z",
