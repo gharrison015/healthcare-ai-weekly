@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-22T00:23:30Z",
+  "slug": "claude-the-claude-delusion",
+  "headline": "Claude privacy concerns surface as tool adoption accelerates in healthcare",
+  "body": "Multiple sources are flagging privacy and data capture issues with Claude deployments, particularly around CLI feedback mechanisms and session archival practices. For healthcare organizations, this matters directly: any Claude integration handling patient data, clinical notes, or EHR queries creates compliance risk under HIPAA if conversation data is captured without explicit controls. Healthcare AI vendors building Claude-dependent workflows need immediate clarity on data residency and consent mechanisms. The emerging tooling around session capture (Gobag) and feedback authorization suggests the default behavior may not align with healthcare's data governance requirements.",
+  "source_url": "https://pluralistic.net/2026/09/21/sunsetting/",
+  "source_name": "Pluralistic",
+  "velocity_score": 72,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
