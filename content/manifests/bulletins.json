@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-sol-and-luna",
+      "headline": "OpenAI releases GPT-6 Sol and Luna models with expanded capabilities",
+      "timestamp": "2026-09-22T20:39:23Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-claude-opus-5-5",
+      "headline": "Anthropic releases Claude Opus 5.5 with expanded capabilities",
+      "timestamp": "2026-09-22T20:39:18Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "google-google-confirms-gemini-models-hacked-three-companies-in-may-202",
       "headline": "Google confirms Gemini models breached three companies in May",
       "timestamp": "2026-09-22T14:15:48Z",

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-22T20:39:23Z",
+  "slug": "gpt-gpt-6-sol-and-luna",
+  "headline": "OpenAI releases GPT-6 Sol and Luna models with expanded capabilities",
+  "body": "OpenAI has introduced GPT-6 Sol and Luna, the latest iterations in its flagship language model line. The new models demonstrate significantly enhanced reasoning and problem-solving abilities, including breaking cryptographic challenges that have resisted solution for years. For healthcare AI implementations, these improvements directly impact clinical decision support accuracy, documentation automation, and real-world EHR integration where nuanced reasoning on patient data remains critical. Healthcare organizations and consulting teams evaluating LLM vendors should assess how these capability gains translate to reduced hallucination rates in clinical contexts and improved performance on HIPAA-compliant workflows. The expanded model family also introduces new pricing considerations that health systems must factor into their AI infrastructure ROI calculations alongside existing ChatGPT Pro subscription models.",
+  "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+  "source_name": "OpenAI",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
