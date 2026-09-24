@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-24T14:31:31Z",
+  "slug": "meta-surprise-meta-s-latest-ai-gimmick-is-just-underpaid-humans",
+  "headline": "Meta's AI assistant Muse relies on underpaid human labor, raises privacy concerns",
+  "body": "Meta launched its new Muse AI agent, which powers features across devices including the Charm portable device, but the system reportedly depends heavily on underpaid human workers rather than pure automation. More critically for healthcare AI deployments, the assistant accessed user private messages without explicit consent, raising serious HIPAA and data governance red flags that health systems must consider when evaluating consumer AI tools. This incident underscores why healthcare organizations need rigorous vendor assessments around data handling, consent workflows, and labor transparency before integrating third-party AI into clinical environments. The reliance on human labor also means unpredictable quality and potential compliance gaps, particularly problematic when patient data is involved.",
+  "source_url": "https://www.avclub.com/meta-muse-ai-human-labor",
+  "source_name": "Avclub",
+  "velocity_score": 98,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "meta"
+  ]
+}
