@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-500-promax-plan-listed-in-api",
+      "headline": "OpenAI launches $500 monthly Pro Max tier amid capability and ethics debate",
+      "timestamp": "2026-09-25T14:51:50Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-cracking-vfpu-math-functions-using-claude-sony-psp",
+      "headline": "Claude demonstrates reverse engineering and code generation capabilities at scale",
+      "timestamp": "2026-09-25T14:51:47Z",
+      "source_name": "Ppsspp",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-show-hn-does-per-step-reasoning-effort-save-money-in-claude-cod",
       "headline": "Claude's reasoning tokens reshape AI cost economics for healthcare developers",
       "timestamp": "2026-09-25T00:08:40Z",
