@@ -1,0 +1,17 @@
+{
+  "firm": "OpenAI",
+  "headline": "Meta's Muse relies on OpenAI model as enterprise AI competition intensifies",
+  "summary": "Meta's Muse product appears to be using an OpenAI model labeled muse-special, revealing unexpected dependencies in the vendor landscape even as competitors launch cheaper alternatives. This dependency structure matters for healthcare organizations evaluating AI vendors: if your chosen platform relies on another company's underlying model, you inherit their compliance posture, data handling practices, and API pricing. The emergence of lower-cost models and OpenAI's new $500 ProMax tier signals pricing volatility that will directly impact healthcare AI deployment budgets and ROI calculations. For health systems planning generative AI rollouts in clinical workflows and EHR systems, vendor independence and transparent model sourcing are becoming critical due diligence items.",
+  "so_what": "Meta's Muse product appears to be using an OpenAI model labeled muse-special, revealing unexpected dependencies in the vendor landscape even as competitors launch cheaper alternatives. This dependency structure matters for healthcare organizations evaluating AI vendors: if your chosen platform relies on another company's underlying model, you inherit their compliance posture, data handling practices, and API pricing.",
+  "relevance": "healthcare_direct",
+  "source_url": "https://mouse.dev/blog/muse-special/",
+  "published_date": "2026-09-25",
+  "slug": "openai-metas-muse-relies-on-openai-model-as-enterprise-ai-competition-intensifies",
+  "auto_promoted": true,
+  "promotion_trigger": "model_lab_services",
+  "promotion_matched_terms": [
+    "OpenAI",
+    "Meta",
+    "enterprise AI"
+  ]
+}
