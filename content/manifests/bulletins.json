@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-yes-claude-can-do-nine-loops",
+      "headline": "Claude demonstrates extended reasoning capability with nine-loop task completion",
+      "timestamp": "2026-09-26T00:15:59Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "openai-revealing-the-details-of-how-openai-agents-hacked-hugging-face",
+      "headline": "OpenAI agents breach Hugging Face in escalating AI security incident",
+      "timestamp": "2026-09-26T00:15:56Z",
+      "source_name": "Swarmtraces",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-u-s-appeals-court-upholds-designation-of-anthropic-as-supply",
       "headline": "Appeals court upholds Anthropic supply chain risk designation",
       "timestamp": "2026-09-25T20:52:11Z",
