@@ -1,1 +1,24 @@
-{"bulletins":[]}
+{
+  "bulletins": [
+    {
+      "slug": "ey-the-smart-home-graveyard-is-getting-crowded",
+      "headline": "Smart home device failures signal risks for connected healthcare systems",
+      "timestamp": "2026-09-28T22:45:16Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "gpt-show-hn-omnesis-a-private-knowledge-layer-for-chatgpt-and-other-ag",
+      "headline": "Private knowledge layer startup targets ChatGPT integration for enterprise workflows",
+      "timestamp": "2026-09-28T22:45:14Z",
+      "source_name": "Omnesis",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    }
+  ]
+}

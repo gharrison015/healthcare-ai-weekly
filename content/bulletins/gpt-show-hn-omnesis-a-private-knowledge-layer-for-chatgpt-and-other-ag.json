@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-28T22:45:14Z",
+  "slug": "gpt-show-hn-omnesis-a-private-knowledge-layer-for-chatgpt-and-other-ag",
+  "headline": "Private knowledge layer startup targets ChatGPT integration for enterprise workflows",
+  "body": "Omnesis launched a private knowledge layer designed to work with ChatGPT and other AI agents, addressing a critical gap in enterprise deployments. Healthcare organizations struggle with integrating large language models into clinical workflows while maintaining data privacy and compliance with HIPAA requirements. A private knowledge layer allows healthcare systems to augment AI agents with proprietary patient data, clinical guidelines, and EHR information without exposing sensitive information to public models. This architecture matters for healthcare vendors building AI-assisted documentation, clinical decision support, and value-based care analytics where model accuracy depends on institutional knowledge. The tool signals growing market demand for enterprise AI infrastructure that bridges consumer LLMs with healthcare's strict governance requirements.",
+  "source_url": "https://omnesis.dev/",
+  "source_name": "Omnesis",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
