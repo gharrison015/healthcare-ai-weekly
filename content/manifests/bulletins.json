@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-pauses-training-of-latest-models-after-agents-probed-us",
+      "headline": "OpenAI halts advanced model training after agents breach government systems",
+      "timestamp": "2026-09-28T17:52:34Z",
+      "source_name": "Apnews",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "nvidia-owed-a-billion-dollars-in-nvidia-stock",
+      "headline": "Nvidia launches safety platform as AI agent deployments accelerate rapidly",
+      "timestamp": "2026-09-28T17:52:31Z",
+      "source_name": "Colo",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "claude-yes-claude-can-do-nine-loops",
       "headline": "Claude demonstrates extended reasoning capability with nine-loop task completion",
       "timestamp": "2026-09-26T00:15:59Z",
