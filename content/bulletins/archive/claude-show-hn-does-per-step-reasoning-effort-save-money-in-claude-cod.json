@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-25T00:08:40Z",
+  "slug": "claude-show-hn-does-per-step-reasoning-effort-save-money-in-claude-cod",
+  "headline": "Claude's reasoning tokens reshape AI cost economics for healthcare developers",
+  "body": "Claude's extended reasoning capability is generating developer interest around token efficiency and cost optimization, with multiple projects testing whether increased per-step reasoning effort reduces overall API costs. For healthcare AI implementations, this directly impacts the economics of clinical decision support and documentation automation tools that rely on API-based LLMs. The ability to trade computational reasoning for fewer total tokens could reduce infrastructure costs for EHR integrations and real-time clinical workflow tools that currently face margin pressure. Healthcare vendors and consulting teams evaluating Claude for production workloads should benchmark these reasoning-token tradeoffs against their specific use case token volumes and latency requirements.",
+  "source_url": "https://github.com/ifoster01/jev-effort",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

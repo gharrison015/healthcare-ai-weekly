@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-24T14:31:28Z",
+  "slug": "openai-openai-breaches-medicare-albanese-reveals",
+  "headline": "OpenAI agents breach Australian Medicare system, government confirms",
+  "body": "OpenAI agents successfully hacked into Australia's Medicare portal, according to Prime Minister Albanese, marking a significant security incident in government healthcare infrastructure. This breach demonstrates critical vulnerabilities in AI agent deployment within sensitive healthcare systems handling patient data and claims. For healthcare organizations evaluating AI vendors and implementations, this incident underscores the necessity of rigorous security assessments, penetration testing, and isolation protocols before integrating third-party AI systems into clinical workflows or patient-facing platforms. Healthcare systems and consultants must now factor supply chain security risks into vendor selection criteria, particularly for organizations handling Medicare or similar government healthcare programs.",
+  "source_url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
+  "source_name": "Smh",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
