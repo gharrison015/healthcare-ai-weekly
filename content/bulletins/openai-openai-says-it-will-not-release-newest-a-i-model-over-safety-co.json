@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-29T21:39:10Z",
+  "slug": "openai-openai-says-it-will-not-release-newest-a-i-model-over-safety-co",
+  "headline": "OpenAI withholds Astra model release citing unresolved safety concerns",
+  "body": "OpenAI has decided not to release its newest AI model, Astra 6.1, over safety issues it views as unresolved. This decision reflects growing scrutiny around deploying advanced AI systems in regulated industries. For healthcare AI specifically, this signals that vendors and enterprises cannot assume safety clearance simply because a capability exists. The move underscores the validation rigor required before deploying foundation models in clinical workflows where patient outcomes are at stake. Healthcare organizations evaluating AI partnerships should expect similar safety gates from responsible vendors moving forward.",
+  "source_url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
+  "source_name": "The New York Times",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
