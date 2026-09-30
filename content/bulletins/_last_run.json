@@ -1,7 +1,14 @@
 {
-  "timestamp_utc": "2026-09-30T14:18:59.035191+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-09-30T16:10:10.725526+00:00",
+  "source_counts": {
+    "hackernews": 238,
+    "newsdata": 93
+  },
+  "total_collected": 331,
+  "candidate_count": 2,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "openai",
+    "anthropic"
+  ]
 }
