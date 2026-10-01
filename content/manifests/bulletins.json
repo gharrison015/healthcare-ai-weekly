@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-gemini-4-argon",
+      "headline": "Google releases Gemini 4 Argon, reclaiming position in AI intelligence rankings",
+      "timestamp": "2026-10-01T16:47:18Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
+      "slug": "openai-ftc-is-investigating-openai-anthropic-and-other-ai-companies-ov",
+      "headline": "FTC launches formal investigation into OpenAI, Anthropic over AI product risks",
+      "timestamp": "2026-10-01T16:47:15Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-agents-work-better-when-they-can-pass-each-other-notes",
       "headline": "AI agents coordinate better through information sharing mechanisms",
       "timestamp": "2026-10-01T00:55:16Z",
