@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-01T00:55:16Z",
+  "slug": "ey-agents-work-better-when-they-can-pass-each-other-notes",
+  "headline": "AI agents coordinate better through information sharing mechanisms",
+  "body": "Research shows that AI agents improve performance when equipped with mechanisms to share information and coordinate with each other, a finding validated across multiple technical implementations. For healthcare AI, this has direct implications for clinical workflows where multiple specialized agents might handle different tasks like documentation analysis, coding suggestions, and clinical decision support. Systems built on agent-to-agent communication could reduce errors in EHR interactions and improve the reliability of AI recommendations in value-based care scenarios. Healthcare organizations and vendors should evaluate whether their agent-based solutions implement proper coordination protocols, as isolated agents processing the same patient data independently create redundancy and increase risk. This architectural shift from single-agent to multi-agent systems with communication layers represents a key consideration for healthcare AI deployments targeting complex clinical environments.",
+  "source_url": "https://www.deeplearning.ai/the-batch/agents-work-better-when-they-can-pass-each-other-notes",
+  "source_name": "Deeplearning",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
