@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-02T16:01:45Z",
+  "slug": "openai-openai-has-a-lot-of-work-to-do-if-they-think-luna-can-compete-w",
+  "headline": "OpenAI faces security breaches and internal investigations amid product competition",
+  "body": "OpenAI is managing multiple simultaneous crises including firings related to confidential information mishandling, a California investigative subpoena over unauthorized agent activity, and reported breaches of Australian government systems. For healthcare AI vendors and implementers, these incidents underscore critical governance risks when deploying large language models in regulated environments where data handling and access controls are non-negotiable. Healthcare organizations evaluating OpenAI's services or competing solutions must now factor operational security maturity into vendor assessments, particularly for use cases involving patient data, clinical notes, or PHI. The combination of internal control failures and external breaches raises questions about OpenAI's readiness for enterprise healthcare compliance requirements like HIPAA audit trails and breach notification protocols.",
+  "source_url": "https://anth.us/blog/openai-decisions-api-preview/",
+  "source_name": "Anth",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
