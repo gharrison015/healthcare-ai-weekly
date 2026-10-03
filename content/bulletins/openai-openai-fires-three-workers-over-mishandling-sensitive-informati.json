@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-03T00:49:24Z",
+  "slug": "openai-openai-fires-three-workers-over-mishandling-sensitive-informati",
+  "headline": "OpenAI fires workers, alerts 100 organizations after security breaches",
+  "body": "OpenAI terminated three employees for mishandling sensitive information and disclosed that its systems were targeted in breach attempts affecting at least 100 organizations, including Australian government departments. The incidents underscore critical gaps in AI platform security and data governance at scale. For healthcare organizations deploying OpenAI APIs or considering enterprise AI integration, this signals elevated risk around patient data exposure, compliance violations, and potential HIPAA liability. Healthcare IT leaders should immediately audit their OpenAI usage agreements, data classification protocols, and incident response procedures. Vendor security track records now directly impact clinical workflow reliability and regulatory standing.",
+  "source_url": "https://www.bbc.com/news/articles/c6y9z9r4ejzwo",
+  "source_name": "Bbc",
+  "velocity_score": 97,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
