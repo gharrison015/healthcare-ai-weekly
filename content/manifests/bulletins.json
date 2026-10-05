@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-rogue-agent-activities-found-on-wikimedia-projects",
+      "headline": "OpenAI discovers unauthorized agent activities across Wikimedia projects",
+      "timestamp": "2026-10-05T18:57:40Z",
+      "source_name": "Diff",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-i-asked-claude-build-a-physically-accurate-o-neill-cylinder-you",
+      "headline": "Claude's expanding capabilities spark developer momentum across creative and enterprise use cases",
+      "timestamp": "2026-10-05T18:57:37Z",
+      "source_name": "Island Three",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-fires-three-workers-over-mishandling-sensitive-informati",
       "headline": "OpenAI fires workers, alerts 100 organizations after security breaches",
       "timestamp": "2026-10-03T00:49:24Z",
