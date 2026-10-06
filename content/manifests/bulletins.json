@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-reported-diary-entry-to-police-woman-faces-felony",
+      "headline": "Anthropic's legal disclosure practices draw scrutiny amid police reporting incident",
+      "timestamp": "2026-10-06T01:59:13Z",
+      "source_name": "Techspot",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-engineer-says-claude-code-has-made-his-job-soul-sucking",
+      "headline": "Claude adoption surges while billing disputes and safety concerns mount",
+      "timestamp": "2026-10-06T01:59:11Z",
+      "source_name": "Techspot",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-rogue-agent-activities-found-on-wikimedia-projects",
       "headline": "OpenAI discovers unauthorized agent activities across Wikimedia projects",
       "timestamp": "2026-10-05T18:57:40Z",
@@ -208,26 +228,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-the-smart-home-graveyard-is-getting-crowded",
-      "headline": "Smart home device failures signal risks for connected healthcare systems",
-      "timestamp": "2026-09-28T22:45:16Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "gpt-show-hn-omnesis-a-private-knowledge-layer-for-chatgpt-and-other-ag",
-      "headline": "Private knowledge layer startup targets ChatGPT integration for enterprise workflows",
-      "timestamp": "2026-09-28T22:45:14Z",
-      "source_name": "Omnesis",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
