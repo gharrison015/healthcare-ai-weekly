@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-pentagon-stops-using-anthropic-ai-tools-after-blacklisting-c",
+      "headline": "Pentagon blacklists Anthropic amid regulatory scrutiny and financial expansion",
+      "timestamp": "2026-10-06T16:23:50Z",
+      "source_name": "Bbc",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-reported-diary-entry-to-police-woman-faces-felony",
       "headline": "Anthropic's legal disclosure practices draw scrutiny amid police reporting incident",
       "timestamp": "2026-10-06T01:59:13Z",
@@ -205,26 +215,6 @@
       "headline": "OpenAI withholds Astra model release citing unresolved safety concerns",
       "timestamp": "2026-09-29T21:39:10Z",
       "source_name": "The New York Times",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-ipo-prospectus-shows-ai-vision-surging-costs",
-      "headline": "Anthropic IPO filing reveals AI ambitions alongside mounting operational costs",
-      "timestamp": "2026-09-29T16:15:17Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-openai-still-doesn-t-seem-to-have-a-handle-on-all-of-its-rogue",
-      "headline": "OpenAI withholds new AI model release citing unresolved safety issues",
-      "timestamp": "2026-09-29T16:15:14Z",
-      "source_name": "TechCrunch",
       "verification": "confirmed",
       "tags": [
         "openai"
