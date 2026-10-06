@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "meta-meta-s-muse-ai-agent-is-building-a-dossier-on-you",
+      "headline": "Meta's Muse AI agent raises privacy concerns amid wider deployment",
+      "timestamp": "2026-10-06T22:01:25Z",
+      "source_name": "Time",
+      "verification": "confirmed",
+      "tags": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "openai-anthropic-subscriptions-offer-5x-more-value-than-openai",
+      "headline": "Anthropic Claims Significant Value Advantage Over OpenAI in Subscription Comparison",
+      "timestamp": "2026-10-06T22:01:22Z",
+      "source_name": "Newsletter",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-pentagon-stops-using-anthropic-ai-tools-after-blacklisting-c",
       "headline": "Pentagon blacklists Anthropic amid regulatory scrutiny and financial expansion",
       "timestamp": "2026-10-06T16:23:50Z",
@@ -195,26 +215,6 @@
       "headline": "OpenAI Seeks $30B at $1.4T Valuation Amid Safety Scrutiny",
       "timestamp": "2026-09-30T00:53:12Z",
       "source_name": "Bloomberg",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-announces-ai-safety-platform",
-      "headline": "Nvidia launches AI safety platform addressing autonomous agent risks",
-      "timestamp": "2026-09-29T21:39:13Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-openai-says-it-will-not-release-newest-a-i-model-over-safety-co",
-      "headline": "OpenAI withholds Astra model release citing unresolved safety concerns",
-      "timestamp": "2026-09-29T21:39:10Z",
-      "source_name": "The New York Times",
       "verification": "confirmed",
       "tags": [
         "openai"

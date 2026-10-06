@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-06T22:01:25Z",
+  "slug": "meta-meta-s-muse-ai-agent-is-building-a-dossier-on-you",
+  "headline": "Meta's Muse AI agent raises privacy concerns amid wider deployment",
+  "body": "Meta has released its Muse AI agent, which is actively compiling detailed dossiers on users across platforms. The company has also open-sourced code enabling developers to build third-party Muse gadgets, accelerating ecosystem expansion. For healthcare AI implementations, this raises critical questions about data aggregation across vendor platforms and the privacy guardrails required when deploying agent-based systems in clinical environments. Healthcare organizations integrating AI agents into EHR workflows must now evaluate whether third-party agent ecosystems can meet HIPAA compliance requirements and audit standards. The velocity and breadth of Muse adoption signals that agent-based architectures are moving rapidly into production, making privacy-by-design and data governance non-negotiable for healthcare vendors and providers.",
+  "source_url": "https://time.com/article/2026/10/06/meta-muse-ai-agent-privacy/",
+  "source_name": "Time",
+  "velocity_score": 77,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "meta"
+  ]
+}
