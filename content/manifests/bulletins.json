@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-just-dropped-700-preprints-of-mathematical-proofs-and-co",
+      "headline": "OpenAI releases 700 math proofs, signaling AI reasoning capability advancement",
+      "timestamp": "2026-10-07T22:25:51Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-haiku-5-5",
+      "headline": "Anthropic releases Claude Haiku 5.5 as enterprise AI consolidation accelerates",
+      "timestamp": "2026-10-07T22:25:49Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-mathematical-manuscripts-and-supporting-proof-artifacts-produce",
       "headline": "OpenAI releases 700 mathematical manuscripts showing AI proof capabilities",
       "timestamp": "2026-10-07T17:05:56Z",
@@ -188,26 +208,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-i",
-      "headline": "GPT-6.1 Sol arrives after seven days, raising model velocity questions",
-      "timestamp": "2026-09-30T21:39:48Z",
-      "source_name": "Artificialanalysis",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-ftc-opens-probe-into-ai-giants-including-anthropic-and-openai",
-      "headline": "FTC launches formal investigation into OpenAI, Anthropic over AI practices",
-      "timestamp": "2026-09-30T21:39:45Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
