@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-mathematical-manuscripts-and-supporting-proof-artifacts-produce",
+      "headline": "OpenAI releases 700 mathematical manuscripts showing AI proof capabilities",
+      "timestamp": "2026-10-07T17:05:56Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-s-suggested-message-feature-i-think-the-real-custom",
+      "headline": "Claude's new code features spark debate over AI model incentives",
+      "timestamp": "2026-10-07T17:05:54Z",
+      "source_name": "Zohaib",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "meta-meta-s-muse-ai-agent-is-building-a-dossier-on-you",
       "headline": "Meta's Muse AI agent raises privacy concerns amid wider deployment",
       "timestamp": "2026-10-06T22:01:25Z",
@@ -185,36 +205,6 @@
       "headline": "FTC launches formal investigation into OpenAI, Anthropic over AI practices",
       "timestamp": "2026-09-30T21:39:45Z",
       "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-ipo-docs-reportedly-reveal-over-40b-in-losses-last",
-      "headline": "Anthropic IPO filing exposes $40B losses and Big Tech dependency",
-      "timestamp": "2026-09-30T16:10:13Z",
-      "source_name": "Mashable",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-1-sol-near-astra-intelligence-for-a-fifth-of-the-price",
-      "headline": "OpenAI releases GPT 6.1 Sol with advanced capabilities at reduced cost",
-      "timestamp": "2026-09-30T00:53:14Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-openai-targets-30b-in-new-funding-at-1-4t-value",
-      "headline": "OpenAI Seeks $30B at $1.4T Valuation Amid Safety Scrutiny",
-      "timestamp": "2026-09-30T00:53:12Z",
-      "source_name": "Bloomberg",
       "verification": "confirmed",
       "tags": [
         "openai"
