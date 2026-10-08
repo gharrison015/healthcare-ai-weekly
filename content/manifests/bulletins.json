@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-and-intelligent-ui-for-everyone",
+      "headline": "GPT-6 and Intelligent UI rollout expands access across all ChatGPT tiers",
+      "timestamp": "2026-10-08T17:05:02Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-openai-withdraws-3-math-papers",
+      "headline": "OpenAI withdraws three math papers amid accuracy concerns",
+      "timestamp": "2026-10-08T17:04:59Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "openai-openai-just-dropped-700-preprints-of-mathematical-proofs-and-co",
       "headline": "OpenAI releases 700 math proofs, signaling AI reasoning capability advancement",
       "timestamp": "2026-10-07T22:25:51Z",
@@ -178,36 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gemini-gemini-4-argon",
-      "headline": "Google releases Gemini 4 Argon, reclaiming position in AI intelligence rankings",
-      "timestamp": "2026-10-01T16:47:18Z",
-      "source_name": "Blog",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
-      ]
-    },
-    {
-      "slug": "openai-ftc-is-investigating-openai-anthropic-and-other-ai-companies-ov",
-      "headline": "FTC launches formal investigation into OpenAI, Anthropic over AI product risks",
-      "timestamp": "2026-10-01T16:47:15Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "ey-agents-work-better-when-they-can-pass-each-other-notes",
-      "headline": "AI agents coordinate better through information sharing mechanisms",
-      "timestamp": "2026-10-01T00:55:16Z",
-      "source_name": "Deeplearning",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
