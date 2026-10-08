@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-gigabyte-w775-v10-l01-hands-on-bringing-nvidia-gb300-deskside-7",
+      "headline": "Nvidia GB300 chips enter deskside systems as China scales homegrown AI alternatives",
+      "timestamp": "2026-10-08T22:39:17Z",
+      "source_name": "Servethehome",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-openai-annualised-revenues-20b-less-than-previously-signalled",
+      "headline": "OpenAI revises revenue targets downward, signals execution challenges",
+      "timestamp": "2026-10-08T22:39:14Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-and-intelligent-ui-for-everyone",
       "headline": "GPT-6 and Intelligent UI rollout expands access across all ChatGPT tiers",
       "timestamp": "2026-10-08T17:05:02Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "google-us-judge-dismisses-chegg-penske-antitrust-suits-over-google-ai",
-      "headline": "Judge dismisses antitrust cases against Google's AI Overviews feature",
-      "timestamp": "2026-10-01T22:07:23Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-agentic-front-end-refactoring-with-qbds-claude-code-figma-mcp",
-      "headline": "Claude Code gains traction as developers adopt agentic design system integration",
-      "timestamp": "2026-10-01T22:07:20Z",
-      "source_name": "Medium",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
