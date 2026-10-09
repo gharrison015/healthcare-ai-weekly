@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-09T22:01:32Z",
+  "slug": "claude-anthropic-bans-users-from-abusive-or-cruel-behavior-towards-cla",
+  "headline": "Anthropic enforces usage policy banning abusive behavior toward Claude",
+  "body": "Anthropic has updated its usage policy to prohibit users from engaging in abusive or cruel behavior toward Claude, marking a shift in how AI companies govern interaction norms. This policy change reflects growing attention to how users interact with AI systems and sets expectations for respectful engagement. For healthcare organizations deploying Claude in clinical workflows, this underscores the importance of establishing internal governance around AI tool usage, particularly when multiple clinicians access shared instances. Healthcare vendors integrating Claude into EHR systems or clinical decision support should clarify acceptable use policies with their clients to ensure compliance and maintain system integrity. The move signals that AI providers are now actively monitoring and enforcing behavioral standards, which healthcare IT leaders should factor into their vendor assessment and procurement processes.",
+  "source_url": "https://www.theguardian.com/technology/2026/oct/08/anthropic-bans-abusive-behavior-claude",
+  "source_name": "Theguardian",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
