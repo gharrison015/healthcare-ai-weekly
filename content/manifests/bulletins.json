@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-bans-users-from-being-cruel-to-its-ai-systems",
+      "headline": "Anthropic enforces new usage policies banning model abuse and election interference",
+      "timestamp": "2026-10-09T16:42:44Z",
+      "source_name": "Bbc",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-bans-abusive-or-cruel-behavior-towards-claude",
+      "headline": "Anthropic enforces usage policy banning abusive behavior toward Claude",
+      "timestamp": "2026-10-09T16:42:41Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-gigabyte-w775-v10-l01-hands-on-bringing-nvidia-gb300-deskside-7",
       "headline": "Nvidia GB300 chips enter deskside systems as China scales homegrown AI alternatives",
       "timestamp": "2026-10-08T22:39:17Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-has-a-lot-of-work-to-do-if-they-think-luna-can-compete-w",
-      "headline": "OpenAI faces security breaches and internal investigations amid product competition",
-      "timestamp": "2026-10-02T16:01:45Z",
-      "source_name": "Anth",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-amazon-seeks-to-offload-8b-of-nvidia-chips-to-investors",
-      "headline": "Amazon offloads $8B in Nvidia chips, signaling GPU market shift",
-      "timestamp": "2026-10-02T16:01:42Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
