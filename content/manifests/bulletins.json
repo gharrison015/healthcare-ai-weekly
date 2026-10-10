@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-fires-three-safety-researchers-for-mishandling-research",
+      "headline": "OpenAI fires three safety researchers amid research handling dispute",
+      "timestamp": "2026-10-10T01:34:28Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "claude-anthropic-bans-users-from-abusive-or-cruel-behavior-towards-cla",
       "headline": "Anthropic enforces usage policy banning abusive behavior toward Claude",
       "timestamp": "2026-10-09T22:01:32Z",
@@ -188,16 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-fires-three-workers-over-mishandling-sensitive-informati",
-      "headline": "OpenAI fires workers, alerts 100 organizations after security breaches",
-      "timestamp": "2026-10-03T00:49:24Z",
-      "source_name": "Bbc",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
