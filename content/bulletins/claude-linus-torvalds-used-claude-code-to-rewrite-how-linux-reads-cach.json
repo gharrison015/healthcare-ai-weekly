@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-13T17:14:47Z",
+  "slug": "claude-linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cach",
+  "headline": "Linus Torvalds deploys Claude Code for Linux kernel optimization work",
+  "body": "Linus Torvalds used Claude Code to rewrite core Linux file caching logic, marking a notable shift toward AI-assisted infrastructure development. For healthcare AI, this signals that large language models are moving upstream into systems-level work that underpins clinical applications. Healthcare organizations running Linux-based EHR systems, data pipelines, and medical imaging infrastructure depend on kernel-level performance. When foundational developers adopt Claude for critical system code, it affects the reliability assumptions healthcare IT teams build into their AI deployment strategies. Expect vendor conversations to shift from \"can we use AI\" to \"which AI tools are enterprise-ready for production systems your clinical workflows depend on.\"",
+  "source_url": "https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/",
+  "source_name": "Startupfortune",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

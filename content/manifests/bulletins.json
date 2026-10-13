@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-a-look-at-the-math-that-openai-claims-computes-faster-fourier-t",
+      "headline": "OpenAI publishes faster Fourier transforms, fires safety researchers",
+      "timestamp": "2026-10-13T17:14:49Z",
+      "source_name": "Argmin",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cach",
+      "headline": "Linus Torvalds deploys Claude Code for Linux kernel optimization work",
+      "timestamp": "2026-10-13T17:14:47Z",
+      "source_name": "Startupfortune",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-research-firm-calls-anthropic-s-ipo-unprecedented-test-of-in",
       "headline": "Anthropic faces IPO skepticism as safety concerns resurface",
       "timestamp": "2026-10-13T02:46:29Z",
@@ -178,16 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-pentagon-stops-using-anthropic-ai-tools-after-blacklisting-c",
-      "headline": "Pentagon blacklists Anthropic amid regulatory scrutiny and financial expansion",
-      "timestamp": "2026-10-06T16:23:50Z",
-      "source_name": "Bbc",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
