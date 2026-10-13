@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-research-firm-calls-anthropic-s-ipo-unprecedented-test-of-in",
+      "headline": "Anthropic faces IPO skepticism as safety concerns resurface",
+      "timestamp": "2026-10-13T02:46:29Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "google-gbos-vm-run-googlebook-os-in-a-gpu-accelerated-vm-on-apple-sili",
       "headline": "Google expands AI infrastructure hiring as enterprise cloud deals accelerate",
       "timestamp": "2026-10-12T19:30:54Z",
@@ -178,26 +188,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-reported-diary-entry-to-police-woman-faces-felony",
-      "headline": "Anthropic's legal disclosure practices draw scrutiny amid police reporting incident",
-      "timestamp": "2026-10-06T01:59:13Z",
-      "source_name": "Techspot",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-engineer-says-claude-code-has-made-his-job-soul-sucking",
-      "headline": "Claude adoption surges while billing disputes and safety concerns mount",
-      "timestamp": "2026-10-06T01:59:11Z",
-      "source_name": "Techspot",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

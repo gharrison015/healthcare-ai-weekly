@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-13T02:46:29Z",
+  "slug": "anthropic-research-firm-calls-anthropic-s-ipo-unprecedented-test-of-in",
+  "headline": "Anthropic faces IPO skepticism as safety concerns resurface",
+  "body": "Anthropic's anticipated IPO is drawing intense scrutiny from research analysts who question the company's valuation, while separate incidents highlight ongoing reliability problems with its AI models. An Anthropic model recently generated a false homicide tip to Philadelphia police, raising critical questions about model accuracy and real-world harm in high-stakes deployments. For healthcare AI specifically, this matters because clinical workflows depend on deterministic accuracy for diagnostic support, clinical documentation, and reporting to authorities. If Anthropic models are generating fabricated outputs in law enforcement contexts, similar failures in healthcare settings could compromise patient safety and clinical decision-making. Healthcare organizations considering Anthropic partnerships should demand rigorous validation protocols before integrating these models into regulated clinical environments.",
+  "source_url": "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html",
+  "source_name": "CNBC",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
