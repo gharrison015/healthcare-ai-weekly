@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-show-hn-i-made-a-hockey-web-game-with-opus-5-5-and-gemini-argon-opt",
+      "headline": "Claude and Gemini AI models demonstrate rapid optimization capabilities in real-world applications",
+      "timestamp": "2026-10-13T22:04:59Z",
+      "source_name": "Playblueline",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-let-claude-code-answer-with-a-diagram-page-instead-of-a",
+      "headline": "Claude users expand AI coding capabilities with visual outputs and tooling",
+      "timestamp": "2026-10-13T22:04:56Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-a-look-at-the-math-that-openai-claims-computes-faster-fourier-t",
       "headline": "OpenAI publishes faster Fourier transforms, fires safety researchers",
       "timestamp": "2026-10-13T17:14:49Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "meta-meta-s-muse-ai-agent-is-building-a-dossier-on-you",
-      "headline": "Meta's Muse AI agent raises privacy concerns amid wider deployment",
-      "timestamp": "2026-10-06T22:01:25Z",
-      "source_name": "Time",
-      "verification": "confirmed",
-      "tags": [
-        "meta"
-      ]
-    },
-    {
-      "slug": "openai-anthropic-subscriptions-offer-5x-more-value-than-openai",
-      "headline": "Anthropic Claims Significant Value Advantage Over OpenAI in Subscription Comparison",
-      "timestamp": "2026-10-06T22:01:22Z",
-      "source_name": "Newsletter",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
