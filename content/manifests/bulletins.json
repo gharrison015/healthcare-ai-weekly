@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-more-money-than-they-ever-imagined-and-no-clue-how-to-spend-it",
+      "headline": "AI funding surge creates infrastructure spending pressure for model builders",
+      "timestamp": "2026-10-14T21:06:23Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "openai-openai-claims-employee-sent-secret-device-information-to-apple",
+      "headline": "OpenAI security breach exposes risks in AI infrastructure protection",
+      "timestamp": "2026-10-14T21:06:20Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "gemini-gemini-4-argon",
       "headline": "Google releases Gemini 4 Argon with January 2025 knowledge cutoff",
       "timestamp": "2026-10-14T14:46:48Z",
@@ -195,26 +215,6 @@
       "headline": "Anthropic releases Claude Haiku 5.5 as enterprise AI consolidation accelerates",
       "timestamp": "2026-10-07T22:25:49Z",
       "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-mathematical-manuscripts-and-supporting-proof-artifacts-produce",
-      "headline": "OpenAI releases 700 mathematical manuscripts showing AI proof capabilities",
-      "timestamp": "2026-10-07T17:05:56Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-s-suggested-message-feature-i-think-the-real-custom",
-      "headline": "Claude's new code features spark debate over AI model incentives",
-      "timestamp": "2026-10-07T17:05:54Z",
-      "source_name": "Zohaib",
       "verification": "confirmed",
       "tags": [
         "claude"
