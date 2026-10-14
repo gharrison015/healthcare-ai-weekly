@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-gemini-4-argon",
+      "headline": "Google releases Gemini 4 Argon with January 2025 knowledge cutoff",
+      "timestamp": "2026-10-14T14:46:48Z",
+      "source_name": "Deepmind",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
+      "slug": "openai-openai-engineer-arrested-in-bugging-of-executive-conference-roo",
+      "headline": "OpenAI engineer arrested for allegedly bugging executive conference room",
+      "timestamp": "2026-10-14T14:46:46Z",
+      "source_name": "Sfstandard",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-show-hn-i-made-a-hockey-web-game-with-opus-5-5-and-gemini-argon-opt",
       "headline": "Claude and Gemini AI models demonstrate rapid optimization capabilities in real-world applications",
       "timestamp": "2026-10-13T22:04:59Z",
