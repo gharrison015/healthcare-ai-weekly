@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-eight-states-sue-openai-saying-chatgpt-isn-t-safe-for-kids",
+      "headline": "Eight states sue OpenAI over ChatGPT safety risks for minors",
+      "timestamp": "2026-10-15T20:42:15Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-accenture-tells-employees-to-spend-only-29-on-claude-per-month",
+      "headline": "Accenture caps Claude spending at $29 monthly per employee",
+      "timestamp": "2026-10-15T20:42:12Z",
+      "source_name": "404Media",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-s-scion-is-heavily-inspired-by-mononoke",
       "headline": "Anthropic posts $16.8B quarterly revenue while warning of AI self-replication risks",
       "timestamp": "2026-10-15T14:32:41Z",
@@ -195,26 +215,6 @@
       "headline": "OpenAI revises revenue targets downward, signals execution challenges",
       "timestamp": "2026-10-08T22:39:14Z",
       "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-and-intelligent-ui-for-everyone",
-      "headline": "GPT-6 and Intelligent UI rollout expands access across all ChatGPT tiers",
-      "timestamp": "2026-10-08T17:05:02Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-openai-withdraws-3-math-papers",
-      "headline": "OpenAI withdraws three math papers amid accuracy concerns",
-      "timestamp": "2026-10-08T17:04:59Z",
-      "source_name": "Github",
       "verification": "confirmed",
       "tags": [
         "openai"
