@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-recording-device-hidden-in-toilet-paper-found-in-top-secret-ope",
+      "headline": "OpenAI engineer arrested for planting recording device in conference room",
+      "timestamp": "2026-10-15T23:58:45Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-apple-google-microsoft-amazon-meta-gave-trump-92m-for-hi",
+      "headline": "Tech giants' political spending raises questions about AI regulation influence",
+      "timestamp": "2026-10-15T23:58:43Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "openai-eight-states-sue-openai-saying-chatgpt-isn-t-safe-for-kids",
       "headline": "Eight states sue OpenAI over ChatGPT safety risks for minors",
       "timestamp": "2026-10-15T20:42:15Z",
@@ -198,26 +218,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-gigabyte-w775-v10-l01-hands-on-bringing-nvidia-gb300-deskside-7",
-      "headline": "Nvidia GB300 chips enter deskside systems as China scales homegrown AI alternatives",
-      "timestamp": "2026-10-08T22:39:17Z",
-      "source_name": "Servethehome",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-openai-annualised-revenues-20b-less-than-previously-signalled",
-      "headline": "OpenAI revises revenue targets downward, signals execution challenges",
-      "timestamp": "2026-10-08T22:39:14Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
