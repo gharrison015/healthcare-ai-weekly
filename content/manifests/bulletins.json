@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-chatgpt-can-peek-at-your-chrome-tabs-now",
+      "headline": "ChatGPT gains browser access capability, expanding real-time data reach",
+      "timestamp": "2026-10-16T20:14:48Z",
+      "source_name": "The Verge",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-claude-reveals-ecdsa-curve-origins",
+      "headline": "Anthropic publishes Claude cryptographic research as enterprise adoption accelerates",
+      "timestamp": "2026-10-16T20:14:45Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-sergey-brin-says-google-s-ai-models-are-reaching-recursive-self-imp",
       "headline": "Google's AI reaches recursive self-improvement, raising clinical validation stakes",
       "timestamp": "2026-10-16T14:24:25Z",
@@ -208,26 +228,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-bans-users-from-being-cruel-to-its-ai-systems",
-      "headline": "Anthropic enforces new usage policies banning model abuse and election interference",
-      "timestamp": "2026-10-09T16:42:44Z",
-      "source_name": "Bbc",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-bans-abusive-or-cruel-behavior-towards-claude",
-      "headline": "Anthropic enforces usage policy banning abusive behavior toward Claude",
-      "timestamp": "2026-10-09T16:42:41Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

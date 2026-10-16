@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-16T20:14:48Z",
+  "slug": "gpt-chatgpt-can-peek-at-your-chrome-tabs-now",
+  "headline": "ChatGPT gains browser access capability, expanding real-time data reach",
+  "body": "OpenAI has released a feature allowing ChatGPT to access and read Chrome browser tabs, significantly expanding the model's ability to pull real-time information during conversations. For healthcare AI implementation, this capability creates both opportunities and serious security concerns in clinical settings where patient data visibility and HIPAA compliance are non-negotiable. Healthcare organizations deploying ChatGPT-based tools will need to establish strict policies around browser usage, tab isolation, and data segregation to prevent accidental exposure of protected health information during AI interactions. The ability to peek at open tabs could compromise EHR systems, clinical notes, or patient records if not properly gated through IT governance. Healthcare IT leaders and consultants must now factor browser-level data protection into their AI deployment frameworks.",
+  "source_url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+  "source_name": "The Verge",
+  "velocity_score": 77,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

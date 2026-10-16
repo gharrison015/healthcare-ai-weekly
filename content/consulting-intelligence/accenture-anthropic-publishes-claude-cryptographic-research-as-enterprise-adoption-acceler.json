@@ -1,0 +1,15 @@
+{
+  "firm": "Accenture",
+  "headline": "Anthropic publishes Claude cryptographic research as enterprise adoption accelerates",
+  "summary": "Anthropic released technical research on ECDSA curve origins while enterprise adoption of Claude continues expanding, evidenced by Accenture offering employees subsidized access at $29 monthly. The cryptographic research and concurrent focus on code review practices and quantum circuit optimization demonstrate Claude's technical depth across multiple domains. For healthcare AI implementations, this matters because cryptographic foundations and code quality assurance directly impact HIPAA compliance, audit readiness, and the security posture required for clinical deployment. Healthcare organizations evaluating Claude for sensitive workflows like EHR integration or patient data analysis should factor in these technical capabilities and Anthropic's commitment to transparency. Enterprise pricing models like Accenture's signal that large healthcare systems may negotiate similar volume discounts for organization-wide AI adoption.",
+  "so_what": "Anthropic released technical research on ECDSA curve origins while enterprise adoption of Claude continues expanding, evidenced by Accenture offering employees subsidized access at $29 monthly. The cryptographic research and concurrent focus on code review practices and quantum circuit optimization demonstrate Claude's technical depth across multiple domains.",
+  "relevance": "healthcare_direct",
+  "source_url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+  "published_date": "2026-10-16",
+  "slug": "accenture-anthropic-publishes-claude-cryptographic-research-as-enterprise-adoption-acceler",
+  "auto_promoted": true,
+  "promotion_trigger": "tracked_firm",
+  "promotion_matched_terms": [
+    "Accenture"
+  ]
+}
