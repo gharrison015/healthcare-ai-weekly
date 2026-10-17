@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-17T00:03:08Z",
+  "slug": "nvidia-nvidia-rtx-pro-4500-blackwell-server-l40s-throughput-at-165w-in",
+  "headline": "Nvidia RTX Pro 4500 Blackwell delivers enterprise GPU efficiency gains",
+  "body": "Nvidia released the RTX Pro 4500 Blackwell Server, achieving L40S-level throughput while consuming only 165W in a single slot form factor. For healthcare AI deployments, this density and power efficiency directly reduces infrastructure costs for on-premise inference workloads, critical for institutions running clinical decision support models, imaging analytics, or EHR-integrated AI features. The single-slot design simplifies data center architecture and cooling requirements, making it viable for smaller health systems and mid-market providers evaluating edge-based AI processing. Consultants advising on healthcare AI infrastructure should model this against current GPU procurement strategies, particularly for organizations balancing latency requirements against total cost of ownership.",
+  "source_url": "https://www.storagereview.com/review/nvidia-rtx-pro-4500-blackwell-server-edition-review",
+  "source_name": "Storagereview",
+  "velocity_score": 85,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}

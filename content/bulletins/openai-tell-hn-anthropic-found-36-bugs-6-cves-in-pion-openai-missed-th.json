@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-17T00:03:10Z",
+  "slug": "openai-tell-hn-anthropic-found-36-bugs-6-cves-in-pion-openai-missed-th",
+  "headline": "Anthropic discovers 36 bugs in OpenAI's Pion library that OpenAI missed",
+  "body": "Anthropic researchers identified 36 bugs, including 6 CVEs, in OpenAI's Pion library that OpenAI's own security processes failed to catch. This discovery raises critical questions about vulnerability detection in widely-used AI infrastructure components that healthcare organizations may depend on for deployment. For healthcare AI implementations, this highlights the importance of rigorous third-party security audits before integrating third-party libraries into clinical workflows, especially given regulatory requirements around data protection and system reliability in HIPAA-governed environments. Healthcare AI consultants should reassess vendor security practices and require comprehensive vulnerability disclosures as part of due diligence for any AI infrastructure selection.",
+  "source_url": "https://news.ycombinator.com/item?id=50124600",
+  "source_name": "Hacker News",
+  "velocity_score": 74,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
