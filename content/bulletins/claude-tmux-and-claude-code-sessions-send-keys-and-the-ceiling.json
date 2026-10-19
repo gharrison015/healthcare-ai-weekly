@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-19T16:42:07Z",
+  "slug": "claude-tmux-and-claude-code-sessions-send-keys-and-the-ceiling",
+  "headline": "Claude integration with terminal automation reshapes AI agent capabilities",
+  "body": "Developers are increasingly pairing Claude with tmux terminal sessions to enable AI agents that directly control clinical systems and workflows without manual intermediaries. This technical acceleration matters for healthcare AI because it directly impacts how conversational AI could integrate with legacy EHR infrastructure, order entry systems, and real-time clinical data access. The emerging pattern of AI agents executing commands in controlled environments raises critical questions about audit trails, error recovery, and governance that healthcare organizations must address before deploying similar architectures in regulated settings. Healthcare consulting teams should monitor these integration patterns closely, as they signal where the vendor landscape is headed for clinical AI tooling over the next 12-18 months.",
+  "source_url": "https://crystl.dev/guides/tmux-for-ai-agents/",
+  "source_name": "Crystl",
+  "velocity_score": 80,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

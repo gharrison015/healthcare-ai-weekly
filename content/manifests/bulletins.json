@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-tmux-and-claude-code-sessions-send-keys-and-the-ceiling",
+      "headline": "Claude integration with terminal automation reshapes AI agent capabilities",
+      "timestamp": "2026-10-19T16:42:07Z",
+      "source_name": "Crystl",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-commits-5-of-shares-to-public-benefit-fund",
+      "headline": "Anthropic allocates 5% of shares toward public benefit fund",
+      "timestamp": "2026-10-19T16:42:05Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-tell-hn-anthropic-found-36-bugs-6-cves-in-pion-openai-missed-th",
       "headline": "Anthropic discovers 36 bugs in OpenAI's Pion library that OpenAI missed",
       "timestamp": "2026-10-17T00:03:10Z",
@@ -218,16 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-fires-three-safety-researchers-for-mishandling-research",
-      "headline": "OpenAI fires three safety researchers amid research handling dispute",
-      "timestamp": "2026-10-10T01:34:28Z",
-      "source_name": "TechCrunch",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
