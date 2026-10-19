@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-ex-openai-worker-accused-of-planting-device-had-saudi-support",
+      "headline": "Former OpenAI employee accused of planting device with Saudi backing",
+      "timestamp": "2026-10-19T21:51:28Z",
+      "source_name": "Bbc",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "anthropic-the-obscure-trust-looming-over-anthropic-s-ipo",
+      "headline": "Anthropic IPO surfaces governance questions amid safety commitments",
+      "timestamp": "2026-10-19T21:51:26Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "claude-tmux-and-claude-code-sessions-send-keys-and-the-ceiling",
       "headline": "Claude integration with terminal automation reshapes AI agent capabilities",
       "timestamp": "2026-10-19T16:42:07Z",
@@ -218,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "google-gbos-vm-run-googlebook-os-in-a-gpu-accelerated-vm-on-apple-sili",
-      "headline": "Google expands AI infrastructure hiring as enterprise cloud deals accelerate",
-      "timestamp": "2026-10-12T19:30:54Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-just-ask-claude-is-a-rare-and-valuable-skill",
-      "headline": "Claude adoption accelerates across technical workflows and developer tools",
-      "timestamp": "2026-10-12T19:30:52Z",
-      "source_name": "Justismills",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
