@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-investors-temper-anthropic-ipo-valuation-expectations-over-g",
+      "headline": "Anthropic IPO valuation expectations fall as growth trajectory slows",
+      "timestamp": "2026-10-20T14:34:15Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-vera-s-system-architecture-pushing-bandwidth",
       "headline": "Nvidia accelerates healthcare AI infrastructure with unified memory architecture",
       "timestamp": "2026-10-20T00:49:17Z",
@@ -238,16 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-research-firm-calls-anthropic-s-ipo-unprecedented-test-of-in",
-      "headline": "Anthropic faces IPO skepticism as safety concerns resurface",
-      "timestamp": "2026-10-13T02:46:29Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
