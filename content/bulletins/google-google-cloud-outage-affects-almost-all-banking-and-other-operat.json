@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-20T21:00:00Z",
+  "slug": "google-google-cloud-outage-affects-almost-all-banking-and-other-operat",
+  "headline": "Google Cloud outage disrupts European banking, raising healthcare infrastructure questions",
+  "body": "A significant Google Cloud outage impacted banking operations across Europe, affecting major institutions like HSBC, Revolut, and Bank of Scotland. For healthcare organizations, this incident underscores the infrastructure risk of cloud dependency for critical systems including EHR hosting, patient data processing, and care coordination platforms. Many health systems rely on Google Cloud for analytics, interoperability layers, and administrative functions that directly support clinical workflows. The outage demonstrates why healthcare IT leaders must evaluate disaster recovery capabilities, multi-cloud strategies, and failover protocols with their infrastructure vendors to maintain continuity in value-based care contracts and regulatory compliance.",
+  "source_url": "https://www.neowin.net/news/google-cloud-outage-takes-down-hsbc-revolut-bank-of-scotland-llyods-equifax-more/",
+  "source_name": "Neowin",
+  "velocity_score": 81,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}
