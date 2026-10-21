@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-ask-hn-best-value-money-ai-coding-plan-bundle",
+      "headline": "Healthcare developers seek cost-effective AI coding tools amid rising demand",
+      "timestamp": "2026-10-21T00:14:04Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-logged-net-loss-of-over-80b-in-first-half-of-2026",
+      "headline": "Anthropic's $80B first-half loss signals AI infrastructure economics crisis",
+      "timestamp": "2026-10-21T00:14:02Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "google-google-cloud-outage-affects-almost-all-banking-and-other-operat",
       "headline": "Google Cloud outage disrupts European banking, raising healthcare infrastructure questions",
       "timestamp": "2026-10-20T21:00:00Z",
@@ -228,26 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-show-hn-i-made-a-hockey-web-game-with-opus-5-5-and-gemini-argon-opt",
-      "headline": "Claude and Gemini AI models demonstrate rapid optimization capabilities in real-world applications",
-      "timestamp": "2026-10-13T22:04:59Z",
-      "source_name": "Playblueline",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-let-claude-code-answer-with-a-diagram-page-instead-of-a",
-      "headline": "Claude users expand AI coding capabilities with visual outputs and tooling",
-      "timestamp": "2026-10-13T22:04:56Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
