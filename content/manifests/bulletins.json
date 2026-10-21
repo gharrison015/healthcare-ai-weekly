@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-s-public-benefit-charter",
+      "headline": "Anthropic publishes public benefit charter amid massive operational losses",
+      "timestamp": "2026-10-21T21:01:46Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-duet",
+      "headline": "Anthropic launches Claude Duet for collaborative AI-assisted coding",
+      "timestamp": "2026-10-21T21:01:43Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-patch-the-planet-global-response-coordination-as-ai-unco",
       "headline": "OpenAI coordinates global response to critical PHP vulnerabilities",
       "timestamp": "2026-10-21T14:45:37Z",
@@ -235,26 +255,6 @@
       "headline": "OpenAI security breach exposes risks in AI infrastructure protection",
       "timestamp": "2026-10-14T21:06:20Z",
       "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "gemini-gemini-4-argon",
-      "headline": "Google releases Gemini 4 Argon with January 2025 knowledge cutoff",
-      "timestamp": "2026-10-14T14:46:48Z",
-      "source_name": "Deepmind",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
-      ]
-    },
-    {
-      "slug": "openai-openai-engineer-arrested-in-bugging-of-executive-conference-roo",
-      "headline": "OpenAI engineer arrested for allegedly bugging executive conference room",
-      "timestamp": "2026-10-14T14:46:46Z",
-      "source_name": "Sfstandard",
       "verification": "confirmed",
       "tags": [
         "openai"
