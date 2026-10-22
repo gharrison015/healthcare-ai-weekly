@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-amazon-is-buying-billions-in-nvidia-ai-systems-it-can-t-yet-tur",
+      "headline": "Amazon's GPU shortage exposes infrastructure gap for AI deployment",
+      "timestamp": "2026-10-22T20:58:50Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-claude-now-works-with-google-docs-sheets-and-slides",
+      "headline": "Claude integrates with Google Workspace, expanding clinical documentation reach",
+      "timestamp": "2026-10-22T20:58:48Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-chatgpt-ads-as-over-100k-advertisers-have-used-the-platform",
       "headline": "ChatGPT advertising platform reaches 100k advertisers across 26 countries",
       "timestamp": "2026-10-22T14:45:53Z",
@@ -228,26 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-eight-states-sue-openai-saying-chatgpt-isn-t-safe-for-kids",
-      "headline": "Eight states sue OpenAI over ChatGPT safety risks for minors",
-      "timestamp": "2026-10-15T20:42:15Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "claude-accenture-tells-employees-to-spend-only-29-on-claude-per-month",
-      "headline": "Accenture caps Claude spending at $29 monthly per employee",
-      "timestamp": "2026-10-15T20:42:12Z",
-      "source_name": "404Media",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
