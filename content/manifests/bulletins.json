@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-chatgpt-ads-as-over-100k-advertisers-have-used-the-platform",
+      "headline": "ChatGPT advertising platform reaches 100k advertisers across 26 countries",
+      "timestamp": "2026-10-22T14:45:53Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "openai-openai-models-are-coming-to-google-cloud",
       "headline": "OpenAI models now available on Google Cloud infrastructure",
       "timestamp": "2026-10-22T00:19:13Z",
@@ -238,16 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-scion-is-heavily-inspired-by-mononoke",
-      "headline": "Anthropic posts $16.8B quarterly revenue while warning of AI self-replication risks",
-      "timestamp": "2026-10-15T14:32:41Z",
-      "source_name": "Sunshowers",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
