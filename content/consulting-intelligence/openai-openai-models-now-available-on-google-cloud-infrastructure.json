@@ -1,0 +1,16 @@
+{
+  "firm": "OpenAI",
+  "headline": "OpenAI models now available on Google Cloud infrastructure",
+  "summary": "OpenAI has launched its models on Google Cloud Platform, expanding deployment options beyond its own infrastructure. This partnership matters for healthcare organizations evaluating AI vendors because it increases accessibility and potentially reduces lock-in concerns for enterprises standardizing on Google Cloud. Healthcare systems can now integrate OpenAI capabilities directly into Google Cloud environments where they may already run EHR systems and clinical data warehouses. The move signals consolidation in the enterprise AI market, giving healthcare CIOs more flexibility in choosing where to run generative AI workloads. However, organizations must still conduct thorough security and compliance reviews given healthcare's regulatory requirements around data residency and model governance.",
+  "so_what": "OpenAI has launched its models on Google Cloud Platform, expanding deployment options beyond its own infrastructure. This partnership matters for healthcare organizations evaluating AI vendors because it increases accessibility and potentially reduces lock-in concerns for enterprises standardizing on Google Cloud.",
+  "relevance": "healthcare_direct",
+  "source_url": "https://openai.com/index/openai-models-google-cloud/",
+  "published_date": "2026-10-22",
+  "slug": "openai-openai-models-now-available-on-google-cloud-infrastructure",
+  "auto_promoted": true,
+  "promotion_trigger": "model_lab_services",
+  "promotion_matched_terms": [
+    "OpenAI",
+    "enterprise AI"
+  ]
+}
