@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-show-hn-onkey-i-m-a-bad-singer-so-i-built-an-app-to-show-where-i-m",
+      "headline": "Developer tools shift toward local-first AI as infrastructure costs escalate",
+      "timestamp": "2026-10-23T00:15:07Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "openai-openai-cli",
+      "headline": "OpenAI releases CLI tool as safety concerns resurface in agent development",
+      "timestamp": "2026-10-23T00:15:04Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "nvidia-amazon-is-buying-billions-in-nvidia-ai-systems-it-can-t-yet-tur",
       "headline": "Amazon's GPU shortage exposes infrastructure gap for AI deployment",
       "timestamp": "2026-10-22T20:58:50Z",
@@ -228,26 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "ey"
-      ]
-    },
-    {
-      "slug": "openai-recording-device-hidden-in-toilet-paper-found-in-top-secret-ope",
-      "headline": "OpenAI engineer arrested for planting recording device in conference room",
-      "timestamp": "2026-10-15T23:58:45Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-apple-google-microsoft-amazon-meta-gave-trump-92m-for-hi",
-      "headline": "Tech giants' political spending raises questions about AI regulation influence",
-      "timestamp": "2026-10-15T23:58:43Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]

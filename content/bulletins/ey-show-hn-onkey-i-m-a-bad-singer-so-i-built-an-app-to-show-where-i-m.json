@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-23T00:15:07Z",
+  "slug": "ey-show-hn-onkey-i-m-a-bad-singer-so-i-built-an-app-to-show-where-i-m",
+  "headline": "Developer tools shift toward local-first AI as infrastructure costs escalate",
+  "body": "Open source AI pipeline builders are gaining traction in developer communities, with projects like Ternlux emphasizing local-first, bring-your-own-key architectures. This movement reflects growing concerns about cloud infrastructure costs and vendor lock-in, particularly as large-scale AI deployments become more expensive. For healthcare AI, this signals an emerging preference for on-premise solutions that maintain data sovereignty and reduce dependency on costly cloud APIs. Healthcare organizations evaluating vendor partnerships should monitor this architectural shift, as it may influence how clinical AI tools are deployed within EHR ecosystems and whether emerging startups can offer cost advantages over incumbent cloud-based platforms.",
+  "source_url": "https://github.com/dsmurrell/onkey",
+  "source_name": "Github",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}
