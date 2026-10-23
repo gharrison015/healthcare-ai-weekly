@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-ai-safety-is-mostly-a-sex-cult-in-berkeley-california",
+      "headline": "AI Safety Discourse Fractures Over Institutional Credibility Questions",
+      "timestamp": "2026-10-23T20:48:06Z",
+      "source_name": "Verysane",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-swedish-government-offices-to-ban-chatgpt-and-claude",
+      "headline": "Swedish government bans Claude and ChatGPT from official operations",
+      "timestamp": "2026-10-23T20:48:03Z",
+      "source_name": "Sverigesradio",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-gpus-from-stolen-500k-nvidia-shipment-at-brazil-airport-appear",
       "headline": "Stolen Nvidia GPUs surface online as supply chain vulnerabilities mount",
       "timestamp": "2026-10-23T14:32:12Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-chatgpt-can-peek-at-your-chrome-tabs-now",
-      "headline": "ChatGPT gains browser access capability, expanding real-time data reach",
-      "timestamp": "2026-10-16T20:14:48Z",
-      "source_name": "The Verge",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-claude-reveals-ecdsa-curve-origins",
-      "headline": "Anthropic publishes Claude cryptographic research as enterprise adoption accelerates",
-      "timestamp": "2026-10-16T20:14:45Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
