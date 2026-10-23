@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-gpus-from-stolen-500k-nvidia-shipment-at-brazil-airport-appear",
+      "headline": "Stolen Nvidia GPUs surface online as supply chain vulnerabilities mount",
+      "timestamp": "2026-10-23T14:32:12Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-ask-hn-if-the-models-are-so-good-why-doesn-t-openai-just-start",
+      "headline": "OpenAI faces valuation pressure amid competitive intensity and internal turmoil",
+      "timestamp": "2026-10-23T14:32:09Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-show-hn-onkey-i-m-a-bad-singer-so-i-built-an-app-to-show-where-i-m",
       "headline": "Developer tools shift toward local-first AI as infrastructure costs escalate",
       "timestamp": "2026-10-23T00:15:07Z",
@@ -238,16 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "ey-sergey-brin-says-google-s-ai-models-are-reaching-recursive-self-imp",
-      "headline": "Google's AI reaches recursive self-improvement, raising clinical validation stakes",
-      "timestamp": "2026-10-16T14:24:25Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
       ]
     }
   ]
