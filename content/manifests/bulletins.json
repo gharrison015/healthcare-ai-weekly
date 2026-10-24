@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-caused-the-gaming-gpu-shortage-by-pushing-ai-stockpiling",
+      "headline": "Nvidia's AI chip strategy created gaming shortage, now launches defect detection",
+      "timestamp": "2026-10-24T00:08:39Z",
+      "source_name": "Respawnfirst",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "openai-openai-trims-valuation-target-to-1-25t-after-pitching-higher-pr",
+      "headline": "OpenAI cuts valuation target to $1.25T amid internal turmoil",
+      "timestamp": "2026-10-24T00:08:36Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "ey-ai-safety-is-mostly-a-sex-cult-in-berkeley-california",
       "headline": "AI Safety Discourse Fractures Over Institutional Credibility Questions",
       "timestamp": "2026-10-23T20:48:06Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-tell-hn-anthropic-found-36-bugs-6-cves-in-pion-openai-missed-th",
-      "headline": "Anthropic discovers 36 bugs in OpenAI's Pion library that OpenAI missed",
-      "timestamp": "2026-10-17T00:03:10Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-rtx-pro-4500-blackwell-server-l40s-throughput-at-165w-in",
-      "headline": "Nvidia RTX Pro 4500 Blackwell delivers enterprise GPU efficiency gains",
-      "timestamp": "2026-10-17T00:03:08Z",
-      "source_name": "Storagereview",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
