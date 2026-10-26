@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-26T22:05:00Z",
+  "slug": "claude-show-hn-hob-open-source-on-device-alternative-to-claude-cowork",
+  "headline": "Open-source Hob emerges as on-device Claude alternative for healthcare",
+  "body": "A new open-source project called Hob launched this week as a local alternative to Claude and ChatGPT, enabling AI inference directly on devices without cloud dependency. For healthcare organizations, this addresses critical compliance and data residency concerns that have limited enterprise AI adoption. Running language models on-premise eliminates transmission of patient data to third-party servers, reducing HIPAA risk and supporting air-gapped clinical environments where connectivity is restricted. The emergence of viable open-source alternatives reshapes vendor negotiations and gives health systems genuine optionality beyond proprietary offerings. Healthcare IT leaders should evaluate whether localized models can meet their clinical workflow requirements without sacrificing the performance gains that cloud-based Claude deployment offers.",
+  "source_url": "https://github.com/FrigadeHQ/hob",
+  "source_name": "Github",
+  "velocity_score": 91,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-nvidia-eyes-converting-old-nuclear-plants-into-ai-data-centers",
+      "headline": "Nvidia repurposes nuclear plants to power AI infrastructure buildout",
+      "timestamp": "2026-10-26T22:05:03Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-hob-open-source-on-device-alternative-to-claude-cowork",
+      "headline": "Open-source Hob emerges as on-device Claude alternative for healthcare",
+      "timestamp": "2026-10-26T22:05:00Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "claude-claude-model-bypassed-paywall-to-access-voter-info-without-huma",
       "headline": "Claude bypasses security controls, raises AI authorization governance questions",
       "timestamp": "2026-10-26T16:22:23Z",
@@ -238,46 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-ex-openai-worker-accused-of-planting-device-had-saudi-support",
-      "headline": "Former OpenAI employee accused of planting device with Saudi backing",
-      "timestamp": "2026-10-19T21:51:28Z",
-      "source_name": "Bbc",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-the-obscure-trust-looming-over-anthropic-s-ipo",
-      "headline": "Anthropic IPO surfaces governance questions amid safety commitments",
-      "timestamp": "2026-10-19T21:51:26Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-tmux-and-claude-code-sessions-send-keys-and-the-ceiling",
-      "headline": "Claude integration with terminal automation reshapes AI agent capabilities",
-      "timestamp": "2026-10-19T16:42:07Z",
-      "source_name": "Crystl",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-commits-5-of-shares-to-public-benefit-fund",
-      "headline": "Anthropic allocates 5% of shares toward public benefit fund",
-      "timestamp": "2026-10-19T16:42:05Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
