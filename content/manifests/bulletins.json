@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-1-terra",
+      "headline": "OpenAI releases GPT-6.1 Terra with significant capability improvements",
+      "timestamp": "2026-10-27T15:37:02Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "anthropic-giving-chat-feedback-gives-anthropic-your-data",
+      "headline": "Anthropic clarifies data usage policies as feedback feature raises privacy questions",
+      "timestamp": "2026-10-27T15:37:00Z",
+      "source_name": "Privacy",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "ey-nvidia-eyes-converting-old-nuclear-plants-into-ai-data-centers",
       "headline": "Nvidia repurposes nuclear plants to power AI infrastructure buildout",
       "timestamp": "2026-10-26T22:05:03Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-investors-temper-anthropic-ipo-valuation-expectations-over-g",
-      "headline": "Anthropic IPO valuation expectations fall as growth trajectory slows",
-      "timestamp": "2026-10-20T14:34:15Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-vera-s-system-architecture-pushing-bandwidth",
-      "headline": "Nvidia accelerates healthcare AI infrastructure with unified memory architecture",
-      "timestamp": "2026-10-20T00:49:17Z",
-      "source_name": "Chipsandcheese",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
