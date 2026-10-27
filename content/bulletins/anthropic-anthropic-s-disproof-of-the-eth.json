@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-27T21:35:47Z",
+  "slug": "anthropic-anthropic-s-disproof-of-the-eth",
+  "headline": "Anthropic faces scrutiny over data access and customer support gaps",
+  "body": "Multiple reports this week highlight operational challenges at Anthropic, including questions about model access to voter information and recurring customer support complaints. For healthcare AI implementations, these issues underscore critical risks around data governance and vendor reliability in clinical settings. Healthcare organizations deploying Anthropic's models for EHR integration or patient data analysis need documented assurances on data handling protocols and SLA enforcement. The conversation around open source alternatives gaining ground also signals that healthcare buyers should stress-test vendor lock-in assumptions and ensure workload portability as competitive options mature.",
+  "source_url": "https://hexagonmath.org/2610.00577v1",
+  "source_name": "Hexagonmath",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

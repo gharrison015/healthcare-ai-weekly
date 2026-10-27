@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-s-disproof-of-the-eth",
+      "headline": "Anthropic faces scrutiny over data access and customer support gaps",
+      "timestamp": "2026-10-27T21:35:47Z",
+      "source_name": "Hexagonmath",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-anthropic-trained-claude-on-illegally-obtained-stanford-profess",
+      "headline": "Anthropic faces legal scrutiny over Claude training data sourcing practices",
+      "timestamp": "2026-10-27T21:35:45Z",
+      "source_name": "Stanforddaily",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-1-terra",
       "headline": "OpenAI releases GPT-6.1 Terra with significant capability improvements",
       "timestamp": "2026-10-27T15:37:02Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "google-google-cloud-outage-affects-almost-all-banking-and-other-operat",
-      "headline": "Google Cloud outage disrupts European banking, raising healthcare infrastructure questions",
-      "timestamp": "2026-10-20T21:00:00Z",
-      "source_name": "Neowin",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-claude-designed-protein-binders-against-scorpion-neurotoxins",
-      "headline": "Claude demonstrates protein design capability for therapeutic development",
-      "timestamp": "2026-10-20T20:59:58Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]

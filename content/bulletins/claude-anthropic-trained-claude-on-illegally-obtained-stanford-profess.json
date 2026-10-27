@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-27T21:35:45Z",
+  "slug": "claude-anthropic-trained-claude-on-illegally-obtained-stanford-profess",
+  "headline": "Anthropic faces legal scrutiny over Claude training data sourcing practices",
+  "body": "Anthropic trained Claude on illegally obtained books from Stanford professors without permission, raising significant questions about the foundation of a widely-adopted healthcare AI tool. For healthcare organizations deploying Claude in clinical decision support, EHR integration, and patient-facing applications, this revelation creates compliance and liability exposure around model provenance and data governance. The incident underscores the regulatory risk healthcare enterprises face when adopting foundation models with unclear training datasets. Vendors and health systems must now demand transparency on training data sourcing and consider contractual protections that indemnify them against intellectual property claims. This moment will likely accelerate healthcare AI procurement teams toward models with documented, licensed training data and stronger compliance documentation.",
+  "source_url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+  "source_name": "Stanforddaily",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
