@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-ask-hn-will-open-source-force-companies-like-anthropic-to-sh",
+      "headline": "Anthropic IPO raises questions about open source competitive pressure",
+      "timestamp": "2026-10-28T16:21:21Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-early-progress-on-accelerating-drug-development-with-claude",
+      "headline": "Anthropic demonstrates Claude accelerates drug development workflows",
+      "timestamp": "2026-10-28T16:21:18Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-says-its-ai-disproved-the-exponential-time-hypothesis",
       "headline": "OpenAI claims computational breakthrough solving longstanding computer science problem",
       "timestamp": "2026-10-28T00:49:33Z",
@@ -238,16 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-patch-the-planet-global-response-coordination-as-ai-unco",
-      "headline": "OpenAI coordinates global response to critical PHP vulnerabilities",
-      "timestamp": "2026-10-21T14:45:37Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
