@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-dueling-proofs-from-openai-and-anthropic-astound-scientists",
+      "headline": "Anthropic's biotech acquisition signals healthcare AI infrastructure shift",
+      "timestamp": "2026-10-28T22:00:03Z",
+      "source_name": "Scientificamerican",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-expanding-our-partnership-with-gsa-to-bring-claude-to-all-level",
+      "headline": "Anthropic expands Claude access across all government levels via GSA",
+      "timestamp": "2026-10-28T22:00:01Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-ask-hn-will-open-source-force-companies-like-anthropic-to-sh",
       "headline": "Anthropic IPO raises questions about open source competitive pressure",
       "timestamp": "2026-10-28T16:21:21Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-public-benefit-charter",
-      "headline": "Anthropic publishes public benefit charter amid massive operational losses",
-      "timestamp": "2026-10-21T21:01:46Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-duet",
-      "headline": "Anthropic launches Claude Duet for collaborative AI-assisted coding",
-      "timestamp": "2026-10-21T21:01:43Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
