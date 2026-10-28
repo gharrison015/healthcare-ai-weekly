@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-says-its-ai-disproved-the-exponential-time-hypothesis",
+      "headline": "OpenAI claims computational breakthrough solving longstanding computer science problem",
+      "timestamp": "2026-10-28T00:49:33Z",
+      "source_name": "Theainewsreport",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-s-disproof-of-the-eth",
       "headline": "Anthropic faces scrutiny over data access and customer support gaps",
       "timestamp": "2026-10-27T21:35:47Z",
@@ -238,26 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "ey-ask-hn-best-value-money-ai-coding-plan-bundle",
-      "headline": "Healthcare developers seek cost-effective AI coding tools amid rising demand",
-      "timestamp": "2026-10-21T00:14:04Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-logged-net-loss-of-over-80b-in-first-half-of-2026",
-      "headline": "Anthropic's $80B first-half loss signals AI infrastructure economics crisis",
-      "timestamp": "2026-10-21T00:14:02Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
