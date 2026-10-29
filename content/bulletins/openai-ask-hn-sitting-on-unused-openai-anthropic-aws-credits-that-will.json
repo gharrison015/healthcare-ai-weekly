@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-29T22:12:43Z",
+  "slug": "openai-ask-hn-sitting-on-unused-openai-anthropic-aws-credits-that-will",
+  "headline": "OpenAI doubles usage limits across Pro tiers amid developer credit glut",
+  "body": "OpenAI announced it is doubling all usage limits for Pro 100/200/500 subscription tiers, while concurrent discussions highlight widespread unused AI credits expiring across OpenAI, Anthropic, and AWS platforms. For healthcare organizations, this signals an expanding capacity window to pilot clinical AI applications without immediate cost barriers, though the credit expiration issue suggests procurement cycles misaligned with actual deployment timelines. Healthcare AI consultants should recognize this moment as critical for stress-testing LLM integrations in EHR workflows, clinical documentation automation, and diagnostic support systems before budget cycles reset. The velocity of this news and developer interest indicates the vendor landscape continues consolidating around OpenAI's infrastructure, making API stability and pricing predictability essential factors for health systems building long-term AI roadmaps.",
+  "source_url": "https://news.ycombinator.com/item?id=50291687",
+  "source_name": "Hacker News",
+  "velocity_score": 93,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}

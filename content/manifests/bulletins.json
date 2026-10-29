@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-engineer-declares-the-coding-interview-dead",
+      "headline": "Anthropic engineer challenges coding interviews as AI reshapes hiring",
+      "timestamp": "2026-10-29T22:12:45Z",
+      "source_name": "The Register",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "openai-ask-hn-sitting-on-unused-openai-anthropic-aws-credits-that-will",
+      "headline": "OpenAI doubles usage limits across Pro tiers amid developer credit glut",
+      "timestamp": "2026-10-29T22:12:43Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-ai-gets-cagey-when-asked-who-won-the-2020-elections",
       "headline": "Google AI models show reluctance answering political questions directly",
       "timestamp": "2026-10-29T16:30:51Z",
@@ -248,26 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-amazon-is-buying-billions-in-nvidia-ai-systems-it-can-t-yet-tur",
-      "headline": "Amazon's GPU shortage exposes infrastructure gap for AI deployment",
-      "timestamp": "2026-10-22T20:58:50Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-claude-now-works-with-google-docs-sheets-and-slides",
-      "headline": "Claude integrates with Google Workspace, expanding clinical documentation reach",
-      "timestamp": "2026-10-22T20:58:48Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
