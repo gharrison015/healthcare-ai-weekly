@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-1-sol-beats-final-fantasy-vii",
+      "headline": "FDA flags ChatGPT cancer drug claims amid broader AI safety concerns",
+      "timestamp": "2026-10-29T01:37:36Z",
+      "source_name": "Twitch",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-discovering-and-exploiting-vulnerabilities-in-critical-software",
+      "headline": "Claude AI model shows capability to discover software vulnerabilities",
+      "timestamp": "2026-10-29T01:37:33Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-dueling-proofs-from-openai-and-anthropic-astound-scientists",
       "headline": "Anthropic's biotech acquisition signals healthcare AI infrastructure shift",
       "timestamp": "2026-10-28T22:00:03Z",
@@ -238,26 +258,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "openai-openai-models-are-coming-to-google-cloud",
-      "headline": "OpenAI models now available on Google Cloud infrastructure",
-      "timestamp": "2026-10-22T00:19:13Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-gpus-sit-idle-in-meta-s-prometheus",
-      "headline": "Meta's idle GPU cluster reveals infrastructure challenge for AI deployment",
-      "timestamp": "2026-10-22T00:19:10Z",
-      "source_name": "The Register",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]

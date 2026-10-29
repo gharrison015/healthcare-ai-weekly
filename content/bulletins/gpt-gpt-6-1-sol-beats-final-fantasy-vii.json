@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-29T01:37:36Z",
+  "slug": "gpt-gpt-6-1-sol-beats-final-fantasy-vii",
+  "headline": "FDA flags ChatGPT cancer drug claims amid broader AI safety concerns",
+  "body": "The FDA has raised concerns about ChatGPT being linked to false cancer drug information, part of a larger pattern of problematic medical claims circulating through consumer AI tools. This development underscores a critical gap in large language model governance that directly impacts clinical decision-making and patient safety. Healthcare organizations deploying GPT-based systems for clinical workflows or patient-facing applications need immediate audit protocols to catch hallucinated medical information before it reaches clinicians or patients. The incident reinforces why enterprise healthcare AI implementations require specialized validation layers and domain-specific fine-tuning rather than relying on general-purpose models for medical guidance. Vendors and health IT leaders should expect stricter FDA guidance on AI-generated medical content in the near term.",
+  "source_url": "https://www.twitch.tv/videos/2912639349",
+  "source_name": "Twitch",
+  "velocity_score": 79,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}
