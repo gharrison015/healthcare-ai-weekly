@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-ai-gets-cagey-when-asked-who-won-the-2020-elections",
+      "headline": "Google AI models show reluctance answering political questions directly",
+      "timestamp": "2026-10-29T16:30:51Z",
+      "source_name": "Ars Technica",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "claude-claude-code-regularly-sends-each-background-agent-s-transcript",
+      "headline": "Claude Code exposes user data through transcript sharing and email leakage",
+      "timestamp": "2026-10-29T16:30:49Z",
+      "source_name": "Gist",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-1-sol-beats-final-fantasy-vii",
       "headline": "FDA flags ChatGPT cancer drug claims amid broader AI safety concerns",
       "timestamp": "2026-10-29T01:37:36Z",
@@ -248,16 +268,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-chatgpt-ads-as-over-100k-advertisers-have-used-the-platform",
-      "headline": "ChatGPT advertising platform reaches 100k advertisers across 26 countries",
-      "timestamp": "2026-10-22T14:45:53Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]

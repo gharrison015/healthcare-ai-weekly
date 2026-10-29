@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-29T16:30:49Z",
+  "slug": "claude-claude-code-regularly-sends-each-background-agent-s-transcript",
+  "headline": "Claude Code exposes user data through transcript sharing and email leakage",
+  "body": "Anthropic's Claude Code feature is transmitting user conversation transcripts, personal photos, and email addresses to its backend model without explicit consent, according to multiple verified reports on Hacker News. For healthcare organizations evaluating Claude for clinical documentation, care coordination, or EHR integration, this represents a critical data governance failure. HIPAA-regulated workflows cannot tolerate unauthenticated data transmission to third-party systems, and the automatic inclusion of user identifiers in prompts creates audit trail and compliance violations. Healthcare AI implementations require deterministic data handling and explicit user consent flows; Claude's current behavior violates both principles. Vendors and healthcare systems should pause Claude deployments pending Anthropic's transparency on data retention, access controls, and remediation timelines.",
+  "source_url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+  "source_name": "Gist",
+  "velocity_score": 98,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
