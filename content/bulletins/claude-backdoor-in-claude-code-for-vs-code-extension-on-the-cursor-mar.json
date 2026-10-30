@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-30T16:22:25Z",
+  "slug": "claude-backdoor-in-claude-code-for-vs-code-extension-on-the-cursor-mar",
+  "headline": "Backdoor discovered in official Claude Code VS Code extension on Cursor Marketplace",
+  "body": "A backdoor vulnerability was identified in the Claude Code extension for VS Code distributed through the Cursor Marketplace, raising immediate security concerns for developers using the tool. For healthcare AI implementations, this compromise poses significant risk to clinical decision support systems and EHR integrations that rely on code generation and validation workflows. Healthcare organizations deploying Claude-based coding assistants for clinical applications must immediately audit their extension sources and verify integrity, as compromised code generation directly threatens patient safety and compliance requirements. This incident underscores the critical need for healthcare AI teams to implement strict vendor vetting processes and code review protocols before integrating third-party AI extensions into production environments. The broader implications extend to healthcare AI consulting practices, where clients must be advised that AI development tools require the same security governance as clinical software.",
+  "source_url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+  "source_name": "Phorion",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

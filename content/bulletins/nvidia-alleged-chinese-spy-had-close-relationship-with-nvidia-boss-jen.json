@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-30T16:22:27Z",
+  "slug": "nvidia-alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jen",
+  "headline": "Nvidia security breach raises questions about AI infrastructure vulnerability",
+  "body": "Reports indicate an alleged Chinese spy maintained close ties with Nvidia CEO Jensen Huang, raising concerns about the security of foundational AI infrastructure. For healthcare organizations, this underscores a critical risk: Nvidia GPUs power most large language models and inference systems used in clinical AI applications, EHR integrations, and diagnostic tools. Healthcare systems relying on Nvidia-based AI infrastructure should conduct immediate security assessments of their supply chain, data access controls, and vendor relationships. This incident directly impacts healthcare AI consulting recommendations around infrastructure selection and compliance, particularly for organizations handling protected health information through GPU-accelerated models.",
+  "source_url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+  "source_name": "Nypost",
+  "velocity_score": 73,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}

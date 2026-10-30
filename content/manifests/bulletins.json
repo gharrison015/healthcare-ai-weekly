@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jen",
+      "headline": "Nvidia security breach raises questions about AI infrastructure vulnerability",
+      "timestamp": "2026-10-30T16:22:27Z",
+      "source_name": "Nypost",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-backdoor-in-claude-code-for-vs-code-extension-on-the-cursor-mar",
+      "headline": "Backdoor discovered in official Claude Code VS Code extension on Cursor Marketplace",
+      "timestamp": "2026-10-30T16:22:25Z",
+      "source_name": "Phorion",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-engineer-declares-the-coding-interview-dead",
       "headline": "Anthropic engineer challenges coding interviews as AI reshapes hiring",
       "timestamp": "2026-10-29T22:12:45Z",
@@ -228,46 +248,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-gpus-from-stolen-500k-nvidia-shipment-at-brazil-airport-appear",
-      "headline": "Stolen Nvidia GPUs surface online as supply chain vulnerabilities mount",
-      "timestamp": "2026-10-23T14:32:12Z",
-      "source_name": "Tomshardware",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-ask-hn-if-the-models-are-so-good-why-doesn-t-openai-just-start",
-      "headline": "OpenAI faces valuation pressure amid competitive intensity and internal turmoil",
-      "timestamp": "2026-10-23T14:32:09Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "ey-show-hn-onkey-i-m-a-bad-singer-so-i-built-an-app-to-show-where-i-m",
-      "headline": "Developer tools shift toward local-first AI as infrastructure costs escalate",
-      "timestamp": "2026-10-23T00:15:07Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "openai-openai-cli",
-      "headline": "OpenAI releases CLI tool as safety concerns resurface in agent development",
-      "timestamp": "2026-10-23T00:15:04Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
