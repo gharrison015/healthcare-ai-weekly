@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-ceo-sam-altman-says-you-having-dram-instead-of-data-cent",
+      "headline": "OpenAI shifts infrastructure strategy as leadership faces mounting scrutiny",
+      "timestamp": "2026-10-31T01:14:04Z",
+      "source_name": "Thegamer",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "google-google-gemini-redesign-new-sparkling-overlay-reaches-android-ph",
       "headline": "Google Gemini expansion accelerates as market questions AI spending ROI",
       "timestamp": "2026-10-30T21:47:42Z",
@@ -228,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-caused-the-gaming-gpu-shortage-by-pushing-ai-stockpiling",
-      "headline": "Nvidia's AI chip strategy created gaming shortage, now launches defect detection",
-      "timestamp": "2026-10-24T00:08:39Z",
-      "source_name": "Respawnfirst",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "openai-openai-trims-valuation-target-to-1-25t-after-pitching-higher-pr",
-      "headline": "OpenAI cuts valuation target to $1.25T amid internal turmoil",
-      "timestamp": "2026-10-24T00:08:36Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]

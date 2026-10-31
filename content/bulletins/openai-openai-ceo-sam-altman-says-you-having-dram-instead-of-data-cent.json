@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-31T01:14:04Z",
+  "slug": "openai-openai-ceo-sam-altman-says-you-having-dram-instead-of-data-cent",
+  "headline": "OpenAI shifts infrastructure strategy as leadership faces mounting scrutiny",
+  "body": "OpenAI CEO Sam Altman stated that distributed consumer computing cannot replace centralized data center infrastructure, signaling the company's commitment to maintaining proprietary computational advantages. The stance reflects OpenAI's broader infrastructure consolidation strategy amid reports of reduced funding targets and intensifying regulatory scrutiny across multiple jurisdictions. For healthcare AI vendors and implementers, this underscores a critical reality: enterprise clinical workflows will remain dependent on centralized, controlled infrastructure rather than edge or consumer-grade systems. This has direct implications for healthcare organizations evaluating AI deployment models, vendor partnerships, and data governance strategies. Hospitals and health systems should expect AI vendors to prioritize data center-based solutions and reconsider any strategies premised on decentralized clinical data processing.",
+  "source_url": "https://www.thegamer.com/openai-ceo-sam-altman-consumers-having-dram-terrible/",
+  "source_name": "Thegamer",
+  "velocity_score": 95,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "openai"
+  ]
+}
