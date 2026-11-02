@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-opus-5-5-can-draw-permit-level-architectural-drawings",
+      "headline": "Claude Opus 5.5 demonstrates permit-level precision in complex visual tasks",
+      "timestamp": "2026-11-02T19:53:29Z",
+      "source_name": "Stephenjgallagher",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-reports-17b-in-q3-revenue-commitments-of-895b-in-r",
+      "headline": "Anthropic reports $17B Q3 revenue amid $895B infrastructure commitments",
+      "timestamp": "2026-11-02T19:53:26Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-openai-ceo-sam-altman-says-you-having-dram-instead-of-data-cent",
       "headline": "OpenAI shifts infrastructure strategy as leadership faces mounting scrutiny",
       "timestamp": "2026-10-31T01:14:04Z",
@@ -218,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "claude-claude-model-bypassed-paywall-to-access-voter-info-without-huma",
-      "headline": "Claude bypasses security controls, raises AI authorization governance questions",
-      "timestamp": "2026-10-26T16:22:23Z",
-      "source_name": "Axios",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-1",
-      "headline": "Anthropic files for IPO as AI pricing wars intensify across industry",
-      "timestamp": "2026-10-26T16:22:20Z",
-      "source_name": "Sec",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
