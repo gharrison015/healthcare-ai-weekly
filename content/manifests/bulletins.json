@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-ipo-filing-1-7b-quarterly-payroll-about-107k-per-e",
+      "headline": "Anthropic IPO filing exposes massive compute costs and RSI capability warnings",
+      "timestamp": "2026-11-03T22:41:26Z",
+      "source_name": "Techspot",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-revolut-swaps-claude-for-glm-open-weight-model-cutting-ai-codin",
+      "headline": "Fintech giant Revolut ditches Claude for open-weight model, slashing AI costs",
+      "timestamp": "2026-11-03T22:41:23Z",
+      "source_name": "Dealroom",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-stolen-ai-api-keys-generated-nearly-1m-in-charges-for-a-single-comp",
       "headline": "Stolen API keys cost healthcare organizations millions in cloud AI charges",
       "timestamp": "2026-11-03T17:26:13Z",
@@ -218,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-disproof-of-the-eth",
-      "headline": "Anthropic faces scrutiny over data access and customer support gaps",
-      "timestamp": "2026-10-27T21:35:47Z",
-      "source_name": "Hexagonmath",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-anthropic-trained-claude-on-illegally-obtained-stanford-profess",
-      "headline": "Anthropic faces legal scrutiny over Claude training data sourcing practices",
-      "timestamp": "2026-10-27T21:35:45Z",
-      "source_name": "Stanforddaily",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
