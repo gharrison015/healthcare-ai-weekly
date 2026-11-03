@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-03T17:26:13Z",
+  "slug": "ey-stolen-ai-api-keys-generated-nearly-1m-in-charges-for-a-single-comp",
+  "headline": "Stolen API keys cost healthcare organizations millions in cloud AI charges",
+  "body": "A single company faced nearly $1M in unauthorized charges after attackers compromised AI API keys, exploiting a vulnerability known as LLMjacking across major cloud platforms including AWS, Google Cloud, and Azure. Healthcare organizations using cloud-based AI models for clinical decision support, EHR integration, and administrative automation face identical exposure risks. Compromised credentials can generate massive bills while potentially exposing protected health information through unauthorized model access. Healthcare IT teams must immediately audit API key management practices, implement credential rotation policies, and deploy cloud provider security controls that cap resource consumption before deployment. This incident signals that healthcare AI infrastructure security now requires the same rigor as traditional data protection frameworks.",
+  "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/",
+  "source_name": "Cloud",
+  "velocity_score": 89,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-stolen-ai-api-keys-generated-nearly-1m-in-charges-for-a-single-comp",
+      "headline": "Stolen API keys cost healthcare organizations millions in cloud AI charges",
+      "timestamp": "2026-11-03T17:26:13Z",
+      "source_name": "Cloud",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "anthropic-the-sec-should-block-anthropic-s-ipo-to-protect-the-public",
+      "headline": "Anthropic's IPO filing exposes massive burn rate and regulatory scrutiny",
+      "timestamp": "2026-11-03T17:26:10Z",
+      "source_name": "Techpolicy",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "openai-scaling-git-at-openai",
       "headline": "OpenAI scales infrastructure as military partnerships accelerate AI adoption",
       "timestamp": "2026-11-03T03:09:50Z",
@@ -218,26 +238,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-1-terra",
-      "headline": "OpenAI releases GPT-6.1 Terra with significant capability improvements",
-      "timestamp": "2026-10-27T15:37:02Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "anthropic-giving-chat-feedback-gives-anthropic-your-data",
-      "headline": "Anthropic clarifies data usage policies as feedback feature raises privacy questions",
-      "timestamp": "2026-10-27T15:37:00Z",
-      "source_name": "Privacy",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
