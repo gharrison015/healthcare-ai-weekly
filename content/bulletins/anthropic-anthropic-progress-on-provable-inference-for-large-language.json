@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-04T22:59:31Z",
+  "slug": "anthropic-anthropic-progress-on-provable-inference-for-large-language",
+  "headline": "Anthropic advances provable inference while addressing IP concerns",
+  "body": "Anthropic published research on provable inference for large language models alongside launching cost transparency tools and facing IP attribution questions. For healthcare AI deployment, provable inference matters significantly because it enables auditable model behavior and documented decision pathways required by clinical governance and regulatory frameworks. The cost transparency tools directly address healthcare economics, where value-based care models demand clear ROI visibility on AI spending. These developments signal the vendor landscape is moving toward accountability mechanisms that healthcare organizations will require before widespread clinical integration.",
+  "source_url": "https://www.anthropic.com/research/provable-inference",
+  "source_name": "Anthropic",
+  "velocity_score": 77,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}
