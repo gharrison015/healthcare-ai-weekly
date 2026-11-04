@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-04T17:39:10Z",
+  "slug": "nvidia-nvidia-rtx-spark-encrypted-firmware-slows-inference-speed-to-35",
+  "headline": "Nvidia's encrypted firmware tanks Linux inference speed to 35 percent",
+  "body": "Nvidia's RTX Spark encrypted firmware is delivering a significant performance hit on Linux systems, reducing inference speed to just 35 percent of baseline capacity. For healthcare AI vendors deploying clinical decision support, imaging analysis, or real-time patient monitoring on Linux infrastructure, this creates a critical bottleneck that undermines the cost-benefit case for GPU acceleration. Combined with rising hardware costs and Nvidia's pivot toward subscription-based licensing models, healthcare organizations face mounting pressure to either absorb performance penalties or renegotiate deployment architectures. This matters for EHR-integrated AI workloads and value-based care analytics that depend on predictable, high-throughput inference to justify infrastructure investments.",
+  "source_url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+  "source_name": "Mindstudio",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}

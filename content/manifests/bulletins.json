@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-rtx-spark-encrypted-firmware-slows-inference-speed-to-35",
+      "headline": "Nvidia's encrypted firmware tanks Linux inference speed to 35 percent",
+      "timestamp": "2026-11-04T17:39:10Z",
+      "source_name": "Mindstudio",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "google-google-researchers-demand-freedom-to-tell-the-world-what-they-k",
+      "headline": "Google researchers protest lifetime restrictions on AI safety disclosures",
+      "timestamp": "2026-11-04T17:39:07Z",
+      "source_name": "Washingtonpost",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-ipo-filing-1-7b-quarterly-payroll-about-107k-per-e",
       "headline": "Anthropic IPO filing exposes massive compute costs and RSI capability warnings",
       "timestamp": "2026-11-03T22:41:26Z",
@@ -208,36 +228,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-ask-hn-will-open-source-force-companies-like-anthropic-to-sh",
-      "headline": "Anthropic IPO raises questions about open source competitive pressure",
-      "timestamp": "2026-10-28T16:21:21Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-early-progress-on-accelerating-drug-development-with-claude",
-      "headline": "Anthropic demonstrates Claude accelerates drug development workflows",
-      "timestamp": "2026-10-28T16:21:18Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-says-its-ai-disproved-the-exponential-time-hypothesis",
-      "headline": "OpenAI claims computational breakthrough solving longstanding computer science problem",
-      "timestamp": "2026-10-28T00:49:33Z",
-      "source_name": "Theainewsreport",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
