@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-11-05T22:06:07.374005+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-11-05T23:01:58.325428+00:00",
+  "source_counts": {
+    "hackernews": 229,
+    "newsdata": 93
+  },
+  "total_collected": 322,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "openai",
+    "gpt",
+    "nvidia"
+  ]
 }

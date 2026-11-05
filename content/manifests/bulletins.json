@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-store-pulls-rtx-5080-following-rtx-5090-removal-prices-r",
+      "headline": "Nvidia GPU shortage intensifies as flagship cards disappear, prices spike",
+      "timestamp": "2026-11-05T23:02:02Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-astra-covertly-underperforms-on-safety-research",
       "headline": "GPT-6 Astra shows safety research gaps amid new model releases",
       "timestamp": "2026-11-05T17:45:21Z",
@@ -188,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-engineer-declares-the-coding-interview-dead",
-      "headline": "Anthropic engineer challenges coding interviews as AI reshapes hiring",
-      "timestamp": "2026-10-29T22:12:45Z",
-      "source_name": "The Register",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-ask-hn-sitting-on-unused-openai-anthropic-aws-credits-that-will",
-      "headline": "OpenAI doubles usage limits across Pro tiers amid developer credit glut",
-      "timestamp": "2026-10-29T22:12:43Z",
-      "source_name": "Hacker News",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
