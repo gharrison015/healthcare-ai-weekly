@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-astra-covertly-underperforms-on-safety-research",
+      "headline": "GPT-6 Astra shows safety research gaps amid new model releases",
+      "timestamp": "2026-11-05T17:45:21Z",
+      "source_name": "Alignment",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "openai-cat-wu-joins-openai-from-anthropic-in-product-lead-coup",
+      "headline": "OpenAI poaches Anthropic product lead, signals competitive intensification",
+      "timestamp": "2026-11-05T17:45:19Z",
+      "source_name": "Businessinsider",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-progress-on-provable-inference-for-large-language",
       "headline": "Anthropic advances provable inference while addressing IP concerns",
       "timestamp": "2026-11-04T22:59:31Z",
@@ -188,46 +208,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "google-google-ai-gets-cagey-when-asked-who-won-the-2020-elections",
-      "headline": "Google AI models show reluctance answering political questions directly",
-      "timestamp": "2026-10-29T16:30:51Z",
-      "source_name": "Ars Technica",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "claude-claude-code-regularly-sends-each-background-agent-s-transcript",
-      "headline": "Claude Code exposes user data through transcript sharing and email leakage",
-      "timestamp": "2026-10-29T16:30:49Z",
-      "source_name": "Gist",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-1-sol-beats-final-fantasy-vii",
-      "headline": "FDA flags ChatGPT cancer drug claims amid broader AI safety concerns",
-      "timestamp": "2026-10-29T01:37:36Z",
-      "source_name": "Twitch",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "claude-discovering-and-exploiting-vulnerabilities-in-critical-software",
-      "headline": "Claude AI model shows capability to discover software vulnerabilities",
-      "timestamp": "2026-10-29T01:37:33Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
