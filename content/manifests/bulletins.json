@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-just-found-nearly-1k-ways-to-gain-root-access-in-linux",
+      "headline": "OpenAI discovers 948 Linux kernel privilege escalation vulnerabilities",
+      "timestamp": "2026-11-06T17:01:47Z",
+      "source_name": "Hothardware",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "anthropic-major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5t",
+      "headline": "Major investors question Anthropic IPO valuation amid AI capability concerns",
+      "timestamp": "2026-11-06T17:01:45Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-store-pulls-rtx-5080-following-rtx-5090-removal-prices-r",
       "headline": "Nvidia GPU shortage intensifies as flagship cards disappear, prices spike",
       "timestamp": "2026-11-05T23:02:02Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jen",
-      "headline": "Nvidia security breach raises questions about AI infrastructure vulnerability",
-      "timestamp": "2026-10-30T16:22:27Z",
-      "source_name": "Nypost",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-backdoor-in-claude-code-for-vs-code-extension-on-the-cursor-mar",
-      "headline": "Backdoor discovered in official Claude Code VS Code extension on Cursor Marketplace",
-      "timestamp": "2026-10-30T16:22:25Z",
-      "source_name": "Phorion",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
