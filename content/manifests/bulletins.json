@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-kubernetes-engine-nvke",
+      "headline": "Nvidia Kubernetes Engine launches as GPU orchestration intensifies",
+      "timestamp": "2026-11-06T22:31:25Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-ai-for-scientific-discovery-how-researchers-use-claude",
+      "headline": "Claude dominates scientific discovery conversations across developer communities",
+      "timestamp": "2026-11-06T22:31:23Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-just-found-nearly-1k-ways-to-gain-root-access-in-linux",
       "headline": "OpenAI discovers 948 Linux kernel privilege escalation vulnerabilities",
       "timestamp": "2026-11-06T17:01:47Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "google-google-gemini-redesign-new-sparkling-overlay-reaches-android-ph",
-      "headline": "Google Gemini expansion accelerates as market questions AI spending ROI",
-      "timestamp": "2026-10-30T21:47:42Z",
-      "source_name": "Analyticsinsight",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-may-not-secure-investment-grade-rating-after-ipo-b",
-      "headline": "Anthropic faces credit rating headwinds despite IPO plans, Blackstone warns",
-      "timestamp": "2026-10-30T21:47:39Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
