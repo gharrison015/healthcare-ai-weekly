@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-fable-5-2-and-mythos-5-2",
+      "headline": "Anthropic releases Claude Fable 5.2 and Mythos 5.2 models",
+      "timestamp": "2026-11-09T20:16:32Z",
+      "source_name": "Anthropic",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-ceo-jensen-huang-s-letter-to-staff-about-affair",
+      "headline": "Nvidia CEO affair triggers investigation amid leadership uncertainty",
+      "timestamp": "2026-11-09T20:16:29Z",
+      "source_name": "Nvidianews",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-kubernetes-engine-nvke",
       "headline": "Nvidia Kubernetes Engine launches as GPU orchestration intensifies",
       "timestamp": "2026-11-06T22:31:25Z",
@@ -168,36 +188,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-opus-5-5-can-draw-permit-level-architectural-drawings",
-      "headline": "Claude Opus 5.5 demonstrates permit-level precision in complex visual tasks",
-      "timestamp": "2026-11-02T19:53:29Z",
-      "source_name": "Stephenjgallagher",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-reports-17b-in-q3-revenue-commitments-of-895b-in-r",
-      "headline": "Anthropic reports $17B Q3 revenue amid $895B infrastructure commitments",
-      "timestamp": "2026-11-02T19:53:26Z",
-      "source_name": "CNBC",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-openai-ceo-sam-altman-says-you-having-dram-instead-of-data-cent",
-      "headline": "OpenAI shifts infrastructure strategy as leadership faces mounting scrutiny",
-      "timestamp": "2026-10-31T01:14:04Z",
-      "source_name": "Thegamer",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
