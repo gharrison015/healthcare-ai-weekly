@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gemini-gemini-4-carbon-is-now-available",
+      "headline": "Google releases Gemini 4 Carbon for production use today",
+      "timestamp": "2026-11-10T17:22:50Z",
+      "source_name": "Blog",
+      "verification": "confirmed",
+      "tags": [
+        "gemini"
+      ]
+    },
+    {
+      "slug": "anthropic-anthropic-to-seek-1-3t-valuation-in-ipo",
+      "headline": "Anthropic pursues IPO at $1.3 trillion valuation amid AI infrastructure expansion",
+      "timestamp": "2026-11-10T17:22:48Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "google-google-gemini-routes-personal-drive-files-and-emails-to-human-a",
       "headline": "Google Gemini sends personal files to human annotators, raising privacy concerns",
       "timestamp": "2026-11-10T03:53:27Z",

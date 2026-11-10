@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-10T17:22:50Z",
+  "slug": "gemini-gemini-4-carbon-is-now-available",
+  "headline": "Google releases Gemini 4 Carbon for production use today",
+  "body": "Google has made Gemini 4 Carbon generally available, positioning a smaller, faster model variant for enterprise deployment. For healthcare organizations, this represents a practical option for implementing AI in resource-constrained clinical environments where latency and infrastructure costs directly impact EHR integration and real-time clinical decision support. The model's efficiency makes it viable for on-premises deployments in health systems concerned about data residency, while the JAX training controller now available on GCP addresses the underlying infrastructure needs for healthcare enterprises building custom AI workflows. Consulting firms advising health systems should evaluate Carbon against their current language model strategies, particularly for use cases like clinical documentation assistance and patient communication where smaller model performance may suffice without the expense of larger alternatives.",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+  "source_name": "Blog",
+  "velocity_score": 83,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}

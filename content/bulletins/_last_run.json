@@ -1,7 +1,16 @@
 {
-  "timestamp_utc": "2026-11-10T14:04:00.843231+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-11-10T17:22:44.094813+00:00",
+  "source_counts": {
+    "hackernews": 250,
+    "newsdata": 83,
+    "substack": 1
+  },
+  "total_collected": 334,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "claude",
+    "anthropic",
+    "gemini"
+  ]
 }
