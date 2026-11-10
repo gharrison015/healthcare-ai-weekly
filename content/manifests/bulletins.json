@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-trump-s-ties-to-nvidia-s-huang-scrutinized-after-foreign-intell",
+      "headline": "Nvidia CEO faces scrutiny amid foreign intelligence and disclosure concerns",
+      "timestamp": "2026-11-10T22:39:20Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "gemini-gemini-4-carbon-is-now-available",
       "headline": "Google releases Gemini 4 Carbon for production use today",
       "timestamp": "2026-11-10T17:22:50Z",
@@ -188,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "ey-stolen-ai-api-keys-generated-nearly-1m-in-charges-for-a-single-comp",
-      "headline": "Stolen API keys cost healthcare organizations millions in cloud AI charges",
-      "timestamp": "2026-11-03T17:26:13Z",
-      "source_name": "Cloud",
-      "verification": "confirmed",
-      "tags": [
-        "ey"
-      ]
-    },
-    {
-      "slug": "anthropic-the-sec-should-block-anthropic-s-ipo-to-protect-the-public",
-      "headline": "Anthropic's IPO filing exposes massive burn rate and regulatory scrutiny",
-      "timestamp": "2026-11-03T17:26:10Z",
-      "source_name": "Techpolicy",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
