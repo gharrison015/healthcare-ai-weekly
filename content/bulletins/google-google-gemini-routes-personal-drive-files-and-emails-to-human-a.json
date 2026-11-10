@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-10T03:53:27Z",
+  "slug": "google-google-gemini-routes-personal-drive-files-and-emails-to-human-a",
+  "headline": "Google Gemini sends personal files to human annotators, raising privacy concerns",
+  "body": "Google's Gemini AI system is routing user Drive files and emails to human annotators for model training and improvement, a practice disclosed through researcher findings. This data handling approach creates immediate compliance and liability risks for healthcare organizations using Google's AI services, particularly regarding PHI exposure under HIPAA requirements. Healthcare IT leaders need urgent clarity on whether patient data, clinical notes, or protected health information could be included in annotation workflows. The incident underscores vendor transparency gaps in cloud AI services and reinforces the need for explicit data processing agreements before deploying consumer-grade AI tools in clinical settings.",
+  "source_url": "https://github.com/thisisme6598/gemini_files/",
+  "source_name": "Github",
+  "velocity_score": 88,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "google"
+  ]
+}

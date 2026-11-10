@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "google-google-gemini-routes-personal-drive-files-and-emails-to-human-a",
+      "headline": "Google Gemini sends personal files to human annotators, raising privacy concerns",
+      "timestamp": "2026-11-10T03:53:27Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "google"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-s-china-problem-pdf",
+      "headline": "Nvidia faces China export restrictions amid geopolitical tension",
+      "timestamp": "2026-11-10T03:53:25Z",
+      "source_name": "Culperresearch",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "claude-claude-fable-5-2-and-mythos-5-2",
       "headline": "Anthropic releases Claude Fable 5.2 and Mythos 5.2 models",
       "timestamp": "2026-11-09T20:16:32Z",
@@ -165,26 +185,6 @@
       "headline": "Anthropic's IPO filing exposes massive burn rate and regulatory scrutiny",
       "timestamp": "2026-11-03T17:26:10Z",
       "source_name": "Techpolicy",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "openai-scaling-git-at-openai",
-      "headline": "OpenAI scales infrastructure as military partnerships accelerate AI adoption",
-      "timestamp": "2026-11-03T03:09:50Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-internal-ai-use-at-retail-prices-now-exceeds-its",
-      "headline": "Anthropic's internal Claude use now costs more than total employee salaries",
-      "timestamp": "2026-11-03T03:09:47Z",
-      "source_name": "Businessinsider",
       "verification": "confirmed",
       "tags": [
         "anthropic"
