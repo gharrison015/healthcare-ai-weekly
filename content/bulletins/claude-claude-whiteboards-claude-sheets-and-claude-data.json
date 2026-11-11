@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-11T17:33:20Z",
+  "slug": "claude-claude-whiteboards-claude-sheets-and-claude-data",
+  "headline": "Anthropic expands Claude capabilities with new collaborative tools and code features",
+  "body": "Anthropic released Claude Whiteboards, Claude Sheets, and Claude Data alongside expanded Claude Code functionality, marking a significant expansion of the AI assistant's collaborative and data processing features. For healthcare organizations, these tools directly impact clinical workflow integration by enabling real-time collaboration on patient data analysis, EHR documentation assistance, and complex clinical decision support across distributed teams. The addition of native data handling capabilities reduces friction in value-based care analytics and population health reporting. However, security concerns around Claude Code's GitHub exposure require healthcare IT teams to implement strict governance protocols before deploying these features in HIPAA-regulated environments. Healthcare consulting practices should assess these new capabilities against existing enterprise security policies and evaluate deployment timelines accordingly.",
+  "source_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+  "source_name": "Claude",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-11T17:33:23Z",
+  "slug": "anthropic-tracking-anthropic-discovered-vulnerabilities",
+  "headline": "Anthropic signals AI safety concerns weeks before major valuation milestone",
+  "body": "Anthropic disclosed that a key AI safety alarm has been triggered, an announcement that coincides with the company's IPO preparations at a reported $1.4T valuation. The timing raises questions about how AI safety findings influence investor confidence and regulatory scrutiny in the healthcare sector, where Anthropic's Claude models are increasingly embedded in clinical decision support and EHR workflows. Healthcare organizations currently deploying or evaluating Anthropic's models for patient care applications should clarify what specific safety concerns triggered the alarm and request detailed remediation timelines from the vendor. This development underscores the importance of conducting thorough security and safety assessments before integrating third-party AI systems into mission-critical healthcare infrastructure, particularly given HIPAA compliance and patient safety obligations.",
+  "source_url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+  "source_name": "Vulncheck",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "anthropic"
+  ]
+}

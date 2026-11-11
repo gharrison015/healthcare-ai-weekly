@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-tracking-anthropic-discovered-vulnerabilities",
+      "headline": "Anthropic signals AI safety concerns weeks before major valuation milestone",
+      "timestamp": "2026-11-11T17:33:23Z",
+      "source_name": "Vulncheck",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-whiteboards-claude-sheets-and-claude-data",
+      "headline": "Anthropic expands Claude capabilities with new collaborative tools and code features",
+      "timestamp": "2026-11-11T17:33:20Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "nvidia-trump-s-ties-to-nvidia-s-huang-scrutinized-after-foreign-intell",
       "headline": "Nvidia CEO faces scrutiny amid foreign intelligence and disclosure concerns",
       "timestamp": "2026-11-10T22:39:20Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "google"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-ipo-filing-1-7b-quarterly-payroll-about-107k-per-e",
-      "headline": "Anthropic IPO filing exposes massive compute costs and RSI capability warnings",
-      "timestamp": "2026-11-03T22:41:26Z",
-      "source_name": "Techspot",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-revolut-swaps-claude-for-glm-open-weight-model-cutting-ai-codin",
-      "headline": "Fintech giant Revolut ditches Claude for open-weight model, slashing AI costs",
-      "timestamp": "2026-11-03T22:41:23Z",
-      "source_name": "Dealroom",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
