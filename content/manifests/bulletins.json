@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang",
+      "headline": "Nvidia board prepares to remove CEO Jensen Huang amid internal upheaval",
+      "timestamp": "2026-11-11T23:51:19Z",
+      "source_name": "Wall Street Journal",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-aq-an-attention-queue-tui-for-claude-code",
+      "headline": "Claude Code security gaps emerge as developers build new tooling",
+      "timestamp": "2026-11-11T23:51:16Z",
+      "source_name": "Github",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-tracking-anthropic-discovered-vulnerabilities",
       "headline": "Anthropic signals AI safety concerns weeks before major valuation milestone",
       "timestamp": "2026-11-11T17:33:23Z",
@@ -158,46 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-progress-on-provable-inference-for-large-language",
-      "headline": "Anthropic advances provable inference while addressing IP concerns",
-      "timestamp": "2026-11-04T22:59:31Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-running-17-claude-code-bots-in-a-real-company-for-100-month",
-      "headline": "Claude Code deployment costs plummet as enterprises scale AI agent automation",
-      "timestamp": "2026-11-04T22:59:28Z",
-      "source_name": "Botsinproduction",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-rtx-spark-encrypted-firmware-slows-inference-speed-to-35",
-      "headline": "Nvidia's encrypted firmware tanks Linux inference speed to 35 percent",
-      "timestamp": "2026-11-04T17:39:10Z",
-      "source_name": "Mindstudio",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "google-google-researchers-demand-freedom-to-tell-the-world-what-they-k",
-      "headline": "Google researchers protest lifetime restrictions on AI safety disclosures",
-      "timestamp": "2026-11-04T17:39:07Z",
-      "source_name": "Washingtonpost",
-      "verification": "confirmed",
-      "tags": [
-        "google"
       ]
     }
   ]

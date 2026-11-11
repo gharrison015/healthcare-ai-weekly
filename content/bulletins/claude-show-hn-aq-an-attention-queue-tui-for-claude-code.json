@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-11T23:51:16Z",
+  "slug": "claude-show-hn-aq-an-attention-queue-tui-for-claude-code",
+  "headline": "Claude Code security gaps emerge as developers build new tooling",
+  "body": "Developer interest in Claude-based coding tools is spiking across multiple platforms, with new projects like Aq and Mimzie gaining traction alongside concerns about accidental secret exposure in Claude Code. For healthcare AI implementations, this signals both opportunity and risk: Claude's coding capabilities could accelerate EHR integration and clinical workflow automation, but uncontrolled secret leakage poses serious compliance and data governance threats. Healthcare organizations evaluating Claude for code generation must implement strict prompt engineering guidelines, secret scanning in CI/CD pipelines, and audit trails for all AI-assisted development. The emerging toolchain around Claude suggests vendors will need robust wrapper solutions before deploying these models in regulated environments.",
+  "source_url": "https://github.com/nodo-labs-uk/attention-queue",
+  "source_name": "Github",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
