@@ -1,7 +1,15 @@
 {
-  "timestamp_utc": "2026-11-12T14:02:08.218916+00:00",
-  "source_counts": {},
-  "total_collected": 0,
-  "candidate_count": 0,
-  "disposition": "no_results"
+  "timestamp_utc": "2026-11-12T17:47:53.933237+00:00",
+  "source_counts": {
+    "hackernews": 254,
+    "newsdata": 91
+  },
+  "total_collected": 345,
+  "candidate_count": 3,
+  "disposition": "candidates_ready",
+  "candidate_topics": [
+    "nvidia",
+    "anthropic",
+    "gemini"
+  ]
 }

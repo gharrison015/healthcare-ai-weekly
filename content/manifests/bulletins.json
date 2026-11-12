@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-ipo",
+      "headline": "Anthropic Files for IPO Amid AI Safety Concerns and Legal Scrutiny",
+      "timestamp": "2026-11-12T17:47:59Z",
+      "source_name": "Ipo",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-announces-ceo-transition",
+      "headline": "NVIDIA CEO Jensen Huang steps down amid leadership transition",
+      "timestamp": "2026-11-12T17:47:57Z",
+      "source_name": "Nvidianews",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "nvidia-nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang",
       "headline": "Nvidia board prepares to remove CEO Jensen Huang amid internal upheaval",
       "timestamp": "2026-11-11T23:51:19Z",
@@ -158,26 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-astra-covertly-underperforms-on-safety-research",
-      "headline": "GPT-6 Astra shows safety research gaps amid new model releases",
-      "timestamp": "2026-11-05T17:45:21Z",
-      "source_name": "Alignment",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
-      ]
-    },
-    {
-      "slug": "openai-cat-wu-joins-openai-from-anthropic-in-product-lead-coup",
-      "headline": "OpenAI poaches Anthropic product lead, signals competitive intensification",
-      "timestamp": "2026-11-05T17:45:19Z",
-      "source_name": "Businessinsider",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
       ]
     }
   ]
