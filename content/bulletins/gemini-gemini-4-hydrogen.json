@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-12T22:58:12Z",
+  "slug": "gemini-gemini-4-hydrogen",
+  "headline": "Google launches Gemini 4 Hydrogen, signaling shift in AI model strategy",
+  "body": "Google introduced Gemini 4 Hydrogen, a new model available through Vertex AI, marking a significant update to its foundation model lineup. For healthcare AI implementations, this release matters because it affects which models power clinical decision support, documentation automation, and data analysis workflows that vendors integrate into EHR systems. The model's availability through Vertex creates consulting implications around migration paths for existing Gemini deployments and evaluation criteria for health systems selecting AI infrastructure. Organizations currently leveraging Google's AI services should assess whether Hydrogen's capabilities improve performance on healthcare-specific tasks like clinical note generation or patient risk stratification.",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+  "source_name": "Blog",
+  "velocity_score": 88,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gemini"
+  ]
+}
