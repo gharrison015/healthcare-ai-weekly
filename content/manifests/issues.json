@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-13",
+    "week_range": "November 06 - November 13, 2026",
+    "editorial_summary": "Three big forces collided this week. Google shipped Gemini for Healthcare with Epic and Oracle integrations, putting a production-grade agentic AI platform directly into clinical workflows just as PwC announced it's embedding that same platform into client engagements. Oura dropped $625M on Counsel Health, turning a wearable ring company into a vertically integrated AI primary care play with a GLP-1 conflict-of-interest story already trailing it. And a Vizient survey of 416 health system leaders claimed 3.2x average AI ROI, which is exactly the kind of number that will get repeated in every vendor deck this quarter without anyone asking how it was calculated. The week also delivered a quiet but important signal: McKinsey published its $500B healthcare EBITDA projection anchored in HST software displacement of legacy BPO, R1 expanded its Phare OS platform across $275B in net patient revenue, and PwC planted its flag on Gemini for Healthcare deployment. The consulting war for AI implementation revenue is fully underway. CMS and ONC moving prior auth into real-world testing is the regulatory forcing function nobody is talking about loudly enough.",
+    "top_stories": 5,
+    "vbc_watch": 3,
+    "did_you_know": 2,
+    "ma_partnerships": 3,
+    "consulting_intelligence": 3
+  },
+  {
     "date": "2026-11-06",
     "week_range": "October 30 - November 06, 2026",
     "editorial_summary": "Three things define this week. First, HCA Healthcare is about to put 10,000 physicians on ambient AI by year-end and is rolling its nurse handoff tool to 100 hospitals simultaneously. That's not a pilot. That's a platform bet, and it sets a scale benchmark every other health system will get asked about in the next board deck. Second, Mayo Clinic Platform shipped a clinical decision support tool embedded directly in the EHR across 35+ subspecialties. The race to own the clinical reasoning layer is accelerating, and whoever controls that interface controls the physician relationship. Third, Weill Cornell disclosed that patient data was fed into unauthorized AI tools during a radiology research study. That story is the canary. Every health system running shadow AI experiments is one disclosure away from the same headline. Underneath all of this: federal AI transparency rules for health IT vendors just disappeared, Google published an evaluation framework nobody will actually use to evaluate products they've already bought, and Humana plus athenahealth quietly wired up FHIR-based prior auth automation for 180,000 clinicians. The boring story is sometimes the biggest one.",
