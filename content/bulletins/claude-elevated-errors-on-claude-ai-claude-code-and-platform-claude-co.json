@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-13T17:25:52Z",
+  "slug": "claude-elevated-errors-on-claude-ai-claude-code-and-platform-claude-co",
+  "headline": "Claude AI platform experiences widespread outages affecting developer access",
+  "body": "Anthropic's Claude AI services experienced elevated errors across claude.ai, Claude Code, and platform.claude.com, with OAuth failures preventing user access. For healthcare organizations piloting Claude for clinical documentation, coding assistance, or EHR integration, platform stability directly impacts workflow continuity and clinician adoption rates. Healthcare AI deployments require predictable uptime guarantees since interruptions disrupt provider schedules and delay time-sensitive clinical tasks. This incident highlights the operational risk of depending on third-party AI platforms for mission-critical healthcare workflows, a key consideration for healthcare IT leaders evaluating vendor partnerships and internal versus cloud-based implementation strategies.",
+  "source_url": "https://status.claude.com/incidents/nn11wk485zfn",
+  "source_name": "Status",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

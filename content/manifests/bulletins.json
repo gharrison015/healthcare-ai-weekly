@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-elevated-errors-on-claude-ai-claude-code-and-platform-claude-co",
+      "headline": "Claude AI platform experiences widespread outages affecting developer access",
+      "timestamp": "2026-11-13T17:25:52Z",
+      "source_name": "Status",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-employees-petition-to-bring-back-jensen-huang",
+      "headline": "Nvidia employees petition to reinstate Jensen Huang as CEO",
+      "timestamp": "2026-11-13T17:25:50Z",
+      "source_name": "Wired",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "gemini-gemini-4-hydrogen",
       "headline": "Google launches Gemini 4 Hydrogen, signaling shift in AI model strategy",
       "timestamp": "2026-11-12T22:58:12Z",
@@ -168,36 +188,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "openai-openai-just-found-nearly-1k-ways-to-gain-root-access-in-linux",
-      "headline": "OpenAI discovers 948 Linux kernel privilege escalation vulnerabilities",
-      "timestamp": "2026-11-06T17:01:47Z",
-      "source_name": "Hothardware",
-      "verification": "confirmed",
-      "tags": [
-        "openai"
-      ]
-    },
-    {
-      "slug": "anthropic-major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5t",
-      "headline": "Major investors question Anthropic IPO valuation amid AI capability concerns",
-      "timestamp": "2026-11-06T17:01:45Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-store-pulls-rtx-5080-following-rtx-5090-removal-prices-r",
-      "headline": "Nvidia GPU shortage intensifies as flagship cards disappear, prices spike",
-      "timestamp": "2026-11-05T23:02:02Z",
-      "source_name": "Tomshardware",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
