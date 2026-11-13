@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-how-anthropic-stacks-up-against-some-of-the-biggest-us-ipos",
+      "headline": "Anthropic IPO generates scrutiny over patent disputes and funding restrictions",
+      "timestamp": "2026-11-13T23:01:38Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "claude-elevated-errors-on-claude-ai-claude-code-and-platform-claude-co",
       "headline": "Claude AI platform experiences widespread outages affecting developer access",
       "timestamp": "2026-11-13T17:25:52Z",
@@ -168,26 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-kubernetes-engine-nvke",
-      "headline": "Nvidia Kubernetes Engine launches as GPU orchestration intensifies",
-      "timestamp": "2026-11-06T22:31:25Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-ai-for-scientific-discovery-how-researchers-use-claude",
-      "headline": "Claude dominates scientific discovery conversations across developer communities",
-      "timestamp": "2026-11-06T22:31:23Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
