@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-i-got-claude-to-rewrite-curl-in-rust-in-4-weeks",
+      "headline": "Claude demonstrates substantial coding capability across complex language migration projects",
+      "timestamp": "2026-11-16T19:56:10Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-what-s-next-for-nvidia",
+      "headline": "Nvidia leadership transition signals shift in AI infrastructure spending patterns",
+      "timestamp": "2026-11-16T19:56:07Z",
+      "source_name": "Steveblank",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "anthropic-how-anthropic-stacks-up-against-some-of-the-biggest-us-ipos",
       "headline": "Anthropic IPO generates scrutiny over patent disputes and funding restrictions",
       "timestamp": "2026-11-13T23:01:38Z",

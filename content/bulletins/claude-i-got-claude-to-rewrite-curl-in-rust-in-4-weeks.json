@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-16T19:56:10Z",
+  "slug": "claude-i-got-claude-to-rewrite-curl-in-rust-in-4-weeks",
+  "headline": "Claude demonstrates substantial coding capability across complex language migration projects",
+  "body": "Claude completed a full curl-to-Rust rewrite in four weeks, sparking developer interest in AI-assisted refactoring and architectural work. For healthcare AI, this signals Claude's potential to handle legacy EHR system modernization and clinical workflow automation at scale. Healthcare organizations running aging systems face exactly this challenge: migrating monolithic applications while maintaining data integrity and compliance. The emerging tooling ecosystem around Claude (GitHub Actions, linters, desktop environments) suggests healthcare vendors could build robust governance frameworks for AI-assisted development. This capability matters because clinical software rewrites typically require months of specialized engineering, and AI-assisted approaches could compress timelines while reducing the consulting overhead that currently characterizes healthcare IT projects.",
+  "source_url": "https://claude.ai/artifact/K4BoWt35HQz1xWZBR3bMRD",
+  "source_name": "Claude",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
