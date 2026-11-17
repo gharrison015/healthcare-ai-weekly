@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-how-the-claude-code-team-thinks-about-verification",
+      "headline": "Claude's verification framework draws developer attention amid code generation debates",
+      "timestamp": "2026-11-17T18:52:05Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-stopped-disclosing-singapore-sales-as-revenues-hit-104b",
+      "headline": "Nvidia hits $104B revenue amid export control tightening and disclosure shifts",
+      "timestamp": "2026-11-17T18:52:02Z",
+      "source_name": "Financial Times",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "claude-claude-mythos-slashed-software-work-to-onboard-amd-gpus-to-arou",
       "headline": "Claude Mythos cuts GPU onboarding from months to days, disrupting vendor lock-in",
       "timestamp": "2026-11-17T04:14:36Z",
@@ -158,26 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "gemini-gemini-4-carbon-is-now-available",
-      "headline": "Google releases Gemini 4 Carbon for production use today",
-      "timestamp": "2026-11-10T17:22:50Z",
-      "source_name": "Blog",
-      "verification": "confirmed",
-      "tags": [
-        "gemini"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-to-seek-1-3t-valuation-in-ipo",
-      "headline": "Anthropic pursues IPO at $1.3 trillion valuation amid AI infrastructure expansion",
-      "timestamp": "2026-11-10T17:22:48Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
