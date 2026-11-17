@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-mythos-slashed-software-work-to-onboard-amd-gpus-to-arou",
+      "headline": "Claude Mythos cuts GPU onboarding from months to days, disrupting vendor lock-in",
+      "timestamp": "2026-11-17T04:14:36Z",
+      "source_name": "Tomshardware",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-was-in-trouble-before-the-jensen-huang-mess",
+      "headline": "Nvidia leadership crisis compounds existing operational vulnerabilities",
+      "timestamp": "2026-11-17T04:14:34Z",
+      "source_name": "Wired",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "claude-i-got-claude-to-rewrite-curl-in-rust-in-4-weeks",
       "headline": "Claude demonstrates substantial coding capability across complex language migration projects",
       "timestamp": "2026-11-16T19:56:10Z",
@@ -158,46 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "google-google-gemini-routes-personal-drive-files-and-emails-to-human-a",
-      "headline": "Google Gemini sends personal files to human annotators, raising privacy concerns",
-      "timestamp": "2026-11-10T03:53:27Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-s-china-problem-pdf",
-      "headline": "Nvidia faces China export restrictions amid geopolitical tension",
-      "timestamp": "2026-11-10T03:53:25Z",
-      "source_name": "Culperresearch",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-claude-fable-5-2-and-mythos-5-2",
-      "headline": "Anthropic releases Claude Fable 5.2 and Mythos 5.2 models",
-      "timestamp": "2026-11-09T20:16:32Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-ceo-jensen-huang-s-letter-to-staff-about-affair",
-      "headline": "Nvidia CEO affair triggers investigation amid leadership uncertainty",
-      "timestamp": "2026-11-09T20:16:29Z",
-      "source_name": "Nvidianews",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
