@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-18T03:14:07Z",
+  "slug": "gpt-gpt-6-2-astra-and-sol",
+  "headline": "OpenAI releases GPT-6.2 Astra and Sol models",
+  "body": "OpenAI has introduced GPT-6.2 Astra and Sol, with Astra achieving perfect scores on ARC-AGI-3 benchmarks. The release has generated significant attention across developer communities, though reception remains mixed. For healthcare AI specifically, these models' reasoning capabilities could impact clinical decision support systems and documentation workflows, though hospitals will need to evaluate performance against existing enterprise LLM deployments. The velocity and breadth of coverage suggest rapid adoption exploration among healthcare tech vendors, particularly those building on foundation models for EHR integration and clinical NLP tasks.",
+  "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+  "source_name": "OpenAI",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

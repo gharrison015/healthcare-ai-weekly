@@ -1,6 +1,16 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-2-astra-and-sol",
+      "headline": "OpenAI releases GPT-6.2 Astra and Sol models",
+      "timestamp": "2026-11-18T03:14:07Z",
+      "source_name": "OpenAI",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "claude-how-the-claude-code-team-thinks-about-verification",
       "headline": "Claude's verification framework draws developer attention amid code generation debates",
       "timestamp": "2026-11-17T18:52:05Z",
@@ -168,16 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-trump-s-ties-to-nvidia-s-huang-scrutinized-after-foreign-intell",
-      "headline": "Nvidia CEO faces scrutiny amid foreign intelligence and disclosure concerns",
-      "timestamp": "2026-11-10T22:39:20Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
