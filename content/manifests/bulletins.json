@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-is-not-a-safe-ai-company-coalition-challenges-anth",
+      "headline": "Coalition challenges Anthropic safety claims ahead of IPO announcement",
+      "timestamp": "2026-11-18T18:30:17Z",
+      "source_name": "Businesswire",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-chair-harvey-jones-says-board-doesn-t-intend-to-reinstat",
+      "headline": "Nvidia board rules out reinstating Huang as CEO amid leadership transition",
+      "timestamp": "2026-11-18T18:30:14Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-2-astra-and-sol",
       "headline": "OpenAI releases GPT-6.2 Astra and Sol models",
       "timestamp": "2026-11-18T03:14:07Z",
@@ -155,26 +175,6 @@
       "headline": "Claude Code security gaps emerge as developers build new tooling",
       "timestamp": "2026-11-11T23:51:16Z",
       "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-tracking-anthropic-discovered-vulnerabilities",
-      "headline": "Anthropic signals AI safety concerns weeks before major valuation milestone",
-      "timestamp": "2026-11-11T17:33:23Z",
-      "source_name": "Vulncheck",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-whiteboards-claude-sheets-and-claude-data",
-      "headline": "Anthropic expands Claude capabilities with new collaborative tools and code features",
-      "timestamp": "2026-11-11T17:33:20Z",
-      "source_name": "Claude",
       "verification": "confirmed",
       "tags": [
         "claude"
