@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-19T02:52:58Z",
+  "slug": "nvidia-nvidia-hit-with-a-ransomware",
+  "headline": "Nvidia ransomware attack raises healthcare AI infrastructure security concerns",
+  "body": "Nvidia confirmed a ransomware attack targeting the company, occurring as the chipmaker simultaneously halted AI chip sales to China and navigates significant leadership transitions. For healthcare organizations deploying Nvidia infrastructure for clinical AI applications, this incident exposes supply chain vulnerability at a critical moment when hospitals are scaling GPU-dependent workloads for EHR integration and diagnostic algorithms. Healthcare systems relying on Nvidia hardware for real-time clinical decision support must reassess vendor security posture and incident response protocols. The convergence of security breach, geopolitical trade restrictions, and organizational disruption creates near-term uncertainty for healthcare IT roadmaps dependent on Nvidia's product pipeline and support stability.",
+  "source_url": "https://www.ransomware.live/id/TlZJRElBQHRoZWdlbnRsZW1lbg",
+  "source_name": "Ransomware",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}

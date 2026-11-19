@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-was-trained-on-protein-sequences-at-scale",
+      "headline": "Claude trained on protein sequences at scale, expanding AI's biomedical capabilities",
+      "timestamp": "2026-11-19T02:53:00Z",
+      "source_name": "Xinmingtu",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-hit-with-a-ransomware",
+      "headline": "Nvidia ransomware attack raises healthcare AI infrastructure security concerns",
+      "timestamp": "2026-11-19T02:52:58Z",
+      "source_name": "Ransomware",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-is-not-a-safe-ai-company-coalition-challenges-anth",
       "headline": "Coalition challenges Anthropic safety claims ahead of IPO announcement",
       "timestamp": "2026-11-18T18:30:17Z",
@@ -158,26 +178,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang",
-      "headline": "Nvidia board prepares to remove CEO Jensen Huang amid internal upheaval",
-      "timestamp": "2026-11-11T23:51:19Z",
-      "source_name": "Wall Street Journal",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-show-hn-aq-an-attention-queue-tui-for-claude-code",
-      "headline": "Claude Code security gaps emerge as developers build new tooling",
-      "timestamp": "2026-11-11T23:51:16Z",
-      "source_name": "Github",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
       ]
     }
   ]
