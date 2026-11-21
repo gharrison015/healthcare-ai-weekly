@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-us-sec-s-nvidia-probe-is-examining-potential-accounting-issues",
+      "headline": "SEC probe into Nvidia accounting raises questions for healthcare AI infrastructure",
+      "timestamp": "2026-11-21T02:55:20Z",
+      "source_name": "Marketscreener",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "anthropic-global-stock-markets-slump-as-anthropic-s-record-ipo-fails-t",
+      "headline": "Anthropic IPO fails to reverse broad AI sector market collapse",
+      "timestamp": "2026-11-21T02:55:18Z",
+      "source_name": "Theguardian",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
       "slug": "google-google-workers-tell-their-employer-not-to-punish-schools-that-d",
       "headline": "Google workers oppose punitive tactics against AI-resistant schools",
       "timestamp": "2026-11-20T18:08:15Z",
@@ -168,16 +188,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-how-anthropic-stacks-up-against-some-of-the-biggest-us-ipos",
-      "headline": "Anthropic IPO generates scrutiny over patent disputes and funding restrictions",
-      "timestamp": "2026-11-13T23:01:38Z",
-      "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]

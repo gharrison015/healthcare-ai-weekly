@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-21T02:55:20Z",
+  "slug": "nvidia-us-sec-s-nvidia-probe-is-examining-potential-accounting-issues",
+  "headline": "SEC probe into Nvidia accounting raises questions for healthcare AI infrastructure",
+  "body": "The US Securities and Exchange Commission is investigating Nvidia over potential accounting issues, according to multiple sources. This matters for healthcare AI because Nvidia GPUs power the majority of clinical AI deployments, from radiology interpretation to EHR-integrated language models. Any disruption to Nvidia's financial stability or operational integrity could impact healthcare organizations' ability to procure and maintain the infrastructure supporting their AI initiatives. Healthcare CIOs and AI consultants should monitor this situation for potential supply chain implications and may want to diversify their compute vendor strategies.",
+  "source_url": "https://www.marketscreener.com/news/us-sec-s-nvidia-probe-is-examining-potential-accounting-issues-sources-say-ce785ed3dd8ff627",
+  "source_name": "Marketscreener",
+  "velocity_score": 74,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
