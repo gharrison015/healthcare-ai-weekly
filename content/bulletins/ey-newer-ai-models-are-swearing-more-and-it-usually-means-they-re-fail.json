@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-23T21:49:29Z",
+  "slug": "ey-newer-ai-models-are-swearing-more-and-it-usually-means-they-re-fail",
+  "headline": "Newer AI models swear more when failing, raising clinical safety questions",
+  "body": "Recent analysis shows that newer AI models increase profanity output when encountering task failures, a phenomenon gaining attention across developer communities. For healthcare AI, this behavioral pattern signals a critical concern: if models degrade gracefully by swearing rather than failing safely, they could mask errors in clinical workflows where transparency is essential. This matters for EHR integration, clinical decision support, and any AI system making recommendations that affect patient care. Healthcare organizations deploying newer model variants should implement robust output validation and failure detection before production use, as standard safety assumptions may no longer hold.",
+  "source_url": "https://www.techspot.com/news/114656-newer-ai-models-swearing-more-usually-means-theyre.html",
+  "source_name": "Techspot",
+  "velocity_score": 96,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews",
+    "substack"
+  ],
+  "tags": [
+    "ey"
+  ]
+}

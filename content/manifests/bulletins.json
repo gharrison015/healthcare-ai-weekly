@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-newer-ai-models-are-swearing-more-and-it-usually-means-they-re-fail",
+      "headline": "Newer AI models swear more when failing, raising clinical safety questions",
+      "timestamp": "2026-11-23T21:49:29Z",
+      "source_name": "Techspot",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-reinstates-jensen-huang-as-ceo",
+      "headline": "Nvidia reinstates Jensen Huang as CEO amid political pressure",
+      "timestamp": "2026-11-23T21:49:27Z",
+      "source_name": "CNBC",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "nvidia-us-sec-s-nvidia-probe-is-examining-potential-accounting-issues",
       "headline": "SEC probe into Nvidia accounting raises questions for healthcare AI infrastructure",
       "timestamp": "2026-11-21T02:55:20Z",
@@ -165,26 +185,6 @@
       "headline": "Nvidia leadership crisis compounds existing operational vulnerabilities",
       "timestamp": "2026-11-17T04:14:34Z",
       "source_name": "Wired",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-i-got-claude-to-rewrite-curl-in-rust-in-4-weeks",
-      "headline": "Claude demonstrates substantial coding capability across complex language migration projects",
-      "timestamp": "2026-11-16T19:56:10Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-what-s-next-for-nvidia",
-      "headline": "Nvidia leadership transition signals shift in AI infrastructure spending patterns",
-      "timestamp": "2026-11-16T19:56:07Z",
-      "source_name": "Steveblank",
       "verification": "confirmed",
       "tags": [
         "nvidia"
