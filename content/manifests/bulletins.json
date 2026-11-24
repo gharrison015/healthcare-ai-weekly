@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-don-t-play-anthropic-s-game",
+      "headline": "Anthropic IPO sparks debate over AI safety and regulatory compliance",
+      "timestamp": "2026-11-24T05:41:04Z",
+      "source_name": "The New York Times",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-claude-ship",
+      "headline": "Anthropic launches Claude Ship for autonomous code review and deployment",
+      "timestamp": "2026-11-24T05:41:02Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-newer-ai-models-are-swearing-more-and-it-usually-means-they-re-fail",
       "headline": "Newer AI models swear more when failing, raising clinical safety questions",
       "timestamp": "2026-11-23T21:49:29Z",
@@ -165,26 +185,6 @@
       "headline": "Nvidia hits $104B revenue amid export control tightening and disclosure shifts",
       "timestamp": "2026-11-17T18:52:02Z",
       "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "claude-claude-mythos-slashed-software-work-to-onboard-amd-gpus-to-arou",
-      "headline": "Claude Mythos cuts GPU onboarding from months to days, disrupting vendor lock-in",
-      "timestamp": "2026-11-17T04:14:36Z",
-      "source_name": "Tomshardware",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-was-in-trouble-before-the-jensen-huang-mess",
-      "headline": "Nvidia leadership crisis compounds existing operational vulnerabilities",
-      "timestamp": "2026-11-17T04:14:34Z",
-      "source_name": "Wired",
       "verification": "confirmed",
       "tags": [
         "nvidia"

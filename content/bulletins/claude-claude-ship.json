@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-24T05:41:02Z",
+  "slug": "claude-claude-ship",
+  "headline": "Anthropic launches Claude Ship for autonomous code review and deployment",
+  "body": "Anthropic introduced Claude Ship, an agentic system that enables Claude to independently review, fix, and approve code changes. For healthcare AI developers, this addresses a critical bottleneck in clinical software deployment where code quality and compliance validation slow release cycles. The capability to automate code review while maintaining human oversight aligns with healthcare's need for rapid iteration on AI-assisted clinical workflows without sacrificing safety standards. Vendors building EHR integrations and clinical decision support tools can leverage this to accelerate development velocity while reducing manual QA overhead. This represents a meaningful shift toward autonomous development agents that healthcare organizations will need to evaluate for their AI infrastructure strategy.",
+  "source_url": "https://claude.com/resources/articles/introducing-claude-ship",
+  "source_name": "Claude",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}
