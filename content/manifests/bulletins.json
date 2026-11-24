@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-breaks-below-83-ipo-price",
+      "headline": "Anthropic stock falls below IPO price in early trading debut",
+      "timestamp": "2026-11-24T20:26:04Z",
+      "source_name": "Bloomberg",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "claude-show-hn-juncts-one-dm-inbox-for-five-apps-that-claude-and-chatg",
+      "headline": "Claude integration tools proliferate as developers build workflow bridges",
+      "timestamp": "2026-11-24T20:26:02Z",
+      "source_name": "Juncts",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "anthropic-don-t-play-anthropic-s-game",
       "headline": "Anthropic IPO sparks debate over AI safety and regulatory compliance",
       "timestamp": "2026-11-24T05:41:04Z",
@@ -168,26 +188,6 @@
       "verification": "confirmed",
       "tags": [
         "gpt"
-      ]
-    },
-    {
-      "slug": "claude-how-the-claude-code-team-thinks-about-verification",
-      "headline": "Claude's verification framework draws developer attention amid code generation debates",
-      "timestamp": "2026-11-17T18:52:05Z",
-      "source_name": "Claude",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-stopped-disclosing-singapore-sales-as-revenues-hit-104b",
-      "headline": "Nvidia hits $104B revenue amid export control tightening and disclosure shifts",
-      "timestamp": "2026-11-17T18:52:02Z",
-      "source_name": "Financial Times",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
