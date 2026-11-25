@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-25T04:41:39Z",
+  "slug": "claude-claude-artifacts-can-now-be-installed-as-desktop-apps-on-mac-an",
+  "headline": "Claude artifacts now installable as native desktop apps for clinicians",
+  "body": "Anthropic enabled Claude artifacts to run as standalone desktop applications on Mac and Windows, expanding deployment options beyond web browsers. For healthcare AI, this shift matters significantly: clinicians can now integrate Claude-powered clinical decision support tools directly into their workflows without web dependency, reducing latency for time-sensitive decisions and enabling offline functionality in environments with connectivity constraints. This desktop deployment model also addresses security and compliance concerns by keeping sensitive patient data processing localized rather than routing through cloud interfaces. Healthcare organizations exploring Claude for documentation assistance, clinical note analysis, or protocol optimization can now architect solutions that better fit regulated EHR environments and institutional IT requirements.",
+  "source_url": "https://claude.com/resources/articles/install-as-app",
+  "source_name": "Claude",
+  "velocity_score": 100,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

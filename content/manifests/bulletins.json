@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "claude-claude-artifacts-can-now-be-installed-as-desktop-apps-on-mac-an",
+      "headline": "Claude artifacts now installable as native desktop apps for clinicians",
+      "timestamp": "2026-11-25T04:41:39Z",
+      "source_name": "Claude",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
+      "slug": "nvidia-who-in-washington-owns-and-trades-nvidia-stock",
+      "headline": "Nvidia governance turmoil amid congressional scrutiny and export restrictions",
+      "timestamp": "2026-11-25T04:41:37Z",
+      "source_name": "Kadoa",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "anthropic-anthropic-breaks-below-83-ipo-price",
       "headline": "Anthropic stock falls below IPO price in early trading debut",
       "timestamp": "2026-11-24T20:26:04Z",
@@ -178,16 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "gpt-gpt-6-2-astra-and-sol",
-      "headline": "OpenAI releases GPT-6.2 Astra and Sol models",
-      "timestamp": "2026-11-18T03:14:07Z",
-      "source_name": "OpenAI",
-      "verification": "confirmed",
-      "tags": [
-        "gpt"
       ]
     }
   ]
