@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "ey-launch-hn-versine-yc-f26-mcp-to-send-and-receive-money",
+      "headline": "YC-backed fintech startup launches MCP for secure money transfers",
+      "timestamp": "2026-11-25T19:40:11Z",
+      "source_name": "Hacker News",
+      "verification": "confirmed",
+      "tags": [
+        "ey"
+      ]
+    },
+    {
+      "slug": "nvidia-show-hn-old-nvidia-and-ati-tech-demos-running-again-in-the-brow",
+      "headline": "Nvidia leadership volatility ripples through AI infrastructure market",
+      "timestamp": "2026-11-25T19:40:08Z",
+      "source_name": "Gpu Demo Gallery",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "claude-claude-artifacts-can-now-be-installed-as-desktop-apps-on-mac-an",
       "headline": "Claude artifacts now installable as native desktop apps for clinicians",
       "timestamp": "2026-11-25T04:41:39Z",
@@ -175,26 +195,6 @@
       "headline": "Nvidia ransomware attack raises healthcare AI infrastructure security concerns",
       "timestamp": "2026-11-19T02:52:58Z",
       "source_name": "Ransomware",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-is-not-a-safe-ai-company-coalition-challenges-anth",
-      "headline": "Coalition challenges Anthropic safety claims ahead of IPO announcement",
-      "timestamp": "2026-11-18T18:30:17Z",
-      "source_name": "Businesswire",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-chair-harvey-jones-says-board-doesn-t-intend-to-reinstat",
-      "headline": "Nvidia board rules out reinstating Huang as CEO amid leadership transition",
-      "timestamp": "2026-11-18T18:30:14Z",
-      "source_name": "CNBC",
       "verification": "confirmed",
       "tags": [
         "nvidia"
