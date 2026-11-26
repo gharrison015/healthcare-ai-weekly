@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-26T03:51:00Z",
+  "slug": "claude-a-closer-look-at-claude-s-mac-apps",
+  "headline": "Claude expands desktop deployment capabilities with native Mac app support",
+  "body": "Anthropic's Claude now supports installation as standalone desktop applications on Mac, enabling direct system integration without browser dependencies. This shift toward native app deployment matters for healthcare because it reduces architectural friction in clinical environments where browser-based tools often conflict with EHR access controls and institutional security policies. Desktop apps can integrate more seamlessly with existing hospital workflows and legacy systems. For healthcare organizations evaluating Claude for clinical documentation support or decision assistance, native Mac deployment removes a significant adoption barrier in environments standardized on Apple infrastructure. Vendors building healthcare AI solutions atop Claude should factor this accessibility improvement into their go-to-market strategy for enterprise health systems.",
+  "source_url": "https://www.macstories.net/stories/a-closer-look-at-claudes-mac-apps/",
+  "source_name": "Macstories",
+  "velocity_score": 90,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-parents-of-openai-whistleblower-intensify-dispute-over-suicide",
+      "headline": "OpenAI faces legal scrutiny amid whistleblower death investigation",
+      "timestamp": "2026-11-26T03:51:02Z",
+      "source_name": "Abc7News",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "claude-a-closer-look-at-claude-s-mac-apps",
+      "headline": "Claude expands desktop deployment capabilities with native Mac app support",
+      "timestamp": "2026-11-26T03:51:00Z",
+      "source_name": "Macstories",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "ey-launch-hn-versine-yc-f26-mcp-to-send-and-receive-money",
       "headline": "YC-backed fintech startup launches MCP for secure money transfers",
       "timestamp": "2026-11-25T19:40:11Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-was-trained-on-protein-sequences-at-scale",
-      "headline": "Claude trained on protein sequences at scale, expanding AI's biomedical capabilities",
-      "timestamp": "2026-11-19T02:53:00Z",
-      "source_name": "Xinmingtu",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "nvidia-nvidia-hit-with-a-ransomware",
-      "headline": "Nvidia ransomware attack raises healthcare AI infrastructure security concerns",
-      "timestamp": "2026-11-19T02:52:58Z",
-      "source_name": "Ransomware",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
       ]
     }
   ]
