@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-26T19:20:43Z",
+  "slug": "gpt-openai-is-finally-merging-chatgpt-s-chat-and-work-tabs",
+  "headline": "OpenAI merges ChatGPT interfaces as usage limits tighten across models",
+  "body": "OpenAI is consolidating ChatGPT's separate Chat and Work tabs into a unified interface while simultaneously imposing stricter usage limits on GPT-6.2 and other models. These changes signal OpenAI's shift toward managing computational demand and streamlining user experience as enterprise adoption accelerates. For healthcare AI implementations, the unified interface could simplify clinical workflows that currently toggle between consumer and enterprise ChatGPT features, though tightened usage caps may impact organizations relying on high-volume document processing for EHR integration or clinical note analysis. Healthcare systems evaluating OpenAI partnerships should clarify their model access tier and usage projections before deployment, as the velocity of product changes suggests rapid evolution in the vendor landscape. The parallel moves reflect OpenAI's balancing act between expansion and resource constraints, directly affecting how healthcare organizations can scale AI-assisted documentation and decision support.",
+  "source_url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/",
+  "source_name": "TechCrunch",
+  "velocity_score": 99,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "gpt"
+  ]
+}

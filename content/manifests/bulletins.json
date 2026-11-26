@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "nvidia-s-p-warns-nvidia-s-board-may-be-compromised",
+      "headline": "Nvidia governance crisis signals supply chain risk for healthcare AI infrastructure",
+      "timestamp": "2026-11-26T19:20:45Z",
+      "source_name": "Reuters",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
+      "slug": "gpt-openai-is-finally-merging-chatgpt-s-chat-and-work-tabs",
+      "headline": "OpenAI merges ChatGPT interfaces as usage limits tighten across models",
+      "timestamp": "2026-11-26T19:20:43Z",
+      "source_name": "TechCrunch",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
       "slug": "openai-parents-of-openai-whistleblower-intensify-dispute-over-suicide",
       "headline": "OpenAI faces legal scrutiny amid whistleblower death investigation",
       "timestamp": "2026-11-26T03:51:02Z",
@@ -175,26 +195,6 @@
       "headline": "Anthropic goes public on Nasdaq, testing AI sector investor appetite",
       "timestamp": "2026-11-20T02:45:39Z",
       "source_name": "Reuters",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "claude-claude-fable-5-2-solves-two-open-problems-in-the-physics-of-bla",
-      "headline": "Claude 5.2 advances reasoning capabilities with complex problem solving",
-      "timestamp": "2026-11-19T18:44:26Z",
-      "source_name": "Anthropic",
-      "verification": "confirmed",
-      "tags": [
-        "claude"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-prices-initial-public-offering",
-      "headline": "Anthropic goes public, reshaping AI vendor landscape for healthcare",
-      "timestamp": "2026-11-19T18:44:24Z",
-      "source_name": "Anthropic",
       "verification": "confirmed",
       "tags": [
         "anthropic"

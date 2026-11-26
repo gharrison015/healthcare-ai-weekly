@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-26T19:20:45Z",
+  "slug": "nvidia-s-p-warns-nvidia-s-board-may-be-compromised",
+  "headline": "Nvidia governance crisis signals supply chain risk for healthcare AI infrastructure",
+  "body": "S&P has placed Nvidia on downgrade watch citing potential board compromise, while the company halts chip shipments to Southeast Asia. For healthcare organizations, this matters because Nvidia GPUs power the majority of clinical AI inference engines, medical imaging models, and EHR-integrated diagnostic tools. Supply chain disruptions or governance instability at this scale directly threaten deployment timelines for value-based care programs and real-time clinical decision support systems. Healthcare IT leaders should audit alternative GPU sourcing strategies and assess vendor concentration risk in their AI infrastructure roadmaps immediately.",
+  "source_url": "https://www.reuters.com/technology/us-finds-no-evidence-china-directed-executive-spy-nvidia-ceo-wsj-reports-2026-11-25/",
+  "source_name": "Reuters",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "newsdata",
+    "hackernews"
+  ],
+  "tags": [
+    "nvidia"
+  ]
+}
