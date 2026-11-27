@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-27T19:15:43Z",
+  "slug": "claude-what-s-claude-s-fursona-and-other-questions",
+  "headline": "Claude behavior shifts raise questions about AI model reliability",
+  "body": "High-velocity discussion across developer communities centers on Claude's unexpected behavior changes, including reports of altered code outputs and modified task performance. For healthcare AI implementations, model consistency and predictability are non-negotiable. EHR integrations, clinical decision support systems, and agent-based workflow automation depend on models behaving consistently across deployments. If foundational models like Claude are altering outputs unpredictably, healthcare organizations must reassess validation protocols and vendor agreements before scaling AI in clinical workflows. This underscores why healthcare AI consulting now requires deeper technical diligence on model behavior and version stability.",
+  "source_url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
+  "source_name": "Herecomesthemoon",
+  "velocity_score": 94,
+  "verification": "confirmed",
+  "verified_sources": [
+    "hackernews",
+    "newsdata"
+  ],
+  "tags": [
+    "claude"
+  ]
+}

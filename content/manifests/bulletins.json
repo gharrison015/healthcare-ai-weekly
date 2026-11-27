@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "gpt-gpt-6-2-astra-solves-a-historical-mystery",
+      "headline": "GPT 6.2 Astra shows superhuman optimization capabilities across domains",
+      "timestamp": "2026-11-27T19:15:45Z",
+      "source_name": "Generativehistory",
+      "verification": "confirmed",
+      "tags": [
+        "gpt"
+      ]
+    },
+    {
+      "slug": "claude-what-s-claude-s-fursona-and-other-questions",
+      "headline": "Claude behavior shifts raise questions about AI model reliability",
+      "timestamp": "2026-11-27T19:15:43Z",
+      "source_name": "Herecomesthemoon",
+      "verification": "confirmed",
+      "tags": [
+        "claude"
+      ]
+    },
+    {
       "slug": "openai-openai-may-be-in-cost-control-mode",
       "headline": "OpenAI tightens costs and access controls amid infrastructure security concerns",
       "timestamp": "2026-11-27T03:52:36Z",
@@ -175,26 +195,6 @@
       "headline": "Anthropic IPO fails to reverse broad AI sector market collapse",
       "timestamp": "2026-11-21T02:55:18Z",
       "source_name": "Theguardian",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "google-google-workers-tell-their-employer-not-to-punish-schools-that-d",
-      "headline": "Google workers oppose punitive tactics against AI-resistant schools",
-      "timestamp": "2026-11-20T18:08:15Z",
-      "source_name": "Motherjones",
-      "verification": "confirmed",
-      "tags": [
-        "google"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-employee-claims-general-proof-of-the-riemann-hypot",
-      "headline": "Anthropic faces IPO turbulence amid math proof claim and market skepticism",
-      "timestamp": "2026-11-20T18:08:13Z",
-      "source_name": "Alpo",
       "verification": "confirmed",
       "tags": [
         "anthropic"
