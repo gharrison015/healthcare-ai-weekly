@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "openai-openai-may-be-in-cost-control-mode",
+      "headline": "OpenAI tightens costs and access controls amid infrastructure security concerns",
+      "timestamp": "2026-11-27T03:52:36Z",
+      "source_name": "Micjm",
+      "verification": "confirmed",
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-was-right-to-bring-back-jensen-huang-writes-sarah-guo",
+      "headline": "Nvidia leadership upheaval triggers governance concerns amid chip supply shifts",
+      "timestamp": "2026-11-27T03:52:33Z",
+      "source_name": "Economist",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "nvidia-s-p-warns-nvidia-s-board-may-be-compromised",
       "headline": "Nvidia governance crisis signals supply chain risk for healthcare AI infrastructure",
       "timestamp": "2026-11-26T19:20:45Z",
@@ -175,26 +195,6 @@
       "headline": "Anthropic faces IPO turbulence amid math proof claim and market skepticism",
       "timestamp": "2026-11-20T18:08:13Z",
       "source_name": "Alpo",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
-      ]
-    },
-    {
-      "slug": "nvidia-wife-of-senior-nvidia-executive-caught-up-in-alleged-ai-chip-sm",
-      "headline": "Nvidia faces chip smuggling allegations with potential China military implications",
-      "timestamp": "2026-11-20T02:45:42Z",
-      "source_name": "Gadgetreview",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-anthropic-s-nasdaq-debut",
-      "headline": "Anthropic goes public on Nasdaq, testing AI sector investor appetite",
-      "timestamp": "2026-11-20T02:45:39Z",
-      "source_name": "Reuters",
       "verification": "confirmed",
       "tags": [
         "anthropic"
