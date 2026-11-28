@@ -1,6 +1,26 @@
 {
   "bulletins": [
     {
+      "slug": "anthropic-anthropic-ceo-pushes-back-on-axios-reporting-on-ai-and-free",
+      "headline": "Anthropic sponsors 41 percent of House members amid pricing surge",
+      "timestamp": "2026-11-28T03:38:51Z",
+      "source_name": "Finance",
+      "verification": "confirmed",
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "slug": "nvidia-nvidia-ceo-s-comeback-fuels-debate-on-misogyny-or-impunity-for",
+      "headline": "Nvidia's governance tensions emerge as chip competition intensifies",
+      "timestamp": "2026-11-28T03:38:49Z",
+      "source_name": "Pbs",
+      "verification": "confirmed",
+      "tags": [
+        "nvidia"
+      ]
+    },
+    {
       "slug": "gpt-gpt-6-2-astra-solves-a-historical-mystery",
       "headline": "GPT 6.2 Astra shows superhuman optimization capabilities across domains",
       "timestamp": "2026-11-27T19:15:45Z",
@@ -178,26 +198,6 @@
       "verification": "confirmed",
       "tags": [
         "nvidia"
-      ]
-    },
-    {
-      "slug": "nvidia-us-sec-s-nvidia-probe-is-examining-potential-accounting-issues",
-      "headline": "SEC probe into Nvidia accounting raises questions for healthcare AI infrastructure",
-      "timestamp": "2026-11-21T02:55:20Z",
-      "source_name": "Marketscreener",
-      "verification": "confirmed",
-      "tags": [
-        "nvidia"
-      ]
-    },
-    {
-      "slug": "anthropic-global-stock-markets-slump-as-anthropic-s-record-ipo-fails-t",
-      "headline": "Anthropic IPO fails to reverse broad AI sector market collapse",
-      "timestamp": "2026-11-21T02:55:18Z",
-      "source_name": "Theguardian",
-      "verification": "confirmed",
-      "tags": [
-        "anthropic"
       ]
     }
   ]
